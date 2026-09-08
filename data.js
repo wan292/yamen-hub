@@ -106,20 +106,58 @@ const MKT231_WEEKS = [
   [16,"2026-12-13","مناقشة البحث والعرض الشفوي"]
 ];
 
-/* الملخصات الجاهزة */
+/* ============================================================
+   الملخصات — مرتّبة: مادة ثم فصل ثم درس
+   status: done = جاهز · soon = تحت الشغل · src = المادة موجودة ولم تُشرح
+           wait = ينتظر الدكتور
+   ============================================================ */
 const LESSONS = [
-  { code:"ACCT 203", title:"الفصل ١ — أهمية المحاسبة",
-    sub:"Chapter 1 · القسم ١ من ٤ · Importance of Accounting",
-    href:"lessons/ACCT203-CH1-S1.html", done:true },
-  { code:"ACCT 203", title:"الفصل ١ — أساسيات المحاسبة",
-    sub:"Chapter 1 · القسم ٢ من ٤ · Fundamentals of Accounting (الأخلاق والمعايير)",
-    href:"lessons/ACCT203-CH1-S2.html", done:true },
-  { code:"ACCT 203", title:"الفصل ١ — العمليات والمعادلة المحاسبية",
-    sub:"Chapter 1 · القسم ٣ من ٤ · Business Transactions (أهم درس في المادة)",
-    href:"lessons/ACCT203-CH1-S3.html", done:true },
-  { code:"ACCT 203", title:"الفصل ١ — القوائم المالية",
-    sub:"Chapter 1 · القسم ٤ من ٤ · Financial Statements — الفصل مكتمل ✅",
-    href:"lessons/ACCT203-CH1-S4.html", done:true }
+  { code:"ACCT 203", chapters:[
+    { name:"Chapter 1 — Accounting in Business", meta:"الفصل الأول · مكتمل",
+      items:[
+        { n:1, ar:"أهمية المحاسبة",              en:"Importance of Accounting",        o:"C1",
+          s:"done", href:"lessons/ACCT203-CH1-S1.html" },
+        { n:2, ar:"أساسيات المحاسبة",            en:"Fundamentals — Ethics and GAAP",  o:"C2",
+          s:"done", href:"lessons/ACCT203-CH1-S2.html" },
+        { n:3, ar:"العمليات والمعادلة المحاسبية", en:"Business Transactions",           o:"A1",
+          s:"done", href:"lessons/ACCT203-CH1-S3.html", star:"أهم درس في المادة" },
+        { n:4, ar:"القوائم المالية",             en:"Financial Statements",            o:"P2",
+          s:"done", href:"lessons/ACCT203-CH1-S4.html" },
+        { n:5, ar:"تحليل العمليات — تمارين FastForward", en:"Transactions 2 to 11",     o:"P1",
+          s:"soon", note:"التحليل خطوة بخطوة. أهم تمرين في الفصل." },
+        { n:6, ar:"المبادئ والفروض وأشكال المنشآت", en:"Principles and assumptions",    o:"C2",
+          s:"soon", note:"ذيل القسم الثاني" }
+      ]},
+    { name:"Chapter 2 وما بعده", meta:"لم يُفتح بعد",
+      items:[ { ar:"ينتظر أن يفتحه الدكتور", s:"wait" } ]}
+  ]},
+
+  { code:"MKT 231", chapters:[
+    { name:"الفصول الأربعة الأولى", meta:"الـ PDF موجود — لم يُشرح بعد",
+      items:[
+        { n:1, ar:"طبيعة سلوك المستهلك وأهميته", s:"src" },
+        { n:2, ar:"اتخاذ القرار الشرائي",        s:"src" },
+        { n:3, ar:"تصميم الموقع التنافسي للمنتج", s:"src" },
+        { n:4, ar:"تأثير ثقافة المجتمع",          s:"src" }
+      ]}
+  ]},
+
+  { code:"MGT 102", chapters:[
+    { name:"المادة كاملة", meta:"⚠ الأولوية — وما عندنا شي",
+      items:[ { ar:"ينتظر دليل المقرر والكتاب", s:"wait",
+                note:"أهم مستند ناقص في المشروع كله" } ]}
+  ]},
+
+  { code:"LAW 333", chapters:[
+    { name:"المادة", meta:"ينتظر مادة من الدكتور",
+      items:[ { ar:"ينتظر الشرائح ودليل المقرر", s:"wait",
+                note:"الأنظمة سعودية — لا تُذاكر من مصادر أمريكية" } ]}
+  ]},
+
+  { code:"GS 151", chapters:[
+    { name:"المادة", meta:"أونلاين على البلاك بورد",
+      items:[ { ar:"ينتظر المحتوى", s:"wait" } ]}
+  ]}
 ];
 
 /* الغياب — حدّثه يدوياً */

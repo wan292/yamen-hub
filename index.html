@@ -119,6 +119,36 @@ a.lesson .t{font-weight:600}
 a.lesson .s{font-size:.8rem;color:var(--muted)}
 .soonlbl{font-size:.72rem;color:var(--muted);margin-top:2px}
 .pend{opacity:.55}
+/* summaries grouped by course > chapter */
+.ncourse{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.ncourse>.h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px}
+.ncourse>.h .code{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:1.02rem}
+.ncourse>.h .ar{font-weight:600}
+.ncourse>.h .cnt{margin-inline-start:auto;font-size:.76rem;color:var(--muted);
+  font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+.nchap{margin-top:14px}
+.nchap>.ct{font-weight:600;font-size:.9rem;padding-bottom:6px;border-bottom:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.nchap>.ct .cm{font-size:.76rem;color:var(--muted);font-weight:400}
+.nitem{display:flex;gap:11px;align-items:flex-start;padding:9px 4px;border-bottom:1px solid var(--line)}
+.nitem:last-child{border-bottom:0}
+.nitem .num{flex:none;width:22px;height:22px;border-radius:6px;display:grid;place-items:center;
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:700;color:#fff;margin-top:2px}
+.num.done{background:var(--accent)} .num.soon{background:var(--amber)}
+.num.src{background:#1b5e9c} .num.wait{background:var(--muted)}
+.nitem .bd{flex:1;min-width:0}
+.nitem .t1{font-weight:600;font-size:.95rem}
+.nitem a.t1{color:var(--accent);text-decoration:none}
+.nitem a.t1:hover{text-decoration:underline}
+.nitem .t2{font-size:.79rem;color:var(--muted);direction:ltr;unicode-bidi:isolate;display:inline-block}
+.nitem .ob{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--muted);
+  border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-inline-start:6px}
+.nitem .nn{font-size:.79rem;color:var(--muted);margin-top:2px;line-height:1.55}
+.nitem .sr{display:inline-block;font-size:.68rem;font-weight:700;color:#fff;background:var(--red);
+  border-radius:999px;padding:1px 8px;margin-inline-start:6px}
+.nitem.off{opacity:.62}
+
 /* map + method */
 .tree{font-size:.92rem}
 .tnode{border-inline-start:2px solid var(--line);margin-inline-start:8px;padding-inline-start:16px}
@@ -336,14 +366,39 @@ function renderCourses(){
 
 /* ---------- الملخصات ---------- */
 function renderNotes(){
-  let s='<div class="card"><h2>الملخصات الجاهزة</h2>';
-  LESSONS.filter(l=>l.done).forEach(l=>{
-    s+='<a class="lesson" href="'+l.href+'"><div class="t"><bdi>'+l.code+'</bdi> — '+l.title+'</div>'+
-       '<div class="s">'+l.sub+'</div></a>';});
-  s+='</div><div class="card" style="margin-top:14px"><h2>تحت التجهيز</h2>';
-  LESSONS.filter(l=>!l.done).forEach(l=>{
-    s+='<div class="lesson pend"><div class="t"><bdi>'+l.code+'</bdi> — '+l.title+'</div>'+
-       '<div class="s">'+l.sub+'</div></div>';});
+  var s='<div class="card"><h2>الملخصات</h2>'+
+    '<p style="font-size:.9rem;color:var(--ink2);margin:0">'+
+    'مرتّبة حسب المادة ثم الفصل. الأخضر جاهز تفتحه الآن.</p></div>'+
+    '<div style="margin-top:14px">';
+  LESSONS.forEach(function(c){
+    var cc=COURSES.filter(function(x){return x.code===c.code;})[0];
+    var col=cc?cc.color:'var(--line)';
+    var all=0, ready=0;
+    c.chapters.forEach(function(ch){ ch.items.forEach(function(i){
+      if(i.s!=='wait'){ all++; if(i.s==='done') ready++; } }); });
+    s+='<div class="ncourse" style="border-inline-start:5px solid '+col+'">'+
+       '<div class="h"><span class="code">'+c.code+'</span>'+
+       '<span class="ar">'+(cc?cc.ar:'')+'</span>'+
+       (all?'<span class="cnt">'+ready+' / '+all+' جاهز</span>':'')+'</div>';
+    c.chapters.forEach(function(ch){
+      s+='<div class="nchap"><div class="ct"><span>'+ch.name+'</span>'+
+         (ch.meta?'<span class="cm">'+ch.meta+'</span>':'')+'</div>';
+      ch.items.forEach(function(i){
+        var lab = i.n ? i.n : (i.s==='wait' ? '—' : '•');
+        s+='<div class="nitem'+(i.s==='done'?'':' off')+'">'+
+           '<span class="num '+i.s+'">'+lab+'</span><span class="bd">'+
+           (i.href?'<a class="t1" href="'+i.href+'">'+i.ar+'</a>'
+                  :'<span class="t1">'+i.ar+'</span>')+
+           (i.o?'<span class="ob">'+i.o+'</span>':'')+
+           (i.star?'<span class="sr">'+i.star+'</span>':'')+
+           (i.en?'<div class="t2">'+i.en+'</div>':'')+
+           (i.note?'<div class="nn">'+i.note+'</div>':'')+
+           '</span></div>';
+      });
+      s+='</div>';
+    });
+    s+='</div>';
+  });
   s+='</div>';
   document.getElementById("notes").innerHTML=s;
 }
