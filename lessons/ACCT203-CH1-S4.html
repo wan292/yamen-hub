@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ١: القوائم المالية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
+  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
+  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
+  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
+  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
+bdi{font-weight:600;unicode-bidi:isolate}
+code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
+h2{font-size:1.35rem;margin:0;line-height:1.5}
+header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
+.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
+.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
+.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
+.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
+.chead .ar{font-size:1.02rem;font-weight:600}
+.chead .say{font-size:.85rem;color:var(--muted)}
+.cbody{padding:6px 20px 20px}
+.blk{margin:18px 0}
+.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
+  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
+  unicode-bidi:isolate;direction:ltr}
+.hook{font-size:1.05rem;color:var(--ink2)}
+.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
+  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
+.exam .lbl{background:var(--exam);color:#fff}
+.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
+  padding:14px 18px;border-radius:0 8px 8px 0}
+.trap .lbl{background:var(--trap);color:#fff}
+.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
+ul,ol{padding-inline-start:22px} li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
+td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
+.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
+.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
+.q ol li{margin:5px 0;font-weight:500}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
+details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
+.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
+.big h2{color:var(--accent);margin-bottom:6px}
+.stmt{direction:ltr;background:#fdfcfa;border:1px solid #d8d3cb;border-radius:8px;
+  margin:14px 0;overflow-x:auto;color:#1a1a1a}
+.stmt .hd{background:#1f5d4c;color:#fff;text-align:center;padding:10px;font-weight:700;line-height:1.5}
+.stmt table{margin:0;font-size:.92rem;color:#1a1a1a}
+.stmt td{border:0;padding:5px 14px}
+.stmt td.n{text-align:right;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+.stmt tr.sub td{border-top:1px solid #8a8378}
+.stmt tr.tot td{border-top:1px solid #8a8378;border-bottom:3px double #8a8378;font-weight:700}
+.stmt .ind{padding-inline-start:34px}
+.link{display:flex;align-items:center;gap:10px;background:var(--exam-soft);
+  border-inline-start:4px solid var(--exam);padding:10px 16px;border-radius:0 8px 8px 0;margin:8px 0;font-size:.95rem}
+.link .n{background:var(--exam);color:#fff;width:24px;height:24px;border-radius:50%;
+  display:grid;place-items:center;font-weight:700;font-size:.8rem;flex:none}
+.period{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
+  background:#e8f0ec;color:#0d4f3c;border:1px solid #0d4f3c}
+.point{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
+  background:#fbecea;color:#a4342a;border:1px solid #a4342a}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>الفصل الأول — القوائم المالية</h1>
+  <p class="sub"><code>ACCT 203</code> · <bdi>Chapter 1</bdi> · القسم ٤ من ٤:
+  <bdi>Financial Statements</bdi><br>
+  الهدف <code>P2</code>: <bdi>Identify and prepare basic financial statements and explain how they interrelate.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>نهاية الفصل — وهنا يجتمع كل شي</h2>
+  <p>أربع قوائم، تُعدّ <b>بترتيب معيّن</b>، وكل واحدة <b>تغذّي اللي بعدها</b>.
+  السؤال المتكرر في الاختبار مو «وش هي القوائم» — بل <b>أيّها فترة وأيّها لحظة</b>،
+  و<b>كيف ترتبط ببعضها</b>.</p>
+</div>
+
+<!-- The four -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">The Four Financial Statements</div>
+    <div class="ar">القوائم المالية الأربع</div>
+    <div class="say">الترتيب مقصود — لا تغيّره</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      الأولى تحسب الربح، والثانية تدوّره، والثالثة تصوّر الوضع، والرابعة تتبع النقد.</div>
+
+    <table>
+      <tr><th>القائمة</th><th>الشكل <span style="font-weight:400">(Layout)</span></th><th>الغرض</th><th>الزمن</th></tr>
+      <tr>
+        <td><b><bdi>Income statement</bdi></b><br><span style="font-size:.82rem;color:var(--muted)">قائمة الدخل</span></td>
+        <td class="mono">Revenues<br>− Expenses<br>= Net income</td>
+        <td>تعرض إيرادات ومصروفات الشركة وتحسب <bdi>net income</bdi> أو الخسارة</td>
+        <td><span class="period">فترة</span></td>
+      </tr>
+      <tr>
+        <td><b><bdi>Statement of retained earnings</bdi></b><br><span style="font-size:.82rem;color:var(--muted)">قائمة الأرباح المبقاة</span></td>
+        <td class="mono">Beg. retained earnings<br>+ Net income<br>− Dividends<br>= End. retained earnings</td>
+        <td>تفسّر التغيّر في الأرباح المبقاة من صافي الدخل (أو الخسارة) والتوزيعات</td>
+        <td><span class="period">فترة</span></td>
+      </tr>
+      <tr>
+        <td><b><bdi>Balance sheet</bdi></b><br><span style="font-size:.82rem;color:var(--muted)">قائمة المركز المالي</span></td>
+        <td class="mono">Assets = Liabilities<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Equity</td>
+        <td>تصف المركز المالي — أنواع ومبالغ الأصول والالتزامات وحقوق الملكية</td>
+        <td><span class="point">لحظة</span></td>
+      </tr>
+      <tr>
+        <td><b><bdi>Statement of cash flows</bdi></b><br><span style="font-size:.82rem;color:var(--muted)">قائمة التدفقات النقدية</span></td>
+        <td class="mono">+/− Operating C.F.<br>+/− Investing C.F.<br>+/− Financing C.F.<br>= Change in cash</td>
+        <td>تحدّد التدفقات النقدية الداخلة (المقبوضات) والخارجة (المدفوعات)</td>
+        <td><span class="period">فترة</span></td>
+      </tr>
+    </table>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The income statement, the statement of retained earnings, and the statement of cash flows
+      are prepared for a <b>period of time</b>. The <b>balance sheet</b> is prepared as of a
+      <b>point in time</b>.</p>
+      <p>A statement's heading identifies the <b>company</b>, the <b>statement title</b>, and the
+      <b>date or time period</b>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>ثلاثة عن فترة، وواحدة عن لحظة.</b> الـ<bdi>balance sheet</bdi> وحدها
+            <bdi>at a point in time</bdi>. هذا أكثر سؤال في القسم.</li>
+        <li>لهذا عنوان قائمة الدخل يقول <i><bdi>For Month Ended December 31</bdi></i>،
+            بينما الميزانية تقول <i><bdi>December 31</bdi></i> فقط. العنوان نفسه يكشف الجواب.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- How they link -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">How the Statements Interrelate</div>
+    <div class="ar">كيف ترتبط القوائم ببعضها</div>
+    <div class="say">نصف الهدف P2 هو هذا بالضبط</div>
+  </div>
+  <div class="cbody">
+    <div class="blk">
+      <div class="link"><span class="n">1</span>
+        <span><b><bdi>Net income</bdi></b> من قائمة الدخل يُستخدم لحساب
+        <b><bdi>retained earnings</bdi></b>.</span></div>
+      <div class="link"><span class="n">2</span>
+        <span><b><bdi>Retained earnings</bdi></b> تُستخدم لإعداد
+        <b><bdi>the balance sheet</bdi></b>.</span></div>
+      <div class="link"><span class="n">3</span>
+        <span><b><bdi>Cash</bdi></b> من الميزانية يُستخدم لمطابقة
+        <b><bdi>the statement of cash flows</bdi></b>.</span></div>
+      <p style="margin-top:14px">ولهذا السبب <b>الترتيب إجباري</b>: ما تقدر تسوّي قائمة الأرباح المبقاة
+      قبل ما تعرف صافي الدخل، ولا الميزانية قبل ما تعرف الأرباح المبقاة.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Net income is used to compute retained earnings. Retained earnings is used to prepare the
+      balance sheet. Cash from the balance sheet is used to reconcile the statement of cash flows.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Income statement -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Income Statement</div>
+    <div class="ar">قائمة الدخل</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p>الإيرادات <b>أولاً</b>، والمصروفات <b>بعدها</b>. والمصروفات هي <b>تكاليف توليد الإيرادات</b>
+      المُعلنة.</p>
+      <ul>
+        <li><b><bdi>Net income</bdi></b> — يحصل لما الإيرادات <b>تتجاوز</b> المصروفات.</li>
+        <li><b><bdi>Net loss</bdi></b> — يحصل لما المصروفات <b>تتجاوز</b> الإيرادات.</li>
+        <li>صافي الدخل (أو الخسارة) يظهر في <b>أسفل</b> القائمة.</li>
+        <li>ويُسمّى أحياناً <b><bdi>earnings</bdi></b> أو <b><bdi>profit</bdi></b> — نفس الشي.</li>
+      </ul>
+      <p style="background:var(--trap-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      ⚠ استثمارات المساهمين والتوزيعات <b>ليست جزءاً من الدخل</b>
+      (<bdi>are not part of income</bdi>).</p>
+    </div>
+
+    <div class="stmt">
+      <div class="hd">FASTFORWARD<br>Income Statement<br>For Month Ended December 31, 2027</div>
+      <table>
+        <tr><td colspan="3"><b>Revenues</b></td></tr>
+        <tr><td class="ind">Consulting revenue ($4,200 + $1,600)</td><td class="n">$ 5,800</td><td></td></tr>
+        <tr class="sub"><td class="ind">Rental revenue</td><td class="n">300</td><td></td></tr>
+        <tr><td class="ind">Total revenues</td><td></td><td class="n">$ 6,100</td></tr>
+        <tr><td colspan="3"><b>Expenses</b></td></tr>
+        <tr><td class="ind">Rent expense</td><td class="n">1,000</td><td></td></tr>
+        <tr class="sub"><td class="ind">Salaries expense</td><td class="n">700</td><td></td></tr>
+        <tr><td class="ind">Total expenses</td><td></td><td class="n">1,700</td></tr>
+        <tr class="tot"><td><b>Net income</b></td><td></td><td class="n">$ 4,400</td></tr>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--ink2)">الإيرادات جاءت من العمليات ٥ و٨، والمصروفات من
+    العمليات ٦ و٧. لاحظ <b>الخط المفرد</b> يعني جمعاً أو طرحاً، و<b>الخط المزدوج</b> يعني إجمالياً نهائياً.</p>
+  </div>
+</div>
+
+<!-- Retained earnings -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Statement of Retained Earnings</div>
+    <div class="ar">قائمة الأرباح المبقاة</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p><b><bdi>Retained earnings</bdi></b> = <b>صافي الدخل التراكمي ناقص أي توزيعات</b>.</p>
+      <p>القائمة تبيّن: الرصيد الافتتاحي · ما يزيده (<bdi>net income</bdi>) ·
+      ما ينقصه (<bdi>dividends</bdi> و<bdi>net loss</bdi>) · والرصيد الختامي.</p>
+      <p>والرصيد الختامي <b>يُرحَّل ويُعرض في الميزانية</b> — وهذي هي الحلقة رقم ٢ فوق.</p>
+      <p><b>الرصيد الافتتاحي:</b> عند <bdi>FastForward</bdi> = <b>صفر</b>، لأن الشركة
+      <b>ما كانت موجودة</b> قبل ١ ديسمبر. أما الشركة القائمة فرصيدها الافتتاحي =
+      <b>الرصيد الختامي للفترة السابقة</b> (مثلاً ٣٠ نوفمبر).</p>
+    </div>
+
+    <div class="stmt">
+      <div class="hd">FASTFORWARD<br>Statement of Retained Earnings<br>For Month Ended December 31, 2027</div>
+      <table>
+        <tr><td>Retained earnings, December 1, 2027</td><td class="n">$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td></tr>
+        <tr class="sub"><td>Add: Net income</td><td class="n">4,400</td></tr>
+        <tr><td></td><td class="n">4,400</td></tr>
+        <tr class="sub"><td>Less: Dividends</td><td class="n">200</td></tr>
+        <tr class="tot"><td><b>Retained earnings, December 31, 2027</b></td><td class="n">$ 4,200</td></tr>
+      </table>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Retained earnings</b> is cumulative net income minus any dividend distributions. The
+      statement shows beginning retained earnings, events that increase it (net income), and events
+      that decrease it (dividends and net loss). Ending retained earnings is carried over and
+      reported on the <b>balance sheet</b>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Dividends</bdi> تُطرح <b>هنا</b>، مو في قائمة الدخل. لو طرحتها من الإيرادات
+            بيطلع صافي دخل غلط.</li>
+        <li>شركة <b>جديدة</b> رصيدها الافتتاحي <b>صفر</b>. شركة <b>قائمة</b> رصيدها = ختامي الفترة السابقة.</li>
+        <li><bdi>net loss</bdi> <b>ينقص</b> الأرباح المبقاة مثل التوزيعات.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Cash flows -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Statement of Cash Flows</div>
+    <div class="ar">قائمة التدفقات النقدية</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p>ثلاثة أقسام: <b><bdi>Operating</bdi></b> · <b><bdi>Investing</bdi></b> ·
+      <b><bdi>Financing</bdi></b>، ومجموعها = <b>التغيّر في النقد</b>.</p>
+      <p>ثم يُضاف رصيد النقد الافتتاحي فيَنتج <b>رصيد النقد الختامي</b> — وهو نفس رقم النقد
+      في الميزانية (الحلقة رقم ٣).</p>
+      <div class="stmt">
+        <div class="hd">FASTFORWARD — Financing activities (مقتطف)</div>
+        <table>
+          <tr><td class="ind">Cash investments from shareholders</td><td class="n">30,000</td><td></td></tr>
+          <tr class="sub"><td class="ind">Cash dividends to shareholders</td><td class="n">(200)</td><td></td></tr>
+          <tr><td class="ind">Net cash provided by financing activities</td><td></td><td class="n">29,800</td></tr>
+          <tr><td><b>Net increase in cash</b></td><td></td><td class="n">$ 4,800</td></tr>
+          <tr class="sub"><td>Cash balance, December 1, 2027</td><td></td><td class="n">0</td></tr>
+          <tr class="tot"><td><b>Cash balance, December 31, 2027</b></td><td></td><td class="n">$ 4,800</td></tr>
+        </table>
+      </div>
+      <p style="font-size:.88rem;color:var(--ink2)">لاحظ: المبالغ السالبة قد تظهر بين قوسين
+      وقد لا تظهر — الكتاب ينبّه لهذا صراحة.</p>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+
+<div class="q">
+  <div class="stem">1. Which financial statement is prepared as of a <i>point in time</i> rather than for a period of time?</div>
+  <ol type="A"><li>Income statement</li><li>Statement of retained earnings</li>
+  <li>Balance sheet</li><li>Statement of cash flows</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. الميزانية وحدها <bdi>at a point in time</bdi>. الثلاث الباقية
+  <bdi>for a period of time</bdi>. علامة مضمونة إذا حفظتها.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. A company reports revenues of $9,000 and expenses of $11,500. It also paid $500 of dividends. Net income (loss) is:</div>
+  <ol type="A"><li>Net income of $2,500</li><li>Net loss of $2,500</li>
+  <li>Net loss of $3,000</li><li>Net income of $3,000</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <span class="mono">9,000 − 11,500 = (2,500)</span> — خسارة.
+  التوزيعات <b>لا تدخل</b> في حساب صافي الدخل إطلاقاً؛ مكانها قائمة الأرباح المبقاة.
+  الاختيار <b>C</b> هو الفخ لأنه يطرح الـ٥٠٠.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Beginning retained earnings is $12,000. Net income is $5,000 and dividends are $2,000. Ending retained earnings is:</div>
+  <ol type="A"><li>$19,000</li><li>$15,000</li><li>$9,000</li><li>$5,000</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <span class="mono">12,000 + 5,000 − 2,000 = 15,000</span>.
+  اجمع صافي الدخل واطرح التوزيعات — بهذا الترتيب.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. In what order must the statements be prepared?</div>
+  <ol type="A">
+    <li>Balance sheet → income statement → retained earnings → cash flows</li>
+    <li>Income statement → retained earnings → balance sheet → cash flows</li>
+    <li>Cash flows → balance sheet → income statement → retained earnings</li>
+    <li>Any order; they are independent</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. صافي الدخل يغذّي الأرباح المبقاة، والأرباح المبقاة تغذّي الميزانية،
+  والنقد في الميزانية يطابق قائمة التدفقات. الاختيار <b>D</b> غلط تماماً — القوائم مترابطة.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. A shareholder invests $20,000 cash in the company. On the income statement this is reported as:</div>
+  <ol type="A"><li>Revenue of $20,000</li><li>An expense of $20,000</li>
+  <li>Net income of $20,000</li><li>It is not reported on the income statement</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>D</b>. استثمارات المساهمين والتوزيعات <b>ليست جزءاً من الدخل</b>.
+  الاستثمار يظهر في <bdi>Common Stock</bdi> وفي التدفقات التمويلية — مو في قائمة الدخل.</p></details>
+</div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Income statement</bdi></td><td>قائمة الدخل</td><td>فترة · إيرادات ثم مصروفات</td></tr>
+  <tr><td><bdi>Statement of retained earnings</bdi></td><td>قائمة الأرباح المبقاة</td><td>فترة · هنا تُطرح التوزيعات</td></tr>
+  <tr><td><bdi>Balance sheet</bdi></td><td>قائمة المركز المالي</td><td><b>لحظة</b> — الوحيدة</td></tr>
+  <tr><td><bdi>Statement of cash flows</bdi></td><td>قائمة التدفقات النقدية</td><td>فترة · ثلاثة أقسام</td></tr>
+  <tr><td><bdi>Net income</bdi></td><td>صافي الدخل</td><td>إيرادات &gt; مصروفات</td></tr>
+  <tr><td><bdi>Net loss</bdi></td><td>صافي الخسارة</td><td>مصروفات &gt; إيرادات</td></tr>
+  <tr><td><bdi>Earnings</bdi> / <bdi>profit</bdi></td><td>الأرباح</td><td>نفس <bdi>net income</bdi></td></tr>
+  <tr><td><bdi>Retained earnings</bdi></td><td>الأرباح المبقاة</td><td>تراكمي − توزيعات</td></tr>
+  <tr><td><bdi>Operating / Investing / Financing</bdi></td><td>تشغيلي / استثماري / تمويلي</td><td>أقسام التدفقات</td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب في <bdi>SmartBook</bdi> — <bdi>Chapter 1</bdi>، القسم الرابع
+<bdi>Financial Statements</bdi>، الهدف <code>P2</code> و<bdi>Exhibit 1.10</bdi>
+(صفحات ١٦–١٧). الأرقام من مثال <bdi>FastForward</bdi> في الكتاب.
+<br><b>ملاحظة:</b> بعض بنود قائمة الدخل والميزانية أُعيد تركيبها من أرقام الكتاب المعروضة؛
+راجعها مع <bdi>Exhibit 1.10</bdi> في كتابك قبل الاختبار.
+</p>
+
+</div>
+</body>
+</html>

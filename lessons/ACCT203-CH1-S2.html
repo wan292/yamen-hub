@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ١: أساسيات المحاسبة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
+  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
+  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
+  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
+  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
+bdi{font-weight:600;unicode-bidi:isolate}
+code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
+h2{font-size:1.35rem;margin:0;line-height:1.5}
+header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
+.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
+.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
+.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
+.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
+.chead .ar{font-size:1.02rem;font-weight:600}
+.chead .say{font-size:.85rem;color:var(--muted)}
+.cbody{padding:6px 20px 20px}
+.blk{margin:18px 0}
+.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
+  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
+  unicode-bidi:isolate;direction:ltr}
+.hook{font-size:1.05rem;color:var(--ink2)}
+.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
+  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
+.exam .lbl{background:var(--exam);color:#fff}
+.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
+  padding:14px 18px;border-radius:0 8px 8px 0}
+.trap .lbl{background:var(--trap);color:#fff}
+.trap ul{margin:8px 0 0;padding-inline-start:20px}
+.trap li{margin:7px 0}
+ul,ol{padding-inline-start:22px} li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
+td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
+.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
+.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
+.q ol li{margin:5px 0;font-weight:500}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
+details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
+.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
+.big h2{color:var(--accent);margin-bottom:6px}
+.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
+@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
+.exhibit svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;margin-bottom:6px}
+.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
+.excap b{color:var(--accent)}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+.ksa{background:var(--exam-soft);border-inline-start:4px solid var(--exam);padding:14px 18px;
+  border-radius:0 8px 8px 0;margin:18px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>الفصل الأول — أساسيات المحاسبة</h1>
+  <p class="sub"><code>ACCT 203</code> · <bdi>Chapter 1</bdi> · القسم ٢ من ٤:
+  <bdi>Fundamentals of Accounting</bdi><br>
+  الهدف <code>C2</code>: <bdi>Describe the importance of ethics and GAAP.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>وش يغطي هذا القسم</h2>
+  <p>ثلاث أفكار مترابطة: <b>الأخلاق</b> (ليش المعلومة لازم تكون موثوقة)، <b>الغش</b> (وش يخلي
+  الناس يزوّرون وكيف نمنعهم)، و<b>المعايير المحاسبية</b> (<bdi>GAAP</bdi> و<bdi>IFRS</bdi>).</p>
+  <p>الرابط بينها بسيط: المعلومة ما تنفع إلا إذا كانت موثوقة — والثقة تحتاج أخلاقاً وقواعد ورقابة.</p>
+</div>
+
+<!-- Ethics -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Ethics</div>
+    <div class="ar">الأخلاق</div>
+    <div class="say">النطق: إثِكس</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      المعلومة المحاسبية ما لها قيمة إلا إذا كان الناس يثقون فيها. والثقة تبدأ من أخلاق اللي كتبها.</div>
+
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p><bdi>Ethics</bdi> = المعتقدات اللي تفصل بين <b>الصح والغلط</b>، وهي معايير متعارف عليها
+      للسلوك الحسن والسيئ.</p>
+      <p>المحاسب يواجه قرارات أخلاقية وهو يجهّز التقارير المالية، وهذي القرارات تأثر على رواتب
+      الموظفين ومكافآتهم، وعلى نجاح المنتجات، وممكن تضر الشركة والعاملين فيها.
+      وفي مقولة قديمة في الكتاب: <i><bdi>Good ethics are good business.</bdi></i></p>
+    </div>
+
+    <div class="exhibit">
+      <div class="exlbl">EXHIBIT 1.5 — Ethical Decision Making</div>
+      <svg viewBox="0 0 700 110" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Three steps of ethical decision making">
+        <g font-family="Georgia, serif" text-anchor="middle">
+          <rect x="14" y="12" width="196" height="34" rx="3" fill="#f6e3c8" stroke="#a07b३8" stroke-width="1.3"/>
+          <text x="112" y="35" font-size="15.5" font-weight="700" fill="#5c4318">1. Identify ethical concerns</text>
+          <rect x="252" y="12" width="196" height="34" rx="3" fill="#cfe6e6" stroke="#3d7681" stroke-width="1.3"/>
+          <text x="350" y="35" font-size="15.5" font-weight="700" fill="#1d444b">2. Analyze options</text>
+          <rect x="490" y="12" width="196" height="34" rx="3" fill="#eddcea" stroke="#7d4c72" stroke-width="1.3"/>
+          <text x="588" y="35" font-size="15.5" font-weight="700" fill="#482842">3. Make ethical decision</text>
+        </g>
+        <g fill="#c07a2a"><path d="M216 27 h20 l0 -7 l14 12 l-14 12 l0 -7 h-20 z"/></g>
+        <g fill="#3d8a80"><path d="M454 27 h20 l0 -7 l14 12 l-14 12 l0 -7 h-20 z"/></g>
+        <g font-family="system-ui,sans-serif" text-anchor="middle" font-size="12.5" fill="#333">
+          <text x="112" y="68">Use ethics to recognize</text><text x="112" y="85">an ethical concern.</text>
+          <text x="350" y="68">Consider all</text><text x="350" y="85">consequences.</text>
+          <text x="588" y="68">Choose best option after</text><text x="588" y="85">weighing all consequences.</text>
+        </g>
+      </svg>
+      <p class="excap">ثلاث خطوات بالترتيب. لو جاك سيناريو وسألك «وش الخطوة الجاية؟»،
+      ارجع لهذا الترتيب: <b>تعرّف → حلّل → قرّر</b>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Ethics</b> are beliefs that separate right from wrong. They are accepted standards of
+      good and bad behavior. Ethical decision making follows three steps: <b>identify ethical
+      concerns</b>, <b>analyze options</b>, and <b>make the ethical decision</b>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Fraud triangle -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">The Fraud Triangle</div>
+    <div class="ar">مثلث الغش</div>
+    <div class="say">ثلاثة أضلاع — لازم تحفظها كلها</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      الشخص ما يغش لسبب واحد. لازم تجتمع ثلاثة عوامل مع بعض.</div>
+
+    <div class="exhibit">
+      <div class="exlbl">The Fraud Triangle</div>
+      <svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Fraud triangle: opportunity, pressure, rationalization">
+        <path d="M210 22 L376 210 L44 210 Z" fill="#e6b894" stroke="#8a4a25" stroke-width="2"/>
+        <path d="M210 22 L210 210 L44 210 Z" fill="#d9a077" opacity=".55"/>
+        <g font-family="Georgia, serif" font-size="16" font-weight="700" fill="#4a2412">
+          <text transform="translate(112,120) rotate(-49)" text-anchor="middle">Opportunity</text>
+          <text transform="translate(305,120) rotate(49)"  text-anchor="middle">Rationalization</text>
+          <text x="210" y="238" text-anchor="middle">Pressure</text>
+        </g>
+      </svg>
+      <p class="excap">الأضلاع الثلاثة: <b>Opportunity</b> · <b>Pressure</b> · <b>Rationalization</b>.
+      أي سؤال يعطيك ضلعين ويطلب الثالث — أو يسألك «كم عامل؟» الجواب <b>ثلاثة</b>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح</span>
+      <table>
+        <tr><th>الضلع</th><th>وش يعني</th></tr>
+        <tr><td><b><bdi>Opportunity</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الفرصة</span></td>
+            <td>الشخص يقدر يغش <b>باحتمال ضعيف إنه ينمسك</b>.</td></tr>
+        <tr><td><b><bdi>Pressure</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الضغط</span></td>
+            <td>ضغط مالي أو شخصي يدفعه للغش.</td></tr>
+        <tr><td><b><bdi>Rationalization</bdi></b><br><span style="color:var(--muted);font-size:.85rem">التبرير</span></td>
+            <td>يبرّر فعلته لنفسه، أو ما يشوفها جريمة أصلاً. وتُسمّى أيضاً <bdi>attitude</bdi>.</td></tr>
+      </table>
+      <p>ومفتاح إيقاف الغش هو <b>المنع <bdi>prevention</bdi></b> — أرخص وأفعل من الكشف بعد وقوعه.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p>عشان تمنع الغش، الشركات تسوّي <b><bdi>internal controls</bdi></b> (أنظمة رقابة داخلية):
+      إجراءات تحمي الأصول، وتضمن محاسبة موثوقة، وترفع الكفاءة، وتطبّق سياسات الشركة.</p>
+      <p>أمثلة: سجلات جيدة · <bdi>physical controls</bdi> مثل الأقفال · مراجعات مستقلة.
+      و<b><bdi>auditors</bdi></b> (المراجعون) يتحققون من <b>فعالية</b> هذي الرقابة الداخلية.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The <b>fraud triangle</b> shows three factors that push a person to commit fraud:
+      <b>opportunity</b> (low risk of getting caught), <b>pressure</b>, and <b>rationalization</b>.
+      The key to stopping fraud is <b>prevention</b> — it is less expensive and more effective than
+      detection. <b>Internal controls</b> are procedures to protect assets, ensure reliable
+      accounting, promote efficiency, and uphold company policies. <b>Auditors</b> verify the
+      effectiveness of internal controls.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>الأضلاع <b>ثلاثة</b> مو اثنين ولا أربعة. الاختيارات تحب تحذف واحداً منها.</li>
+        <li><b>المنع أرخص من الكشف</b> — أي اختيار يقول العكس غلط.</li>
+        <li><bdi>internal controls</bdi> ≠ <bdi>audit</bdi>. الرقابة <b>إجراءات داخل الشركة</b>،
+            والمراجع <b>يتحقق</b> منها.</li>
+        <li>لا تخلط <bdi>Opportunity</bdi> بـ<bdi>Pressure</bdi>: الفرصة = <b>يقدر</b>،
+            الضغط = <b>محتاج</b>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- GAAP -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">GAAP · FASB · SEC</div>
+    <div class="ar">المبادئ المحاسبية المقبولة عموماً والجهات المنظِّمة</div>
+    <div class="say">أكثر جزء تجي منه أسئلة الاختيارات</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      لو كل شركة حاسبت بطريقتها، ما نقدر نقارن. فلازم قواعد موحّدة — وجهة تضعها، وجهة تفرضها.</div>
+
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p>المحاسبة المالية محكومة بمفاهيم وقواعد اسمها
+      <b><bdi>generally accepted accounting principles (GAAP)</bdi></b>.</p>
+      <p>و<bdi>GAAP</bdi> تبي المعلومة تكون فيها صفتان:</p>
+      <ul>
+        <li><b><bdi>Relevance</bdi></b> (الملاءمة) — المعلومة <b>تأثر على قرارات</b> المستخدمين.</li>
+        <li><b><bdi>Faithful representation</bdi></b> (التمثيل الصادق) — المعلومة
+        <b>تعكس نتائج الأعمال بدقة</b>.</li>
+      </ul>
+      <table>
+        <tr><th>الجهة</th><th>دورها</th></tr>
+        <tr><td><b><bdi>FASB</bdi></b><br><span style="font-size:.82rem;color:var(--muted)">Financial Accounting Standards Board</span></td>
+            <td><b>يضع</b> الـ<bdi>GAAP</bdi>. وسلطته جاية له <b>من الـ<bdi>SEC</bdi></b>.</td></tr>
+        <tr><td><b><bdi>SEC</bdi></b><br><span style="font-size:.82rem;color:var(--muted)">Securities and Exchange Commission</span></td>
+            <td>جهة <b>حكومية أمريكية</b> تراقب تطبيق الـ<bdi>GAAP</bdi> على الشركات اللي
+            تبيع <bdi>stock</bdi> و<bdi>debt</bdi> للجمهور.</td></tr>
+        <tr><td><b><bdi>Audit</bdi></b></td>
+            <td>فحص يتأكد إن القوائم المالية <b>أُعدّت وفق الـ<bdi>GAAP</bdi></b>.</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — المعايير الدولية</span>
+      <p>الاقتصاد العالمي يحتاج <b>قابلية للمقارنة</b> بين التقارير. فـ<b><bdi>IASB</bdi></b>
+      (<bdi>International Accounting Standards Board</bdi>) يصدر
+      <b><bdi>IFRS</bdi></b> (<bdi>International Financial Reporting Standards</bdi>).</p>
+      <p>الـ<bdi>IFRS</bdi> <b>مشابهة</b> للـ<bdi>GAAP</bdi> الأمريكية، لكن <b>أحياناً مختلفة</b>.
+      و<bdi>FASB</bdi> و<bdi>IASB</bdi> يشتغلون على تقليل الفروقات.</p>
+    </div>
+
+    <div class="ksa">
+      <b>معلومة تهمّك كسعودي:</b> السعودية تطبّق <b><bdi>IFRS</bdi></b> عن طريق الهيئة السعودية
+      للمراجعين والمحاسبين (<bdi>SOCPA</bdi>) — مو <bdi>US GAAP</bdi>.
+      لكن <b>كتابك أمريكي</b>، والاختبار من الكتاب. فذاكر <bdi>GAAP</bdi> كما في الكتاب،
+      وخلّ في بالك إن الواقع السعودي يمشي على <bdi>IFRS</bdi>.
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Financial accounting is governed by concepts and rules known as <b>generally accepted
+      accounting principles (GAAP)</b>. GAAP wants information to have <b>relevance</b> and
+      <b>faithful representation</b>. The <b>Financial Accounting Standards Board (FASB)</b> is
+      given the task of setting GAAP from the <b>Securities and Exchange Commission (SEC)</b>, a
+      U.S. government agency that oversees proper use of GAAP by companies that sell stock and debt
+      to the public. An <b>audit</b> examines whether financial statements are prepared using GAAP.
+      The <b>International Accounting Standards Board (IASB)</b> issues <b>International Financial
+      Reporting Standards (IFRS)</b>, which are similar to, but sometimes different from, U.S. GAAP.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b><bdi>FASB</bdi> يضع، و<bdi>SEC</bdi> يعطي السلطة.</b> لا تعكسهم — هذا أكثر سؤال هنا.</li>
+        <li><bdi>SEC</bdi> جهة <b>حكومية</b>، و<bdi>FASB</bdi> <b>ليست</b> حكومية.</li>
+        <li><bdi>IFRS</bdi> يصدرها <b><bdi>IASB</bdi></b>، مو <bdi>FASB</bdi>.</li>
+        <li><bdi>Relevance</bdi> = تأثر على <b>القرار</b>. <bdi>Faithful representation</bdi> =
+            تعكس <b>الواقع</b> بدقة. الفرق بينهما سؤال متكرر.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Conceptual framework -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">The Conceptual Framework</div>
+    <div class="ar">الإطار المفاهيمي</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p>الإطار المفاهيمي للـ<bdi>FASB</bdi> يتكوّن من أربعة أجزاء:</p>
+      <table>
+        <tr><th>الجزء</th><th>وظيفته</th></tr>
+        <tr><td><b><bdi>Objectives</bdi></b></td>
+            <td>تقديم معلومات مفيدة للمستثمرين والدائنين وغيرهم</td></tr>
+        <tr><td><b><bdi>Qualitative characteristics</bdi></b></td>
+            <td>اشتراط أن تكون المعلومة ذات <bdi>relevance</bdi> و<bdi>faithful representation</bdi></td></tr>
+        <tr><td><b><bdi>Elements</bdi></b></td>
+            <td>تعريف البنود الموجودة في القوائم المالية</td></tr>
+        <tr><td><b><bdi>Recognition and measurement</bdi></b></td>
+            <td>وضع معايير <b>متى</b> يُعترف بالبند و<b>كيف</b> يُقاس</td></tr>
+      </table>
+    </div>
+
+    <div class="exhibit">
+      <div class="exlbl">EXHIBIT 1.6 — Conceptual Framework</div>
+      <svg viewBox="0 0 460 250" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Conceptual framework pyramid">
+        <path d="M230 18 L300 88 L160 88 Z" fill="#f0c3ad" stroke="#8a4a25" stroke-width="1.6"/>
+        <path d="M160 92 L300 92 L340 152 L120 152 Z" fill="#e0a98e" stroke="#8a4a25" stroke-width="1.6"/>
+        <path d="M120 156 L340 156 L380 216 L80 216 Z" fill="#cf9070" stroke="#8a4a25" stroke-width="1.6"/>
+        <g font-family="system-ui,sans-serif" text-anchor="middle" fill="#3b1d0e" font-weight="700">
+          <text x="230" y="72" font-size="13">Objectives</text>
+          <text x="230" y="118" font-size="13">Qualitative characteristics</text>
+          <text x="230" y="140" font-size="11" font-weight="400">relevance · faithful representation</text>
+          <text x="230" y="182" font-size="13">Elements</text>
+          <text x="230" y="204" font-size="11" font-weight="400">Recognition and measurement</text>
+        </g>
+      </svg>
+      <p class="excap">الترتيب من فوق لتحت: <b>Objectives</b> ثم <b>Qualitative characteristics</b>
+      ثم <b>Elements</b> و<b>Recognition and measurement</b>.</p>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">إنجليزي مثل الاختبار. جاوب قبل ما تفتح الحل.</p>
+
+<div class="q">
+  <div class="stem">1. Which body is given the task of setting GAAP, and from whom does it receive that authority?</div>
+  <ol type="A">
+    <li>The SEC, with authority from the FASB</li>
+    <li>The FASB, with authority from the SEC</li>
+    <li>The IASB, with authority from the FASB</li>
+    <li>The FASB, with authority from the IASB</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <bdi>FASB</bdi> هو اللي <b>يضع</b> الـ<bdi>GAAP</bdi>، وسلطته جاية من
+  الـ<bdi>SEC</bdi> — الجهة الحكومية الأمريكية. الاختيار <b>A</b> يعكسهم، وهو الفخ المقصود.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. An employee with large personal debts notices that no one reviews the petty cash records, and tells himself the company "owes him" for unpaid overtime. Which elements of the fraud triangle are present?</div>
+  <ol type="A">
+    <li>Opportunity only</li>
+    <li>Pressure and rationalization only</li>
+    <li>Opportunity, pressure, and rationalization</li>
+    <li>Pressure only</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. الديون = <bdi>pressure</bdi>، وما فيه أحد يراجع = <bdi>opportunity</bdi>،
+  و«الشركة تستاهل» = <bdi>rationalization</bdi>. الثلاثة موجودة.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Information that accurately reflects the results of a business is said to have:</div>
+  <ol type="A">
+    <li>Relevance</li>
+    <li>Faithful representation</li>
+    <li>Comparability</li>
+    <li>Materiality</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <bdi>faithful representation</bdi> = تعكس الواقع <b>بدقة</b>.
+  أما <bdi>relevance</bdi> فتعني إنها <b>تأثر على القرار</b> — وهذا الفرق هو السؤال نفسه.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. Which statement about IFRS is correct?</div>
+  <ol type="A">
+    <li>IFRS is issued by the FASB and is identical to U.S. GAAP</li>
+    <li>IFRS is issued by the IASB and is identical to U.S. GAAP</li>
+    <li>IFRS is issued by the IASB and is similar to, but sometimes different from, U.S. GAAP</li>
+    <li>IFRS is issued by the SEC and replaces U.S. GAAP</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. <bdi>IASB</bdi> هو اللي يصدر <bdi>IFRS</bdi>، وهي <b>مشابهة</b> لكن
+  <b>أحياناً مختلفة</b>. كلمة <i>identical</i> غلط دائماً.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. Locks on a warehouse door and independent review of records are examples of:</div>
+  <ol type="A">
+    <li>An audit</li>
+    <li>Internal controls</li>
+    <li>GAAP</li>
+    <li>The conceptual framework</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <bdi>internal controls</bdi> — إجراءات داخل الشركة تحمي الأصول.
+  الـ<bdi>audit</bdi> شي مختلف: فحص خارجي يتأكد من إعداد القوائم وفق <bdi>GAAP</bdi>.</p></details>
+</div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Ethics</bdi></td><td>الأخلاق</td><td>معايير الصح والغلط</td></tr>
+  <tr><td><bdi>Fraud triangle</bdi></td><td>مثلث الغش</td><td>ثلاثة أضلاع</td></tr>
+  <tr><td><bdi>Opportunity</bdi></td><td>الفرصة</td><td>«يقدر» يغش</td></tr>
+  <tr><td><bdi>Pressure</bdi></td><td>الضغط</td><td>«محتاج» يغش</td></tr>
+  <tr><td><bdi>Rationalization</bdi></td><td>التبرير</td><td>وتُسمّى <bdi>attitude</bdi></td></tr>
+  <tr><td><bdi>Internal controls</bdi></td><td>الرقابة الداخلية</td><td>إجراءات، مو مراجعة</td></tr>
+  <tr><td><bdi>Auditors</bdi></td><td>المراجعون</td><td>يتحققون من فعالية الرقابة</td></tr>
+  <tr><td><bdi>GAAP</bdi></td><td>المبادئ المحاسبية المقبولة عموماً</td><td>يضعها <bdi>FASB</bdi></td></tr>
+  <tr><td><bdi>Relevance</bdi></td><td>الملاءمة</td><td>تأثر على القرار</td></tr>
+  <tr><td><bdi>Faithful representation</bdi></td><td>التمثيل الصادق</td><td>تعكس الواقع بدقة</td></tr>
+  <tr><td><bdi>FASB</bdi></td><td>مجلس معايير المحاسبة المالية</td><td>يضع GAAP · ليس حكومياً</td></tr>
+  <tr><td><bdi>SEC</bdi></td><td>هيئة الأوراق المالية</td><td>حكومية · تعطي FASB سلطته</td></tr>
+  <tr><td><bdi>IASB</bdi> / <bdi>IFRS</bdi></td><td>المعايير الدولية</td><td>مشابهة لكن ليست مطابقة</td></tr>
+  <tr><td><bdi>Audit</bdi></td><td>المراجعة</td><td>يتحقق من تطبيق GAAP</td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب في <bdi>SmartBook</bdi> — <bdi>Chapter 1</bdi>، القسم الثاني
+<bdi>Fundamentals of Accounting</bdi>، الهدف <code>C2</code> (صفحة ٧ وما بعدها).
+<br><b>ناقص من هذا القسم:</b> <bdi>principles and assumptions</bdi> (مبدأ التكلفة، الاعتراف بالإيراد،
+مقابلة المصروفات، الإفصاح الكامل · فرض الاستمرارية، وحدة النقد، الفترة الزمنية، الوحدة المحاسبية)
+و<bdi>forms of business organization</bdi> — تحتاج جلسة ثانية على الكتاب.
+</p>
+
+</div>
+</body>
+</html>

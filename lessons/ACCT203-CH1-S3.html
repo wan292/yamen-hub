@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ١: المعادلة المحاسبية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
+  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
+  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
+  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
+  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
+bdi{font-weight:600;unicode-bidi:isolate}
+code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
+h2{font-size:1.35rem;margin:0;line-height:1.5}
+header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
+.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
+.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
+.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
+.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
+.chead .ar{font-size:1.02rem;font-weight:600}
+.chead .say{font-size:.85rem;color:var(--muted)}
+.cbody{padding:6px 20px 20px}
+.blk{margin:18px 0}
+.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
+  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
+  unicode-bidi:isolate;direction:ltr}
+.hook{font-size:1.05rem;color:var(--ink2)}
+.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
+  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
+.exam .lbl{background:var(--exam);color:#fff}
+.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
+  padding:14px 18px;border-radius:0 8px 8px 0}
+.trap .lbl{background:var(--trap);color:#fff}
+.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
+ul,ol{padding-inline-start:22px} li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
+td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
+.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
+.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
+.q ol li{margin:5px 0;font-weight:500}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
+details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
+.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
+.big h2{color:var(--accent);margin-bottom:6px}
+.eq{direction:ltr;text-align:center;background:var(--card);border:2px solid var(--accent);
+  border-radius:10px;padding:22px 16px;margin:18px 0;font-family:Georgia,serif;overflow-x:auto}
+.eq .l1{font-size:clamp(1.1rem,3.4vw,1.6rem);font-weight:700;letter-spacing:.01em}
+.eq .l2{font-size:clamp(.85rem,2.6vw,1.15rem);margin-top:14px;color:var(--ink2)}
+.eq .plus{color:var(--muted)}
+.g-cs{color:#0f7b6c} .g-dv{color:#a4342a} .g-rv{color:#1b5e9c} .g-ex{color:#8a5a00}
+.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
+@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
+.exhibit table{margin:0;font-size:.9rem;color:#1a1a1a}
+.exhibit th{background:#f0ece6;color:#1a1a1a;border-color:#d8d3cb;text-align:center}
+.exhibit td{border-color:#d8d3cb;text-align:center}
+.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;margin-bottom:6px}
+.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
+.pos{color:#0f7b6c;font-weight:700} .neg{color:#a4342a;font-weight:700}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>الفصل الأول — العمليات والمعادلة المحاسبية</h1>
+  <p class="sub"><code>ACCT 203</code> · <bdi>Chapter 1</bdi> · القسم ٣ من ٤:
+  <bdi>Business Transactions and Accounting</bdi><br>
+  الهدف <code>A1</code>: <bdi>Define and interpret the accounting equation and each of its components.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>هذا أهم درس في المادة كلها</h2>
+  <p>كل شي بعده — القيود، الأستاذ، ميزان المراجعة، القوائم المالية — مبني على معادلة واحدة.
+  لو فهمتها الآن صح، باقي الفصل يمشي. ولو ما فهمتها، بتعاني إلى آخر السنة.</p>
+  <p>اقرأ هذا الدرس مرّتين، مو مرّة.</p>
+</div>
+
+<!-- The three components -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Assets · Liabilities · Equity</div>
+    <div class="ar">الأصول · الالتزامات · حقوق الملكية</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      المحاسبة تعرض شيئين فقط: <b>وش تملك الشركة</b>، و<b>مين له حق فيه</b>. هذا كل شي.</div>
+
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p>المحاسبة تُظهر جانبين للشركة: الموارد اللي تملكها، والمطالبات على هذي الموارد.
+      والمطالبات تنقسم إلى مطالبات <b>غير المُلّاك</b> (<bdi>liability</bdi>) ومطالبات <b>المُلّاك</b>
+      (<bdi>equity</bdi>). والاثنان معاً هما <b>مصدر الأموال</b> اللي اشترت الأصول.</p>
+
+      <table>
+        <tr><th>المكوّن</th><th>التعريف</th><th>أمثلة من الكتاب</th></tr>
+        <tr>
+          <td><b><bdi>Assets</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الأصول</span></td>
+          <td>موارد <b>تملكها أو تسيطر عليها</b> الشركة، ويُتوقّع أن تحقق <b>منافع مستقبلية</b>.</td>
+          <td><bdi>cash</bdi> · <bdi>supplies</bdi> · <bdi>equipment</bdi> · <bdi>land</bdi> ·
+              <bdi>accounts receivable</bdi></td>
+        </tr>
+        <tr>
+          <td><b><bdi>Liabilities</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الالتزامات</span></td>
+          <td>مطالبات <b>الدائنين</b> على الأصول — التزامات الشركة بتقديم أصول أو منتجات أو خدمات للغير.</td>
+          <td><bdi>wages payable</bdi> · <bdi>accounts payable</bdi> ·
+              <bdi>notes (loans) payable</bdi> · <bdi>taxes payable</bdi></td>
+        </tr>
+        <tr>
+          <td><b><bdi>Equity</bdi></b><br><span style="color:var(--muted);font-size:.85rem">حقوق الملكية</span></td>
+          <td>مطالبة <b>المالك</b> على الأصول، وتساوي <b>الأصول ناقص الالتزامات</b>.</td>
+          <td>تُسمّى أيضاً <bdi>net assets</bdi> أو <bdi>residual equity</bdi></td>
+        </tr>
+      </table>
+
+      <p><b>مصطلحان لازم تعرفهما:</b></p>
+      <ul>
+        <li><b><bdi>Receivable</bdi></b> = أصل يَعِد بـ<b>تدفّق داخل</b> مستقبلي.
+            الشركة اللي تقدّم خدمة أو منتج <bdi>on credit</bdi> يصير عندها
+            <bdi>account receivable</bdi> من العميل.</li>
+        <li><b><bdi>Payable</bdi></b> = التزام يَعِد بـ<b>تدفّق خارج</b> مستقبلي.</li>
+      </ul>
+      <p><b>ملاحظة الكتاب:</b> عبارتا <i><bdi>on credit</bdi></i> و<i><bdi>on account</bdi></i>
+      تعنيان أن النقد يُستلم أو يُدفع <b>في تاريخ لاحق</b>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Assets</b> are resources a company owns or controls. These resources are expected to
+      yield future benefits. <b>Liabilities</b> are creditors' claims on assets; these claims are
+      company obligations to provide assets, products, or services to others. <b>Equity</b> is the
+      owner's claim on assets and is equal to assets minus liabilities. Equity is also called
+      <i>net assets</i> or <i>residual equity</i>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Assets</bdi> ما تعني «يملك» فقط — الكتاب يقول <b><bdi>owns or controls</bdi></b>.
+            كلمة <bdi>controls</bdi> تجي في الاختيارات.</li>
+        <li><bdi>receivable</bdi> = أصل (داخل). <bdi>payable</bdi> = التزام (خارج).
+            الخلط بينهما أكثر غلطة في هذا القسم.</li>
+        <li><bdi>Equity</bdi> = الأصول <b>ناقص</b> الالتزامات — مو زائد.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- The equation -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">The Accounting Equation</div>
+    <div class="ar">المعادلة المحاسبية</div>
+    <div class="say">احفظها الآن — لا تكمّل قبل ما تحفظها</div>
+  </div>
+  <div class="cbody">
+    <div class="eq">
+      <div class="l1">Assets <span class="plus">=</span> Liabilities <span class="plus">+</span> Equity</div>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح</span>
+      <p>هذي العلاقة تنطبق على <b>كل العمليات والأحداث</b>، وعلى <b>كل الشركات والمنظمات</b>،
+      وفي <b>كل لحظة زمنية</b>. ما فيها استثناء.</p>
+      <p>ويمكن إعادة ترتيبها. مثال من الكتاب:
+      <span class="mono">Assets − Liabilities = Equity</span></p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — المعادلة الموسّعة</span>
+      <p>نقدر نقسّم حقوق الملكية إلى <b>أربعة أجزاء</b> فنحصل على
+      <b><bdi>the expanded accounting equation</bdi></b>:</p>
+
+      <div class="eq">
+        <div class="l1">Assets = Liabilities + Contributed Capital + Retained Earnings</div>
+        <div class="l2">= Liabilities <span class="plus">+</span>
+          <span class="g-cs">Common Stock</span> <span class="plus">−</span>
+          <span class="g-dv">Dividends</span> <span class="plus">+</span>
+          <span class="g-rv">Revenues</span> <span class="plus">−</span>
+          <span class="g-ex">Expenses</span></div>
+      </div>
+
+      <p>حقوق الملكية <b>تزيد</b> من استثمارات المالك (<bdi>owner investments</bdi>، وتُسمّى
+      <i><bdi>stock issuances</bdi></i>) ومن <bdi>revenues</bdi>.
+      و<b>تنقص</b> من <bdi>dividends</bdi> ومن <bdi>expenses</bdi>.</p>
+
+      <table>
+        <tr><th>الجزء</th><th>الإشارة</th><th>التعريف</th></tr>
+        <tr><td><b class="g-cs"><bdi>Common Stock</bdi></b><br>
+                <span style="font-size:.8rem;color:var(--muted)">جزء من <bdi>contributed capital</bdi></span></td>
+            <td class="pos">+</td>
+            <td>تدفّقات داخلة من النقد وصافي الأصول من <b>المساهمين</b> مقابل أسهم.
+                والسهم يعكس <b>الملكية</b> في الشركة.</td></tr>
+        <tr><td><b class="g-dv"><bdi>Dividends</bdi></b><br>
+                <span style="font-size:.8rem;color:var(--muted)">من <bdi>retained earnings</bdi></span></td>
+            <td class="neg">−</td>
+            <td>تدفّقات <b>خارجة</b> من النقد وأصول أخرى <b>إلى المساهمين</b>، تُنقص حقوق الملكية.</td></tr>
+        <tr><td><b class="g-rv"><bdi>Revenues</bdi></b></td>
+            <td class="pos">+</td>
+            <td>تزيد حقوق الملكية (عبر <bdi>net income</bdi>) من <b>بيع منتجات وخدمات للعملاء</b>.
+                أمثلة: بيع منتجات، خدمات استشارية، تأجير مرافق، عمولات.</td></tr>
+        <tr><td><b class="g-ex"><bdi>Expenses</bdi></b></td>
+            <td class="neg">−</td>
+            <td>تُنقص حقوق الملكية (عبر <bdi>net income</bdi>) من <b>تكاليف تقديم</b> المنتجات
+                والخدمات. أمثلة: وقت الموظفين، استخدام المستلزمات، إعلان، مرافق، تأمين.</td></tr>
+      </table>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The <b>accounting equation</b> is <b>Assets = Liabilities + Equity</b>. It applies to all
+      transactions and events, to all companies and organizations, and to all points in time.
+      The <b>expanded accounting equation</b> is:</p>
+      <p style="text-align:center;font-weight:700">Assets = Liabilities + Common Stock − Dividends
+      + Revenues − Expenses</p>
+      <p>Equity increases from <b>owner investments</b> (stock issuances) and from <b>revenues</b>;
+      it decreases from <b>dividends</b> and from <b>expenses</b>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>الإشارات هي السؤال.</b> <bdi>Common Stock</bdi> و<bdi>Revenues</bdi> بموجب،
+            <bdi>Dividends</bdi> و<bdi>Expenses</bdi> بسالب. أي اختيار يعكس إشارة واحدة = غلط.</li>
+        <li><b><bdi>Dividends</bdi> ليست <bdi>expense</bdi>.</b> هذا أكثر فخ في الفصل.
+            التوزيعات <b>تُنقص</b> حقوق الملكية لكنها <b>ليست مصروفاً</b> وما تدخل في
+            <bdi>net income</bdi>.</li>
+        <li><bdi>Contributed Capital</bdi> = <bdi>Common Stock</bdi>.
+            و<bdi>Retained Earnings</bdi> = <bdi>Revenues − Expenses − Dividends</bdi>.</li>
+        <li>المعادلة تنطبق «في كل لحظة» — أي اختيار يقول إنها تنطبق فقط آخر السنة = غلط.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Transactions -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Transactions and Events</div>
+    <div class="ar">العمليات والأحداث</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">الشرح</span>
+      <table>
+        <tr><th>النوع</th><th>التعريف</th><th>مثال الكتاب</th></tr>
+        <tr><td><b><bdi>External transactions</bdi></b></td>
+            <td>تبادل قيمة <b>بين كيانين</b>، وتُحدث <b>تغييراً في المعادلة المحاسبية</b>.</td>
+            <td>بيع <bdi>AppleCare Protection Plan</bdi> من <bdi>Apple</bdi></td></tr>
+        <tr><td><b><bdi>Internal transactions</bdi></b></td>
+            <td>تبادل <b>داخل الكيان نفسه</b>، و<b>قد تؤثر أو لا تؤثر</b> على المعادلة.</td>
+            <td>استخدام <bdi>Target</bdi> لمستلزماتها — تُسجَّل كمصروف عند الاستخدام</td></tr>
+        <tr><td><b><bdi>Events</bdi></b></td>
+            <td>وقائع تؤثر على المعادلة <b>ويمكن قياسها بموثوقية</b>.</td>
+            <td>تغيّر القيمة السوقية لبعض الأصول والالتزامات · حريق يتلف أصولاً ويُحدث خسائر</td></tr>
+      </table>
+      <p>الكتاب يستخدم المعادلة لتحليل <b>١١ عملية وحدث</b> لشركة <bdi>FastForward</bdi> —
+      شركة استشارات ناشئة (خدمية) — في <b>أول شهر</b> من التشغيل.</p>
+      <p style="background:var(--exam-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      القاعدة الذهبية: <b>بعد كل عملية وكل حدث، الأصول تساوي دائماً الالتزامات زائد حقوق الملكية.</b>
+      لو ما تساوت، فيه غلط في تحليلك.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال ١ — Investment by Owner</span>
+      <p>في ١ ديسمبر، أسّس <bdi>Chas Taylor</bdi> شركة استشارات اسمها <bdi>FastForward</bdi>
+      على شكل <bdi>corporation</bdi>. استثمر <b>٣٠٬٠٠٠ دولار</b> نقداً في الشركة الجديدة
+      <b>مقابل أسهمها العادية</b>، وأودع النقد في حساب بنكي باسم الشركة.</p>
+      <p>بعد العملية: النقد (أصل) = ٣٠٬٠٠٠، وحقوق الملكية = ٣٠٬٠٠٠. الزيادة جاءت من
+      استثمار المالك (<bdi>stock issuance</bdi>)، وتُدرج تحت <bdi>Common Stock</bdi>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Transaction 1</div>
+        <table>
+          <tr><th colspan="2">Assets</th><th>=</th><th>Liabilities</th><th>+</th><th colspan="2">Equity</th></tr>
+          <tr><th></th><th>Cash</th><th>=</th><th></th><th>+</th><th>Common Stock</th><th></th></tr>
+          <tr><td>(1)</td><td class="pos">+ $30,000</td><td>=</td><td></td><td></td>
+              <td class="pos">+ $30,000</td><td style="font-size:.8rem">Owner investment</td></tr>
+        </table>
+        <p class="excap">لاحظ: الطرفان زادا بنفس المبلغ، فبقيت المعادلة متوازنة —
+        <b>30,000 = 0 + 30,000</b>.</p>
+      </div>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>External</bdi> = <b>بين</b> كيانين. <bdi>Internal</bdi> = <b>داخل</b> كيان واحد.</li>
+        <li><bdi>Internal transactions</bdi> <b>قد لا تؤثر</b> على المعادلة —
+            الكتاب يقول <i>may or may not affect</i>. أي اختيار يجزم بإحداهما = غلط.</li>
+        <li>الـ<bdi>events</bdi> لازم تكون <b>قابلة للقياس بموثوقية</b> عشان تُسجَّل.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">جاوب قبل ما تفتح الحل. لو غلطت في سؤال ٢ أو ٣، ارجع للجدول فوق.</p>
+
+<div class="q">
+  <div class="stem">1. A company has assets of $180,000 and liabilities of $75,000. Its equity is:</div>
+  <ol type="A"><li>$255,000</li><li>$105,000</li><li>$75,000</li><li>Cannot be determined</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <span class="mono">Equity = Assets − Liabilities = 180,000 − 75,000 = 105,000</span>.
+  الاختيار <b>A</b> يجمع بدل ما يطرح — وهو الفخ.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. Which of the following <i>decreases</i> equity?</div>
+  <ol type="A"><li>Revenues</li><li>Common stock issued to shareholders</li>
+  <li>Dividends</li><li>Accounts receivable collected</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. في المعادلة الموسّعة: <bdi>Common Stock</bdi> و<bdi>Revenues</bdi> بموجب،
+  و<bdi>Dividends</bdi> و<bdi>Expenses</bdi> بسالب. والاختيار <b>D</b> تحصيل ذمة —
+  يغيّر شكل الأصول فقط ولا يمسّ حقوق الملكية أصلاً.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Which statement about dividends is correct?</div>
+  <ol type="A">
+    <li>Dividends are an expense and reduce net income</li>
+    <li>Dividends reduce equity but are not an expense</li>
+    <li>Dividends increase equity because they are paid to owners</li>
+    <li>Dividends have no effect on the accounting equation</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. التوزيعات <b>تُنقص</b> حقوق الملكية، لكنها <b>ليست مصروفاً</b> ولا تدخل في
+  حساب <bdi>net income</bdi>. الاختيار <b>A</b> هو الفخ الأشهر في الفصل كله.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. Target uses some of its own supplies, which are then reported as expenses. This is best described as:</div>
+  <ol type="A"><li>An external transaction</li><li>An internal transaction</li>
+  <li>An event</li><li>Not a transaction at all</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. تبادل <b>داخل</b> الكيان نفسه — ما فيه طرف ثاني. وهذا هو مثال الكتاب حرفياً
+  على <bdi>internal transactions</bdi>.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. An owner invests $50,000 cash in exchange for common stock. The effect on the accounting equation is:</div>
+  <ol type="A">
+    <li>Assets increase $50,000; liabilities increase $50,000</li>
+    <li>Assets increase $50,000; equity increases $50,000</li>
+    <li>Assets increase $50,000; equity decreases $50,000</li>
+    <li>Equity increases $50,000; liabilities decrease $50,000</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. النقد (أصل) يزيد، و<bdi>Common Stock</bdi> (حقوق ملكية) يزيد بنفس المبلغ.
+  المُلّاك ليسوا دائنين، فالالتزامات ما تتأثر — وهذا ما يستغله الاختيار <b>A</b>.</p></details>
+</div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Assets</bdi></td><td>الأصول</td><td>owns <b>or controls</b></td></tr>
+  <tr><td><bdi>Liabilities</bdi></td><td>الالتزامات</td><td>مطالبات الدائنين</td></tr>
+  <tr><td><bdi>Equity</bdi></td><td>حقوق الملكية</td><td>= أصول <b>ناقص</b> التزامات</td></tr>
+  <tr><td><bdi>Net assets</bdi> / <bdi>residual equity</bdi></td><td>صافي الأصول</td><td>أسماء أخرى لـ equity</td></tr>
+  <tr><td><bdi>Receivable</bdi></td><td>ذمة مدينة</td><td>أصل — تدفّق <b>داخل</b></td></tr>
+  <tr><td><bdi>Payable</bdi></td><td>ذمة دائنة</td><td>التزام — تدفّق <b>خارج</b></td></tr>
+  <tr><td><bdi>On credit</bdi> / <bdi>on account</bdi></td><td>بالآجل</td><td>نقد في تاريخ لاحق</td></tr>
+  <tr><td><bdi>Common Stock</bdi></td><td>رأس المال المدفوع</td><td>+ · جزء من contributed capital</td></tr>
+  <tr><td><bdi>Dividends</bdi></td><td>التوزيعات</td><td>− · <b>ليست مصروفاً</b></td></tr>
+  <tr><td><bdi>Revenues</bdi></td><td>الإيرادات</td><td>+ · من بيع للعملاء</td></tr>
+  <tr><td><bdi>Expenses</bdi></td><td>المصروفات</td><td>− · تكاليف التقديم</td></tr>
+  <tr><td><bdi>External transaction</bdi></td><td>عملية خارجية</td><td>بين كيانين</td></tr>
+  <tr><td><bdi>Internal transaction</bdi></td><td>عملية داخلية</td><td>قد تؤثر أو لا</td></tr>
+  <tr><td><bdi>Events</bdi></td><td>الأحداث</td><td>لازم قياس موثوق</td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب في <bdi>SmartBook</bdi> — <bdi>Chapter 1</bdi>، القسم الثالث
+<bdi>Business Transactions and Accounting</bdi>، الهدف <code>A1</code> (صفحة ١٠ وما بعدها).
+<br><b>ناقص:</b> العمليات من ٢ إلى ١١ لشركة <bdi>FastForward</bdi> (تحليل العمليات خطوة بخطوة،
+الهدف <code>P1</code>) — تحتاج جلسة ثانية على الكتاب.
+</p>
+
+</div>
+</body>
+</html>

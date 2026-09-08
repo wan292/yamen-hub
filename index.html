@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الأستاذ — لوحة يامن</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --bg:#f7f6f3; --card:#fff; --ink:#181716; --ink2:#4c4a46; --muted:#827e77;
+  --line:#e4e1db; --accent:#1f5d4c; --accent-soft:#e6f0ec;
+  --red:#a4342a; --red-soft:#fbecea; --amber:#8a6318; --amber-soft:#fbf2df;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 22px -18px rgba(0,0,0,.3);
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#111513; --card:#191d1b; --ink:#e8ece9; --ink2:#bcc3bf; --muted:#8b938e;
+  --line:#272d2a; --accent:#5cbfa0; --accent-soft:#16302a;
+  --red:#e0837a; --red-soft:#2a1817; --amber:#d6a75a; --amber-soft:#241d10;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 22px -18px rgba(0,0,0,.8);
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:16px;line-height:1.75}
+.mono,code{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.9em}
+bdi{unicode-bidi:isolate}
+.wrap{max-width:1080px;margin:0 auto;padding:20px 16px 80px}
+
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;
+  border-bottom:2px solid var(--accent);padding-bottom:14px;margin-bottom:18px}
+header h1{font-size:1.5rem;margin:0;font-weight:700}
+header .who{color:var(--muted);font-size:.87rem}
+
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+nav button{font-family:inherit;font-size:.92rem;font-weight:600;cursor:pointer;
+  background:var(--card);color:var(--ink2);border:1px solid var(--line);
+  padding:8px 16px;border-radius:999px;transition:.15s}
+nav button:hover{border-color:var(--accent)}
+nav button[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+section[hidden]{display:none}
+
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;box-shadow:var(--shadow)}
+.card h2{margin:0 0 10px;font-size:1.05rem}
+.lbl{font-size:.7rem;letter-spacing:.1em;font-weight:700;color:var(--muted)}
+
+/* today */
+.slot{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.slot:last-child{border-bottom:0}
+.slot .t{font-family:"IBM Plex Mono",monospace;font-size:.86rem;color:var(--muted);
+  min-width:96px;unicode-bidi:isolate;direction:ltr;text-align:start}
+.slot .c{font-weight:600}
+.slot .r{margin-inline-start:auto;font-size:.78rem;color:var(--muted)}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.empty{color:var(--muted);font-size:.92rem;padding:8px 0}
+
+/* countdown */
+.cd{display:flex;gap:10px;flex-wrap:wrap}
+.cd .item{flex:1;min-width:150px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card)}
+.cd .n{font-family:"IBM Plex Mono",monospace;font-size:1.5rem;font-weight:600;line-height:1.2}
+.cd .item.soon{border-color:var(--red)} .cd .item.soon .n{color:var(--red)}
+.cd .item.mid{border-color:var(--amber)} .cd .item.mid .n{color:var(--amber)}
+.cd .k{font-size:.82rem;color:var(--ink2);margin-top:2px}
+.cd .w{font-size:.74rem;color:var(--muted)}
+
+/* week grid */
+.week{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;min-width:640px}
+.wcol{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px;min-height:120px}
+.wcol h3{margin:0 0 8px;font-size:.85rem;text-align:center;color:var(--muted);font-weight:700}
+.wcol.today{border-color:var(--accent);border-width:2px}
+.ev{border-radius:7px;padding:7px 8px;margin-bottom:6px;color:#fff;font-size:.8rem;line-height:1.45}
+.ev b{display:block;font-family:"IBM Plex Mono",monospace;font-size:.82rem}
+.ev span{opacity:.9;font-size:.74rem}
+.scroll{overflow-x:auto;padding-bottom:6px}
+
+/* calendar */
+.mon{margin-bottom:26px}
+.mon h3{margin:0 0 8px;font-size:1.02rem}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal .hd{text-align:center;font-size:.72rem;font-weight:700;color:var(--muted);padding:4px 0}
+.cal .d{background:var(--card);border:1px solid var(--line);border-radius:6px;
+  min-height:64px;padding:4px 5px;font-size:.75rem;position:relative}
+.cal .d.out{background:transparent;border-color:transparent}
+.cal .d .num{font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--muted)}
+.cal .d.today{border-color:var(--accent);border-width:2px}
+.cal .d.today .num{color:var(--accent);font-weight:700}
+.cal .d.hol{background:var(--amber-soft)}
+.cal .d.hol .num{color:var(--amber)}
+.chip{display:block;border-radius:3px;margin-top:2px;padding:1px 4px;font-size:.63rem;
+  color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip.dl{background:var(--red);font-weight:600}
+.chip.holn{background:transparent;color:var(--amber);font-weight:600;padding-inline:0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin:10px 0 18px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-inline-end:5px;vertical-align:-1px}
+
+/* courses */
+.course{border-inline-start:5px solid var(--line);background:var(--card);
+  border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.course .top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.course .code{font-family:"IBM Plex Mono",monospace;font-weight:600}
+.course .ar{font-weight:600}
+.course .meta{font-size:.82rem;color:var(--muted);margin-top:4px}
+.course .note{font-size:.85rem;color:var(--ink2);margin-top:8px;
+  background:var(--accent-soft);border-radius:6px;padding:8px 10px}
+.tag{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;
+  background:var(--red-soft);color:var(--red)}
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:8px}
+th{background:var(--accent-soft);text-align:start;padding:8px 10px;border:1px solid var(--line);font-size:.8rem}
+td{padding:8px 10px;border:1px solid var(--line)}
+.warn{background:var(--amber-soft);border-inline-start:4px solid var(--amber);
+  padding:10px 14px;border-radius:0 8px 8px 0;font-size:.88rem;color:var(--ink2);margin-top:10px}
+a.lesson{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:12px 14px;margin-bottom:8px;text-decoration:none;color:inherit}
+a.lesson:hover{border-color:var(--accent)}
+a.lesson .t{font-weight:600}
+a.lesson .s{font-size:.8rem;color:var(--muted)}
+.soonlbl{font-size:.72rem;color:var(--muted);margin-top:2px}
+.pend{opacity:.55}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>الأستاذ</h1>
+  <span class="who" id="who"></span>
+</header>
+
+<nav id="nav">
+  <button data-t="today"  aria-selected="true">اليوم</button>
+  <button data-t="week"   aria-selected="false">الأسبوع</button>
+  <button data-t="cal"    aria-selected="false">التقويم</button>
+  <button data-t="courses"aria-selected="false">المواد</button>
+  <button data-t="notes"  aria-selected="false">الملخصات</button>
+</nav>
+
+<section id="today"></section>
+<section id="week" hidden></section>
+<section id="cal" hidden></section>
+<section id="courses" hidden></section>
+<section id="notes" hidden></section>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+const DAYS=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
+const DNAMES=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس"];
+const MONTHS={1:"يناير",2:"فبراير",3:"مارس",4:"أبريل",5:"مايو",6:"يونيو",7:"يوليو",
+  8:"أغسطس",9:"سبتمبر",10:"أكتوبر",11:"نوفمبر",12:"ديسمبر"};
+const C={}; COURSES.forEach(c=>C[c.code]=c);
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today=new Date(); const TODAY=iso(today);
+const dayDiff=(a,b)=>Math.round((new Date(b+"T00:00:00")-new Date(a+"T00:00:00"))/864e5);
+const inHol=s=>HOLIDAYS.find(h=>s>=h.from&&s<=h.to);
+
+document.getElementById("who").textContent =
+  STUDENT.name+" · "+STUDENT.term+" · "+STUDENT.credits+" ساعة معتمدة";
+
+/* ---------- اليوم ---------- */
+function renderToday(){
+  const dow=today.getDay(); const h=inHol(TODAY);
+  let s='<div class="grid g2">';
+  s+='<div class="card"><span class="lbl">اليوم — '+DAYS[dow]+' '+TODAY+'</span><h2 style="margin-top:6px">محاضراتك</h2>';
+  if(h){ s+='<div class="empty">🎉 '+h.name+' — ما فيه محاضرات</div>'; }
+  else if(dow>4){ s+='<div class="empty">نهاية الأسبوع — ما فيه محاضرات</div>'; }
+  else{
+    const list=SCHEDULE.filter(x=>x.day===dow).sort((a,b)=>a.from.localeCompare(b.from));
+    if(!list.length) s+='<div class="empty">ما فيه محاضرات اليوم</div>';
+    list.forEach(x=>{const c=C[x.code];
+      s+='<div class="slot"><span class="dot" style="background:'+c.color+'"></span>'+
+         '<span class="t">'+x.from+'–'+x.to+'</span>'+
+         '<span class="c"><bdi>'+c.code+'</bdi> — '+c.ar+'</span>'+
+         '<span class="r">'+c.room+'</span></div>';});
+  }
+  s+='</div>';
+
+  const up=DEADLINES.map(d=>({...d,left:dayDiff(TODAY,d.date)}))
+      .filter(d=>d.left>=0).sort((a,b)=>a.left-b.left);
+  s+='<div class="card"><span class="lbl">القادم</span><h2 style="margin-top:6px">أقرب المواعيد</h2><div class="cd">';
+  if(!up.length) s+='<div class="empty">ما فيه مواعيد قادمة مسجّلة</div>';
+  up.slice(0,4).forEach(d=>{
+    const cls=d.left<=7?"soon":(d.left<=21?"mid":"");
+    s+='<div class="item '+cls+'"><div class="n">'+d.left+'</div>'+
+       '<div class="w">يوم متبقٍ</div><div class="k"><bdi>'+d.code+'</bdi> — '+d.title+
+       (d.weight?' <b>('+d.weight+'%)</b>':'')+'</div></div>';});
+  s+='</div></div></div>';
+  document.getElementById("today").innerHTML=s;
+}
+
+/* ---------- الأسبوع ---------- */
+function renderWeek(){
+  let s='<div class="card"><h2>الجدول الأسبوعي</h2><div class="scroll"><div class="week">';
+  for(let d=0;d<5;d++){
+    s+='<div class="wcol'+(d===today.getDay()?' today':'')+'"><h3>'+DNAMES[d]+'</h3>';
+    SCHEDULE.filter(x=>x.day===d).sort((a,b)=>a.from.localeCompare(b.from)).forEach(x=>{
+      const c=C[x.code];
+      s+='<div class="ev" style="background:'+c.color+'"><b>'+c.code+'</b>'+
+         '<span>'+x.from+'–'+x.to+'<br>'+(c.online?'أونلاين':c.room)+'</span></div>';});
+    s+='</div>';
+  }
+  s+='</div></div></div>';
+  s+='<div class="card" style="margin-top:14px"><h2>خطة سلوك المستهلك أسبوعياً</h2><table>'+
+     '<tr><th>الأسبوع</th><th>يبدأ</th><th>الموضوع</th></tr>';
+  MKT231_WEEKS.forEach(w=>{
+    const cur = TODAY>=w[1] && dayDiff(w[1],TODAY)<7;
+    s+='<tr'+(cur?' style="background:var(--accent-soft);font-weight:600"':'')+
+       '><td class="mono">'+w[0]+'</td><td class="mono">'+w[1]+'</td><td>'+w[2]+'</td></tr>';});
+  s+='</table></div>';
+  document.getElementById("week").innerHTML=s;
+}
+
+/* ---------- التقويم ---------- */
+function renderCal(){
+  let s='<div class="legend">'+
+    '<span><i style="background:var(--red)"></i>موعد مهم</span>'+
+    '<span><i style="background:var(--amber-soft);border:1px solid var(--amber)"></i>إجازة</span>'+
+    '<span><i style="background:var(--accent-soft);border:1px solid var(--accent)"></i>اليوم</span>'+
+    '<span>النقاط الملوّنة = محاضرات</span></div>';
+
+  TERM.months.forEach(ym=>{
+    const [Y,M]=ym.split("-").map(Number);
+    const first=new Date(Y,M-1,1), last=new Date(Y,M,0);
+    s+='<div class="mon"><h3>'+MONTHS[M]+' '+Y+'</h3><div class="cal">';
+    ["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"]
+      .forEach(d=>s+='<div class="hd">'+d+'</div>');
+    for(let i=0;i<first.getDay();i++) s+='<div class="d out"></div>';
+    for(let day=1;day<=last.getDate();day++){
+      const dt=new Date(Y,M-1,day), ds=iso(dt), dow=dt.getDay();
+      const hol=inHol(ds), isToday=ds===TODAY;
+      const inTerm = ds>=TERM.start && ds<=TERM.end;
+      let cls="d"+(isToday?" today":"")+(hol?" hol":"");
+      s+='<div class="'+cls+'"><span class="num">'+day+'</span>';
+      if(hol && (day===dt.getDate() && (ds===hol.from)))
+        s+='<span class="chip holn">'+hol.name+'</span>';
+      if(!hol && inTerm && dow<5){
+        const lec=SCHEDULE.filter(x=>x.day===dow);
+        if(lec.length){ s+='<div style="margin-top:3px">';
+          lec.forEach(x=>s+='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;'+
+            'margin-inline-end:3px;background:'+C[x.code].color+'" title="'+x.code+' '+x.from+'"></span>');
+          s+='</div>'; }
+      }
+      DEADLINES.filter(d=>d.date===ds).forEach(d=>{
+        s+='<span class="chip dl" title="'+(d.note||"")+'">'+
+           (d.code!=="—"?d.code+" · ":"")+d.title+'</span>';});
+      s+='</div>';
+    }
+    s+='</div></div>';
+  });
+
+  s+='<div class="card"><h2>كل المواعيد</h2><table><tr><th>التاريخ</th><th>المادة</th><th>الموعد</th><th>الوزن</th><th>ملاحظة</th></tr>';
+  DEADLINES.slice().sort((a,b)=>a.date.localeCompare(b.date)).forEach(d=>{
+    const left=dayDiff(TODAY,d.date);
+    s+='<tr'+(left<0?' class="pend"':'')+'><td class="mono">'+d.date+'</td>'+
+       '<td class="mono">'+d.code+'</td><td>'+d.title+
+       (left>=0?'<div class="soonlbl">باقي '+left+' يوم</div>':'')+'</td>'+
+       '<td class="mono">'+(d.weight?d.weight+'%':'—')+'</td>'+
+       '<td style="font-size:.82rem;color:var(--muted)">'+(d.note||"")+'</td></tr>';});
+  s+='</table></div>';
+  document.getElementById("cal").innerHTML=s;
+}
+
+/* ---------- المواد ---------- */
+function renderCourses(){
+  let s='<div class="grid">';
+  COURSES.forEach(c=>{
+    s+='<div class="course" style="border-inline-start-color:'+c.color+'">'+
+       '<div class="top"><span class="code">'+c.code+'</span>'+
+       '<span class="ar">'+c.ar+'</span>'+
+       (c.retake?'<span class="tag">إعادة — الأولوية</span>':'')+'</div>'+
+       '<div class="meta"><bdi>'+c.en+'</bdi> · شعبة '+c.sec+' · '+c.cr+' ساعات · '+
+       c.teacher+' · '+c.room+(c.lang!=="—"?' · لغة التدريس: '+c.lang:'')+'</div>';
+    const g=GRADING[c.code];
+    if(g&&g.confirmed){
+      s+='<table><tr><th>البند</th><th>الوزن</th><th>التوقيت</th></tr>';
+      g.items.forEach(i=>s+='<tr><td>'+i.ar+(i.attend?' <span style="color:var(--amber)">(حضور)</span>':'')+
+        '</td><td class="mono"><b>'+i.w+'%</b></td><td>'+i.when+'</td></tr>');
+      s+='</table><div class="warn">١٥٪ من الدرجة (مشاركة + ملاحظة مباشرة) ما تنكسب إلا بالحضور. '+
+         'و٥٠٪ تتحدد قبل الاختبار النهائي.</div>';
+    } else {
+      s+='<div class="warn">⚠ توزيع الدرجات غير معروف — لازم تجيب <b>دليل المقرر</b> من الدكتور. '+
+         'بدونه ما نقدر نحسب وين درجتك رايحة.</div>';
+    }
+    if(c.note) s+='<div class="note">'+c.note+'</div>';
+    s+='</div>';
+  });
+  s+='</div><div class="card" style="margin-top:14px"><h2>الغياب والحرمان</h2>'+
+     '<div class="warn">تجاوز <b>٢٥٪</b> من محاضرات أي مادة = <b>حرمان (DN)</b> — رسوب مسجّل بدون اختبار. '+
+     'حدّث أرقام الغياب في <code>data.js</code> أول بأول.</div><table>'+
+     '<tr><th>المادة</th><th>الغياب</th></tr>';
+  COURSES.forEach(c=>s+='<tr><td class="mono">'+c.code+'</td><td class="mono">'+(ABSENCE[c.code]||0)+'</td></tr>');
+  s+='</table></div>';
+  document.getElementById("courses").innerHTML=s;
+}
+
+/* ---------- الملخصات ---------- */
+function renderNotes(){
+  let s='<div class="card"><h2>الملخصات الجاهزة</h2>';
+  LESSONS.filter(l=>l.done).forEach(l=>{
+    s+='<a class="lesson" href="'+l.href+'"><div class="t"><bdi>'+l.code+'</bdi> — '+l.title+'</div>'+
+       '<div class="s">'+l.sub+'</div></a>';});
+  s+='</div><div class="card" style="margin-top:14px"><h2>تحت التجهيز</h2>';
+  LESSONS.filter(l=>!l.done).forEach(l=>{
+    s+='<div class="lesson pend"><div class="t"><bdi>'+l.code+'</bdi> — '+l.title+'</div>'+
+       '<div class="s">'+l.sub+'</div></div>';});
+  s+='</div>';
+  document.getElementById("notes").innerHTML=s;
+}
+
+renderToday();renderWeek();renderCal();renderCourses();renderNotes();
+
+document.getElementById("nav").addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b)return;
+  document.querySelectorAll("#nav button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  ["today","week","cal","courses","notes"].forEach(id=>
+    document.getElementById(id).hidden = (id!==b.dataset.t));
+});
+</script>
+</body>
+</html>
