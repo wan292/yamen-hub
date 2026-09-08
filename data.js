@@ -124,3 +124,49 @@ const LESSONS = [
 
 /* الغياب — حدّثه يدوياً */
 const ABSENCE = { "MGT 102":0, "ACCT 203":0, "LAW 333":0, "MKT 231":0, "GS 151":0 };
+
+/* ============================================================
+   خريطة المحتوى — وش جاهز ووش ناقص لكل مادة
+   ============================================================ */
+const MAP = [
+  { code:"ACCT 203", ar:"مبادئ المحاسبة المالية", lang:"إنجليزي",
+    book:"McGraw Hill — Wild · SmartBook / Connect",
+    units:[
+      { name:"Chapter 1 — Accounting in Business", items:[
+        { t:"Importance of Accounting", o:"C1", s:"done", href:"lessons/ACCT203-CH1-S1.html" },
+        { t:"Fundamentals — Ethics & GAAP", o:"C2", s:"done", href:"lessons/ACCT203-CH1-S2.html" },
+        { t:"Business Transactions & the Equation", o:"A1", s:"done", href:"lessons/ACCT203-CH1-S3.html" },
+        { t:"Financial Statements", o:"P2", s:"done", href:"lessons/ACCT203-CH1-S4.html" },
+        { t:"FastForward — transactions 2 to 11", o:"P1", s:"todo",
+          note:"التحليل خطوة بخطوة — أهم تمرين في الفصل" },
+        { t:"Principles and assumptions + forms of organization", o:"C2", s:"todo",
+          note:"ذيل القسم الثاني" }
+      ]},
+      { name:"Chapter 2 وما بعده", items:[
+        { t:"لم يبدأ بعد", s:"wait", note:"ينتظر أن يفتحه الدكتور" } ]}
+    ]},
+  { code:"MGT 102", ar:"مبادئ الإدارة", lang:"—", priority:true,
+    book:"غير معروف — ينتظر دليل المقرر",
+    units:[ { name:"المادة كاملة", items:[
+      { t:"دليل المقرر", s:"block",
+        note:"⚠ أهم مستند ناقص. بدونه ما نعرف توزيع الدرجات ولا مواعيد الكويزات." },
+      { t:"المحتوى", s:"wait", note:"ينتظر الكتاب أو شرائح الدكتور" } ]} ]},
+  { code:"MKT 231", ar:"سلوك المستهلك في السياحة", lang:"عربي",
+    book:"أحمد علي سليمان — سلوك المستهلك · مرجع مساند: Solomon 13e",
+    units:[ { name:"الفصول الأربعة الأولى", items:[
+      { t:"دليل المقرر — توزيع الدرجات", s:"done", note:"✅ معروف بالكامل" },
+      { t:"الفصل ١ — طبيعة سلوك المستهلك", s:"ready", note:"PDF موجود، لم يُشرح" },
+      { t:"الفصل ٢ — اتخاذ القرار الشرائي", s:"ready", note:"PDF موجود" },
+      { t:"الفصل ٣ — الموقع التنافسي للمنتج", s:"ready", note:"PDF موجود" },
+      { t:"الفصل ٤ — تأثير ثقافة المجتمع", s:"ready", note:"PDF موجود" } ]} ]},
+  { code:"LAW 333", ar:"البيئة القانونية للأعمال", lang:"—",
+    book:"أنظمة سعودية — laws.boe.gov.sa",
+    units:[ { name:"المادة", items:[
+      { t:"دليل المقرر", s:"block", note:"ناقص" },
+      { t:"المحتوى", s:"wait",
+        note:"⚠ لا تُذاكر من مصادر أمريكية — الأنظمة سعودية. عربيتك ميزة هنا." } ]} ]},
+  { code:"GS 151", ar:"مهارات الحياة الجامعية", lang:"عربي",
+    book:"جامعة طيبة — مركز المتطلبات العامة",
+    units:[ { name:"المادة", items:[
+      { t:"المحتوى", s:"wait", note:"أونلاين على البلاك بورد" } ]} ]}
+];

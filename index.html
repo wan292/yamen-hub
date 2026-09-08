@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>الأستاذ — لوحة يامن</title>
+<title>Yamen's Hub — مركز يامن الدراسي</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
@@ -119,13 +119,49 @@ a.lesson .t{font-weight:600}
 a.lesson .s{font-size:.8rem;color:var(--muted)}
 .soonlbl{font-size:.72rem;color:var(--muted);margin-top:2px}
 .pend{opacity:.55}
+/* map + method */
+.tree{font-size:.92rem}
+.tnode{border-inline-start:2px solid var(--line);margin-inline-start:8px;padding-inline-start:16px}
+.tcourse{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:14px 16px;margin-bottom:14px}
+.tcourse>.h{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:4px}
+.tcourse>.h .code{font-family:"IBM Plex Mono",monospace;font-weight:700}
+.tcourse .book{font-size:.78rem;color:var(--muted);margin-bottom:10px}
+.tunit{font-weight:600;font-size:.88rem;margin:10px 0 4px;color:var(--ink2)}
+.titem{display:flex;gap:9px;align-items:flex-start;padding:5px 0}
+.titem .st{flex:none;width:19px;height:19px;border-radius:5px;display:grid;place-items:center;
+  font-size:.66rem;font-weight:700;color:#fff;margin-top:3px}
+.st.done{background:var(--accent)} .st.todo{background:var(--amber)}
+.st.wait{background:var(--muted)} .st.block{background:var(--red)} .st.ready{background:#1b5e9c}
+.titem .tx{flex:1;min-width:0}
+.titem .tt{font-weight:500}
+.titem a.tt{color:var(--accent);text-decoration:none}
+.titem a.tt:hover{text-decoration:underline}
+.titem .obj{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--muted);
+  border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-inline-start:6px}
+.titem .nt{font-size:.79rem;color:var(--muted);line-height:1.55}
+.key{display:flex;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin:4px 0 4px}
+.key span{display:flex;align-items:center;gap:6px}
+.blocks{display:grid;gap:8px;margin:12px 0}
+.brow{display:grid;grid-template-columns:78px 1fr;gap:12px;align-items:start;
+  background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+.brow .bn{font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:700;
+  color:#fff;background:var(--accent);border-radius:4px;text-align:center;padding:3px 0}
+.brow .bn.en{background:var(--red)}
+.brow .bd{font-size:.87rem;line-height:1.6}
+.brow .bd b{color:var(--accent)}
+.samp{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;
+  margin:12px 0;font-size:.9rem;line-height:1.75}
+.samp .en{direction:ltr;text-align:left;background:var(--accent-soft);border-radius:6px;
+  padding:10px 12px;margin-top:10px;font-weight:600}
+
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <h1>الأستاذ</h1>
+  <h1><bdi>Yamen's Hub</bdi></h1>
   <span class="who" id="who"></span>
 </header>
 
@@ -135,6 +171,7 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
   <button data-t="cal"    aria-selected="false">التقويم</button>
   <button data-t="courses"aria-selected="false">المواد</button>
   <button data-t="notes"  aria-selected="false">الملخصات</button>
+  <button data-t="map"    aria-selected="false">الخريطة</button>
 </nav>
 
 <section id="today"></section>
@@ -142,6 +179,7 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
 <section id="cal" hidden></section>
 <section id="courses" hidden></section>
 <section id="notes" hidden></section>
+<section id="map" hidden></section>
 
 </div>
 
@@ -310,12 +348,87 @@ function renderNotes(){
   document.getElementById("notes").innerHTML=s;
 }
 
-renderToday();renderWeek();renderCal();renderCourses();renderNotes();
+
+/* ---------- الخريطة ---------- */
+function renderMap(){
+  var LBL={done:"\u2713",todo:"\u2026",wait:"\u2014",block:"!",ready:"\u25B8"};
+  var s='<div class="card"><h2>خريطة المحتوى</h2>'+
+    '<p style="font-size:.9rem;color:var(--ink2);margin:0 0 10px">'+
+    'وش جاهز، وش تحت الشغل، ووش ينتظر مادة من الدكتور.</p>'+
+    '<div class="key">'+
+    '<span><span class="st done">\u2713</span>جاهز — افتحه الآن</span>'+
+    '<span><span class="st ready">\u25B8</span>المادة موجودة، لم تُشرح</span>'+
+    '<span><span class="st todo">\u2026</span>تحت الشغل</span>'+
+    '<span><span class="st block">!</span>ناقص — لازم تجيبه</span>'+
+    '<span><span class="st wait">\u2014</span>ينتظر الدكتور</span></div></div>';
+
+  s+='<div class="tree" style="margin-top:14px">';
+  MAP.forEach(function(c){
+    var cc=COURSES.filter(function(x){return x.code===c.code;})[0];
+    var col=cc?cc.color:'var(--line)';
+    s+='<div class="tcourse" style="border-inline-start:5px solid '+col+'">'+
+       '<div class="h"><span class="code">'+c.code+'</span><span>'+c.ar+'</span>'+
+       (c.lang!=="—"?'<span style="font-size:.74rem;color:var(--muted)">لغة التدريس: '+c.lang+'</span>':'')+
+       (c.priority?'<span class="tag">الأولوية</span>':'')+'</div>'+
+       '<div class="book">'+c.book+'</div>';
+    c.units.forEach(function(u){
+      s+='<div class="tunit">'+u.name+'</div><div class="tnode">';
+      u.items.forEach(function(i){
+        s+='<div class="titem"><span class="st '+i.s+'">'+LBL[i.s]+'</span><span class="tx">'+
+           (i.href?'<a class="tt" href="'+i.href+'">'+i.t+'</a>':'<span class="tt">'+i.t+'</span>')+
+           (i.o?'<span class="obj">'+i.o+'</span>':'')+
+           (i.note?'<div class="nt">'+i.note+'</div>':'')+'</span></div>';
+      });
+      s+='</div>';
+    });
+    s+='</div>';
+  });
+  s+='</div>';
+
+  s+='<div class="card" style="margin-top:20px"><h2>كيف أشرح لك</h2>'+
+    '<p style="font-size:.92rem;color:var(--ink2)">القاعدة الوحيدة: '+
+    '<b>العربي يحمل الفهم، والإنجليزي يحمل المصطلح.</b> '+
+    'المصطلح الإنجليزي يُترجم <b>مرّة واحدة</b> أول ما يجي، وبعدها يبقى إنجليزياً داخل الجمل العربية '+
+    'ولا يُستبدل أبداً.</p>'+
+    '<div class="warn">ما أترجم لك الفصل كامل للعربي — أبداً. '+
+    'لأنك لو عرفت إن فيه نسخة عربية جاية، بتوقف عن قراءة الإنجليزي أصلاً. '+
+    'والامتحان إنجليزي. فالعربي <b>سقالة حول</b> الإنجليزي، مو بديل عنه.</div>'+
+    '<p style="font-size:.92rem;margin-top:14px">وكل مفهوم يجيك بنفس الشكل — سبع خانات ثابتة:</p>'+
+    '<div class="blocks">'+
+      '<div class="brow"><span class="bn">HEADER</span><span class="bd">المصطلح بالإنجليزي + ترجمته مرة واحدة + النطق</span></div>'+
+      '<div class="brow"><span class="bn">الفكرة</span><span class="bd">سطر واحد بالعربي، صفر مصطلحات جديدة</span></div>'+
+      '<div class="brow"><span class="bn">الشرح</span><span class="bd">بالعربي، والمصطلحات الإنجليزية <b>مضمّنة بالإنجليزي</b></span></div>'+
+      '<div class="brow"><span class="bn">مثال</span><span class="bd">من بيئتك — المدينة، جامعة طيبة، الريال</span></div>'+
+      '<div class="brow"><span class="bn en">EXAM BOX</span><span class="bd"><b>إنجليزي صافي.</b> صياغة الكتاب حرفياً. هذا اللي بيجيك في الورقة.</span></div>'+
+      '<div class="brow"><span class="bn">الفخ</span><span class="bd">الخلط الشائع + الكلمات اللي تجي كمشتتات في الاختيارات</span></div>'+
+      '<div class="brow"><span class="bn en">CHECK</span><span class="bd">سؤال MCQ بالإنجليزي + الجواب والتعليل بالعربي</span></div>'+
+    '</div>'+
+    '<p style="font-size:.92rem;margin-top:6px"><b>ليش الأسئلة إنجليزية؟</b> '+
+    'لأنك تُختبر على اللي تتدرّب عليه. لو تدرّبت بالعربي بتحسّ إنك فاهم، '+
+    'وبعدين تنهار في الورقة الإنجليزية. فالتدريب بلغة الامتحان — دائماً.</p>'+
+    '<p style="font-size:.92rem"><b>والسقالة تقل مع الوقت:</b> '+
+    'الأسابيع ١–٤ ترجمة سطر تحت كل سؤال · ٥–٩ قائمة مصطلحات فقط · '+
+    '١٠–١٥ إنجليزي بدون مساعدة. الهدف إنك تستغني عني، مو إنك تعتمد عليّ.</p>'+
+    '<div class="samp"><b>مثال مصغّر — كيف يطلع الشرح فعلياً:</b><br>'+
+    'هيرزبرغ قسّم أسباب الرضا الوظيفي لمجموعتين. الأولى <b>hygiene factors</b> — '+
+    'الراتب وظروف العمل — كلها مرتبطة بـ <b>job context</b>. '+
+    'إذا كانت سيئة يصير الموظف <b>dissatisfied</b>، وإذا صلّحتها بس يوقف عن التذمر، '+
+    'ما يصير <b>motivated</b>.'+
+    '<div class="en">Hygiene factors are associated with job context. Their presence does not '+
+    'motivate; their absence produces dissatisfaction.</div></div>'+
+    '<p style="font-size:.88rem;color:var(--muted);margin-top:12px">'+
+    'ملاحظة: <bdi>MKT 231</bdi> تُدرَّس بالعربي حسب دليل المقرر — فما تحتاج هذي الطريقة. '+
+    'كل مادة لها لغتها، والطريقة تتغيّر معها.</p>'+
+    '</div>';
+  document.getElementById("map").innerHTML=s;
+}
+
+renderToday();renderWeek();renderCal();renderCourses();renderNotes();renderMap();
 
 document.getElementById("nav").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b)return;
   document.querySelectorAll("#nav button").forEach(x=>x.setAttribute("aria-selected",x===b));
-  ["today","week","cal","courses","notes"].forEach(id=>
+  ["today","week","cal","courses","notes","map"].forEach(id=>
     document.getElementById(id).hidden = (id!==b.dataset.t));
 });
 </script>
