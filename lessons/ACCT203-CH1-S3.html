@@ -74,11 +74,31 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 .exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;margin-bottom:6px}
 .excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
 .pos{color:#0f7b6c;font-weight:700} .neg{color:#a4342a;font-weight:700}
+
+/* nav */
+.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
+  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;transition:.15s}
+.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
+.pill.home{color:var(--ink);}
+.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
+.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
+.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
+  .footnav .pill{justify-content:center}}
 .note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+<div class="navbar">
+  <a class="pill home" href="../index.html">→ الرجوع إلى Yamen's Hub</a>
+  <a class="pill" href="../index.html#notes">كل الملخصات</a>
+</div>
+
 
 <header>
   <h1>الفصل الأول — العمليات والمعادلة المحاسبية</h1>
@@ -384,6 +404,12 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 الهدف <code>P1</code>) — تحتاج جلسة ثانية على الكتاب.
 </p>
 
+
+<div class="footnav">
+  <div class="side"><a class="pill" href="ACCT203-CH1-S2.html">→ ٢. أساسيات المحاسبة</a></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><a class="pill" href="ACCT203-CH1-S4.html">٤. القوائم المالية ←</a></div>
+</div>
 </div>
 </body>
 </html>

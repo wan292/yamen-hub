@@ -71,6 +71,20 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 .flow div{flex:1;min-width:150px;background:var(--accent-soft);border:1px solid var(--line);
   border-radius:8px;padding:12px;text-align:center;font-size:.9rem}
 .flow div b{display:block;font-size:1rem;margin-bottom:4px;color:var(--accent)}
+
+/* nav */
+.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
+  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;transition:.15s}
+.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
+.pill.home{color:var(--ink);}
+.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
+.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
+.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
+  .footnav .pill{justify-content:center}}
 .note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
 .exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
   padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
@@ -84,6 +98,12 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 </head>
 <body>
 <div class="wrap">
+
+<div class="navbar">
+  <a class="pill home" href="../index.html">→ الرجوع إلى Yamen's Hub</a>
+  <a class="pill" href="../index.html#notes">كل الملخصات</a>
+</div>
+
 
 <header>
   <h1>الفصل الأول — أهمية المحاسبة</h1>
@@ -477,6 +497,12 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <bdi>Business Transactions and Accounting</bdi> · <bdi>Financial Statements</bdi> — لم تُشرح بعد.
 </p>
 
+
+<div class="footnav">
+  <div class="side"><span class="pill off">→ بداية الفصل</span></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><a class="pill" href="ACCT203-CH1-S2.html">٢. أساسيات المحاسبة ←</a></div>
+</div>
 </div>
 </body>
 </html>
