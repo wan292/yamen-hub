@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — Chapter 1: Importance of Accounting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
+  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
+  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
+  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
+  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.85}
+.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
+bdi,.en{font-family:"IBM Plex Sans Arabic","Segoe UI",sans-serif;font-weight:600;unicode-bidi:isolate}
+code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
+h2{font-size:1.35rem;margin:0;line-height:1.5}
+header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
+.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
+.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  margin:26px 0;overflow:hidden}
+.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
+.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
+.chead .ar{font-size:1.02rem;font-weight:600}
+.chead .say{font-size:.85rem;color:var(--muted)}
+.cbody{padding:6px 20px 20px}
+.blk{margin:18px 0}
+.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
+  padding:3px 9px;border-radius:3px;margin-bottom:8px;
+  background:var(--line);color:var(--ink2);unicode-bidi:isolate;direction:ltr}
+.hook{font-size:1.05rem;color:var(--ink2)}
+.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
+  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;
+  font-size:.98rem;line-height:1.75}
+.exam .lbl{background:var(--exam);color:#fff}
+.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
+  padding:14px 18px;border-radius:0 8px 8px 0}
+.trap .lbl{background:var(--trap);color:#fff}
+.trap ul{margin:8px 0 0;padding-inline-start:20px}
+.trap li{margin:7px 0}
+ul,ol{padding-inline-start:22px}
+li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+th{background:var(--accent-soft);text-align:start;padding:10px 12px;
+  border:1px solid var(--line);font-weight:600;font-size:.87rem}
+td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:18px 20px;margin:16px 0}
+.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
+.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
+.q ol li{margin:5px 0;font-weight:500}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
+details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
+.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;
+  padding:18px 20px;margin:26px 0}
+.big h2{color:var(--accent);margin-bottom:6px}
+.flow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0;direction:ltr}
+.flow div{flex:1;min-width:150px;background:var(--accent-soft);border:1px solid var(--line);
+  border-radius:8px;padding:12px;text-align:center;font-size:.9rem}
+.flow div b{display:block;font-size:1rem;margin-bottom:4px;color:var(--accent)}
+
+/* nav */
+.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
+  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;transition:.15s}
+.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
+.pill.home{color:var(--ink);}
+.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
+.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
+.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
+  .footnav .pill{justify-content:center}}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
+@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
+.exhibit svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;
+  letter-spacing:.03em;margin-bottom:6px}
+.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
+.excap b{color:var(--accent)}
+
+/* gloss + vocabulary */
+.g{border-bottom:2px dotted var(--accent);cursor:pointer;position:relative;font-weight:600}
+.g:hover,.g.on{background:var(--accent-soft)}
+.g .ar{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
+  direction:rtl;font-size:.86rem;font-weight:600;white-space:nowrap;padding:5px 11px;
+  border-radius:7px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+.g:hover .ar,.g.on .ar{display:block}
+.vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
+.vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
+.vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
+.vocab td.w{font-weight:700;color:var(--accent);white-space:nowrap}
+.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
+.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
+.vocab td.ex{color:var(--ink2);font-size:.9rem}
+.tiphint{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;
+  color:var(--ink2);margin:14px 0}
+
+/* LTR overrides — this page reads left to right */
+body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif}
+.exam,.q .stem,.q ol{direction:ltr;text-align:left}
+.chead .term{text-align:left}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="navbar">
+  <a class="pill home" href="../index.html">&#8592; Back to Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S1.html">&#127462; النسخة العربية</a>
+</div>
+
+
+<header>
+  <h1>Chapter 1 — Importance of Accounting</h1>
+  <p class="sub"><code>ACCT 203</code> · Principles of Financial Accounting · Chapter 1: Accounting in Business<br>
+  Section 1 of 4: Importance of Accounting — objective <code>C1</code>:
+  Explain the importance of accounting and <span class="g" data-ar="يحدّد، يتعرّف على">identify</span> its users.</p>
+</header>
+
+<div class="big">
+  <h2>Read this first</h2>
+  <p>This is the English version of the same lesson. You already learned the ideas in Arabic.
+  Here you meet them in English, because your book and your exam paper are in English.</p>
+  <p>Every concept has a green <b>EXAM BOX</b>. That is the wording of the textbook.
+  That is what comes on the test. Read it out loud.</p>
+  <div class="tiphint"><b>How to use this page:</b> some English words have a dotted underline.
+  Tap them on your phone, or hover them on a computer, to see the Arabic meaning.
+  The accounting terms are not glossed — those are the content, and you already know them.</div>
+</div>
+
+<!-- 1 -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Accounting</div>
+    <div class="say">Say it: uh-KOWN-ting · the whole system, not only the records</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
+      Accounting is not "keeping books". It is a full <b>information system</b>. It picks the events
+      that matter, records them, then <span class="g" data-ar="يوصّل، ينقل">communicates</span> them
+      to people who must make a decision.</div>
+
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p>The textbook definition: accounting is an <b>information and measurement system</b>.
+      It does three jobs on the activities of a business.</p>
+      <div class="exhibit">
+        <div class="exlbl">EXHIBIT 1.1 — Accounting Functions</div>
+        <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Accounting functions: identifying, recording, communicating">
+          <g font-family="Georgia, serif" text-anchor="middle">
+            <rect x="20" y="14" width="190" height="38" rx="4" fill="#cfe3f5" stroke="#2c5f8a" stroke-width="1.4"/>
+            <text x="115" y="39" font-size="19" font-weight="700" fill="#14344d">Identifying</text>
+            <rect x="265" y="14" width="190" height="38" rx="4" fill="#f2d3e4" stroke="#8a3d68" stroke-width="1.4"/>
+            <text x="360" y="39" font-size="19" font-weight="700" fill="#5c2044">Recording</text>
+            <rect x="510" y="14" width="190" height="38" rx="4" fill="#cde9d6" stroke="#2f7048" stroke-width="1.4"/>
+            <text x="605" y="39" font-size="19" font-weight="700" fill="#17452a">Communicating</text>
+          </g>
+          <g fill="#2c5f8a"><path d="M216 33 h34 l0 -7 l16 12 l-16 12 l0 -7 h-34 z"/></g>
+          <g fill="#8a3d68"><path d="M461 33 h34 l0 -7 l16 12 l-16 12 l0 -7 h-34 z"/></g>
+          <g font-family="system-ui, sans-serif" text-anchor="middle" fill="#1a1a1a">
+            <text x="115" y="88" font-size="14.5">Select transactions and events</text>
+            <text x="360" y="88" font-size="14.5">Input, measure, and log</text>
+            <text x="605" y="88" font-size="14.5">Prepare, analyze, and interpret</text>
+          </g>
+          <g font-family="system-ui, sans-serif" text-anchor="middle" font-size="12" fill="#5a5a5a">
+            <text x="115" y="112">Examples are <tspan fill="#8c2f13" font-weight="700">Apple</tspan>'s sale of iPhones</text>
+            <text x="115" y="128">and <tspan fill="#8c2f13" font-weight="700">TicketMaster</tspan>'s receipt of ticket money.</text>
+            <text x="360" y="112">Examples are dated logs of</text>
+            <text x="360" y="128">transactions measured in dollars.</text>
+            <text x="605" y="112">Examples are reports and dashboards</text>
+            <text x="605" y="128">that we analyze and interpret.</text>
+          </g>
+        </svg>
+        <p class="excap">This is <b>Exhibit 1.1</b> from the book. If a question shows a picture,
+        it will look like this — three boxes with two arrows between them. Memorize the
+        <b>order</b> and the line under each box.</p>
+      </div>
+      <p>The order matters: <b>identify &#8594; record &#8594; communicate</b>. Any answer that
+      <span class="g" data-ar="يعكس، يقلب">reverses</span> the order is wrong.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">LOCAL EXAMPLE</span>
+      <p>A restaurant in Madinah sold 400 riyals of meals today. Choosing this sale as a financial
+      event = <b>identifying</b>. Writing it into the system with the date and the amount =
+      <b>recording</b>. Printing a month-end report that shows the owner the profit =
+      <b>communicating</b>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Accounting</b> is an information and measurement system that <b>identifies</b>,
+      <b>records</b>, and <b>communicates</b> an organization's business activities.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">THE TRAP</span>
+      <ul>
+        <li><b>Recordkeeping</b> (also called <b>bookkeeping</b>) is <b>only one part</b> of accounting —
+        the recording part. Accounting is <span class="g" data-ar="أوسع، أشمل">broader</span>.
+        It also includes analysis and <span class="g" data-ar="التفسير">interpretation</span>.</li>
+        <li>Any choice that says <b>accounting = recordkeeping</b> is <b>always wrong</b>.
+        This is the biggest trap in the section.</li>
+        <li><b>bookkeeping</b> and <b>recordkeeping</b> mean the same thing. Do not treat them as different.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Financial vs Managerial Accounting</div>
+    <div class="say">The most important split in this whole section — memorize it</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
+      Same information — but who receives it? People <b>outside</b> the company, or people
+      <b>inside</b> it? That is the whole difference.</div>
+
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p>Accounting is called <b>the language of business</b>, because it carries data that helps
+      people decide. To <span class="g" data-ar="يصنّف">classify</span> a user, ask one question:
+      does this person run the organization? The users split into two groups.</p>
+      <table>
+        <tr><th>&nbsp;</th><th>External users</th><th>Internal users</th></tr>
+        <tr><td><b>Who they are</b></td>
+            <td>They do <b>not</b> run the organization, and their
+            <span class="g" data-ar="الوصول، إمكانية الاطّلاع">access</span> to the information is
+            <span class="g" data-ar="محدود">limited</span></td>
+            <td>They <b>run</b> the organization directly</td></tr>
+        <tr><td><b>The branch</b></td><td><b>Financial accounting</b></td><td><b>Managerial accounting</b></td></tr>
+        <tr><td><b>The reports</b></td>
+            <td>General-purpose financial statements</td>
+            <td>Reports <span class="g" data-ar="مصمّم، مُعدّ">designed</span> for their
+            <span class="g" data-ar="خاص، فريد">unique</span> needs</td></tr>
+      </table>
+      <p><b>External users:</b> Lenders (creditors) · Shareholders (investors) ·
+      External (<span class="g" data-ar="مستقل">independent</span>) auditors ·
+      Nonmanagerial employees and labor unions · Regulators (such as the IRS) ·
+      Voters and government officials · Contributors · Suppliers · Customers</p>
+      <p><b>Internal users:</b> Managers of Purchasing · Human resource ·
+      Production · <span class="g" data-ar="التوزيع">Distribution</span> · Marketing · Service ·
+      Research and development</p>
+    </div>
+
+    <div class="blk"><span class="lbl">LOCAL EXAMPLE</span>
+      <p>A company in Madinah wants a loan from the bank. The <b>bank</b> is a lender / creditor,
+      so it is an <b>external</b> user. It reads the financial statements to see if the company can
+      <span class="g" data-ar="يسدّد، يعيد الدفع">repay</span> the money. Inside the same company,
+      the <b>purchasing manager</b> wants a report that tells him what to buy and when.
+      He is an <b>internal</b> user, and the report is built for him alone.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Financial accounting</b> focuses on the needs of <b>external users</b>. External users do
+      <i>not</i> directly run the organization and have limited access to its accounting information;
+      they get information from <b>general-purpose financial statements</b>.</p>
+      <p><b>Managerial accounting</b> focuses on the needs of <b>internal users</b>. Internal users
+      directly manage the organization, and internal reports are designed for their unique needs.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">THE TRAP</span>
+      <ul>
+        <li>Do not swap them. <b>Financial = external</b>, <b>Managerial = internal</b>.
+        Link it like this: a <b>manager</b> works <b>inside</b> the company &#8594; managerial = internal.</li>
+        <li><b>External auditors are external users</b>, even though they work on the company.
+        They are independent, so they do not run it.</li>
+        <li><b>Nonmanagerial employees are external</b>, even though they are employees!
+        They do not run the organization. This trap comes back again and again.</li>
+        <li>Lenders = creditors. Shareholders = investors. The book uses each pair for the same people.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Opportunities in Accounting</div>
+    <div class="say">Where accountants actually work</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p>There are four areas of <span class="g" data-ar="الفرص، المجالات">opportunities</span>:
+      <b>financial</b> · <b>managerial</b> · <b>taxation</b> · <b>accounting-related</b>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">EXHIBIT 1.2 — Accounting Opportunities</div>
+        <svg viewBox="0 0 720 250" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Four areas of accounting opportunity">
+          <g font-family="Georgia, serif" text-anchor="middle">
+            <rect x="260" y="8" width="200" height="34" rx="3" fill="#e2d5ea" stroke="#6b4b7d" stroke-width="1.3"/>
+            <text x="360" y="31" font-size="16" font-weight="700" fill="#3d2a49">Opportunities in Accounting</text>
+          </g>
+          <g stroke="#5f8a5f" stroke-width="2" fill="none">
+            <path d="M360 42 v20"/><path d="M92 62 h536"/>
+            <path d="M92 62 v16"/><path d="M270 62 v16"/><path d="M450 62 v16"/><path d="M628 62 v16"/>
+          </g>
+          <g font-family="Georgia, serif" text-anchor="middle">
+            <rect x="14" y="78" width="156" height="30" rx="3" fill="#f2ddc4" stroke="#9c7434" stroke-width="1.2"/>
+            <text x="92" y="99" font-size="15" font-weight="700" fill="#5c4318">Financial</text>
+            <rect x="192" y="78" width="156" height="30" rx="3" fill="#dcdcdc" stroke="#6e6e6e" stroke-width="1.2"/>
+            <text x="270" y="99" font-size="15" font-weight="700" fill="#333">Managerial</text>
+            <rect x="372" y="78" width="156" height="30" rx="3" fill="#f7d5c0" stroke="#a35a34" stroke-width="1.2"/>
+            <text x="450" y="99" font-size="15" font-weight="700" fill="#63301a">Taxation</text>
+            <rect x="550" y="78" width="156" height="30" rx="3" fill="#cfe6ea" stroke="#3d7681" stroke-width="1.2"/>
+            <text x="628" y="99" font-size="15" font-weight="700" fill="#1d444b">Accounting-related</text>
+          </g>
+          <g font-family="system-ui, sans-serif" font-size="12.5" fill="#1a1a1a">
+            <text x="24" y="130">• Preparation</text><text x="24" y="149">• Analysis</text>
+            <text x="24" y="168">• External auditing</text><text x="24" y="187">• Regulatory</text>
+            <text x="24" y="206">• Consulting</text><text x="24" y="225">• Planning</text>
+            <text x="202" y="130">• General accounting</text><text x="202" y="149">• Cost accounting</text>
+            <text x="202" y="168">• Budgeting</text><text x="202" y="187">• Internal auditing</text>
+            <text x="202" y="206">• Controller</text><text x="202" y="225">• Treasurer</text>
+            <text x="382" y="130">• Preparation</text><text x="382" y="149">• Planning</text>
+            <text x="382" y="168">• Regulatory</text><text x="382" y="187">• Investigations</text>
+            <text x="382" y="206">• Enforcement</text><text x="382" y="225">• Legal services</text>
+            <text x="560" y="130">• Lenders</text><text x="560" y="149">• Consultants</text>
+            <text x="560" y="168">• Analysts</text><text x="560" y="187">• Directors</text>
+            <text x="560" y="206">• Forensic accounting</text><text x="560" y="225">• Entrepreneurs</text>
+          </g>
+        </svg>
+        <p class="excap">Four branches from one box. If a question gives you a job and asks which area
+        it belongs to, this is your map. <b>Cost accounting</b> and <b>Budgeting</b> sit under
+        <b>Managerial</b> — that is the pair students mix up most.</p>
+      </div>
+
+      <p>Now look at how the jobs are really split:</p>
+
+      <div class="exhibit">
+        <div class="exlbl">EXHIBIT 1.3 — Accounting Jobs by Area</div>
+        <svg viewBox="0 0 460 310" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Pie chart: private accounting 54 percent, public accounting 24 percent, government and not-for-profit 22 percent">
+          <path d="M150 40 A110 110 0 1 1 122.77 256.58 L150 150 Z" fill="#f0c48a" stroke="#7a1f1f" stroke-width="1.6"/>
+          <path d="M122.77 256.58 A110 110 0 0 1 41.95 129.39 L150 150 Z" fill="#c98b8b" stroke="#7a1f1f" stroke-width="1.6"/>
+          <path d="M41.95 129.39 A110 110 0 0 1 150 40 L150 150 Z" fill="#a9cfa9" stroke="#7a1f1f" stroke-width="1.6"/>
+          <g font-family="system-ui, sans-serif" text-anchor="middle" font-weight="700" fill="#1a1a1a">
+            <text x="212" y="150" font-size="13">Private</text>
+            <text x="212" y="166" font-size="13">accounting</text>
+            <text x="212" y="186" font-size="17">54%</text>
+            <text x="96" y="178" font-size="13">Public</text>
+            <text x="96" y="194" font-size="13">accounting</text>
+            <text x="96" y="214" font-size="17">24%</text>
+            <text x="106" y="86" font-size="13">Government</text>
+            <text x="106" y="102" font-size="13">and</text>
+            <text x="106" y="118" font-size="13">not-for-profit</text>
+            <text x="106" y="138" font-size="17">22%</text>
+          </g>
+        </svg>
+        <p class="excap"><b>Private = 54%</b> is the biggest
+        <span class="g" data-ar="حصة، نصيب">share</span>. If the question shows the pie with no
+        numbers, remember that the largest slice is <b>private accounting</b>.</p>
+      </div>
+      <table>
+        <tr><th>Area</th><th>Percent</th><th>What it means</th></tr>
+        <tr><td>Private accounting</td><td><b>54%</b></td><td>Accountants employed inside companies — <b>the majority</b></td></tr>
+        <tr><td>Public accounting</td><td>24%</td><td>Auditing, tax, and consulting services sold to clients</td></tr>
+        <tr><td>Government and not-for-profit</td><td>22%</td><td>Government bodies and not-for-profit bodies</td></tr>
+      </table>
+      <p>The four largest accounting firms: <b>EY</b> · <b>KPMG</b> · <b>PwC</b> · <b>Deloitte</b></p>
+      <p>Certifications: <b>CPA</b> (the best known) · <b>CMA</b>/<b>CGMA</b> · <b>CIA</b> ·
+      <b>CB</b> · <b>CPP</b> · <b>CFP</b> · <b>CFE</b> · <b>CrFA</b></p>
+    </div>
+    <div class="blk trap"><span class="lbl">THE TRAP</span>
+      <ul>
+        <li><b>Private accounting is the largest (54%)</b>, not public accounting.
+        The question comes in this exact form very often.</li>
+        <li><b>Public accounting</b> does not mean "government". It means selling accounting
+        services to outside clients.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Data Analytics</div>
+    <div class="say">Four types — two look back, two look forward</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p><b>Data analytics</b> is the process of analyzing data to find
+      <span class="g" data-ar="ذو معنى، مفيد">meaningful</span> relationships and
+      <span class="g" data-ar="اتجاهات">trends</span>. There are four types, and they are ordered
+      by difficulty and by value.</p>
+      <table>
+        <tr><th>Type</th><th>It answers</th><th>Time</th></tr>
+        <tr><td><b>Descriptive</b></td>
+            <td><span class="g" data-ar="يلخّص">Summarizes</span> and describes what happened</td>
+            <td><b>Past</b></td></tr>
+        <tr><td><b>Diagnostic</b></td>
+            <td><span class="g" data-ar="يكشف، يظهر">Reveals</span> the <b>causes</b> of the events</td>
+            <td><b>Past</b></td></tr>
+        <tr><td><b>Predictive</b></td>
+            <td>Predicts events that may <span class="g" data-ar="يحدث، يقع">occur</span></td>
+            <td><b>Future</b></td></tr>
+        <tr><td><b>Prescriptive</b></td>
+            <td>Sets <b>action plans</b> to reach a target</td>
+            <td><b>Future</b></td></tr>
+      </table>
+      <div class="exhibit">
+        <div class="exlbl">EXHIBIT 1.4 — Types of Data Analytics</div>
+        <svg viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Four types of data analytics ordered by value and difficulty">
+          <g stroke="#1a1a1a" stroke-width="2" fill="none">
+            <path d="M70 250 L70 30"/><path d="M64 40 L70 26 L76 40"/>
+            <path d="M70 250 L580 250"/><path d="M570 244 L584 250 L570 256"/>
+          </g>
+          <text x="44" y="150" font-family="system-ui,sans-serif" font-size="15" font-weight="600"
+                fill="#1a1a1a" transform="rotate(-90 44 150)" text-anchor="middle">Value</text>
+          <text x="325" y="278" font-family="system-ui,sans-serif" font-size="15" font-weight="600"
+                fill="#1a1a1a" text-anchor="middle">Difficulty</text>
+          <g text-anchor="middle" font-family="system-ui,sans-serif" font-weight="700" fill="#fff">
+            <path d="M100 250 L100 190 A48 48 0 0 1 196 190 L196 250 Z" fill="#2f7d4f"/>
+            <text x="148" y="176" font-size="15">Descriptive</text>
+            <path d="M218 250 L218 160 A48 48 0 0 1 314 160 L314 250 Z" fill="#b5651d"/>
+            <text x="266" y="146" font-size="15">Diagnostic</text>
+            <path d="M336 250 L336 128 A48 48 0 0 1 432 128 L432 250 Z" fill="#96262b"/>
+            <text x="384" y="114" font-size="15">Predictive</text>
+            <path d="M454 250 L454 94 A48 48 0 0 1 550 94 L550 250 Z" fill="#2f2f7a"/>
+            <text x="502" y="80" font-size="15">Prescriptive</text>
+          </g>
+          <g text-anchor="middle" font-family="system-ui,sans-serif" font-size="12.5" fill="#fff">
+            <text x="148" y="224">past</text><text x="266" y="224">past</text>
+            <text x="384" y="224">future</text><text x="502" y="224">future</text>
+          </g>
+        </svg>
+        <p class="excap">The four are in order. As you move to the right, both the
+        <b>difficulty</b> and the <b>value</b> go up. The two on the left are about the
+        <b>past</b>. The two on the right are about the <b>future</b>.
+        This order itself is a repeated exam question.</p>
+      </div>
+      <p>A fifth type is rising: <b>cognitive analytics</b>. It uses <b>AI</b> and machine learning to
+      <span class="g" data-ar="يحاكي، يقلّد">mimic</span> human thinking.</p>
+      <p><b>Data visualization</b> is a graphical display of data that makes its meaning clear.
+      The best-known tool is <b>Tableau</b>. A <b>dashboard</b> is a visual display that puts charts
+      and organized tables together to show trends.</p>
+    </div>
+    <div class="blk trap"><span class="lbl">THE TRAP</span>
+      <ul>
+        <li><b>Past:</b> Descriptive + Diagnostic. <b>Future:</b> Predictive + Prescriptive.
+        This is the most common question here.</li>
+        <li>Descriptive vs Diagnostic: the first says <b>what</b> happened, the second says
+        <b>why</b> it happened.</li>
+        <li>Predictive vs Prescriptive: the first <b>predicts</b>, the second
+        <span class="g" data-ar="يوصي، ينصح بـ">recommends</span> a plan.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">Test yourself</h2>
+<p class="sub" style="margin-bottom:16px">Read the question, answer it in your head, then open the answer.</p>
+
+<div class="q">
+  <div class="stem">1. Which statement best describes the relationship between accounting and recordkeeping?</div>
+  <ol type="A">
+    <li>Accounting and recordkeeping are the same thing.</li>
+    <li>Recordkeeping is one part of accounting, which also includes analysis and interpretation.</li>
+    <li>Recordkeeping includes accounting as one of its functions.</li>
+    <li>Accounting applies only to external users; recordkeeping applies to internal users.</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. Recordkeeping (or bookkeeping) only writes down the transactions — one part of the job.
+  Accounting is wider, because it also includes analysis and interpretation.
+  Choice <b>A</b> is the most famous trap in this section.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. A labor union negotiating wages requests the company's financial statements. The union is best classified as:</div>
+  <ol type="A">
+    <li>An internal user, because its members work for the company</li>
+    <li>An internal user, because it affects payroll decisions</li>
+    <li>An external user, because it does not directly run the organization</li>
+    <li>Neither an internal nor an external user</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>C</b>. The test is not "do they sit inside the company?" The test is: <b>do they run the
+  organization?</b> A labor union and nonmanagerial employees do not run it, so they are external
+  users. Choices A and B both use that same misunderstanding.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. A production manager reviews a report on costs and quality to decide whether to change a supplier. This report is an example of:</div>
+  <ol type="A">
+    <li>Financial accounting, because it uses cost data</li>
+    <li>Managerial accounting, because it serves an internal user</li>
+    <li>Financial accounting, because it may affect shareholders</li>
+    <li>Public accounting, because suppliers are external parties</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. A production manager runs the organization &#8594; internal user &#8594; managerial
+  accounting. Do not be fooled by the words <i>suppliers</i> or <i>shareholders</i>.
+  What matters is <b>who uses</b> the report, not who is named inside it.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. An analysis that examines last quarter's sales decline to determine <i>why</i> it occurred is best described as:</div>
+  <ol type="A">
+    <li>Descriptive analytics</li>
+    <li>Diagnostic analytics</li>
+    <li>Predictive analytics</li>
+    <li>Prescriptive analytics</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. The word <i>why</i> is the key. The question describes a sales
+  <span class="g" data-ar="انخفاض، تراجع">decline</span> that already happened. To
+  <span class="g" data-ar="يحدّد، يعرف بدقة">determine</span> the type, look at the question the
+  analysis answers: Descriptive says <b>what</b> happened, Diagnostic says <b>why</b> it happened.
+  Both are about the <b>past</b>, so choices C and D are in the wrong time frame.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. According to Exhibit 1.3, the largest share of accounting jobs is in:</div>
+  <ol type="A">
+    <li>Public accounting</li>
+    <li>Private accounting</li>
+    <li>Government and not-for-profit</li>
+    <li>Taxation</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. Private accounting = <b>54%</b>, then public accounting = 24%, then government and
+  not-for-profit = 22%. Many students choose <i>public</i> because the name is more famous —
+  that is exactly the trap.</p></details>
+</div>
+
+<h2 style="margin:40px 0 10px">Key terms — memorize these in English</h2>
+<table>
+  <tr><th>Term</th><th>What it means</th><th>The trap</th></tr>
+  <tr><td>Accounting</td><td>An information and measurement system</td><td>It is not just recording</td></tr>
+  <tr><td>Recordkeeping / Bookkeeping</td><td>Writing the transactions into the records</td><td>Only one part of accounting</td></tr>
+  <tr><td>Identifying · Recording · Communicating</td><td>The three accounting functions</td><td>The order matters</td></tr>
+  <tr><td>External users</td><td>Users outside the management of the organization</td><td>They do not run the organization</td></tr>
+  <tr><td>Internal users</td><td>Users who manage the organization</td><td>They run the organization</td></tr>
+  <tr><td>Financial accounting</td><td>Accounting for external users</td><td>External, not internal</td></tr>
+  <tr><td>Managerial accounting</td><td>Accounting for internal users</td><td>Internal, not external</td></tr>
+  <tr><td>Lenders / Creditors</td><td>Parties the company owes money to</td><td>The two words mean the same</td></tr>
+  <tr><td>Shareholders / Investors</td><td>The owners of the corporation</td><td>The two words mean the same</td></tr>
+  <tr><td>General-purpose financial statements</td><td>Standard reports for outside users</td><td>Built for external users</td></tr>
+  <tr><td>Private accounting</td><td>Accountants working inside companies</td><td>The largest area — 54%</td></tr>
+  <tr><td>Public accounting</td><td>Accounting services sold to clients</td><td>It is not "government"</td></tr>
+  <tr><td>Data analytics</td><td>Analyzing data to find relationships and trends</td><td>Four types</td></tr>
+  <tr><td>Data visualization</td><td>Showing data in graphical form</td><td>Its famous tool is Tableau</td></tr>
+</table>
+
+<h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
+<p class="sub" style="margin-bottom:6px">These are the general English words, not the accounting terms.
+Learn them so you can read the textbook and the exam paper on your own.</p>
+<table class="vocab">
+  <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
+  <tr><td class="w">access</td><td class="pos">noun</td><td class="ar">الوصول، إمكانية الاطّلاع</td><td class="ex">Their access to the information is limited.</td></tr>
+  <tr><td class="w">broader</td><td class="pos">adjective</td><td class="ar">أوسع، أشمل</td><td class="ex">Accounting is broader; it also includes analysis and interpretation.</td></tr>
+  <tr><td class="w">classify</td><td class="pos">verb</td><td class="ar">يصنّف</td><td class="ex">To classify a user, ask one question: does this person run the organization?</td></tr>
+  <tr><td class="w">communicates</td><td class="pos">verb</td><td class="ar">يوصّل، ينقل</td><td class="ex">It records the events, then communicates them to people who must make a decision.</td></tr>
+  <tr><td class="w">decline</td><td class="pos">noun</td><td class="ar">انخفاض، تراجع</td><td class="ex">The question describes a sales decline that already happened.</td></tr>
+  <tr><td class="w">designed</td><td class="pos">verb (past participle)</td><td class="ar">مصمّم، مُعدّ</td><td class="ex">Reports designed for their unique needs.</td></tr>
+  <tr><td class="w">determine</td><td class="pos">verb</td><td class="ar">يحدّد، يعرف بدقة</td><td class="ex">To determine the type, look at the question the analysis answers.</td></tr>
+  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">التوزيع</td><td class="ex">Managers of Purchasing, Human resource, Production, Distribution, Marketing.</td></tr>
+  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">يحدّد، يتعرّف على</td><td class="ex">Explain the importance of accounting and identify its users.</td></tr>
+  <tr><td class="w">independent</td><td class="pos">adjective</td><td class="ar">مستقل</td><td class="ex">External (independent) auditors.</td></tr>
+  <tr><td class="w">interpretation</td><td class="pos">noun</td><td class="ar">التفسير</td><td class="ex">Accounting also includes analysis and interpretation.</td></tr>
+  <tr><td class="w">limited</td><td class="pos">adjective</td><td class="ar">محدود</td><td class="ex">Their access to the information is limited.</td></tr>
+  <tr><td class="w">meaningful</td><td class="pos">adjective</td><td class="ar">ذو معنى، مفيد</td><td class="ex">Analyzing data to find meaningful relationships and trends.</td></tr>
+  <tr><td class="w">mimic</td><td class="pos">verb</td><td class="ar">يحاكي، يقلّد</td><td class="ex">Cognitive analytics uses AI and machine learning to mimic human thinking.</td></tr>
+  <tr><td class="w">occur</td><td class="pos">verb</td><td class="ar">يحدث، يقع</td><td class="ex">Predictive analytics predicts events that may occur.</td></tr>
+  <tr><td class="w">opportunities</td><td class="pos">noun (plural)</td><td class="ar">الفرص، المجالات</td><td class="ex">There are four areas of opportunities in accounting.</td></tr>
+  <tr><td class="w">recommends</td><td class="pos">verb</td><td class="ar">يوصي، ينصح بـ</td><td class="ex">Predictive predicts; Prescriptive recommends a plan.</td></tr>
+  <tr><td class="w">repay</td><td class="pos">verb</td><td class="ar">يسدّد، يعيد الدفع</td><td class="ex">The bank reads the statements to see if the company can repay the money.</td></tr>
+  <tr><td class="w">reveal</td><td class="pos">verb</td><td class="ar">يكشف، يظهر</td><td class="ex">Diagnostic analytics reveals the causes of the events.</td></tr>
+  <tr><td class="w">reverses</td><td class="pos">verb</td><td class="ar">يعكس، يقلب</td><td class="ex">Any answer that reverses the order is wrong.</td></tr>
+  <tr><td class="w">share</td><td class="pos">noun</td><td class="ar">حصة، نصيب</td><td class="ex">Private = 54% is the biggest share.</td></tr>
+  <tr><td class="w">summarize</td><td class="pos">verb</td><td class="ar">يلخّص</td><td class="ex">Descriptive analytics summarizes and describes what happened.</td></tr>
+  <tr><td class="w">trends</td><td class="pos">noun (plural)</td><td class="ar">اتجاهات</td><td class="ex">Analyzing data to find meaningful relationships and trends.</td></tr>
+  <tr><td class="w">unique</td><td class="pos">adjective</td><td class="ar">خاص، فريد</td><td class="ex">Reports designed for their unique needs.</td></tr>
+</table>
+
+<p class="note">
+Built from the textbook itself in <b>SmartBook</b> — Chapter 1: Accounting in Business,
+Section 1: Importance of Accounting (objective <code>C1</code>, pages 3–6).
+<br>The rest of the chapter: Fundamentals of Accounting ·
+Business Transactions and Accounting · Financial Statements.
+</p>
+
+
+<div class="footnav">
+  <div class="side"><span class="pill off">Start of chapter</span></div>
+  <a class="pill home" href="../index.html">&#8962; Home</a>
+  <div class="side"><a class="pill" href="ACCT203-CH1-S2-EN.html">2. Fundamentals of Accounting &#8594;</a></div>
+</div>
+</div>
+<script>
+document.querySelectorAll('span.g').forEach(function(s){
+  var t=document.createElement('span'); t.className='ar'; t.textContent=s.dataset.ar; s.appendChild(t);
+  s.addEventListener('click',function(e){
+    e.stopPropagation();
+    document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
+    s.classList.toggle('on');
+  });
+});
+document.addEventListener('click',function(){
+  document.querySelectorAll('span.g.on').forEach(function(o){o.classList.remove('on');});
+});
+</script>
+</body>
+</html>

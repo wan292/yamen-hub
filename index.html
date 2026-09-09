@@ -148,6 +148,9 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
 .nitem .sr{display:inline-block;font-size:.68rem;font-weight:700;color:#fff;background:var(--red);
   border-radius:999px;padding:1px 8px;margin-inline-start:6px}
 .nitem.off{opacity:.62}
+.enlink{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.66rem;font-weight:700;color:#fff;background:#1b5e9c;border-radius:4px;padding:1px 6px;margin-inline-start:6px;text-decoration:none;vertical-align:2px}
+.enlink:hover{background:#14486f}
+
 
 /* map + method */
 .tree{font-size:.92rem}
@@ -389,7 +392,7 @@ function renderNotes(){
            '<span class="num '+i.s+'">'+lab+'</span><span class="bd">'+
            (i.href?'<a class="t1" href="'+i.href+'">'+i.ar+'</a>'
                   :'<span class="t1">'+i.ar+'</span>')+
-           (i.o?'<span class="ob">'+i.o+'</span>':'')+
+           (i.o?'<span class="ob">'+i.o+'</span>':'')+(i.enhref?' <a class="enlink" href="'+i.enhref+'">EN</a>':'')+
            (i.star?'<span class="sr">'+i.star+'</span>':'')+
            (i.en?'<div class="t2">'+i.en+'</div>':'')+
            (i.note?'<div class="nn">'+i.note+'</div>':'')+

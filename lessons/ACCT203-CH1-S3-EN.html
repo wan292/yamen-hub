@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — Chapter 1: Business Transactions and the Accounting Equation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
+  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
+  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
+  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
+  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
+bdi{font-weight:600;unicode-bidi:isolate}
+code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
+h2{font-size:1.35rem;margin:0;line-height:1.5}
+header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
+.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
+.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
+.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
+.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
+.chead .ar{font-size:1.02rem;font-weight:600}
+.chead .say{font-size:.85rem;color:var(--muted)}
+.cbody{padding:6px 20px 20px}
+.blk{margin:18px 0}
+.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
+  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
+  unicode-bidi:isolate;direction:ltr}
+.hook{font-size:1.05rem;color:var(--ink2)}
+.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
+  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
+.exam .lbl{background:var(--exam);color:#fff}
+.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
+  padding:14px 18px;border-radius:0 8px 8px 0}
+.trap .lbl{background:var(--trap);color:#fff}
+.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
+ul,ol{padding-inline-start:22px} li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
+td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
+.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
+.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
+.q ol li{margin:5px 0;font-weight:500}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
+details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
+.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
+.big h2{color:var(--accent);margin-bottom:6px}
+.eq{direction:ltr;text-align:center;background:var(--card);border:2px solid var(--accent);
+  border-radius:10px;padding:22px 16px;margin:18px 0;font-family:Georgia,serif;overflow-x:auto}
+.eq .l1{font-size:clamp(1.1rem,3.4vw,1.6rem);font-weight:700;letter-spacing:.01em}
+.eq .l2{font-size:clamp(.85rem,2.6vw,1.15rem);margin-top:14px;color:var(--ink2)}
+.eq .plus{color:var(--muted)}
+.g-cs{color:#0f7b6c} .g-dv{color:#a4342a} .g-rv{color:#1b5e9c} .g-ex{color:#8a5a00}
+.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
+@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
+.exhibit table{margin:0;font-size:.9rem;color:#1a1a1a}
+.exhibit th{background:#f0ece6;color:#1a1a1a;border-color:#d8d3cb;text-align:center}
+.exhibit td{border-color:#d8d3cb;text-align:center}
+.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;margin-bottom:6px}
+.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
+.pos{color:#0f7b6c;font-weight:700} .neg{color:#a4342a;font-weight:700}
+
+/* nav */
+.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
+  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;transition:.15s}
+.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
+.pill.home{color:var(--ink);}
+.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
+.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
+.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
+  .footnav .pill{justify-content:center}}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+
+.g{border-bottom:2px dotted var(--accent);cursor:pointer;position:relative;font-weight:600}
+.g:hover,.g.on{background:var(--accent-soft)}
+.g .ar{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
+  direction:rtl;font-size:.86rem;font-weight:600;white-space:nowrap;padding:5px 11px;
+  border-radius:7px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+.g:hover .ar,.g.on .ar{display:block}
+.vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
+.vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
+.vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
+.vocab td.w{font-weight:700;color:var(--accent);white-space:nowrap}
+.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
+.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
+.vocab td.ex{color:var(--ink2);font-size:.9rem}
+.tiphint{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;
+  color:var(--ink2);margin:14px 0}
+
+body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif}
+.exam,.q .stem,.q ol{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="navbar">
+  <a class="pill home" href="../index.html">&#8592; Back to Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S3.html">&#127462; النسخة العربية</a>
+</div>
+
+
+<header>
+  <h1>Chapter 1 &mdash; Business Transactions and the Accounting Equation</h1>
+  <p class="sub"><code>ACCT 203</code> &middot; Chapter 1 &middot; Section 3 of 4:
+  Business Transactions and Accounting<br>
+  Objective <code>A1</code>: Define and interpret the accounting equation and each of its components.</p>
+</header>
+
+<div class="big">
+  <h2>This is the most important lesson in the course</h2>
+  <p>Everything after it — journal entries, the ledger, the trial balance, the financial statements —
+  is built on one equation. If you understand it now, the rest of the chapter is easy.</p>
+  <p>You already met these ideas in Arabic. This page gives you the same ideas in English,
+  because your textbook and your exam are in English.</p>
+  <div class="tiphint"><b>How to use this page:</b> some words have a dotted line under them.
+  Tap or hover any dotted word to see the Arabic meaning. The accounting terms are not glossed —
+  those are the words you must learn in English.</div>
+</div>
+
+<!-- The three components -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Assets · Liabilities · Equity</div>
+    <div class="say">The three components of the equation</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
+      Accounting shows only two things: <b>what the company owns</b>, and
+      <b>who has a <span class="g" data-ar="مُطالبة / حق">claim</span> on it</b>. That is all.</div>
+
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p>Accounting shows two sides of a company. One side is the
+      <span class="g" data-ar="الموارد">resources</span> the company owns.
+      The other side is the claims on those resources.</p>
+
+      <p>Claims are of two kinds. <b>Non-owner</b> claims are liabilities.
+      <b>Owner</b> claims are equity. Together, the two are the <b>source of the money</b>
+      that bought the assets.</p>
+
+      <table>
+        <tr><th>Component</th><th>Definition</th><th>Examples from the book</th></tr>
+        <tr>
+          <td><b>Assets</b></td>
+          <td>Resources a company <b>owns or controls</b>. They are expected to
+              <span class="g" data-ar="يُحقّق / يُنتج">yield</span> <b>future benefits</b>.</td>
+          <td>cash &middot; supplies &middot; equipment &middot; land &middot; accounts receivable</td>
+        </tr>
+        <tr>
+          <td><b>Liabilities</b></td>
+          <td><b>Creditors'</b> claims on assets. They are company
+              <span class="g" data-ar="التزامات / تعهّدات">obligations</span> to provide assets,
+              products, or services to others.</td>
+          <td>wages payable &middot; accounts payable &middot; notes (loans) payable &middot;
+              taxes payable</td>
+        </tr>
+        <tr>
+          <td><b>Equity</b></td>
+          <td>The <b>owner's</b> claim on assets. It equals <b>assets minus liabilities</b>.</td>
+          <td>also called <i>net assets</i> or
+              <i><span class="g" data-ar="متبقٍّ / ما تبقّى">residual</span> equity</i></td>
+        </tr>
+      </table>
+
+      <p><b>Two words you must know:</b></p>
+      <ul>
+        <li><b>Receivable</b> = an asset that promises a future
+            <span class="g" data-ar="تدفّق داخل">inflow</span>. A company that gives a service
+            or a product <i>on credit</i> gets an <i>account receivable</i> from the customer.</li>
+        <li><b>Payable</b> = a liability that promises a future
+            <span class="g" data-ar="تدفّق خارج">outflow</span>.</li>
+      </ul>
+      <p><b>Note from the book:</b> the phrases <i>on credit</i> and <i>on account</i> both mean
+      that the cash is received or paid at a
+      <span class="g" data-ar="لاحق / في وقت لاحق">later</span> date.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Assets</b> are resources a company owns or controls. These resources are expected to
+      yield future benefits. <b>Liabilities</b> are creditors' claims on assets; these claims are
+      company obligations to provide assets, products, or services to others. <b>Equity</b> is the
+      owner's claim on assets and is equal to assets minus liabilities. Equity is also called
+      <i>net assets</i> or <i>residual equity</i>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li>Assets do not mean "owns" only. The book says <b>owns or controls</b>.
+            The word <i>controls</i> shows up in the answer choices.</li>
+        <li>A <i>receivable</i> is an asset (money coming in). A <i>payable</i> is a liability
+            (money going out). Mixing the two is the most common mistake in this section.</li>
+        <li>Equity = assets <b>minus</b> liabilities. Not plus.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- The equation -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">The Accounting Equation</div>
+    <div class="say">Memorize it now — do not continue before you know it by heart</div>
+  </div>
+  <div class="cbody">
+    <div class="eq">
+      <div class="l1">Assets <span class="plus">=</span> Liabilities <span class="plus">+</span> Equity</div>
+    </div>
+
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p>This relation <span class="g" data-ar="ينطبق على / يسري على">applies</span> to
+      <b>all transactions and events</b>. It applies to <b>all companies and organizations</b>.
+      And it applies at <b>all points in time</b>. There is no
+      <span class="g" data-ar="استثناء">exception</span>.</p>
+      <p>You can also <span class="g" data-ar="يُعاد ترتيبها">rearrange</span> it.
+      Example from the book: <span class="mono">Assets − Liabilities = Equity</span></p>
+    </div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — THE EXPANDED EQUATION</span>
+      <p>We can break equity into <b>four parts</b>. This gives us
+      <b>the expanded accounting equation</b>:</p>
+
+      <div class="eq">
+        <div class="l1">Assets = Liabilities + Contributed Capital + Retained Earnings</div>
+        <div class="l2">= Liabilities <span class="plus">+</span>
+          <span class="g-cs">Common Stock</span> <span class="plus">−</span>
+          <span class="g-dv">Dividends</span> <span class="plus">+</span>
+          <span class="g-rv">Revenues</span> <span class="plus">−</span>
+          <span class="g-ex">Expenses</span></div>
+      </div>
+
+      <p><i>Contributed capital</i> is the money the owners
+      <span class="g" data-ar="قدّموا / ساهموا به">contributed</span> to the company.
+      <i>Retained earnings</i> is the income the company
+      <span class="g" data-ar="احتفظت به / أبقته">retained</span> instead of paying it out.</p>
+
+      <p>Equity <b>increases</b> from owner investments, also called stock
+      <span class="g" data-ar="إصدار">issuances</span>, and from revenues.
+      Equity <b>decreases</b> from dividends and from expenses.</p>
+
+      <table>
+        <tr><th>Part</th><th>Sign</th><th>Definition</th></tr>
+        <tr><td><b class="g-cs">Common Stock</b><br>
+                <span style="font-size:.8rem;color:var(--muted)">part of contributed capital</span></td>
+            <td class="pos">+</td>
+            <td>Inflows of cash and net assets from <b>shareholders</b> in
+                <span class="g" data-ar="مقابل / تبادل">exchange</span> for stock.
+                Stock <span class="g" data-ar="يعكس / يُمثّل">reflects</span>
+                <b>ownership</b> in the company.</td></tr>
+        <tr><td><b class="g-dv">Dividends</b><br>
+                <span style="font-size:.8rem;color:var(--muted)">from retained earnings</span></td>
+            <td class="neg">−</td>
+            <td><b>Outflows</b> of cash and other assets <b>to shareholders</b>.
+                They decrease equity.</td></tr>
+        <tr><td><b class="g-rv">Revenues</b></td>
+            <td class="pos">+</td>
+            <td>They increase equity (through <i>net income</i>) from
+                <b>selling products and services to customers</b>.
+                Examples: product sales, consulting services, facility rentals, commissions.</td></tr>
+        <tr><td><b class="g-ex">Expenses</b></td>
+            <td class="neg">−</td>
+            <td>They decrease equity (through <i>net income</i>) from the <b>costs of providing</b>
+                products and services. Examples: employee time, supplies used, advertising,
+                utilities, insurance.</td></tr>
+      </table>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The <b>accounting equation</b> is <b>Assets = Liabilities + Equity</b>. It applies to all
+      transactions and events, to all companies and organizations, and to all points in time.
+      The <b>expanded accounting equation</b> is:</p>
+      <p style="text-align:center;font-weight:700">Assets = Liabilities + Common Stock − Dividends
+      + Revenues − Expenses</p>
+      <p>Equity increases from <b>owner investments</b> (stock issuances) and from <b>revenues</b>;
+      it decreases from <b>dividends</b> and from <b>expenses</b>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li><b>The signs are the question.</b> Common Stock and Revenues carry a plus.
+            Dividends and Expenses carry a minus. Any choice that
+            <span class="g" data-ar="يقلب / يعكس">reverses</span> one sign is wrong.</li>
+        <li><b>Dividends are not an expense.</b> This is the biggest trap in the chapter.
+            A dividend is a <span class="g" data-ar="توزيع">distribution</span> to the owners.
+            It <b>decreases</b> equity, but it is <b>not an expense</b> and it never enters
+            <i>net income</i>.</li>
+        <li>Contributed Capital = Common Stock.
+            Retained Earnings = Revenues − Expenses − Dividends.</li>
+        <li>The equation holds at <i>every point in time</i>. Any choice saying it holds only
+            at the end of the year is wrong.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Transactions -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Transactions and Events</div>
+    <div class="say">What actually moves the equation</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <table>
+        <tr><th>Type</th><th>Definition</th><th>Example from the book</th></tr>
+        <tr><td><b>External transactions</b></td>
+            <td>An exchange of value <b>between two <span class="g" data-ar="كيان / جهة">entities</span></b>.
+                They always cause <b>a change in the accounting equation</b>.</td>
+            <td>Apple sells an AppleCare Protection Plan</td></tr>
+        <tr><td><b>Internal transactions</b></td>
+            <td>An exchange <b>inside the same entity</b>. It <b>may or may not
+                <span class="g" data-ar="يؤثّر على">affect</span></b> the equation.</td>
+            <td>Target uses its own supplies — recorded as an expense when used</td></tr>
+        <tr><td><b>Events</b></td>
+            <td>Happenings that affect the equation and <b>can be
+                <span class="g" data-ar="يُقاس">measured</span>
+                <span class="g" data-ar="بموثوقية / بشكل موثوق">reliably</span></b>.</td>
+            <td>market value changes in some assets and liabilities &middot;
+                a fire that damages assets and creates losses</td></tr>
+      </table>
+      <p>The book uses the equation to analyze <b>11 transactions and events</b> for
+      FastForward. FastForward is a new consulting company, so it is a service company.
+      The analysis covers its <b>first month</b> of operations.</p>
+      <p style="background:var(--exam-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      The golden rule: <b>after every transaction and every event, assets always equal
+      liabilities plus equity.</b> If the two sides are not equal, your analysis has a mistake.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">EXAMPLE 1 — INVESTMENT BY OWNER</span>
+      <p>On December 1, Chas Taylor started a consulting company called FastForward.
+      He set it up as a corporation. He invested <b>$30,000</b> cash in the new company
+      <b>in return for its common stock</b>. He put the cash in a bank account in the
+      company's name.</p>
+      <p>After the transaction: cash (an asset) = $30,000, and equity = $30,000.
+      The increase came from the owner's investment, a stock issuance.
+      It is reported under <i>Common Stock</i>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Transaction 1</div>
+        <table>
+          <tr><th colspan="2">Assets</th><th>=</th><th>Liabilities</th><th>+</th><th colspan="2">Equity</th></tr>
+          <tr><th></th><th>Cash</th><th>=</th><th></th><th>+</th><th>Common Stock</th><th></th></tr>
+          <tr><td>(1)</td><td class="pos">+ $30,000</td><td>=</td><td></td><td></td>
+              <td class="pos">+ $30,000</td><td style="font-size:.8rem">Owner investment</td></tr>
+        </table>
+        <p class="excap">Notice: both sides went up by the same amount, so the equation
+        <span class="g" data-ar="يبقى / تظل">remains</span> balanced —
+        <b>30,000 = 0 + 30,000</b>.</p>
+      </div>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li><i>External</i> = <b>between</b> two entities. <i>Internal</i> = <b>inside</b> one entity.</li>
+        <li>Internal transactions <b>may not</b> affect the equation. The book says
+            <i>may or may not affect</i>. Any choice that is sure about one side is wrong.</li>
+        <li>An event must be <b>reliably measurable</b> before the company can record it.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">Test yourself</h2>
+<p class="sub" style="margin-bottom:16px">Answer first, then open the solution.
+If you miss question 2 or 3, go back to the table above.</p>
+
+<div class="q">
+  <div class="stem">1. A company has assets of $180,000 and liabilities of $75,000. Its equity is:</div>
+  <ol type="A"><li>$255,000</li><li>$105,000</li><li>$75,000</li><li>Cannot be determined</li></ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. <span class="mono">Equity = Assets − Liabilities = 180,000 − 75,000 = 105,000</span>.
+  Choice <b>A</b> adds instead of subtracting, and that is the trap. Choice <b>D</b> says the answer
+  cannot be <span class="g" data-ar="يُحدَّد / يُعرَف">determined</span>, but the equation always
+  gives you the third number when you have the other two.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. Which of the following <i>decreases</i> equity?</div>
+  <ol type="A"><li>Revenues</li><li>Common stock issued to shareholders</li>
+  <li>Dividends</li><li>Accounts receivable collected</li></ol>
+  <details><summary>Answer</summary>
+  <p><b>C</b>. In the expanded equation, Common Stock and Revenues carry a plus, while Dividends
+  and Expenses carry a minus. Choice <b>D</b> is a receivable that was
+  <span class="g" data-ar="حُصِّلت / تم تحصيلها">collected</span>. That only changes the form of the
+  assets, from a receivable into cash, so equity does not move at all.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Which statement about dividends is correct?</div>
+  <ol type="A">
+    <li>Dividends are an expense and reduce net income</li>
+    <li>Dividends reduce equity but are not an expense</li>
+    <li>Dividends increase equity because they are paid to owners</li>
+    <li>Dividends have no effect on the accounting equation</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. Dividends <b>decrease</b> equity, but they are <b>not an expense</b> and they do not
+  enter the calculation of net income. Choice <b>A</b> is the most famous trap in the whole
+  chapter.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. Target uses some of its own supplies, which are then reported as expenses. This is best described as:</div>
+  <ol type="A"><li>An external transaction</li><li>An internal transaction</li>
+  <li>An event</li><li>Not a transaction at all</li></ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. The exchange happens <b>inside</b> the same entity, so there is no second party.
+  This is the book's own example of an internal transaction.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. An owner invests $50,000 cash in exchange for common stock. The effect on the accounting equation is:</div>
+  <ol type="A">
+    <li>Assets increase $50,000; liabilities increase $50,000</li>
+    <li>Assets increase $50,000; equity increases $50,000</li>
+    <li>Assets increase $50,000; equity decreases $50,000</li>
+    <li>Equity increases $50,000; liabilities decrease $50,000</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. Cash, an asset, goes up. Common Stock, part of equity, goes up by the same amount.
+  Owners are not creditors, so liabilities do not change. Choice <b>A</b> is built on exactly that
+  confusion.</p></details>
+</div>
+
+<h2 style="margin:40px 0 10px">Key terms from this section</h2>
+<table>
+  <tr><th>Term</th><th>What it means</th><th>Watch out for</th></tr>
+  <tr><td><b>Assets</b></td><td>Resources the company owns or controls</td><td>owns <b>or controls</b></td></tr>
+  <tr><td><b>Liabilities</b></td><td>Creditors' claims on the assets</td><td>non-owner claims</td></tr>
+  <tr><td><b>Equity</b></td><td>The owner's claim on the assets</td><td>= assets <b>minus</b> liabilities</td></tr>
+  <tr><td><b>Net assets</b> / <b>residual equity</b></td><td>Other names for equity</td><td>same thing, different name</td></tr>
+  <tr><td><b>Receivable</b></td><td>An asset: money the company will collect</td><td>an asset — an <b>inflow</b></td></tr>
+  <tr><td><b>Payable</b></td><td>A liability: money the company will pay</td><td>a liability — an <b>outflow</b></td></tr>
+  <tr><td><b>On credit</b> / <b>on account</b></td><td>Cash moves at a later date</td><td>both phrases mean the same</td></tr>
+  <tr><td><b>Common Stock</b></td><td>Owner investment in return for stock</td><td>+ &middot; part of contributed capital</td></tr>
+  <tr><td><b>Dividends</b></td><td>Assets paid out to the shareholders</td><td>− &middot; <b>not an expense</b></td></tr>
+  <tr><td><b>Revenues</b></td><td>Increases in equity from selling to customers</td><td>+ &middot; from sales to customers</td></tr>
+  <tr><td><b>Expenses</b></td><td>Decreases in equity from the costs of providing</td><td>− &middot; costs of providing</td></tr>
+  <tr><td><b>External transaction</b></td><td>Exchange between two entities</td><td>always changes the equation</td></tr>
+  <tr><td><b>Internal transaction</b></td><td>Exchange inside one entity</td><td>may or may not affect it</td></tr>
+  <tr><td><b>Events</b></td><td>Happenings that affect the equation</td><td>must be reliably measurable</td></tr>
+</table>
+
+<h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
+<p class="sub" style="margin-bottom:8px">These are the general English words on this page, not the
+accounting terms. Learn them and the textbook gets much easier to read.</p>
+<table class="vocab">
+  <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
+
+  <tr><td class="w">affect</td><td class="pos">verb</td><td class="ar">يؤثّر على</td>
+      <td class="ex">An exchange inside the same entity may or may not <b>affect</b> the equation.</td></tr>
+
+  <tr><td class="w">apply (to)</td><td class="pos">verb</td><td class="ar">ينطبق على / يسري على</td>
+      <td class="ex">This relation <b>applies</b> to all transactions and events.</td></tr>
+
+  <tr><td class="w">claim</td><td class="pos">noun</td><td class="ar">مُطالبة / حق</td>
+      <td class="ex">Accounting shows what the company owns, and who has a <b>claim</b> on it.</td></tr>
+
+  <tr><td class="w">collect</td><td class="pos">verb</td><td class="ar">يُحصّل / يقبض</td>
+      <td class="ex">Choice D is a receivable that was <b>collected</b>.</td></tr>
+
+  <tr><td class="w">contribute</td><td class="pos">verb</td><td class="ar">يُقدّم / يُساهم بـ</td>
+      <td class="ex">Contributed capital is the money the owners <b>contributed</b> to the company.</td></tr>
+
+  <tr><td class="w">determine</td><td class="pos">verb</td><td class="ar">يُحدّد / يعرف</td>
+      <td class="ex">Choice D says the answer cannot be <b>determined</b>.</td></tr>
+
+  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">توزيع</td>
+      <td class="ex">A dividend is a <b>distribution</b> to the owners.</td></tr>
+
+  <tr><td class="w">entity</td><td class="pos">noun</td><td class="ar">كيان / جهة</td>
+      <td class="ex">An exchange of value between two <b>entities</b>.</td></tr>
+
+  <tr><td class="w">exception</td><td class="pos">noun</td><td class="ar">استثناء</td>
+      <td class="ex">It applies at all points in time. There is no <b>exception</b>.</td></tr>
+
+  <tr><td class="w">exchange</td><td class="pos">noun</td><td class="ar">مقابل / تبادل</td>
+      <td class="ex">Inflows of cash and net assets from shareholders in <b>exchange</b> for stock.</td></tr>
+
+  <tr><td class="w">inflow</td><td class="pos">noun</td><td class="ar">تدفّق داخل</td>
+      <td class="ex">A receivable is an asset that promises a future <b>inflow</b>.</td></tr>
+
+  <tr><td class="w">issuance</td><td class="pos">noun</td><td class="ar">إصدار</td>
+      <td class="ex">Equity increases from owner investments, also called stock <b>issuances</b>.</td></tr>
+
+  <tr><td class="w">later</td><td class="pos">adjective</td><td class="ar">لاحق</td>
+      <td class="ex">The cash is received or paid at a <b>later</b> date.</td></tr>
+
+  <tr><td class="w">measure</td><td class="pos">verb</td><td class="ar">يقيس</td>
+      <td class="ex">Happenings that affect the equation and can be <b>measured</b> reliably.</td></tr>
+
+  <tr><td class="w">obligation</td><td class="pos">noun</td><td class="ar">التزام / تعهّد</td>
+      <td class="ex">They are company <b>obligations</b> to provide assets, products, or services to others.</td></tr>
+
+  <tr><td class="w">outflow</td><td class="pos">noun</td><td class="ar">تدفّق خارج</td>
+      <td class="ex">A payable is a liability that promises a future <b>outflow</b>.</td></tr>
+
+  <tr><td class="w">rearrange</td><td class="pos">verb</td><td class="ar">يُعيد ترتيب</td>
+      <td class="ex">You can also <b>rearrange</b> it: Assets − Liabilities = Equity.</td></tr>
+
+  <tr><td class="w">reflect</td><td class="pos">verb</td><td class="ar">يعكس / يُمثّل</td>
+      <td class="ex">Stock <b>reflects</b> ownership in the company.</td></tr>
+
+  <tr><td class="w">reliably</td><td class="pos">adverb</td><td class="ar">بموثوقية / بشكل موثوق</td>
+      <td class="ex">Happenings that affect the equation and can be measured <b>reliably</b>.</td></tr>
+
+  <tr><td class="w">remain</td><td class="pos">verb</td><td class="ar">يبقى / يظل</td>
+      <td class="ex">Both sides went up by the same amount, so the equation <b>remains</b> balanced.</td></tr>
+
+  <tr><td class="w">residual</td><td class="pos">adjective</td><td class="ar">متبقٍّ / ما تبقّى</td>
+      <td class="ex">Equity is also called net assets or <b>residual</b> equity.</td></tr>
+
+  <tr><td class="w">resources</td><td class="pos">noun</td><td class="ar">موارد</td>
+      <td class="ex">One side is the <b>resources</b> the company owns.</td></tr>
+
+  <tr><td class="w">retain</td><td class="pos">verb</td><td class="ar">يحتفظ بـ / يُبقي</td>
+      <td class="ex">Retained earnings is the income the company <b>retained</b> instead of paying it out.</td></tr>
+
+  <tr><td class="w">reverse</td><td class="pos">verb</td><td class="ar">يقلب / يعكس</td>
+      <td class="ex">Any choice that <b>reverses</b> one sign is wrong.</td></tr>
+
+  <tr><td class="w">yield</td><td class="pos">verb</td><td class="ar">يُحقّق / يُنتج</td>
+      <td class="ex">Resources a company owns or controls are expected to <b>yield</b> future benefits.</td></tr>
+</table>
+
+<p class="note">
+Built from the textbook material in SmartBook — Chapter 1, third section,
+<i>Business Transactions and Accounting</i>, objective <code>A1</code> (page 10 onward).
+<br><b>Still missing:</b> transactions 2 through 11 for FastForward (the step-by-step transaction
+analysis, objective <code>P1</code>). That needs a second session with the book.
+</p>
+
+
+<div class="footnav">
+  <div class="side"><a class="pill" href="ACCT203-CH1-S2-EN.html">&#8592; 2. Fundamentals of Accounting</a></div>
+  <a class="pill home" href="../index.html">&#8962; Home</a>
+  <div class="side"><a class="pill" href="ACCT203-CH1-S4-EN.html">4. Financial Statements &#8594;</a></div>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('span.g').forEach(function(s){
+  var t=document.createElement('span'); t.className='ar'; t.textContent=s.dataset.ar; s.appendChild(t);
+  s.addEventListener('click',function(e){
+    e.stopPropagation();
+    document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
+    s.classList.toggle('on');
+  });
+});
+document.addEventListener('click',function(){
+  document.querySelectorAll('span.g.on').forEach(function(o){o.classList.remove('on');});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — Chapter 1: Financial Statements</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
+  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
+  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
+  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
+  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
+bdi{font-weight:600;unicode-bidi:isolate}
+code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
+h2{font-size:1.35rem;margin:0;line-height:1.5}
+header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
+.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
+.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
+.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
+.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
+.chead .ar{font-size:1.02rem;font-weight:600}
+.chead .say{font-size:.85rem;color:var(--muted)}
+.cbody{padding:6px 20px 20px}
+.blk{margin:18px 0}
+.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
+  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
+  unicode-bidi:isolate;direction:ltr}
+.hook{font-size:1.05rem;color:var(--ink2)}
+.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
+  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
+.exam .lbl{background:var(--exam);color:#fff}
+.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
+  padding:14px 18px;border-radius:0 8px 8px 0}
+.trap .lbl{background:var(--trap);color:#fff}
+.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
+ul,ol{padding-inline-start:22px} li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
+td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
+.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
+.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
+.q ol li{margin:5px 0;font-weight:500}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
+details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
+.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
+.big h2{color:var(--accent);margin-bottom:6px}
+.stmt{direction:ltr;background:#fdfcfa;border:1px solid #d8d3cb;border-radius:8px;
+  margin:14px 0;overflow-x:auto;color:#1a1a1a}
+.stmt .hd{background:#1f5d4c;color:#fff;text-align:center;padding:10px;font-weight:700;line-height:1.5}
+.stmt table{margin:0;font-size:.92rem;color:#1a1a1a}
+.stmt td{border:0;padding:5px 14px}
+.stmt td.n{text-align:right;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+.stmt tr.sub td{border-top:1px solid #8a8378}
+.stmt tr.tot td{border-top:1px solid #8a8378;border-bottom:3px double #8a8378;font-weight:700}
+.stmt .ind{padding-inline-start:34px}
+.link{display:flex;align-items:center;gap:10px;background:var(--exam-soft);
+  border-inline-start:4px solid var(--exam);padding:10px 16px;border-radius:0 8px 8px 0;margin:8px 0;font-size:.95rem}
+.link .n{background:var(--exam);color:#fff;width:24px;height:24px;border-radius:50%;
+  display:grid;place-items:center;font-weight:700;font-size:.8rem;flex:none}
+.period{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
+  background:#e8f0ec;color:#0d4f3c;border:1px solid #0d4f3c}
+.point{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
+  background:#fbecea;color:#a4342a;border:1px solid #a4342a}
+
+/* nav */
+.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
+  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;transition:.15s}
+.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
+.pill.home{color:var(--ink);}
+.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
+.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
+.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
+  .footnav .pill{justify-content:center}}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+
+.g{border-bottom:2px dotted var(--accent);cursor:pointer;position:relative;font-weight:600}
+.g:hover,.g.on{background:var(--accent-soft)}
+.g .ar{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
+  direction:rtl;font-size:.86rem;font-weight:600;white-space:nowrap;padding:5px 11px;
+  border-radius:7px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+.g:hover .ar,.g.on .ar{display:block}
+.vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
+.vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
+.vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
+.vocab td.w{font-weight:700;color:var(--accent);white-space:nowrap}
+.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
+.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
+.vocab td.ex{color:var(--ink2);font-size:.9rem}
+.tiphint{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;
+  color:var(--ink2);margin:14px 0}
+
+body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif}
+.exam,.q .stem,.q ol{direction:ltr;text-align:left}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="navbar">
+  <a class="pill home" href="../index.html">&#8592; Back to Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S4.html">&#127462; النسخة العربية</a>
+</div>
+
+
+<header>
+  <h1>Chapter 1 — Financial Statements</h1>
+  <p class="sub"><code>ACCT 203</code> · Chapter 1 · Section 4 of 4: Financial Statements<br>
+  Objective <code>P2</code>: <span class="g" data-ar="يُحدِّد / يتعرّف على">Identify</span> and prepare
+  basic financial statements and explain how they
+  <span class="g" data-ar="تترابط مع بعضها">interrelate</span>.</p>
+</header>
+
+<div class="big">
+  <h2>End of the chapter — everything comes together here</h2>
+  <p>There are four statements. They are prepared in <b>a fixed order</b>. Each one <b>feeds the next one</b>.
+  The exam question is not "what are the statements". The exam asks <b>which one covers a period and which
+  one covers a point in time</b>, and <b>how they link to each other</b>.</p>
+  <p class="tiphint">How to use this page: tap or hover any <span class="g" data-ar="منقّط">dotted</span>
+  word to see the Arabic meaning. The accounting terms stay in English on purpose — those are the words on
+  your exam paper.</p>
+</div>
+
+<!-- The four -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">The Four Financial Statements</div>
+    <div class="say">The order is <span class="g" data-ar="مقصود / متعمَّد">deliberate</span> — do not change it</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
+      The first one measures profit. The second one carries it forward. The third one shows the
+      <span class="g" data-ar="المركز / الوضع">position</span>. The fourth one tracks the cash.</div>
+
+    <table>
+      <tr><th>Statement</th><th>Layout</th><th>Purpose</th><th>Time</th></tr>
+      <tr>
+        <td><b>Income statement</b></td>
+        <td class="mono">Revenues<br>&minus; Expenses<br>= Net income</td>
+        <td>Shows the company's revenues and expenses. It
+            <span class="g" data-ar="يحسب">computes</span> net income or net loss.</td>
+        <td><span class="period">period</span></td>
+      </tr>
+      <tr>
+        <td><b>Statement of retained earnings</b></td>
+        <td class="mono">Beg. retained earnings<br>+ Net income<br>&minus; Dividends<br>= End. retained earnings</td>
+        <td>Explains the change in retained earnings, from net income (or loss) and from dividends.</td>
+        <td><span class="period">period</span></td>
+      </tr>
+      <tr>
+        <td><b>Balance sheet</b></td>
+        <td class="mono">Assets = Liabilities<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Equity</td>
+        <td>Describes the financial position — the types and amounts of assets, liabilities and equity.</td>
+        <td><span class="point">point</span></td>
+      </tr>
+      <tr>
+        <td><b>Statement of cash flows</b></td>
+        <td class="mono">+/&minus; Operating C.F.<br>+/&minus; Investing C.F.<br>+/&minus; Financing C.F.<br>= Change in cash</td>
+        <td>Identifies the cash coming in (receipts) and the cash going out (payments).</td>
+        <td><span class="period">period</span></td>
+      </tr>
+    </table>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The income statement, the statement of retained earnings, and the statement of cash flows
+      are prepared for a <b>period of time</b>. The <b>balance sheet</b> is prepared as of a
+      <b>point in time</b>.</p>
+      <p>A statement's heading identifies the <b>company</b>, the <b>statement title</b>, and the
+      <b>date or time period</b>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li><b>Three cover a period. One covers a point.</b> Only the balance sheet is
+            <i>at a point in time</i>. This is the most common question in this section.</li>
+        <li>This is why the <span class="g" data-ar="عنوان القائمة / الترويسة">heading</span> of an income
+            statement says <i>For Month Ended December 31</i>, while the balance sheet says only
+            <i>December 31</i>. The heading itself <span class="g" data-ar="يكشف">reveals</span> the answer.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- How they link -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">How the Statements Interrelate</div>
+    <div class="say">Half of objective P2 is exactly this</div>
+  </div>
+  <div class="cbody">
+    <div class="blk">
+      <div class="link"><span class="n">1</span>
+        <span><b>Net income</b> from the income statement is used to compute
+        <b>retained earnings</b>.</span></div>
+      <div class="link"><span class="n">2</span>
+        <span><b>Retained earnings</b> is used to prepare
+        <b>the balance sheet</b>.</span></div>
+      <div class="link"><span class="n">3</span>
+        <span><b>Cash</b> from the balance sheet is used to
+        <span class="g" data-ar="يطابِق / يوفّق">reconcile</span>
+        <b>the statement of cash flows</b>.</span></div>
+      <p style="margin-top:14px">This is why the order is
+      <span class="g" data-ar="إجباري / لازم">mandatory</span>. You cannot prepare the statement of
+      retained earnings before you know net income. You cannot prepare the balance sheet before you
+      know retained earnings.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Net income is used to compute retained earnings. Retained earnings is used to prepare the
+      balance sheet. Cash from the balance sheet is used to reconcile the statement of cash flows.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Income statement -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Income Statement</div>
+    <div class="say">Revenues first, expenses second</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p>Revenues come <b>first</b>. Expenses come <b>after</b> them. Expenses are the costs used to
+      <span class="g" data-ar="يولّد / يحقّق">generate</span> the
+      <span class="g" data-ar="المُعلَن عنه / المعروض في القوائم">reported</span> revenues.</p>
+      <ul>
+        <li><b>Net income</b> — this <span class="g" data-ar="يحدث / يقع">occurs</span> when revenues
+            <span class="g" data-ar="تتجاوز / تزيد عن">exceed</span> expenses.</li>
+        <li><b>Net loss</b> — this occurs when expenses exceed revenues.</li>
+        <li>Net income (or net loss) appears at the <b>bottom</b> of the statement.</li>
+        <li>It is sometimes called <b>earnings</b> or <b>profit</b>. Same thing.</li>
+      </ul>
+      <p style="background:var(--trap-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      &#9888; Shareholder investments and dividends <b>are not part of income</b>.</p>
+    </div>
+
+    <div class="stmt">
+      <div class="hd">FASTFORWARD<br>Income Statement<br>For Month Ended December 31, 2027</div>
+      <table>
+        <tr><td colspan="3"><b>Revenues</b></td></tr>
+        <tr><td class="ind">Consulting revenue ($4,200 + $1,600)</td><td class="n">$ 5,800</td><td></td></tr>
+        <tr class="sub"><td class="ind">Rental revenue</td><td class="n">300</td><td></td></tr>
+        <tr><td class="ind">Total revenues</td><td></td><td class="n">$ 6,100</td></tr>
+        <tr><td colspan="3"><b>Expenses</b></td></tr>
+        <tr><td class="ind">Rent expense</td><td class="n">1,000</td><td></td></tr>
+        <tr class="sub"><td class="ind">Salaries expense</td><td class="n">700</td><td></td></tr>
+        <tr><td class="ind">Total expenses</td><td></td><td class="n">1,700</td></tr>
+        <tr class="tot"><td><b>Net income</b></td><td></td><td class="n">$ 4,400</td></tr>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--ink2)">The revenues come from transactions 5 and 8. The expenses
+    come from transactions 6 and 7. Note that a <b>single line</b> means an addition or a subtraction, and a
+    <b>double line</b> means a final total.</p>
+  </div>
+</div>
+
+<!-- Retained earnings -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Statement of Retained Earnings</div>
+    <div class="say">This is where dividends belong</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p><b>Retained earnings</b> = <b><span class="g" data-ar="تراكمي">cumulative</span> net income
+      minus any dividend <span class="g" data-ar="التوزيعات">distributions</span></b>.</p>
+      <p>The statement shows four things: the beginning balance · what increases it (net income) ·
+      what decreases it (dividends and net loss) · and the ending balance.</p>
+      <p>The ending balance is <span class="g" data-ar="يُرحَّل / يُنقل إلى">carried over</span> and
+      shown on the balance sheet. That is link number 2 above.</p>
+      <p><b>The beginning balance:</b> for FastForward it is <b>zero</b>, because the company
+      <b>did not exist</b> before December 1. An
+      <span class="g" data-ar="قائمة / موجودة أصلاً">existing</span> company starts with the ending
+      balance of the <span class="g" data-ar="السابق">prior</span> period, for example November 30.</p>
+    </div>
+
+    <div class="stmt">
+      <div class="hd">FASTFORWARD<br>Statement of Retained Earnings<br>For Month Ended December 31, 2027</div>
+      <table>
+        <tr><td>Retained earnings, December 1, 2027</td><td class="n">$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</td></tr>
+        <tr class="sub"><td>Add: Net income</td><td class="n">4,400</td></tr>
+        <tr><td></td><td class="n">4,400</td></tr>
+        <tr class="sub"><td>Less: Dividends</td><td class="n">200</td></tr>
+        <tr class="tot"><td><b>Retained earnings, December 31, 2027</b></td><td class="n">$ 4,200</td></tr>
+      </table>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Retained earnings</b> is cumulative net income minus any dividend distributions. The
+      statement shows beginning retained earnings, events that increase it (net income), and events
+      that decrease it (dividends and net loss). Ending retained earnings is carried over and
+      reported on the <b>balance sheet</b>.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li>Dividends are <span class="g" data-ar="تُطرَح">subtracted</span> <b>here</b>, not on the income
+            statement. If you subtract them from revenues, your net income will be wrong.</li>
+        <li>A <b>new</b> company has a beginning balance of <b>zero</b>. An <b>existing</b> company starts
+            with the ending balance of the prior period.</li>
+        <li>A <b>net loss</b> decreases retained earnings, just like dividends do.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Cash flows -->
+<div class="concept">
+  <div class="chead">
+    <div class="term">Statement of Cash Flows</div>
+    <div class="say">Three sections, one total</div>
+  </div>
+  <div class="cbody">
+    <div class="blk"><span class="lbl">EXPLANATION</span>
+      <p>There are three sections: <b>Operating</b> · <b>Investing</b> · <b>Financing</b>. Their total is
+      the <b>change in cash</b>.</p>
+      <p>Then you add the beginning cash balance. The result is the <b>ending cash balance</b>. That number
+      is the same cash number on the balance sheet. That is link number 3.</p>
+      <div class="stmt">
+        <div class="hd">FASTFORWARD — Financing activities (<span class="g" data-ar="مقتطف">excerpt</span>)</div>
+        <table>
+          <tr><td class="ind">Cash investments from shareholders</td><td class="n">30,000</td><td></td></tr>
+          <tr class="sub"><td class="ind">Cash dividends to shareholders</td><td class="n">(200)</td><td></td></tr>
+          <tr><td class="ind">Net cash provided by financing activities</td><td></td><td class="n">29,800</td></tr>
+          <tr><td><b>Net increase in cash</b></td><td></td><td class="n">$ 4,800</td></tr>
+          <tr class="sub"><td>Cash balance, December 1, 2027</td><td></td><td class="n">0</td></tr>
+          <tr class="tot"><td><b>Cash balance, December 31, 2027</b></td><td></td><td class="n">$ 4,800</td></tr>
+        </table>
+      </div>
+      <p style="font-size:.88rem;color:var(--ink2)">Note: negative amounts sometimes appear in
+      <span class="g" data-ar="الأقواس">parentheses</span> and sometimes they do not. The textbook warns
+      about this <span class="g" data-ar="صراحةً / بشكل واضح">explicitly</span>.</p>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">Test yourself</h2>
+
+<div class="q">
+  <div class="stem">1. Which financial statement is prepared as of a <i>point in time</i> rather than for a period of time?</div>
+  <ol type="A"><li>Income statement</li><li>Statement of retained earnings</li>
+  <li>Balance sheet</li><li>Statement of cash flows</li></ol>
+  <details><summary>Answer</summary>
+  <p><b>C</b>. Only the balance sheet is <i>at a point in time</i>. The other three are
+  <i>for a period of time</i>. This is a <span class="g" data-ar="مضمونة">guaranteed</span> mark if you
+  memorize it.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. A company reports revenues of $9,000 and expenses of $11,500. It also paid $500 of dividends. Net income (loss) is:</div>
+  <ol type="A"><li>Net income of $2,500</li><li>Net loss of $2,500</li>
+  <li>Net loss of $3,000</li><li>Net income of $3,000</li></ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. <span class="mono">9,000 &minus; 11,500 = (2,500)</span> — a loss. Dividends
+  <b>never enter</b> the calculation of net income. Their place is the statement of retained earnings.
+  Choice <b>C</b> is the trap, because it also subtracts the $500.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Beginning retained earnings is $12,000. Net income is $5,000 and dividends are $2,000. Ending retained earnings is:</div>
+  <ol type="A"><li>$19,000</li><li>$15,000</li><li>$9,000</li><li>$5,000</li></ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. <span class="mono">12,000 + 5,000 &minus; 2,000 = 15,000</span>.
+  Add net income, then subtract dividends — in that order.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. In what order must the statements be prepared?</div>
+  <ol type="A">
+    <li>Balance sheet → income statement → retained earnings → cash flows</li>
+    <li>Income statement → retained earnings → balance sheet → cash flows</li>
+    <li>Cash flows → balance sheet → income statement → retained earnings</li>
+    <li>Any order; they are independent</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. Net income feeds retained earnings. Retained earnings feeds the balance sheet. Cash on the
+  balance sheet reconciles the statement of cash flows. Choice <b>D</b> is completely wrong, because the
+  statements interrelate.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. A shareholder invests $20,000 cash in the company. On the income statement this is reported as:</div>
+  <ol type="A"><li>Revenue of $20,000</li><li>An expense of $20,000</li>
+  <li>Net income of $20,000</li><li>It is not reported on the income statement</li></ol>
+  <details><summary>Answer</summary>
+  <p><b>D</b>. Shareholder investments and dividends are not part of income. The investment appears in
+  Common Stock and in the financing activities section — not on the income statement.</p></details>
+</div>
+
+<h2 style="margin:40px 0 10px">Key accounting terms</h2>
+<table>
+  <tr><th>Term</th><th>What it means</th><th>Watch out for</th></tr>
+  <tr><td><b>Income statement</b></td><td>Revenues minus expenses for the period</td><td>Period · revenues then expenses</td></tr>
+  <tr><td><b>Statement of retained earnings</b></td><td>How retained earnings changed over the period</td><td>Period · dividends are subtracted here</td></tr>
+  <tr><td><b>Balance sheet</b></td><td>What the company owns and owes on one date</td><td><b>Point in time</b> — the only one</td></tr>
+  <tr><td><b>Statement of cash flows</b></td><td>Cash received and cash paid over the period</td><td>Period · three sections</td></tr>
+  <tr><td><b>Net income</b></td><td>What is left when revenues are larger than expenses</td><td>Revenues &gt; expenses</td></tr>
+  <tr><td><b>Net loss</b></td><td>What results when expenses are larger than revenues</td><td>Expenses &gt; revenues</td></tr>
+  <tr><td><b>Earnings</b> / <b>profit</b></td><td>Another name for net income</td><td>Same as net income</td></tr>
+  <tr><td><b>Retained earnings</b></td><td>All past income kept in the business, after dividends</td><td>Cumulative income &minus; dividends</td></tr>
+  <tr><td><b>Operating / Investing / Financing</b></td><td>The three parts of the cash flow statement</td><td>The three cash flow sections</td></tr>
+</table>
+
+<h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
+<table class="vocab">
+  <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
+  <tr><td class="w">carried over</td><td class="pos">verb phrase</td><td class="ar">يُرحَّل / يُنقل إلى</td><td class="ex">The ending balance is carried over and shown on the balance sheet.</td></tr>
+  <tr><td class="w">compute</td><td class="pos">verb</td><td class="ar">يحسب</td><td class="ex">It computes net income or net loss.</td></tr>
+  <tr><td class="w">cumulative</td><td class="pos">adjective</td><td class="ar">تراكمي</td><td class="ex">Retained earnings = cumulative net income minus any dividend distributions.</td></tr>
+  <tr><td class="w">deliberate</td><td class="pos">adjective</td><td class="ar">مقصود / متعمَّد</td><td class="ex">The order is deliberate — do not change it.</td></tr>
+  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">توزيع (أرباح)</td><td class="ex">Cumulative net income minus any dividend distributions.</td></tr>
+  <tr><td class="w">dotted</td><td class="pos">adjective</td><td class="ar">منقّط</td><td class="ex">Tap or hover any dotted word to see the Arabic meaning.</td></tr>
+  <tr><td class="w">exceed</td><td class="pos">verb</td><td class="ar">يتجاوز / يزيد عن</td><td class="ex">Net income occurs when revenues exceed expenses.</td></tr>
+  <tr><td class="w">excerpt</td><td class="pos">noun</td><td class="ar">مقتطف</td><td class="ex">FASTFORWARD — Financing activities (excerpt).</td></tr>
+  <tr><td class="w">existing</td><td class="pos">adjective</td><td class="ar">قائمة / موجودة أصلاً</td><td class="ex">An existing company starts with the ending balance of the prior period.</td></tr>
+  <tr><td class="w">explicitly</td><td class="pos">adverb</td><td class="ar">صراحةً / بشكل واضح</td><td class="ex">The textbook warns about this explicitly.</td></tr>
+  <tr><td class="w">generate</td><td class="pos">verb</td><td class="ar">يولّد / يحقّق</td><td class="ex">Expenses are the costs used to generate the reported revenues.</td></tr>
+  <tr><td class="w">guaranteed</td><td class="pos">adjective</td><td class="ar">مضمونة</td><td class="ex">This is a guaranteed mark if you memorize it.</td></tr>
+  <tr><td class="w">heading</td><td class="pos">noun</td><td class="ar">عنوان القائمة / الترويسة</td><td class="ex">The heading of an income statement says "For Month Ended December 31".</td></tr>
+  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">يُحدِّد / يتعرّف على</td><td class="ex">Identify and prepare basic financial statements.</td></tr>
+  <tr><td class="w">interrelate</td><td class="pos">verb</td><td class="ar">تترابط مع بعضها</td><td class="ex">Explain how they interrelate.</td></tr>
+  <tr><td class="w">mandatory</td><td class="pos">adjective</td><td class="ar">إجباري / لازم</td><td class="ex">This is why the order is mandatory.</td></tr>
+  <tr><td class="w">occur</td><td class="pos">verb</td><td class="ar">يحدث / يقع</td><td class="ex">Net income occurs when revenues exceed expenses.</td></tr>
+  <tr><td class="w">parentheses</td><td class="pos">noun (plural)</td><td class="ar">الأقواس</td><td class="ex">Negative amounts sometimes appear in parentheses.</td></tr>
+  <tr><td class="w">position</td><td class="pos">noun</td><td class="ar">المركز / الوضع</td><td class="ex">The third one shows the position.</td></tr>
+  <tr><td class="w">prior</td><td class="pos">adjective</td><td class="ar">السابق</td><td class="ex">An existing company starts with the ending balance of the prior period.</td></tr>
+  <tr><td class="w">reconcile</td><td class="pos">verb</td><td class="ar">يطابِق / يوفّق</td><td class="ex">Cash from the balance sheet is used to reconcile the statement of cash flows.</td></tr>
+  <tr><td class="w">reported</td><td class="pos">adjective / verb</td><td class="ar">المُعلَن عنه / المعروض في القوائم</td><td class="ex">Expenses are the costs used to generate the reported revenues.</td></tr>
+  <tr><td class="w">reveal</td><td class="pos">verb</td><td class="ar">يكشف</td><td class="ex">The heading itself reveals the answer.</td></tr>
+  <tr><td class="w">subtract</td><td class="pos">verb</td><td class="ar">يطرح</td><td class="ex">Dividends are subtracted here, not on the income statement.</td></tr>
+</table>
+
+<p class="note">
+Built from the textbook material in SmartBook — Chapter 1, section four, Financial Statements,
+objective <code>P2</code> and Exhibit 1.10 (pages 16–17). The numbers come from the FastForward
+example in the book.
+<br><b>Note:</b> some line items in the income statement and the balance sheet were rebuilt from the
+figures shown in the book. Check them against Exhibit 1.10 in your own textbook before the exam.
+</p>
+
+
+<div class="footnav">
+  <div class="side"><a class="pill" href="ACCT203-CH1-S3-EN.html">&#8592; 3. Business Transactions and the Accounting Equation</a></div>
+  <a class="pill home" href="../index.html">&#8962; Home</a>
+  <div class="side"><span class="pill off">End of chapter</span></div>
+</div>
+</div>
+<script>
+document.querySelectorAll('span.g').forEach(function(s){
+  var t=document.createElement('span'); t.className='ar'; t.textContent=s.dataset.ar; s.appendChild(t);
+  s.addEventListener('click',function(e){
+    e.stopPropagation();
+    document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
+    s.classList.toggle('on');
+  });
+});
+document.addEventListener('click',function(){
+  document.querySelectorAll('span.g.on').forEach(function(o){o.classList.remove('on');});
+});
+</script>
+</body>
+</html>
