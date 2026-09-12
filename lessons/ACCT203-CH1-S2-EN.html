@@ -19,8 +19,9 @@
   --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
 }}
 *{box-sizing:border-box}
+html{font-size:18px}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:19px;line-height:1.85}
 .wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
 bdi{font-weight:600;unicode-bidi:isolate}
 code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
@@ -98,6 +99,13 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 .g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
 .g:hover .ar,.g.on .ar{display:block}
 .vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
+.g2{border-bottom:1.5px dotted var(--muted);cursor:pointer;position:relative}
+.g2:hover,.g2.on{background:var(--accent-soft)}
+.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
+  direction:rtl;text-align:right;font-size:.92rem;font-weight:600;white-space:nowrap;
+  padding:6px 12px;border-radius:8px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.g2:hover .ar,.g2.on .ar{display:block}
 .vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
 .vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
 .vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
@@ -131,14 +139,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
 <div class="big">
   <h2>What this section covers</h2>
-  <p>Three ideas that work together: <b>ethics</b> (why accounting numbers must be
-  <span class="g" data-ar="موثوقة، يُعتمد عليها" data-x="يعني تقدر تعتمد عليها وتثق فيها، ما تكذب عليك">reliable</span>), <b>fraud</b> (why people cheat and
-  how companies stop them), and <b>accounting standards</b> (GAAP and IFRS).</p>
-  <p>The link between them is simple. Numbers are useful only when people trust them. Trust needs
-  three things: good ethics, clear rules, and control.</p>
-  <div class="tiphint">This is the English twin of your Arabic lesson. The accounting terms stay in
-  English on purpose — that is what your exam paper uses. Tap or hover any
-  <span class="g" data-ar="منقّط" data-x="الكلمة اللي تحتها نقاط أو خط، زي هذي بالضبط">dotted</span> word to see the Arabic meaning.</div>
+  <p>Three ideas that work together: <b><span class="g2" data-ar="الأخلاق">ethics</span></b> (why accounting numbers must be
+  <span class="g" data-ar="موثوقة، يُعتمد عليها" data-x="يعني تقدر تعتمد عليها وتثق فيها، ما تكذب عليك">reliable</span>), <b><span class="g2" data-ar="الاحتيال، الغش">fraud</span></b> (why people <span class="g2" data-ar="يغشّون">cheat</span> and
+  how companies stop them), and <b><span class="g2" data-ar="معايير المحاسبة">accounting standards</span></b> (GAAP and IFRS).</p>
+  <p>The <span class="g2" data-ar="الرابط، العلاقة">link</span> between them is simple. Numbers are <span class="g2" data-ar="مفيدة">useful</span> only when people <span class="g2" data-ar="يثقون بها">trust</span> them. Trust needs
+  three things: good ethics, clear <span class="g2" data-ar="قواعد">rules</span>, and <span class="g2" data-ar="رقابة">control</span>.</p>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--accent);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
 </div>
 
 <!-- Ethics -->
@@ -149,17 +155,17 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">ONE-LINE IDEA</span><br>
-      Accounting information has value only when people trust it. That trust starts with the ethics
+      Accounting <span class="g2" data-ar="المعلومات">information</span> has <span class="g2" data-ar="قيمة">value</span> only when people <span class="g2" data-ar="يثقون به">trust</span> it. That trust starts with the <span class="g2" data-ar="أخلاق">ethics</span>
       of the person who wrote the numbers.</div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p><b>Ethics</b> are beliefs that <span class="g" data-ar="تفصل بين" data-x="يعني تفرّق بين شيئين وتعرف هذا صح وهذا غلط">separate</span> right from
-      wrong. They are accepted standards of good and bad
+      <p><b>Ethics</b> are <span class="g2" data-ar="معتقدات">beliefs</span> that <span class="g" data-ar="تفصل بين" data-x="يعني تفرّق بين شيئين وتعرف هذا صح وهذا غلط">separate</span> <span class="g2" data-ar="الصواب">right</span> from
+      <span class="g2" data-ar="الخطأ">wrong</span>. They are <span class="g2" data-ar="مقبولة">accepted</span> <span class="g2" data-ar="معايير">standards</span> of good and bad
       <span class="g" data-ar="السلوك، التصرّف" data-x="تصرفاتك، يعني الطريقة اللي تتعامل وتتصرف فيها مع الناس">behavior</span>.</p>
-      <p>An accountant faces ethical choices while preparing financial reports. Those choices
-      <span class="g" data-ar="تؤثّر على" data-x="يعني يغيّر في الشي ويأثّر عليه، زي قرارك يأثّر على الراتب">affect</span> employee pay and bonuses. They affect whether
-      a product succeeds. A bad choice can hurt the company and the people who work in it.</p>
-      <p>The textbook repeats an old line: <i>Good ethics are good business.</i></p>
+      <p>An <span class="g2" data-ar="المحاسب">accountant</span> <span class="g2" data-ar="يواجه">faces</span> <span class="g2" data-ar="خيارات أخلاقية">ethical choices</span> while <span class="g2" data-ar="إعداد">preparing</span> <span class="g2" data-ar="التقارير المالية">financial reports</span>. Those choices
+      <span class="g" data-ar="تؤثّر على" data-x="يعني يغيّر في الشي ويأثّر عليه، زي قرارك يأثّر على الراتب">affect</span> <span class="g2" data-ar="الموظف">employee</span> <span class="g2" data-ar="الأجر، الراتب">pay</span> and <span class="g2" data-ar="المكافآت">bonuses</span>. They affect <span class="g2" data-ar="ما إذا">whether</span>
+      a <span class="g2" data-ar="منتج">product</span> <span class="g2" data-ar="ينجح">succeeds</span>. A bad choice can <span class="g2" data-ar="يضرّ">hurt</span> the company and the people who work in it.</p>
+      <p>The <span class="g2" data-ar="الكتاب المقرر">textbook</span> <span class="g2" data-ar="يكرّر">repeats</span> an old <span class="g2" data-ar="عبارة، مقولة">line</span>: <i>Good ethics are good business.</i></p>
     </div>
 
     <div class="exhibit">
@@ -182,11 +188,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <text x="588" y="68">Choose best option after</text><text x="588" y="85">weighing all consequences.</text>
         </g>
       </svg>
-      <p class="excap">Three steps, always in this order. First you
-      <span class="g" data-ar="تحدّد، تتعرّف على" data-x="يعني تشوف المشكلة وتعرفها وتقول هذي هي، قبل ما تحلها">identify</span> the ethical concern. Then you
-      analyze the options and think about all the
-      <span class="g" data-ar="العواقب، النتائج" data-x="اللي يصير بعدين بسبب قرارك، النتايج اللي تطلع منه">consequences</span>. Then you decide.
-      If a question gives you a story and asks &laquo;what comes next?&raquo;, go back to this order:
+      <p class="excap">Three <span class="g2" data-ar="خطوات">steps</span>, always in this <span class="g2" data-ar="الترتيب">order</span>. First you
+      <span class="g" data-ar="تحدّد، تتعرّف على" data-x="يعني تشوف المشكلة وتعرفها وتقول هذي هي، قبل ما تحلها">identify</span> the ethical <span class="g2" data-ar="المسألة، المشكلة">concern</span>. Then you
+      <span class="g2" data-ar="تحلّل">analyze</span> the <span class="g2" data-ar="الخيارات">options</span> and think about all the
+      <span class="g" data-ar="العواقب، النتائج" data-x="اللي يصير بعدين بسبب قرارك، النتايج اللي تطلع منه">consequences</span>. Then you <span class="g2" data-ar="تقرّر">decide</span>.
+      If a question gives you a <span class="g2" data-ar="قصة، موقف">story</span> and asks &laquo;what comes next?&raquo;, go back to this order:
       <b>identify &rarr; analyze &rarr; decide</b>.</p>
     </div>
 
@@ -202,12 +208,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">The Fraud Triangle</div>
-    <div class="say">three sides — memorize all three</div>
+    <div class="say">three sides — <span class="g2" data-ar="احفظ">memorize</span> all three</div>
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">ONE-LINE IDEA</span><br>
-      A person does not <span class="g" data-ar="يرتكب، يقوم بـ" data-x="يعني يسوي الغلطة أو الجريمة فعلاً، مو بس يفكر فيها">commit</span> fraud for one reason.
-      Three factors must come together.</div>
+      A person does not <span class="g" data-ar="يرتكب، يقوم بـ" data-x="يعني يسوي الغلطة أو الجريمة فعلاً، مو بس يفكر فيها">commit</span> <span class="g2" data-ar="الاحتيال، الغش">fraud</span> for one <span class="g2" data-ar="سبب">reason</span>.
+      Three <span class="g2" data-ar="عوامل">factors</span> must <span class="g2" data-ar="تجتمع">come together</span>.</div>
 
     <div class="exhibit">
       <div class="exlbl">The Fraud Triangle</div>
@@ -221,8 +227,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <text x="210" y="238" text-anchor="middle">Pressure</text>
         </g>
       </svg>
-      <p class="excap">The three sides are <b>Opportunity</b> &middot; <b>Pressure</b> &middot;
-      <b>Rationalization</b>. If a question gives you two sides and asks for the third, or asks
+      <p class="excap">The three <span class="g2" data-ar="أضلاع، جوانب">sides</span> are <b><span class="g2" data-ar="الفرصة">Opportunity</span></b> &middot; <b><span class="g2" data-ar="الضغط">Pressure</span></b> &middot;
+      <b><span class="g2" data-ar="التبرير">Rationalization</span></b>. If a question gives you two sides and asks for the third, or asks
       &laquo;how many factors?&raquo;, the answer is <b>three</b>.</p>
     </div>
 
@@ -230,26 +236,26 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <table>
         <tr><th>Side</th><th>What it means</th></tr>
         <tr><td><b>Opportunity</b></td>
-            <td>The person <b>can</b> cheat, and the risk of getting caught is low.</td></tr>
+            <td>The person <b>can</b> <span class="g2" data-ar="يغشّ">cheat</span>, and the <span class="g2" data-ar="خطر، احتمال">risk</span> of <span class="g2" data-ar="أن يُمسَك">getting caught</span> is low.</td></tr>
         <tr><td><b>Pressure</b></td>
-            <td>Money problems or personal problems push the person to cheat.</td></tr>
+            <td>Money problems or <span class="g2" data-ar="شخصية">personal</span> problems <span class="g2" data-ar="تدفع">push</span> the person to cheat.</td></tr>
         <tr><td><b>Rationalization</b></td>
-            <td>The person makes an excuse for the act, or does not see it as a crime at all.
-            This side is also called <b>attitude</b>.</td></tr>
+            <td>The person makes an <span class="g2" data-ar="عذر، مبرر">excuse</span> for the <span class="g2" data-ar="الفعل">act</span>, or does not see it as a <span class="g2" data-ar="جريمة">crime</span> at all.
+            This side is also called <b><span class="g2" data-ar="الموقف، النزعة">attitude</span></b>.</td></tr>
       </table>
-      <p>The key to stopping fraud is <b><span class="g" data-ar="المنع، منع الغش قبل وقوعه" data-x="يعني توقف الغش قبل ما يصير أصلاً، مو تكتشفه بعدين">prevention</span></b>.
-      Prevention is cheaper and more <span class="g" data-ar="فعّال، مؤثّر" data-x="يعني يشتغل صح ويجيب نتيجة، مو مجرد كلام">effective</span> than
+      <p>The <span class="g2" data-ar="المفتاح، الأساس">key</span> to <span class="g2" data-ar="إيقاف">stopping</span> fraud is <b><span class="g" data-ar="المنع، منع الغش قبل وقوعه" data-x="يعني توقف الغش قبل ما يصير أصلاً، مو تكتشفه بعدين">prevention</span></b>.
+      Prevention is <span class="g2" data-ar="أرخص">cheaper</span> and more <span class="g" data-ar="فعّال، مؤثّر" data-x="يعني يشتغل صح ويجيب نتيجة، مو مجرد كلام">effective</span> than
       <span class="g" data-ar="الكشف بعد وقوع الغش" data-x="تكتشف الغش بعد ما صار وخلص، مو قبله">detection</span>.</p>
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>To stop fraud, companies build <b>internal controls</b>. Internal controls are
-      <span class="g" data-ar="إجراءات، خطوات عمل منظّمة" data-x="خطوات مرتبة لازم تمشي عليها عشان الشغل يصير صح">procedures</span> that protect assets,
-      make the accounting reliable, <span class="g" data-ar="تعزّز، ترفع" data-x="يعني يزيد الشي ويقويه ويخليه أحسن، زي الكفاءة هنا">promote</span> efficiency,
-      and <span class="g" data-ar="تطبّق وتلتزم بـ" data-x="يعني تطبّق القوانين وتمشي عليها وما تكسرها">uphold</span> company policies.</p>
-      <p>Examples: good records &middot; physical controls such as locks &middot;
-      <span class="g" data-ar="مستقل، من طرف محايد" data-x="من واحد برا ما له علاقة، عشان يكون محايد وما يجامل">independent</span> reviews of the records.</p>
-      <p><b>Auditors</b> <span class="g" data-ar="يتحققون من" data-x="يعني يتأكد إنه الشي صحيح فعلاً، مو بس يصدق الكلام">verify</span> the effectiveness of
+      <p>To stop fraud, companies <span class="g2" data-ar="تبني، تنشئ">build</span> <b><span class="g2" data-ar="الرقابة الداخلية">internal controls</span></b>. Internal controls are
+      <span class="g" data-ar="إجراءات، خطوات عمل منظّمة" data-x="خطوات مرتبة لازم تمشي عليها عشان الشغل يصير صح">procedures</span> that <span class="g2" data-ar="تحمي">protect</span> <span class="g2" data-ar="الأصول">assets</span>,
+      make the accounting reliable, <span class="g" data-ar="تعزّز، ترفع" data-x="يعني يزيد الشي ويقويه ويخليه أحسن، زي الكفاءة هنا">promote</span> <span class="g2" data-ar="الكفاءة">efficiency</span>,
+      and <span class="g" data-ar="تطبّق وتلتزم بـ" data-x="يعني تطبّق القوانين وتمشي عليها وما تكسرها">uphold</span> company <span class="g2" data-ar="سياسات">policies</span>.</p>
+      <p><span class="g2" data-ar="أمثلة">Examples</span>: good <span class="g2" data-ar="سجلات">records</span> &middot; <span class="g2" data-ar="مادية، ملموسة">physical</span> controls such as <span class="g2" data-ar="أقفال">locks</span> &middot;
+      <span class="g" data-ar="مستقل، من طرف محايد" data-x="من واحد برا ما له علاقة، عشان يكون محايد وما يجامل">independent</span> <span class="g2" data-ar="مراجعات">reviews</span> of the records.</p>
+      <p><b><span class="g2" data-ar="المدققون، المراجعون">Auditors</span></b> <span class="g" data-ar="يتحققون من" data-x="يعني يتأكد إنه الشي صحيح فعلاً، مو بس يصدق الكلام">verify</span> the <span class="g2" data-ar="الفعالية">effectiveness</span> of
       these internal controls.</p>
     </div>
 
@@ -264,11 +270,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
-        <li>The sides are <b>three</b>, not two and not four. The answer choices like to drop one.</li>
-        <li><b>Prevention is cheaper than detection.</b> Any choice that says the opposite is wrong.</li>
-        <li>Internal controls are <b>not</b> an audit. Controls are <b>procedures inside the
-            company</b>; the auditor <b>checks</b> them.</li>
-        <li>Do not mix <b>Opportunity</b> with <b>Pressure</b>. Opportunity = the person
+        <li>The sides are <b>three</b>, not two and not four. The <span class="g2" data-ar="خيارات الإجابة">answer choices</span> like to <span class="g2" data-ar="تحذف، تُسقط">drop</span> one.</li>
+        <li><b>Prevention is cheaper than detection.</b> Any choice that says the <span class="g2" data-ar="العكس">opposite</span> is <span class="g2" data-ar="خطأ">wrong</span>.</li>
+        <li>Internal controls are <b>not</b> an <span class="g2" data-ar="تدقيق، مراجعة حسابات">audit</span>. Controls are <b>procedures inside the
+            company</b>; the <span class="g2" data-ar="المدقق">auditor</span> <b><span class="g2" data-ar="يفحص">checks</span></b> them.</li>
+        <li>Do not <span class="g2" data-ar="تخلط">mix</span> <b>Opportunity</b> with <b>Pressure</b>. Opportunity = the person
             <b>can</b>. Pressure = the person <b>needs</b>.</li>
       </ul>
     </div>
@@ -279,52 +285,52 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">GAAP &middot; FASB &middot; SEC</div>
-    <div class="say">most multiple-choice questions come from here</div>
+    <div class="say">most <span class="g2" data-ar="اختيار من متعدد">multiple-choice</span> questions come from here</div>
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">ONE-LINE IDEA</span><br>
-      If every company used its own method, nobody could compare them. So we need one set of rules,
-      one body to write them, and one body to enforce them.</div>
+      If every company used its own <span class="g2" data-ar="طريقة">method</span>, nobody could <span class="g2" data-ar="يقارن">compare</span> them. So we need one <span class="g2" data-ar="مجموعة قواعد">set of rules</span>,
+      one <span class="g2" data-ar="هيئة، جهة">body</span> to write them, and one body to <span class="g2" data-ar="تفرض تطبيقها">enforce</span> them.</div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>Financial accounting is <span class="g" data-ar="محكومة بـ، تخضع لـ" data-x="يعني محكومة بقوانين وتمشي عليها، مو كل واحد على كيفه">governed</span> by
-      concepts and rules called <b>generally accepted accounting principles (GAAP)</b>.</p>
-      <p>GAAP wants accounting information to have two qualities:</p>
+      <p><span class="g2" data-ar="المحاسبة المالية">Financial accounting</span> is <span class="g" data-ar="محكومة بـ، تخضع لـ" data-x="يعني محكومة بقوانين وتمشي عليها، مو كل واحد على كيفه">governed</span> by
+      <span class="g2" data-ar="مفاهيم">concepts</span> and rules called <b><span class="g2" data-ar="مبادئ المحاسبة المقبولة عموماً">generally accepted accounting principles</span> (GAAP)</b>.</p>
+      <p>GAAP wants accounting information to have two <span class="g2" data-ar="صفات، خصائص">qualities</span>:</p>
       <ul>
-        <li><b>Relevance</b> — the information can change the decision of the user.</li>
-        <li><b>Faithful representation</b> — the information
-        <span class="g" data-ar="تعكس، تصوّر" data-x="يعني يوريك الحقيقة زي ما هي، مثل المراية بالضبط">reflects</span> the real results of the business.</li>
+        <li><b><span class="g2" data-ar="الملاءمة">Relevance</span></b> — the information can change the <span class="g2" data-ar="قرار">decision</span> of the <span class="g2" data-ar="المستخدم">user</span>.</li>
+        <li><b><span class="g2" data-ar="التمثيل الصادق">Faithful representation</span></b> — the information
+        <span class="g" data-ar="تعكس، تصوّر" data-x="يعني يوريك الحقيقة زي ما هي، مثل المراية بالضبط">reflects</span> the <span class="g2" data-ar="النتائج الحقيقية">real results</span> of the business.</li>
       </ul>
       <table>
-        <tr><th>Body</th><th>Its role</th></tr>
+        <tr><th>Body</th><th>Its <span class="g2" data-ar="دور">role</span></th></tr>
         <tr><td><b>FASB</b><br><span style="font-size:.82rem;color:var(--muted)">Financial Accounting Standards Board</span></td>
-            <td><b>Sets</b> GAAP. It receives that
+            <td><b><span class="g2" data-ar="تضع، تحدّد">Sets</span></b> GAAP. It <span class="g2" data-ar="تتلقى">receives</span> that
             <span class="g" data-ar="السلطة، الصلاحية" data-x="يعني لك الحق تقرر وتسوي القوانين، وأحد فوقك عطاك هالحق">authority</span> <b>from the SEC</b>.</td></tr>
         <tr><td><b>SEC</b><br><span style="font-size:.82rem;color:var(--muted)">Securities and Exchange Commission</span></td>
-            <td>A <b>U.S. government agency</b>. It
+            <td>A <b>U.S. <span class="g2" data-ar="جهة حكومية">government agency</span></b>. It
             <span class="g" data-ar="تشرف على، تراقب" data-x="تراقب من فوق وتتأكد إنه الشركات ماشية على القوانين صح">oversees</span> the
             <span class="g" data-ar="السليم، الصحيح" data-x="يعني الصح والمضبوط، زي ما المفروض يكون بالضبط">proper</span> use of GAAP by companies that
-            sell stock and debt to the public.</td></tr>
-        <tr><td><b>Audit</b></td>
-            <td>An <span class="g" data-ar="فحص، تدقيق" data-x="فحص دقيق، يعني يقلّبون الأرقام كلها ويشيّكون عليها وحدة وحدة">examination</span> that checks whether the
-            financial statements were <b>prepared using GAAP</b>.</td></tr>
+            sell <span class="g2" data-ar="أسهم">stock</span> and <span class="g2" data-ar="دين، سندات">debt</span> to <span class="g2" data-ar="الجمهور، العامة">the public</span>.</td></tr>
+        <tr><td><b><span class="g2" data-ar="التدقيق، مراجعة الحسابات">Audit</span></b></td>
+            <td>An <span class="g" data-ar="فحص، تدقيق" data-x="فحص دقيق، يعني يقلّبون الأرقام كلها ويشيّكون عليها وحدة وحدة">examination</span> that <span class="g2" data-ar="يفحص، يتأكد">checks</span> whether the
+            <span class="g2" data-ar="القوائم المالية">financial statements</span> were <b><span class="g2" data-ar="أُعدّت">prepared</span> using GAAP</b>.</td></tr>
       </table>
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION — INTERNATIONAL STANDARDS</span>
-      <p>The global economy needs <span class="g" data-ar="قابلية المقارنة" data-x="يعني تقدر تقارن شركة بشركة ثانية عشان كلهم على نفس النظام">comparability</span>
-      between financial reports. So the <b>IASB</b> (International Accounting Standards Board)
+      <p>The <span class="g2" data-ar="الاقتصاد العالمي">global economy</span> needs <span class="g" data-ar="قابلية المقارنة" data-x="يعني تقدر تقارن شركة بشركة ثانية عشان كلهم على نفس النظام">comparability</span>
+      between <span class="g2" data-ar="التقارير المالية">financial reports</span>. So the <b>IASB</b> (International Accounting Standards Board)
       <span class="g" data-ar="يُصدر" data-x="يعني يطلّع القوانين وينشرها رسمي عشان الكل يمشي عليها">issues</span> <b>IFRS</b> (International Financial Reporting
       Standards).</p>
-      <p>IFRS is <span class="g" data-ar="مشابه، قريب من" data-x="يعني يشبهه وقريب منه، بس مو نفس الشي بالضبط">similar</span> to U.S. GAAP, but sometimes
-      different. The FASB and the IASB work together to reduce the differences.</p>
+      <p>IFRS is <span class="g" data-ar="مشابه، قريب من" data-x="يعني يشبهه وقريب منه، بس مو نفس الشي بالضبط">similar</span> to U.S. GAAP, but <span class="g2" data-ar="أحياناً">sometimes</span>
+      <span class="g2" data-ar="مختلف">different</span>. The FASB and the IASB work together to <span class="g2" data-ar="تقليل">reduce</span> the <span class="g2" data-ar="الاختلافات">differences</span>.</p>
     </div>
 
     <div class="ksa">
-      <b>Useful for you in Saudi Arabia:</b> Saudi Arabia applies <b>IFRS</b> through SOCPA
-      (the Saudi Organization for Chartered and Professional Accountants), not U.S. GAAP.
-      But <b>your textbook is American</b>, and your exam comes from the textbook. So study GAAP
-      exactly as the book teaches it, and keep in mind that real Saudi practice runs on IFRS.
+      <b>Useful for you in Saudi Arabia:</b> Saudi Arabia <span class="g2" data-ar="تطبّق">applies</span> <b>IFRS</b> <span class="g2" data-ar="من خلال، عبر">through</span> SOCPA
+      (the Saudi Organization for <span class="g2" data-ar="المعتمدين">Chartered</span> and Professional Accountants), not U.S. GAAP.
+      But <b>your <span class="g2" data-ar="الكتاب المقرر">textbook</span> is American</b>, and your exam comes from the textbook. So study GAAP
+      <span class="g2" data-ar="بالضبط">exactly</span> as the book teaches it, and <span class="g2" data-ar="تذكّر، خلّ في بالك">keep in mind</span> that real Saudi <span class="g2" data-ar="الممارسة العملية">practice</span> <span class="g2" data-ar="تعمل على، تعتمد على">runs on</span> IFRS.
     </div>
 
     <div class="blk exam"><span class="lbl">EXAM BOX</span>
@@ -340,12 +346,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
-        <li><b>FASB sets GAAP; the SEC gives the authority.</b> Do not reverse them — this is the
-            most common question here.</li>
+        <li><b>FASB sets GAAP; the SEC gives the authority.</b> Do not <span class="g2" data-ar="تعكس، تقلب">reverse</span> them — this is the
+            most <span class="g2" data-ar="شائع">common</span> question here.</li>
         <li>The SEC <b>is</b> a government agency. The FASB is <b>not</b> a government agency.</li>
-        <li>IFRS is issued by the <b>IASB</b>, not by the FASB.</li>
+        <li>IFRS is <span class="g2" data-ar="تُصدرها">issued</span> by the <b>IASB</b>, not by the FASB.</li>
         <li><b>Relevance</b> = it changes the <b>decision</b>. <b>Faithful representation</b> = it
-            shows the <b>reality</b> accurately. The difference between them is a repeat question.</li>
+            shows the <b><span class="g2" data-ar="الواقع">reality</span></b> <span class="g2" data-ar="بدقة">accurately</span>. The <span class="g2" data-ar="الفرق">difference</span> between them is a <span class="g2" data-ar="متكرر">repeat</span> question.</li>
       </ul>
     </div>
   </div>
@@ -359,19 +365,19 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   </div>
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>The FASB conceptual framework
+      <p>The FASB <span class="g2" data-ar="الإطار المفاهيمي">conceptual framework</span>
       <span class="g" data-ar="يتكوّن من، يتألف من" data-x="يعني متكوّن من كذا جزء، لو جمعتهم طلع لك الشي كامل">consists of</span> four parts:</p>
       <table>
         <tr><th>Part</th><th>What it does</th></tr>
-        <tr><td><b>Objectives</b></td>
-            <td>To provide useful information to investors, creditors, and others</td></tr>
-        <tr><td><b>Qualitative characteristics</b></td>
-            <td>To require information that has relevance and faithful representation</td></tr>
-        <tr><td><b>Elements</b></td>
-            <td>To define the items that appear in the financial statements</td></tr>
-        <tr><td><b>Recognition and measurement</b></td>
-            <td>To set the rules for <b>when</b> an item is recorded and <b>how</b> it is
-            measured</td></tr>
+        <tr><td><b><span class="g2" data-ar="الأهداف">Objectives</span></b></td>
+            <td>To <span class="g2" data-ar="توفير، تقديم">provide</span> <span class="g2" data-ar="مفيدة">useful</span> information to <span class="g2" data-ar="المستثمرين">investors</span>, <span class="g2" data-ar="الدائنين">creditors</span>, and others</td></tr>
+        <tr><td><b><span class="g2" data-ar="الخصائص النوعية">Qualitative characteristics</span></b></td>
+            <td>To <span class="g2" data-ar="تشترط، تتطلب">require</span> information that has <span class="g2" data-ar="الملاءمة">relevance</span> and <span class="g2" data-ar="التمثيل الصادق">faithful representation</span></td></tr>
+        <tr><td><b><span class="g2" data-ar="العناصر">Elements</span></b></td>
+            <td>To <span class="g2" data-ar="تعريف، تحديد">define</span> the <span class="g2" data-ar="البنود">items</span> that <span class="g2" data-ar="تظهر">appear</span> in the <span class="g2" data-ar="القوائم المالية">financial statements</span></td></tr>
+        <tr><td><b><span class="g2" data-ar="الاعتراف">Recognition</span> and <span class="g2" data-ar="القياس">measurement</span></b></td>
+            <td>To set the rules for <b>when</b> an item is <span class="g2" data-ar="يُسجَّل">recorded</span> and <b>how</b> it is
+            <span class="g2" data-ar="يُقاس">measured</span></td></tr>
       </table>
     </div>
 
@@ -390,19 +396,19 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <text x="230" y="204" font-size="11" font-weight="400">Recognition and measurement</text>
         </g>
       </svg>
-      <p class="excap">The order from top to bottom: <b>Objectives</b>, then
+      <p class="excap">The <span class="g2" data-ar="الترتيب">order</span> from <span class="g2" data-ar="من الأعلى إلى الأسفل">top to bottom</span>: <b>Objectives</b>, then
       <b>Qualitative characteristics</b>, then <b>Elements</b> and
       <b>Recognition and measurement</b>.</p>
     </div>
   </div>
 </div>
 
-<h2 style="margin:40px 0 6px">Test yourself</h2>
+<h2 style="margin:40px 0 6px"><span class="g2" data-ar="اختبر نفسك">Test yourself</span></h2>
 <p class="sub" style="margin-bottom:16px">Same English as the exam. Answer first, then open the
-solution.</p>
+<span class="g2" data-ar="الحل">solution</span>.</p>
 
 <div class="q">
-  <div class="stem">1. Which body is given the task of setting GAAP, and from whom does it receive that authority?</div>
+  <div class="stem">1. Which <span class="g2" data-ar="هيئة، جهة">body</span> is given the <span class="g2" data-ar="مهمة">task</span> of setting GAAP, and from whom does it <span class="g2" data-ar="تتلقى">receive</span> that <span class="g2" data-ar="الصلاحية، السلطة">authority</span>?</div>
   <ol type="A">
     <li>The SEC, with authority from the FASB</li>
     <li>The FASB, with authority from the SEC</li>
@@ -411,12 +417,12 @@ solution.</p>
   </ol>
   <details><summary>Answer</summary>
   <p><b>B</b>. The FASB is the body that <b>sets</b> GAAP. Its authority comes from the SEC, the
-  U.S. government agency. Choice <b>A</b> reverses the two, and that is the trap the question is
-  built on.</p></details>
+  U.S. <span class="g2" data-ar="جهة حكومية">government agency</span>. Choice <b>A</b> <span class="g2" data-ar="يعكس، يقلب">reverses</span> the two, and that is the <span class="g2" data-ar="الفخ">trap</span> the question is
+  <span class="g2" data-ar="مبني عليه">built on</span>.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">2. An employee with large personal debts notices that no one reviews the petty cash records, and tells himself the company "owes him" for unpaid overtime. Which elements of the fraud triangle are present?</div>
+  <div class="stem">2. An <span class="g2" data-ar="موظف">employee</span> with large <span class="g2" data-ar="ديون شخصية">personal debts</span> <span class="g2" data-ar="يلاحظ">notices</span> that no one <span class="g2" data-ar="يراجع">reviews</span> the <span class="g2" data-ar="المصروفات النثرية">petty cash</span> <span class="g2" data-ar="السجلات">records</span>, and tells himself the company "<span class="g2" data-ar="مدينة له">owes</span> him" for <span class="g2" data-ar="عمل إضافي غير مدفوع">unpaid overtime</span>. Which <span class="g2" data-ar="عناصر">elements</span> of the fraud triangle are <span class="g2" data-ar="موجودة">present</span>?</div>
   <ol type="A">
     <li>Opportunity only</li>
     <li>Pressure and rationalization only</li>
@@ -424,32 +430,32 @@ solution.</p>
     <li>Pressure only</li>
   </ol>
   <details><summary>Answer</summary>
-  <p><b>C</b>. The debts are <b>pressure</b>. Nobody reviews the records, so there is
-  <b>opportunity</b>. "The company owes me" is <b>rationalization</b>. All three sides are
+  <p><b>C</b>. The debts are <b><span class="g2" data-ar="الضغط">pressure</span></b>. Nobody reviews the records, so there is
+  <b><span class="g2" data-ar="الفرصة">opportunity</span></b>. "The company owes me" is <b><span class="g2" data-ar="التبرير">rationalization</span></b>. All three sides are
   present.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">3. Information that accurately reflects the results of a business is said to have:</div>
+  <div class="stem">3. Information that <span class="g2" data-ar="بدقة">accurately</span> <span class="g2" data-ar="تعكس">reflects</span> the <span class="g2" data-ar="نتائج">results</span> of a business is said to have:</div>
   <ol type="A">
-    <li>Relevance</li>
-    <li>Faithful representation</li>
-    <li>Comparability</li>
-    <li>Materiality</li>
+    <li><span class="g2" data-ar="الملاءمة">Relevance</span></li>
+    <li><span class="g2" data-ar="التمثيل الصادق">Faithful representation</span></li>
+    <li><span class="g2" data-ar="قابلية المقارنة">Comparability</span></li>
+    <li><span class="g2" data-ar="الأهمية النسبية">Materiality</span></li>
   </ol>
   <details><summary>Answer</summary>
-  <p><b>B</b>. Faithful representation means the information shows reality accurately. Relevance is
-  different: it means the information can change the user's decision. That difference is the whole
+  <p><b>B</b>. Faithful representation means the information shows <span class="g2" data-ar="الواقع">reality</span> accurately. Relevance is
+  different: it means the information can change the user's <span class="g2" data-ar="قرار">decision</span>. That <span class="g2" data-ar="الفرق">difference</span> is the whole
   question.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">4. Which statement about IFRS is correct?</div>
+  <div class="stem">4. Which <span class="g2" data-ar="عبارة">statement</span> about IFRS is <span class="g2" data-ar="صحيحة">correct</span>?</div>
   <ol type="A">
-    <li>IFRS is issued by the FASB and is identical to U.S. GAAP</li>
+    <li>IFRS is <span class="g2" data-ar="تُصدرها">issued</span> by the FASB and is <span class="g2" data-ar="مطابق تماماً">identical</span> to U.S. GAAP</li>
     <li>IFRS is issued by the IASB and is identical to U.S. GAAP</li>
-    <li>IFRS is issued by the IASB and is similar to, but sometimes different from, U.S. GAAP</li>
-    <li>IFRS is issued by the SEC and replaces U.S. GAAP</li>
+    <li>IFRS is issued by the IASB and is <span class="g2" data-ar="مشابه">similar</span> to, but <span class="g2" data-ar="أحياناً">sometimes</span> <span class="g2" data-ar="مختلف">different</span> from, U.S. GAAP</li>
+    <li>IFRS is issued by the SEC and <span class="g2" data-ar="يحلّ محل">replaces</span> U.S. GAAP</li>
   </ol>
   <details><summary>Answer</summary>
   <p><b>C</b>. The IASB issues IFRS, and IFRS is similar to U.S. GAAP but sometimes different. The
@@ -457,17 +463,17 @@ solution.</p>
 </div>
 
 <div class="q">
-  <div class="stem">5. Locks on a warehouse door and independent review of records are examples of:</div>
+  <div class="stem">5. <span class="g2" data-ar="أقفال">Locks</span> on a <span class="g2" data-ar="مستودع">warehouse</span> door and <span class="g2" data-ar="مستقلة">independent</span> <span class="g2" data-ar="مراجعة">review</span> of records are <span class="g2" data-ar="أمثلة">examples</span> of:</div>
   <ol type="A">
-    <li>An audit</li>
-    <li>Internal controls</li>
+    <li>An <span class="g2" data-ar="تدقيق، مراجعة حسابات">audit</span></li>
+    <li><span class="g2" data-ar="الرقابة الداخلية">Internal controls</span></li>
     <li>GAAP</li>
-    <li>The conceptual framework</li>
+    <li>The <span class="g2" data-ar="الإطار المفاهيمي">conceptual framework</span></li>
   </ol>
   <details><summary>Answer</summary>
-  <p><b>B</b>. These are internal controls: procedures inside the company that protect assets. An
-  audit is something else. It is an outside examination that checks whether the statements were
-  prepared using GAAP.</p></details>
+  <p><b>B</b>. These are internal controls: <span class="g2" data-ar="إجراءات">procedures</span> inside the company that <span class="g2" data-ar="تحمي">protect</span> <span class="g2" data-ar="الأصول">assets</span>. An
+  audit is something else. It is an <span class="g2" data-ar="خارجي">outside</span> <span class="g2" data-ar="فحص">examination</span> that checks whether the statements were
+  <span class="g2" data-ar="أُعدّت">prepared</span> using GAAP.</p></details>
 </div>
 
 <h2 style="margin:40px 0 10px">Key terms from this section</h2>
@@ -539,14 +545,14 @@ session with the book.
 </div>
 </div>
 <script>
-document.querySelectorAll('span.g').forEach(function(s){
+document.querySelectorAll('span.g, span.g2').forEach(function(s){
   var t=document.createElement('span'); t.className='ar';
   var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
   if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
   s.appendChild(t);
   s.addEventListener('click',function(e){
     e.stopPropagation();
-    document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
+    document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
     s.classList.toggle('on');
     if(s.classList.contains('on')){
       var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
@@ -557,7 +563,7 @@ document.querySelectorAll('span.g').forEach(function(s){
   });
 });
 document.addEventListener('click',function(){
-  document.querySelectorAll('span.g.on').forEach(function(o){o.classList.remove('on');});
+  document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
 });
 </script>
 </body>

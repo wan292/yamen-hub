@@ -19,8 +19,9 @@
   --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
 }}
 *{box-sizing:border-box}
+html{font-size:18px}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:19px;line-height:1.85}
 .wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
 bdi{font-weight:600;unicode-bidi:isolate}
 code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
@@ -102,6 +103,13 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 .g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
 .g:hover .ar,.g.on .ar{display:block}
 .vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
+.g2{border-bottom:1.5px dotted var(--muted);cursor:pointer;position:relative}
+.g2:hover,.g2.on{background:var(--accent-soft)}
+.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
+  direction:rtl;text-align:right;font-size:.92rem;font-weight:600;white-space:nowrap;
+  padding:6px 12px;border-radius:8px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.g2:hover .ar,.g2.on .ar{display:block}
 .vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
 .vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
 .vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
@@ -129,29 +137,27 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <h1>Chapter 1 &mdash; Business Transactions and the Accounting Equation</h1>
   <p class="sub"><code>ACCT 203</code> &middot; Chapter 1 &middot; Section 3 of 4:
   Business Transactions and Accounting<br>
-  Objective <code>A1</code>: Define and interpret the accounting equation and each of its components.</p>
+  <span class="g2" data-ar="الهدف">Objective</span> <code>A1</code>: <span class="g2" data-ar="عرّف">Define</span> and <span class="g2" data-ar="فسّر">interpret</span> the accounting equation and each of its <span class="g2" data-ar="مكوّنات">components</span>.</p>
 </header>
 
 <div class="big">
-  <h2>This is the most important lesson in the course</h2>
-  <p>Everything after it — journal entries, the ledger, the trial balance, the financial statements —
-  is built on one equation. If you understand it now, the rest of the chapter is easy.</p>
-  <p>You already met these ideas in Arabic. This page gives you the same ideas in English,
-  because your textbook and your exam are in English.</p>
-  <div class="tiphint"><b>How to use this page:</b> some words have a dotted line under them.
-  Tap or hover any dotted word to see the Arabic meaning. The accounting terms are not glossed —
-  those are the words you must learn in English.</div>
+  <h2>This is the most important <span class="g2" data-ar="درس">lesson</span> in the <span class="g2" data-ar="المقرر">course</span></h2>
+  <p>Everything after it — <span class="g2" data-ar="قيود اليومية">journal entries</span>, the <span class="g2" data-ar="دفتر الأستاذ">ledger</span>, the <span class="g2" data-ar="ميزان المراجعة">trial balance</span>, the <span class="g2" data-ar="القوائم المالية">financial statements</span> —
+  is <span class="g2" data-ar="مبني على">built on</span> one <span class="g2" data-ar="معادلة">equation</span>. If you <span class="g2" data-ar="تفهم">understand</span> it now, the rest of the <span class="g2" data-ar="الفصل">chapter</span> is easy.</p>
+  <p>You <span class="g2" data-ar="من قبل">already</span> met these <span class="g2" data-ar="أفكار">ideas</span> in Arabic. This page gives you the same ideas in English,
+  because your <span class="g2" data-ar="الكتاب المقرر">textbook</span> and your <span class="g2" data-ar="الاختبار">exam</span> are in English.</p>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--accent);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
 </div>
 
 <!-- The three components -->
 <div class="concept">
   <div class="chead">
     <div class="term">Assets · Liabilities · Equity</div>
-    <div class="say">The three components of the equation</div>
+    <div class="say">The three <span class="g2" data-ar="مكوّنات">components</span> of the equation</div>
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
-      Accounting shows only two things: <b>what the company owns</b>, and
+      <span class="g2" data-ar="المحاسبة">Accounting</span> <span class="g2" data-ar="تُظهر / تبيّن">shows</span> only two things: <b>what the company <span class="g2" data-ar="تملك">owns</span></b>, and
       <b>who has a <span class="g" data-ar="مُطالبة / حق" data-x="يعني حق أحد في أصول الشركة، سواء صاحبها أو اللي داينها">claim</span> on it</b>. That is all.</div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
@@ -159,45 +165,45 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <span class="g" data-ar="الموارد" data-x="يعني كل الأشياء اللي عند الشركة وتنفعها، زي الكاش والمعدات">resources</span> the company owns.
       The other side is the claims on those resources.</p>
 
-      <p>Claims are of two kinds. <b>Non-owner</b> claims are liabilities.
-      <b>Owner</b> claims are equity. Together, the two are the <b>source of the money</b>
-      that bought the assets.</p>
+      <p>Claims are of two kinds. <b><span class="g2" data-ar="غير المالك">Non-owner</span></b> claims are <span class="g2" data-ar="الالتزامات / الخصوم">liabilities</span>.
+      <b><span class="g2" data-ar="المالك">Owner</span></b> claims are <span class="g2" data-ar="حقوق الملكية">equity</span>. Together, the two are the <b><span class="g2" data-ar="مصدر">source</span> of the money</b>
+      that bought the <span class="g2" data-ar="الأصول">assets</span>.</p>
 
       <table>
-        <tr><th>Component</th><th>Definition</th><th>Examples from the book</th></tr>
+        <tr><th><span class="g2" data-ar="المكوّن">Component</span></th><th><span class="g2" data-ar="التعريف">Definition</span></th><th><span class="g2" data-ar="أمثلة">Examples</span> from the book</th></tr>
         <tr>
           <td><b>Assets</b></td>
-          <td>Resources a company <b>owns or controls</b>. They are expected to
-              <span class="g" data-ar="يُحقّق / يُنتج" data-x="يعني يطلع لك فايدة أو نتيجة بعدين، مو الحين">yield</span> <b>future benefits</b>.</td>
-          <td>cash &middot; supplies &middot; equipment &middot; land &middot; accounts receivable</td>
+          <td>Resources a company <b>owns or <span class="g2" data-ar="تسيطر عليها">controls</span></b>. They are <span class="g2" data-ar="من المتوقَّع">expected</span> to
+              <span class="g" data-ar="يُحقّق / يُنتج" data-x="يعني يطلع لك فايدة أو نتيجة بعدين، مو الحين">yield</span> <b><span class="g2" data-ar="مستقبلية">future</span> <span class="g2" data-ar="منافع">benefits</span></b>.</td>
+          <td>cash &middot; <span class="g2" data-ar="مستلزمات">supplies</span> &middot; <span class="g2" data-ar="معدّات">equipment</span> &middot; <span class="g2" data-ar="أرض">land</span> &middot; <span class="g2" data-ar="ذمم مدينة">accounts receivable</span></td>
         </tr>
         <tr>
           <td><b>Liabilities</b></td>
-          <td><b>Creditors'</b> claims on assets. They are company
-              <span class="g" data-ar="التزامات / تعهّدات" data-x="شي لازم الشركة تسويه أو تدفعه للناس، ما لها خيار">obligations</span> to provide assets,
-              products, or services to others.</td>
-          <td>wages payable &middot; accounts payable &middot; notes (loans) payable &middot;
-              taxes payable</td>
+          <td><b><span class="g2" data-ar="الدائنين">Creditors'</span></b> claims on assets. They are company
+              <span class="g" data-ar="التزامات / تعهّدات" data-x="شي لازم الشركة تسويه أو تدفعه للناس، ما لها خيار">obligations</span> to <span class="g2" data-ar="توفّر / تقدّم">provide</span> assets,
+              <span class="g2" data-ar="منتجات">products</span>, or <span class="g2" data-ar="خدمات">services</span> to others.</td>
+          <td><span class="g2" data-ar="أجور مستحقة الدفع">wages payable</span> &middot; <span class="g2" data-ar="ذمم دائنة">accounts payable</span> &middot; <span class="g2" data-ar="أوراق دفع (قروض)">notes (loans) payable</span> &middot;
+              <span class="g2" data-ar="ضرائب مستحقة">taxes payable</span></td>
         </tr>
         <tr>
           <td><b>Equity</b></td>
-          <td>The <b>owner's</b> claim on assets. It equals <b>assets minus liabilities</b>.</td>
-          <td>also called <i>net assets</i> or
+          <td>The <b>owner's</b> claim on assets. It <span class="g2" data-ar="يساوي">equals</span> <b>assets <span class="g2" data-ar="ناقص">minus</span> liabilities</b>.</td>
+          <td><span class="g2" data-ar="تُسمّى أيضًا">also called</span> <i><span class="g2" data-ar="صافي الأصول">net assets</span></i> or
               <i><span class="g" data-ar="متبقٍّ / ما تبقّى" data-x="اللي يبقى لصاحب الشركة بعد ما تشيل الديون كلها">residual</span> equity</i></td>
         </tr>
       </table>
 
       <p><b>Two words you must know:</b></p>
       <ul>
-        <li><b>Receivable</b> = an asset that promises a future
+        <li><b><span class="g2" data-ar="مستحق القبض">Receivable</span></b> = an asset that <span class="g2" data-ar="يَعِد بـ">promises</span> a future
             <span class="g" data-ar="تدفّق داخل" data-x="يعني فلوس داخلة للشركة، جاية لها مو طالعة منها">inflow</span>. A company that gives a service
-            or a product <i>on credit</i> gets an <i>account receivable</i> from the customer.</li>
-        <li><b>Payable</b> = a liability that promises a future
+            or a product <i><span class="g2" data-ar="بالأجل / على الحساب">on credit</span></i> gets an <i>account receivable</i> from the <span class="g2" data-ar="العميل">customer</span>.</li>
+        <li><b><span class="g2" data-ar="مستحق الدفع">Payable</span></b> = a <span class="g2" data-ar="التزام">liability</span> that promises a future
             <span class="g" data-ar="تدفّق خارج" data-x="يعني فلوس طالعة من الشركة، تدفعها لغيرها">outflow</span>.</li>
       </ul>
-      <p><b>Note from the book:</b> the phrases <i>on credit</i> and <i>on account</i> both mean
-      that the cash is received or paid at a
-      <span class="g" data-ar="لاحق / في وقت لاحق" data-x="يعني بعدين، مو الحين على طول، في يوم ثاني">later</span> date.</p>
+      <p><b>Note from the book:</b> the <span class="g2" data-ar="عبارات">phrases</span> <i>on credit</i> and <i><span class="g2" data-ar="على الحساب">on account</span></i> both <span class="g2" data-ar="تعني">mean</span>
+      that the cash is <span class="g2" data-ar="يُقبَض / يُستلَم">received</span> or <span class="g2" data-ar="يُدفَع">paid</span> at a
+      <span class="g" data-ar="لاحق / في وقت لاحق" data-x="يعني بعدين، مو الحين على طول، في يوم ثاني">later</span> <span class="g2" data-ar="تاريخ">date</span>.</p>
     </div>
 
     <div class="blk exam"><span class="lbl">EXAM BOX</span>
@@ -211,10 +217,10 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
         <li>Assets do not mean "owns" only. The book says <b>owns or controls</b>.
-            The word <i>controls</i> shows up in the answer choices.</li>
-        <li>A <i>receivable</i> is an asset (money coming in). A <i>payable</i> is a liability
-            (money going out). Mixing the two is the most common mistake in this section.</li>
-        <li>Equity = assets <b>minus</b> liabilities. Not plus.</li>
+            The word <i>controls</i> <span class="g2" data-ar="يظهر">shows up</span> in the <span class="g2" data-ar="خيارات الإجابة">answer choices</span>.</li>
+        <li>A <i>receivable</i> is an asset (money <span class="g2" data-ar="داخلة">coming in</span>). A <i>payable</i> is a liability
+            (money <span class="g2" data-ar="خارجة">going out</span>). <span class="g2" data-ar="الخلط بين">Mixing</span> the two is the most <span class="g2" data-ar="شائع">common</span> <span class="g2" data-ar="خطأ">mistake</span> in this <span class="g2" data-ar="القسم">section</span>.</li>
+        <li>Equity = assets <b>minus</b> liabilities. Not <span class="g2" data-ar="زائد">plus</span>.</li>
       </ul>
     </div>
   </div>
@@ -224,7 +230,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">The Accounting Equation</div>
-    <div class="say">Memorize it now — do not continue before you know it by heart</div>
+    <div class="say"><span class="g2" data-ar="احفظها">Memorize</span> it now — do not <span class="g2" data-ar="تُكمل">continue</span> before you know it <span class="g2" data-ar="عن ظهر قلب">by heart</span></div>
   </div>
   <div class="cbody">
     <div class="eq">
@@ -232,17 +238,17 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>This relation <span class="g" data-ar="ينطبق على / يسري على" data-x="القاعدة تمشي على كل الحالات، ما فيه حالة تطلع منها">applies</span> to
-      <b>all transactions and events</b>. It applies to <b>all companies and organizations</b>.
-      And it applies at <b>all points in time</b>. There is no
+      <p>This <span class="g2" data-ar="العلاقة">relation</span> <span class="g" data-ar="ينطبق على / يسري على" data-x="القاعدة تمشي على كل الحالات، ما فيه حالة تطلع منها">applies</span> to
+      <b>all <span class="g2" data-ar="المعاملات">transactions</span> and <span class="g2" data-ar="الأحداث">events</span></b>. It applies to <b>all companies and <span class="g2" data-ar="المنظمات">organizations</span></b>.
+      And it applies at <b>all <span class="g2" data-ar="النقاط الزمنية">points in time</span></b>. There is no
       <span class="g" data-ar="استثناء" data-x="حالة تطلع من القاعدة وما تمشي عليها، هنا ما فيه ولا وحدة">exception</span>.</p>
       <p>You can also <span class="g" data-ar="يُعاد ترتيبها" data-x="تغيّر ترتيب أطراف المعادلة، تنقل شي من جهة لجهة والمعنى نفسه">rearrange</span> it.
-      Example from the book: <span class="mono">Assets − Liabilities = Equity</span></p>
+      <span class="g2" data-ar="مثال">Example</span> from the book: <span class="mono">Assets − Liabilities = Equity</span></p>
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION — THE EXPANDED EQUATION</span>
-      <p>We can break equity into <b>four parts</b>. This gives us
-      <b>the expanded accounting equation</b>:</p>
+      <p>We can <span class="g2" data-ar="نقسّم">break</span> equity into <b>four <span class="g2" data-ar="أجزاء">parts</span></b>. This gives us
+      <b>the <span class="g2" data-ar="الموسّعة">expanded</span> accounting equation</b>:</p>
 
       <div class="eq">
         <div class="l1">Assets = Liabilities + Contributed Capital + Retained Earnings</div>
@@ -253,39 +259,39 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <span class="g-ex">Expenses</span></div>
       </div>
 
-      <p><i>Contributed capital</i> is the money the owners
+      <p><i><span class="g2" data-ar="رأس المال المساهَم به">Contributed capital</span></i> is the money the <span class="g2" data-ar="الملّاك">owners</span>
       <span class="g" data-ar="قدّموا / ساهموا به" data-x="يعني حطوا فلوس من جيبهم في الشركة عشان تشتغل">contributed</span> to the company.
-      <i>Retained earnings</i> is the income the company
-      <span class="g" data-ar="احتفظت به / أبقته" data-x="يعني خلّت الربح عندها وما وزّعته على الملاك">retained</span> instead of paying it out.</p>
+      <i><span class="g2" data-ar="الأرباح المحتجزة">Retained earnings</span></i> is the <span class="g2" data-ar="الدخل">income</span> the company
+      <span class="g" data-ar="احتفظت به / أبقته" data-x="يعني خلّت الربح عندها وما وزّعته على الملاك">retained</span> <span class="g2" data-ar="بدلًا من">instead of</span> <span class="g2" data-ar="توزيعه على الملاك">paying it out</span>.</p>
 
-      <p>Equity <b>increases</b> from owner investments, also called stock
-      <span class="g" data-ar="إصدار" data-x="يعني الشركة تطلّع أسهم جديدة وتبيعها للملاك مقابل فلوس">issuances</span>, and from revenues.
-      Equity <b>decreases</b> from dividends and from expenses.</p>
+      <p><span class="g2" data-ar="حقوق الملكية">Equity</span> <b><span class="g2" data-ar="تزيد">increases</span></b> from owner <span class="g2" data-ar="استثمارات">investments</span>, also called <span class="g2" data-ar="الأسهم">stock</span>
+      <span class="g" data-ar="إصدار" data-x="يعني الشركة تطلّع أسهم جديدة وتبيعها للملاك مقابل فلوس">issuances</span>, and from <span class="g2" data-ar="الإيرادات">revenues</span>.
+      Equity <b><span class="g2" data-ar="تنقص">decreases</span></b> from <span class="g2" data-ar="توزيعات الأرباح">dividends</span> and from <span class="g2" data-ar="المصروفات">expenses</span>.</p>
 
       <table>
-        <tr><th>Part</th><th>Sign</th><th>Definition</th></tr>
-        <tr><td><b class="g-cs">Common Stock</b><br>
+        <tr><th><span class="g2" data-ar="الجزء">Part</span></th><th><span class="g2" data-ar="الإشارة">Sign</span></th><th><span class="g2" data-ar="التعريف">Definition</span></th></tr>
+        <tr><td><b class="g-cs"><span class="g2" data-ar="الأسهم العادية">Common Stock</span></b><br>
                 <span style="font-size:.8rem;color:var(--muted)">part of contributed capital</span></td>
             <td class="pos">+</td>
-            <td>Inflows of cash and net assets from <b>shareholders</b> in
+            <td><span class="g2" data-ar="تدفقات داخلة">Inflows</span> of cash and <span class="g2" data-ar="صافي الأصول">net assets</span> from <b><span class="g2" data-ar="المساهمين">shareholders</span></b> in
                 <span class="g" data-ar="مقابل / تبادل" data-x="تعطي شي وتاخذ شي بداله، فلوس مقابل أسهم">exchange</span> for stock.
                 Stock <span class="g" data-ar="يعكس / يُمثّل" data-x="يعني يبيّن الشي ويدل عليه، زي المراية">reflects</span>
-                <b>ownership</b> in the company.</td></tr>
+                <b><span class="g2" data-ar="الملكية">ownership</span></b> in the company.</td></tr>
         <tr><td><b class="g-dv">Dividends</b><br>
                 <span style="font-size:.8rem;color:var(--muted)">from retained earnings</span></td>
             <td class="neg">−</td>
-            <td><b>Outflows</b> of cash and other assets <b>to shareholders</b>.
+            <td><b><span class="g2" data-ar="تدفقات خارجة">Outflows</span></b> of cash and other assets <b>to shareholders</b>.
                 They decrease equity.</td></tr>
         <tr><td><b class="g-rv">Revenues</b></td>
             <td class="pos">+</td>
-            <td>They increase equity (through <i>net income</i>) from
-                <b>selling products and services to customers</b>.
-                Examples: product sales, consulting services, facility rentals, commissions.</td></tr>
+            <td>They increase equity (<span class="g2" data-ar="من خلال">through</span> <i><span class="g2" data-ar="صافي الدخل">net income</span></i>) from
+                <b>selling <span class="g2" data-ar="منتجات">products</span> and <span class="g2" data-ar="خدمات">services</span> to <span class="g2" data-ar="العملاء">customers</span></b>.
+                Examples: product <span class="g2" data-ar="مبيعات">sales</span>, <span class="g2" data-ar="استشارات">consulting</span> services, <span class="g2" data-ar="تأجير المرافق">facility rentals</span>, <span class="g2" data-ar="عمولات">commissions</span>.</td></tr>
         <tr><td><b class="g-ex">Expenses</b></td>
             <td class="neg">−</td>
-            <td>They decrease equity (through <i>net income</i>) from the <b>costs of providing</b>
-                products and services. Examples: employee time, supplies used, advertising,
-                utilities, insurance.</td></tr>
+            <td>They decrease equity (through <i>net income</i>) from the <b><span class="g2" data-ar="تكاليف">costs</span> of <span class="g2" data-ar="تقديم">providing</span></b>
+                products and services. Examples: <span class="g2" data-ar="الموظف">employee</span> time, <span class="g2" data-ar="مستلزمات">supplies</span> used, <span class="g2" data-ar="إعلانات">advertising</span>,
+                <span class="g2" data-ar="المرافق (كهرباء وماء)">utilities</span>, <span class="g2" data-ar="تأمين">insurance</span>.</td></tr>
       </table>
     </div>
 
@@ -301,16 +307,16 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
-        <li><b>The signs are the question.</b> Common Stock and Revenues carry a plus.
-            Dividends and Expenses carry a minus. Any choice that
-            <span class="g" data-ar="يقلب / يعكس" data-x="يعني يقلب الشي بالعكس، الزايد يصير ناقص">reverses</span> one sign is wrong.</li>
-        <li><b>Dividends are not an expense.</b> This is the biggest trap in the chapter.
+        <li><b>The <span class="g2" data-ar="الإشارات">signs</span> are the question.</b> Common Stock and Revenues <span class="g2" data-ar="تحمل">carry</span> a <span class="g2" data-ar="زائد">plus</span>.
+            Dividends and Expenses carry a <span class="g2" data-ar="ناقص">minus</span>. Any <span class="g2" data-ar="خيار">choice</span> that
+            <span class="g" data-ar="يقلب / يعكس" data-x="يعني يقلب الشي بالعكس، الزايد يصير ناقص">reverses</span> one sign is <span class="g2" data-ar="خاطئ">wrong</span>.</li>
+        <li><b>Dividends are not an expense.</b> This is the biggest <span class="g2" data-ar="فخ">trap</span> in the <span class="g2" data-ar="الفصل">chapter</span>.
             A dividend is a <span class="g" data-ar="توزيع" data-x="الشركة تقسّم فلوس وتعطيها للملاك، كل واحد نصيبه">distribution</span> to the owners.
-            It <b>decreases</b> equity, but it is <b>not an expense</b> and it never enters
+            It <b>decreases</b> equity, but it is <b>not an expense</b> and it <span class="g2" data-ar="أبدًا">never</span> <span class="g2" data-ar="يدخل في">enters</span>
             <i>net income</i>.</li>
         <li>Contributed Capital = Common Stock.
             Retained Earnings = Revenues − Expenses − Dividends.</li>
-        <li>The equation holds at <i>every point in time</i>. Any choice saying it holds only
+        <li>The equation <span class="g2" data-ar="تصحّ / تنطبق">holds</span> at <i>every point in time</i>. Any choice saying it holds only
             at the end of the year is wrong.</li>
       </ul>
     </div>
@@ -321,43 +327,43 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">Transactions and Events</div>
-    <div class="say">What actually moves the equation</div>
+    <div class="say">What <span class="g2" data-ar="فعليًا">actually</span> <span class="g2" data-ar="يحرّك">moves</span> the equation</div>
   </div>
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <table>
-        <tr><th>Type</th><th>Definition</th><th>Example from the book</th></tr>
-        <tr><td><b>External transactions</b></td>
-            <td>An exchange of value <b>between two <span class="g" data-ar="كيان / جهة" data-x="كل طرف لحاله، شركة أو شخص أو جهة مستقلة عن غيرها">entities</span></b>.
-                They always cause <b>a change in the accounting equation</b>.</td>
+        <tr><th><span class="g2" data-ar="النوع">Type</span></th><th><span class="g2" data-ar="التعريف">Definition</span></th><th><span class="g2" data-ar="مثال">Example</span> from the book</th></tr>
+        <tr><td><b><span class="g2" data-ar="خارجية">External</span> <span class="g2" data-ar="معاملات">transactions</span></b></td>
+            <td>An <span class="g2" data-ar="تبادل">exchange</span> of <span class="g2" data-ar="قيمة">value</span> <b>between two <span class="g" data-ar="كيان / جهة" data-x="كل طرف لحاله، شركة أو شخص أو جهة مستقلة عن غيرها">entities</span></b>.
+                They <span class="g2" data-ar="دائمًا">always</span> <span class="g2" data-ar="تُسبّب">cause</span> <b>a <span class="g2" data-ar="تغيير">change</span> in the accounting equation</b>.</td>
             <td>Apple sells an AppleCare Protection Plan</td></tr>
-        <tr><td><b>Internal transactions</b></td>
-            <td>An exchange <b>inside the same entity</b>. It <b>may or may not
+        <tr><td><b><span class="g2" data-ar="داخلية">Internal</span> transactions</b></td>
+            <td>An exchange <b>inside the same entity</b>. It <b><span class="g2" data-ar="قد أو قد لا">may or may not</span>
                 <span class="g" data-ar="يؤثّر على" data-x="يعني يسوي فيه فرق ويغيّره، يخلي المعادلة تتحرك">affect</span></b> the equation.</td>
-            <td>Target uses its own supplies — recorded as an expense when used</td></tr>
-        <tr><td><b>Events</b></td>
-            <td>Happenings that affect the equation and <b>can be
+            <td>Target uses its own <span class="g2" data-ar="مستلزمات">supplies</span> — <span class="g2" data-ar="تُسجَّل">recorded</span> as an <span class="g2" data-ar="مصروف">expense</span> when used</td></tr>
+        <tr><td><b><span class="g2" data-ar="أحداث">Events</span></b></td>
+            <td><span class="g2" data-ar="وقائع">Happenings</span> that affect the equation and <b>can be
                 <span class="g" data-ar="يُقاس" data-x="يعني تقدر تحطه برقم واضح، كم يساوي بالضبط">measured</span>
                 <span class="g" data-ar="بموثوقية / بشكل موثوق" data-x="يعني بشكل تقدر تعتمد عليه، رقم مضبوط مو تخمين">reliably</span></b>.</td>
-            <td>market value changes in some assets and liabilities &middot;
-                a fire that damages assets and creates losses</td></tr>
+            <td><span class="g2" data-ar="القيمة السوقية">market value</span> changes in some assets and liabilities &middot;
+                a <span class="g2" data-ar="حريق">fire</span> that <span class="g2" data-ar="يُتلف">damages</span> assets and <span class="g2" data-ar="يُسبّب">creates</span> <span class="g2" data-ar="خسائر">losses</span></td></tr>
       </table>
-      <p>The book uses the equation to analyze <b>11 transactions and events</b> for
-      FastForward. FastForward is a new consulting company, so it is a service company.
-      The analysis covers its <b>first month</b> of operations.</p>
+      <p>The book uses the equation to <span class="g2" data-ar="يحلّل">analyze</span> <b>11 transactions and events</b> for
+      FastForward. FastForward is a new <span class="g2" data-ar="استشارية">consulting</span> company, so it is a <span class="g2" data-ar="شركة خدمات">service company</span>.
+      The <span class="g2" data-ar="التحليل">analysis</span> <span class="g2" data-ar="يغطي">covers</span> its <b>first month</b> of <span class="g2" data-ar="العمليات / النشاط">operations</span>.</p>
       <p style="background:var(--exam-soft);padding:12px 16px;border-radius:8px;font-weight:600">
-      The golden rule: <b>after every transaction and every event, assets always equal
-      liabilities plus equity.</b> If the two sides are not equal, your analysis has a mistake.</p>
+      The <span class="g2" data-ar="القاعدة الذهبية">golden rule</span>: <b>after every transaction and every event, assets always <span class="g2" data-ar="تساوي">equal</span>
+      liabilities plus equity.</b> If the two sides are not equal, your analysis has a <span class="g2" data-ar="خطأ">mistake</span>.</p>
     </div>
 
     <div class="blk"><span class="lbl">EXAMPLE 1 — INVESTMENT BY OWNER</span>
-      <p>On December 1, Chas Taylor started a consulting company called FastForward.
-      He set it up as a corporation. He invested <b>$30,000</b> cash in the new company
-      <b>in return for its common stock</b>. He put the cash in a bank account in the
+      <p>On December 1, Chas Taylor <span class="g2" data-ar="أسّس">started</span> a consulting company called FastForward.
+      He <span class="g2" data-ar="أسّسها">set it up</span> as a <span class="g2" data-ar="شركة مساهمة">corporation</span>. He <span class="g2" data-ar="استثمر">invested</span> <b>$30,000</b> cash in the new company
+      <b><span class="g2" data-ar="مقابل">in return for</span> its <span class="g2" data-ar="الأسهم العادية">common stock</span></b>. He put the cash in a <span class="g2" data-ar="حساب بنكي">bank account</span> in the
       company's name.</p>
       <p>After the transaction: cash (an asset) = $30,000, and equity = $30,000.
-      The increase came from the owner's investment, a stock issuance.
-      It is reported under <i>Common Stock</i>.</p>
+      The <span class="g2" data-ar="الزيادة">increase</span> came from the owner's <span class="g2" data-ar="استثمار">investment</span>, a stock <span class="g2" data-ar="إصدار">issuance</span>.
+      It is <span class="g2" data-ar="يُعرَض / يُدرَج">reported</span> <span class="g2" data-ar="تحت بند">under</span> <i>Common Stock</i>.</p>
 
       <div class="exhibit">
         <div class="exlbl">Transaction 1</div>
@@ -367,8 +373,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <tr><td>(1)</td><td class="pos">+ $30,000</td><td>=</td><td></td><td></td>
               <td class="pos">+ $30,000</td><td style="font-size:.8rem">Owner investment</td></tr>
         </table>
-        <p class="excap">Notice: both sides went up by the same amount, so the equation
-        <span class="g" data-ar="يبقى / تظل" data-x="يعني يبقى زي ما هو وما يتغيّر، يظل على حاله">remains</span> balanced —
+        <p class="excap"><span class="g2" data-ar="لاحظ">Notice</span>: both sides <span class="g2" data-ar="ارتفعا">went up</span> by the same <span class="g2" data-ar="المبلغ">amount</span>, so the equation
+        <span class="g" data-ar="يبقى / تظل" data-x="يعني يبقى زي ما هو وما يتغيّر، يظل على حاله">remains</span> <span class="g2" data-ar="متوازنة">balanced</span> —
         <b>30,000 = 0 + 30,000</b>.</p>
       </div>
     </div>
@@ -377,97 +383,97 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <ul>
         <li><i>External</i> = <b>between</b> two entities. <i>Internal</i> = <b>inside</b> one entity.</li>
         <li>Internal transactions <b>may not</b> affect the equation. The book says
-            <i>may or may not affect</i>. Any choice that is sure about one side is wrong.</li>
-        <li>An event must be <b>reliably measurable</b> before the company can record it.</li>
+            <i>may or may not affect</i>. Any <span class="g2" data-ar="خيار">choice</span> that is <span class="g2" data-ar="متأكّد">sure</span> about one side is <span class="g2" data-ar="خاطئ">wrong</span>.</li>
+        <li>An event must be <b>reliably <span class="g2" data-ar="قابل للقياس">measurable</span></b> before the company can <span class="g2" data-ar="تسجّله">record</span> it.</li>
       </ul>
     </div>
   </div>
 </div>
 
-<h2 style="margin:40px 0 6px">Test yourself</h2>
-<p class="sub" style="margin-bottom:16px">Answer first, then open the solution.
-If you miss question 2 or 3, go back to the table above.</p>
+<h2 style="margin:40px 0 6px"><span class="g2" data-ar="اختبر نفسك">Test yourself</span></h2>
+<p class="sub" style="margin-bottom:16px">Answer first, then open the <span class="g2" data-ar="الحل">solution</span>.
+If you <span class="g2" data-ar="تخطئ في">miss</span> question 2 or 3, <span class="g2" data-ar="ارجع">go back</span> to the table <span class="g2" data-ar="أعلاه">above</span>.</p>
 
 <div class="q">
-  <div class="stem">1. A company has assets of $180,000 and liabilities of $75,000. Its equity is:</div>
+  <div class="stem">1. A company has <span class="g2" data-ar="أصول">assets</span> of $180,000 and <span class="g2" data-ar="التزامات">liabilities</span> of $75,000. Its <span class="g2" data-ar="حقوق الملكية">equity</span> is:</div>
   <ol type="A"><li>$255,000</li><li>$105,000</li><li>$75,000</li><li>Cannot be determined</li></ol>
   <details><summary>Answer</summary>
   <p><b>B</b>. <span class="mono">Equity = Assets − Liabilities = 180,000 − 75,000 = 105,000</span>.
-  Choice <b>A</b> adds instead of subtracting, and that is the trap. Choice <b>D</b> says the answer
-  cannot be <span class="g" data-ar="يُحدَّد / يُعرَف" data-x="يعني تقدر تعرفه وتطلّعه بالحساب، تحدده بالضبط">determined</span>, but the equation always
+  <span class="g2" data-ar="الخيار">Choice</span> <b>A</b> <span class="g2" data-ar="يجمع">adds</span> <span class="g2" data-ar="بدلًا من">instead of</span> <span class="g2" data-ar="الطرح">subtracting</span>, and that is the <span class="g2" data-ar="الفخ">trap</span>. Choice <b>D</b> says the answer
+  cannot be <span class="g" data-ar="يُحدَّد / يُعرَف" data-x="يعني تقدر تعرفه وتطلّعه بالحساب، تحدده بالضبط">determined</span>, but the equation <span class="g2" data-ar="دائمًا">always</span>
   gives you the third number when you have the other two.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">2. Which of the following <i>decreases</i> equity?</div>
-  <ol type="A"><li>Revenues</li><li>Common stock issued to shareholders</li>
-  <li>Dividends</li><li>Accounts receivable collected</li></ol>
+  <div class="stem">2. Which of <span class="g2" data-ar="ما يلي">the following</span> <i><span class="g2" data-ar="يُنقص">decreases</span></i> equity?</div>
+  <ol type="A"><li><span class="g2" data-ar="الإيرادات">Revenues</span></li><li>Common stock <span class="g2" data-ar="المُصدَرة">issued</span> to <span class="g2" data-ar="المساهمين">shareholders</span></li>
+  <li><span class="g2" data-ar="توزيعات الأرباح">Dividends</span></li><li><span class="g2" data-ar="ذمم مدينة">Accounts receivable</span> collected</li></ol>
   <details><summary>Answer</summary>
-  <p><b>C</b>. In the expanded equation, Common Stock and Revenues carry a plus, while Dividends
-  and Expenses carry a minus. Choice <b>D</b> is a receivable that was
-  <span class="g" data-ar="حُصِّلت / تم تحصيلها" data-x="يعني الشركة قبضت الفلوس اللي كان الزبون مديونها، صارت كاش">collected</span>. That only changes the form of the
-  assets, from a receivable into cash, so equity does not move at all.</p></details>
+  <p><b>C</b>. In the <span class="g2" data-ar="الموسّعة">expanded</span> equation, Common Stock and Revenues <span class="g2" data-ar="تحمل">carry</span> a <span class="g2" data-ar="زائد">plus</span>, <span class="g2" data-ar="بينما">while</span> Dividends
+  and <span class="g2" data-ar="المصروفات">Expenses</span> carry a <span class="g2" data-ar="ناقص">minus</span>. Choice <b>D</b> is a <span class="g2" data-ar="ذمة مدينة">receivable</span> that was
+  <span class="g" data-ar="حُصِّلت / تم تحصيلها" data-x="يعني الشركة قبضت الفلوس اللي كان الزبون مديونها، صارت كاش">collected</span>. That only changes the <span class="g2" data-ar="شكل">form</span> of the
+  assets, from a receivable into cash, so equity does not move <span class="g2" data-ar="إطلاقًا">at all</span>.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">3. Which statement about dividends is correct?</div>
+  <div class="stem">3. Which <span class="g2" data-ar="عبارة">statement</span> about dividends is <span class="g2" data-ar="صحيحة">correct</span>?</div>
   <ol type="A">
-    <li>Dividends are an expense and reduce net income</li>
+    <li>Dividends are an <span class="g2" data-ar="مصروف">expense</span> and <span class="g2" data-ar="تُقلّل">reduce</span> <span class="g2" data-ar="صافي الدخل">net income</span></li>
     <li>Dividends reduce equity but are not an expense</li>
     <li>Dividends increase equity because they are paid to owners</li>
-    <li>Dividends have no effect on the accounting equation</li>
+    <li>Dividends have no <span class="g2" data-ar="تأثير">effect</span> on the accounting equation</li>
   </ol>
   <details><summary>Answer</summary>
   <p><b>B</b>. Dividends <b>decrease</b> equity, but they are <b>not an expense</b> and they do not
-  enter the calculation of net income. Choice <b>A</b> is the most famous trap in the whole
+  <span class="g2" data-ar="تدخل في">enter</span> the <span class="g2" data-ar="حساب">calculation</span> of net income. Choice <b>A</b> is the most <span class="g2" data-ar="شهير">famous</span> trap in the whole
   chapter.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">4. Target uses some of its own supplies, which are then reported as expenses. This is best described as:</div>
-  <ol type="A"><li>An external transaction</li><li>An internal transaction</li>
-  <li>An event</li><li>Not a transaction at all</li></ol>
+  <div class="stem">4. Target uses some of its own <span class="g2" data-ar="مستلزمات">supplies</span>, which are then <span class="g2" data-ar="تُعرَض">reported</span> as expenses. This is best <span class="g2" data-ar="يُوصف">described</span> as:</div>
+  <ol type="A"><li>An <span class="g2" data-ar="خارجية">external</span> transaction</li><li>An <span class="g2" data-ar="داخلية">internal</span> transaction</li>
+  <li>An <span class="g2" data-ar="حدث">event</span></li><li>Not a transaction at all</li></ol>
   <details><summary>Answer</summary>
-  <p><b>B</b>. The exchange happens <b>inside</b> the same entity, so there is no second party.
+  <p><b>B</b>. The <span class="g2" data-ar="التبادل">exchange</span> <span class="g2" data-ar="يحدث">happens</span> <b>inside</b> the same <span class="g2" data-ar="كيان">entity</span>, so there is no second <span class="g2" data-ar="طرف">party</span>.
   This is the book's own example of an internal transaction.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">5. An owner invests $50,000 cash in exchange for common stock. The effect on the accounting equation is:</div>
+  <div class="stem">5. An owner <span class="g2" data-ar="يستثمر">invests</span> $50,000 cash <span class="g2" data-ar="مقابل">in exchange for</span> common stock. The effect on the accounting equation is:</div>
   <ol type="A">
-    <li>Assets increase $50,000; liabilities increase $50,000</li>
+    <li>Assets <span class="g2" data-ar="تزيد">increase</span> $50,000; liabilities increase $50,000</li>
     <li>Assets increase $50,000; equity increases $50,000</li>
     <li>Assets increase $50,000; equity decreases $50,000</li>
     <li>Equity increases $50,000; liabilities decrease $50,000</li>
   </ol>
   <details><summary>Answer</summary>
-  <p><b>B</b>. Cash, an asset, goes up. Common Stock, part of equity, goes up by the same amount.
-  Owners are not creditors, so liabilities do not change. Choice <b>A</b> is built on exactly that
-  confusion.</p></details>
+  <p><b>B</b>. Cash, an asset, <span class="g2" data-ar="يرتفع">goes up</span>. Common Stock, part of equity, goes up by the same <span class="g2" data-ar="المبلغ">amount</span>.
+  Owners are not <span class="g2" data-ar="دائنين">creditors</span>, so liabilities do not change. Choice <b>A</b> is <span class="g2" data-ar="مبني على">built on</span> <span class="g2" data-ar="بالضبط">exactly</span> that
+  <span class="g2" data-ar="الخلط / الالتباس">confusion</span>.</p></details>
 </div>
 
-<h2 style="margin:40px 0 10px">Key terms from this section</h2>
+<h2 style="margin:40px 0 10px"><span class="g2" data-ar="المصطلحات الأساسية">Key terms</span> from this section</h2>
 <table>
-  <tr><th>Term</th><th>What it means</th><th>Watch out for</th></tr>
-  <tr><td><b>Assets</b></td><td>Resources the company owns or controls</td><td>owns <b>or controls</b></td></tr>
-  <tr><td><b>Liabilities</b></td><td>Creditors' claims on the assets</td><td>non-owner claims</td></tr>
+  <tr><th><span class="g2" data-ar="المصطلح">Term</span></th><th>What it <span class="g2" data-ar="يعني">means</span></th><th><span class="g2" data-ar="انتبه لـ">Watch out for</span></th></tr>
+  <tr><td><b>Assets</b></td><td><span class="g2" data-ar="موارد">Resources</span> the company owns or <span class="g2" data-ar="تسيطر عليها">controls</span></td><td>owns <b>or controls</b></td></tr>
+  <tr><td><b>Liabilities</b></td><td><span class="g2" data-ar="الدائنين">Creditors'</span> <span class="g2" data-ar="مطالبات">claims</span> on the assets</td><td>non-owner claims</td></tr>
   <tr><td><b>Equity</b></td><td>The owner's claim on the assets</td><td>= assets <b>minus</b> liabilities</td></tr>
   <tr><td><b>Net assets</b> / <b>residual equity</b></td><td>Other names for equity</td><td>same thing, different name</td></tr>
-  <tr><td><b>Receivable</b></td><td>An asset: money the company will collect</td><td>an asset — an <b>inflow</b></td></tr>
+  <tr><td><b>Receivable</b></td><td>An asset: money the company will <span class="g2" data-ar="تُحصّل">collect</span></td><td>an asset — an <b>inflow</b></td></tr>
   <tr><td><b>Payable</b></td><td>A liability: money the company will pay</td><td>a liability — an <b>outflow</b></td></tr>
-  <tr><td><b>On credit</b> / <b>on account</b></td><td>Cash moves at a later date</td><td>both phrases mean the same</td></tr>
-  <tr><td><b>Common Stock</b></td><td>Owner investment in return for stock</td><td>+ &middot; part of contributed capital</td></tr>
-  <tr><td><b>Dividends</b></td><td>Assets paid out to the shareholders</td><td>− &middot; <b>not an expense</b></td></tr>
-  <tr><td><b>Revenues</b></td><td>Increases in equity from selling to customers</td><td>+ &middot; from sales to customers</td></tr>
-  <tr><td><b>Expenses</b></td><td>Decreases in equity from the costs of providing</td><td>− &middot; costs of providing</td></tr>
-  <tr><td><b>External transaction</b></td><td>Exchange between two entities</td><td>always changes the equation</td></tr>
+  <tr><td><b>On credit</b> / <b>on account</b></td><td>Cash moves at a <span class="g2" data-ar="لاحق">later</span> date</td><td>both phrases mean the same</td></tr>
+  <tr><td><b>Common Stock</b></td><td>Owner <span class="g2" data-ar="استثمار">investment</span> in return for stock</td><td>+ &middot; part of contributed capital</td></tr>
+  <tr><td><b>Dividends</b></td><td>Assets <span class="g2" data-ar="تُدفع">paid out</span> to the shareholders</td><td>− &middot; <b>not an expense</b></td></tr>
+  <tr><td><b>Revenues</b></td><td><span class="g2" data-ar="زيادات">Increases</span> in equity from selling to customers</td><td>+ &middot; from sales to customers</td></tr>
+  <tr><td><b>Expenses</b></td><td><span class="g2" data-ar="نقصان">Decreases</span> in equity from the <span class="g2" data-ar="تكاليف">costs</span> of providing</td><td>− &middot; costs of providing</td></tr>
+  <tr><td><b>External transaction</b></td><td><span class="g2" data-ar="تبادل">Exchange</span> between two <span class="g2" data-ar="كيانين">entities</span></td><td>always changes the equation</td></tr>
   <tr><td><b>Internal transaction</b></td><td>Exchange inside one entity</td><td>may or may not affect it</td></tr>
-  <tr><td><b>Events</b></td><td>Happenings that affect the equation</td><td>must be reliably measurable</td></tr>
+  <tr><td><b>Events</b></td><td><span class="g2" data-ar="وقائع">Happenings</span> that affect the equation</td><td>must be <span class="g2" data-ar="قابلة للقياس بموثوقية">reliably measurable</span></td></tr>
 </table>
 
 <h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
-<p class="sub" style="margin-bottom:8px">These are the general English words on this page, not the
-accounting terms. Learn them and the textbook gets much easier to read.</p>
+<p class="sub" style="margin-bottom:8px">These are the <span class="g2" data-ar="العامة">general</span> English words on this page, not the
+accounting terms. Learn them and the textbook gets much <span class="g2" data-ar="أسهل">easier</span> to read.</p>
 <table class="vocab">
   <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
 
@@ -548,10 +554,10 @@ accounting terms. Learn them and the textbook gets much easier to read.</p>
 </table>
 
 <p class="note">
-Built from the textbook material in SmartBook — Chapter 1, third section,
-<i>Business Transactions and Accounting</i>, objective <code>A1</code> (page 10 onward).
-<br><b>Still missing:</b> transactions 2 through 11 for FastForward (the step-by-step transaction
-analysis, objective <code>P1</code>). That needs a second session with the book.
+Built from the textbook <span class="g2" data-ar="المادة">material</span> in SmartBook — Chapter 1, third section,
+<i>Business Transactions and Accounting</i>, objective <code>A1</code> (page 10 <span class="g2" data-ar="فما بعد">onward</span>).
+<br><b><span class="g2" data-ar="لا يزال ناقصًا">Still missing</span>:</b> transactions 2 through 11 for FastForward (the <span class="g2" data-ar="خطوة بخطوة">step-by-step</span> transaction
+analysis, objective <code>P1</code>). That needs a second <span class="g2" data-ar="جلسة">session</span> with the book.
 </p>
 
 
@@ -563,14 +569,14 @@ analysis, objective <code>P1</code>). That needs a second session with the book.
 </div>
 
 <script>
-document.querySelectorAll('span.g').forEach(function(s){
+document.querySelectorAll('span.g, span.g2').forEach(function(s){
   var t=document.createElement('span'); t.className='ar';
   var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
   if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
   s.appendChild(t);
   s.addEventListener('click',function(e){
     e.stopPropagation();
-    document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
+    document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
     s.classList.toggle('on');
     if(s.classList.contains('on')){
       var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
@@ -581,7 +587,7 @@ document.querySelectorAll('span.g').forEach(function(s){
   });
 });
 document.addEventListener('click',function(){
-  document.querySelectorAll('span.g.on').forEach(function(o){o.classList.remove('on');});
+  document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
 });
 </script>
 </body>

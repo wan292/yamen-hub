@@ -19,8 +19,9 @@
   --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
 }}
 *{box-sizing:border-box}
+html{font-size:18px}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:19px;line-height:1.85}
 .wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
 bdi{font-weight:600;unicode-bidi:isolate}
 code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
@@ -104,6 +105,13 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 .g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
 .g:hover .ar,.g.on .ar{display:block}
 .vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
+.g2{border-bottom:1.5px dotted var(--muted);cursor:pointer;position:relative}
+.g2:hover,.g2.on{background:var(--accent-soft)}
+.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
+  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
+  direction:rtl;text-align:right;font-size:.92rem;font-weight:600;white-space:nowrap;
+  padding:6px 12px;border-radius:8px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.g2:hover .ar,.g2.on .ar{display:block}
 .vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
 .vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
 .vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
@@ -129,58 +137,56 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
 <header>
   <h1>Chapter 1 — Financial Statements</h1>
-  <p class="sub"><code>ACCT 203</code> · Chapter 1 · Section 4 of 4: Financial Statements<br>
-  Objective <code>P2</code>: <span class="g" data-ar="يُحدِّد / يتعرّف على" data-x="يعني تعرف وش هي القوائم وتميّز كل وحدة عن الثانية">Identify</span> and prepare
-  basic financial statements and explain how they
+  <p class="sub"><code>ACCT 203</code> · Chapter 1 · <span class="g2" data-ar="قسم">Section</span> 4 of 4: Financial Statements<br>
+  Objective <code>P2</code>: <span class="g" data-ar="يُحدِّد / يتعرّف على" data-x="يعني تعرف وش هي القوائم وتميّز كل وحدة عن الثانية">Identify</span> and <span class="g2" data-ar="يُعِدّ / يجهّز">prepare</span>
+  <span class="g2" data-ar="أساسية">basic</span> <span class="g2" data-ar="القوائم المالية">financial statements</span> and <span class="g2" data-ar="يشرح">explain</span> how they
   <span class="g" data-ar="تترابط مع بعضها" data-x="يعني كل قائمة مربوطة بالثانية، رقم من هنا يروح لهناك">interrelate</span>.</p>
 </header>
 
 <div class="big">
-  <h2>End of the chapter — everything comes together here</h2>
-  <p>There are four statements. They are prepared in <b>a fixed order</b>. Each one <b>feeds the next one</b>.
-  The exam question is not "what are the statements". The exam asks <b>which one covers a period and which
-  one covers a point in time</b>, and <b>how they link to each other</b>.</p>
-  <p class="tiphint">How to use this page: tap or hover any <span class="g" data-ar="منقّط" data-x="الكلمة اللي تحتها نقاط أو خط، اضغط عليها وتطلع لك المعنى">dotted</span>
-  word to see the Arabic meaning. The accounting terms stay in English on purpose — those are the words on
-  your exam paper.</p>
+  <h2>End of the <span class="g2" data-ar="الفصل">chapter</span> — everything <span class="g2" data-ar="يجتمع / يكتمل">comes together</span> here</h2>
+  <p>There are four <span class="g2" data-ar="قوائم">statements</span>. They are <span class="g2" data-ar="تُعَدّ">prepared</span> in <b>a <span class="g2" data-ar="ترتيب ثابت">fixed order</span></b>. Each one <b><span class="g2" data-ar="يغذّي / يصبّ في">feeds</span> the next one</b>.
+  The exam question is not "what are the statements". The exam asks <b>which one <span class="g2" data-ar="يغطّي">covers</span> a <span class="g2" data-ar="فترة">period</span> and which
+  one covers a <span class="g2" data-ar="لحظة زمنية">point in time</span></b>, and <b>how they <span class="g2" data-ar="ترتبط">link</span> to <span class="g2" data-ar="بعضها البعض">each other</span></b>.</p>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--accent);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
 </div>
 
 <!-- The four -->
 <div class="concept">
   <div class="chead">
     <div class="term">The Four Financial Statements</div>
-    <div class="say">The order is <span class="g" data-ar="مقصود / متعمَّد" data-x="يعني مسوّينه عن قصد ومو صدفة، الترتيب له سبب">deliberate</span> — do not change it</div>
+    <div class="say">The <span class="g2" data-ar="الترتيب">order</span> is <span class="g" data-ar="مقصود / متعمَّد" data-x="يعني مسوّينه عن قصد ومو صدفة، الترتيب له سبب">deliberate</span> — do not change it</div>
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
-      The first one measures profit. The second one carries it forward. The third one shows the
-      <span class="g" data-ar="المركز / الوضع" data-x="يعني وضع الشركة المالي، وش عندها ووش عليها بيوم معيّن">position</span>. The fourth one tracks the cash.</div>
+      The first one <span class="g2" data-ar="يقيس">measures</span> <span class="g2" data-ar="الربح">profit</span>. The second one <span class="g2" data-ar="يرحّله للأمام">carries it forward</span>. The third one <span class="g2" data-ar="يعرض">shows</span> the
+      <span class="g" data-ar="المركز / الوضع" data-x="يعني وضع الشركة المالي، وش عندها ووش عليها بيوم معيّن">position</span>. The fourth one <span class="g2" data-ar="يتتبّع">tracks</span> the cash.</div>
 
     <table>
-      <tr><th>Statement</th><th>Layout</th><th>Purpose</th><th>Time</th></tr>
+      <tr><th><span class="g2" data-ar="قائمة">Statement</span></th><th><span class="g2" data-ar="الشكل / التنسيق">Layout</span></th><th><span class="g2" data-ar="الغرض">Purpose</span></th><th>Time</th></tr>
       <tr>
-        <td><b>Income statement</b></td>
+        <td><b><span class="g2" data-ar="قائمة الدخل">Income statement</span></b></td>
         <td class="mono">Revenues<br>&minus; Expenses<br>= Net income</td>
-        <td>Shows the company's revenues and expenses. It
-            <span class="g" data-ar="يحسب" data-x="يعني يطلع الرقم بالحسبة، الإيرادات ناقص المصاريف">computes</span> net income or net loss.</td>
-        <td><span class="period">period</span></td>
+        <td>Shows the company's <span class="g2" data-ar="الإيرادات">revenues</span> and <span class="g2" data-ar="المصاريف">expenses</span>. It
+            <span class="g" data-ar="يحسب" data-x="يعني يطلع الرقم بالحسبة، الإيرادات ناقص المصاريف">computes</span> <span class="g2" data-ar="صافي الدخل">net income</span> or <span class="g2" data-ar="صافي الخسارة">net loss</span>.</td>
+        <td><span class="period"><span class="g2" data-ar="فترة">period</span></span></td>
       </tr>
       <tr>
-        <td><b>Statement of retained earnings</b></td>
+        <td><b><span class="g2" data-ar="قائمة الأرباح المحتجزة">Statement of retained earnings</span></b></td>
         <td class="mono">Beg. retained earnings<br>+ Net income<br>&minus; Dividends<br>= End. retained earnings</td>
-        <td>Explains the change in retained earnings, from net income (or loss) and from dividends.</td>
+        <td><span class="g2" data-ar="يشرح">Explains</span> the change in retained earnings, from net income (or loss) and from <span class="g2" data-ar="توزيعات الأرباح">dividends</span>.</td>
         <td><span class="period">period</span></td>
       </tr>
       <tr>
-        <td><b>Balance sheet</b></td>
+        <td><b><span class="g2" data-ar="الميزانية العمومية">Balance sheet</span></b></td>
         <td class="mono">Assets = Liabilities<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Equity</td>
-        <td>Describes the financial position — the types and amounts of assets, liabilities and equity.</td>
-        <td><span class="point">point</span></td>
+        <td><span class="g2" data-ar="يصف">Describes</span> the <span class="g2" data-ar="المركز المالي">financial position</span> — the <span class="g2" data-ar="أنواع">types</span> and <span class="g2" data-ar="مبالغ">amounts</span> of <span class="g2" data-ar="الأصول">assets</span>, <span class="g2" data-ar="الالتزامات">liabilities</span> and <span class="g2" data-ar="حقوق الملكية">equity</span>.</td>
+        <td><span class="point"><span class="g2" data-ar="لحظة زمنية">point</span></span></td>
       </tr>
       <tr>
-        <td><b>Statement of cash flows</b></td>
+        <td><b><span class="g2" data-ar="قائمة التدفقات النقدية">Statement of cash flows</span></b></td>
         <td class="mono">+/&minus; Operating C.F.<br>+/&minus; Investing C.F.<br>+/&minus; Financing C.F.<br>= Change in cash</td>
-        <td>Identifies the cash coming in (receipts) and the cash going out (payments).</td>
+        <td><span class="g2" data-ar="يحدّد">Identifies</span> the cash <span class="g2" data-ar="الداخل">coming in</span> (<span class="g2" data-ar="المقبوضات">receipts</span>) and the cash <span class="g2" data-ar="الخارج">going out</span> (<span class="g2" data-ar="المدفوعات">payments</span>).</td>
         <td><span class="period">period</span></td>
       </tr>
     </table>
@@ -195,11 +201,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
-        <li><b>Three cover a period. One covers a point.</b> Only the balance sheet is
-            <i>at a point in time</i>. This is the most common question in this section.</li>
+        <li><b>Three <span class="g2" data-ar="تغطّي">cover</span> a period. One covers a point.</b> Only the balance sheet is
+            <i>at a <span class="g2" data-ar="لحظة زمنية">point in time</span></i>. This is the <span class="g2" data-ar="الأكثر شيوعاً">most common</span> question in this <span class="g2" data-ar="القسم">section</span>.</li>
         <li>This is why the <span class="g" data-ar="عنوان القائمة / الترويسة" data-x="العنوان اللي فوق القائمة، فيه اسم الشركة واسم القائمة والتاريخ">heading</span> of an income
-            statement says <i>For Month Ended December 31</i>, while the balance sheet says only
-            <i>December 31</i>. The heading itself <span class="g" data-ar="يكشف" data-x="يعني يبيّن لك الجواب على طول من غير ما تدور">reveals</span> the answer.</li>
+            statement says <i>For <span class="g2" data-ar="الشهر المنتهي">Month Ended</span> December 31</i>, <span class="g2" data-ar="بينما">while</span> the balance sheet says only
+            <i>December 31</i>. The heading <span class="g2" data-ar="نفسه">itself</span> <span class="g" data-ar="يكشف" data-x="يعني يبيّن لك الجواب على طول من غير ما تدور">reveals</span> the <span class="g2" data-ar="الجواب">answer</span>.</li>
       </ul>
     </div>
   </div>
@@ -209,21 +215,21 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">How the Statements Interrelate</div>
-    <div class="say">Half of objective P2 is exactly this</div>
+    <div class="say"><span class="g2" data-ar="نصف">Half</span> of <span class="g2" data-ar="الهدف">objective</span> P2 is <span class="g2" data-ar="بالضبط">exactly</span> this</div>
   </div>
   <div class="cbody">
     <div class="blk">
       <div class="link"><span class="n">1</span>
-        <span><b>Net income</b> from the income statement is used to compute
-        <b>retained earnings</b>.</span></div>
+        <span><b><span class="g2" data-ar="صافي الدخل">Net income</span></b> from the <span class="g2" data-ar="قائمة الدخل">income statement</span> is used to <span class="g2" data-ar="يحسب">compute</span>
+        <b><span class="g2" data-ar="الأرباح المحتجزة">retained earnings</span></b>.</span></div>
       <div class="link"><span class="n">2</span>
-        <span><b>Retained earnings</b> is used to prepare
-        <b>the balance sheet</b>.</span></div>
+        <span><b>Retained earnings</b> is used to <span class="g2" data-ar="يُعِدّ">prepare</span>
+        <b>the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span></b>.</span></div>
       <div class="link"><span class="n">3</span>
         <span><b>Cash</b> from the balance sheet is used to
         <span class="g" data-ar="يطابِق / يوفّق" data-x="تطابق رقم الكاش بالميزانية مع رقم قائمة التدفقات وتتأكد إنهم نفس الشي">reconcile</span>
-        <b>the statement of cash flows</b>.</span></div>
-      <p style="margin-top:14px">This is why the order is
+        <b>the <span class="g2" data-ar="قائمة التدفقات النقدية">statement of cash flows</span></b>.</span></div>
+      <p style="margin-top:14px">This is why the <span class="g2" data-ar="الترتيب">order</span> is
       <span class="g" data-ar="إجباري / لازم" data-x="يعني لازم تسويه بهالترتيب، ما لك خيار ثاني">mandatory</span>. You cannot prepare the statement of
       retained earnings before you know net income. You cannot prepare the balance sheet before you
       know retained earnings.</p>
@@ -240,22 +246,22 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">Income Statement</div>
-    <div class="say">Revenues first, expenses second</div>
+    <div class="say"><span class="g2" data-ar="الإيرادات">Revenues</span> first, <span class="g2" data-ar="المصاريف">expenses</span> second</div>
   </div>
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>Revenues come <b>first</b>. Expenses come <b>after</b> them. Expenses are the costs used to
+      <p>Revenues come <b>first</b>. Expenses come <b>after</b> them. Expenses are the <span class="g2" data-ar="التكاليف">costs</span> used to
       <span class="g" data-ar="يولّد / يحقّق" data-x="يعني يجيب لك الإيراد ويطلّعه، المصاريف هي اللي تجيب الدخل">generate</span> the
       <span class="g" data-ar="المُعلَن عنه / المعروض في القوائم" data-x="يعني اللي مكتوب ومعروض بالقائمة، مو شي مخفي">reported</span> revenues.</p>
       <ul>
-        <li><b>Net income</b> — this <span class="g" data-ar="يحدث / يقع" data-x="يعني يصير، الربح يصير لما الإيرادات تكون أكثر">occurs</span> when revenues
+        <li><b><span class="g2" data-ar="صافي الدخل">Net income</span></b> — this <span class="g" data-ar="يحدث / يقع" data-x="يعني يصير، الربح يصير لما الإيرادات تكون أكثر">occurs</span> when revenues
             <span class="g" data-ar="تتجاوز / تزيد عن" data-x="يعني أكثر من، الإيرادات تعدّت المصاريف">exceed</span> expenses.</li>
-        <li><b>Net loss</b> — this occurs when expenses exceed revenues.</li>
-        <li>Net income (or net loss) appears at the <b>bottom</b> of the statement.</li>
-        <li>It is sometimes called <b>earnings</b> or <b>profit</b>. Same thing.</li>
+        <li><b><span class="g2" data-ar="صافي الخسارة">Net loss</span></b> — this occurs when expenses exceed revenues.</li>
+        <li>Net income (or net loss) <span class="g2" data-ar="يظهر">appears</span> at the <b><span class="g2" data-ar="أسفل">bottom</span></b> of the statement.</li>
+        <li>It is <span class="g2" data-ar="أحياناً">sometimes</span> <span class="g2" data-ar="يُسمّى">called</span> <b><span class="g2" data-ar="الأرباح">earnings</span></b> or <b><span class="g2" data-ar="الربح">profit</span></b>. <span class="g2" data-ar="نفس الشيء">Same thing</span>.</li>
       </ul>
       <p style="background:var(--trap-soft);padding:12px 16px;border-radius:8px;font-weight:600">
-      &#9888; Shareholder investments and dividends <b>are not part of income</b>.</p>
+      &#9888; <span class="g2" data-ar="استثمارات المساهمين">Shareholder investments</span> and <span class="g2" data-ar="توزيعات الأرباح">dividends</span> <b><span class="g2" data-ar="ليست جزءاً من">are not part of</span> income</b>.</p>
     </div>
 
     <div class="stmt">
@@ -272,9 +278,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <tr class="tot"><td><b>Net income</b></td><td></td><td class="n">$ 4,400</td></tr>
       </table>
     </div>
-    <p style="font-size:.88rem;color:var(--ink2)">The revenues come from transactions 5 and 8. The expenses
-    come from transactions 6 and 7. Note that a <b>single line</b> means an addition or a subtraction, and a
-    <b>double line</b> means a final total.</p>
+    <p style="font-size:.88rem;color:var(--ink2)">The revenues come from <span class="g2" data-ar="العمليات / المعاملات">transactions</span> 5 and 8. The expenses
+    come from transactions 6 and 7. <span class="g2" data-ar="لاحظ أن">Note that</span> a <b><span class="g2" data-ar="خط واحد">single line</span></b> means an <span class="g2" data-ar="جمع">addition</span> or a <span class="g2" data-ar="طرح">subtraction</span>, and a
+    <b><span class="g2" data-ar="خط مزدوج">double line</span></b> means a <span class="g2" data-ar="المجموع النهائي">final total</span>.</p>
   </div>
 </div>
 
@@ -282,20 +288,20 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">Statement of Retained Earnings</div>
-    <div class="say">This is where dividends belong</div>
+    <div class="say">This is where <span class="g2" data-ar="توزيعات الأرباح">dividends</span> <span class="g2" data-ar="مكانها / تنتمي">belong</span></div>
   </div>
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p><b>Retained earnings</b> = <b><span class="g" data-ar="تراكمي" data-x="كل شي تجمّع من البداية لين الحين، مو بس هالسنة">cumulative</span> net income
-      minus any dividend <span class="g" data-ar="التوزيعات" data-x="يعني الفلوس اللي الشركة تعطيها للملاك من أرباحها">distributions</span></b>.</p>
-      <p>The statement shows four things: the beginning balance · what increases it (net income) ·
-      what decreases it (dividends and net loss) · and the ending balance.</p>
+      <p><b><span class="g2" data-ar="الأرباح المحتجزة">Retained earnings</span></b> = <b><span class="g" data-ar="تراكمي" data-x="كل شي تجمّع من البداية لين الحين، مو بس هالسنة">cumulative</span> net income
+      <span class="g2" data-ar="ناقص">minus</span> any <span class="g2" data-ar="توزيع أرباح">dividend</span> <span class="g" data-ar="التوزيعات" data-x="يعني الفلوس اللي الشركة تعطيها للملاك من أرباحها">distributions</span></b>.</p>
+      <p>The statement shows four things: the <span class="g2" data-ar="الرصيد الافتتاحي">beginning balance</span> · what <span class="g2" data-ar="يزيده">increases</span> it (net income) ·
+      what <span class="g2" data-ar="ينقصه">decreases</span> it (dividends and <span class="g2" data-ar="صافي الخسارة">net loss</span>) · and the <span class="g2" data-ar="الرصيد الختامي">ending balance</span>.</p>
       <p>The ending balance is <span class="g" data-ar="يُرحَّل / يُنقل إلى" data-x="يعني تاخذ الرقم من قائمة وتنقله زي ما هو للقائمة الثانية">carried over</span> and
-      shown on the balance sheet. That is link number 2 above.</p>
-      <p><b>The beginning balance:</b> for FastForward it is <b>zero</b>, because the company
-      <b>did not exist</b> before December 1. An
+      <span class="g2" data-ar="يُعرض">shown</span> on the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span>. That is <span class="g2" data-ar="الرابط">link</span> number 2 above.</p>
+      <p><b>The beginning balance:</b> for FastForward it is <b><span class="g2" data-ar="صفر">zero</span></b>, because the company
+      <b><span class="g2" data-ar="لم تكن موجودة">did not exist</span></b> before December 1. An
       <span class="g" data-ar="قائمة / موجودة أصلاً" data-x="يعني شركة موجودة من قبل ولها شغل سابق، مو جديدة">existing</span> company starts with the ending
-      balance of the <span class="g" data-ar="السابق" data-x="يعني اللي قبل، الفترة اللي راحت مو الحالية">prior</span> period, for example November 30.</p>
+      balance of the <span class="g" data-ar="السابق" data-x="يعني اللي قبل، الفترة اللي راحت مو الحالية">prior</span> <span class="g2" data-ar="الفترة">period</span>, <span class="g2" data-ar="مثلاً">for example</span> November 30.</p>
     </div>
 
     <div class="stmt">
@@ -319,10 +325,10 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
         <li>Dividends are <span class="g" data-ar="تُطرَح" data-x="يعني تنقّصها من الرقم وتشيلها منه، مو تزيدها">subtracted</span> <b>here</b>, not on the income
-            statement. If you subtract them from revenues, your net income will be wrong.</li>
+            statement. If you <span class="g2" data-ar="تطرح">subtract</span> them from revenues, your net income will be <span class="g2" data-ar="خاطئ">wrong</span>.</li>
         <li>A <b>new</b> company has a beginning balance of <b>zero</b>. An <b>existing</b> company starts
             with the ending balance of the prior period.</li>
-        <li>A <b>net loss</b> decreases retained earnings, just like dividends do.</li>
+        <li>A <b>net loss</b> decreases retained earnings, <span class="g2" data-ar="تماماً مثل">just like</span> dividends do.</li>
       </ul>
     </div>
   </div>
@@ -332,14 +338,14 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">Statement of Cash Flows</div>
-    <div class="say">Three sections, one total</div>
+    <div class="say">Three <span class="g2" data-ar="أقسام">sections</span>, one <span class="g2" data-ar="مجموع">total</span></div>
   </div>
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>There are three sections: <b>Operating</b> · <b>Investing</b> · <b>Financing</b>. Their total is
-      the <b>change in cash</b>.</p>
-      <p>Then you add the beginning cash balance. The result is the <b>ending cash balance</b>. That number
-      is the same cash number on the balance sheet. That is link number 3.</p>
+      <p>There are three sections: <b><span class="g2" data-ar="التشغيلية">Operating</span></b> · <b><span class="g2" data-ar="الاستثمارية">Investing</span></b> · <b><span class="g2" data-ar="التمويلية">Financing</span></b>. Their total is
+      the <b><span class="g2" data-ar="التغيّر في النقد">change in cash</span></b>.</p>
+      <p>Then you add the <span class="g2" data-ar="رصيد النقد الافتتاحي">beginning cash balance</span>. The <span class="g2" data-ar="الناتج">result</span> is the <b><span class="g2" data-ar="رصيد النقد الختامي">ending cash balance</span></b>. That number
+      is <span class="g2" data-ar="نفس">the same</span> cash number on the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span>. That is <span class="g2" data-ar="الرابط">link</span> number 3.</p>
       <div class="stmt">
         <div class="hd">FASTFORWARD — Financing activities (<span class="g" data-ar="مقتطف" data-x="يعني جزء بس من القائمة، مو كلها">excerpt</span>)</div>
         <table>
@@ -351,78 +357,78 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <tr class="tot"><td><b>Cash balance, December 31, 2027</b></td><td></td><td class="n">$ 4,800</td></tr>
         </table>
       </div>
-      <p style="font-size:.88rem;color:var(--ink2)">Note: negative amounts sometimes appear in
-      <span class="g" data-ar="الأقواس" data-x="القوسين اللي يحطون الرقم بينهم عشان يبيّنون إنه سالب">parentheses</span> and sometimes they do not. The textbook warns
+      <p style="font-size:.88rem;color:var(--ink2)">Note: <span class="g2" data-ar="المبالغ السالبة">negative amounts</span> <span class="g2" data-ar="أحياناً">sometimes</span> <span class="g2" data-ar="تظهر">appear</span> in
+      <span class="g" data-ar="الأقواس" data-x="القوسين اللي يحطون الرقم بينهم عشان يبيّنون إنه سالب">parentheses</span> and sometimes they do not. The <span class="g2" data-ar="الكتاب المقرر">textbook</span> <span class="g2" data-ar="يحذّر">warns</span>
       about this <span class="g" data-ar="صراحةً / بشكل واضح" data-x="يعني بشكل واضح وصريح، قالها بالفم المليان مو تلميح">explicitly</span>.</p>
     </div>
   </div>
 </div>
 
-<h2 style="margin:40px 0 6px">Test yourself</h2>
+<h2 style="margin:40px 0 6px"><span class="g2" data-ar="اختبر نفسك">Test yourself</span></h2>
 
 <div class="q">
-  <div class="stem">1. Which financial statement is prepared as of a <i>point in time</i> rather than for a period of time?</div>
-  <ol type="A"><li>Income statement</li><li>Statement of retained earnings</li>
-  <li>Balance sheet</li><li>Statement of cash flows</li></ol>
+  <div class="stem">1. Which <span class="g2" data-ar="قائمة مالية">financial statement</span> is <span class="g2" data-ar="تُعَدّ">prepared</span> as of a <i><span class="g2" data-ar="لحظة زمنية">point in time</span></i> <span class="g2" data-ar="بدلاً من">rather than</span> for a <span class="g2" data-ar="فترة زمنية">period of time</span>?</div>
+  <ol type="A"><li><span class="g2" data-ar="قائمة الدخل">Income statement</span></li><li><span class="g2" data-ar="قائمة الأرباح المحتجزة">Statement of retained earnings</span></li>
+  <li><span class="g2" data-ar="الميزانية العمومية">Balance sheet</span></li><li><span class="g2" data-ar="قائمة التدفقات النقدية">Statement of cash flows</span></li></ol>
   <details><summary>Answer</summary>
   <p><b>C</b>. Only the balance sheet is <i>at a point in time</i>. The other three are
-  <i>for a period of time</i>. This is a <span class="g" data-ar="مضمونة" data-x="يعني درجة أكيدة بتاخذها لو حفظتها، ما فيه لعب">guaranteed</span> mark if you
-  memorize it.</p></details>
+  <i>for a period of time</i>. This is a <span class="g" data-ar="مضمونة" data-x="يعني درجة أكيدة بتاخذها لو حفظتها، ما فيه لعب">guaranteed</span> <span class="g2" data-ar="درجة">mark</span> if you
+  <span class="g2" data-ar="تحفظ">memorize</span> it.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">2. A company reports revenues of $9,000 and expenses of $11,500. It also paid $500 of dividends. Net income (loss) is:</div>
-  <ol type="A"><li>Net income of $2,500</li><li>Net loss of $2,500</li>
+  <div class="stem">2. A company <span class="g2" data-ar="تُبلّغ عن">reports</span> <span class="g2" data-ar="إيرادات">revenues</span> of $9,000 and <span class="g2" data-ar="مصاريف">expenses</span> of $11,500. It also <span class="g2" data-ar="دفعت">paid</span> $500 of <span class="g2" data-ar="توزيعات أرباح">dividends</span>. <span class="g2" data-ar="صافي الدخل">Net income</span> (loss) is:</div>
+  <ol type="A"><li>Net income of $2,500</li><li><span class="g2" data-ar="صافي الخسارة">Net loss</span> of $2,500</li>
   <li>Net loss of $3,000</li><li>Net income of $3,000</li></ol>
   <details><summary>Answer</summary>
   <p><b>B</b>. <span class="mono">9,000 &minus; 11,500 = (2,500)</span> — a loss. Dividends
-  <b>never enter</b> the calculation of net income. Their place is the statement of retained earnings.
-  Choice <b>C</b> is the trap, because it also subtracts the $500.</p></details>
+  <b><span class="g2" data-ar="لا تدخل أبداً">never enter</span></b> the <span class="g2" data-ar="حساب">calculation</span> of net income. <span class="g2" data-ar="مكانها">Their place</span> is the statement of retained earnings.
+  <span class="g2" data-ar="الخيار">Choice</span> <b>C</b> is the <span class="g2" data-ar="فخ">trap</span>, because it also <span class="g2" data-ar="يطرح">subtracts</span> the $500.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">3. Beginning retained earnings is $12,000. Net income is $5,000 and dividends are $2,000. Ending retained earnings is:</div>
+  <div class="stem">3. <span class="g2" data-ar="بداية / الافتتاحية">Beginning</span> retained earnings is $12,000. Net income is $5,000 and dividends are $2,000. <span class="g2" data-ar="نهاية / الختامية">Ending</span> retained earnings is:</div>
   <ol type="A"><li>$19,000</li><li>$15,000</li><li>$9,000</li><li>$5,000</li></ol>
   <details><summary>Answer</summary>
   <p><b>B</b>. <span class="mono">12,000 + 5,000 &minus; 2,000 = 15,000</span>.
-  Add net income, then subtract dividends — in that order.</p></details>
+  <span class="g2" data-ar="أضف">Add</span> net income, then subtract dividends — <span class="g2" data-ar="بهذا الترتيب">in that order</span>.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">4. In what order must the statements be prepared?</div>
+  <div class="stem">4. In what <span class="g2" data-ar="ترتيب">order</span> must the statements be prepared?</div>
   <ol type="A">
     <li>Balance sheet → income statement → retained earnings → cash flows</li>
     <li>Income statement → retained earnings → balance sheet → cash flows</li>
     <li>Cash flows → balance sheet → income statement → retained earnings</li>
-    <li>Any order; they are independent</li>
+    <li>Any order; they are <span class="g2" data-ar="مستقلة">independent</span></li>
   </ol>
   <details><summary>Answer</summary>
-  <p><b>B</b>. Net income feeds retained earnings. Retained earnings feeds the balance sheet. Cash on the
-  balance sheet reconciles the statement of cash flows. Choice <b>D</b> is completely wrong, because the
-  statements interrelate.</p></details>
+  <p><b>B</b>. Net income <span class="g2" data-ar="يغذّي / يصبّ في">feeds</span> retained earnings. Retained earnings feeds the balance sheet. Cash on the
+  balance sheet <span class="g2" data-ar="يطابق">reconciles</span> the statement of cash flows. Choice <b>D</b> is <span class="g2" data-ar="تماماً">completely</span> <span class="g2" data-ar="خاطئ">wrong</span>, because the
+  statements <span class="g2" data-ar="تترابط">interrelate</span>.</p></details>
 </div>
 
 <div class="q">
-  <div class="stem">5. A shareholder invests $20,000 cash in the company. On the income statement this is reported as:</div>
-  <ol type="A"><li>Revenue of $20,000</li><li>An expense of $20,000</li>
+  <div class="stem">5. A <span class="g2" data-ar="مساهم">shareholder</span> <span class="g2" data-ar="يستثمر">invests</span> $20,000 cash in the company. On the income statement this is <span class="g2" data-ar="يُعرض / يُسجَّل">reported</span> as:</div>
+  <ol type="A"><li><span class="g2" data-ar="إيراد">Revenue</span> of $20,000</li><li>An <span class="g2" data-ar="مصروف">expense</span> of $20,000</li>
   <li>Net income of $20,000</li><li>It is not reported on the income statement</li></ol>
   <details><summary>Answer</summary>
-  <p><b>D</b>. Shareholder investments and dividends are not part of income. The investment appears in
-  Common Stock and in the financing activities section — not on the income statement.</p></details>
+  <p><b>D</b>. <span class="g2" data-ar="استثمارات المساهمين">Shareholder investments</span> and dividends <span class="g2" data-ar="ليست جزءاً من">are not part of</span> income. The <span class="g2" data-ar="الاستثمار">investment</span> <span class="g2" data-ar="يظهر">appears</span> in
+  <span class="g2" data-ar="الأسهم العادية">Common Stock</span> and in the <span class="g2" data-ar="الأنشطة التمويلية">financing activities</span> <span class="g2" data-ar="قسم">section</span> — not on the income statement.</p></details>
 </div>
 
-<h2 style="margin:40px 0 10px">Key accounting terms</h2>
+<h2 style="margin:40px 0 10px"><span class="g2" data-ar="الأساسية">Key</span> <span class="g2" data-ar="المصطلحات المحاسبية">accounting terms</span></h2>
 <table>
-  <tr><th>Term</th><th>What it means</th><th>Watch out for</th></tr>
-  <tr><td><b>Income statement</b></td><td>Revenues minus expenses for the period</td><td>Period · revenues then expenses</td></tr>
-  <tr><td><b>Statement of retained earnings</b></td><td>How retained earnings changed over the period</td><td>Period · dividends are subtracted here</td></tr>
-  <tr><td><b>Balance sheet</b></td><td>What the company owns and owes on one date</td><td><b>Point in time</b> — the only one</td></tr>
-  <tr><td><b>Statement of cash flows</b></td><td>Cash received and cash paid over the period</td><td>Period · three sections</td></tr>
-  <tr><td><b>Net income</b></td><td>What is left when revenues are larger than expenses</td><td>Revenues &gt; expenses</td></tr>
-  <tr><td><b>Net loss</b></td><td>What results when expenses are larger than revenues</td><td>Expenses &gt; revenues</td></tr>
-  <tr><td><b>Earnings</b> / <b>profit</b></td><td>Another name for net income</td><td>Same as net income</td></tr>
-  <tr><td><b>Retained earnings</b></td><td>All past income kept in the business, after dividends</td><td>Cumulative income &minus; dividends</td></tr>
-  <tr><td><b>Operating / Investing / Financing</b></td><td>The three parts of the cash flow statement</td><td>The three cash flow sections</td></tr>
+  <tr><th><span class="g2" data-ar="مصطلح">Term</span></th><th><span class="g2" data-ar="معناه">What it means</span></th><th><span class="g2" data-ar="انتبه لـ">Watch out for</span></th></tr>
+  <tr><td><b>Income statement</b></td><td><span class="g2" data-ar="الإيرادات">Revenues</span> <span class="g2" data-ar="ناقص">minus</span> <span class="g2" data-ar="المصاريف">expenses</span> for the <span class="g2" data-ar="الفترة">period</span></td><td>Period · revenues then expenses</td></tr>
+  <tr><td><b>Statement of retained earnings</b></td><td>How retained earnings <span class="g2" data-ar="تغيّرت">changed</span> <span class="g2" data-ar="خلال الفترة">over the period</span></td><td>Period · dividends are <span class="g2" data-ar="تُطرح">subtracted</span> here</td></tr>
+  <tr><td><b>Balance sheet</b></td><td>What the company <span class="g2" data-ar="تملك">owns</span> and <span class="g2" data-ar="عليها من ديون">owes</span> on one date</td><td><b><span class="g2" data-ar="لحظة زمنية">Point in time</span></b> — the only one</td></tr>
+  <tr><td><b>Statement of cash flows</b></td><td>Cash <span class="g2" data-ar="المستلَم">received</span> and cash <span class="g2" data-ar="المدفوع">paid</span> over the period</td><td>Period · three <span class="g2" data-ar="أقسام">sections</span></td></tr>
+  <tr><td><b>Net income</b></td><td>What is <span class="g2" data-ar="المتبقي">left</span> when revenues are <span class="g2" data-ar="أكبر من">larger than</span> expenses</td><td>Revenues &gt; expenses</td></tr>
+  <tr><td><b>Net loss</b></td><td>What <span class="g2" data-ar="ينتج">results</span> when expenses are larger than revenues</td><td>Expenses &gt; revenues</td></tr>
+  <tr><td><b>Earnings</b> / <b>profit</b></td><td><span class="g2" data-ar="اسم آخر">Another name</span> for net income</td><td>Same as net income</td></tr>
+  <tr><td><b>Retained earnings</b></td><td>All <span class="g2" data-ar="السابق">past</span> income <span class="g2" data-ar="المُحتفظ به">kept</span> in the <span class="g2" data-ar="الشركة / العمل">business</span>, after dividends</td><td><span class="g2" data-ar="التراكمي">Cumulative</span> income &minus; dividends</td></tr>
+  <tr><td><b>Operating / Investing / Financing</b></td><td>The three <span class="g2" data-ar="أجزاء">parts</span> of the cash flow statement</td><td>The three cash flow sections</td></tr>
 </table>
 
 <h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
@@ -455,11 +461,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 </table>
 
 <p class="note">
-Built from the textbook material in SmartBook — Chapter 1, section four, Financial Statements,
-objective <code>P2</code> and Exhibit 1.10 (pages 16–17). The numbers come from the FastForward
-example in the book.
-<br><b>Note:</b> some line items in the income statement and the balance sheet were rebuilt from the
-figures shown in the book. Check them against Exhibit 1.10 in your own textbook before the exam.
+<span class="g2" data-ar="مبنيّ على">Built from</span> the textbook <span class="g2" data-ar="المادة">material</span> in SmartBook — Chapter 1, section four, Financial Statements,
+objective <code>P2</code> and <span class="g2" data-ar="الشكل التوضيحي">Exhibit</span> 1.10 (<span class="g2" data-ar="صفحات">pages</span> 16–17). The numbers come from the FastForward
+<span class="g2" data-ar="مثال">example</span> in the book.
+<br><b>Note:</b> some <span class="g2" data-ar="البنود">line items</span> in the income statement and the balance sheet were <span class="g2" data-ar="أُعيد بناؤها">rebuilt</span> from the
+<span class="g2" data-ar="الأرقام">figures</span> shown in the book. <span class="g2" data-ar="راجع / تحقّق">Check</span> them <span class="g2" data-ar="قارنها بـ">against</span> Exhibit 1.10 in your own textbook before the exam.
 </p>
 
 
@@ -470,14 +476,14 @@ figures shown in the book. Check them against Exhibit 1.10 in your own textbook 
 </div>
 </div>
 <script>
-document.querySelectorAll('span.g').forEach(function(s){
+document.querySelectorAll('span.g, span.g2').forEach(function(s){
   var t=document.createElement('span'); t.className='ar';
   var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
   if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
   s.appendChild(t);
   s.addEventListener('click',function(e){
     e.stopPropagation();
-    document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
+    document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
     s.classList.toggle('on');
     if(s.classList.contains('on')){
       var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
@@ -488,7 +494,7 @@ document.querySelectorAll('span.g').forEach(function(s){
   });
 });
 document.addEventListener('click',function(){
-  document.querySelectorAll('span.g.on').forEach(function(o){o.classList.remove('on');});
+  document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
 });
 </script>
 </body>
