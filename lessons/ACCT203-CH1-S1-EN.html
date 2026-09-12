@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,141 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<style>
-:root{
-  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
-  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
-  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
-  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
-  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
-}}
-*{box-sizing:border-box}
-html{font-size:18px}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;
-  font-size:19px;line-height:1.85}
-.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
-bdi,.en{font-family:"IBM Plex Sans Arabic","Segoe UI",sans-serif;font-weight:600;unicode-bidi:isolate}
-code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
-h2{font-size:1.35rem;margin:0;line-height:1.5}
-header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
-.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
-.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;
-  margin:26px 0;overflow:hidden}
-.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
-.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
-.chead .ar{font-size:1.02rem;font-weight:600}
-.chead .say{font-size:.85rem;color:var(--muted)}
-.cbody{padding:6px 20px 20px}
-.blk{margin:18px 0}
-.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
-  padding:3px 9px;border-radius:3px;margin-bottom:8px;
-  background:var(--line);color:var(--ink2);unicode-bidi:isolate;direction:ltr}
-.hook{font-size:1.05rem;color:var(--ink2)}
-.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
-  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;
-  font-size:.98rem;line-height:1.75}
-.exam .lbl{background:var(--exam);color:#fff}
-.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
-  padding:14px 18px;border-radius:0 8px 8px 0}
-.trap .lbl{background:var(--trap);color:#fff}
-.trap ul{margin:8px 0 0;padding-inline-start:20px}
-.trap li{margin:7px 0}
-ul,ol{padding-inline-start:22px}
-li{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
-th{background:var(--accent-soft);text-align:start;padding:10px 12px;
-  border:1px solid var(--line);font-weight:600;font-size:.87rem}
-td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
-.q{background:var(--card);border:1px solid var(--line);border-radius:10px;
-  padding:18px 20px;margin:16px 0}
-.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
-.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
-.q ol li{margin:5px 0;font-weight:500}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
-details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
-.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;
-  padding:18px 20px;margin:26px 0}
-.big h2{color:var(--accent);margin-bottom:6px}
-.flow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0;direction:ltr}
-.flow div{flex:1;min-width:150px;background:var(--accent-soft);border:1px solid var(--line);
-  border-radius:8px;padding:12px;text-align:center;font-size:.9rem}
-.flow div b{display:block;font-size:1rem;margin-bottom:4px;color:var(--accent)}
-
-/* nav */
-.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
-.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
-  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:7px 15px;transition:.15s}
-.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
-.pill.home{color:var(--ink);}
-.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
-.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
-.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
-@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
-  .footnav .pill{justify-content:center}}
-.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
-@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
-.exhibit svg{display:block;margin:0 auto;max-width:100%;height:auto}
-.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;
-  letter-spacing:.03em;margin-bottom:6px}
-.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
-.excap b{color:var(--accent)}
-
-/* gloss + vocabulary */
-.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
-  padding-bottom:1px}
-.g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
-  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
-  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
-.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
-.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
-.g:hover .ar,.g.on .ar{display:block}
-.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
-.g2{border-bottom:1.5px dotted var(--muted);cursor:pointer;position:relative}
-.g2:hover,.g2.on{background:var(--accent-soft)}
-.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.92rem;font-weight:600;white-space:nowrap;
-  padding:6px 12px;border-radius:8px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3)}
-.g2:hover .ar,.g2.on .ar{display:block}
-.vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
-.vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
-.vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
-.vocab td.w{font-weight:700;color:var(--accent);white-space:nowrap}
-.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
-.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
-.vocab td.ex{color:var(--ink2);font-size:.9rem}
-.tiphint{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;
-  color:var(--ink2);margin:14px 0}
-
-/* LTR overrides — this page reads left to right */
-body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif}
-.exam,.q .stem,.q ol{direction:ltr;text-align:left}
-.chead .term{text-align:left}
-</style>
+<link rel="stylesheet" href="../assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 </head>
 <body>
 <div class="wrap">
 
-<div class="navbar">
-  <a class="pill home" href="../index.html">&#8592; Back to Yamen's Hub</a>
-  <a class="pill" href="ACCT203-CH1-S1.html">&#127462; النسخة العربية</a>
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S1.html">🇸🇦 عربي</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH1-S1">🃏 Practice</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
 </div>
-
-
-<header>
+<header class="lh">
   <h1>Chapter 1 — Importance of Accounting</h1>
   <p class="sub"><code>ACCT 203</code> · <span class="g2" data-ar="مبادئ">Principles</span> of Financial Accounting · Chapter 1: Accounting in Business<br>
   Section 1 of 4: Importance of Accounting — <span class="g2" data-ar="الهدف التعليمي">objective</span> <code>C1</code>:
@@ -154,12 +33,13 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   Here you meet them in English, because your book and your <span class="g2" data-ar="ورقة الاختبار">exam paper</span> are in English.</p>
   <p>Every <span class="g2" data-ar="مفهوم">concept</span> has a green <b>EXAM BOX</b>. That is the <span class="g2" data-ar="الصياغة، نص الكلام">wording</span> of the <span class="g2" data-ar="الكتاب المقرر">textbook</span>.
   That is what comes on the test. Read it <span class="g2" data-ar="بصوت عالٍ">out loud</span>.</p>
-  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--accent);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--gold);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
 </div>
 
 <!-- 1 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🔄</div>
     <div class="term">Accounting</div>
     <div class="say">Say it: uh-KOWN-ting · the whole <span class="g2" data-ar="نظام">system</span>, not only the <span class="g2" data-ar="السجلات">records</span></div>
   </div>
@@ -168,9 +48,10 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       Accounting is not "<span class="g2" data-ar="مسك الدفاتر">keeping books</span>". It is a full <b><span class="g2" data-ar="معلومات">information</span> system</b>. It <span class="g2" data-ar="يختار">picks</span> the <span class="g2" data-ar="الأحداث">events</span>
       that <span class="g2" data-ar="تهمّ">matter</span>, <span class="g2" data-ar="يسجّل">records</span> them, then <span class="g" data-ar="يوصّل، ينقل" data-x="يوصّل المعلومة للناس اللي يحتاجونها عشان ياخذون قرار">communicates</span> them
       to people who <span class="g2" data-ar="يجب عليهم">must</span> make a <span class="g2" data-ar="قرار">decision</span>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Three stations: an eye <span class="g2" data-ar="يلقط">spots</span> the event, a pen writes it, a mouth reports it. Bookkeeping is only the pen.</div></div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>The <span class="g2" data-ar="الكتاب المقرر">textbook</span> <span class="g2" data-ar="تعريف">definition</span>: accounting is an <b>information and <span class="g2" data-ar="قياس">measurement</span> system</b>.
+      <p>The <span class="g2" data-ar="الكتاب المقرر">textbook</span> <span class="g2" data-ar="تعريف">definition</span>: accounting is an <mark class="k"><b>information and <span class="g2" data-ar="قياس">measurement</span> system</b></mark>.
       It does three <span class="g2" data-ar="مهام، وظائف">jobs</span> on the <span class="g2" data-ar="أنشطة">activities</span> of a <span class="g2" data-ar="عمل تجاري، شركة">business</span>.</p>
       <div class="exhibit">
         <div class="exlbl">EXHIBIT 1.1 — Accounting Functions</div>
@@ -204,7 +85,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         it will look like this — three <span class="g2" data-ar="مربعات">boxes</span> with two <span class="g2" data-ar="أسهم">arrows</span> between them. <span class="g2" data-ar="احفظ">Memorize</span> the
         <b><span class="g2" data-ar="الترتيب">order</span></b> and the line under each box.</p>
       </div>
-      <p>The order matters: <b><span class="g2" data-ar="حدّد">identify</span> &#8594; record &#8594; communicate</b>. Any answer that
+      <p>The order matters: <mark class="k"><b><span class="g2" data-ar="حدّد">identify</span> &#8594; record &#8594; communicate</b></mark>. Any answer that
       <span class="g" data-ar="يعكس، يقلب" data-x="يقلب الترتيب بالعكس، يحط الآخر أول والأول آخر">reverses</span> the order is wrong.</p>
     </div>
 
@@ -222,7 +103,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">THE TRAP</span>
       <ul>
-        <li><b><span class="g2" data-ar="مسك السجلات">Recordkeeping</span></b> (<span class="g2" data-ar="يُسمّى أيضًا">also called</span> <b><span class="g2" data-ar="مسك الدفاتر">bookkeeping</span></b>) is <b>only one <span class="g2" data-ar="جزء">part</span></b> of accounting —
+        <li><b><span class="g2" data-ar="مسك السجلات">Recordkeeping</span></b> (<span class="g2" data-ar="يُسمّى أيضًا">also called</span> <b><span class="g2" data-ar="مسك الدفاتر">bookkeeping</span></b>) is <mark class="k"><b>only one <span class="g2" data-ar="جزء">part</span></b></mark> of accounting —
         the recording part. Accounting is <span class="g" data-ar="أوسع، أشمل" data-x="أوسع وأكبر، يشمل أشياء أكثر مو بس شي واحد">broader</span>.
         It also <span class="g2" data-ar="يشمل">includes</span> <span class="g2" data-ar="التحليل">analysis</span> and <span class="g" data-ar="التفسير" data-x="يعني تفهم وش وراء الأرقام وتشرحها، مو بس تقراها">interpretation</span>.</li>
         <li>Any <span class="g2" data-ar="خيار">choice</span> that says <b>accounting = recordkeeping</b> is <b><span class="g2" data-ar="دائمًا">always</span> wrong</b>.
@@ -236,6 +117,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- 2 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🚗</div>
     <div class="term">Financial vs Managerial Accounting</div>
     <div class="say">The most <span class="g2" data-ar="مهم">important</span> <span class="g2" data-ar="تقسيم، فرق">split</span> in this whole <span class="g2" data-ar="القسم">section</span> — <span class="g2" data-ar="احفظه">memorize</span> it</div>
   </div>
@@ -243,9 +125,10 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
       Same <span class="g2" data-ar="معلومات">information</span> — but who <span class="g2" data-ar="يستلمها">receives</span> it? People <b><span class="g2" data-ar="خارج">outside</span></b> the company, or people
       <b><span class="g2" data-ar="داخل">inside</span></b> it? That is the whole <span class="g2" data-ar="الفرق">difference</span>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>The company is a car: whoever holds the <span class="g2" data-ar="الدركسون">steering wheel</span> is internal (managerial). Everyone else, even employees, is external (financial).</div></div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>Accounting is called <b>the <span class="g2" data-ar="لغة">language</span> of <span class="g2" data-ar="الأعمال، التجارة">business</span></b>, because it <span class="g2" data-ar="يحمل">carries</span> <span class="g2" data-ar="بيانات">data</span> that helps
+      <p>Accounting is called <mark class="k"><b>the <span class="g2" data-ar="لغة">language</span> of <span class="g2" data-ar="الأعمال، التجارة">business</span></b></mark>, because it <span class="g2" data-ar="يحمل">carries</span> <span class="g2" data-ar="بيانات">data</span> that helps
       people <span class="g2" data-ar="يقرّرون">decide</span>. To <span class="g" data-ar="يصنّف" data-x="تحط الشي في خانته، تقول هذا من النوع الفلاني">classify</span> a <span class="g2" data-ar="مستخدم">user</span>, ask one question:
       does this person <span class="g2" data-ar="يدير">run</span> the <span class="g2" data-ar="المنظمة، المنشأة">organization</span>? The users split into two <span class="g2" data-ar="مجموعات">groups</span>.</p>
       <table>
@@ -288,11 +171,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">THE TRAP</span>
       <ul>
-        <li>Do not <span class="g2" data-ar="تبدّل بينهما">swap</span> them. <b>Financial = external</b>, <b>Managerial = internal</b>.
+        <li>Do not <span class="g2" data-ar="تبدّل بينهما">swap</span> them. <mark class="k"><b>Financial = external</b>, <b>Managerial = internal</b></mark>.
         <span class="g2" data-ar="اربطها">Link</span> it like this: a <b>manager</b> works <b>inside</b> the company &#8594; managerial = internal.</li>
-        <li><b>External auditors are external users</b>, <span class="g2" data-ar="رغم أنهم">even though</span> they work on the company.
+        <li><mark class="k"><b>External auditors are external users</b></mark>, <span class="g2" data-ar="رغم أنهم">even though</span> they work on the company.
         They are independent, so they do not run it.</li>
-        <li><b>Nonmanagerial employees are external</b>, even though they are employees!
+        <li><mark class="k"><b>Nonmanagerial employees are external</b></mark>, even though they are employees!
         They do not run the organization. This <span class="g2" data-ar="الفخ">trap</span> <span class="g2" data-ar="يتكرّر">comes back</span> <span class="g2" data-ar="مرارًا وتكرارًا">again and again</span>.</li>
         <li>Lenders = creditors. Shareholders = investors. The book uses each <span class="g2" data-ar="زوج، ثنائي">pair</span> for the same people.</li>
       </ul>
@@ -303,10 +186,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- 3 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">💼</div>
     <div class="term">Opportunities in Accounting</div>
     <div class="say">Where <span class="g2" data-ar="المحاسبون">accountants</span> <span class="g2" data-ar="فعليًا">actually</span> work</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>Jobs are a pizza cut in three: the biggest <span class="g2" data-ar="قطعة، شريحة">slice</span>, over half, is Private accounting. Public is just a <span class="g2" data-ar="ربع">quarter</span>.</div></div>
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>There are four <span class="g2" data-ar="مجالات">areas</span> of <span class="g" data-ar="الفرص، المجالات" data-x="فرص شغل ومجالات تقدر تدخلها وتشتغل فيها">opportunities</span>:
       <b>financial</b> · <b>managerial</b> · <b><span class="g2" data-ar="الضرائب">taxation</span></b> · <b><span class="g2" data-ar="متعلّق بالمحاسبة">accounting-related</span></b>.</p>
@@ -349,8 +234,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           </g>
         </svg>
         <p class="excap">Four <span class="g2" data-ar="فروع">branches</span> from one box. If a question gives you a <span class="g2" data-ar="وظيفة">job</span> and asks which area
-        it <span class="g2" data-ar="ينتمي إلى">belongs to</span>, this is your <span class="g2" data-ar="خريطتك">map</span>. <b><span class="g2" data-ar="محاسبة التكاليف">Cost accounting</span></b> and <b><span class="g2" data-ar="إعداد الميزانيات">Budgeting</span></b> <span class="g2" data-ar="تقع تحت">sit under</span>
-        <b>Managerial</b> — that is the <span class="g2" data-ar="الزوج، الثنائي">pair</span> students <span class="g2" data-ar="يخلطون بينها">mix up</span> most.</p>
+        it <span class="g2" data-ar="ينتمي إلى">belongs to</span>, this is your <span class="g2" data-ar="خريطتك">map</span>. <mark class="k"><b><span class="g2" data-ar="محاسبة التكاليف">Cost accounting</span></b> and <b><span class="g2" data-ar="إعداد الميزانيات">Budgeting</span></b> <span class="g2" data-ar="تقع تحت">sit under</span>
+        <b>Managerial</b></mark> — that is the <span class="g2" data-ar="الزوج، الثنائي">pair</span> students <span class="g2" data-ar="يخلطون بينها">mix up</span> most.</p>
       </div>
 
       <p>Now look at how the jobs are <span class="g2" data-ar="فعلاً">really</span> <span class="g2" data-ar="مقسّمة">split</span>:</p>
@@ -391,9 +276,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     </div>
     <div class="blk trap"><span class="lbl">THE TRAP</span>
       <ul>
-        <li><b>Private accounting is the largest (54%)</b>, not public accounting.
+        <li><mark class="k"><b>Private accounting is the largest (54%)</b></mark>, not public accounting.
         The question comes in this <span class="g2" data-ar="بالضبط">exact</span> <span class="g2" data-ar="الصيغة، الشكل">form</span> very <span class="g2" data-ar="كثيرًا">often</span>.</li>
-        <li><b>Public accounting</b> does not <span class="g2" data-ar="يعني">mean</span> "government". It means selling accounting
+        <li><b>Public accounting</b> <mark class="k">does not <span class="g2" data-ar="يعني">mean</span> "government"</mark>. It means selling accounting
         services to <span class="g2" data-ar="خارجيين">outside</span> clients.</li>
       </ul>
     </div>
@@ -403,10 +288,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- 4 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🩺</div>
     <div class="term">Data Analytics</div>
     <div class="say">Four <span class="g2" data-ar="أنواع">types</span> — two <span class="g2" data-ar="تنظر للماضي">look back</span>, two <span class="g2" data-ar="تنظر للمستقبل">look forward</span></div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>A doctor describes the <span class="g2" data-ar="الأعراض">symptoms</span>, diagnoses the cause, predicts what comes next, then <span class="g2" data-ar="يكتب وصفة">prescribes</span> a plan — same four words.</div></div>
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p><b>Data <span class="g2" data-ar="التحليلات">analytics</span></b> is the <span class="g2" data-ar="عملية">process</span> of <span class="g2" data-ar="تحليل">analyzing</span> <span class="g2" data-ar="البيانات">data</span> to find
       <span class="g" data-ar="ذو معنى، مفيد" data-x="له معنى ويفيدك، مو كلام أو أرقام فاضية">meaningful</span> <span class="g2" data-ar="علاقات">relationships</span> and
@@ -455,7 +342,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           </g>
         </svg>
         <p class="excap">The four are in <span class="g2" data-ar="ترتيب">order</span>. As you move to the right, both the
-        <b>difficulty</b> and the <b>value</b> <span class="g2" data-ar="ترتفع">go up</span>. The two on the left are about the
+        <mark class="k"><b>difficulty</b> and the <b>value</b> <span class="g2" data-ar="ترتفع">go up</span></mark>. The two on the left are about the
         <b>past</b>. The two on the right are about the <b>future</b>.
         This order <span class="g2" data-ar="بحد ذاته">itself</span> is a <span class="g2" data-ar="متكرّر">repeated</span> exam question.</p>
       </div>
@@ -467,10 +354,10 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     </div>
     <div class="blk trap"><span class="lbl">THE TRAP</span>
       <ul>
-        <li><b>Past:</b> Descriptive + Diagnostic. <b>Future:</b> Predictive + Prescriptive.
+        <li><mark class="k"><b>Past:</b> Descriptive + Diagnostic</mark>. <mark class="k"><b>Future:</b> Predictive + Prescriptive</mark>.
         This is the most <span class="g2" data-ar="شائع">common</span> question here.</li>
-        <li>Descriptive vs Diagnostic: the first says <b>what</b> happened, the second says
-        <b>why</b> it happened.</li>
+        <li>Descriptive vs Diagnostic: <mark class="k">the first says <b>what</b> happened, the second says
+        <b>why</b> it happened</mark>.</li>
         <li>Predictive vs Prescriptive: the first <b>predicts</b>, the second
         <span class="g" data-ar="يوصي، ينصح بـ" data-x="ينصحك ويقول لك سوّ كذا، هذا الأحسن لك">recommends</span> a <span class="g2" data-ar="خطة">plan</span>.</li>
       </ul>
@@ -572,6 +459,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <tr><td>Data visualization</td><td>Showing data in <span class="g2" data-ar="رسومي">graphical</span> form</td><td>Its famous tool is Tableau</td></tr>
 </table>
 
+<div class="cta"><div><div class="t">🃏 Practice this lesson's words</div><div class="s">Flashcards with sound. A few minutes now beats an hour before the exam.</div></div><div><button class="pill gold" data-deck="ACCT203-CH1-S1">Start</button> <button class="pill" data-deck="ACCT203-CH1-S1" data-mode="ar">Arabic → English</button></div></div>
 <h2 style="margin:40px 0 10px"><span class="g2" data-ar="المفردات">Vocabulary</span> from this lesson</h2>
 <p class="sub" style="margin-bottom:6px">These are the <span class="g2" data-ar="العامة">general</span> English words, not the accounting terms.
 Learn them so you can read the textbook and the exam paper <span class="g2" data-ar="بنفسك">on your own</span>.</p>
@@ -617,27 +505,8 @@ Business Transactions and Accounting · Financial Statements.
   <div class="side"><a class="pill" href="ACCT203-CH1-S2-EN.html">2. Fundamentals of Accounting &#8594;</a></div>
 </div>
 </div>
-<script>
-document.querySelectorAll('span.g, span.g2').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar';
-  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
-  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
-  s.appendChild(t);
-  s.addEventListener('click',function(e){
-    e.stopPropagation();
-    document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
-    s.classList.toggle('on');
-    if(s.classList.contains('on')){
-      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
-      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
-      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
-      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
-    }
-  });
-});
-document.addEventListener('click',function(){
-  document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
-});
-</script>
+<script src="../data/cards-S1.js"></script>
+<script src="../assets/flashcards.js"></script>
+<script src="../assets/lesson.js"></script>
 </body>
 </html>

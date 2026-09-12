@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,133 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<style>
-:root{
-  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
-  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
-  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
-  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
-  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
-}}
-*{box-sizing:border-box}
-html{font-size:18px}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:19px;line-height:1.85}
-.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
-bdi{font-weight:600;unicode-bidi:isolate}
-code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
-h2{font-size:1.35rem;margin:0;line-height:1.5}
-header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
-.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
-.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
-.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
-.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
-.chead .ar{font-size:1.02rem;font-weight:600}
-.chead .say{font-size:.85rem;color:var(--muted)}
-.cbody{padding:6px 20px 20px}
-.blk{margin:18px 0}
-.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
-  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
-  unicode-bidi:isolate;direction:ltr}
-.hook{font-size:1.05rem;color:var(--ink2)}
-.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
-  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
-.exam .lbl{background:var(--exam);color:#fff}
-.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
-  padding:14px 18px;border-radius:0 8px 8px 0}
-.trap .lbl{background:var(--trap);color:#fff}
-.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
-ul,ol{padding-inline-start:22px} li{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
-th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
-td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
-.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
-.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
-.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
-.q ol li{margin:5px 0;font-weight:500}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
-details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
-.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
-.big h2{color:var(--accent);margin-bottom:6px}
-.eq{direction:ltr;text-align:center;background:var(--card);border:2px solid var(--accent);
-  border-radius:10px;padding:22px 16px;margin:18px 0;font-family:Georgia,serif;overflow-x:auto}
-.eq .l1{font-size:clamp(1.1rem,3.4vw,1.6rem);font-weight:700;letter-spacing:.01em}
-.eq .l2{font-size:clamp(.85rem,2.6vw,1.15rem);margin-top:14px;color:var(--ink2)}
-.eq .plus{color:var(--muted)}
-.g-cs{color:#0f7b6c} .g-dv{color:#a4342a} .g-rv{color:#1b5e9c} .g-ex{color:#8a5a00}
-.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
-@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
-.exhibit table{margin:0;font-size:.9rem;color:#1a1a1a}
-.exhibit th{background:#f0ece6;color:#1a1a1a;border-color:#d8d3cb;text-align:center}
-.exhibit td{border-color:#d8d3cb;text-align:center}
-.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;margin-bottom:6px}
-.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
-.pos{color:#0f7b6c;font-weight:700} .neg{color:#a4342a;font-weight:700}
-
-/* nav */
-.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
-.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
-  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:7px 15px;transition:.15s}
-.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
-.pill.home{color:var(--ink);}
-.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
-.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
-.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
-@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
-  .footnav .pill{justify-content:center}}
-.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-
-.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
-  padding-bottom:1px}
-.g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
-  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
-  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
-.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
-.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
-.g:hover .ar,.g.on .ar{display:block}
-.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
-.g2{border-bottom:1.5px dotted var(--muted);cursor:pointer;position:relative}
-.g2:hover,.g2.on{background:var(--accent-soft)}
-.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.92rem;font-weight:600;white-space:nowrap;
-  padding:6px 12px;border-radius:8px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3)}
-.g2:hover .ar,.g2.on .ar{display:block}
-.vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
-.vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
-.vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
-.vocab td.w{font-weight:700;color:var(--accent);white-space:nowrap}
-.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
-.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
-.vocab td.ex{color:var(--ink2);font-size:.9rem}
-.tiphint{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;
-  color:var(--ink2);margin:14px 0}
-
-body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif}
-.exam,.q .stem,.q ol{direction:ltr;text-align:left}
-</style>
+<link rel="stylesheet" href="../assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 </head>
 <body>
 <div class="wrap">
 
-<div class="navbar">
-  <a class="pill home" href="../index.html">&#8592; Back to Yamen's Hub</a>
-  <a class="pill" href="ACCT203-CH1-S3.html">&#127462; النسخة العربية</a>
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S3.html">🇸🇦 عربي</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH1-S3">🃏 Practice</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
 </div>
-
-
-<header>
+<header class="lh">
   <h1>Chapter 1 &mdash; Business Transactions and the Accounting Equation</h1>
   <p class="sub"><code>ACCT 203</code> &middot; Chapter 1 &middot; Section 3 of 4:
   Business Transactions and Accounting<br>
@@ -146,12 +33,13 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   is <span class="g2" data-ar="مبني على">built on</span> one <span class="g2" data-ar="معادلة">equation</span>. If you <span class="g2" data-ar="تفهم">understand</span> it now, the rest of the <span class="g2" data-ar="الفصل">chapter</span> is easy.</p>
   <p>You <span class="g2" data-ar="من قبل">already</span> met these <span class="g2" data-ar="أفكار">ideas</span> in Arabic. This page gives you the same ideas in English,
   because your <span class="g2" data-ar="الكتاب المقرر">textbook</span> and your <span class="g2" data-ar="الاختبار">exam</span> are in English.</p>
-  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--accent);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--gold);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
 </div>
 
 <!-- The three components -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🏠</div>
     <div class="term">Assets · Liabilities · Equity</div>
     <div class="say">The three <span class="g2" data-ar="مكوّنات">components</span> of the equation</div>
   </div>
@@ -159,6 +47,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
       <span class="g2" data-ar="المحاسبة">Accounting</span> <span class="g2" data-ar="تُظهر / تبيّن">shows</span> only two things: <b>what the company <span class="g2" data-ar="تملك">owns</span></b>, and
       <b>who has a <span class="g" data-ar="مُطالبة / حق" data-x="يعني حق أحد في أصول الشركة، سواء صاحبها أو اللي داينها">claim</span> on it</b>. That is all.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Picture a 1M house: 600k bank loan, 400k your cash. House = asset, loan = liability, your cash = equity.</div></div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>Accounting shows two sides of a company. One side is the
@@ -173,13 +62,13 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <tr><th><span class="g2" data-ar="المكوّن">Component</span></th><th><span class="g2" data-ar="التعريف">Definition</span></th><th><span class="g2" data-ar="أمثلة">Examples</span> from the book</th></tr>
         <tr>
           <td><b>Assets</b></td>
-          <td>Resources a company <b>owns or <span class="g2" data-ar="تسيطر عليها">controls</span></b>. They are <span class="g2" data-ar="من المتوقَّع">expected</span> to
+          <td>Resources a company <mark class="k"><b>owns or <span class="g2" data-ar="تسيطر عليها">controls</span></b></mark>. They are <span class="g2" data-ar="من المتوقَّع">expected</span> to
               <span class="g" data-ar="يُحقّق / يُنتج" data-x="يعني يطلع لك فايدة أو نتيجة بعدين، مو الحين">yield</span> <b><span class="g2" data-ar="مستقبلية">future</span> <span class="g2" data-ar="منافع">benefits</span></b>.</td>
           <td>cash &middot; <span class="g2" data-ar="مستلزمات">supplies</span> &middot; <span class="g2" data-ar="معدّات">equipment</span> &middot; <span class="g2" data-ar="أرض">land</span> &middot; <span class="g2" data-ar="ذمم مدينة">accounts receivable</span></td>
         </tr>
         <tr>
           <td><b>Liabilities</b></td>
-          <td><b><span class="g2" data-ar="الدائنين">Creditors'</span></b> claims on assets. They are company
+          <td><mark class="k"><b><span class="g2" data-ar="الدائنين">Creditors'</span></b> claims</mark> on assets. They are company
               <span class="g" data-ar="التزامات / تعهّدات" data-x="شي لازم الشركة تسويه أو تدفعه للناس، ما لها خيار">obligations</span> to <span class="g2" data-ar="توفّر / تقدّم">provide</span> assets,
               <span class="g2" data-ar="منتجات">products</span>, or <span class="g2" data-ar="خدمات">services</span> to others.</td>
           <td><span class="g2" data-ar="أجور مستحقة الدفع">wages payable</span> &middot; <span class="g2" data-ar="ذمم دائنة">accounts payable</span> &middot; <span class="g2" data-ar="أوراق دفع (قروض)">notes (loans) payable</span> &middot;
@@ -187,7 +76,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         </tr>
         <tr>
           <td><b>Equity</b></td>
-          <td>The <b>owner's</b> claim on assets. It <span class="g2" data-ar="يساوي">equals</span> <b>assets <span class="g2" data-ar="ناقص">minus</span> liabilities</b>.</td>
+          <td>The <b>owner's</b> claim on assets. It <span class="g2" data-ar="يساوي">equals</span> <mark class="k"><b>assets <span class="g2" data-ar="ناقص">minus</span> liabilities</b></mark>.</td>
           <td><span class="g2" data-ar="تُسمّى أيضًا">also called</span> <i><span class="g2" data-ar="صافي الأصول">net assets</span></i> or
               <i><span class="g" data-ar="متبقٍّ / ما تبقّى" data-x="اللي يبقى لصاحب الشركة بعد ما تشيل الديون كلها">residual</span> equity</i></td>
         </tr>
@@ -195,8 +84,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
       <p><b>Two words you must know:</b></p>
       <ul>
-        <li><b><span class="g2" data-ar="مستحق القبض">Receivable</span></b> = an asset that <span class="g2" data-ar="يَعِد بـ">promises</span> a future
-            <span class="g" data-ar="تدفّق داخل" data-x="يعني فلوس داخلة للشركة، جاية لها مو طالعة منها">inflow</span>. A company that gives a service
+        <li><b><span class="g2" data-ar="مستحق القبض">Receivable</span></b> = <mark class="k">an asset that <span class="g2" data-ar="يَعِد بـ">promises</span> a future
+            <span class="g" data-ar="تدفّق داخل" data-x="يعني فلوس داخلة للشركة، جاية لها مو طالعة منها">inflow</span></mark>. A company that gives a service
             or a product <i><span class="g2" data-ar="بالأجل / على الحساب">on credit</span></i> gets an <i>account receivable</i> from the <span class="g2" data-ar="العميل">customer</span>.</li>
         <li><b><span class="g2" data-ar="مستحق الدفع">Payable</span></b> = a <span class="g2" data-ar="التزام">liability</span> that promises a future
             <span class="g" data-ar="تدفّق خارج" data-x="يعني فلوس طالعة من الشركة، تدفعها لغيرها">outflow</span>.</li>
@@ -229,10 +118,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- The equation -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">⚖️</div>
     <div class="term">The Accounting Equation</div>
     <div class="say"><span class="g2" data-ar="احفظها">Memorize</span> it now — do not <span class="g2" data-ar="تُكمل">continue</span> before you know it <span class="g2" data-ar="عن ظهر قلب">by heart</span></div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div><span class="g2" data-ar="تخيّل">Picture</span> a <span class="g2" data-ar="ميزان">scale</span>: assets on one <span class="g2" data-ar="كفّة">pan</span>, liabilities plus equity on the other. Whenever you look, both pans are <span class="g2" data-ar="متساويين">level</span>.</div></div>
     <div class="eq">
       <div class="l1">Assets <span class="plus">=</span> Liabilities <span class="plus">+</span> Equity</div>
     </div>
@@ -240,7 +131,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>This <span class="g2" data-ar="العلاقة">relation</span> <span class="g" data-ar="ينطبق على / يسري على" data-x="القاعدة تمشي على كل الحالات، ما فيه حالة تطلع منها">applies</span> to
       <b>all <span class="g2" data-ar="المعاملات">transactions</span> and <span class="g2" data-ar="الأحداث">events</span></b>. It applies to <b>all companies and <span class="g2" data-ar="المنظمات">organizations</span></b>.
-      And it applies at <b>all <span class="g2" data-ar="النقاط الزمنية">points in time</span></b>. There is no
+      And it applies at <mark class="k"><b>all <span class="g2" data-ar="النقاط الزمنية">points in time</span></b></mark>. There is no
       <span class="g" data-ar="استثناء" data-x="حالة تطلع من القاعدة وما تمشي عليها، هنا ما فيه ولا وحدة">exception</span>.</p>
       <p>You can also <span class="g" data-ar="يُعاد ترتيبها" data-x="تغيّر ترتيب أطراف المعادلة، تنقل شي من جهة لجهة والمعنى نفسه">rearrange</span> it.
       <span class="g2" data-ar="مثال">Example</span> from the book: <span class="mono">Assets − Liabilities = Equity</span></p>
@@ -264,9 +155,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <i><span class="g2" data-ar="الأرباح المحتجزة">Retained earnings</span></i> is the <span class="g2" data-ar="الدخل">income</span> the company
       <span class="g" data-ar="احتفظت به / أبقته" data-x="يعني خلّت الربح عندها وما وزّعته على الملاك">retained</span> <span class="g2" data-ar="بدلًا من">instead of</span> <span class="g2" data-ar="توزيعه على الملاك">paying it out</span>.</p>
 
-      <p><span class="g2" data-ar="حقوق الملكية">Equity</span> <b><span class="g2" data-ar="تزيد">increases</span></b> from owner <span class="g2" data-ar="استثمارات">investments</span>, also called <span class="g2" data-ar="الأسهم">stock</span>
+      <p><span class="g2" data-ar="حقوق الملكية">Equity</span> <mark class="k"><b><span class="g2" data-ar="تزيد">increases</span></b> from owner <span class="g2" data-ar="استثمارات">investments</span></mark>, also called <span class="g2" data-ar="الأسهم">stock</span>
       <span class="g" data-ar="إصدار" data-x="يعني الشركة تطلّع أسهم جديدة وتبيعها للملاك مقابل فلوس">issuances</span>, and from <span class="g2" data-ar="الإيرادات">revenues</span>.
-      Equity <b><span class="g2" data-ar="تنقص">decreases</span></b> from <span class="g2" data-ar="توزيعات الأرباح">dividends</span> and from <span class="g2" data-ar="المصروفات">expenses</span>.</p>
+      Equity <mark class="k"><b><span class="g2" data-ar="تنقص">decreases</span></b> from <span class="g2" data-ar="توزيعات الأرباح">dividends</span> and from <span class="g2" data-ar="المصروفات">expenses</span></mark>.</p>
 
       <table>
         <tr><th><span class="g2" data-ar="الجزء">Part</span></th><th><span class="g2" data-ar="الإشارة">Sign</span></th><th><span class="g2" data-ar="التعريف">Definition</span></th></tr>
@@ -285,7 +176,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <tr><td><b class="g-rv">Revenues</b></td>
             <td class="pos">+</td>
             <td>They increase equity (<span class="g2" data-ar="من خلال">through</span> <i><span class="g2" data-ar="صافي الدخل">net income</span></i>) from
-                <b>selling <span class="g2" data-ar="منتجات">products</span> and <span class="g2" data-ar="خدمات">services</span> to <span class="g2" data-ar="العملاء">customers</span></b>.
+                <mark class="k"><b>selling <span class="g2" data-ar="منتجات">products</span> and <span class="g2" data-ar="خدمات">services</span> to <span class="g2" data-ar="العملاء">customers</span></b></mark>.
                 Examples: product <span class="g2" data-ar="مبيعات">sales</span>, <span class="g2" data-ar="استشارات">consulting</span> services, <span class="g2" data-ar="تأجير المرافق">facility rentals</span>, <span class="g2" data-ar="عمولات">commissions</span>.</td></tr>
         <tr><td><b class="g-ex">Expenses</b></td>
             <td class="neg">−</td>
@@ -326,32 +217,34 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- Transactions -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🤝</div>
     <div class="term">Transactions and Events</div>
     <div class="say">What <span class="g2" data-ar="فعليًا">actually</span> <span class="g2" data-ar="يحرّك">moves</span> the equation</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>Picture a handshake between two shops: external. A worker opening his own shop's pens: internal. A fire, no handshake: event.</div></div>
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <table>
         <tr><th><span class="g2" data-ar="النوع">Type</span></th><th><span class="g2" data-ar="التعريف">Definition</span></th><th><span class="g2" data-ar="مثال">Example</span> from the book</th></tr>
         <tr><td><b><span class="g2" data-ar="خارجية">External</span> <span class="g2" data-ar="معاملات">transactions</span></b></td>
-            <td>An <span class="g2" data-ar="تبادل">exchange</span> of <span class="g2" data-ar="قيمة">value</span> <b>between two <span class="g" data-ar="كيان / جهة" data-x="كل طرف لحاله، شركة أو شخص أو جهة مستقلة عن غيرها">entities</span></b>.
+            <td>An <span class="g2" data-ar="تبادل">exchange</span> of <span class="g2" data-ar="قيمة">value</span> <mark class="k"><b>between two <span class="g" data-ar="كيان / جهة" data-x="كل طرف لحاله، شركة أو شخص أو جهة مستقلة عن غيرها">entities</span></b></mark>.
                 They <span class="g2" data-ar="دائمًا">always</span> <span class="g2" data-ar="تُسبّب">cause</span> <b>a <span class="g2" data-ar="تغيير">change</span> in the accounting equation</b>.</td>
             <td>Apple sells an AppleCare Protection Plan</td></tr>
         <tr><td><b><span class="g2" data-ar="داخلية">Internal</span> transactions</b></td>
-            <td>An exchange <b>inside the same entity</b>. It <b><span class="g2" data-ar="قد أو قد لا">may or may not</span>
-                <span class="g" data-ar="يؤثّر على" data-x="يعني يسوي فيه فرق ويغيّره، يخلي المعادلة تتحرك">affect</span></b> the equation.</td>
+            <td>An exchange <b>inside the same entity</b>. It <mark class="k"><b><span class="g2" data-ar="قد أو قد لا">may or may not</span>
+                <span class="g" data-ar="يؤثّر على" data-x="يعني يسوي فيه فرق ويغيّره، يخلي المعادلة تتحرك">affect</span></b></mark> the equation.</td>
             <td>Target uses its own <span class="g2" data-ar="مستلزمات">supplies</span> — <span class="g2" data-ar="تُسجَّل">recorded</span> as an <span class="g2" data-ar="مصروف">expense</span> when used</td></tr>
         <tr><td><b><span class="g2" data-ar="أحداث">Events</span></b></td>
-            <td><span class="g2" data-ar="وقائع">Happenings</span> that affect the equation and <b>can be
+            <td><span class="g2" data-ar="وقائع">Happenings</span> that affect the equation and <mark class="k"><b>can be
                 <span class="g" data-ar="يُقاس" data-x="يعني تقدر تحطه برقم واضح، كم يساوي بالضبط">measured</span>
-                <span class="g" data-ar="بموثوقية / بشكل موثوق" data-x="يعني بشكل تقدر تعتمد عليه، رقم مضبوط مو تخمين">reliably</span></b>.</td>
+                <span class="g" data-ar="بموثوقية / بشكل موثوق" data-x="يعني بشكل تقدر تعتمد عليه، رقم مضبوط مو تخمين">reliably</span></b></mark>.</td>
             <td><span class="g2" data-ar="القيمة السوقية">market value</span> changes in some assets and liabilities &middot;
                 a <span class="g2" data-ar="حريق">fire</span> that <span class="g2" data-ar="يُتلف">damages</span> assets and <span class="g2" data-ar="يُسبّب">creates</span> <span class="g2" data-ar="خسائر">losses</span></td></tr>
       </table>
       <p>The book uses the equation to <span class="g2" data-ar="يحلّل">analyze</span> <b>11 transactions and events</b> for
       FastForward. FastForward is a new <span class="g2" data-ar="استشارية">consulting</span> company, so it is a <span class="g2" data-ar="شركة خدمات">service company</span>.
       The <span class="g2" data-ar="التحليل">analysis</span> <span class="g2" data-ar="يغطي">covers</span> its <b>first month</b> of <span class="g2" data-ar="العمليات / النشاط">operations</span>.</p>
-      <p style="background:var(--exam-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      <p style="background:var(--ok-soft);padding:12px 16px;border-radius:8px;font-weight:600">
       The <span class="g2" data-ar="القاعدة الذهبية">golden rule</span>: <b>after every transaction and every event, assets always <span class="g2" data-ar="تساوي">equal</span>
       liabilities plus equity.</b> If the two sides are not equal, your analysis has a <span class="g2" data-ar="خطأ">mistake</span>.</p>
     </div>
@@ -359,7 +252,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk"><span class="lbl">EXAMPLE 1 — INVESTMENT BY OWNER</span>
       <p>On December 1, Chas Taylor <span class="g2" data-ar="أسّس">started</span> a consulting company called FastForward.
       He <span class="g2" data-ar="أسّسها">set it up</span> as a <span class="g2" data-ar="شركة مساهمة">corporation</span>. He <span class="g2" data-ar="استثمر">invested</span> <b>$30,000</b> cash in the new company
-      <b><span class="g2" data-ar="مقابل">in return for</span> its <span class="g2" data-ar="الأسهم العادية">common stock</span></b>. He put the cash in a <span class="g2" data-ar="حساب بنكي">bank account</span> in the
+      <mark class="k"><b><span class="g2" data-ar="مقابل">in return for</span> its <span class="g2" data-ar="الأسهم العادية">common stock</span></b></mark>. He put the cash in a <span class="g2" data-ar="حساب بنكي">bank account</span> in the
       company's name.</p>
       <p>After the transaction: cash (an asset) = $30,000, and equity = $30,000.
       The <span class="g2" data-ar="الزيادة">increase</span> came from the owner's <span class="g2" data-ar="استثمار">investment</span>, a stock <span class="g2" data-ar="إصدار">issuance</span>.
@@ -471,6 +364,7 @@ If you <span class="g2" data-ar="تخطئ في">miss</span> question 2 or 3, <sp
   <tr><td><b>Events</b></td><td><span class="g2" data-ar="وقائع">Happenings</span> that affect the equation</td><td>must be <span class="g2" data-ar="قابلة للقياس بموثوقية">reliably measurable</span></td></tr>
 </table>
 
+<div class="cta"><div><div class="t">🃏 Practice this lesson's words</div><div class="s">Flashcards with sound. A few minutes now beats an hour before the exam.</div></div><div><button class="pill gold" data-deck="ACCT203-CH1-S3">Start</button> <button class="pill" data-deck="ACCT203-CH1-S3" data-mode="ar">Arabic → English</button></div></div>
 <h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
 <p class="sub" style="margin-bottom:8px">These are the <span class="g2" data-ar="العامة">general</span> English words on this page, not the
 accounting terms. Learn them and the textbook gets much <span class="g2" data-ar="أسهل">easier</span> to read.</p>
@@ -568,27 +462,8 @@ analysis, objective <code>P1</code>). That needs a second <span class="g2" data-
 </div>
 </div>
 
-<script>
-document.querySelectorAll('span.g, span.g2').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar';
-  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
-  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
-  s.appendChild(t);
-  s.addEventListener('click',function(e){
-    e.stopPropagation();
-    document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
-    s.classList.toggle('on');
-    if(s.classList.contains('on')){
-      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
-      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
-      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
-      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
-    }
-  });
-});
-document.addEventListener('click',function(){
-  document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
-});
-</script>
+<script src="../data/cards-S3.js"></script>
+<script src="../assets/flashcards.js"></script>
+<script src="../assets/lesson.js"></script>
 </body>
 </html>

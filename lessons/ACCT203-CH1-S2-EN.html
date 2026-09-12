@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,130 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<style>
-:root{
-  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
-  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
-  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
-  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
-  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
-}}
-*{box-sizing:border-box}
-html{font-size:18px}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:19px;line-height:1.85}
-.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
-bdi{font-weight:600;unicode-bidi:isolate}
-code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
-h2{font-size:1.35rem;margin:0;line-height:1.5}
-header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
-.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
-.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
-.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
-.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
-.chead .ar{font-size:1.02rem;font-weight:600}
-.chead .say{font-size:.85rem;color:var(--muted)}
-.cbody{padding:6px 20px 20px}
-.blk{margin:18px 0}
-.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
-  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
-  unicode-bidi:isolate;direction:ltr}
-.hook{font-size:1.05rem;color:var(--ink2)}
-.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
-  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
-.exam .lbl{background:var(--exam);color:#fff}
-.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
-  padding:14px 18px;border-radius:0 8px 8px 0}
-.trap .lbl{background:var(--trap);color:#fff}
-.trap ul{margin:8px 0 0;padding-inline-start:20px}
-.trap li{margin:7px 0}
-ul,ol{padding-inline-start:22px} li{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
-th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
-td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
-.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
-.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
-.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
-.q ol li{margin:5px 0;font-weight:500}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
-details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
-.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
-.big h2{color:var(--accent);margin-bottom:6px}
-.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
-@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
-.exhibit svg{display:block;margin:0 auto;max-width:100%;height:auto}
-.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;margin-bottom:6px}
-.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
-.excap b{color:var(--accent)}
-
-/* nav */
-.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
-.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
-  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:7px 15px;transition:.15s}
-.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
-.pill.home{color:var(--ink);}
-.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
-.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
-.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
-@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
-  .footnav .pill{justify-content:center}}
-.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-.ksa{background:var(--exam-soft);border-inline-start:4px solid var(--exam);padding:14px 18px;
-  border-radius:0 8px 8px 0;margin:18px 0}
-
-/* gloss + vocabulary */
-.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
-  padding-bottom:1px}
-.g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
-  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
-  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
-.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
-.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
-.g:hover .ar,.g.on .ar{display:block}
-.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
-.g2{border-bottom:1.5px dotted var(--muted);cursor:pointer;position:relative}
-.g2:hover,.g2.on{background:var(--accent-soft)}
-.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.92rem;font-weight:600;white-space:nowrap;
-  padding:6px 12px;border-radius:8px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3)}
-.g2:hover .ar,.g2.on .ar{display:block}
-.vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
-.vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
-.vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
-.vocab td.w{font-weight:700;color:var(--accent);white-space:nowrap}
-.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
-.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
-.vocab td.ex{color:var(--ink2);font-size:.9rem}
-.tiphint{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;
-  color:var(--ink2);margin:14px 0}
-
-/* LTR overrides — this page reads left to right */
-body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif}
-.exam,.q .stem,.q ol{direction:ltr;text-align:left}
-</style>
+<link rel="stylesheet" href="../assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 </head>
 <body>
 <div class="wrap">
 
-<div class="navbar">
-  <a class="pill home" href="../index.html">&#8592; Back to Yamen's Hub</a>
-  <a class="pill" href="ACCT203-CH1-S2.html">&#127462; النسخة العربية</a>
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S2.html">🇸🇦 عربي</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH1-S2">🃏 Practice</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
 </div>
-
-
-<header>
+<header class="lh">
   <h1>Chapter 1 — Fundamentals of Accounting</h1>
   <p class="sub"><code>ACCT 203</code> &middot; Chapter 1 &middot; Section 2 of 4:
   <b>Fundamentals of Accounting</b><br>
@@ -144,12 +34,13 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   how companies stop them), and <b><span class="g2" data-ar="معايير المحاسبة">accounting standards</span></b> (GAAP and IFRS).</p>
   <p>The <span class="g2" data-ar="الرابط، العلاقة">link</span> between them is simple. Numbers are <span class="g2" data-ar="مفيدة">useful</span> only when people <span class="g2" data-ar="يثقون بها">trust</span> them. Trust needs
   three things: good ethics, clear <span class="g2" data-ar="قواعد">rules</span>, and <span class="g2" data-ar="رقابة">control</span>.</p>
-  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--accent);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--gold);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
 </div>
 
 <!-- Ethics -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">⚖️</div>
     <div class="term">Ethics</div>
     <div class="say">say it: ETH-iks</div>
   </div>
@@ -157,10 +48,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk hook"><span class="lbl">ONE-LINE IDEA</span><br>
       Accounting <span class="g2" data-ar="المعلومات">information</span> has <span class="g2" data-ar="قيمة">value</span> only when people <span class="g2" data-ar="يثقون به">trust</span> it. That trust starts with the <span class="g2" data-ar="أخلاق">ethics</span>
       of the person who wrote the numbers.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Picture the accountant holding a <span class="g2" data-ar="ميزان">scale</span>: every number goes on it. If it <span class="g2" data-ar="يميل">tips</span>, people see and stop trusting.</div></div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p><b>Ethics</b> are <span class="g2" data-ar="معتقدات">beliefs</span> that <span class="g" data-ar="تفصل بين" data-x="يعني تفرّق بين شيئين وتعرف هذا صح وهذا غلط">separate</span> <span class="g2" data-ar="الصواب">right</span> from
-      <span class="g2" data-ar="الخطأ">wrong</span>. They are <span class="g2" data-ar="مقبولة">accepted</span> <span class="g2" data-ar="معايير">standards</span> of good and bad
+      <p><b>Ethics</b> are <span class="g2" data-ar="معتقدات">beliefs</span> that <span class="g" data-ar="تفصل بين" data-x="يعني تفرّق بين شيئين وتعرف هذا صح وهذا غلط">separate</span> <mark class="k"><span class="g2" data-ar="الصواب">right</span> from
+      <span class="g2" data-ar="الخطأ">wrong</span></mark>. They are <mark class="k"><span class="g2" data-ar="مقبولة">accepted</span> <span class="g2" data-ar="معايير">standards</span></mark> of good and bad
       <span class="g" data-ar="السلوك، التصرّف" data-x="تصرفاتك، يعني الطريقة اللي تتعامل وتتصرف فيها مع الناس">behavior</span>.</p>
       <p>An <span class="g2" data-ar="المحاسب">accountant</span> <span class="g2" data-ar="يواجه">faces</span> <span class="g2" data-ar="خيارات أخلاقية">ethical choices</span> while <span class="g2" data-ar="إعداد">preparing</span> <span class="g2" data-ar="التقارير المالية">financial reports</span>. Those choices
       <span class="g" data-ar="تؤثّر على" data-x="يعني يغيّر في الشي ويأثّر عليه، زي قرارك يأثّر على الراتب">affect</span> <span class="g2" data-ar="الموظف">employee</span> <span class="g2" data-ar="الأجر، الراتب">pay</span> and <span class="g2" data-ar="المكافآت">bonuses</span>. They affect <span class="g2" data-ar="ما إذا">whether</span>
@@ -193,7 +85,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <span class="g2" data-ar="تحلّل">analyze</span> the <span class="g2" data-ar="الخيارات">options</span> and think about all the
       <span class="g" data-ar="العواقب، النتائج" data-x="اللي يصير بعدين بسبب قرارك، النتايج اللي تطلع منه">consequences</span>. Then you <span class="g2" data-ar="تقرّر">decide</span>.
       If a question gives you a <span class="g2" data-ar="قصة، موقف">story</span> and asks &laquo;what comes next?&raquo;, go back to this order:
-      <b>identify &rarr; analyze &rarr; decide</b>.</p>
+      <mark class="k"><b>identify &rarr; analyze &rarr; decide</b></mark>.</p>
     </div>
 
     <div class="blk exam"><span class="lbl">EXAM BOX</span>
@@ -207,6 +99,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- Fraud triangle -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🔺</div>
     <div class="term">The Fraud Triangle</div>
     <div class="say">three sides — <span class="g2" data-ar="احفظ">memorize</span> all three</div>
   </div>
@@ -214,6 +107,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk hook"><span class="lbl">ONE-LINE IDEA</span><br>
       A person does not <span class="g" data-ar="يرتكب، يقوم بـ" data-x="يعني يسوي الغلطة أو الجريمة فعلاً، مو بس يفكر فيها">commit</span> <span class="g2" data-ar="الاحتيال، الغش">fraud</span> for one <span class="g2" data-ar="سبب">reason</span>.
       Three <span class="g2" data-ar="عوامل">factors</span> must <span class="g2" data-ar="تجتمع">come together</span>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Picture a real triangle: pull out one side (opportunity, pressure, or rationalization) and it collapses, taking the fraud with it.</div></div>
 
     <div class="exhibit">
       <div class="exlbl">The Fraud Triangle</div>
@@ -236,7 +130,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <table>
         <tr><th>Side</th><th>What it means</th></tr>
         <tr><td><b>Opportunity</b></td>
-            <td>The person <b>can</b> <span class="g2" data-ar="يغشّ">cheat</span>, and the <span class="g2" data-ar="خطر، احتمال">risk</span> of <span class="g2" data-ar="أن يُمسَك">getting caught</span> is low.</td></tr>
+            <td>The person <b>can</b> <span class="g2" data-ar="يغشّ">cheat</span>, and <mark class="k">the <span class="g2" data-ar="خطر، احتمال">risk</span> of <span class="g2" data-ar="أن يُمسَك">getting caught</span> is low</mark>.</td></tr>
         <tr><td><b>Pressure</b></td>
             <td>Money problems or <span class="g2" data-ar="شخصية">personal</span> problems <span class="g2" data-ar="تدفع">push</span> the person to cheat.</td></tr>
         <tr><td><b>Rationalization</b></td>
@@ -244,18 +138,18 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
             This side is also called <b><span class="g2" data-ar="الموقف، النزعة">attitude</span></b>.</td></tr>
       </table>
       <p>The <span class="g2" data-ar="المفتاح، الأساس">key</span> to <span class="g2" data-ar="إيقاف">stopping</span> fraud is <b><span class="g" data-ar="المنع، منع الغش قبل وقوعه" data-x="يعني توقف الغش قبل ما يصير أصلاً، مو تكتشفه بعدين">prevention</span></b>.
-      Prevention is <span class="g2" data-ar="أرخص">cheaper</span> and more <span class="g" data-ar="فعّال، مؤثّر" data-x="يعني يشتغل صح ويجيب نتيجة، مو مجرد كلام">effective</span> than
-      <span class="g" data-ar="الكشف بعد وقوع الغش" data-x="تكتشف الغش بعد ما صار وخلص، مو قبله">detection</span>.</p>
+      <mark class="k">Prevention is <span class="g2" data-ar="أرخص">cheaper</span> and more <span class="g" data-ar="فعّال، مؤثّر" data-x="يعني يشتغل صح ويجيب نتيجة، مو مجرد كلام">effective</span> than
+      <span class="g" data-ar="الكشف بعد وقوع الغش" data-x="تكتشف الغش بعد ما صار وخلص، مو قبله">detection</span></mark>.</p>
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>To stop fraud, companies <span class="g2" data-ar="تبني، تنشئ">build</span> <b><span class="g2" data-ar="الرقابة الداخلية">internal controls</span></b>. Internal controls are
-      <span class="g" data-ar="إجراءات، خطوات عمل منظّمة" data-x="خطوات مرتبة لازم تمشي عليها عشان الشغل يصير صح">procedures</span> that <span class="g2" data-ar="تحمي">protect</span> <span class="g2" data-ar="الأصول">assets</span>,
+      <mark class="k"><span class="g" data-ar="إجراءات، خطوات عمل منظّمة" data-x="خطوات مرتبة لازم تمشي عليها عشان الشغل يصير صح">procedures</span> that <span class="g2" data-ar="تحمي">protect</span> <span class="g2" data-ar="الأصول">assets</span></mark>,
       make the accounting reliable, <span class="g" data-ar="تعزّز، ترفع" data-x="يعني يزيد الشي ويقويه ويخليه أحسن، زي الكفاءة هنا">promote</span> <span class="g2" data-ar="الكفاءة">efficiency</span>,
       and <span class="g" data-ar="تطبّق وتلتزم بـ" data-x="يعني تطبّق القوانين وتمشي عليها وما تكسرها">uphold</span> company <span class="g2" data-ar="سياسات">policies</span>.</p>
       <p><span class="g2" data-ar="أمثلة">Examples</span>: good <span class="g2" data-ar="سجلات">records</span> &middot; <span class="g2" data-ar="مادية، ملموسة">physical</span> controls such as <span class="g2" data-ar="أقفال">locks</span> &middot;
       <span class="g" data-ar="مستقل، من طرف محايد" data-x="من واحد برا ما له علاقة، عشان يكون محايد وما يجامل">independent</span> <span class="g2" data-ar="مراجعات">reviews</span> of the records.</p>
-      <p><b><span class="g2" data-ar="المدققون، المراجعون">Auditors</span></b> <span class="g" data-ar="يتحققون من" data-x="يعني يتأكد إنه الشي صحيح فعلاً، مو بس يصدق الكلام">verify</span> the <span class="g2" data-ar="الفعالية">effectiveness</span> of
+      <p><b><span class="g2" data-ar="المدققون، المراجعون">Auditors</span></b> <mark class="k"><span class="g" data-ar="يتحققون من" data-x="يعني يتأكد إنه الشي صحيح فعلاً، مو بس يصدق الكلام">verify</span> the <span class="g2" data-ar="الفعالية">effectiveness</span></mark> of
       these internal controls.</p>
     </div>
 
@@ -284,6 +178,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- GAAP -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">📏</div>
     <div class="term">GAAP &middot; FASB &middot; SEC</div>
     <div class="say">most <span class="g2" data-ar="اختيار من متعدد">multiple-choice</span> questions come from here</div>
   </div>
@@ -291,21 +186,22 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk hook"><span class="lbl">ONE-LINE IDEA</span><br>
       If every company used its own <span class="g2" data-ar="طريقة">method</span>, nobody could <span class="g2" data-ar="يقارن">compare</span> them. So we need one <span class="g2" data-ar="مجموعة قواعد">set of rules</span>,
       one <span class="g2" data-ar="هيئة، جهة">body</span> to write them, and one body to <span class="g2" data-ar="تفرض تطبيقها">enforce</span> them.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Picture GAAP as one <span class="g2" data-ar="مسطرة">ruler</span> for everyone: the FASB made the ruler; the SEC is the government police <span class="g2" data-ar="تفرض تطبيقه">enforcing</span> it.</div></div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p><span class="g2" data-ar="المحاسبة المالية">Financial accounting</span> is <span class="g" data-ar="محكومة بـ، تخضع لـ" data-x="يعني محكومة بقوانين وتمشي عليها، مو كل واحد على كيفه">governed</span> by
       <span class="g2" data-ar="مفاهيم">concepts</span> and rules called <b><span class="g2" data-ar="مبادئ المحاسبة المقبولة عموماً">generally accepted accounting principles</span> (GAAP)</b>.</p>
       <p>GAAP wants accounting information to have two <span class="g2" data-ar="صفات، خصائص">qualities</span>:</p>
       <ul>
-        <li><b><span class="g2" data-ar="الملاءمة">Relevance</span></b> — the information can change the <span class="g2" data-ar="قرار">decision</span> of the <span class="g2" data-ar="المستخدم">user</span>.</li>
+        <li><b><span class="g2" data-ar="الملاءمة">Relevance</span></b> — the information <mark class="k">can change the <span class="g2" data-ar="قرار">decision</span></mark> of the <span class="g2" data-ar="المستخدم">user</span>.</li>
         <li><b><span class="g2" data-ar="التمثيل الصادق">Faithful representation</span></b> — the information
-        <span class="g" data-ar="تعكس، تصوّر" data-x="يعني يوريك الحقيقة زي ما هي، مثل المراية بالضبط">reflects</span> the <span class="g2" data-ar="النتائج الحقيقية">real results</span> of the business.</li>
+        <mark class="k"><span class="g" data-ar="تعكس، تصوّر" data-x="يعني يوريك الحقيقة زي ما هي، مثل المراية بالضبط">reflects</span> the <span class="g2" data-ar="النتائج الحقيقية">real results</span></mark> of the business.</li>
       </ul>
       <table>
         <tr><th>Body</th><th>Its <span class="g2" data-ar="دور">role</span></th></tr>
         <tr><td><b>FASB</b><br><span style="font-size:.82rem;color:var(--muted)">Financial Accounting Standards Board</span></td>
-            <td><b><span class="g2" data-ar="تضع، تحدّد">Sets</span></b> GAAP. It <span class="g2" data-ar="تتلقى">receives</span> that
-            <span class="g" data-ar="السلطة، الصلاحية" data-x="يعني لك الحق تقرر وتسوي القوانين، وأحد فوقك عطاك هالحق">authority</span> <b>from the SEC</b>.</td></tr>
+            <td><mark class="k"><b><span class="g2" data-ar="تضع، تحدّد">Sets</span></b> GAAP. It <span class="g2" data-ar="تتلقى">receives</span> that
+            <span class="g" data-ar="السلطة، الصلاحية" data-x="يعني لك الحق تقرر وتسوي القوانين، وأحد فوقك عطاك هالحق">authority</span> <b>from the SEC</b></mark>.</td></tr>
         <tr><td><b>SEC</b><br><span style="font-size:.82rem;color:var(--muted)">Securities and Exchange Commission</span></td>
             <td>A <b>U.S. <span class="g2" data-ar="جهة حكومية">government agency</span></b>. It
             <span class="g" data-ar="تشرف على، تراقب" data-x="تراقب من فوق وتتأكد إنه الشركات ماشية على القوانين صح">oversees</span> the
@@ -322,8 +218,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       between <span class="g2" data-ar="التقارير المالية">financial reports</span>. So the <b>IASB</b> (International Accounting Standards Board)
       <span class="g" data-ar="يُصدر" data-x="يعني يطلّع القوانين وينشرها رسمي عشان الكل يمشي عليها">issues</span> <b>IFRS</b> (International Financial Reporting
       Standards).</p>
-      <p>IFRS is <span class="g" data-ar="مشابه، قريب من" data-x="يعني يشبهه وقريب منه، بس مو نفس الشي بالضبط">similar</span> to U.S. GAAP, but <span class="g2" data-ar="أحياناً">sometimes</span>
-      <span class="g2" data-ar="مختلف">different</span>. The FASB and the IASB work together to <span class="g2" data-ar="تقليل">reduce</span> the <span class="g2" data-ar="الاختلافات">differences</span>.</p>
+      <p>IFRS is <mark class="k"><span class="g" data-ar="مشابه، قريب من" data-x="يعني يشبهه وقريب منه، بس مو نفس الشي بالضبط">similar</span> to U.S. GAAP, but <span class="g2" data-ar="أحياناً">sometimes</span>
+      <span class="g2" data-ar="مختلف">different</span></mark>. The FASB and the IASB work together to <span class="g2" data-ar="تقليل">reduce</span> the <span class="g2" data-ar="الاختلافات">differences</span>.</p>
     </div>
 
     <div class="ksa">
@@ -360,13 +256,15 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- Conceptual framework -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🏛️</div>
     <div class="term">The Conceptual Framework</div>
     <div class="say">four parts, top to bottom</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>Picture a four-layer <span class="g2" data-ar="هرم">pyramid</span>: objective on top, qualities under it, elements next, rules for when and how at the <span class="g2" data-ar="القاعدة">base</span>.</div></div>
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>The FASB <span class="g2" data-ar="الإطار المفاهيمي">conceptual framework</span>
-      <span class="g" data-ar="يتكوّن من، يتألف من" data-x="يعني متكوّن من كذا جزء، لو جمعتهم طلع لك الشي كامل">consists of</span> four parts:</p>
+      <span class="g" data-ar="يتكوّن من، يتألف من" data-x="يعني متكوّن من كذا جزء، لو جمعتهم طلع لك الشي كامل">consists of</span> <mark class="k">four parts</mark>:</p>
       <table>
         <tr><th>Part</th><th>What it does</th></tr>
         <tr><td><b><span class="g2" data-ar="الأهداف">Objectives</span></b></td>
@@ -376,8 +274,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <tr><td><b><span class="g2" data-ar="العناصر">Elements</span></b></td>
             <td>To <span class="g2" data-ar="تعريف، تحديد">define</span> the <span class="g2" data-ar="البنود">items</span> that <span class="g2" data-ar="تظهر">appear</span> in the <span class="g2" data-ar="القوائم المالية">financial statements</span></td></tr>
         <tr><td><b><span class="g2" data-ar="الاعتراف">Recognition</span> and <span class="g2" data-ar="القياس">measurement</span></b></td>
-            <td>To set the rules for <b>when</b> an item is <span class="g2" data-ar="يُسجَّل">recorded</span> and <b>how</b> it is
-            <span class="g2" data-ar="يُقاس">measured</span></td></tr>
+            <td>To set the rules for <mark class="k"><b>when</b> an item is <span class="g2" data-ar="يُسجَّل">recorded</span> and <b>how</b> it is
+            <span class="g2" data-ar="يُقاس">measured</span></mark></td></tr>
       </table>
     </div>
 
@@ -396,9 +294,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <text x="230" y="204" font-size="11" font-weight="400">Recognition and measurement</text>
         </g>
       </svg>
-      <p class="excap">The <span class="g2" data-ar="الترتيب">order</span> from <span class="g2" data-ar="من الأعلى إلى الأسفل">top to bottom</span>: <b>Objectives</b>, then
+      <p class="excap">The <span class="g2" data-ar="الترتيب">order</span> from <span class="g2" data-ar="من الأعلى إلى الأسفل">top to bottom</span>: <mark class="k"><b>Objectives</b>, then
       <b>Qualitative characteristics</b>, then <b>Elements</b> and
-      <b>Recognition and measurement</b>.</p>
+      <b>Recognition and measurement</b></mark>.</p>
     </div>
   </div>
 </div>
@@ -495,6 +393,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <tr><td><b>Audit</b></td><td>An examination of the financial statements</td><td>Checks that GAAP was applied</td></tr>
 </table>
 
+<div class="cta"><div><div class="t">🃏 Practice this lesson's words</div><div class="s">Flashcards with sound. A few minutes now beats an hour before the exam.</div></div><div><button class="pill gold" data-deck="ACCT203-CH1-S2">Start</button> <button class="pill" data-deck="ACCT203-CH1-S2" data-mode="ar">Arabic → English</button></div></div>
 <h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
 <p class="sub" style="margin-bottom:8px">These are the general English words, not the accounting
 terms. Learn them and the textbook becomes much easier to read.</p>
@@ -543,27 +442,8 @@ session with the book.
   <div class="side"><a class="pill" href="ACCT203-CH1-S3-EN.html">3. Business Transactions and the Accounting Equation &#8594;</a></div>
 </div>
 </div>
-<script>
-document.querySelectorAll('span.g, span.g2').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar';
-  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
-  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
-  s.appendChild(t);
-  s.addEventListener('click',function(e){
-    e.stopPropagation();
-    document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
-    s.classList.toggle('on');
-    if(s.classList.contains('on')){
-      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
-      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
-      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
-      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
-    }
-  });
-});
-document.addEventListener('click',function(){
-  document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
-});
-</script>
+<script src="../data/cards-S2.js"></script>
+<script src="../assets/flashcards.js"></script>
+<script src="../assets/lesson.js"></script>
 </body>
 </html>

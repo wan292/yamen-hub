@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,106 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<style>
-:root{
-  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
-  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
-  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
-  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
-  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
-}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;
-  font-size:17px;line-height:1.85}
-.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
-bdi,.en{font-family:"IBM Plex Sans Arabic","Segoe UI",sans-serif;font-weight:600;unicode-bidi:isolate}
-code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
-h2{font-size:1.35rem;margin:0;line-height:1.5}
-header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
-.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
-.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;
-  margin:26px 0;overflow:hidden}
-.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
-.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
-.chead .ar{font-size:1.02rem;font-weight:600}
-.chead .say{font-size:.85rem;color:var(--muted)}
-.cbody{padding:6px 20px 20px}
-.blk{margin:18px 0}
-.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
-  padding:3px 9px;border-radius:3px;margin-bottom:8px;
-  background:var(--line);color:var(--ink2);unicode-bidi:isolate;direction:ltr}
-.hook{font-size:1.05rem;color:var(--ink2)}
-.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
-  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;
-  font-size:.98rem;line-height:1.75}
-.exam .lbl{background:var(--exam);color:#fff}
-.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
-  padding:14px 18px;border-radius:0 8px 8px 0}
-.trap .lbl{background:var(--trap);color:#fff}
-.trap ul{margin:8px 0 0;padding-inline-start:20px}
-.trap li{margin:7px 0}
-ul,ol{padding-inline-start:22px}
-li{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
-th{background:var(--accent-soft);text-align:start;padding:10px 12px;
-  border:1px solid var(--line);font-weight:600;font-size:.87rem}
-td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
-.q{background:var(--card);border:1px solid var(--line);border-radius:10px;
-  padding:18px 20px;margin:16px 0}
-.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
-.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
-.q ol li{margin:5px 0;font-weight:500}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
-details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
-.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;
-  padding:18px 20px;margin:26px 0}
-.big h2{color:var(--accent);margin-bottom:6px}
-.flow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0;direction:ltr}
-.flow div{flex:1;min-width:150px;background:var(--accent-soft);border:1px solid var(--line);
-  border-radius:8px;padding:12px;text-align:center;font-size:.9rem}
-.flow div b{display:block;font-size:1rem;margin-bottom:4px;color:var(--accent)}
-
-/* nav */
-.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
-.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
-  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:7px 15px;transition:.15s}
-.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
-.pill.home{color:var(--ink);}
-.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
-.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
-.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
-@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
-  .footnav .pill{justify-content:center}}
-.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
-@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
-.exhibit svg{display:block;margin:0 auto;max-width:100%;height:auto}
-.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;
-  letter-spacing:.03em;margin-bottom:6px}
-.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
-.excap b{color:var(--accent)}
-</style>
+<link rel="stylesheet" href="../assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 </head>
 <body>
 <div class="wrap">
 
-<div class="navbar">
-  <a class="pill home" href="../index.html">→ الرجوع إلى Yamen's Hub</a>
-  <a class="pill" href="ACCT203-CH1-S1-EN.html">🇬🇧 النسخة الإنجليزية</a>
-  <a class="pill" href="../index.html#notes">كل الملخصات</a>
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S1-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH1-S1">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
 </div>
-
-
-<header>
+<header class="lh">
   <h1>الفصل الأول — أهمية المحاسبة</h1>
   <p class="sub"><code>ACCT 203</code> · مبادئ المحاسبة المالية · <bdi>Chapter 1: Accounting in Business</bdi><br>
   القسم الأول من أربعة: <bdi>Importance of Accounting</bdi> — الهدف <code>C1</code>:
@@ -124,6 +38,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- 1 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🔄</div>
     <div class="term">Accounting</div>
     <div class="ar">المحاسبة</div>
     <div class="say">النطق: أكاونتينج</div>
@@ -131,9 +46,10 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   <div class="cbody">
     <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
       المحاسبة مو «مسك دفاتر». هي <b>نظام معلومات</b> كامل: يختار الأحداث المهمة، يسجّلها، ثم يوصّلها لناس تاخذ فيها قرار.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل ثلاث محطات ورا بعض: عين تلقط الحدث، قلم يكتبه، وفم يقوله لصاحب القرار — الدفتر بس المحطة الثانية.</div></div>
 
     <div class="blk"><span class="lbl">الشرح</span>
-      <p>تعريف الكتاب: المحاسبة <b>نظام معلومات وقياس</b> — <bdi>information and measurement system</bdi> — يقوم بثلاث وظائف على أنشطة المنشأة:</p>
+      <p>تعريف الكتاب: المحاسبة <b>نظام معلومات وقياس</b> — <mark class="k"><bdi>information and measurement system</bdi></mark> — يقوم بثلاث وظائف على أنشطة المنشأة:</p>
       <div class="exhibit">
         <div class="exlbl">EXHIBIT 1.1 — Accounting Functions</div>
         <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -165,7 +81,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
         <p class="excap">هذي هي <b>Exhibit 1.1</b> اللي في الكتاب. لو جاك سؤال بصورة، بيكون بهذا الشكل —
         ثلاث خانات بسهمين بينها. احفظ <b>الترتيب</b> والكلمة تحت كل خانة.</p>
       </div>
-      <p>الترتيب مهم: <bdi>identify → record → communicate</bdi>. أي سؤال يعكس الترتيب = غلط.</p>
+      <p>الترتيب مهم: <mark class="k"><bdi>identify → record → communicate</bdi></mark>. أي سؤال يعكس الترتيب = غلط.</p>
     </div>
 
     <div class="blk"><span class="lbl">مثال محلي</span>
@@ -181,7 +97,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 
     <div class="blk trap"><span class="lbl">الفخ</span>
       <ul>
-        <li><b><bdi>Recordkeeping</bdi></b> (وتُسمّى <b><bdi>bookkeeping</bdi></b>) هي <b>جزء واحد فقط</b> من المحاسبة — جزء التسجيل. المحاسبة أوسع: تشمل <bdi>analysis</bdi> و<bdi>interpretation</bdi>.</li>
+        <li><b><bdi>Recordkeeping</bdi></b> (وتُسمّى <b><bdi>bookkeeping</bdi></b>) هي <mark class="k"><b>جزء واحد فقط</b></mark> من المحاسبة — جزء التسجيل. المحاسبة أوسع: تشمل <bdi>analysis</bdi> و<bdi>interpretation</bdi>.</li>
         <li>أي اختيار يقول <bdi>accounting = recordkeeping</bdi> → <b>غلط دائماً</b>. هذا أكثر فخ في القسم.</li>
         <li><bdi>bookkeeping</bdi> و<bdi>recordkeeping</bdi> نفس الشي — لا تظنهم مختلفين.</li>
       </ul>
@@ -192,6 +108,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- 2 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🚗</div>
     <div class="term">Financial vs Managerial Accounting</div>
     <div class="ar">المحاسبة المالية مقابل المحاسبة الإدارية</div>
     <div class="say">أهم تفريق في القسم كله — احفظه</div>
@@ -199,9 +116,10 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   <div class="cbody">
     <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
       نفس المعلومة، لكن لمين تروح؟ لناس <b>برّا</b> الشركة، ولا لناس <b>داخلها</b>؟ هذا كل الفرق.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل الشركة سيارة: اللي ماسك الدركسون (المدير) = Internal = Managerial. الركاب وناس الشارع — حتى الموظف العادي — External = Financial.</div></div>
 
     <div class="blk"><span class="lbl">الشرح</span>
-      <p>المحاسبة تُسمّى <b><bdi>the language of business</bdi></b> — لغة الأعمال، لأنها توصّل بيانات تساعد الناس يقررون. ومستخدمو المعلومة ينقسمون مجموعتين:</p>
+      <p>المحاسبة تُسمّى <mark class="k"><b><bdi>the language of business</bdi></b></mark> — لغة الأعمال، لأنها توصّل بيانات تساعد الناس يقررون. ومستخدمو المعلومة ينقسمون مجموعتين:</p>
       <table>
         <tr><th>&nbsp;</th><th><bdi>External users</bdi></th><th><bdi>Internal users</bdi></th></tr>
         <tr><td><b>مين هم</b></td><td>ما يديرون المنشأة، ووصولهم للمعلومة <b>محدود</b></td><td><b>يديرون</b> المنشأة مباشرة</td></tr>
@@ -233,9 +151,9 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 
     <div class="blk trap"><span class="lbl">الفخ</span>
       <ul>
-        <li>لا تعكسهم. <b><bdi>Financial</bdi> = خارجي</b>، <b><bdi>Managerial</bdi> = داخلي</b>. اربطها هكذا: <bdi>Manager</bdi> يشتغل <b>جوّه</b> الشركة → <bdi>Managerial</bdi> = داخلي.</li>
-        <li><b><bdi>External auditors</bdi> مستخدمون خارجيون</b> — رغم إنهم يشتغلون على الشركة. لأنهم مستقلون <bdi>independent</bdi>، ما يديرونها.</li>
-        <li><b><bdi>Nonmanagerial employees</bdi> خارجيون</b> — رغم إنهم موظفون! لأنهم ما يديرون المنشأة. هذا فخ متكرر.</li>
+        <li>لا تعكسهم. <mark class="k"><b><bdi>Financial</bdi> = خارجي</b>، <b><bdi>Managerial</bdi> = داخلي</b></mark>. اربطها هكذا: <bdi>Manager</bdi> يشتغل <b>جوّه</b> الشركة → <bdi>Managerial</bdi> = داخلي.</li>
+        <li><mark class="k"><b><bdi>External auditors</bdi> مستخدمون خارجيون</b></mark> — رغم إنهم يشتغلون على الشركة. لأنهم مستقلون <bdi>independent</bdi>، ما يديرونها.</li>
+        <li><mark class="k"><b><bdi>Nonmanagerial employees</bdi> خارجيون</b></mark> — رغم إنهم موظفون! لأنهم ما يديرون المنشأة. هذا فخ متكرر.</li>
         <li><bdi>Lenders</bdi> = <bdi>creditors</bdi> · <bdi>Shareholders</bdi> = <bdi>investors</bdi>. المصطلحان مترادفان في الكتاب.</li>
       </ul>
     </div>
@@ -245,10 +163,12 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- 3 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">💼</div>
     <div class="term">Opportunities in Accounting</div>
     <div class="ar">مجالات العمل في المحاسبة</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل بيتزا الوظائف مقسومة ثلاث قطع: أكبر قطعة — أكثر من النص — Private يعني موظف داخل شركة؛ Public بس ربع.</div></div>
     <div class="blk"><span class="lbl">الشرح</span>
       <p>أربعة مجالات: <b><bdi>financial</bdi></b> · <b><bdi>managerial</bdi></b> ·
       <b><bdi>taxation</bdi></b> · <b><bdi>accounting-related</bdi></b>.</p>
@@ -291,7 +211,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
           </g>
         </svg>
         <p class="excap">أربعة فروع من صندوق واحد. لو السؤال أعطاك وظيفة وسألك تحت أي مجال تقع،
-        هذي هي الخريطة. <b>Cost accounting</b> و<b>Budgeting</b> تحت <b>Managerial</b> —
+        هذي هي الخريطة. <mark class="k"><b>Cost accounting</b> و<b>Budgeting</b> تحت <b>Managerial</b></mark> —
         وهذا أكثر واحد ينخلط.</p>
       </div>
 
@@ -332,8 +252,8 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
     </div>
     <div class="blk trap"><span class="lbl">الفخ</span>
       <ul>
-        <li><b><bdi>Private accounting</bdi> هي الأكبر (54%)</b>، مو <bdi>public accounting</bdi>. السؤال يجي كثير بهذي الصيغة.</li>
-        <li><bdi>Public accounting</bdi> ما تعني «حكومي» — تعني تقديم خدمات محاسبية لعملاء خارجيين.</li>
+        <li><mark class="k"><b><bdi>Private accounting</bdi> هي الأكبر (54%)</b></mark>، مو <bdi>public accounting</bdi>. السؤال يجي كثير بهذي الصيغة.</li>
+        <li><bdi>Public accounting</bdi> <mark class="k">ما تعني «حكومي»</mark> — تعني تقديم خدمات محاسبية لعملاء خارجيين.</li>
       </ul>
     </div>
   </div>
@@ -342,10 +262,12 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- 4 -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🩺</div>
     <div class="term">Data Analytics</div>
     <div class="ar">تحليل البيانات</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل دكتور: يوصف الأعراض (Descriptive)، يشخّص السبب (Diagnostic)، يتوقّع وش بيصير (Predictive)، ويكتب الوصفة (Prescriptive) — الأولين ماضي والآخرين مستقبل.</div></div>
     <div class="blk"><span class="lbl">الشرح</span>
       <p><bdi>Data analytics</bdi> = عملية تحليل البيانات لاكتشاف علاقات واتجاهات ذات معنى. أربعة أنواع، وتترتب بالصعوبة والقيمة:</p>
       <table>
@@ -382,7 +304,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
             <text x="384" y="224">future</text><text x="502" y="224">future</text>
           </g>
         </svg>
-        <p class="excap">الأربعة مرتّبة: كل ما رحت يمين، <b>الصعوبة</b> و<b>القيمة</b> يزيدان.
+        <p class="excap">الأربعة مرتّبة: كل ما رحت يمين، <mark class="k"><b>الصعوبة</b> و<b>القيمة</b> يزيدان</mark>.
         الاثنان على اليسار عن <b>الماضي</b>، والاثنان على اليمين عن <b>المستقبل</b>.
         هذا الترتيب نفسه سؤال متكرر.</p>
       </div>
@@ -392,8 +314,8 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
     </div>
     <div class="blk trap"><span class="lbl">الفخ</span>
       <ul>
-        <li><b>ماضي:</b> <bdi>Descriptive</bdi> + <bdi>Diagnostic</bdi>. <b>مستقبل:</b> <bdi>Predictive</bdi> + <bdi>Prescriptive</bdi>. أكثر سؤال هنا.</li>
-        <li>الفرق بين <bdi>Descriptive</bdi> و<bdi>Diagnostic</bdi>: الأول يقول <b>وش صار</b>، والثاني يقول <b>ليش صار</b>.</li>
+        <li><mark class="k"><b>ماضي:</b> <bdi>Descriptive</bdi> + <bdi>Diagnostic</bdi></mark>. <mark class="k"><b>مستقبل:</b> <bdi>Predictive</bdi> + <bdi>Prescriptive</bdi></mark>. أكثر سؤال هنا.</li>
+        <li>الفرق بين <bdi>Descriptive</bdi> و<bdi>Diagnostic</bdi>: <mark class="k">الأول يقول <b>وش صار</b>، والثاني يقول <b>ليش صار</b></mark>.</li>
         <li>الفرق بين <bdi>Predictive</bdi> و<bdi>Prescriptive</bdi>: الأول <b>يتوقّع</b>، والثاني <b>يوصي بخطة</b>.</li>
       </ul>
     </div>
@@ -472,6 +394,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   ثم <bdi>government and not-for-profit</bdi> = 22%. كثير يظن الجواب <bdi>public</bdi> لأنه الأشهر — وهذا الفخ.</p></details>
 </div>
 
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH1-S1">ابدأ</button> <button class="pill" data-deck="ACCT203-CH1-S1" data-mode="ar">عربي ← إنجليزي</button></div></div>
 <h2 style="margin:40px 0 10px">قائمة المصطلحات — احفظها بالإنجليزي</h2>
 <table>
   <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
@@ -505,5 +428,8 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   <div class="side"><a class="pill" href="ACCT203-CH1-S2.html">٢. أساسيات المحاسبة ←</a></div>
 </div>
 </div>
+<script src="../data/cards-S1.js"></script>
+<script src="../assets/flashcards.js"></script>
+<script src="../assets/lesson.js"></script>
 </body>
 </html>

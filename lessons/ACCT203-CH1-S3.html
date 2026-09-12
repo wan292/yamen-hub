@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,101 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<style>
-:root{
-  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
-  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
-  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
-  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
-  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
-}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
-.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
-bdi{font-weight:600;unicode-bidi:isolate}
-code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
-h2{font-size:1.35rem;margin:0;line-height:1.5}
-header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
-.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
-.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
-.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
-.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
-.chead .ar{font-size:1.02rem;font-weight:600}
-.chead .say{font-size:.85rem;color:var(--muted)}
-.cbody{padding:6px 20px 20px}
-.blk{margin:18px 0}
-.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
-  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
-  unicode-bidi:isolate;direction:ltr}
-.hook{font-size:1.05rem;color:var(--ink2)}
-.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
-  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
-.exam .lbl{background:var(--exam);color:#fff}
-.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
-  padding:14px 18px;border-radius:0 8px 8px 0}
-.trap .lbl{background:var(--trap);color:#fff}
-.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
-ul,ol{padding-inline-start:22px} li{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
-th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
-td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
-.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
-.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
-.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
-.q ol li{margin:5px 0;font-weight:500}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
-details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
-.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
-.big h2{color:var(--accent);margin-bottom:6px}
-.eq{direction:ltr;text-align:center;background:var(--card);border:2px solid var(--accent);
-  border-radius:10px;padding:22px 16px;margin:18px 0;font-family:Georgia,serif;overflow-x:auto}
-.eq .l1{font-size:clamp(1.1rem,3.4vw,1.6rem);font-weight:700;letter-spacing:.01em}
-.eq .l2{font-size:clamp(.85rem,2.6vw,1.15rem);margin-top:14px;color:var(--ink2)}
-.eq .plus{color:var(--muted)}
-.g-cs{color:#0f7b6c} .g-dv{color:#a4342a} .g-rv{color:#1b5e9c} .g-ex{color:#8a5a00}
-.exhibit{direction:ltr;background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
-@media (prefers-color-scheme:dark){.exhibit{background:#f7f6f3}}
-.exhibit table{margin:0;font-size:.9rem;color:#1a1a1a}
-.exhibit th{background:#f0ece6;color:#1a1a1a;border-color:#d8d3cb;text-align:center}
-.exhibit td{border-color:#d8d3cb;text-align:center}
-.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:700;color:#8c2f13;margin-bottom:6px}
-.excap{font-size:.88rem;color:var(--ink2);margin-top:8px;padding:0 4px}
-.pos{color:#0f7b6c;font-weight:700} .neg{color:#a4342a;font-weight:700}
-
-/* nav */
-.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
-.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
-  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:7px 15px;transition:.15s}
-.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
-.pill.home{color:var(--ink);}
-.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
-.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
-.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
-@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
-  .footnav .pill{justify-content:center}}
-.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-</style>
+<link rel="stylesheet" href="../assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 </head>
 <body>
 <div class="wrap">
 
-<div class="navbar">
-  <a class="pill home" href="../index.html">→ الرجوع إلى Yamen's Hub</a>
-  <a class="pill" href="ACCT203-CH1-S3-EN.html">🇬🇧 النسخة الإنجليزية</a>
-  <a class="pill" href="../index.html#notes">كل الملخصات</a>
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S3-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH1-S3">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
 </div>
-
-
-<header>
+<header class="lh">
   <h1>الفصل الأول — العمليات والمعادلة المحاسبية</h1>
   <p class="sub"><code>ACCT 203</code> · <bdi>Chapter 1</bdi> · القسم ٣ من ٤:
   <bdi>Business Transactions and Accounting</bdi><br>
@@ -118,12 +37,14 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- The three components -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🏠</div>
     <div class="term">Assets · Liabilities · Equity</div>
     <div class="ar">الأصول · الالتزامات · حقوق الملكية</div>
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
       المحاسبة تعرض شيئين فقط: <b>وش تملك الشركة</b>، و<b>مين له حق فيه</b>. هذا كل شي.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل بيت بمليون: ٦٠٠ ألف قرض من البنك و٤٠٠ ألف من جيبك — البيت أصل، القرض التزام، واللي من جيبك حقوق ملكية.</div></div>
 
     <div class="blk"><span class="lbl">الشرح</span>
       <p>المحاسبة تُظهر جانبين للشركة: الموارد اللي تملكها، والمطالبات على هذي الموارد.
@@ -134,26 +55,26 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
         <tr><th>المكوّن</th><th>التعريف</th><th>أمثلة من الكتاب</th></tr>
         <tr>
           <td><b><bdi>Assets</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الأصول</span></td>
-          <td>موارد <b>تملكها أو تسيطر عليها</b> الشركة، ويُتوقّع أن تحقق <b>منافع مستقبلية</b>.</td>
+          <td>موارد <mark class="k"><b>تملكها أو تسيطر عليها</b></mark> الشركة، ويُتوقّع أن تحقق <b>منافع مستقبلية</b>.</td>
           <td><bdi>cash</bdi> · <bdi>supplies</bdi> · <bdi>equipment</bdi> · <bdi>land</bdi> ·
               <bdi>accounts receivable</bdi></td>
         </tr>
         <tr>
           <td><b><bdi>Liabilities</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الالتزامات</span></td>
-          <td>مطالبات <b>الدائنين</b> على الأصول — التزامات الشركة بتقديم أصول أو منتجات أو خدمات للغير.</td>
+          <td><mark class="k">مطالبات <b>الدائنين</b></mark> على الأصول — التزامات الشركة بتقديم أصول أو منتجات أو خدمات للغير.</td>
           <td><bdi>wages payable</bdi> · <bdi>accounts payable</bdi> ·
               <bdi>notes (loans) payable</bdi> · <bdi>taxes payable</bdi></td>
         </tr>
         <tr>
           <td><b><bdi>Equity</bdi></b><br><span style="color:var(--muted);font-size:.85rem">حقوق الملكية</span></td>
-          <td>مطالبة <b>المالك</b> على الأصول، وتساوي <b>الأصول ناقص الالتزامات</b>.</td>
+          <td>مطالبة <b>المالك</b> على الأصول، وتساوي <mark class="k"><b>الأصول ناقص الالتزامات</b></mark>.</td>
           <td>تُسمّى أيضاً <bdi>net assets</bdi> أو <bdi>residual equity</bdi></td>
         </tr>
       </table>
 
       <p><b>مصطلحان لازم تعرفهما:</b></p>
       <ul>
-        <li><b><bdi>Receivable</bdi></b> = أصل يَعِد بـ<b>تدفّق داخل</b> مستقبلي.
+        <li><b><bdi>Receivable</bdi></b> = <mark class="k">أصل يَعِد بـ<b>تدفّق داخل</b></mark> مستقبلي.
             الشركة اللي تقدّم خدمة أو منتج <bdi>on credit</bdi> يصير عندها
             <bdi>account receivable</bdi> من العميل.</li>
         <li><b><bdi>Payable</bdi></b> = التزام يَعِد بـ<b>تدفّق خارج</b> مستقبلي.</li>
@@ -185,18 +106,20 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- The equation -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">⚖️</div>
     <div class="term">The Accounting Equation</div>
     <div class="ar">المعادلة المحاسبية</div>
     <div class="say">احفظها الآن — لا تكمّل قبل ما تحفظها</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل ميزان: كفّة الأصول قدام كفّة الالتزامات + حقوق الملكية — أي لحظة تشوفه، الكفّتين متساويات، ما فيه استثناء.</div></div>
     <div class="eq">
       <div class="l1">Assets <span class="plus">=</span> Liabilities <span class="plus">+</span> Equity</div>
     </div>
 
     <div class="blk"><span class="lbl">الشرح</span>
       <p>هذي العلاقة تنطبق على <b>كل العمليات والأحداث</b>، وعلى <b>كل الشركات والمنظمات</b>،
-      وفي <b>كل لحظة زمنية</b>. ما فيها استثناء.</p>
+      وفي <mark class="k"><b>كل لحظة زمنية</b></mark>. ما فيها استثناء.</p>
       <p>ويمكن إعادة ترتيبها. مثال من الكتاب:
       <span class="mono">Assets − Liabilities = Equity</span></p>
     </div>
@@ -214,9 +137,9 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
           <span class="g-ex">Expenses</span></div>
       </div>
 
-      <p>حقوق الملكية <b>تزيد</b> من استثمارات المالك (<bdi>owner investments</bdi>، وتُسمّى
+      <p>حقوق الملكية <mark class="k"><b>تزيد</b> من استثمارات المالك</mark> (<bdi>owner investments</bdi>، وتُسمّى
       <i><bdi>stock issuances</bdi></i>) ومن <bdi>revenues</bdi>.
-      و<b>تنقص</b> من <bdi>dividends</bdi> ومن <bdi>expenses</bdi>.</p>
+      و<mark class="k"><b>تنقص</b> من <bdi>dividends</bdi> ومن <bdi>expenses</bdi></mark>.</p>
 
       <table>
         <tr><th>الجزء</th><th>الإشارة</th><th>التعريف</th></tr>
@@ -231,7 +154,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
             <td>تدفّقات <b>خارجة</b> من النقد وأصول أخرى <b>إلى المساهمين</b>، تُنقص حقوق الملكية.</td></tr>
         <tr><td><b class="g-rv"><bdi>Revenues</bdi></b></td>
             <td class="pos">+</td>
-            <td>تزيد حقوق الملكية (عبر <bdi>net income</bdi>) من <b>بيع منتجات وخدمات للعملاء</b>.
+            <td>تزيد حقوق الملكية (عبر <bdi>net income</bdi>) من <mark class="k"><b>بيع منتجات وخدمات للعملاء</b></mark>.
                 أمثلة: بيع منتجات، خدمات استشارية، تأجير مرافق، عمولات.</td></tr>
         <tr><td><b class="g-ex"><bdi>Expenses</bdi></b></td>
             <td class="neg">−</td>
@@ -268,26 +191,28 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- Transactions -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🤝</div>
     <div class="term">Transactions and Events</div>
     <div class="ar">العمليات والأحداث</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل مصافحة بين محلّين = عملية خارجية، موظف يفتح علبة أقلام من مخزن محله = داخلية، وحريق يجي بدون مصافحة = حدث.</div></div>
     <div class="blk"><span class="lbl">الشرح</span>
       <table>
         <tr><th>النوع</th><th>التعريف</th><th>مثال الكتاب</th></tr>
         <tr><td><b><bdi>External transactions</bdi></b></td>
-            <td>تبادل قيمة <b>بين كيانين</b>، وتُحدث <b>تغييراً في المعادلة المحاسبية</b>.</td>
+            <td>تبادل قيمة <mark class="k"><b>بين كيانين</b></mark>، وتُحدث <b>تغييراً في المعادلة المحاسبية</b>.</td>
             <td>بيع <bdi>AppleCare Protection Plan</bdi> من <bdi>Apple</bdi></td></tr>
         <tr><td><b><bdi>Internal transactions</bdi></b></td>
-            <td>تبادل <b>داخل الكيان نفسه</b>، و<b>قد تؤثر أو لا تؤثر</b> على المعادلة.</td>
+            <td>تبادل <b>داخل الكيان نفسه</b>، و<mark class="k"><b>قد تؤثر أو لا تؤثر</b></mark> على المعادلة.</td>
             <td>استخدام <bdi>Target</bdi> لمستلزماتها — تُسجَّل كمصروف عند الاستخدام</td></tr>
         <tr><td><b><bdi>Events</bdi></b></td>
-            <td>وقائع تؤثر على المعادلة <b>ويمكن قياسها بموثوقية</b>.</td>
+            <td>وقائع تؤثر على المعادلة <mark class="k"><b>ويمكن قياسها بموثوقية</b></mark>.</td>
             <td>تغيّر القيمة السوقية لبعض الأصول والالتزامات · حريق يتلف أصولاً ويُحدث خسائر</td></tr>
       </table>
       <p>الكتاب يستخدم المعادلة لتحليل <b>١١ عملية وحدث</b> لشركة <bdi>FastForward</bdi> —
       شركة استشارات ناشئة (خدمية) — في <b>أول شهر</b> من التشغيل.</p>
-      <p style="background:var(--exam-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      <p style="background:var(--ok-soft);padding:12px 16px;border-radius:8px;font-weight:600">
       القاعدة الذهبية: <b>بعد كل عملية وكل حدث، الأصول تساوي دائماً الالتزامات زائد حقوق الملكية.</b>
       لو ما تساوت، فيه غلط في تحليلك.</p>
     </div>
@@ -295,7 +220,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
     <div class="blk"><span class="lbl">مثال ١ — Investment by Owner</span>
       <p>في ١ ديسمبر، أسّس <bdi>Chas Taylor</bdi> شركة استشارات اسمها <bdi>FastForward</bdi>
       على شكل <bdi>corporation</bdi>. استثمر <b>٣٠٬٠٠٠ دولار</b> نقداً في الشركة الجديدة
-      <b>مقابل أسهمها العادية</b>، وأودع النقد في حساب بنكي باسم الشركة.</p>
+      <mark class="k"><b>مقابل أسهمها العادية</b></mark>، وأودع النقد في حساب بنكي باسم الشركة.</p>
       <p>بعد العملية: النقد (أصل) = ٣٠٬٠٠٠، وحقوق الملكية = ٣٠٬٠٠٠. الزيادة جاءت من
       استثمار المالك (<bdi>stock issuance</bdi>)، وتُدرج تحت <bdi>Common Stock</bdi>.</p>
 
@@ -379,6 +304,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   المُلّاك ليسوا دائنين، فالالتزامات ما تتأثر — وهذا ما يستغله الاختيار <b>A</b>.</p></details>
 </div>
 
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH1-S3">ابدأ</button> <button class="pill" data-deck="ACCT203-CH1-S3" data-mode="ar">عربي ← إنجليزي</button></div></div>
 <h2 style="margin:40px 0 10px">المصطلحات</h2>
 <table>
   <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
@@ -412,5 +338,8 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   <div class="side"><a class="pill" href="ACCT203-CH1-S4.html">٤. القوائم المالية ←</a></div>
 </div>
 </div>
+<script src="../data/cards-S3.js"></script>
+<script src="../assets/flashcards.js"></script>
+<script src="../assets/lesson.js"></script>
 </body>
 </html>

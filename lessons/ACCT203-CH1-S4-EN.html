@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,135 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<style>
-:root{
-  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
-  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
-  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
-  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
-  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
-}}
-*{box-sizing:border-box}
-html{font-size:18px}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:19px;line-height:1.85}
-.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
-bdi{font-weight:600;unicode-bidi:isolate}
-code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
-h2{font-size:1.35rem;margin:0;line-height:1.5}
-header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
-.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
-.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
-.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
-.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
-.chead .ar{font-size:1.02rem;font-weight:600}
-.chead .say{font-size:.85rem;color:var(--muted)}
-.cbody{padding:6px 20px 20px}
-.blk{margin:18px 0}
-.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
-  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
-  unicode-bidi:isolate;direction:ltr}
-.hook{font-size:1.05rem;color:var(--ink2)}
-.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
-  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
-.exam .lbl{background:var(--exam);color:#fff}
-.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
-  padding:14px 18px;border-radius:0 8px 8px 0}
-.trap .lbl{background:var(--trap);color:#fff}
-.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
-ul,ol{padding-inline-start:22px} li{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
-th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
-td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
-.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
-.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
-.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
-.q ol li{margin:5px 0;font-weight:500}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
-details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
-.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
-.big h2{color:var(--accent);margin-bottom:6px}
-.stmt{direction:ltr;background:#fdfcfa;border:1px solid #d8d3cb;border-radius:8px;
-  margin:14px 0;overflow-x:auto;color:#1a1a1a}
-.stmt .hd{background:#1f5d4c;color:#fff;text-align:center;padding:10px;font-weight:700;line-height:1.5}
-.stmt table{margin:0;font-size:.92rem;color:#1a1a1a}
-.stmt td{border:0;padding:5px 14px}
-.stmt td.n{text-align:right;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
-.stmt tr.sub td{border-top:1px solid #8a8378}
-.stmt tr.tot td{border-top:1px solid #8a8378;border-bottom:3px double #8a8378;font-weight:700}
-.stmt .ind{padding-inline-start:34px}
-.link{display:flex;align-items:center;gap:10px;background:var(--exam-soft);
-  border-inline-start:4px solid var(--exam);padding:10px 16px;border-radius:0 8px 8px 0;margin:8px 0;font-size:.95rem}
-.link .n{background:var(--exam);color:#fff;width:24px;height:24px;border-radius:50%;
-  display:grid;place-items:center;font-weight:700;font-size:.8rem;flex:none}
-.period{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
-  background:#e8f0ec;color:#0d4f3c;border:1px solid #0d4f3c}
-.point{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
-  background:#fbecea;color:#a4342a;border:1px solid #a4342a}
-
-/* nav */
-.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
-.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
-  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:7px 15px;transition:.15s}
-.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
-.pill.home{color:var(--ink);}
-.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
-.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
-.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
-@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
-  .footnav .pill{justify-content:center}}
-.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-
-.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
-  padding-bottom:1px}
-.g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
-  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
-  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
-.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
-.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
-.g:hover .ar,.g.on .ar{display:block}
-.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
-.g2{border-bottom:1.5px dotted var(--muted);cursor:pointer;position:relative}
-.g2:hover,.g2.on{background:var(--accent-soft)}
-.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
-  background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;text-align:right;font-size:.92rem;font-weight:600;white-space:nowrap;
-  padding:6px 12px;border-radius:8px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3)}
-.g2:hover .ar,.g2.on .ar{display:block}
-.vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
-.vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
-.vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
-.vocab td.w{font-weight:700;color:var(--accent);white-space:nowrap}
-.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
-.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
-.vocab td.ex{color:var(--ink2);font-size:.9rem}
-.tiphint{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:.9rem;
-  color:var(--ink2);margin:14px 0}
-
-body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif}
-.exam,.q .stem,.q ol{direction:ltr;text-align:left}
-</style>
+<link rel="stylesheet" href="../assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 </head>
 <body>
 <div class="wrap">
 
-<div class="navbar">
-  <a class="pill home" href="../index.html">&#8592; Back to Yamen's Hub</a>
-  <a class="pill" href="ACCT203-CH1-S4.html">&#127462; النسخة العربية</a>
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S4.html">🇸🇦 عربي</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH1-S4">🃏 Practice</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
 </div>
-
-
-<header>
+<header class="lh">
   <h1>Chapter 1 — Financial Statements</h1>
   <p class="sub"><code>ACCT 203</code> · Chapter 1 · <span class="g2" data-ar="قسم">Section</span> 4 of 4: Financial Statements<br>
   Objective <code>P2</code>: <span class="g" data-ar="يُحدِّد / يتعرّف على" data-x="يعني تعرف وش هي القوائم وتميّز كل وحدة عن الثانية">Identify</span> and <span class="g2" data-ar="يُعِدّ / يجهّز">prepare</span>
@@ -148,12 +33,13 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <p>There are four <span class="g2" data-ar="قوائم">statements</span>. They are <span class="g2" data-ar="تُعَدّ">prepared</span> in <b>a <span class="g2" data-ar="ترتيب ثابت">fixed order</span></b>. Each one <b><span class="g2" data-ar="يغذّي / يصبّ في">feeds</span> the next one</b>.
   The exam question is not "what are the statements". The exam asks <b>which one <span class="g2" data-ar="يغطّي">covers</span> a <span class="g2" data-ar="فترة">period</span> and which
   one covers a <span class="g2" data-ar="لحظة زمنية">point in time</span></b>, and <b>how they <span class="g2" data-ar="ترتبط">link</span> to <span class="g2" data-ar="بعضها البعض">each other</span></b>.</p>
-  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--accent);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--gold);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
 </div>
 
 <!-- The four -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🗂️</div>
     <div class="term">The Four Financial Statements</div>
     <div class="say">The <span class="g2" data-ar="الترتيب">order</span> is <span class="g" data-ar="مقصود / متعمَّد" data-x="يعني مسوّينه عن قصد ومو صدفة، الترتيب له سبب">deliberate</span> — do not change it</div>
   </div>
@@ -161,6 +47,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
       The first one <span class="g2" data-ar="يقيس">measures</span> <span class="g2" data-ar="الربح">profit</span>. The second one <span class="g2" data-ar="يرحّله للأمام">carries it forward</span>. The third one <span class="g2" data-ar="يعرض">shows</span> the
       <span class="g" data-ar="المركز / الوضع" data-x="يعني وضع الشركة المالي، وش عندها ووش عليها بيوم معيّن">position</span>. The fourth one <span class="g2" data-ar="يتتبّع">tracks</span> the cash.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Three videos, one photo: income, retained earnings and cash flows film a whole period; the balance sheet <span class="g2" data-ar="يجمّد">freezes</span> one moment.</div></div>
 
     <table>
       <tr><th><span class="g2" data-ar="قائمة">Statement</span></th><th><span class="g2" data-ar="الشكل / التنسيق">Layout</span></th><th><span class="g2" data-ar="الغرض">Purpose</span></th><th>Time</th></tr>
@@ -201,10 +88,10 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
-        <li><b>Three <span class="g2" data-ar="تغطّي">cover</span> a period. One covers a point.</b> Only the balance sheet is
-            <i>at a <span class="g2" data-ar="لحظة زمنية">point in time</span></i>. This is the <span class="g2" data-ar="الأكثر شيوعاً">most common</span> question in this <span class="g2" data-ar="القسم">section</span>.</li>
+        <li><b><mark class="k">Three <span class="g2" data-ar="تغطّي">cover</span> a period. One covers a point.</mark></b> Only the balance sheet is
+            <mark class="k"><i>at a <span class="g2" data-ar="لحظة زمنية">point in time</span></i></mark>. This is the <span class="g2" data-ar="الأكثر شيوعاً">most common</span> question in this <span class="g2" data-ar="القسم">section</span>.</li>
         <li>This is why the <span class="g" data-ar="عنوان القائمة / الترويسة" data-x="العنوان اللي فوق القائمة، فيه اسم الشركة واسم القائمة والتاريخ">heading</span> of an income
-            statement says <i>For <span class="g2" data-ar="الشهر المنتهي">Month Ended</span> December 31</i>, <span class="g2" data-ar="بينما">while</span> the balance sheet says only
+            statement says <mark class="k"><i>For <span class="g2" data-ar="الشهر المنتهي">Month Ended</span> December 31</i></mark>, <span class="g2" data-ar="بينما">while</span> the balance sheet says only
             <i>December 31</i>. The heading <span class="g2" data-ar="نفسه">itself</span> <span class="g" data-ar="يكشف" data-x="يعني يبيّن لك الجواب على طول من غير ما تدور">reveals</span> the <span class="g2" data-ar="الجواب">answer</span>.</li>
       </ul>
     </div>
@@ -214,10 +101,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- How they link -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🔗</div>
     <div class="term">How the Statements Interrelate</div>
     <div class="say"><span class="g2" data-ar="نصف">Half</span> of <span class="g2" data-ar="الهدف">objective</span> P2 is <span class="g2" data-ar="بالضبط">exactly</span> this</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>Relay race: net income passes the baton to retained earnings, then the balance sheet, then cash flows. Nobody runs early.</div></div>
     <div class="blk">
       <div class="link"><span class="n">1</span>
         <span><b><span class="g2" data-ar="صافي الدخل">Net income</span></b> from the <span class="g2" data-ar="قائمة الدخل">income statement</span> is used to <span class="g2" data-ar="يحسب">compute</span>
@@ -227,11 +116,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <b>the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span></b>.</span></div>
       <div class="link"><span class="n">3</span>
         <span><b>Cash</b> from the balance sheet is used to
-        <span class="g" data-ar="يطابِق / يوفّق" data-x="تطابق رقم الكاش بالميزانية مع رقم قائمة التدفقات وتتأكد إنهم نفس الشي">reconcile</span>
+        <mark class="k"><span class="g" data-ar="يطابِق / يوفّق" data-x="تطابق رقم الكاش بالميزانية مع رقم قائمة التدفقات وتتأكد إنهم نفس الشي">reconcile</span></mark>
         <b>the <span class="g2" data-ar="قائمة التدفقات النقدية">statement of cash flows</span></b>.</span></div>
-      <p style="margin-top:14px">This is why the <span class="g2" data-ar="الترتيب">order</span> is
-      <span class="g" data-ar="إجباري / لازم" data-x="يعني لازم تسويه بهالترتيب، ما لك خيار ثاني">mandatory</span>. You cannot prepare the statement of
-      retained earnings before you know net income. You cannot prepare the balance sheet before you
+      <p style="margin-top:14px">This is why <mark class="k">the <span class="g2" data-ar="الترتيب">order</span> is
+      <span class="g" data-ar="إجباري / لازم" data-x="يعني لازم تسويه بهالترتيب، ما لك خيار ثاني">mandatory</span></mark>. You cannot prepare the statement of
+      retained earnings <mark class="k">before you know net income</mark>. You cannot prepare the balance sheet before you
       know retained earnings.</p>
     </div>
 
@@ -245,23 +134,25 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- Income statement -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">📊</div>
     <div class="term">Income Statement</div>
     <div class="say"><span class="g2" data-ar="الإيرادات">Revenues</span> first, <span class="g2" data-ar="المصاريف">expenses</span> second</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>A <span class="g2" data-ar="قمع">funnel</span>: revenues pour in the top, expenses <span class="g2" data-ar="تتسرّب">leak</span> out the sides, what <span class="g2" data-ar="يقطر">drips</span> out below is net income.</div></div>
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>Revenues come <b>first</b>. Expenses come <b>after</b> them. Expenses are the <span class="g2" data-ar="التكاليف">costs</span> used to
+      <p>Revenues come <b>first</b>. Expenses come <b>after</b> them. Expenses are the <mark class="k"><span class="g2" data-ar="التكاليف">costs</span> used to
       <span class="g" data-ar="يولّد / يحقّق" data-x="يعني يجيب لك الإيراد ويطلّعه، المصاريف هي اللي تجيب الدخل">generate</span> the
-      <span class="g" data-ar="المُعلَن عنه / المعروض في القوائم" data-x="يعني اللي مكتوب ومعروض بالقائمة، مو شي مخفي">reported</span> revenues.</p>
+      <span class="g" data-ar="المُعلَن عنه / المعروض في القوائم" data-x="يعني اللي مكتوب ومعروض بالقائمة، مو شي مخفي">reported</span> revenues</mark>.</p>
       <ul>
-        <li><b><span class="g2" data-ar="صافي الدخل">Net income</span></b> — this <span class="g" data-ar="يحدث / يقع" data-x="يعني يصير، الربح يصير لما الإيرادات تكون أكثر">occurs</span> when revenues
-            <span class="g" data-ar="تتجاوز / تزيد عن" data-x="يعني أكثر من، الإيرادات تعدّت المصاريف">exceed</span> expenses.</li>
-        <li><b><span class="g2" data-ar="صافي الخسارة">Net loss</span></b> — this occurs when expenses exceed revenues.</li>
+        <li><b><span class="g2" data-ar="صافي الدخل">Net income</span></b> — this <span class="g" data-ar="يحدث / يقع" data-x="يعني يصير، الربح يصير لما الإيرادات تكون أكثر">occurs</span> when <mark class="k">revenues
+            <span class="g" data-ar="تتجاوز / تزيد عن" data-x="يعني أكثر من، الإيرادات تعدّت المصاريف">exceed</span> expenses</mark>.</li>
+        <li><b><span class="g2" data-ar="صافي الخسارة">Net loss</span></b> — this occurs when <mark class="k">expenses exceed revenues</mark>.</li>
         <li>Net income (or net loss) <span class="g2" data-ar="يظهر">appears</span> at the <b><span class="g2" data-ar="أسفل">bottom</span></b> of the statement.</li>
         <li>It is <span class="g2" data-ar="أحياناً">sometimes</span> <span class="g2" data-ar="يُسمّى">called</span> <b><span class="g2" data-ar="الأرباح">earnings</span></b> or <b><span class="g2" data-ar="الربح">profit</span></b>. <span class="g2" data-ar="نفس الشيء">Same thing</span>.</li>
       </ul>
-      <p style="background:var(--trap-soft);padding:12px 16px;border-radius:8px;font-weight:600">
-      &#9888; <span class="g2" data-ar="استثمارات المساهمين">Shareholder investments</span> and <span class="g2" data-ar="توزيعات الأرباح">dividends</span> <b><span class="g2" data-ar="ليست جزءاً من">are not part of</span> income</b>.</p>
+      <p style="background:var(--warn-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      &#9888; <span class="g2" data-ar="استثمارات المساهمين">Shareholder investments</span> and <span class="g2" data-ar="توزيعات الأرباح">dividends</span> <b><mark class="k"><span class="g2" data-ar="ليست جزءاً من">are not part of</span> income</mark></b>.</p>
     </div>
 
     <div class="stmt">
@@ -287,18 +178,20 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- Retained earnings -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🏦</div>
     <div class="term">Statement of Retained Earnings</div>
     <div class="say">This is where <span class="g2" data-ar="توزيعات الأرباح">dividends</span> <span class="g2" data-ar="مكانها / تنتمي">belong</span></div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>The company's <span class="g2" data-ar="حصّالة">piggy bank</span>: each period net income goes in, dividends come out, and what stays inside is retained earnings.</div></div>
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p><b><span class="g2" data-ar="الأرباح المحتجزة">Retained earnings</span></b> = <b><span class="g" data-ar="تراكمي" data-x="كل شي تجمّع من البداية لين الحين، مو بس هالسنة">cumulative</span> net income
-      <span class="g2" data-ar="ناقص">minus</span> any <span class="g2" data-ar="توزيع أرباح">dividend</span> <span class="g" data-ar="التوزيعات" data-x="يعني الفلوس اللي الشركة تعطيها للملاك من أرباحها">distributions</span></b>.</p>
+      <p><b><span class="g2" data-ar="الأرباح المحتجزة">Retained earnings</span></b> = <b><mark class="k"><span class="g" data-ar="تراكمي" data-x="كل شي تجمّع من البداية لين الحين، مو بس هالسنة">cumulative</span> net income
+      <span class="g2" data-ar="ناقص">minus</span> any <span class="g2" data-ar="توزيع أرباح">dividend</span> <span class="g" data-ar="التوزيعات" data-x="يعني الفلوس اللي الشركة تعطيها للملاك من أرباحها">distributions</span></mark></b>.</p>
       <p>The statement shows four things: the <span class="g2" data-ar="الرصيد الافتتاحي">beginning balance</span> · what <span class="g2" data-ar="يزيده">increases</span> it (net income) ·
       what <span class="g2" data-ar="ينقصه">decreases</span> it (dividends and <span class="g2" data-ar="صافي الخسارة">net loss</span>) · and the <span class="g2" data-ar="الرصيد الختامي">ending balance</span>.</p>
-      <p>The ending balance is <span class="g" data-ar="يُرحَّل / يُنقل إلى" data-x="يعني تاخذ الرقم من قائمة وتنقله زي ما هو للقائمة الثانية">carried over</span> and
-      <span class="g2" data-ar="يُعرض">shown</span> on the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span>. That is <span class="g2" data-ar="الرابط">link</span> number 2 above.</p>
-      <p><b>The beginning balance:</b> for FastForward it is <b><span class="g2" data-ar="صفر">zero</span></b>, because the company
+      <p>The ending balance is <mark class="k"><span class="g" data-ar="يُرحَّل / يُنقل إلى" data-x="يعني تاخذ الرقم من قائمة وتنقله زي ما هو للقائمة الثانية">carried over</span> and
+      <span class="g2" data-ar="يُعرض">shown</span> on the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span></mark>. That is <span class="g2" data-ar="الرابط">link</span> number 2 above.</p>
+      <p><b>The beginning balance:</b> for FastForward it is <b><mark class="k"><span class="g2" data-ar="صفر">zero</span></mark></b>, because the company
       <b><span class="g2" data-ar="لم تكن موجودة">did not exist</span></b> before December 1. An
       <span class="g" data-ar="قائمة / موجودة أصلاً" data-x="يعني شركة موجودة من قبل ولها شغل سابق، مو جديدة">existing</span> company starts with the ending
       balance of the <span class="g" data-ar="السابق" data-x="يعني اللي قبل، الفترة اللي راحت مو الحالية">prior</span> <span class="g2" data-ar="الفترة">period</span>, <span class="g2" data-ar="مثلاً">for example</span> November 30.</p>
@@ -324,8 +217,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
-        <li>Dividends are <span class="g" data-ar="تُطرَح" data-x="يعني تنقّصها من الرقم وتشيلها منه، مو تزيدها">subtracted</span> <b>here</b>, not on the income
-            statement. If you <span class="g2" data-ar="تطرح">subtract</span> them from revenues, your net income will be <span class="g2" data-ar="خاطئ">wrong</span>.</li>
+        <li><mark class="k">Dividends are <span class="g" data-ar="تُطرَح" data-x="يعني تنقّصها من الرقم وتشيلها منه، مو تزيدها">subtracted</span> <b>here</b>, not on the income
+            statement</mark>. If you <span class="g2" data-ar="تطرح">subtract</span> them from revenues, your net income will be <span class="g2" data-ar="خاطئ">wrong</span>.</li>
         <li>A <b>new</b> company has a beginning balance of <b>zero</b>. An <b>existing</b> company starts
             with the ending balance of the prior period.</li>
         <li>A <b>net loss</b> decreases retained earnings, <span class="g2" data-ar="تماماً مثل">just like</span> dividends do.</li>
@@ -337,15 +230,17 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <!-- Cash flows -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">💧</div>
     <div class="term">Statement of Cash Flows</div>
     <div class="say">Three <span class="g2" data-ar="أقسام">sections</span>, one <span class="g2" data-ar="مجموع">total</span></div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>Picture a water tank with three pipes (operating, investing, financing); the month-end water level must match balance-sheet cash.</div></div>
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>There are three sections: <b><span class="g2" data-ar="التشغيلية">Operating</span></b> · <b><span class="g2" data-ar="الاستثمارية">Investing</span></b> · <b><span class="g2" data-ar="التمويلية">Financing</span></b>. Their total is
-      the <b><span class="g2" data-ar="التغيّر في النقد">change in cash</span></b>.</p>
+      <p>There are three sections: <mark class="k"><b><span class="g2" data-ar="التشغيلية">Operating</span></b> · <b><span class="g2" data-ar="الاستثمارية">Investing</span></b> · <b><span class="g2" data-ar="التمويلية">Financing</span></b></mark>. Their total is
+      the <b><mark class="k"><span class="g2" data-ar="التغيّر في النقد">change in cash</span></mark></b>.</p>
       <p>Then you add the <span class="g2" data-ar="رصيد النقد الافتتاحي">beginning cash balance</span>. The <span class="g2" data-ar="الناتج">result</span> is the <b><span class="g2" data-ar="رصيد النقد الختامي">ending cash balance</span></b>. That number
-      is <span class="g2" data-ar="نفس">the same</span> cash number on the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span>. That is <span class="g2" data-ar="الرابط">link</span> number 3.</p>
+      is <mark class="k"><span class="g2" data-ar="نفس">the same</span> cash number on the <span class="g2" data-ar="الميزانية العمومية">balance sheet</span></mark>. That is <span class="g2" data-ar="الرابط">link</span> number 3.</p>
       <div class="stmt">
         <div class="hd">FASTFORWARD — Financing activities (<span class="g" data-ar="مقتطف" data-x="يعني جزء بس من القائمة، مو كلها">excerpt</span>)</div>
         <table>
@@ -431,6 +326,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <tr><td><b>Operating / Investing / Financing</b></td><td>The three <span class="g2" data-ar="أجزاء">parts</span> of the cash flow statement</td><td>The three cash flow sections</td></tr>
 </table>
 
+<div class="cta"><div><div class="t">🃏 Practice this lesson's words</div><div class="s">Flashcards with sound. A few minutes now beats an hour before the exam.</div></div><div><button class="pill gold" data-deck="ACCT203-CH1-S4">Start</button> <button class="pill" data-deck="ACCT203-CH1-S4" data-mode="ar">Arabic → English</button></div></div>
 <h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
 <table class="vocab">
   <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
@@ -474,27 +370,8 @@ objective <code>P2</code> and <span class="g2" data-ar="الشكل التوضي�
   <div class="side"><span class="pill off">End of chapter</span></div>
 </div>
 </div>
-<script>
-document.querySelectorAll('span.g, span.g2').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar';
-  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
-  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
-  s.appendChild(t);
-  s.addEventListener('click',function(e){
-    e.stopPropagation();
-    document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
-    s.classList.toggle('on');
-    if(s.classList.contains('on')){
-      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
-      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
-      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
-      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
-    }
-  });
-});
-document.addEventListener('click',function(){
-  document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
-});
-</script>
+<script src="../data/cards-S4.js"></script>
+<script src="../assets/flashcards.js"></script>
+<script src="../assets/lesson.js"></script>
 </body>
 </html>

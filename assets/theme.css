@@ -1,0 +1,263 @@
+/* ============================================================
+   Yamen's Hub — shared theme  (one file for hub + every lesson)
+   Two themes: dark (gold on near-black, default) and light.
+   ============================================================ */
+
+:root{
+  /* ---- light ---- */
+  --bg:#faf7f0; --surface:#ffffff; --surface-2:#f3eee2; --line:#e4dccb;
+  --ink:#1c1a16; --ink-2:#4a453c; --muted:#7f776a;
+  --gold:#a8801f; --gold-2:#7d5e14; --gold-soft:rgba(168,128,31,.13); --gold-line:rgba(168,128,31,.45);
+  --term:#1f6f85; --term-soft:rgba(31,111,133,.11);
+  --ok:#1f5d4c; --ok-soft:rgba(31,93,76,.11);
+  --warn:#8a5a00; --warn-soft:rgba(138,90,0,.12);
+  --bad:#a4342a; --bad-soft:rgba(164,52,42,.11);
+  --paper:#fffdf7; --paper-ink:#1c1a16; --paper-line:#d9d2c2;
+  --tip-bg:#1c1a16; --tip-ink:#f6f1e6;
+  --shadow:0 1px 2px rgba(28,26,22,.05),0 10px 30px -22px rgba(28,26,22,.35);
+  --r:14px;
+}
+:root[data-theme="dark"]{
+  --bg:#0e0d0b; --surface:#16140f; --surface-2:#1e1b15; --line:#2b2720;
+  --ink:#f2ebdc; --ink-2:#cbc1aa; --muted:#8e8471;
+  --gold:#e2b458; --gold-2:#f0cd7f; --gold-soft:rgba(226,180,88,.13); --gold-line:rgba(226,180,88,.5);
+  --term:#7cc4d8; --term-soft:rgba(124,196,216,.12);
+  --ok:#6fc4a3; --ok-soft:rgba(111,196,163,.12);
+  --warn:#e0b25a; --warn-soft:rgba(224,178,90,.12);
+  --bad:#e0837a; --bad-soft:rgba(224,131,122,.12);
+  --paper:#f7f1e3; --paper-ink:#1c1a16; --paper-line:#cfc6b2;
+  --tip-bg:#f2ebdc; --tip-ink:#1c1a16;
+  --shadow:0 1px 0 rgba(255,255,255,.03) inset,0 14px 34px -24px rgba(0,0,0,.9);
+}
+
+/* ---------- base ---------- */
+*{box-sizing:border-box}
+html{font-size:18px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;
+  font-size:19px;line-height:1.85;-webkit-font-smoothing:antialiased;
+  transition:background .25s,color .25s}
+[dir="ltr"] body{text-align:left}
+.wrap{max-width:920px;margin:0 auto;padding:26px 20px 100px}
+bdi{unicode-bidi:isolate;font-weight:600;color:var(--term)}
+code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
+code{background:var(--surface-2);padding:1px 7px;border-radius:6px;color:var(--gold)}
+h1,h2,h3{margin:0;line-height:1.3;letter-spacing:-.01em}
+h1{font-size:clamp(1.7rem,4.6vw,2.4rem);font-weight:700}
+h2{font-size:1.35rem;font-weight:700}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0 0 .6em}
+a{color:var(--gold)}
+b,strong{color:var(--gold-2);font-weight:700}
+ul,ol{padding-inline-start:22px} li{margin:6px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:14px 0;font-size:.95rem;
+  border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th{background:var(--surface-2);text-align:start;padding:10px 12px;font-weight:700;font-size:.85rem;
+  color:var(--ink-2);border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;background:var(--surface)}
+tr:last-child td{border-bottom:0}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+summary{cursor:pointer;font-weight:700;color:var(--gold);font-size:.95rem;list-style:none}
+summary::before{content:"▸ ";color:var(--gold)}
+details[open] summary::before{content:"▾ "}
+details p{margin:10px 0 0;color:var(--ink-2)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  padding:10px 0;margin:-26px 0 18px;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .grow{flex:1}
+.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
+  font-weight:700;color:var(--ink);background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:7px 15px;cursor:pointer;font-family:inherit;transition:.15s}
+.pill:hover{border-color:var(--gold);background:var(--gold-soft)}
+.pill.gold{background:var(--gold);color:#1c1a16;border-color:var(--gold)}
+.pill.gold:hover{background:var(--gold-2)}
+.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
+.tbtn{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);
+  background:var(--surface);cursor:pointer;font-size:1.05rem;color:var(--ink);padding:0}
+.tbtn:hover{border-color:var(--gold)}
+.readbar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));z-index:40}
+
+/* ---------- lesson header ---------- */
+header.lh{padding:8px 0 22px;margin-bottom:26px;border-bottom:2px solid var(--gold-line)}
+header.lh .kicker{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700}
+header.lh .sub{color:var(--muted);font-size:.92rem;line-height:1.7;margin-top:8px}
+
+/* ---------- cards ---------- */
+.big{background:linear-gradient(135deg,var(--gold-soft),transparent 60%),var(--surface);
+  border:1px solid var(--gold-line);border-radius:var(--r);padding:20px 22px;margin:22px 0;box-shadow:var(--shadow)}
+.big h2{color:var(--gold);margin-bottom:8px}
+.concept{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin:26px 0;
+  overflow:hidden;box-shadow:var(--shadow)}
+.chead{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:center;
+  padding:18px 22px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.chead .ico{grid-row:span 3;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+  font-size:1.7rem;background:var(--gold-soft);border:1px solid var(--gold-line)}
+.chead .term{font-size:1.25rem;font-weight:800;color:var(--gold);unicode-bidi:isolate;direction:ltr;text-align:start;letter-spacing:-.01em}
+[dir="rtl"] .chead .term{text-align:right}
+.chead .ar{font-size:1rem;font-weight:600;color:var(--ink)}
+.chead .say{font-size:.84rem;color:var(--muted)}
+.chead:not(:has(.ico)){grid-template-columns:1fr}
+.cbody{padding:8px 22px 22px}
+.blk{margin:18px 0}
+.lbl{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 10px;border-radius:6px;margin-bottom:8px;background:var(--surface-2);color:var(--ink-2);
+  unicode-bidi:isolate;direction:ltr}
+.hook{font-size:1.06rem;color:var(--ink-2)}
+.hook-mem{display:flex;gap:10px;align-items:flex-start;background:var(--gold-soft);border:1px dashed var(--gold-line);
+  border-radius:10px;padding:10px 14px;margin:12px 0;font-size:.95rem}
+.hook-mem .e{font-size:1.3rem;line-height:1.2;flex:none}
+mark.k{background:var(--gold-soft);color:var(--gold-2);font-weight:700;padding:0 4px;border-radius:4px;
+  box-shadow:inset 0 -2px 0 var(--gold-line)}
+mark.t{background:var(--term-soft);color:var(--term);font-weight:700;padding:0 4px;border-radius:4px}
+
+/* exam box = a sheet of paper, both themes */
+.exam{background:var(--paper);color:var(--paper-ink);border:1px solid var(--paper-line);
+  border-inline-start:5px solid var(--ok);padding:16px 18px;border-radius:10px;direction:ltr;text-align:left;
+  font-size:.98rem;line-height:1.75;box-shadow:var(--shadow)}
+.exam b,.exam strong{color:#0d4f3c}
+.exam .lbl{background:var(--ok);color:#fff}
+.trap{background:var(--warn-soft);border:1px solid color-mix(in srgb,var(--warn) 35%,transparent);
+  border-inline-start:5px solid var(--warn);padding:14px 18px;border-radius:10px}
+.trap .lbl{background:var(--warn);color:#1c1a16}
+.trap ul{margin:8px 0 0}
+.ksa{background:var(--ok-soft);border-inline-start:4px solid var(--ok);padding:14px 18px;border-radius:10px;margin:18px 0}
+.warn{background:var(--warn-soft);border-inline-start:4px solid var(--warn);padding:10px 14px;border-radius:0 8px 8px 0;
+  font-size:.9rem;color:var(--ink-2);margin-top:10px}
+.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+.tiphint{background:var(--surface-2);border-radius:10px;padding:10px 14px;font-size:.9rem;color:var(--ink-2);margin:14px 0}
+
+/* exhibits + statements = paper too (SVG text is dark) */
+.exhibit{direction:ltr;background:var(--paper);color:var(--paper-ink);border:1px solid var(--paper-line);
+  border-radius:12px;padding:14px 12px 10px;margin:16px 0;overflow-x:auto}
+.exhibit svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.exhibit table{margin:0;font-size:.9rem;color:var(--paper-ink);border:0}
+.exhibit th{background:#efe9db;color:#1c1a16;text-align:center}
+.exhibit td{background:transparent;color:#1c1a16;text-align:center;border-color:var(--paper-line)}
+.exlbl{direction:ltr;text-align:center;font-size:.8rem;font-weight:800;color:#8c2f13;margin-bottom:6px;letter-spacing:.04em}
+.excap{font-size:.88rem;color:var(--ink-2);margin-top:8px;padding:0 4px}
+.excap b{color:var(--gold-2)}
+.pos{color:#0f7b6c;font-weight:700} .neg{color:#a4342a;font-weight:700}
+.stmt{direction:ltr;background:var(--paper);color:var(--paper-ink);border:1px solid var(--paper-line);
+  border-radius:12px;margin:14px 0;overflow-x:auto}
+.stmt .hd{background:#1f5d4c;color:#fff;text-align:center;padding:10px;font-weight:700;line-height:1.5}
+.stmt table{margin:0;font-size:.92rem;color:var(--paper-ink);border:0}
+.stmt td{border:0;padding:5px 14px;background:transparent;color:var(--paper-ink)}
+.stmt td.n{text-align:right;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+.stmt tr.sub td{border-top:1px solid #8a8378}
+.stmt tr.tot td{border-top:1px solid #8a8378;border-bottom:3px double #8a8378;font-weight:700}
+.stmt .ind{padding-inline-start:34px}
+.eq{direction:ltr;text-align:center;background:var(--surface-2);border:2px solid var(--gold-line);
+  border-radius:12px;padding:22px 16px;margin:18px 0;font-family:Georgia,serif;overflow-x:auto}
+.eq .l1{font-size:clamp(1.1rem,3.4vw,1.6rem);font-weight:700;color:var(--ink)}
+.eq .l2{font-size:clamp(.85rem,2.6vw,1.15rem);margin-top:14px;color:var(--ink-2)}
+.eq .plus{color:var(--muted)}
+.g-cs{color:#2aa58c} .g-dv{color:#e07a6f} .g-rv{color:#5aa9e6} .g-ex{color:#d9a54a}
+.link{display:flex;align-items:center;gap:10px;background:var(--ok-soft);border-inline-start:4px solid var(--ok);
+  padding:10px 16px;border-radius:0 8px 8px 0;margin:8px 0;font-size:.95rem}
+.link .n{background:var(--ok);color:#fff;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  font-weight:700;font-size:.8rem;flex:none}
+.period,.point{display:inline-block;font-size:.72rem;font-weight:800;padding:2px 9px;border-radius:999px}
+.period{background:var(--ok-soft);color:var(--ok);border:1px solid var(--ok)}
+.point{background:var(--bad-soft);color:var(--bad);border:1px solid var(--bad)}
+
+/* ---------- questions ---------- */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin:16px 0;box-shadow:var(--shadow)}
+.q .stem{direction:ltr;text-align:left;font-weight:700;margin-bottom:10px}
+.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
+.q ol li{margin:5px 0;font-weight:500}
+
+/* ---------- glosses ---------- */
+.g,.g2{cursor:pointer;position:relative}
+.g{border-bottom:2.5px solid var(--gold);font-weight:700;padding-bottom:1px}
+.g2{border-bottom:1.5px dotted var(--muted)}
+.g:hover,.g.on,.g2:hover,.g2.on{background:var(--gold-soft)}
+.g .ar,.g2 .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
+  background:var(--tip-bg);color:var(--tip-ink);font-family:"IBM Plex Sans Arabic",sans-serif;
+  direction:rtl;text-align:right;font-weight:500;padding:9px 13px;border-radius:10px;z-index:20;
+  box-shadow:0 6px 20px rgba(0,0,0,.35);line-height:1.65;font-size:.88rem}
+.g .ar{white-space:normal;width:max-content;max-width:min(300px,82vw)}
+.g2 .ar{white-space:nowrap;font-weight:600;font-size:.92rem;padding:6px 12px}
+.g .ar b{display:block;font-size:1rem;font-weight:800;margin-bottom:3px;color:var(--tip-ink)}
+.g .ar small{display:block;font-size:.83rem;opacity:.88;font-weight:400}
+.g:hover .ar,.g.on .ar,.g2:hover .ar,.g2.on .ar{display:block}
+.spk{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);
+  background:var(--surface);color:var(--gold);font-size:.7rem;cursor:pointer;margin-inline-start:4px;vertical-align:middle;
+  padding:0;font-family:inherit}
+.spk:hover{border-color:var(--gold);background:var(--gold-soft)}
+
+/* ---------- vocab table ---------- */
+.vocab td.w{font-weight:800;color:var(--gold);white-space:nowrap}
+.vocab td.pos{color:var(--muted);font-size:.85rem;font-style:italic;white-space:nowrap}
+.vocab td.ar{font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;text-align:right;font-weight:600}
+.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
+.vocab td.ex{color:var(--ink-2);font-size:.9rem}
+
+/* ---------- nav ---------- */
+.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
+  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
+.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}.footnav .pill{justify-content:center}}
+
+/* ---------- practice CTA ---------- */
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+  background:linear-gradient(135deg,var(--gold-soft),transparent 70%),var(--surface);
+  border:1px solid var(--gold-line);border-radius:var(--r);padding:16px 20px;margin:28px 0}
+.cta .t{font-weight:800;font-size:1.05rem}
+.cta .s{font-size:.85rem;color:var(--muted)}
+
+/* ============================================================
+   FLASHCARDS
+   ============================================================ */
+.fc-ov{position:fixed;inset:0;background:rgba(10,9,7,.78);backdrop-filter:blur(6px);z-index:100;
+  display:none;align-items:center;justify-content:center;padding:16px}
+.fc-ov.on{display:flex}
+.fc{width:min(560px,100%);background:var(--surface);border:1px solid var(--line);border-radius:20px;
+  box-shadow:0 30px 80px -30px rgba(0,0,0,.8);overflow:hidden;font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;
+  color:var(--ink);direction:rtl}
+.fc-top{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.fc-top .ttl{font-weight:800;flex:1;font-size:.95rem}
+.fc-top .cnt{font-family:"IBM Plex Mono",monospace;font-size:.85rem;color:var(--muted)}
+.fc-prog{height:4px;background:var(--line)}
+.fc-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2));width:0;transition:width .3s}
+.fc-stage{perspective:1400px;padding:22px 18px 8px}
+.fc-card{position:relative;min-height:250px;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.fc-card.flip{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px 20px;gap:10px}
+.fc-front{background:linear-gradient(160deg,var(--gold-soft),transparent 55%),var(--surface-2);border:1px solid var(--gold-line)}
+.fc-back{background:var(--surface-2);border:1px solid var(--line);transform:rotateY(180deg)}
+.fc-face .tag{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.fc-face .w{font-size:clamp(1.5rem,5vw,2.2rem);font-weight:800;color:var(--ink);direction:ltr;unicode-bidi:isolate;line-height:1.2}
+.fc-face .w.ar{direction:rtl;color:var(--gold-2)}
+.fc-face .x{font-size:1rem;color:var(--ink-2);max-width:40ch;line-height:1.7}
+.fc-face .ex{font-size:.85rem;color:var(--muted);direction:ltr;font-style:italic;max-width:44ch}
+.fc-face .hint{font-size:.78rem;color:var(--muted);margin-top:auto}
+.fc-face .spk{width:34px;height:34px;font-size:1rem}
+.fc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:8px 18px 18px}
+.fc-btn{font-family:inherit;font-size:1rem;font-weight:800;border-radius:12px;padding:13px;cursor:pointer;border:1px solid var(--line);
+  background:var(--surface);color:var(--ink);transition:.15s}
+.fc-btn.no{border-color:var(--bad);color:var(--bad)} .fc-btn.no:hover{background:var(--bad-soft)}
+.fc-btn.yes{border-color:var(--ok);color:var(--ok)} .fc-btn.yes:hover{background:var(--ok-soft)}
+.fc-btn.flipb{grid-column:span 2;background:var(--gold);color:#1c1a16;border-color:var(--gold)}
+.fc-btn:disabled{opacity:.4;pointer-events:none}
+.fc-foot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:0 18px 16px;font-size:.82rem;color:var(--muted)}
+.fc-foot .pill{font-size:.78rem;padding:5px 12px}
+.fc-done{text-align:center;padding:36px 20px}
+.fc-done .big-n{font-size:3rem;font-weight:800;color:var(--gold);line-height:1}
+.fc-done p{color:var(--ink-2);margin:10px 0 18px}
+.fc-x{position:absolute;top:10px;inset-inline-end:12px}
+
+/* ---------- hub deck cards ---------- */
+.deck{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;
+  display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;box-shadow:var(--shadow)}
+.deck .dn{font-weight:800;flex:1;min-width:200px}
+.deck .dn small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.deck .st{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--muted);white-space:nowrap}
+.deck .due{color:var(--gold);font-weight:800}
+.streak{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold-line);
+  border-radius:999px;padding:6px 14px;font-weight:800;color:var(--gold)}

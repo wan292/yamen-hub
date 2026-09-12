@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,23 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 <style>
-:root{
-  --bg:#f7f6f3; --card:#fff; --ink:#181716; --ink2:#4c4a46; --muted:#827e77;
-  --line:#e4e1db; --accent:#1f5d4c; --accent-soft:#e6f0ec;
-  --red:#a4342a; --red-soft:#fbecea; --amber:#8a6318; --amber-soft:#fbf2df;
-  --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 22px -18px rgba(0,0,0,.3);
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#111513; --card:#191d1b; --ink:#e8ece9; --ink2:#bcc3bf; --muted:#8b938e;
-  --line:#272d2a; --accent:#5cbfa0; --accent-soft:#16302a;
-  --red:#e0837a; --red-soft:#2a1817; --amber:#d6a75a; --amber-soft:#241d10;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 22px -18px rgba(0,0,0,.8);
-}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:16px;line-height:1.75}
-.mono,code{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.9em}
+:root{--card:var(--surface);--sunk:var(--surface-2);--ink2:var(--ink-2);--accent:var(--gold);--accent-soft:var(--gold-soft);--accent-ink:var(--gold-2);--red:var(--bad);--red-soft:var(--bad-soft);--amber:var(--warn);--amber-soft:var(--warn-soft)}
+ *{box-sizing:border-box}
+body{font-size:17px}
 bdi{unicode-bidi:isolate}
 .wrap{max-width:1080px;margin:0 auto;padding:20px 16px 80px}
 
@@ -196,6 +185,7 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
 <header>
   <h1><bdi>Yamen's Hub</bdi></h1>
   <span class="who" id="who"></span>
+  <button class="tbtn theme" aria-label="theme" style="margin-inline-start:auto">🌙</button>
 </header>
 
 <nav id="nav">
@@ -205,6 +195,7 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
   <button data-t="courses"aria-selected="false">المواد</button>
   <button data-t="notes"  aria-selected="false">الملخصات</button>
   <button data-t="map"    aria-selected="false">الخريطة</button>
+  <button data-t="decks"  aria-selected="false">🃏 البطاقات</button>
 </nav>
 
 <section id="today"></section>
@@ -213,10 +204,17 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
 <section id="courses" hidden></section>
 <section id="notes" hidden></section>
 <section id="map" hidden></section>
+<section id="decks" hidden></section>
 
 </div>
 
 <script src="data.js"></script>
+<script src="data/cards-S1.js"></script>
+<script src="data/cards-S2.js"></script>
+<script src="data/cards-S3.js"></script>
+<script src="data/cards-S4.js"></script>
+<script src="assets/flashcards.js"></script>
+<script src="assets/lesson.js"></script>
 <script>
 const DAYS=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
 const DNAMES=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس"];
@@ -481,12 +479,31 @@ function renderMap(){
   document.getElementById("map").innerHTML=s;
 }
 
-renderToday();renderWeek();renderCal();renderCourses();renderNotes();renderMap();
+
+/* ---------- البطاقات ---------- */
+function renderDecks(){
+  var D=window.YH_DECKS||{}, ids=Object.keys(D), streak=0;
+  try{ var s=JSON.parse(localStorage.getItem('yh-streak')||'{}'); streak=s.n||0; }catch(e){}
+  var s='<div class="card"><h2>البطاقات</h2><p style="font-size:.92rem;color:var(--ink2);margin:0 0 12px">'+
+    'كل درس له مجموعة بطاقات: كلماته ومفاهيمه. اضغط <b>ابدأ</b>، اقلب البطاقة، وقل إذا عرفتها. '+
+    'اللي ما تعرفها ترجع لك أسرع، واللي تعرفها تبعد عنك أكثر — هذا هو التكرار المتباعد.</p>'+
+    '<span class="streak">🔥 '+streak+' يوم متواصل</span></div><div class="grid" style="margin-top:14px">';
+  if(!ids.length) s+='<div class="card empty">ما فيه بطاقات بعد.</div>';
+  ids.forEach(function(id){ var d=D[id], st=window.YH_FLASH?YH_FLASH.stats(d):{total:d.cards.length,due:0,learned:0};
+    var vocab=d.cards.filter(function(c){return c.kind==='vocab';}).length, conc=d.cards.length-vocab;
+    s+='<div class="deck"><div class="dn">'+d.title+'<small>'+st.total+' بطاقة ('+vocab+' كلمة · '+conc+' مفهوم) · متقنة '+st.learned+'</small></div>'+
+       '<span class="st">'+(st.due?'<span class="due">'+st.due+' مستحقة اليوم</span>':'✓ ما فيه مستحق')+'</span>'+
+       '<button class="pill gold" data-deck="'+id+'">ابدأ</button>'+
+       '<button class="pill" data-deck="'+id+'" data-mode="ar">عربي ← إنجليزي</button></div>'; });
+  s+='</div>'; document.getElementById("decks").innerHTML=s;
+}
+
+renderToday();renderWeek();renderCal();renderCourses();renderNotes();renderMap();renderDecks();
 
 document.getElementById("nav").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b)return;
   document.querySelectorAll("#nav button").forEach(x=>x.setAttribute("aria-selected",x===b));
-  ["today","week","cal","courses","notes","map"].forEach(id=>
+  ["today","week","cal","courses","notes","map","decks"].forEach(id=>
     document.getElementById(id).hidden = (id!==b.dataset.t));
 });
 </script>

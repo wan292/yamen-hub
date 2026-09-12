@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,103 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
-<style>
-:root{
-  --bg:#faf9f6; --card:#fff; --ink:#1a1a1a; --ink2:#4a4a4a; --muted:#767676;
-  --line:#e2e0da; --accent:#8c2f13; --accent-soft:#fdf2ee;
-  --exam:#0d4f3c; --exam-soft:#eef7f3; --trap:#8a5a00; --trap-soft:#fdf6e6;
-}
-@media (prefers-color-scheme:dark){:root{
-  --bg:#141312; --card:#1c1b19; --ink:#eceae5; --ink2:#c4c1ba; --muted:#8f8b83;
-  --line:#2e2c28; --accent:#e08a6a; --accent-soft:#2a1b15;
-  --exam:#6fc4a3; --exam-soft:#132520; --trap:#d9a94e; --trap-soft:#241d0f;
-}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",sans-serif;font-size:17px;line-height:1.85}
-.wrap{max-width:900px;margin:0 auto;padding:32px 22px 90px}
-bdi{font-weight:600;unicode-bidi:isolate}
-code,.mono{font-family:"IBM Plex Mono",monospace;unicode-bidi:isolate;font-size:.92em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.35;margin:0 0 6px}
-h2{font-size:1.35rem;margin:0;line-height:1.5}
-header{border-bottom:3px solid var(--accent);padding-bottom:18px;margin-bottom:30px}
-.sub{color:var(--muted);font-size:.93rem;line-height:1.7}
-.concept{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:26px 0;overflow:hidden}
-.chead{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:16px 20px}
-.chead .term{font-size:1.15rem;font-weight:700;color:var(--accent);unicode-bidi:isolate;direction:ltr;text-align:right}
-.chead .ar{font-size:1.02rem;font-weight:600}
-.chead .say{font-size:.85rem;color:var(--muted)}
-.cbody{padding:6px 20px 20px}
-.blk{margin:18px 0}
-.lbl{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.09em;
-  padding:3px 9px;border-radius:3px;margin-bottom:8px;background:var(--line);color:var(--ink2);
-  unicode-bidi:isolate;direction:ltr}
-.hook{font-size:1.05rem;color:var(--ink2)}
-.exam{background:var(--exam-soft);border-inline-start:4px solid var(--exam);
-  padding:16px 18px;border-radius:0 8px 8px 0;direction:ltr;text-align:left;font-size:.98rem;line-height:1.75}
-.exam .lbl{background:var(--exam);color:#fff}
-.trap{background:var(--trap-soft);border-inline-start:4px solid var(--trap);
-  padding:14px 18px;border-radius:0 8px 8px 0}
-.trap .lbl{background:var(--trap);color:#fff}
-.trap ul{margin:8px 0 0;padding-inline-start:20px} .trap li{margin:7px 0}
-ul,ol{padding-inline-start:22px} li{margin:6px 0}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
-th{background:var(--accent-soft);text-align:start;padding:10px 12px;border:1px solid var(--line);font-weight:600;font-size:.87rem}
-td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}
-.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:16px 0}
-.q .stem{direction:ltr;text-align:left;font-weight:600;margin-bottom:10px}
-.q ol{direction:ltr;text-align:left;padding-inline-start:26px}
-.q ol li{margin:5px 0;font-weight:500}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
-summary{cursor:pointer;font-weight:600;color:var(--accent);font-size:.93rem}
-details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
-.big{background:var(--card);border:2px solid var(--accent);border-radius:10px;padding:18px 20px;margin:26px 0}
-.big h2{color:var(--accent);margin-bottom:6px}
-.stmt{direction:ltr;background:#fdfcfa;border:1px solid #d8d3cb;border-radius:8px;
-  margin:14px 0;overflow-x:auto;color:#1a1a1a}
-.stmt .hd{background:#1f5d4c;color:#fff;text-align:center;padding:10px;font-weight:700;line-height:1.5}
-.stmt table{margin:0;font-size:.92rem;color:#1a1a1a}
-.stmt td{border:0;padding:5px 14px}
-.stmt td.n{text-align:right;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
-.stmt tr.sub td{border-top:1px solid #8a8378}
-.stmt tr.tot td{border-top:1px solid #8a8378;border-bottom:3px double #8a8378;font-weight:700}
-.stmt .ind{padding-inline-start:34px}
-.link{display:flex;align-items:center;gap:10px;background:var(--exam-soft);
-  border-inline-start:4px solid var(--exam);padding:10px 16px;border-radius:0 8px 8px 0;margin:8px 0;font-size:.95rem}
-.link .n{background:var(--exam);color:#fff;width:24px;height:24px;border-radius:50%;
-  display:grid;place-items:center;font-weight:700;font-size:.8rem;flex:none}
-.period{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
-  background:#e8f0ec;color:#0d4f3c;border:1px solid #0d4f3c}
-.point{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;
-  background:#fbecea;color:#a4342a;border:1px solid #a4342a}
-
-/* nav */
-.navbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
-.pill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:.86rem;
-  font-weight:600;color:var(--accent);background:var(--card);border:1px solid var(--line);
-  border-radius:999px;padding:7px 15px;transition:.15s}
-.pill:hover{border-color:var(--accent);background:var(--accent-soft)}
-.pill.home{color:var(--ink);}
-.pill.off{color:var(--muted);border-style:dashed;pointer-events:none;opacity:.6}
-.footnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;
-  margin-top:40px;padding-top:20px;border-top:2px solid var(--line)}
-.footnav .side{display:flex;gap:8px;flex-wrap:wrap}
-@media (max-width:560px){.footnav{flex-direction:column;align-items:stretch}
-  .footnav .pill{justify-content:center}}
-.note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
-</style>
+<link rel="stylesheet" href="../assets/theme.css">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 </head>
 <body>
 <div class="wrap">
 
-<div class="navbar">
-  <a class="pill home" href="../index.html">→ الرجوع إلى Yamen's Hub</a>
-  <a class="pill" href="ACCT203-CH1-S4-EN.html">🇬🇧 النسخة الإنجليزية</a>
-  <a class="pill" href="../index.html#notes">كل الملخصات</a>
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH1-S4-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH1-S4">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
 </div>
-
-
-<header>
+<header class="lh">
   <h1>الفصل الأول — القوائم المالية</h1>
   <p class="sub"><code>ACCT 203</code> · <bdi>Chapter 1</bdi> · القسم ٤ من ٤:
   <bdi>Financial Statements</bdi><br>
@@ -120,6 +37,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- The four -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🗂️</div>
     <div class="term">The Four Financial Statements</div>
     <div class="ar">القوائم المالية الأربع</div>
     <div class="say">الترتيب مقصود — لا تغيّره</div>
@@ -127,6 +45,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   <div class="cbody">
     <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
       الأولى تحسب الربح، والثانية تدوّره، والثالثة تصوّر الوضع، والرابعة تتبع النقد.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل ثلاث فيديوهات وصورة وحدة: الدخل والأرباح المبقاة والتدفقات فيديو لفترة كاملة، بس الميزانية صورة للحظة وحدة.</div></div>
 
     <table>
       <tr><th>القائمة</th><th>الشكل <span style="font-weight:400">(Layout)</span></th><th>الغرض</th><th>الزمن</th></tr>
@@ -166,9 +85,9 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 
     <div class="blk trap"><span class="lbl">الفخ</span>
       <ul>
-        <li><b>ثلاثة عن فترة، وواحدة عن لحظة.</b> الـ<bdi>balance sheet</bdi> وحدها
-            <bdi>at a point in time</bdi>. هذا أكثر سؤال في القسم.</li>
-        <li>لهذا عنوان قائمة الدخل يقول <i><bdi>For Month Ended December 31</bdi></i>،
+        <li><b><mark class="k">ثلاثة عن فترة، وواحدة عن لحظة.</mark></b> الـ<bdi>balance sheet</bdi> وحدها
+            <mark class="k"><bdi>at a point in time</bdi></mark>. هذا أكثر سؤال في القسم.</li>
+        <li>لهذا عنوان قائمة الدخل يقول <mark class="k"><i><bdi>For Month Ended December 31</bdi></i></mark>،
             بينما الميزانية تقول <i><bdi>December 31</bdi></i> فقط. العنوان نفسه يكشف الجواب.</li>
       </ul>
     </div>
@@ -178,11 +97,13 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- How they link -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🔗</div>
     <div class="term">How the Statements Interrelate</div>
     <div class="ar">كيف ترتبط القوائم ببعضها</div>
     <div class="say">نصف الهدف P2 هو هذا بالضبط</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل سباق تتابع: صافي الدخل يسلّم العصا للأرباح المبقاة، وهي للميزانية، والنقد لقائمة التدفقات — ما أحد يركض قبل ما توصله العصا.</div></div>
     <div class="blk">
       <div class="link"><span class="n">1</span>
         <span><b><bdi>Net income</bdi></b> من قائمة الدخل يُستخدم لحساب
@@ -191,10 +112,10 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
         <span><b><bdi>Retained earnings</bdi></b> تُستخدم لإعداد
         <b><bdi>the balance sheet</bdi></b>.</span></div>
       <div class="link"><span class="n">3</span>
-        <span><b><bdi>Cash</bdi></b> من الميزانية يُستخدم لمطابقة
+        <span><b><bdi>Cash</bdi></b> من الميزانية يُستخدم <mark class="k">لمطابقة</mark>
         <b><bdi>the statement of cash flows</bdi></b>.</span></div>
-      <p style="margin-top:14px">ولهذا السبب <b>الترتيب إجباري</b>: ما تقدر تسوّي قائمة الأرباح المبقاة
-      قبل ما تعرف صافي الدخل، ولا الميزانية قبل ما تعرف الأرباح المبقاة.</p>
+      <p style="margin-top:14px">ولهذا السبب <b><mark class="k">الترتيب إجباري</mark></b>: ما تقدر تسوّي قائمة الأرباح المبقاة
+      <mark class="k">قبل ما تعرف صافي الدخل</mark>، ولا الميزانية قبل ما تعرف الأرباح المبقاة.</p>
     </div>
 
     <div class="blk exam"><span class="lbl">EXAM BOX</span>
@@ -207,21 +128,23 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- Income statement -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">📊</div>
     <div class="term">Income Statement</div>
     <div class="ar">قائمة الدخل</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّلها قمع: الإيرادات تنصبّ من فوق، والمصروفات تتسرّب من الجوانب، واللي يقطر من تحت هو صافي الدخل.</div></div>
     <div class="blk"><span class="lbl">الشرح</span>
-      <p>الإيرادات <b>أولاً</b>، والمصروفات <b>بعدها</b>. والمصروفات هي <b>تكاليف توليد الإيرادات</b>
+      <p>الإيرادات <b>أولاً</b>، والمصروفات <b>بعدها</b>. والمصروفات هي <b><mark class="k">تكاليف توليد الإيرادات</mark></b>
       المُعلنة.</p>
       <ul>
-        <li><b><bdi>Net income</bdi></b> — يحصل لما الإيرادات <b>تتجاوز</b> المصروفات.</li>
-        <li><b><bdi>Net loss</bdi></b> — يحصل لما المصروفات <b>تتجاوز</b> الإيرادات.</li>
+        <li><b><bdi>Net income</bdi></b> — يحصل لما <mark class="k">الإيرادات <b>تتجاوز</b> المصروفات</mark>.</li>
+        <li><b><bdi>Net loss</bdi></b> — يحصل لما <mark class="k">المصروفات <b>تتجاوز</b> الإيرادات</mark>.</li>
         <li>صافي الدخل (أو الخسارة) يظهر في <b>أسفل</b> القائمة.</li>
         <li>ويُسمّى أحياناً <b><bdi>earnings</bdi></b> أو <b><bdi>profit</bdi></b> — نفس الشي.</li>
       </ul>
-      <p style="background:var(--trap-soft);padding:12px 16px;border-radius:8px;font-weight:600">
-      ⚠ استثمارات المساهمين والتوزيعات <b>ليست جزءاً من الدخل</b>
+      <p style="background:var(--warn-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      ⚠ استثمارات المساهمين والتوزيعات <b><mark class="k">ليست جزءاً من الدخل</mark></b>
       (<bdi>are not part of income</bdi>).</p>
     </div>
 
@@ -247,16 +170,18 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- Retained earnings -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">🏦</div>
     <div class="term">Statement of Retained Earnings</div>
     <div class="ar">قائمة الأرباح المبقاة</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّلها حصّالة الشركة: كل شهر تحط فيها صافي الدخل، وكل ما توزّع dividends تسحب منها — واللي باقي هو الأرباح المبقاة.</div></div>
     <div class="blk"><span class="lbl">الشرح</span>
-      <p><b><bdi>Retained earnings</bdi></b> = <b>صافي الدخل التراكمي ناقص أي توزيعات</b>.</p>
+      <p><b><bdi>Retained earnings</bdi></b> = <b><mark class="k">صافي الدخل التراكمي ناقص أي توزيعات</mark></b>.</p>
       <p>القائمة تبيّن: الرصيد الافتتاحي · ما يزيده (<bdi>net income</bdi>) ·
       ما ينقصه (<bdi>dividends</bdi> و<bdi>net loss</bdi>) · والرصيد الختامي.</p>
-      <p>والرصيد الختامي <b>يُرحَّل ويُعرض في الميزانية</b> — وهذي هي الحلقة رقم ٢ فوق.</p>
-      <p><b>الرصيد الافتتاحي:</b> عند <bdi>FastForward</bdi> = <b>صفر</b>، لأن الشركة
+      <p>والرصيد الختامي <b><mark class="k">يُرحَّل ويُعرض في الميزانية</mark></b> — وهذي هي الحلقة رقم ٢ فوق.</p>
+      <p><b>الرصيد الافتتاحي:</b> عند <bdi>FastForward</bdi> = <b><mark class="k">صفر</mark></b>، لأن الشركة
       <b>ما كانت موجودة</b> قبل ١ ديسمبر. أما الشركة القائمة فرصيدها الافتتاحي =
       <b>الرصيد الختامي للفترة السابقة</b> (مثلاً ٣٠ نوفمبر).</p>
     </div>
@@ -281,7 +206,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 
     <div class="blk trap"><span class="lbl">الفخ</span>
       <ul>
-        <li><bdi>Dividends</bdi> تُطرح <b>هنا</b>، مو في قائمة الدخل. لو طرحتها من الإيرادات
+        <li><mark class="k"><bdi>Dividends</bdi> تُطرح <b>هنا</b>، مو في قائمة الدخل</mark>. لو طرحتها من الإيرادات
             بيطلع صافي دخل غلط.</li>
         <li>شركة <b>جديدة</b> رصيدها الافتتاحي <b>صفر</b>. شركة <b>قائمة</b> رصيدها = ختامي الفترة السابقة.</li>
         <li><bdi>net loss</bdi> <b>ينقص</b> الأرباح المبقاة مثل التوزيعات.</li>
@@ -293,15 +218,17 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 <!-- Cash flows -->
 <div class="concept">
   <div class="chead">
+    <div class="ico">💧</div>
     <div class="term">Statement of Cash Flows</div>
     <div class="ar">قائمة التدفقات النقدية</div>
   </div>
   <div class="cbody">
+    <div class="hook-mem"><span class="e">🧠</span><div>تخيّل خزّان ماء بثلاث مواسير — تشغيلي، استثماري، تمويلي — ومستوى الماء آخر الشهر لازم يطابق رقم النقد في الميزانية.</div></div>
     <div class="blk"><span class="lbl">الشرح</span>
-      <p>ثلاثة أقسام: <b><bdi>Operating</bdi></b> · <b><bdi>Investing</bdi></b> ·
-      <b><bdi>Financing</bdi></b>، ومجموعها = <b>التغيّر في النقد</b>.</p>
-      <p>ثم يُضاف رصيد النقد الافتتاحي فيَنتج <b>رصيد النقد الختامي</b> — وهو نفس رقم النقد
-      في الميزانية (الحلقة رقم ٣).</p>
+      <p>ثلاثة أقسام: <mark class="k"><b><bdi>Operating</bdi></b> · <b><bdi>Investing</bdi></b> ·
+      <b><bdi>Financing</bdi></b></mark>، ومجموعها = <b><mark class="k">التغيّر في النقد</mark></b>.</p>
+      <p>ثم يُضاف رصيد النقد الافتتاحي فيَنتج <b>رصيد النقد الختامي</b> — وهو <mark class="k">نفس رقم النقد
+      في الميزانية</mark> (الحلقة رقم ٣).</p>
       <div class="stmt">
         <div class="hd">FASTFORWARD — Financing activities (مقتطف)</div>
         <table>
@@ -370,6 +297,7 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   الاستثمار يظهر في <bdi>Common Stock</bdi> وفي التدفقات التمويلية — مو في قائمة الدخل.</p></details>
 </div>
 
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH1-S4">ابدأ</button> <button class="pill" data-deck="ACCT203-CH1-S4" data-mode="ar">عربي ← إنجليزي</button></div></div>
 <h2 style="margin:40px 0 10px">المصطلحات</h2>
 <table>
   <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
@@ -399,5 +327,8 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   <div class="side"><span class="pill off">نهاية الفصل</span></div>
 </div>
 </div>
+<script src="../data/cards-S4.js"></script>
+<script src="../assets/flashcards.js"></script>
+<script src="../assets/lesson.js"></script>
 </body>
 </html>
