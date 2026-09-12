@@ -96,13 +96,18 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
 .excap b{color:var(--accent)}
 
 /* gloss + vocabulary */
-.g{border-bottom:2px dotted var(--accent);cursor:pointer;position:relative;font-weight:600}
+.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
+  padding-bottom:1px}
 .g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
   background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;font-size:.86rem;font-weight:600;white-space:nowrap;padding:5px 11px;
-  border-radius:7px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
+  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
+  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
+.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
+.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
 .g:hover .ar,.g.on .ar{display:block}
+.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
 .vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
 .vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
 .vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
@@ -132,7 +137,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <h1>Chapter 1 — Importance of Accounting</h1>
   <p class="sub"><code>ACCT 203</code> · Principles of Financial Accounting · Chapter 1: Accounting in Business<br>
   Section 1 of 4: Importance of Accounting — objective <code>C1</code>:
-  Explain the importance of accounting and <span class="g" data-ar="يحدّد، يتعرّف على">identify</span> its users.</p>
+  Explain the importance of accounting and <span class="g" data-ar="يحدّد، يتعرّف على" data-x="يعني تعرف مين هم بالضبط وتسمّيهم واحد واحد">identify</span> its users.</p>
 </header>
 
 <div class="big">
@@ -155,7 +160,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <div class="cbody">
     <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
       Accounting is not "keeping books". It is a full <b>information system</b>. It picks the events
-      that matter, records them, then <span class="g" data-ar="يوصّل، ينقل">communicates</span> them
+      that matter, records them, then <span class="g" data-ar="يوصّل، ينقل" data-x="يوصّل المعلومة للناس اللي يحتاجونها عشان ياخذون قرار">communicates</span> them
       to people who must make a decision.</div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
@@ -194,7 +199,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <b>order</b> and the line under each box.</p>
       </div>
       <p>The order matters: <b>identify &#8594; record &#8594; communicate</b>. Any answer that
-      <span class="g" data-ar="يعكس، يقلب">reverses</span> the order is wrong.</p>
+      <span class="g" data-ar="يعكس، يقلب" data-x="يقلب الترتيب بالعكس، يحط الآخر أول والأول آخر">reverses</span> the order is wrong.</p>
     </div>
 
     <div class="blk"><span class="lbl">LOCAL EXAMPLE</span>
@@ -212,8 +217,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     <div class="blk trap"><span class="lbl">THE TRAP</span>
       <ul>
         <li><b>Recordkeeping</b> (also called <b>bookkeeping</b>) is <b>only one part</b> of accounting —
-        the recording part. Accounting is <span class="g" data-ar="أوسع، أشمل">broader</span>.
-        It also includes analysis and <span class="g" data-ar="التفسير">interpretation</span>.</li>
+        the recording part. Accounting is <span class="g" data-ar="أوسع، أشمل" data-x="أوسع وأكبر، يشمل أشياء أكثر مو بس شي واحد">broader</span>.
+        It also includes analysis and <span class="g" data-ar="التفسير" data-x="يعني تفهم وش وراء الأرقام وتشرحها، مو بس تقراها">interpretation</span>.</li>
         <li>Any choice that says <b>accounting = recordkeeping</b> is <b>always wrong</b>.
         This is the biggest trap in the section.</li>
         <li><b>bookkeeping</b> and <b>recordkeeping</b> mean the same thing. Do not treat them as different.</li>
@@ -235,34 +240,34 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>Accounting is called <b>the language of business</b>, because it carries data that helps
-      people decide. To <span class="g" data-ar="يصنّف">classify</span> a user, ask one question:
+      people decide. To <span class="g" data-ar="يصنّف" data-x="تحط الشي في خانته، تقول هذا من النوع الفلاني">classify</span> a user, ask one question:
       does this person run the organization? The users split into two groups.</p>
       <table>
         <tr><th>&nbsp;</th><th>External users</th><th>Internal users</th></tr>
         <tr><td><b>Who they are</b></td>
             <td>They do <b>not</b> run the organization, and their
-            <span class="g" data-ar="الوصول، إمكانية الاطّلاع">access</span> to the information is
-            <span class="g" data-ar="محدود">limited</span></td>
+            <span class="g" data-ar="الوصول، إمكانية الاطّلاع" data-x="يعني تقدر توصل للمعلومة وتشوفها، عندك طريق لها">access</span> to the information is
+            <span class="g" data-ar="محدود" data-x="محدود يعني قليل وله حد، مو كل شي متاح لك">limited</span></td>
             <td>They <b>run</b> the organization directly</td></tr>
         <tr><td><b>The branch</b></td><td><b>Financial accounting</b></td><td><b>Managerial accounting</b></td></tr>
         <tr><td><b>The reports</b></td>
             <td>General-purpose financial statements</td>
-            <td>Reports <span class="g" data-ar="مصمّم، مُعدّ">designed</span> for their
-            <span class="g" data-ar="خاص، فريد">unique</span> needs</td></tr>
+            <td>Reports <span class="g" data-ar="مصمّم، مُعدّ" data-x="مسوّي ومرتّب بالذات عشان شي معيّن، مو عشوائي">designed</span> for their
+            <span class="g" data-ar="خاص، فريد" data-x="خاص فيهم هم بس، ما يشبه احتياج غيرهم">unique</span> needs</td></tr>
       </table>
       <p><b>External users:</b> Lenders (creditors) · Shareholders (investors) ·
-      External (<span class="g" data-ar="مستقل">independent</span>) auditors ·
+      External (<span class="g" data-ar="مستقل" data-x="مستقل يعني ما يتبع أحد وما أحد يتحكّم فيه">independent</span>) auditors ·
       Nonmanagerial employees and labor unions · Regulators (such as the IRS) ·
       Voters and government officials · Contributors · Suppliers · Customers</p>
       <p><b>Internal users:</b> Managers of Purchasing · Human resource ·
-      Production · <span class="g" data-ar="التوزيع">Distribution</span> · Marketing · Service ·
+      Production · <span class="g" data-ar="التوزيع" data-x="توصيل البضاعة من المصنع لين توصل المحل أو الزبون">Distribution</span> · Marketing · Service ·
       Research and development</p>
     </div>
 
     <div class="blk"><span class="lbl">LOCAL EXAMPLE</span>
       <p>A company in Madinah wants a loan from the bank. The <b>bank</b> is a lender / creditor,
       so it is an <b>external</b> user. It reads the financial statements to see if the company can
-      <span class="g" data-ar="يسدّد، يعيد الدفع">repay</span> the money. Inside the same company,
+      <span class="g" data-ar="يسدّد، يعيد الدفع" data-x="يرجّع الفلوس اللي أخذها قرض، يسدّد الدين">repay</span> the money. Inside the same company,
       the <b>purchasing manager</b> wants a report that tells him what to buy and when.
       He is an <b>internal</b> user, and the report is built for him alone.</p>
     </div>
@@ -297,7 +302,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   </div>
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>There are four areas of <span class="g" data-ar="الفرص، المجالات">opportunities</span>:
+      <p>There are four areas of <span class="g" data-ar="الفرص، المجالات" data-x="فرص شغل ومجالات تقدر تدخلها وتشتغل فيها">opportunities</span>:
       <b>financial</b> · <b>managerial</b> · <b>taxation</b> · <b>accounting-related</b>.</p>
 
       <div class="exhibit">
@@ -365,7 +370,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           </g>
         </svg>
         <p class="excap"><b>Private = 54%</b> is the biggest
-        <span class="g" data-ar="حصة، نصيب">share</span>. If the question shows the pie with no
+        <span class="g" data-ar="حصة، نصيب" data-x="نصيب أو حصة من الشي الكامل، زي قطعة من الكيكة">share</span>. If the question shows the pie with no
         numbers, remember that the largest slice is <b>private accounting</b>.</p>
       </div>
       <table>
@@ -398,19 +403,19 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p><b>Data analytics</b> is the process of analyzing data to find
-      <span class="g" data-ar="ذو معنى، مفيد">meaningful</span> relationships and
-      <span class="g" data-ar="اتجاهات">trends</span>. There are four types, and they are ordered
+      <span class="g" data-ar="ذو معنى، مفيد" data-x="له معنى ويفيدك، مو كلام أو أرقام فاضية">meaningful</span> relationships and
+      <span class="g" data-ar="اتجاهات" data-x="الاتجاه اللي الأرقام ماشية فيه، طالعة ولا نازلة مع الوقت">trends</span>. There are four types, and they are ordered
       by difficulty and by value.</p>
       <table>
         <tr><th>Type</th><th>It answers</th><th>Time</th></tr>
         <tr><td><b>Descriptive</b></td>
-            <td><span class="g" data-ar="يلخّص">Summarizes</span> and describes what happened</td>
+            <td><span class="g" data-ar="يلخّص" data-x="يختصر لك الكلام الكثير في كم سطر بس">Summarizes</span> and describes what happened</td>
             <td><b>Past</b></td></tr>
         <tr><td><b>Diagnostic</b></td>
-            <td><span class="g" data-ar="يكشف، يظهر">Reveals</span> the <b>causes</b> of the events</td>
+            <td><span class="g" data-ar="يكشف، يظهر" data-x="يكشف لك شي كان مخفي وما كنت شايفه">Reveals</span> the <b>causes</b> of the events</td>
             <td><b>Past</b></td></tr>
         <tr><td><b>Predictive</b></td>
-            <td>Predicts events that may <span class="g" data-ar="يحدث، يقع">occur</span></td>
+            <td>Predicts events that may <span class="g" data-ar="يحدث، يقع" data-x="يصير ويحصل فعلاً، مو بس كلام">occur</span></td>
             <td><b>Future</b></td></tr>
         <tr><td><b>Prescriptive</b></td>
             <td>Sets <b>action plans</b> to reach a target</td>
@@ -449,7 +454,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         This order itself is a repeated exam question.</p>
       </div>
       <p>A fifth type is rising: <b>cognitive analytics</b>. It uses <b>AI</b> and machine learning to
-      <span class="g" data-ar="يحاكي، يقلّد">mimic</span> human thinking.</p>
+      <span class="g" data-ar="يحاكي، يقلّد" data-x="يقلّد ويسوّي نفس الشي بالضبط زي ما يسويه الإنسان">mimic</span> human thinking.</p>
       <p><b>Data visualization</b> is a graphical display of data that makes its meaning clear.
       The best-known tool is <b>Tableau</b>. A <b>dashboard</b> is a visual display that puts charts
       and organized tables together to show trends.</p>
@@ -461,7 +466,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <li>Descriptive vs Diagnostic: the first says <b>what</b> happened, the second says
         <b>why</b> it happened.</li>
         <li>Predictive vs Prescriptive: the first <b>predicts</b>, the second
-        <span class="g" data-ar="يوصي، ينصح بـ">recommends</span> a plan.</li>
+        <span class="g" data-ar="يوصي، ينصح بـ" data-x="ينصحك ويقول لك سوّ كذا، هذا الأحسن لك">recommends</span> a plan.</li>
       </ul>
     </div>
   </div>
@@ -522,8 +527,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   </ol>
   <details><summary>Answer</summary>
   <p><b>B</b>. The word <i>why</i> is the key. The question describes a sales
-  <span class="g" data-ar="انخفاض، تراجع">decline</span> that already happened. To
-  <span class="g" data-ar="يحدّد، يعرف بدقة">determine</span> the type, look at the question the
+  <span class="g" data-ar="انخفاض، تراجع" data-x="نزول وتراجع، يعني الأرقام قلّت عن قبل">decline</span> that already happened. To
+  <span class="g" data-ar="يحدّد، يعرف بدقة" data-x="تعرف الشي بالضبط وتقرّر وش هو بدون شك">determine</span> the type, look at the question the
   analysis answers: Descriptive says <b>what</b> happened, Diagnostic says <b>why</b> it happened.
   Both are about the <b>past</b>, so choices C and D are in the wrong time frame.</p></details>
 </div>
@@ -566,30 +571,30 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 Learn them so you can read the textbook and the exam paper on your own.</p>
 <table class="vocab">
   <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
-  <tr><td class="w">access</td><td class="pos">noun</td><td class="ar">الوصول، إمكانية الاطّلاع</td><td class="ex">Their access to the information is limited.</td></tr>
-  <tr><td class="w">broader</td><td class="pos">adjective</td><td class="ar">أوسع، أشمل</td><td class="ex">Accounting is broader; it also includes analysis and interpretation.</td></tr>
-  <tr><td class="w">classify</td><td class="pos">verb</td><td class="ar">يصنّف</td><td class="ex">To classify a user, ask one question: does this person run the organization?</td></tr>
-  <tr><td class="w">communicates</td><td class="pos">verb</td><td class="ar">يوصّل، ينقل</td><td class="ex">It records the events, then communicates them to people who must make a decision.</td></tr>
-  <tr><td class="w">decline</td><td class="pos">noun</td><td class="ar">انخفاض، تراجع</td><td class="ex">The question describes a sales decline that already happened.</td></tr>
-  <tr><td class="w">designed</td><td class="pos">verb (past participle)</td><td class="ar">مصمّم، مُعدّ</td><td class="ex">Reports designed for their unique needs.</td></tr>
-  <tr><td class="w">determine</td><td class="pos">verb</td><td class="ar">يحدّد، يعرف بدقة</td><td class="ex">To determine the type, look at the question the analysis answers.</td></tr>
-  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">التوزيع</td><td class="ex">Managers of Purchasing, Human resource, Production, Distribution, Marketing.</td></tr>
-  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">يحدّد، يتعرّف على</td><td class="ex">Explain the importance of accounting and identify its users.</td></tr>
-  <tr><td class="w">independent</td><td class="pos">adjective</td><td class="ar">مستقل</td><td class="ex">External (independent) auditors.</td></tr>
-  <tr><td class="w">interpretation</td><td class="pos">noun</td><td class="ar">التفسير</td><td class="ex">Accounting also includes analysis and interpretation.</td></tr>
-  <tr><td class="w">limited</td><td class="pos">adjective</td><td class="ar">محدود</td><td class="ex">Their access to the information is limited.</td></tr>
-  <tr><td class="w">meaningful</td><td class="pos">adjective</td><td class="ar">ذو معنى، مفيد</td><td class="ex">Analyzing data to find meaningful relationships and trends.</td></tr>
-  <tr><td class="w">mimic</td><td class="pos">verb</td><td class="ar">يحاكي، يقلّد</td><td class="ex">Cognitive analytics uses AI and machine learning to mimic human thinking.</td></tr>
-  <tr><td class="w">occur</td><td class="pos">verb</td><td class="ar">يحدث، يقع</td><td class="ex">Predictive analytics predicts events that may occur.</td></tr>
-  <tr><td class="w">opportunities</td><td class="pos">noun (plural)</td><td class="ar">الفرص، المجالات</td><td class="ex">There are four areas of opportunities in accounting.</td></tr>
-  <tr><td class="w">recommends</td><td class="pos">verb</td><td class="ar">يوصي، ينصح بـ</td><td class="ex">Predictive predicts; Prescriptive recommends a plan.</td></tr>
-  <tr><td class="w">repay</td><td class="pos">verb</td><td class="ar">يسدّد، يعيد الدفع</td><td class="ex">The bank reads the statements to see if the company can repay the money.</td></tr>
-  <tr><td class="w">reveal</td><td class="pos">verb</td><td class="ar">يكشف، يظهر</td><td class="ex">Diagnostic analytics reveals the causes of the events.</td></tr>
-  <tr><td class="w">reverses</td><td class="pos">verb</td><td class="ar">يعكس، يقلب</td><td class="ex">Any answer that reverses the order is wrong.</td></tr>
-  <tr><td class="w">share</td><td class="pos">noun</td><td class="ar">حصة، نصيب</td><td class="ex">Private = 54% is the biggest share.</td></tr>
-  <tr><td class="w">summarize</td><td class="pos">verb</td><td class="ar">يلخّص</td><td class="ex">Descriptive analytics summarizes and describes what happened.</td></tr>
-  <tr><td class="w">trends</td><td class="pos">noun (plural)</td><td class="ar">اتجاهات</td><td class="ex">Analyzing data to find meaningful relationships and trends.</td></tr>
-  <tr><td class="w">unique</td><td class="pos">adjective</td><td class="ar">خاص، فريد</td><td class="ex">Reports designed for their unique needs.</td></tr>
+  <tr><td class="w">access</td><td class="pos">noun</td><td class="ar">الوصول، إمكانية الاطّلاع<small>يعني تقدر توصل للمعلومة وتشوفها، عندك طريق لها</small></td><td class="ex">Their access to the information is limited.</td></tr>
+  <tr><td class="w">broader</td><td class="pos">adjective</td><td class="ar">أوسع، أشمل<small>أوسع وأكبر، يشمل أشياء أكثر مو بس شي واحد</small></td><td class="ex">Accounting is broader; it also includes analysis and interpretation.</td></tr>
+  <tr><td class="w">classify</td><td class="pos">verb</td><td class="ar">يصنّف<small>تحط الشي في خانته، تقول هذا من النوع الفلاني</small></td><td class="ex">To classify a user, ask one question: does this person run the organization?</td></tr>
+  <tr><td class="w">communicates</td><td class="pos">verb</td><td class="ar">يوصّل، ينقل<small>يوصّل المعلومة للناس اللي يحتاجونها عشان ياخذون قرار</small></td><td class="ex">It records the events, then communicates them to people who must make a decision.</td></tr>
+  <tr><td class="w">decline</td><td class="pos">noun</td><td class="ar">انخفاض، تراجع<small>نزول وتراجع، يعني الأرقام قلّت عن قبل</small></td><td class="ex">The question describes a sales decline that already happened.</td></tr>
+  <tr><td class="w">designed</td><td class="pos">verb (past participle)</td><td class="ar">مصمّم، مُعدّ<small>مسوّي ومرتّب بالذات عشان شي معيّن، مو عشوائي</small></td><td class="ex">Reports designed for their unique needs.</td></tr>
+  <tr><td class="w">determine</td><td class="pos">verb</td><td class="ar">يحدّد، يعرف بدقة<small>تعرف الشي بالضبط وتقرّر وش هو بدون شك</small></td><td class="ex">To determine the type, look at the question the analysis answers.</td></tr>
+  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">التوزيع<small>توصيل البضاعة من المصنع لين توصل المحل أو الزبون</small></td><td class="ex">Managers of Purchasing, Human resource, Production, Distribution, Marketing.</td></tr>
+  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">يحدّد، يتعرّف على<small>يعني تعرف مين هم بالضبط وتسمّيهم واحد واحد</small></td><td class="ex">Explain the importance of accounting and identify its users.</td></tr>
+  <tr><td class="w">independent</td><td class="pos">adjective</td><td class="ar">مستقل<small>مستقل يعني ما يتبع أحد وما أحد يتحكّم فيه</small></td><td class="ex">External (independent) auditors.</td></tr>
+  <tr><td class="w">interpretation</td><td class="pos">noun</td><td class="ar">التفسير<small>يعني تفهم وش وراء الأرقام وتشرحها، مو بس تقراها</small></td><td class="ex">Accounting also includes analysis and interpretation.</td></tr>
+  <tr><td class="w">limited</td><td class="pos">adjective</td><td class="ar">محدود<small>محدود يعني قليل وله حد، مو كل شي متاح لك</small></td><td class="ex">Their access to the information is limited.</td></tr>
+  <tr><td class="w">meaningful</td><td class="pos">adjective</td><td class="ar">ذو معنى، مفيد<small>له معنى ويفيدك، مو كلام أو أرقام فاضية</small></td><td class="ex">Analyzing data to find meaningful relationships and trends.</td></tr>
+  <tr><td class="w">mimic</td><td class="pos">verb</td><td class="ar">يحاكي، يقلّد<small>يقلّد ويسوّي نفس الشي بالضبط زي ما يسويه الإنسان</small></td><td class="ex">Cognitive analytics uses AI and machine learning to mimic human thinking.</td></tr>
+  <tr><td class="w">occur</td><td class="pos">verb</td><td class="ar">يحدث، يقع<small>يصير ويحصل فعلاً، مو بس كلام</small></td><td class="ex">Predictive analytics predicts events that may occur.</td></tr>
+  <tr><td class="w">opportunities</td><td class="pos">noun (plural)</td><td class="ar">الفرص، المجالات<small>فرص شغل ومجالات تقدر تدخلها وتشتغل فيها</small></td><td class="ex">There are four areas of opportunities in accounting.</td></tr>
+  <tr><td class="w">recommends</td><td class="pos">verb</td><td class="ar">يوصي، ينصح بـ<small>ينصحك ويقول لك سوّ كذا، هذا الأحسن لك</small></td><td class="ex">Predictive predicts; Prescriptive recommends a plan.</td></tr>
+  <tr><td class="w">repay</td><td class="pos">verb</td><td class="ar">يسدّد، يعيد الدفع<small>يرجّع الفلوس اللي أخذها قرض، يسدّد الدين</small></td><td class="ex">The bank reads the statements to see if the company can repay the money.</td></tr>
+  <tr><td class="w">reveal</td><td class="pos">verb</td><td class="ar">يكشف، يظهر<small>يكشف لك شي كان مخفي وما كنت شايفه</small></td><td class="ex">Diagnostic analytics reveals the causes of the events.</td></tr>
+  <tr><td class="w">reverses</td><td class="pos">verb</td><td class="ar">يعكس، يقلب<small>يقلب الترتيب بالعكس، يحط الآخر أول والأول آخر</small></td><td class="ex">Any answer that reverses the order is wrong.</td></tr>
+  <tr><td class="w">share</td><td class="pos">noun</td><td class="ar">حصة، نصيب<small>نصيب أو حصة من الشي الكامل، زي قطعة من الكيكة</small></td><td class="ex">Private = 54% is the biggest share.</td></tr>
+  <tr><td class="w">summarize</td><td class="pos">verb</td><td class="ar">يلخّص<small>يختصر لك الكلام الكثير في كم سطر بس</small></td><td class="ex">Descriptive analytics summarizes and describes what happened.</td></tr>
+  <tr><td class="w">trends</td><td class="pos">noun (plural)</td><td class="ar">اتجاهات<small>الاتجاه اللي الأرقام ماشية فيه، طالعة ولا نازلة مع الوقت</small></td><td class="ex">Analyzing data to find meaningful relationships and trends.</td></tr>
+  <tr><td class="w">unique</td><td class="pos">adjective</td><td class="ar">خاص، فريد<small>خاص فيهم هم بس، ما يشبه احتياج غيرهم</small></td><td class="ex">Reports designed for their unique needs.</td></tr>
 </table>
 
 <p class="note">
@@ -608,11 +613,20 @@ Business Transactions and Accounting · Financial Statements.
 </div>
 <script>
 document.querySelectorAll('span.g').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar'; t.textContent=s.dataset.ar; s.appendChild(t);
+  var t=document.createElement('span'); t.className='ar';
+  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
+  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
+  s.appendChild(t);
   s.addEventListener('click',function(e){
     e.stopPropagation();
     document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
     s.classList.toggle('on');
+    if(s.classList.contains('on')){
+      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
+      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
+      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
+      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
+    }
   });
 });
 document.addEventListener('click',function(){

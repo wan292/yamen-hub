@@ -92,13 +92,18 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   .footnav .pill{justify-content:center}}
 .note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
 
-.g{border-bottom:2px dotted var(--accent);cursor:pointer;position:relative;font-weight:600}
+.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
+  padding-bottom:1px}
 .g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
   background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;font-size:.86rem;font-weight:600;white-space:nowrap;padding:5px 11px;
-  border-radius:7px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
+  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
+  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
+.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
+.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
 .g:hover .ar,.g.on .ar{display:block}
+.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
 .vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
 .vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
 .vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
@@ -125,9 +130,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <header>
   <h1>Chapter 1 — Financial Statements</h1>
   <p class="sub"><code>ACCT 203</code> · Chapter 1 · Section 4 of 4: Financial Statements<br>
-  Objective <code>P2</code>: <span class="g" data-ar="يُحدِّد / يتعرّف على">Identify</span> and prepare
+  Objective <code>P2</code>: <span class="g" data-ar="يُحدِّد / يتعرّف على" data-x="يعني تعرف وش هي القوائم وتميّز كل وحدة عن الثانية">Identify</span> and prepare
   basic financial statements and explain how they
-  <span class="g" data-ar="تترابط مع بعضها">interrelate</span>.</p>
+  <span class="g" data-ar="تترابط مع بعضها" data-x="يعني كل قائمة مربوطة بالثانية، رقم من هنا يروح لهناك">interrelate</span>.</p>
 </header>
 
 <div class="big">
@@ -135,7 +140,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <p>There are four statements. They are prepared in <b>a fixed order</b>. Each one <b>feeds the next one</b>.
   The exam question is not "what are the statements". The exam asks <b>which one covers a period and which
   one covers a point in time</b>, and <b>how they link to each other</b>.</p>
-  <p class="tiphint">How to use this page: tap or hover any <span class="g" data-ar="منقّط">dotted</span>
+  <p class="tiphint">How to use this page: tap or hover any <span class="g" data-ar="منقّط" data-x="الكلمة اللي تحتها نقاط أو خط، اضغط عليها وتطلع لك المعنى">dotted</span>
   word to see the Arabic meaning. The accounting terms stay in English on purpose — those are the words on
   your exam paper.</p>
 </div>
@@ -144,12 +149,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="concept">
   <div class="chead">
     <div class="term">The Four Financial Statements</div>
-    <div class="say">The order is <span class="g" data-ar="مقصود / متعمَّد">deliberate</span> — do not change it</div>
+    <div class="say">The order is <span class="g" data-ar="مقصود / متعمَّد" data-x="يعني مسوّينه عن قصد ومو صدفة، الترتيب له سبب">deliberate</span> — do not change it</div>
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">IN ONE LINE</span><br>
       The first one measures profit. The second one carries it forward. The third one shows the
-      <span class="g" data-ar="المركز / الوضع">position</span>. The fourth one tracks the cash.</div>
+      <span class="g" data-ar="المركز / الوضع" data-x="يعني وضع الشركة المالي، وش عندها ووش عليها بيوم معيّن">position</span>. The fourth one tracks the cash.</div>
 
     <table>
       <tr><th>Statement</th><th>Layout</th><th>Purpose</th><th>Time</th></tr>
@@ -157,7 +162,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <td><b>Income statement</b></td>
         <td class="mono">Revenues<br>&minus; Expenses<br>= Net income</td>
         <td>Shows the company's revenues and expenses. It
-            <span class="g" data-ar="يحسب">computes</span> net income or net loss.</td>
+            <span class="g" data-ar="يحسب" data-x="يعني يطلع الرقم بالحسبة، الإيرادات ناقص المصاريف">computes</span> net income or net loss.</td>
         <td><span class="period">period</span></td>
       </tr>
       <tr>
@@ -192,9 +197,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <ul>
         <li><b>Three cover a period. One covers a point.</b> Only the balance sheet is
             <i>at a point in time</i>. This is the most common question in this section.</li>
-        <li>This is why the <span class="g" data-ar="عنوان القائمة / الترويسة">heading</span> of an income
+        <li>This is why the <span class="g" data-ar="عنوان القائمة / الترويسة" data-x="العنوان اللي فوق القائمة، فيه اسم الشركة واسم القائمة والتاريخ">heading</span> of an income
             statement says <i>For Month Ended December 31</i>, while the balance sheet says only
-            <i>December 31</i>. The heading itself <span class="g" data-ar="يكشف">reveals</span> the answer.</li>
+            <i>December 31</i>. The heading itself <span class="g" data-ar="يكشف" data-x="يعني يبيّن لك الجواب على طول من غير ما تدور">reveals</span> the answer.</li>
       </ul>
     </div>
   </div>
@@ -216,10 +221,10 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <b>the balance sheet</b>.</span></div>
       <div class="link"><span class="n">3</span>
         <span><b>Cash</b> from the balance sheet is used to
-        <span class="g" data-ar="يطابِق / يوفّق">reconcile</span>
+        <span class="g" data-ar="يطابِق / يوفّق" data-x="تطابق رقم الكاش بالميزانية مع رقم قائمة التدفقات وتتأكد إنهم نفس الشي">reconcile</span>
         <b>the statement of cash flows</b>.</span></div>
       <p style="margin-top:14px">This is why the order is
-      <span class="g" data-ar="إجباري / لازم">mandatory</span>. You cannot prepare the statement of
+      <span class="g" data-ar="إجباري / لازم" data-x="يعني لازم تسويه بهالترتيب، ما لك خيار ثاني">mandatory</span>. You cannot prepare the statement of
       retained earnings before you know net income. You cannot prepare the balance sheet before you
       know retained earnings.</p>
     </div>
@@ -240,11 +245,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>Revenues come <b>first</b>. Expenses come <b>after</b> them. Expenses are the costs used to
-      <span class="g" data-ar="يولّد / يحقّق">generate</span> the
-      <span class="g" data-ar="المُعلَن عنه / المعروض في القوائم">reported</span> revenues.</p>
+      <span class="g" data-ar="يولّد / يحقّق" data-x="يعني يجيب لك الإيراد ويطلّعه، المصاريف هي اللي تجيب الدخل">generate</span> the
+      <span class="g" data-ar="المُعلَن عنه / المعروض في القوائم" data-x="يعني اللي مكتوب ومعروض بالقائمة، مو شي مخفي">reported</span> revenues.</p>
       <ul>
-        <li><b>Net income</b> — this <span class="g" data-ar="يحدث / يقع">occurs</span> when revenues
-            <span class="g" data-ar="تتجاوز / تزيد عن">exceed</span> expenses.</li>
+        <li><b>Net income</b> — this <span class="g" data-ar="يحدث / يقع" data-x="يعني يصير، الربح يصير لما الإيرادات تكون أكثر">occurs</span> when revenues
+            <span class="g" data-ar="تتجاوز / تزيد عن" data-x="يعني أكثر من، الإيرادات تعدّت المصاريف">exceed</span> expenses.</li>
         <li><b>Net loss</b> — this occurs when expenses exceed revenues.</li>
         <li>Net income (or net loss) appears at the <b>bottom</b> of the statement.</li>
         <li>It is sometimes called <b>earnings</b> or <b>profit</b>. Same thing.</li>
@@ -281,16 +286,16 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   </div>
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p><b>Retained earnings</b> = <b><span class="g" data-ar="تراكمي">cumulative</span> net income
-      minus any dividend <span class="g" data-ar="التوزيعات">distributions</span></b>.</p>
+      <p><b>Retained earnings</b> = <b><span class="g" data-ar="تراكمي" data-x="كل شي تجمّع من البداية لين الحين، مو بس هالسنة">cumulative</span> net income
+      minus any dividend <span class="g" data-ar="التوزيعات" data-x="يعني الفلوس اللي الشركة تعطيها للملاك من أرباحها">distributions</span></b>.</p>
       <p>The statement shows four things: the beginning balance · what increases it (net income) ·
       what decreases it (dividends and net loss) · and the ending balance.</p>
-      <p>The ending balance is <span class="g" data-ar="يُرحَّل / يُنقل إلى">carried over</span> and
+      <p>The ending balance is <span class="g" data-ar="يُرحَّل / يُنقل إلى" data-x="يعني تاخذ الرقم من قائمة وتنقله زي ما هو للقائمة الثانية">carried over</span> and
       shown on the balance sheet. That is link number 2 above.</p>
       <p><b>The beginning balance:</b> for FastForward it is <b>zero</b>, because the company
       <b>did not exist</b> before December 1. An
-      <span class="g" data-ar="قائمة / موجودة أصلاً">existing</span> company starts with the ending
-      balance of the <span class="g" data-ar="السابق">prior</span> period, for example November 30.</p>
+      <span class="g" data-ar="قائمة / موجودة أصلاً" data-x="يعني شركة موجودة من قبل ولها شغل سابق، مو جديدة">existing</span> company starts with the ending
+      balance of the <span class="g" data-ar="السابق" data-x="يعني اللي قبل، الفترة اللي راحت مو الحالية">prior</span> period, for example November 30.</p>
     </div>
 
     <div class="stmt">
@@ -313,7 +318,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 
     <div class="blk trap"><span class="lbl">TRAP</span>
       <ul>
-        <li>Dividends are <span class="g" data-ar="تُطرَح">subtracted</span> <b>here</b>, not on the income
+        <li>Dividends are <span class="g" data-ar="تُطرَح" data-x="يعني تنقّصها من الرقم وتشيلها منه، مو تزيدها">subtracted</span> <b>here</b>, not on the income
             statement. If you subtract them from revenues, your net income will be wrong.</li>
         <li>A <b>new</b> company has a beginning balance of <b>zero</b>. An <b>existing</b> company starts
             with the ending balance of the prior period.</li>
@@ -336,7 +341,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <p>Then you add the beginning cash balance. The result is the <b>ending cash balance</b>. That number
       is the same cash number on the balance sheet. That is link number 3.</p>
       <div class="stmt">
-        <div class="hd">FASTFORWARD — Financing activities (<span class="g" data-ar="مقتطف">excerpt</span>)</div>
+        <div class="hd">FASTFORWARD — Financing activities (<span class="g" data-ar="مقتطف" data-x="يعني جزء بس من القائمة، مو كلها">excerpt</span>)</div>
         <table>
           <tr><td class="ind">Cash investments from shareholders</td><td class="n">30,000</td><td></td></tr>
           <tr class="sub"><td class="ind">Cash dividends to shareholders</td><td class="n">(200)</td><td></td></tr>
@@ -347,8 +352,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         </table>
       </div>
       <p style="font-size:.88rem;color:var(--ink2)">Note: negative amounts sometimes appear in
-      <span class="g" data-ar="الأقواس">parentheses</span> and sometimes they do not. The textbook warns
-      about this <span class="g" data-ar="صراحةً / بشكل واضح">explicitly</span>.</p>
+      <span class="g" data-ar="الأقواس" data-x="القوسين اللي يحطون الرقم بينهم عشان يبيّنون إنه سالب">parentheses</span> and sometimes they do not. The textbook warns
+      about this <span class="g" data-ar="صراحةً / بشكل واضح" data-x="يعني بشكل واضح وصريح، قالها بالفم المليان مو تلميح">explicitly</span>.</p>
     </div>
   </div>
 </div>
@@ -361,7 +366,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <li>Balance sheet</li><li>Statement of cash flows</li></ol>
   <details><summary>Answer</summary>
   <p><b>C</b>. Only the balance sheet is <i>at a point in time</i>. The other three are
-  <i>for a period of time</i>. This is a <span class="g" data-ar="مضمونة">guaranteed</span> mark if you
+  <i>for a period of time</i>. This is a <span class="g" data-ar="مضمونة" data-x="يعني درجة أكيدة بتاخذها لو حفظتها، ما فيه لعب">guaranteed</span> mark if you
   memorize it.</p></details>
 </div>
 
@@ -423,30 +428,30 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
 <table class="vocab">
   <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
-  <tr><td class="w">carried over</td><td class="pos">verb phrase</td><td class="ar">يُرحَّل / يُنقل إلى</td><td class="ex">The ending balance is carried over and shown on the balance sheet.</td></tr>
-  <tr><td class="w">compute</td><td class="pos">verb</td><td class="ar">يحسب</td><td class="ex">It computes net income or net loss.</td></tr>
-  <tr><td class="w">cumulative</td><td class="pos">adjective</td><td class="ar">تراكمي</td><td class="ex">Retained earnings = cumulative net income minus any dividend distributions.</td></tr>
-  <tr><td class="w">deliberate</td><td class="pos">adjective</td><td class="ar">مقصود / متعمَّد</td><td class="ex">The order is deliberate — do not change it.</td></tr>
-  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">توزيع (أرباح)</td><td class="ex">Cumulative net income minus any dividend distributions.</td></tr>
-  <tr><td class="w">dotted</td><td class="pos">adjective</td><td class="ar">منقّط</td><td class="ex">Tap or hover any dotted word to see the Arabic meaning.</td></tr>
-  <tr><td class="w">exceed</td><td class="pos">verb</td><td class="ar">يتجاوز / يزيد عن</td><td class="ex">Net income occurs when revenues exceed expenses.</td></tr>
-  <tr><td class="w">excerpt</td><td class="pos">noun</td><td class="ar">مقتطف</td><td class="ex">FASTFORWARD — Financing activities (excerpt).</td></tr>
-  <tr><td class="w">existing</td><td class="pos">adjective</td><td class="ar">قائمة / موجودة أصلاً</td><td class="ex">An existing company starts with the ending balance of the prior period.</td></tr>
-  <tr><td class="w">explicitly</td><td class="pos">adverb</td><td class="ar">صراحةً / بشكل واضح</td><td class="ex">The textbook warns about this explicitly.</td></tr>
-  <tr><td class="w">generate</td><td class="pos">verb</td><td class="ar">يولّد / يحقّق</td><td class="ex">Expenses are the costs used to generate the reported revenues.</td></tr>
-  <tr><td class="w">guaranteed</td><td class="pos">adjective</td><td class="ar">مضمونة</td><td class="ex">This is a guaranteed mark if you memorize it.</td></tr>
-  <tr><td class="w">heading</td><td class="pos">noun</td><td class="ar">عنوان القائمة / الترويسة</td><td class="ex">The heading of an income statement says "For Month Ended December 31".</td></tr>
-  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">يُحدِّد / يتعرّف على</td><td class="ex">Identify and prepare basic financial statements.</td></tr>
-  <tr><td class="w">interrelate</td><td class="pos">verb</td><td class="ar">تترابط مع بعضها</td><td class="ex">Explain how they interrelate.</td></tr>
-  <tr><td class="w">mandatory</td><td class="pos">adjective</td><td class="ar">إجباري / لازم</td><td class="ex">This is why the order is mandatory.</td></tr>
-  <tr><td class="w">occur</td><td class="pos">verb</td><td class="ar">يحدث / يقع</td><td class="ex">Net income occurs when revenues exceed expenses.</td></tr>
-  <tr><td class="w">parentheses</td><td class="pos">noun (plural)</td><td class="ar">الأقواس</td><td class="ex">Negative amounts sometimes appear in parentheses.</td></tr>
-  <tr><td class="w">position</td><td class="pos">noun</td><td class="ar">المركز / الوضع</td><td class="ex">The third one shows the position.</td></tr>
-  <tr><td class="w">prior</td><td class="pos">adjective</td><td class="ar">السابق</td><td class="ex">An existing company starts with the ending balance of the prior period.</td></tr>
-  <tr><td class="w">reconcile</td><td class="pos">verb</td><td class="ar">يطابِق / يوفّق</td><td class="ex">Cash from the balance sheet is used to reconcile the statement of cash flows.</td></tr>
-  <tr><td class="w">reported</td><td class="pos">adjective / verb</td><td class="ar">المُعلَن عنه / المعروض في القوائم</td><td class="ex">Expenses are the costs used to generate the reported revenues.</td></tr>
-  <tr><td class="w">reveal</td><td class="pos">verb</td><td class="ar">يكشف</td><td class="ex">The heading itself reveals the answer.</td></tr>
-  <tr><td class="w">subtract</td><td class="pos">verb</td><td class="ar">يطرح</td><td class="ex">Dividends are subtracted here, not on the income statement.</td></tr>
+  <tr><td class="w">carried over</td><td class="pos">verb phrase</td><td class="ar">يُرحَّل / يُنقل إلى<small>يعني تاخذ الرقم من قائمة وتنقله زي ما هو للقائمة الثانية</small></td><td class="ex">The ending balance is carried over and shown on the balance sheet.</td></tr>
+  <tr><td class="w">compute</td><td class="pos">verb</td><td class="ar">يحسب<small>يعني يطلع الرقم بالحسبة، الإيرادات ناقص المصاريف</small></td><td class="ex">It computes net income or net loss.</td></tr>
+  <tr><td class="w">cumulative</td><td class="pos">adjective</td><td class="ar">تراكمي<small>كل شي تجمّع من البداية لين الحين، مو بس هالسنة</small></td><td class="ex">Retained earnings = cumulative net income minus any dividend distributions.</td></tr>
+  <tr><td class="w">deliberate</td><td class="pos">adjective</td><td class="ar">مقصود / متعمَّد<small>يعني مسوّينه عن قصد ومو صدفة، الترتيب له سبب</small></td><td class="ex">The order is deliberate — do not change it.</td></tr>
+  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">توزيع (أرباح)<small>يعني الفلوس اللي الشركة تعطيها للملاك من أرباحها</small></td><td class="ex">Cumulative net income minus any dividend distributions.</td></tr>
+  <tr><td class="w">dotted</td><td class="pos">adjective</td><td class="ar">منقّط<small>الكلمة اللي تحتها نقاط أو خط، اضغط عليها وتطلع لك المعنى</small></td><td class="ex">Tap or hover any dotted word to see the Arabic meaning.</td></tr>
+  <tr><td class="w">exceed</td><td class="pos">verb</td><td class="ar">يتجاوز / يزيد عن<small>يعني أكثر من، الإيرادات تعدّت المصاريف</small></td><td class="ex">Net income occurs when revenues exceed expenses.</td></tr>
+  <tr><td class="w">excerpt</td><td class="pos">noun</td><td class="ar">مقتطف<small>يعني جزء بس من القائمة، مو كلها</small></td><td class="ex">FASTFORWARD — Financing activities (excerpt).</td></tr>
+  <tr><td class="w">existing</td><td class="pos">adjective</td><td class="ar">قائمة / موجودة أصلاً<small>يعني شركة موجودة من قبل ولها شغل سابق، مو جديدة</small></td><td class="ex">An existing company starts with the ending balance of the prior period.</td></tr>
+  <tr><td class="w">explicitly</td><td class="pos">adverb</td><td class="ar">صراحةً / بشكل واضح<small>يعني بشكل واضح وصريح، قالها بالفم المليان مو تلميح</small></td><td class="ex">The textbook warns about this explicitly.</td></tr>
+  <tr><td class="w">generate</td><td class="pos">verb</td><td class="ar">يولّد / يحقّق<small>يعني يجيب لك الإيراد ويطلّعه، المصاريف هي اللي تجيب الدخل</small></td><td class="ex">Expenses are the costs used to generate the reported revenues.</td></tr>
+  <tr><td class="w">guaranteed</td><td class="pos">adjective</td><td class="ar">مضمونة<small>يعني درجة أكيدة بتاخذها لو حفظتها، ما فيه لعب</small></td><td class="ex">This is a guaranteed mark if you memorize it.</td></tr>
+  <tr><td class="w">heading</td><td class="pos">noun</td><td class="ar">عنوان القائمة / الترويسة<small>العنوان اللي فوق القائمة، فيه اسم الشركة واسم القائمة والتاريخ</small></td><td class="ex">The heading of an income statement says "For Month Ended December 31".</td></tr>
+  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">يُحدِّد / يتعرّف على<small>يعني تعرف وش هي القوائم وتميّز كل وحدة عن الثانية</small></td><td class="ex">Identify and prepare basic financial statements.</td></tr>
+  <tr><td class="w">interrelate</td><td class="pos">verb</td><td class="ar">تترابط مع بعضها<small>يعني كل قائمة مربوطة بالثانية، رقم من هنا يروح لهناك</small></td><td class="ex">Explain how they interrelate.</td></tr>
+  <tr><td class="w">mandatory</td><td class="pos">adjective</td><td class="ar">إجباري / لازم<small>يعني لازم تسويه بهالترتيب، ما لك خيار ثاني</small></td><td class="ex">This is why the order is mandatory.</td></tr>
+  <tr><td class="w">occur</td><td class="pos">verb</td><td class="ar">يحدث / يقع<small>يعني يصير، الربح يصير لما الإيرادات تكون أكثر</small></td><td class="ex">Net income occurs when revenues exceed expenses.</td></tr>
+  <tr><td class="w">parentheses</td><td class="pos">noun (plural)</td><td class="ar">الأقواس<small>القوسين اللي يحطون الرقم بينهم عشان يبيّنون إنه سالب</small></td><td class="ex">Negative amounts sometimes appear in parentheses.</td></tr>
+  <tr><td class="w">position</td><td class="pos">noun</td><td class="ar">المركز / الوضع<small>يعني وضع الشركة المالي، وش عندها ووش عليها بيوم معيّن</small></td><td class="ex">The third one shows the position.</td></tr>
+  <tr><td class="w">prior</td><td class="pos">adjective</td><td class="ar">السابق<small>يعني اللي قبل، الفترة اللي راحت مو الحالية</small></td><td class="ex">An existing company starts with the ending balance of the prior period.</td></tr>
+  <tr><td class="w">reconcile</td><td class="pos">verb</td><td class="ar">يطابِق / يوفّق<small>تطابق رقم الكاش بالميزانية مع رقم قائمة التدفقات وتتأكد إنهم نفس الشي</small></td><td class="ex">Cash from the balance sheet is used to reconcile the statement of cash flows.</td></tr>
+  <tr><td class="w">reported</td><td class="pos">adjective / verb</td><td class="ar">المُعلَن عنه / المعروض في القوائم<small>يعني اللي مكتوب ومعروض بالقائمة، مو شي مخفي</small></td><td class="ex">Expenses are the costs used to generate the reported revenues.</td></tr>
+  <tr><td class="w">reveal</td><td class="pos">verb</td><td class="ar">يكشف<small>يعني يبيّن لك الجواب على طول من غير ما تدور</small></td><td class="ex">The heading itself reveals the answer.</td></tr>
+  <tr><td class="w">subtract</td><td class="pos">verb</td><td class="ar">يطرح<small>يعني تنقّصها من الرقم وتشيلها منه، مو تزيدها</small></td><td class="ex">Dividends are subtracted here, not on the income statement.</td></tr>
 </table>
 
 <p class="note">
@@ -466,11 +471,20 @@ figures shown in the book. Check them against Exhibit 1.10 in your own textbook 
 </div>
 <script>
 document.querySelectorAll('span.g').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar'; t.textContent=s.dataset.ar; s.appendChild(t);
+  var t=document.createElement('span'); t.className='ar';
+  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
+  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
+  s.appendChild(t);
   s.addEventListener('click',function(e){
     e.stopPropagation();
     document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
     s.classList.toggle('on');
+    if(s.classList.contains('on')){
+      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
+      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
+      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
+      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
+    }
   });
 });
 document.addEventListener('click',function(){

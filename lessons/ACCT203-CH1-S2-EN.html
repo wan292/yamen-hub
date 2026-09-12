@@ -86,13 +86,18 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   border-radius:0 8px 8px 0;margin:18px 0}
 
 /* gloss + vocabulary */
-.g{border-bottom:2px dotted var(--accent);cursor:pointer;position:relative;font-weight:600}
+.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
+  padding-bottom:1px}
 .g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
   background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;font-size:.86rem;font-weight:600;white-space:nowrap;padding:5px 11px;
-  border-radius:7px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
+  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
+  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
+.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
+.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
 .g:hover .ar,.g.on .ar{display:block}
+.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
 .vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
 .vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
 .vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
@@ -127,13 +132,13 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
 <div class="big">
   <h2>What this section covers</h2>
   <p>Three ideas that work together: <b>ethics</b> (why accounting numbers must be
-  <span class="g" data-ar="موثوقة، يُعتمد عليها">reliable</span>), <b>fraud</b> (why people cheat and
+  <span class="g" data-ar="موثوقة، يُعتمد عليها" data-x="يعني تقدر تعتمد عليها وتثق فيها، ما تكذب عليك">reliable</span>), <b>fraud</b> (why people cheat and
   how companies stop them), and <b>accounting standards</b> (GAAP and IFRS).</p>
   <p>The link between them is simple. Numbers are useful only when people trust them. Trust needs
   three things: good ethics, clear rules, and control.</p>
   <div class="tiphint">This is the English twin of your Arabic lesson. The accounting terms stay in
   English on purpose — that is what your exam paper uses. Tap or hover any
-  <span class="g" data-ar="منقّط">dotted</span> word to see the Arabic meaning.</div>
+  <span class="g" data-ar="منقّط" data-x="الكلمة اللي تحتها نقاط أو خط، زي هذي بالضبط">dotted</span> word to see the Arabic meaning.</div>
 </div>
 
 <!-- Ethics -->
@@ -148,11 +153,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       of the person who wrote the numbers.</div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p><b>Ethics</b> are beliefs that <span class="g" data-ar="تفصل بين">separate</span> right from
+      <p><b>Ethics</b> are beliefs that <span class="g" data-ar="تفصل بين" data-x="يعني تفرّق بين شيئين وتعرف هذا صح وهذا غلط">separate</span> right from
       wrong. They are accepted standards of good and bad
-      <span class="g" data-ar="السلوك، التصرّف">behavior</span>.</p>
+      <span class="g" data-ar="السلوك، التصرّف" data-x="تصرفاتك، يعني الطريقة اللي تتعامل وتتصرف فيها مع الناس">behavior</span>.</p>
       <p>An accountant faces ethical choices while preparing financial reports. Those choices
-      <span class="g" data-ar="تؤثّر على">affect</span> employee pay and bonuses. They affect whether
+      <span class="g" data-ar="تؤثّر على" data-x="يعني يغيّر في الشي ويأثّر عليه، زي قرارك يأثّر على الراتب">affect</span> employee pay and bonuses. They affect whether
       a product succeeds. A bad choice can hurt the company and the people who work in it.</p>
       <p>The textbook repeats an old line: <i>Good ethics are good business.</i></p>
     </div>
@@ -178,9 +183,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         </g>
       </svg>
       <p class="excap">Three steps, always in this order. First you
-      <span class="g" data-ar="تحدّد، تتعرّف على">identify</span> the ethical concern. Then you
+      <span class="g" data-ar="تحدّد، تتعرّف على" data-x="يعني تشوف المشكلة وتعرفها وتقول هذي هي، قبل ما تحلها">identify</span> the ethical concern. Then you
       analyze the options and think about all the
-      <span class="g" data-ar="العواقب، النتائج">consequences</span>. Then you decide.
+      <span class="g" data-ar="العواقب، النتائج" data-x="اللي يصير بعدين بسبب قرارك، النتايج اللي تطلع منه">consequences</span>. Then you decide.
       If a question gives you a story and asks &laquo;what comes next?&raquo;, go back to this order:
       <b>identify &rarr; analyze &rarr; decide</b>.</p>
     </div>
@@ -201,7 +206,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   </div>
   <div class="cbody">
     <div class="blk hook"><span class="lbl">ONE-LINE IDEA</span><br>
-      A person does not <span class="g" data-ar="يرتكب، يقوم بـ">commit</span> fraud for one reason.
+      A person does not <span class="g" data-ar="يرتكب، يقوم بـ" data-x="يعني يسوي الغلطة أو الجريمة فعلاً، مو بس يفكر فيها">commit</span> fraud for one reason.
       Three factors must come together.</div>
 
     <div class="exhibit">
@@ -232,19 +237,19 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
             <td>The person makes an excuse for the act, or does not see it as a crime at all.
             This side is also called <b>attitude</b>.</td></tr>
       </table>
-      <p>The key to stopping fraud is <b><span class="g" data-ar="المنع، منع الغش قبل وقوعه">prevention</span></b>.
-      Prevention is cheaper and more <span class="g" data-ar="فعّال، مؤثّر">effective</span> than
-      <span class="g" data-ar="الكشف بعد وقوع الغش">detection</span>.</p>
+      <p>The key to stopping fraud is <b><span class="g" data-ar="المنع، منع الغش قبل وقوعه" data-x="يعني توقف الغش قبل ما يصير أصلاً، مو تكتشفه بعدين">prevention</span></b>.
+      Prevention is cheaper and more <span class="g" data-ar="فعّال، مؤثّر" data-x="يعني يشتغل صح ويجيب نتيجة، مو مجرد كلام">effective</span> than
+      <span class="g" data-ar="الكشف بعد وقوع الغش" data-x="تكتشف الغش بعد ما صار وخلص، مو قبله">detection</span>.</p>
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>To stop fraud, companies build <b>internal controls</b>. Internal controls are
-      <span class="g" data-ar="إجراءات، خطوات عمل منظّمة">procedures</span> that protect assets,
-      make the accounting reliable, <span class="g" data-ar="تعزّز، ترفع">promote</span> efficiency,
-      and <span class="g" data-ar="تطبّق وتلتزم بـ">uphold</span> company policies.</p>
+      <span class="g" data-ar="إجراءات، خطوات عمل منظّمة" data-x="خطوات مرتبة لازم تمشي عليها عشان الشغل يصير صح">procedures</span> that protect assets,
+      make the accounting reliable, <span class="g" data-ar="تعزّز، ترفع" data-x="يعني يزيد الشي ويقويه ويخليه أحسن، زي الكفاءة هنا">promote</span> efficiency,
+      and <span class="g" data-ar="تطبّق وتلتزم بـ" data-x="يعني تطبّق القوانين وتمشي عليها وما تكسرها">uphold</span> company policies.</p>
       <p>Examples: good records &middot; physical controls such as locks &middot;
-      <span class="g" data-ar="مستقل، من طرف محايد">independent</span> reviews of the records.</p>
-      <p><b>Auditors</b> <span class="g" data-ar="يتحققون من">verify</span> the effectiveness of
+      <span class="g" data-ar="مستقل، من طرف محايد" data-x="من واحد برا ما له علاقة، عشان يكون محايد وما يجامل">independent</span> reviews of the records.</p>
+      <p><b>Auditors</b> <span class="g" data-ar="يتحققون من" data-x="يعني يتأكد إنه الشي صحيح فعلاً، مو بس يصدق الكلام">verify</span> the effectiveness of
       these internal controls.</p>
     </div>
 
@@ -282,36 +287,36 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       one body to write them, and one body to enforce them.</div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>Financial accounting is <span class="g" data-ar="محكومة بـ، تخضع لـ">governed</span> by
+      <p>Financial accounting is <span class="g" data-ar="محكومة بـ، تخضع لـ" data-x="يعني محكومة بقوانين وتمشي عليها، مو كل واحد على كيفه">governed</span> by
       concepts and rules called <b>generally accepted accounting principles (GAAP)</b>.</p>
       <p>GAAP wants accounting information to have two qualities:</p>
       <ul>
         <li><b>Relevance</b> — the information can change the decision of the user.</li>
         <li><b>Faithful representation</b> — the information
-        <span class="g" data-ar="تعكس، تصوّر">reflects</span> the real results of the business.</li>
+        <span class="g" data-ar="تعكس، تصوّر" data-x="يعني يوريك الحقيقة زي ما هي، مثل المراية بالضبط">reflects</span> the real results of the business.</li>
       </ul>
       <table>
         <tr><th>Body</th><th>Its role</th></tr>
         <tr><td><b>FASB</b><br><span style="font-size:.82rem;color:var(--muted)">Financial Accounting Standards Board</span></td>
             <td><b>Sets</b> GAAP. It receives that
-            <span class="g" data-ar="السلطة، الصلاحية">authority</span> <b>from the SEC</b>.</td></tr>
+            <span class="g" data-ar="السلطة، الصلاحية" data-x="يعني لك الحق تقرر وتسوي القوانين، وأحد فوقك عطاك هالحق">authority</span> <b>from the SEC</b>.</td></tr>
         <tr><td><b>SEC</b><br><span style="font-size:.82rem;color:var(--muted)">Securities and Exchange Commission</span></td>
             <td>A <b>U.S. government agency</b>. It
-            <span class="g" data-ar="تشرف على، تراقب">oversees</span> the
-            <span class="g" data-ar="السليم، الصحيح">proper</span> use of GAAP by companies that
+            <span class="g" data-ar="تشرف على، تراقب" data-x="تراقب من فوق وتتأكد إنه الشركات ماشية على القوانين صح">oversees</span> the
+            <span class="g" data-ar="السليم، الصحيح" data-x="يعني الصح والمضبوط، زي ما المفروض يكون بالضبط">proper</span> use of GAAP by companies that
             sell stock and debt to the public.</td></tr>
         <tr><td><b>Audit</b></td>
-            <td>An <span class="g" data-ar="فحص، تدقيق">examination</span> that checks whether the
+            <td>An <span class="g" data-ar="فحص، تدقيق" data-x="فحص دقيق، يعني يقلّبون الأرقام كلها ويشيّكون عليها وحدة وحدة">examination</span> that checks whether the
             financial statements were <b>prepared using GAAP</b>.</td></tr>
       </table>
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION — INTERNATIONAL STANDARDS</span>
-      <p>The global economy needs <span class="g" data-ar="قابلية المقارنة">comparability</span>
+      <p>The global economy needs <span class="g" data-ar="قابلية المقارنة" data-x="يعني تقدر تقارن شركة بشركة ثانية عشان كلهم على نفس النظام">comparability</span>
       between financial reports. So the <b>IASB</b> (International Accounting Standards Board)
-      <span class="g" data-ar="يُصدر">issues</span> <b>IFRS</b> (International Financial Reporting
+      <span class="g" data-ar="يُصدر" data-x="يعني يطلّع القوانين وينشرها رسمي عشان الكل يمشي عليها">issues</span> <b>IFRS</b> (International Financial Reporting
       Standards).</p>
-      <p>IFRS is <span class="g" data-ar="مشابه، قريب من">similar</span> to U.S. GAAP, but sometimes
+      <p>IFRS is <span class="g" data-ar="مشابه، قريب من" data-x="يعني يشبهه وقريب منه، بس مو نفس الشي بالضبط">similar</span> to U.S. GAAP, but sometimes
       different. The FASB and the IASB work together to reduce the differences.</p>
     </div>
 
@@ -355,7 +360,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <div class="cbody">
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>The FASB conceptual framework
-      <span class="g" data-ar="يتكوّن من، يتألف من">consists of</span> four parts:</p>
+      <span class="g" data-ar="يتكوّن من، يتألف من" data-x="يعني متكوّن من كذا جزء، لو جمعتهم طلع لك الشي كامل">consists of</span> four parts:</p>
       <table>
         <tr><th>Part</th><th>What it does</th></tr>
         <tr><td><b>Objectives</b></td>
@@ -489,32 +494,32 @@ solution.</p>
 terms. Learn them and the textbook becomes much easier to read.</p>
 <table class="vocab">
   <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
-  <tr><td class="w">affect</td><td class="pos">verb</td><td class="ar">يؤثّر على</td><td class="ex">Those choices affect employee pay and bonuses.</td></tr>
-  <tr><td class="w">authority</td><td class="pos">noun</td><td class="ar">السلطة، الصلاحية</td><td class="ex">It receives that authority from the SEC.</td></tr>
-  <tr><td class="w">behavior</td><td class="pos">noun</td><td class="ar">السلوك، التصرّف</td><td class="ex">They are accepted standards of good and bad behavior.</td></tr>
-  <tr><td class="w">commit</td><td class="pos">verb</td><td class="ar">يرتكب، يقوم بـ</td><td class="ex">A person does not commit fraud for one reason.</td></tr>
-  <tr><td class="w">comparability</td><td class="pos">noun</td><td class="ar">قابلية المقارنة</td><td class="ex">The global economy needs comparability between financial reports.</td></tr>
-  <tr><td class="w">consequences</td><td class="pos">noun (plural)</td><td class="ar">العواقب، النتائج</td><td class="ex">Think about all the consequences.</td></tr>
-  <tr><td class="w">consist of</td><td class="pos">verb</td><td class="ar">يتكوّن من، يتألف من</td><td class="ex">The FASB conceptual framework consists of four parts.</td></tr>
-  <tr><td class="w">detection</td><td class="pos">noun</td><td class="ar">الكشف بعد وقوع الغش</td><td class="ex">Prevention is cheaper and more effective than detection.</td></tr>
-  <tr><td class="w">dotted</td><td class="pos">adjective</td><td class="ar">منقّط</td><td class="ex">Tap or hover any dotted word to see the Arabic meaning.</td></tr>
-  <tr><td class="w">effective</td><td class="pos">adjective</td><td class="ar">فعّال، مؤثّر</td><td class="ex">Prevention is cheaper and more effective than detection.</td></tr>
-  <tr><td class="w">examination</td><td class="pos">noun</td><td class="ar">فحص، تدقيق</td><td class="ex">An examination that checks whether the financial statements were prepared using GAAP.</td></tr>
-  <tr><td class="w">governed</td><td class="pos">verb (passive)</td><td class="ar">محكومة بـ، تخضع لـ</td><td class="ex">Financial accounting is governed by concepts and rules called GAAP.</td></tr>
-  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">تحدّد، تتعرّف على</td><td class="ex">First you identify the ethical concern.</td></tr>
-  <tr><td class="w">independent</td><td class="pos">adjective</td><td class="ar">مستقل، من طرف محايد</td><td class="ex">Independent reviews of the records.</td></tr>
-  <tr><td class="w">issue</td><td class="pos">verb</td><td class="ar">يُصدر</td><td class="ex">The IASB issues International Financial Reporting Standards.</td></tr>
-  <tr><td class="w">oversee</td><td class="pos">verb</td><td class="ar">تشرف على، تراقب</td><td class="ex">It oversees the proper use of GAAP by companies that sell stock and debt to the public.</td></tr>
-  <tr><td class="w">prevention</td><td class="pos">noun</td><td class="ar">المنع، منع الغش قبل وقوعه</td><td class="ex">The key to stopping fraud is prevention.</td></tr>
-  <tr><td class="w">procedures</td><td class="pos">noun (plural)</td><td class="ar">إجراءات، خطوات عمل منظّمة</td><td class="ex">Internal controls are procedures that protect assets.</td></tr>
-  <tr><td class="w">promote</td><td class="pos">verb</td><td class="ar">تعزّز، ترفع</td><td class="ex">Internal controls promote efficiency.</td></tr>
-  <tr><td class="w">proper</td><td class="pos">adjective</td><td class="ar">السليم، الصحيح</td><td class="ex">It oversees the proper use of GAAP.</td></tr>
-  <tr><td class="w">reflect</td><td class="pos">verb</td><td class="ar">تعكس، تصوّر</td><td class="ex">The information reflects the real results of the business.</td></tr>
-  <tr><td class="w">reliable</td><td class="pos">adjective</td><td class="ar">موثوقة، يُعتمد عليها</td><td class="ex">Why accounting numbers must be reliable.</td></tr>
-  <tr><td class="w">separate</td><td class="pos">verb</td><td class="ar">تفصل بين</td><td class="ex">Ethics are beliefs that separate right from wrong.</td></tr>
-  <tr><td class="w">similar</td><td class="pos">adjective</td><td class="ar">مشابه، قريب من</td><td class="ex">IFRS is similar to U.S. GAAP, but sometimes different.</td></tr>
-  <tr><td class="w">uphold</td><td class="pos">verb</td><td class="ar">تطبّق وتلتزم بـ</td><td class="ex">Internal controls uphold company policies.</td></tr>
-  <tr><td class="w">verify</td><td class="pos">verb</td><td class="ar">يتحققون من</td><td class="ex">Auditors verify the effectiveness of these internal controls.</td></tr>
+  <tr><td class="w">affect</td><td class="pos">verb</td><td class="ar">يؤثّر على<small>يعني يغيّر في الشي ويأثّر عليه، زي قرارك يأثّر على الراتب</small></td><td class="ex">Those choices affect employee pay and bonuses.</td></tr>
+  <tr><td class="w">authority</td><td class="pos">noun</td><td class="ar">السلطة، الصلاحية<small>يعني لك الحق تقرر وتسوي القوانين، وأحد فوقك عطاك هالحق</small></td><td class="ex">It receives that authority from the SEC.</td></tr>
+  <tr><td class="w">behavior</td><td class="pos">noun</td><td class="ar">السلوك، التصرّف<small>تصرفاتك، يعني الطريقة اللي تتعامل وتتصرف فيها مع الناس</small></td><td class="ex">They are accepted standards of good and bad behavior.</td></tr>
+  <tr><td class="w">commit</td><td class="pos">verb</td><td class="ar">يرتكب، يقوم بـ<small>يعني يسوي الغلطة أو الجريمة فعلاً، مو بس يفكر فيها</small></td><td class="ex">A person does not commit fraud for one reason.</td></tr>
+  <tr><td class="w">comparability</td><td class="pos">noun</td><td class="ar">قابلية المقارنة<small>يعني تقدر تقارن شركة بشركة ثانية عشان كلهم على نفس النظام</small></td><td class="ex">The global economy needs comparability between financial reports.</td></tr>
+  <tr><td class="w">consequences</td><td class="pos">noun (plural)</td><td class="ar">العواقب، النتائج<small>اللي يصير بعدين بسبب قرارك، النتايج اللي تطلع منه</small></td><td class="ex">Think about all the consequences.</td></tr>
+  <tr><td class="w">consist of</td><td class="pos">verb</td><td class="ar">يتكوّن من، يتألف من<small>يعني متكوّن من كذا جزء، لو جمعتهم طلع لك الشي كامل</small></td><td class="ex">The FASB conceptual framework consists of four parts.</td></tr>
+  <tr><td class="w">detection</td><td class="pos">noun</td><td class="ar">الكشف بعد وقوع الغش<small>تكتشف الغش بعد ما صار وخلص، مو قبله</small></td><td class="ex">Prevention is cheaper and more effective than detection.</td></tr>
+  <tr><td class="w">dotted</td><td class="pos">adjective</td><td class="ar">منقّط<small>الكلمة اللي تحتها نقاط أو خط، زي هذي بالضبط</small></td><td class="ex">Tap or hover any dotted word to see the Arabic meaning.</td></tr>
+  <tr><td class="w">effective</td><td class="pos">adjective</td><td class="ar">فعّال، مؤثّر<small>يعني يشتغل صح ويجيب نتيجة، مو مجرد كلام</small></td><td class="ex">Prevention is cheaper and more effective than detection.</td></tr>
+  <tr><td class="w">examination</td><td class="pos">noun</td><td class="ar">فحص، تدقيق<small>فحص دقيق، يعني يقلّبون الأرقام كلها ويشيّكون عليها وحدة وحدة</small></td><td class="ex">An examination that checks whether the financial statements were prepared using GAAP.</td></tr>
+  <tr><td class="w">governed</td><td class="pos">verb (passive)</td><td class="ar">محكومة بـ، تخضع لـ<small>يعني محكومة بقوانين وتمشي عليها، مو كل واحد على كيفه</small></td><td class="ex">Financial accounting is governed by concepts and rules called GAAP.</td></tr>
+  <tr><td class="w">identify</td><td class="pos">verb</td><td class="ar">تحدّد، تتعرّف على<small>يعني تشوف المشكلة وتعرفها وتقول هذي هي، قبل ما تحلها</small></td><td class="ex">First you identify the ethical concern.</td></tr>
+  <tr><td class="w">independent</td><td class="pos">adjective</td><td class="ar">مستقل، من طرف محايد<small>من واحد برا ما له علاقة، عشان يكون محايد وما يجامل</small></td><td class="ex">Independent reviews of the records.</td></tr>
+  <tr><td class="w">issue</td><td class="pos">verb</td><td class="ar">يُصدر<small>يعني يطلّع القوانين وينشرها رسمي عشان الكل يمشي عليها</small></td><td class="ex">The IASB issues International Financial Reporting Standards.</td></tr>
+  <tr><td class="w">oversee</td><td class="pos">verb</td><td class="ar">تشرف على، تراقب<small>تراقب من فوق وتتأكد إنه الشركات ماشية على القوانين صح</small></td><td class="ex">It oversees the proper use of GAAP by companies that sell stock and debt to the public.</td></tr>
+  <tr><td class="w">prevention</td><td class="pos">noun</td><td class="ar">المنع، منع الغش قبل وقوعه<small>يعني توقف الغش قبل ما يصير أصلاً، مو تكتشفه بعدين</small></td><td class="ex">The key to stopping fraud is prevention.</td></tr>
+  <tr><td class="w">procedures</td><td class="pos">noun (plural)</td><td class="ar">إجراءات، خطوات عمل منظّمة<small>خطوات مرتبة لازم تمشي عليها عشان الشغل يصير صح</small></td><td class="ex">Internal controls are procedures that protect assets.</td></tr>
+  <tr><td class="w">promote</td><td class="pos">verb</td><td class="ar">تعزّز، ترفع<small>يعني يزيد الشي ويقويه ويخليه أحسن، زي الكفاءة هنا</small></td><td class="ex">Internal controls promote efficiency.</td></tr>
+  <tr><td class="w">proper</td><td class="pos">adjective</td><td class="ar">السليم، الصحيح<small>يعني الصح والمضبوط، زي ما المفروض يكون بالضبط</small></td><td class="ex">It oversees the proper use of GAAP.</td></tr>
+  <tr><td class="w">reflect</td><td class="pos">verb</td><td class="ar">تعكس، تصوّر<small>يعني يوريك الحقيقة زي ما هي، مثل المراية بالضبط</small></td><td class="ex">The information reflects the real results of the business.</td></tr>
+  <tr><td class="w">reliable</td><td class="pos">adjective</td><td class="ar">موثوقة، يُعتمد عليها<small>يعني تقدر تعتمد عليها وتثق فيها، ما تكذب عليك</small></td><td class="ex">Why accounting numbers must be reliable.</td></tr>
+  <tr><td class="w">separate</td><td class="pos">verb</td><td class="ar">تفصل بين<small>يعني تفرّق بين شيئين وتعرف هذا صح وهذا غلط</small></td><td class="ex">Ethics are beliefs that separate right from wrong.</td></tr>
+  <tr><td class="w">similar</td><td class="pos">adjective</td><td class="ar">مشابه، قريب من<small>يعني يشبهه وقريب منه، بس مو نفس الشي بالضبط</small></td><td class="ex">IFRS is similar to U.S. GAAP, but sometimes different.</td></tr>
+  <tr><td class="w">uphold</td><td class="pos">verb</td><td class="ar">تطبّق وتلتزم بـ<small>يعني تطبّق القوانين وتمشي عليها وما تكسرها</small></td><td class="ex">Internal controls uphold company policies.</td></tr>
+  <tr><td class="w">verify</td><td class="pos">verb</td><td class="ar">يتحققون من<small>يعني يتأكد إنه الشي صحيح فعلاً، مو بس يصدق الكلام</small></td><td class="ex">Auditors verify the effectiveness of these internal controls.</td></tr>
 </table>
 
 <p class="note">
@@ -535,11 +540,20 @@ session with the book.
 </div>
 <script>
 document.querySelectorAll('span.g').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar'; t.textContent=s.dataset.ar; s.appendChild(t);
+  var t=document.createElement('span'); t.className='ar';
+  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
+  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
+  s.appendChild(t);
   s.addEventListener('click',function(e){
     e.stopPropagation();
     document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
     s.classList.toggle('on');
+    if(s.classList.contains('on')){
+      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
+      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
+      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
+      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
+    }
   });
 });
 document.addEventListener('click',function(){

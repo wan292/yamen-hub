@@ -90,13 +90,18 @@ details p{margin:10px 0 0;color:var(--ink2);font-size:.96rem}
   .footnav .pill{justify-content:center}}
 .note{color:var(--muted);font-size:.88rem;margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
 
-.g{border-bottom:2px dotted var(--accent);cursor:pointer;position:relative;font-weight:600}
+.g{border-bottom:2.5px solid var(--accent);cursor:pointer;position:relative;font-weight:600;
+  padding-bottom:1px}
 .g:hover,.g.on{background:var(--accent-soft)}
-.g .ar{display:none;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+.g .ar{display:none;position:absolute;bottom:135%;left:50%;transform:translateX(-50%);
   background:var(--ink);color:var(--bg);font-family:"IBM Plex Sans Arabic",sans-serif;
-  direction:rtl;font-size:.86rem;font-weight:600;white-space:nowrap;padding:5px 11px;
-  border-radius:7px;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+  direction:rtl;text-align:right;font-size:.86rem;font-weight:500;white-space:normal;
+  width:max-content;max-width:min(280px,80vw);padding:9px 13px;border-radius:9px;z-index:20;
+  box-shadow:0 4px 16px rgba(0,0,0,.3);line-height:1.65}
+.g .ar b{display:block;font-size:.98rem;font-weight:700;margin-bottom:3px}
+.g .ar small{display:block;font-size:.82rem;opacity:.9;font-weight:400}
 .g:hover .ar,.g.on .ar{display:block}
+.vocab td.ar small{display:block;font-weight:400;font-size:.82rem;color:var(--muted);margin-top:2px}
 .vocab{width:100%;border-collapse:collapse;margin:14px 0;font-size:.93rem}
 .vocab th{background:var(--accent-soft);text-align:left;padding:9px 12px;border:1px solid var(--line);font-size:.85rem}
 .vocab td{padding:9px 12px;border:1px solid var(--line);vertical-align:top}
@@ -147,11 +152,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
   <div class="cbody">
     <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
       Accounting shows only two things: <b>what the company owns</b>, and
-      <b>who has a <span class="g" data-ar="مُطالبة / حق">claim</span> on it</b>. That is all.</div>
+      <b>who has a <span class="g" data-ar="مُطالبة / حق" data-x="يعني حق أحد في أصول الشركة، سواء صاحبها أو اللي داينها">claim</span> on it</b>. That is all.</div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
       <p>Accounting shows two sides of a company. One side is the
-      <span class="g" data-ar="الموارد">resources</span> the company owns.
+      <span class="g" data-ar="الموارد" data-x="يعني كل الأشياء اللي عند الشركة وتنفعها، زي الكاش والمعدات">resources</span> the company owns.
       The other side is the claims on those resources.</p>
 
       <p>Claims are of two kinds. <b>Non-owner</b> claims are liabilities.
@@ -163,13 +168,13 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
         <tr>
           <td><b>Assets</b></td>
           <td>Resources a company <b>owns or controls</b>. They are expected to
-              <span class="g" data-ar="يُحقّق / يُنتج">yield</span> <b>future benefits</b>.</td>
+              <span class="g" data-ar="يُحقّق / يُنتج" data-x="يعني يطلع لك فايدة أو نتيجة بعدين، مو الحين">yield</span> <b>future benefits</b>.</td>
           <td>cash &middot; supplies &middot; equipment &middot; land &middot; accounts receivable</td>
         </tr>
         <tr>
           <td><b>Liabilities</b></td>
           <td><b>Creditors'</b> claims on assets. They are company
-              <span class="g" data-ar="التزامات / تعهّدات">obligations</span> to provide assets,
+              <span class="g" data-ar="التزامات / تعهّدات" data-x="شي لازم الشركة تسويه أو تدفعه للناس، ما لها خيار">obligations</span> to provide assets,
               products, or services to others.</td>
           <td>wages payable &middot; accounts payable &middot; notes (loans) payable &middot;
               taxes payable</td>
@@ -178,21 +183,21 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
           <td><b>Equity</b></td>
           <td>The <b>owner's</b> claim on assets. It equals <b>assets minus liabilities</b>.</td>
           <td>also called <i>net assets</i> or
-              <i><span class="g" data-ar="متبقٍّ / ما تبقّى">residual</span> equity</i></td>
+              <i><span class="g" data-ar="متبقٍّ / ما تبقّى" data-x="اللي يبقى لصاحب الشركة بعد ما تشيل الديون كلها">residual</span> equity</i></td>
         </tr>
       </table>
 
       <p><b>Two words you must know:</b></p>
       <ul>
         <li><b>Receivable</b> = an asset that promises a future
-            <span class="g" data-ar="تدفّق داخل">inflow</span>. A company that gives a service
+            <span class="g" data-ar="تدفّق داخل" data-x="يعني فلوس داخلة للشركة، جاية لها مو طالعة منها">inflow</span>. A company that gives a service
             or a product <i>on credit</i> gets an <i>account receivable</i> from the customer.</li>
         <li><b>Payable</b> = a liability that promises a future
-            <span class="g" data-ar="تدفّق خارج">outflow</span>.</li>
+            <span class="g" data-ar="تدفّق خارج" data-x="يعني فلوس طالعة من الشركة، تدفعها لغيرها">outflow</span>.</li>
       </ul>
       <p><b>Note from the book:</b> the phrases <i>on credit</i> and <i>on account</i> both mean
       that the cash is received or paid at a
-      <span class="g" data-ar="لاحق / في وقت لاحق">later</span> date.</p>
+      <span class="g" data-ar="لاحق / في وقت لاحق" data-x="يعني بعدين، مو الحين على طول، في يوم ثاني">later</span> date.</p>
     </div>
 
     <div class="blk exam"><span class="lbl">EXAM BOX</span>
@@ -227,11 +232,11 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
     </div>
 
     <div class="blk"><span class="lbl">EXPLANATION</span>
-      <p>This relation <span class="g" data-ar="ينطبق على / يسري على">applies</span> to
+      <p>This relation <span class="g" data-ar="ينطبق على / يسري على" data-x="القاعدة تمشي على كل الحالات، ما فيه حالة تطلع منها">applies</span> to
       <b>all transactions and events</b>. It applies to <b>all companies and organizations</b>.
       And it applies at <b>all points in time</b>. There is no
-      <span class="g" data-ar="استثناء">exception</span>.</p>
-      <p>You can also <span class="g" data-ar="يُعاد ترتيبها">rearrange</span> it.
+      <span class="g" data-ar="استثناء" data-x="حالة تطلع من القاعدة وما تمشي عليها، هنا ما فيه ولا وحدة">exception</span>.</p>
+      <p>You can also <span class="g" data-ar="يُعاد ترتيبها" data-x="تغيّر ترتيب أطراف المعادلة، تنقل شي من جهة لجهة والمعنى نفسه">rearrange</span> it.
       Example from the book: <span class="mono">Assets − Liabilities = Equity</span></p>
     </div>
 
@@ -249,12 +254,12 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       </div>
 
       <p><i>Contributed capital</i> is the money the owners
-      <span class="g" data-ar="قدّموا / ساهموا به">contributed</span> to the company.
+      <span class="g" data-ar="قدّموا / ساهموا به" data-x="يعني حطوا فلوس من جيبهم في الشركة عشان تشتغل">contributed</span> to the company.
       <i>Retained earnings</i> is the income the company
-      <span class="g" data-ar="احتفظت به / أبقته">retained</span> instead of paying it out.</p>
+      <span class="g" data-ar="احتفظت به / أبقته" data-x="يعني خلّت الربح عندها وما وزّعته على الملاك">retained</span> instead of paying it out.</p>
 
       <p>Equity <b>increases</b> from owner investments, also called stock
-      <span class="g" data-ar="إصدار">issuances</span>, and from revenues.
+      <span class="g" data-ar="إصدار" data-x="يعني الشركة تطلّع أسهم جديدة وتبيعها للملاك مقابل فلوس">issuances</span>, and from revenues.
       Equity <b>decreases</b> from dividends and from expenses.</p>
 
       <table>
@@ -263,8 +268,8 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
                 <span style="font-size:.8rem;color:var(--muted)">part of contributed capital</span></td>
             <td class="pos">+</td>
             <td>Inflows of cash and net assets from <b>shareholders</b> in
-                <span class="g" data-ar="مقابل / تبادل">exchange</span> for stock.
-                Stock <span class="g" data-ar="يعكس / يُمثّل">reflects</span>
+                <span class="g" data-ar="مقابل / تبادل" data-x="تعطي شي وتاخذ شي بداله، فلوس مقابل أسهم">exchange</span> for stock.
+                Stock <span class="g" data-ar="يعكس / يُمثّل" data-x="يعني يبيّن الشي ويدل عليه، زي المراية">reflects</span>
                 <b>ownership</b> in the company.</td></tr>
         <tr><td><b class="g-dv">Dividends</b><br>
                 <span style="font-size:.8rem;color:var(--muted)">from retained earnings</span></td>
@@ -298,9 +303,9 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <ul>
         <li><b>The signs are the question.</b> Common Stock and Revenues carry a plus.
             Dividends and Expenses carry a minus. Any choice that
-            <span class="g" data-ar="يقلب / يعكس">reverses</span> one sign is wrong.</li>
+            <span class="g" data-ar="يقلب / يعكس" data-x="يعني يقلب الشي بالعكس، الزايد يصير ناقص">reverses</span> one sign is wrong.</li>
         <li><b>Dividends are not an expense.</b> This is the biggest trap in the chapter.
-            A dividend is a <span class="g" data-ar="توزيع">distribution</span> to the owners.
+            A dividend is a <span class="g" data-ar="توزيع" data-x="الشركة تقسّم فلوس وتعطيها للملاك، كل واحد نصيبه">distribution</span> to the owners.
             It <b>decreases</b> equity, but it is <b>not an expense</b> and it never enters
             <i>net income</i>.</li>
         <li>Contributed Capital = Common Stock.
@@ -323,17 +328,17 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
       <table>
         <tr><th>Type</th><th>Definition</th><th>Example from the book</th></tr>
         <tr><td><b>External transactions</b></td>
-            <td>An exchange of value <b>between two <span class="g" data-ar="كيان / جهة">entities</span></b>.
+            <td>An exchange of value <b>between two <span class="g" data-ar="كيان / جهة" data-x="كل طرف لحاله، شركة أو شخص أو جهة مستقلة عن غيرها">entities</span></b>.
                 They always cause <b>a change in the accounting equation</b>.</td>
             <td>Apple sells an AppleCare Protection Plan</td></tr>
         <tr><td><b>Internal transactions</b></td>
             <td>An exchange <b>inside the same entity</b>. It <b>may or may not
-                <span class="g" data-ar="يؤثّر على">affect</span></b> the equation.</td>
+                <span class="g" data-ar="يؤثّر على" data-x="يعني يسوي فيه فرق ويغيّره، يخلي المعادلة تتحرك">affect</span></b> the equation.</td>
             <td>Target uses its own supplies — recorded as an expense when used</td></tr>
         <tr><td><b>Events</b></td>
             <td>Happenings that affect the equation and <b>can be
-                <span class="g" data-ar="يُقاس">measured</span>
-                <span class="g" data-ar="بموثوقية / بشكل موثوق">reliably</span></b>.</td>
+                <span class="g" data-ar="يُقاس" data-x="يعني تقدر تحطه برقم واضح، كم يساوي بالضبط">measured</span>
+                <span class="g" data-ar="بموثوقية / بشكل موثوق" data-x="يعني بشكل تقدر تعتمد عليه، رقم مضبوط مو تخمين">reliably</span></b>.</td>
             <td>market value changes in some assets and liabilities &middot;
                 a fire that damages assets and creates losses</td></tr>
       </table>
@@ -363,7 +368,7 @@ body{direction:ltr;text-align:left;font-family:"IBM Plex Sans Arabic",system-ui,
               <td class="pos">+ $30,000</td><td style="font-size:.8rem">Owner investment</td></tr>
         </table>
         <p class="excap">Notice: both sides went up by the same amount, so the equation
-        <span class="g" data-ar="يبقى / تظل">remains</span> balanced —
+        <span class="g" data-ar="يبقى / تظل" data-x="يعني يبقى زي ما هو وما يتغيّر، يظل على حاله">remains</span> balanced —
         <b>30,000 = 0 + 30,000</b>.</p>
       </div>
     </div>
@@ -389,7 +394,7 @@ If you miss question 2 or 3, go back to the table above.</p>
   <details><summary>Answer</summary>
   <p><b>B</b>. <span class="mono">Equity = Assets − Liabilities = 180,000 − 75,000 = 105,000</span>.
   Choice <b>A</b> adds instead of subtracting, and that is the trap. Choice <b>D</b> says the answer
-  cannot be <span class="g" data-ar="يُحدَّد / يُعرَف">determined</span>, but the equation always
+  cannot be <span class="g" data-ar="يُحدَّد / يُعرَف" data-x="يعني تقدر تعرفه وتطلّعه بالحساب، تحدده بالضبط">determined</span>, but the equation always
   gives you the third number when you have the other two.</p></details>
 </div>
 
@@ -400,7 +405,7 @@ If you miss question 2 or 3, go back to the table above.</p>
   <details><summary>Answer</summary>
   <p><b>C</b>. In the expanded equation, Common Stock and Revenues carry a plus, while Dividends
   and Expenses carry a minus. Choice <b>D</b> is a receivable that was
-  <span class="g" data-ar="حُصِّلت / تم تحصيلها">collected</span>. That only changes the form of the
+  <span class="g" data-ar="حُصِّلت / تم تحصيلها" data-x="يعني الشركة قبضت الفلوس اللي كان الزبون مديونها، صارت كاش">collected</span>. That only changes the form of the
   assets, from a receivable into cash, so equity does not move at all.</p></details>
 </div>
 
@@ -466,79 +471,79 @@ accounting terms. Learn them and the textbook gets much easier to read.</p>
 <table class="vocab">
   <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
 
-  <tr><td class="w">affect</td><td class="pos">verb</td><td class="ar">يؤثّر على</td>
+  <tr><td class="w">affect</td><td class="pos">verb</td><td class="ar">يؤثّر على<small>يعني يسوي فيه فرق ويغيّره، يخلي المعادلة تتحرك</small></td>
       <td class="ex">An exchange inside the same entity may or may not <b>affect</b> the equation.</td></tr>
 
-  <tr><td class="w">apply (to)</td><td class="pos">verb</td><td class="ar">ينطبق على / يسري على</td>
+  <tr><td class="w">apply (to)</td><td class="pos">verb</td><td class="ar">ينطبق على / يسري على<small>القاعدة تمشي على كل الحالات، ما فيه حالة تطلع منها</small></td>
       <td class="ex">This relation <b>applies</b> to all transactions and events.</td></tr>
 
-  <tr><td class="w">claim</td><td class="pos">noun</td><td class="ar">مُطالبة / حق</td>
+  <tr><td class="w">claim</td><td class="pos">noun</td><td class="ar">مُطالبة / حق<small>يعني حق أحد في أصول الشركة، سواء صاحبها أو اللي داينها</small></td>
       <td class="ex">Accounting shows what the company owns, and who has a <b>claim</b> on it.</td></tr>
 
-  <tr><td class="w">collect</td><td class="pos">verb</td><td class="ar">يُحصّل / يقبض</td>
+  <tr><td class="w">collect</td><td class="pos">verb</td><td class="ar">يُحصّل / يقبض<small>يعني الشركة قبضت الفلوس اللي كان الزبون مديونها، صارت كاش</small></td>
       <td class="ex">Choice D is a receivable that was <b>collected</b>.</td></tr>
 
-  <tr><td class="w">contribute</td><td class="pos">verb</td><td class="ar">يُقدّم / يُساهم بـ</td>
+  <tr><td class="w">contribute</td><td class="pos">verb</td><td class="ar">يُقدّم / يُساهم بـ<small>يعني حطوا فلوس من جيبهم في الشركة عشان تشتغل</small></td>
       <td class="ex">Contributed capital is the money the owners <b>contributed</b> to the company.</td></tr>
 
-  <tr><td class="w">determine</td><td class="pos">verb</td><td class="ar">يُحدّد / يعرف</td>
+  <tr><td class="w">determine</td><td class="pos">verb</td><td class="ar">يُحدّد / يعرف<small>يعني تقدر تعرفه وتطلّعه بالحساب، تحدده بالضبط</small></td>
       <td class="ex">Choice D says the answer cannot be <b>determined</b>.</td></tr>
 
-  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">توزيع</td>
+  <tr><td class="w">distribution</td><td class="pos">noun</td><td class="ar">توزيع<small>الشركة تقسّم فلوس وتعطيها للملاك، كل واحد نصيبه</small></td>
       <td class="ex">A dividend is a <b>distribution</b> to the owners.</td></tr>
 
-  <tr><td class="w">entity</td><td class="pos">noun</td><td class="ar">كيان / جهة</td>
+  <tr><td class="w">entity</td><td class="pos">noun</td><td class="ar">كيان / جهة<small>كل طرف لحاله، شركة أو شخص أو جهة مستقلة عن غيرها</small></td>
       <td class="ex">An exchange of value between two <b>entities</b>.</td></tr>
 
-  <tr><td class="w">exception</td><td class="pos">noun</td><td class="ar">استثناء</td>
+  <tr><td class="w">exception</td><td class="pos">noun</td><td class="ar">استثناء<small>حالة تطلع من القاعدة وما تمشي عليها، هنا ما فيه ولا وحدة</small></td>
       <td class="ex">It applies at all points in time. There is no <b>exception</b>.</td></tr>
 
-  <tr><td class="w">exchange</td><td class="pos">noun</td><td class="ar">مقابل / تبادل</td>
+  <tr><td class="w">exchange</td><td class="pos">noun</td><td class="ar">مقابل / تبادل<small>تعطي شي وتاخذ شي بداله، فلوس مقابل أسهم</small></td>
       <td class="ex">Inflows of cash and net assets from shareholders in <b>exchange</b> for stock.</td></tr>
 
-  <tr><td class="w">inflow</td><td class="pos">noun</td><td class="ar">تدفّق داخل</td>
+  <tr><td class="w">inflow</td><td class="pos">noun</td><td class="ar">تدفّق داخل<small>يعني فلوس داخلة للشركة، جاية لها مو طالعة منها</small></td>
       <td class="ex">A receivable is an asset that promises a future <b>inflow</b>.</td></tr>
 
-  <tr><td class="w">issuance</td><td class="pos">noun</td><td class="ar">إصدار</td>
+  <tr><td class="w">issuance</td><td class="pos">noun</td><td class="ar">إصدار<small>يعني الشركة تطلّع أسهم جديدة وتبيعها للملاك مقابل فلوس</small></td>
       <td class="ex">Equity increases from owner investments, also called stock <b>issuances</b>.</td></tr>
 
-  <tr><td class="w">later</td><td class="pos">adjective</td><td class="ar">لاحق</td>
+  <tr><td class="w">later</td><td class="pos">adjective</td><td class="ar">لاحق<small>يعني بعدين، مو الحين على طول، في يوم ثاني</small></td>
       <td class="ex">The cash is received or paid at a <b>later</b> date.</td></tr>
 
-  <tr><td class="w">measure</td><td class="pos">verb</td><td class="ar">يقيس</td>
+  <tr><td class="w">measure</td><td class="pos">verb</td><td class="ar">يقيس<small>يعني تقدر تحطه برقم واضح، كم يساوي بالضبط</small></td>
       <td class="ex">Happenings that affect the equation and can be <b>measured</b> reliably.</td></tr>
 
-  <tr><td class="w">obligation</td><td class="pos">noun</td><td class="ar">التزام / تعهّد</td>
+  <tr><td class="w">obligation</td><td class="pos">noun</td><td class="ar">التزام / تعهّد<small>شي لازم الشركة تسويه أو تدفعه للناس، ما لها خيار</small></td>
       <td class="ex">They are company <b>obligations</b> to provide assets, products, or services to others.</td></tr>
 
-  <tr><td class="w">outflow</td><td class="pos">noun</td><td class="ar">تدفّق خارج</td>
+  <tr><td class="w">outflow</td><td class="pos">noun</td><td class="ar">تدفّق خارج<small>يعني فلوس طالعة من الشركة، تدفعها لغيرها</small></td>
       <td class="ex">A payable is a liability that promises a future <b>outflow</b>.</td></tr>
 
-  <tr><td class="w">rearrange</td><td class="pos">verb</td><td class="ar">يُعيد ترتيب</td>
+  <tr><td class="w">rearrange</td><td class="pos">verb</td><td class="ar">يُعيد ترتيب<small>تغيّر ترتيب أطراف المعادلة، تنقل شي من جهة لجهة والمعنى نفسه</small></td>
       <td class="ex">You can also <b>rearrange</b> it: Assets − Liabilities = Equity.</td></tr>
 
-  <tr><td class="w">reflect</td><td class="pos">verb</td><td class="ar">يعكس / يُمثّل</td>
+  <tr><td class="w">reflect</td><td class="pos">verb</td><td class="ar">يعكس / يُمثّل<small>يعني يبيّن الشي ويدل عليه، زي المراية</small></td>
       <td class="ex">Stock <b>reflects</b> ownership in the company.</td></tr>
 
-  <tr><td class="w">reliably</td><td class="pos">adverb</td><td class="ar">بموثوقية / بشكل موثوق</td>
+  <tr><td class="w">reliably</td><td class="pos">adverb</td><td class="ar">بموثوقية / بشكل موثوق<small>يعني بشكل تقدر تعتمد عليه، رقم مضبوط مو تخمين</small></td>
       <td class="ex">Happenings that affect the equation and can be measured <b>reliably</b>.</td></tr>
 
-  <tr><td class="w">remain</td><td class="pos">verb</td><td class="ar">يبقى / يظل</td>
+  <tr><td class="w">remain</td><td class="pos">verb</td><td class="ar">يبقى / يظل<small>يعني يبقى زي ما هو وما يتغيّر، يظل على حاله</small></td>
       <td class="ex">Both sides went up by the same amount, so the equation <b>remains</b> balanced.</td></tr>
 
-  <tr><td class="w">residual</td><td class="pos">adjective</td><td class="ar">متبقٍّ / ما تبقّى</td>
+  <tr><td class="w">residual</td><td class="pos">adjective</td><td class="ar">متبقٍّ / ما تبقّى<small>اللي يبقى لصاحب الشركة بعد ما تشيل الديون كلها</small></td>
       <td class="ex">Equity is also called net assets or <b>residual</b> equity.</td></tr>
 
-  <tr><td class="w">resources</td><td class="pos">noun</td><td class="ar">موارد</td>
+  <tr><td class="w">resources</td><td class="pos">noun</td><td class="ar">موارد<small>يعني كل الأشياء اللي عند الشركة وتنفعها، زي الكاش والمعدات</small></td>
       <td class="ex">One side is the <b>resources</b> the company owns.</td></tr>
 
-  <tr><td class="w">retain</td><td class="pos">verb</td><td class="ar">يحتفظ بـ / يُبقي</td>
+  <tr><td class="w">retain</td><td class="pos">verb</td><td class="ar">يحتفظ بـ / يُبقي<small>يعني خلّت الربح عندها وما وزّعته على الملاك</small></td>
       <td class="ex">Retained earnings is the income the company <b>retained</b> instead of paying it out.</td></tr>
 
-  <tr><td class="w">reverse</td><td class="pos">verb</td><td class="ar">يقلب / يعكس</td>
+  <tr><td class="w">reverse</td><td class="pos">verb</td><td class="ar">يقلب / يعكس<small>يعني يقلب الشي بالعكس، الزايد يصير ناقص</small></td>
       <td class="ex">Any choice that <b>reverses</b> one sign is wrong.</td></tr>
 
-  <tr><td class="w">yield</td><td class="pos">verb</td><td class="ar">يُحقّق / يُنتج</td>
+  <tr><td class="w">yield</td><td class="pos">verb</td><td class="ar">يُحقّق / يُنتج<small>يعني يطلع لك فايدة أو نتيجة بعدين، مو الحين</small></td>
       <td class="ex">Resources a company owns or controls are expected to <b>yield</b> future benefits.</td></tr>
 </table>
 
@@ -559,11 +564,20 @@ analysis, objective <code>P1</code>). That needs a second session with the book.
 
 <script>
 document.querySelectorAll('span.g').forEach(function(s){
-  var t=document.createElement('span'); t.className='ar'; t.textContent=s.dataset.ar; s.appendChild(t);
+  var t=document.createElement('span'); t.className='ar';
+  var b=document.createElement('b'); b.textContent=s.dataset.ar; t.appendChild(b);
+  if(s.dataset.x){ var m=document.createElement('small'); m.textContent=s.dataset.x; t.appendChild(m); }
+  s.appendChild(t);
   s.addEventListener('click',function(e){
     e.stopPropagation();
     document.querySelectorAll('span.g.on').forEach(function(o){ if(o!==s) o.classList.remove('on'); });
     s.classList.toggle('on');
+    if(s.classList.contains('on')){
+      var tip=s.querySelector('.ar'); tip.style.transform='translateX(-50%)';
+      var r=tip.getBoundingClientRect(), pad=10, w=window.innerWidth, dx=0;
+      if(r.left<pad) dx=pad-r.left; else if(r.right>w-pad) dx=(w-pad)-r.right;
+      if(dx) tip.style.transform='translateX(calc(-50% + '+dx+'px))';
+    }
   });
 });
 document.addEventListener('click',function(){
