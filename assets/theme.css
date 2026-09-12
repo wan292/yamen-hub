@@ -257,7 +257,8 @@ mark.t{background:var(--term-soft);color:var(--term);font-weight:700;padding:0 4
   display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;box-shadow:var(--shadow)}
 .deck .dn{font-weight:800;flex:1;min-width:200px}
 .deck .dn small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
-.deck .st{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:var(--muted);white-space:nowrap}
+.deck .st{font-size:.85rem;color:var(--muted);white-space:nowrap}
+.deck .st .due{font-variant-numeric:tabular-nums}
 .deck .due{color:var(--gold);font-weight:800}
 .streak{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold-line);
   border-radius:999px;padding:6px 14px;font-weight:800;color:var(--gold)}

@@ -52,6 +52,13 @@
     document.addEventListener('click',function(){
       document.querySelectorAll('span.g.on, span.g2.on').forEach(function(o){o.classList.remove('on');});
     });
+    /* Arabic pages: speaker on each English term in the terms tables (first cell) */
+    if(document.documentElement.dir==='rtl'){
+      document.querySelectorAll('table td:first-child > bdi, table td:first-child > b > bdi').forEach(function(b){
+        if(b.parentElement.querySelector('.spk')) return;
+        var w=b.textContent.trim(); if(w && /[A-Za-z]/.test(w)) b.insertAdjacentElement('afterend', spkBtn(w));
+      });
+    }
     /* concept headers: speaker on the English term */
     document.querySelectorAll('.chead .term').forEach(function(el){
       if(el.querySelector('.spk')) return; el.appendChild(spkBtn(el.textContent.trim())); });
