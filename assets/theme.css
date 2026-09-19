@@ -136,6 +136,8 @@ mark.t{background:var(--term-soft);color:var(--term);font-weight:700;padding:0 4
 .exhibit svg{display:block;margin:0 auto;max-width:100%;height:auto}
 .exhibit img{display:block;margin:0 auto;max-width:100%;height:auto;border-radius:6px}
 .exhibit img.tall{max-width:min(100%,560px)}
+/* phones: dense three-column tables must not widen the page */
+@media (max-width:520px){table{font-size:.88rem}th,td{padding:8px 7px;overflow-wrap:anywhere}}
 .exhibit table{margin:0;font-size:.9rem;color:var(--paper-ink);border:0}
 .exhibit th{background:#efe9db;color:#1c1a16;text-align:center}
 .exhibit td{background:transparent;color:#1c1a16;text-align:center;border-color:var(--paper-line)}
