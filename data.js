@@ -143,9 +143,25 @@ const LESSONS = [
   ]},
 
   { code:"MGT 102", chapters:[
-    { name:"المادة كاملة", meta:"⚠ الأولوية — وما عندنا شي",
-      items:[ { ar:"ينتظر دليل المقرر والكتاب", s:"wait",
-                note:"أهم مستند ناقص في المشروع كله" } ]}
+    { name:"Chapter 1 — Managers and Managing", meta:"الفصل الأول · مكتمل",
+      items:[
+        { n:1, ar:"وش هي الإدارة؟",                    en:"What Is Management?",                  o:"LO1-1",
+          s:"done", href:"lessons/MGT102-CH1-S1.html", enhref:"lessons/MGT102-CH1-S1-EN.html" },
+        { n:2, ar:"وظائف الإدارة الأربع",               en:"The Four Functions of Management",     o:"LO1-2",
+          s:"done", href:"lessons/MGT102-CH1-S2.html", enhref:"lessons/MGT102-CH1-S2-EN.html", star:"أكثر شي يجي في الاختبار" },
+        { n:3, ar:"مستويات المديرين ومهاراتهم",         en:"Levels and Skills of Managers",        o:"LO1-3 · LO1-4",
+          s:"done", href:"lessons/MGT102-CH1-S3.html", enhref:"lessons/MGT102-CH1-S3-EN.html" },
+        { n:4, ar:"التغيّرات الحديثة والتحديات العالمية", en:"Recent Changes and Global Challenges",  o:"LO1-5 · LO1-6",
+          s:"done", href:"lessons/MGT102-CH1-S4.html", enhref:"lessons/MGT102-CH1-S4-EN.html" }
+      ]},
+    { name:"Chapters 2–6", meta:"نص الكتاب موجود — تُشرح حسب ما يمشي الدكتور",
+      items:[
+        { n:2, ar:"تطوّر الفكر الإداري", en:"The Evolution of Management Thought", s:"src" },
+        { n:3, ar:"القيم والاتجاهات والمشاعر والثقافة", en:"Values, Attitudes, Emotions, and Culture", s:"src" },
+        { n:4, ar:"الأخلاقيات والمسؤولية الاجتماعية", en:"Ethics and Social Responsibility", s:"src" },
+        { n:5, ar:"إدارة التنوّع", en:"Managing Diverse Employees", s:"src" },
+        { n:6, ar:"إدارة البيئة العالمية", en:"Managing in the Global Environment", s:"src" }
+      ]}
   ]},
 
   { code:"LAW 333", chapters:[
@@ -183,12 +199,21 @@ const MAP = [
       { name:"Chapter 2 وما بعده", items:[
         { t:"لم يبدأ بعد", s:"wait", note:"ينتظر أن يفتحه الدكتور" } ]}
     ]},
-  { code:"MGT 102", ar:"مبادئ الإدارة", lang:"—", priority:true,
-    book:"غير معروف — ينتظر دليل المقرر",
-    units:[ { name:"المادة كاملة", items:[
-      { t:"دليل المقرر", s:"block",
-        note:"⚠ أهم مستند ناقص. بدونه ما نعرف توزيع الدرجات ولا مواعيد الكويزات." },
-      { t:"المحتوى", s:"wait", note:"ينتظر الكتاب أو شرائح الدكتور" } ]} ]},
+  { code:"MGT 102", ar:"مبادئ الإدارة", lang:"إنجليزي", priority:true,
+    book:"McGraw Hill — Jones & George, Contemporary Management · الكتاب الإلكتروني",
+    units:[
+      { name:"Chapter 1 — Managers and Managing", items:[
+        { t:"What Is Management?", o:"LO1-1", s:"done", href:"lessons/MGT102-CH1-S1.html", enhref:"lessons/MGT102-CH1-S1-EN.html" },
+        { t:"The Four Functions of Management", o:"LO1-2", s:"done", href:"lessons/MGT102-CH1-S2.html", enhref:"lessons/MGT102-CH1-S2-EN.html" },
+        { t:"Levels and Skills of Managers", o:"LO1-3 · LO1-4", s:"done", href:"lessons/MGT102-CH1-S3.html", enhref:"lessons/MGT102-CH1-S3-EN.html" },
+        { t:"Recent Changes and Global Challenges", o:"LO1-5 · LO1-6", s:"done", href:"lessons/MGT102-CH1-S4.html", enhref:"lessons/MGT102-CH1-S4-EN.html" }
+      ]},
+      { name:"Chapters 2–6", items:[
+        { t:"نص الكتاب محفوظ للفصول ٢–٦", s:"ready", note:"تُشرح فصلاً فصلاً حسب ما يمشي الدكتور" } ]},
+      { name:"دليل المقرر", items:[
+        { t:"دليل المقرر — توزيع الدرجات", s:"block",
+          note:"⚠ ما زال ناقصاً. بدونه ما نعرف توزيع الدرجات ولا مواعيد الكويزات — اطلبه من الدكتور أو من البلاك بورد" } ]}
+    ]},
   { code:"MKT 231", ar:"سلوك المستهلك في السياحة", lang:"عربي",
     book:"أحمد علي سليمان — سلوك المستهلك · مرجع مساند: Solomon 13e",
     units:[ { name:"الفصول الأربعة الأولى", items:[
