@@ -11,7 +11,7 @@ data.js               بيانات يامن: الجدول، المواد، ال�
 assets/theme.css      الثيم المشترك — وضع داكن (ذهبي على أسود، الافتراضي) ووضع فاتح
 assets/lesson.js      سلوك الصفحة: تبديل الثيم، نافذات الترجمة، الصوت، شريط القراءة، زر التدرّب
 assets/flashcards.js  محرّك البطاقات: صناديق Leitner، التقدّم في localStorage، واجهة القلب
-data/cards-S1.js …    مجموعة بطاقات لكل قسم (كلمات + مفاهيم) — S = ACCT 203، M = MGT 102
+data/cards-<deck>.js    مجموعة بطاقات لكل درس — اسم الملف = معرّف المجموعة (cards-MGT102-CH1-S2.js)
 lessons/ACCT203-CH1-S1.html      الدرس بالعربي
 lessons/ACCT203-CH1-S1-EN.html   الدرس بالإنجليزي مع ترجمة بالضغط
 lessons/MGT102-CH1-S1.html …     مبادئ الإدارة — الفصل الأول (٤ دروس × لغتين)
@@ -33,12 +33,12 @@ lessons/MGT102-CH1-S1.html …     مبادئ الإدارة — الفصل ال
    ```
 3. آخر `<body>`:
    ```html
-   <script src="../data/cards-S<N>.js"></script>
+   <script src="../data/cards-<deck>.js"></script>
    <script src="../assets/flashcards.js"></script>
    <script src="../assets/lesson.js"></script>
    ```
-4. أنشئ `data/cards-S<N>.js` بنفس شكل الملفات الموجودة، وأضف الدرس في `LESSONS` و`MAP` داخل `data.js`،
-   وأضف `<script src="data/cards-S<N>.js">` في `index.html` عشان يظهر في تبويب البطاقات.
+4. أنشئ `data/cards-<deck>.js` بنفس شكل الملفات الموجودة، وأضف الدرس في `LESSONS` و`MAP` داخل `data.js`،
+   وأضف `<script src="data/cards-<deck>.js">` في `index.html` عشان يظهر في تبويب البطاقات.
 
 ## عناصر الدرس
 
