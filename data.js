@@ -154,13 +154,35 @@ const LESSONS = [
         { n:4, ar:"التغيّرات الحديثة والتحديات العالمية", en:"Recent Changes and Global Challenges",  o:"LO1-5 · LO1-6",
           s:"done", href:"lessons/MGT102-CH1-S4.html", enhref:"lessons/MGT102-CH1-S4-EN.html" }
       ]},
-    { name:"Chapters 2–6", meta:"نص الكتاب موجود — تُشرح حسب ما يمشي الدكتور",
+    { name:"Chapter 2 — The Evolution of Management Thought", meta:"الفصل الثاني · مكتمل",
       items:[
-        { n:2, ar:"تطوّر الفكر الإداري", en:"The Evolution of Management Thought", s:"src" },
-        { n:3, ar:"القيم والاتجاهات والمشاعر والثقافة", en:"Values, Attitudes, Emotions, and Culture", s:"src" },
+        { n:1, ar:"الإدارة العلمية", en:"Scientific Management Theory", o:"LO2-1 · LO2-2",
+          s:"done", href:"lessons/MGT102-CH2-S1.html", enhref:"lessons/MGT102-CH2-S1-EN.html" },
+        { n:2, ar:"الإدارة الإدارية — البيروقراطية ومبادئ فايول", en:"Administrative Management Theory", o:"LO2-3",
+          s:"done", href:"lessons/MGT102-CH2-S2.html", enhref:"lessons/MGT102-CH2-S2-EN.html", star:"مبادئ فايول الأربعة عشر" },
+        { n:3, ar:"الإدارة السلوكية", en:"Behavioral Management Theory", o:"LO2-4",
+          s:"done", href:"lessons/MGT102-CH2-S3.html", enhref:"lessons/MGT102-CH2-S3-EN.html" },
+        { n:4, ar:"علم الإدارة وبيئة المنظمة", en:"Management Science and the Organizational Environment", o:"LO2-5 · LO2-6",
+          s:"done", href:"lessons/MGT102-CH2-S4.html", enhref:"lessons/MGT102-CH2-S4-EN.html" }
+      ]},
+    { name:"Chapter 3 — Values, Attitudes, Emotions, and Culture", meta:"الفصل الثالث · مكتمل",
+      items:[
+        { n:1, ar:"سمات الشخصية", en:"Personality Traits", o:"LO3-1",
+          s:"done", href:"lessons/MGT102-CH3-S1.html", enhref:"lessons/MGT102-CH3-S1-EN.html" },
+        { n:2, ar:"القيم والاتجاهات", en:"Values and Attitudes", o:"LO3-2",
+          s:"done", href:"lessons/MGT102-CH3-S2.html", enhref:"lessons/MGT102-CH3-S2-EN.html" },
+        { n:3, ar:"المشاعر والذكاء العاطفي", en:"Moods, Emotions, and Emotional Intelligence", o:"LO3-3 · LO3-4",
+          s:"done", href:"lessons/MGT102-CH3-S3.html", enhref:"lessons/MGT102-CH3-S3-EN.html" },
+        { n:4, ar:"ثقافة المنظمة", en:"Organizational Culture", o:"LO3-5",
+          s:"done", href:"lessons/MGT102-CH3-S4.html", enhref:"lessons/MGT102-CH3-S4-EN.html" }
+      ]},
+    { name:"Chapters 4–19", meta:"الكتاب كامل على الدرايف — ملخص لكل فصل",
+      items:[
         { n:4, ar:"الأخلاقيات والمسؤولية الاجتماعية", en:"Ethics and Social Responsibility", s:"src" },
         { n:5, ar:"إدارة التنوّع", en:"Managing Diverse Employees", s:"src" },
-        { n:6, ar:"إدارة البيئة العالمية", en:"Managing in the Global Environment", s:"src" }
+        { n:6, ar:"إدارة البيئة العالمية", en:"Managing in the Global Environment", s:"src" },
+        { ar:"والفصول ٧–١٩ — كلها مقسّمة ومُلخّصة على الدرايف", s:"src",
+          note:"كل فصل في مجلده: الفصل PDF، نص الفصل، صور الأشكال والجداول، وملخص كامل" }
       ]}
   ]},
 
@@ -208,8 +230,19 @@ const MAP = [
         { t:"Levels and Skills of Managers", o:"LO1-3 · LO1-4", s:"done", href:"lessons/MGT102-CH1-S3.html", enhref:"lessons/MGT102-CH1-S3-EN.html" },
         { t:"Recent Changes and Global Challenges", o:"LO1-5 · LO1-6", s:"done", href:"lessons/MGT102-CH1-S4.html", enhref:"lessons/MGT102-CH1-S4-EN.html" }
       ]},
-      { name:"Chapters 2–6", items:[
-        { t:"نص الكتاب محفوظ للفصول ٢–٦", s:"ready", note:"تُشرح فصلاً فصلاً حسب ما يمشي الدكتور" } ]},
+      { name:"Chapter 2 — The Evolution of Management Thought", items:[
+        { t:"Scientific Management Theory", o:"LO2-1 · LO2-2", s:"done", href:"lessons/MGT102-CH2-S1.html", enhref:"lessons/MGT102-CH2-S1-EN.html" },
+        { t:"Administrative Management Theory", o:"LO2-3", s:"done", href:"lessons/MGT102-CH2-S2.html", enhref:"lessons/MGT102-CH2-S2-EN.html" },
+        { t:"Behavioral Management Theory", o:"LO2-4", s:"done", href:"lessons/MGT102-CH2-S3.html", enhref:"lessons/MGT102-CH2-S3-EN.html" },
+        { t:"Management Science and the Organizational Environment", o:"LO2-5 · LO2-6", s:"done", href:"lessons/MGT102-CH2-S4.html", enhref:"lessons/MGT102-CH2-S4-EN.html" } ]},
+      { name:"Chapter 3 — Values, Attitudes, Emotions, and Culture", items:[
+        { t:"Personality Traits", o:"LO3-1", s:"done", href:"lessons/MGT102-CH3-S1.html", enhref:"lessons/MGT102-CH3-S1-EN.html" },
+        { t:"Values and Attitudes", o:"LO3-2", s:"done", href:"lessons/MGT102-CH3-S2.html", enhref:"lessons/MGT102-CH3-S2-EN.html" },
+        { t:"Moods, Emotions, and Emotional Intelligence", o:"LO3-3 · LO3-4", s:"done", href:"lessons/MGT102-CH3-S3.html", enhref:"lessons/MGT102-CH3-S3-EN.html" },
+        { t:"Organizational Culture", o:"LO3-5", s:"done", href:"lessons/MGT102-CH3-S4.html", enhref:"lessons/MGT102-CH3-S4-EN.html" } ]},
+      { name:"Chapters 4–19", items:[
+        { t:"الكتاب كامل مقسّم فصلاً فصلاً على الدرايف", s:"ready",
+          note:"لكل فصل: ملف PDF لحاله، نص الفصل، صور كل الأشكال والجداول، وملخص كامل بالعربي مع التعريفات بالإنجليزي" } ]},
       { name:"دليل المقرر", items:[
         { t:"دليل المقرر — توزيع الدرجات", s:"block",
           note:"⚠ ما زال ناقصاً. بدونه ما نعرف توزيع الدرجات ولا مواعيد الكويزات — اطلبه من الدكتور أو من البلاك بورد" } ]}
