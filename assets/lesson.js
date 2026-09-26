@@ -80,6 +80,11 @@
         if(window.YH_FLASH && window.YH_DECKS && window.YH_DECKS[id]) YH_FLASH.open(YH_DECKS[id], mode);
       });
     });
+    /* lesson.html#practice opens the lesson's deck straight away (used by the exam report's study plan) */
+    if(location.hash==='#practice'){
+      var first=document.querySelector('[data-deck]');
+      if(first) setTimeout(function(){ first.click(); }, 350);
+    }
   }
 
   document.addEventListener('DOMContentLoaded',function(){

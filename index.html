@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
-<link rel="stylesheet" href="assets/theme.css?v=5">
+<link rel="stylesheet" href="assets/theme.css?v=6">
 <script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 <style>
 :root{--card:var(--surface);--sunk:var(--surface-2);--ink2:var(--ink-2);--accent:var(--gold);--accent-soft:var(--gold-soft);--accent-ink:var(--gold-2);--red:var(--bad);--red-soft:var(--bad-soft);--amber:var(--warn);--amber-soft:var(--warn-soft)}
@@ -196,6 +196,7 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
   <button data-t="notes"  aria-selected="false">الملخصات</button>
   <button data-t="map"    aria-selected="false">الخريطة</button>
   <button data-t="decks"  aria-selected="false">🃏 البطاقات</button>
+  <button data-t="exams"  aria-selected="false">📝 الاختبارات</button>
 </nav>
 
 <section id="today"></section>
@@ -205,28 +206,30 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
 <section id="notes" hidden></section>
 <section id="map" hidden></section>
 <section id="decks" hidden></section>
+<section id="exams" hidden></section>
 
 </div>
 
 <script src="data.js"></script>
-<script src="data/cards-ACCT203-CH1-S1.js?v=5"></script>
-<script src="data/cards-ACCT203-CH1-S2.js?v=5"></script>
-<script src="data/cards-ACCT203-CH1-S3.js?v=5"></script>
-<script src="data/cards-ACCT203-CH1-S4.js?v=5"></script>
-<script src="data/cards-MGT102-CH1-S1.js?v=5"></script>
-<script src="data/cards-MGT102-CH1-S2.js?v=5"></script>
-<script src="data/cards-MGT102-CH1-S3.js?v=5"></script>
-<script src="data/cards-MGT102-CH1-S4.js?v=5"></script>
-<script src="data/cards-MGT102-CH2-S1.js?v=5"></script>
-<script src="data/cards-MGT102-CH2-S2.js?v=5"></script>
-<script src="data/cards-MGT102-CH2-S3.js?v=5"></script>
-<script src="data/cards-MGT102-CH2-S4.js?v=5"></script>
-<script src="data/cards-MGT102-CH3-S1.js?v=5"></script>
-<script src="data/cards-MGT102-CH3-S2.js?v=5"></script>
-<script src="data/cards-MGT102-CH3-S3.js?v=5"></script>
-<script src="data/cards-MGT102-CH3-S4.js?v=5"></script>
-<script src="assets/flashcards.js?v=5"></script>
-<script src="assets/lesson.js?v=5"></script>
+<script src="data/cards-ACCT203-CH1-S1.js?v=6"></script>
+<script src="data/cards-ACCT203-CH1-S2.js?v=6"></script>
+<script src="data/cards-ACCT203-CH1-S3.js?v=6"></script>
+<script src="data/cards-ACCT203-CH1-S4.js?v=6"></script>
+<script src="data/cards-MGT102-CH1-S1.js?v=6"></script>
+<script src="data/cards-MGT102-CH1-S2.js?v=6"></script>
+<script src="data/cards-MGT102-CH1-S3.js?v=6"></script>
+<script src="data/cards-MGT102-CH1-S4.js?v=6"></script>
+<script src="data/cards-MGT102-CH2-S1.js?v=6"></script>
+<script src="data/cards-MGT102-CH2-S2.js?v=6"></script>
+<script src="data/cards-MGT102-CH2-S3.js?v=6"></script>
+<script src="data/cards-MGT102-CH2-S4.js?v=6"></script>
+<script src="data/cards-MGT102-CH3-S1.js?v=6"></script>
+<script src="data/cards-MGT102-CH3-S2.js?v=6"></script>
+<script src="data/cards-MGT102-CH3-S3.js?v=6"></script>
+<script src="data/cards-MGT102-CH3-S4.js?v=6"></script>
+<script src="data/exams.js?v=6"></script>
+<script src="assets/flashcards.js?v=6"></script>
+<script src="assets/lesson.js?v=6"></script>
 <script>
 const DAYS=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"];
 const DNAMES=["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس"];
@@ -510,12 +513,31 @@ function renderDecks(){
   s+='</div>'; document.getElementById("decks").innerHTML=s;
 }
 
-renderToday();renderWeek();renderCal();renderCourses();renderNotes();renderMap();renderDecks();
+/* ---------- الاختبارات ---------- */
+function renderExams(){
+  var T=window.YH_EXAM_TESTS||[], hist=[];
+  try{ hist=JSON.parse(localStorage.getItem('yh-exam-hist')||'[]'); }catch(e){}
+  var col=function(p){ return p>=80?'var(--ok)':p>=60?'var(--amber)':'var(--red)'; };
+  var s='<div class="card"><h2>📝 الاختبارات</h2><p style="font-size:.92rem;color:var(--ink2);margin:0 0 12px">'+
+    'اختبار حقيقي بوقت محدد، بدون ما يطلع لك الجواب أثناء الحل. بعد ما تسلّم يطلع لك تقرير كامل: '+
+    'الدرجة، وين أنت قوي وين ضعيف، الأخطاء اللي تتكرر، وخطة مذاكرة. وتقدر ترسل التقرير لأخوك.</p>'+
+    '<a class="pill gold" href="exam.html">افتح مركز الاختبارات</a></div><div class="grid" style="margin-top:14px">';
+  T.forEach(function(t){
+    var mine=hist.filter(function(x){return x.test===t.id;}), last=mine[mine.length-1];
+    s+='<div class="deck"><div class="dn">'+t.title+'<small>'+t.sub+'</small></div>'+
+      (last?'<span class="st">آخر نتيجة <b style="color:'+col(last.pct)+'">'+last.pct+'% '+last.grade+'</b> · '+mine.length+' محاولة</span>':'<span class="st">ما اختبرته بعد</span>')+
+      (last?'<a class="pill" href="exam.html#r='+encodeURIComponent(last.code)+'">التقرير</a>':'')+
+      '<a class="pill gold" href="exam.html#t='+t.id+'">ابدأ</a></div>';
+  });
+  s+='</div>'; document.getElementById("exams").innerHTML=s;
+}
+
+renderToday();renderWeek();renderCal();renderCourses();renderNotes();renderMap();renderDecks();renderExams();
 
 document.getElementById("nav").addEventListener("click",e=>{
   const b=e.target.closest("button"); if(!b)return;
   document.querySelectorAll("#nav button").forEach(x=>x.setAttribute("aria-selected",x===b));
-  ["today","week","cal","courses","notes","map","decks"].forEach(id=>
+  ["today","week","cal","courses","notes","map","decks","exams"].forEach(id=>
     document.getElementById(id).hidden = (id!==b.dataset.t));
 });
 </script>
