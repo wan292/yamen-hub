@@ -26,7 +26,15 @@
     return out + esc(s.slice(last));
   }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
-  function testById(id) { for (var i = 0; i < TESTS.length; i++) if (TESTS[i].id === id) return TESTS[i]; return null; }
+  function testById(id) {
+    for (var i = 0; i < TESTS.length; i++) if (TESTS[i].id === id) return TESTS[i];
+    if (id && id.indexOf('x.') === 0) {   /* custom exam built on the bank page: x.<bank>+<bank> */
+      var banks = id.slice(2).split('+');
+      var course = (BANKS[banks[0]] || {}).course || banks[0].replace(/^([A-Z]+)(\d+).*$/, '$1 $2');
+      return { id: id, custom: true, banks: banks, title: 'اختبار مخصص' + (course ? ' — ' + course : ''), sub: 'أسئلة من الفصول اللي اخترتها', count: 0, secPerQ: 0 };
+    }
+    return null;
+  }
   function ready(t) { return t && t.banks.every(function (b) { return BANKS[b] && BANKS[b].questions && BANKS[b].questions.length; }); }
   function qOf(bid, n) {
     var b = BANKS[bid]; if (!b) return null;
@@ -86,9 +94,10 @@
     test.banks.forEach(function (bid, bi) {
       var B = BANKS[bid], s = seen[bid] || [];
       var isSeen = function (q) { return s.indexOf(q.n) >= 0; };
-      var reg = B.questions.filter(function (q) { return q.type !== 'case'; });
+      var okSec = function (q) { return !test.secs || test.secs.indexOf(q.sec) >= 0; };
+      var reg = B.questions.filter(function (q) { return q.type !== 'case' && okSec(q); });
       var cases = {};
-      B.questions.filter(function (q) { return q.type === 'case'; }).forEach(function (q) { (cases[q.caseId] = cases[q.caseId] || []).push(q); });
+      B.questions.filter(function (q) { return q.type === 'case' && okSec(q); }).forEach(function (q) { (cases[q.caseId] = cases[q.caseId] || []).push(q); });
       var ids = shuffle(Object.keys(cases)).sort(function (a, b) {
         return cases[a].filter(isSeen).length - cases[b].filter(isSeen).length; });
       var chosen = ids.slice(0, all ? ids.length : (test.casesPerBank || 0));
@@ -215,13 +224,15 @@
 
   /* ---------------- runner ---------------- */
   var A = null, shownAt = 0, tick = null;
-  function remaining() { return A.limit - (Date.now() - A.start) / 1000; }
+  function remaining() { return A.limit ? A.limit - (Date.now() - A.start) / 1000 : Infinity; }
   function account() { if (A && shownAt) { A.tq[A.cur] = (A.tq[A.cur] || 0) + (Date.now() - shownAt) / 1000; shownAt = Date.now(); } }
   function save() { if (A) lsSet(LIVE, A); }
   function setTimer(sec) {
     if (!timerEl) return;
     if (sec == null) { timerEl.hidden = true; return; }
-    timerEl.hidden = false; timerEl.textContent = '⏱ ' + fmt(sec);
+    timerEl.hidden = false;
+    if (sec === Infinity) { timerEl.textContent = '⏱ ' + fmt((Date.now() - A.start) / 1000); timerEl.className = 'pill xtimer'; return; }
+    timerEl.textContent = '⏱ ' + fmt(sec);
     timerEl.className = 'pill xtimer' + (sec <= 60 ? ' bad' : sec <= 300 ? ' warn' : '');
   }
   function onVis() {
@@ -231,6 +242,11 @@
   }
   function run(a) {
     if (!a || !testById(a.test)) { lsDel(LIVE); showHome(); return; }
+    var T = testById(a.test);
+    if (a.qs.some(function (it) { return !qOf(T.banks[it.b], it.n); })) {   /* a cached old page that lacks this bank: reload, keep the attempt */
+      if (!/[?&]r=1/.test(location.search)) { location.replace('exam.html?r=1'); return; }
+      view.innerHTML = '<div class="card xempty">الصفحة قديمة في جوالك. سكّرها وافتحها من جديد، واختبارك محفوظ.</div>'; return;
+    }
     A = a;
     if (remaining() <= 0) { submit(true); return; }
     document.removeEventListener('visibilitychange', onVis);
@@ -253,11 +269,11 @@
     if (cs) h += '<div class="xcase"><div class="ct">📋 Case — ' + esc(cs.title) + '</div><div class="cx">' + esc(cs.text) + '</div></div>';
     h += '<div class="xq">';
     if (q.img) h += '<div class="exhibit"><img src="' + esc(q.img) + '" alt="The textbook figure this question is about"></div>';
-    h += '<div class="xstem">' + esc(q.stem) + '</div><div class="xopts" role="radiogroup">';
+    h += '<div class="xstem' + (/[؀-ۿ]/.test(q.stem) ? ' ar' : '') + '">' + esc(q.stem) + '</div><div class="xopts" role="radiogroup">';
     c.it.perm.forEach(function (oi, k) {
       var sel = A.ans[A.cur] === oi;
       h += '<button class="xopt' + (sel ? ' sel' : '') + (/[؀-ۿ]/.test(q.options[oi]) ? ' ar' : '') + '" role="radio" aria-checked="' + sel + '" data-o="' + oi + '">' +
-        '<span class="xl">' + LETTERS[k] + '</span><span class="xt" dir="auto">' + esc(q.options[oi]) + '</span></button>';
+        '<span class="xl">' + (/[؀-ۿ]/.test(q.stem) ? 'أبجد' : LETTERS)[k] + '</span><span class="xt" dir="auto">' + esc(q.options[oi]) + '</span></button>';
     });
     h += '</div></div><div class="xnav">' +
       '<button class="pill" id="xprev"' + (A.cur ? '' : ' disabled') + '>→ السابق</button>' +
@@ -327,7 +343,7 @@
   function submit(auto) {
     if (!A) return;
     account(); clearInterval(tick); document.removeEventListener('visibilitychange', onVis); closeSheet();
-    var t = testById(A.test), dur = Math.min(A.limit, Math.round((Date.now() - A.start) / 1000));
+    var t = testById(A.test), el = Math.round((Date.now() - A.start) / 1000), dur = Math.min(A.limit || 46655, el);
     var code = encode(A, dur, auto || remaining() <= 0);
     var seen = lsGet(SEEN, {});
     A.qs.forEach(function (it) { var bid = t.banks[it.b]; seen[bid] = seen[bid] || []; if (seen[bid].indexOf(it.n) < 0) seen[bid].push(it.n); });
@@ -455,8 +471,22 @@
         p: 'أقوى درس «' + best.title + '» (' + best.p + '%) وأضعفه «' + worst.title + '» (' + worst.p + '%).',
         a: 'ابدأ المراجعة من «' + worst.title + '».', coach: '', sec: worst });
     }
+    if (R.rows.length && R.rows.every(function (r) { return (BANKS[r.bid] || {}).lang === 'ar'; })) d.forEach(function (x) {
+      var o = AR_DIAG[x.k]; if (o) Object.keys(o).forEach(function (k) { x[k] = o[k].replace('%P%', x.k === 'tf' ? tf.p : ''); });   /* Arabic subjects: no English-reading advice */
+    });
     return d.sort(function (a, b) { return (b.sev === 'high') - (a.sev === 'high') || b.score - a.score; });
   }
+  var AR_DIAG = {
+    apply: { a: 'بعد كل تعريف تحفظه، طلّع مثال من السوق: بقالة، شركة، تاجر يبيع ويشتري — وقل وش الحكم عليه وليش.',
+      coach: 'اعطه موقف تجاري من الحياة (مثلاً: واحد اشترى سيارة عشان يبيعها) واسأله: وش الحكم؟ وش المادة أو القاعدة؟' },
+    defs: { a: 'افتح المحاضرة واقرأ التعريفات المكتوبة بالنص بصوت عالي، وبعدين غطّها وقلها من ذاكرتك.',
+      coach: 'قل له المصطلح وخلّه يقول التعريف، وبعدين العكس: اقرأ التعريف وخلّه يقول وش المصطلح.' },
+    tf: { p: 'جبت ' + '%P%' + '% في صح وخطأ. غالباً الجملة فيها كلمة مطلقة (دائماً، فقط، كل، لا يجوز أبداً) أو شرط مبدّل.',
+      coach: 'اقرأ له جملة صحيحة من المحاضرة وغيّر فيها كلمة وحدة، وخلّه يكتشف وش تغيّر.' },
+    recall: { coach: 'اسأله أسئلة سريعة بدون خيارات: كم شرط؟ وش أنواع كذا؟ وش رقم المادة؟' },
+    slow: { p: 'بعض الأسئلة أخذت منك أكثر من دقيقتين. غالباً لأن الخيارات متقاربة وتحتاج تفرّق بينها.',
+      coach: 'خلّه يحدد الكلمة المفتاحية في السؤال (شرط، استثناء، تعريف) قبل ما يقرأ الخيارات.' }
+  };
 
   /* ---------------- report ---------------- */
   function bars(list) {
@@ -497,6 +527,11 @@
   function studyPlan(R) {
     var plan = [], weak = secList(R, true).filter(function (s) { return s.sec !== 'CASE' && s.t >= 2 && s.p < 70; }).sort(function (a, b) { return a.p - b.p; });
     weak.slice(0, 3).forEach(function (s) {
+      if ((BANKS[s.bid] || {}).lang === 'ar') {   /* Arabic subject: no English twin or deck — re-read, then drill that section in the bank */
+        plan.push({ t: 'أعد «' + esc(s.title) + '» — جبت فيه ' + s.p + '%. اقرأه، وبعدين حل أسئلته في بنك الأسئلة لين تجيبها كلها صح.',
+          links: lessonLink(s.sec, 'اقرأ') + '<a class="pill" href="bank.html#s=' + s.sec + '">🎯 حل أسئلته</a>' });
+        return;
+      }
       plan.push({ t: 'أعد درس «' + esc(s.title) + '» — جبت فيه ' + s.p + '%. اقرأه بالعربي أول، بعدين النسخة الإنجليزية.',
         links: lessonLink(s.sec, 'الدرس بالعربي') + lessonLink(s.sec + '-EN', 'English') + lessonLink(s.sec, '🃏 بطاقات الدرس', '#practice') });
     });
@@ -506,7 +541,7 @@
       plan.push({ t: 'صحّح: <b>' + ar(m.ar) + '</b> — ' + ar(m.fix), links: m.sec ? lessonLink(m.sec, 'افتح الدرس') : '' });
     });
     if (R.diag.some(function (d) { return d.k === 'lang'; })) plan.push({ t: 'روتين الكلمات: ١٠ دقائق يومياً على بطاقات الكلمات (عربي ← إنجليزي) لكل درس ذاكرته.', links: '<a class="pill" href="index.html">🃏 البطاقات</a>' });
-    if (plan.length) plan.push({ t: 'بعد ٣ أيام أعد نفس الاختبار — يجيك أسئلة ما شفتها، وتقارن نتيجتك.', links: '<a class="pill gold" href="#t=' + R.test.id + '">↻ أعد الاختبار</a>' });
+    if (plan.length) plan.push({ t: 'بعد ٣ أيام أعد نفس الاختبار — يجيك أسئلة ما شفتها، وتقارن نتيجتك.', links: '<a class="pill gold" href="' + (R.test.custom ? 'bank.html' : '#t=' + R.test.id) + '">↻ أعد الاختبار</a>' });
     return plan;
   }
   function previousOf(R) {
@@ -529,11 +564,11 @@
       '<circle cx="67" cy="67" r="56" fill="none" stroke="' + color(R.pct) + '" stroke-width="12" stroke-linecap="round" stroke-dasharray="' + dash + ' ' + circ + '"/></svg>' +
       '<div class="v"><div><b>' + R.pct + '%</b><small>' + R.correct + ' من ' + R.total + '</small></div></div></div>' +
       '<div class="hx"><div class="xgrade" style="color:' + color(R.pct) + '">' + R.grade[0] + '<small>' + R.grade[1] + '</small></div>' +
-      '<div class="tn">' + ar(T.title) + '<br>' + dateAr(D.start) + ' · الوقت ' + fmt(D.dur) + ' من ' + fmt(D.limit) + (R.timedOut ? ' · خلص الوقت' : '') + '</div>' +
+      '<div class="tn">' + ar(T.title) + '<br>' + dateAr(D.start) + ' · الوقت ' + fmt(D.dur) + (D.limit ? ' من ' + fmt(D.limit) : ' (بدون وقت محدد)') + (R.timedOut ? ' · خلص الوقت' : '') + '</div>' +
       (prev ? '<div class="tn">المحاولة اللي قبل: ' + prev.pct + '% <span class="xdelta ' + (R.pct >= prev.pct ? 'up' : 'down') + '">' + (R.pct >= prev.pct ? '+' : '') + (R.pct - prev.pct) + '</span></div>' : '') +
       '</div></div>' +
       '<div class="xstats"><div><b>' + R.correct + '</b>صح</div><div><b>' + R.wrong + '</b>غلط</div><div><b>' + R.blank + '</b>متروك</div><div><b>' + fmt(R.median) + '</b>متوسط السؤال</div></div>' +
-      '<div class="xacts"><button class="pill gold" id="xshare">📤 أرسل التقرير</button><a class="pill" href="#t=' + T.id + '">↻ اختبار جديد</a><a class="pill" href="#">كل الاختبارات</a></div></div>';
+      '<div class="xacts"><button class="pill gold" id="xshare">📤 أرسل التقرير</button><a class="pill" href="' + (T.custom ? 'bank.html' : '#t=' + T.id) + '">↻ اختبار جديد</a><a class="pill" href="#">كل الاختبارات</a></div></div>';
     /* teacher */
     h += '<div class="card"><h2>🧑‍🏫 كلمة المدرّس</h2><div class="xnote">' + teacherNote(R) + '</div></div>';
     /* diagnoses */
@@ -568,7 +603,7 @@
     }
     /* time */
     h += '<div class="card"><h2>⏱ كيف استخدمت الوقت</h2><div class="xtime">' +
-      '<div><b>' + fmt(D.dur) + '</b>الوقت الكلي من ' + fmt(D.limit) + '</div>' +
+      '<div><b>' + fmt(D.dur) + '</b>' + (D.limit ? 'الوقت الكلي من ' + fmt(D.limit) : 'الوقت الكلي (بدون مؤقت)') + '</div>' +
       '<div><b>' + fmt(R.median) + '</b>متوسط وقتك للسؤال</div>' +
       '<div><b>' + R.rushed.length + '</b>غلط بسرعة (أقل من ١٥ ث)</div>' +
       '<div><b>' + R.slow.length + '</b>أسئلة علّقتك (+٢ دقيقة)</div>' +
@@ -628,7 +663,7 @@
         (r.it.chg ? '<span>غيّرت جوابك ' + r.it.chg + '×</span>' : '') + (r.it.flag ? '<span>⚑</span>' : '') + '</div>';
       if (cs) s += '<details class="cs"><summary>📋 Case — ' + esc(cs.title) + '</summary><div class="cx">' + esc(cs.text) + '</div></details>';
       if (q.img) s += '<div class="exhibit"><img src="' + esc(q.img) + '" alt="The textbook figure for this question" loading="lazy"></div>';
-      s += '<div class="stem">' + esc(q.stem) + '</div>';
+      s += '<div class="stem' + (/[؀-ۿ]/.test(q.stem) ? ' ar' : '') + '">' + esc(q.stem) + '</div>';
       q.options.forEach(function (o, i) {
         var right = i === q.answer, mine = i === r.it.ans && !right;
         s += '<div class="o' + (right ? ' right' : '') + (mine ? ' mine' : '') + (/[؀-ۿ]/.test(o) ? ' ar' : '') + '"><span class="m">' + (right ? '✓' : mine ? '✗' : '') + '</span><span dir="auto">' + esc(o) + '</span></div>';
@@ -670,8 +705,9 @@
   });
   document.addEventListener('DOMContentLoaded', function () {
     view = document.getElementById('view'); timerEl = document.getElementById('xtimer');
+    if (!view) return;
     window.addEventListener('hashchange', route);
     route();
   });
-  window.YH_EXAM = { analyze: analyze, decode: decode, draw: draw, encode: encode };
+  window.YH_EXAM = { analyze: analyze, decode: decode, draw: draw, encode: encode, testById: testById, grade: grade };
 })();
