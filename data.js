@@ -176,10 +176,30 @@ const LESSONS = [
         { n:4, ar:"ثقافة المنظمة", en:"Organizational Culture", o:"LO3-5",
           s:"done", href:"lessons/MGT102-CH3-S4.html", enhref:"lessons/MGT102-CH3-S4-EN.html" }
       ]},
-    { name:"Chapters 4–19", meta:"الكتاب كامل على الدرايف — ملخص لكل فصل",
+    { name:"Chapter 4 — Ethics and Social Responsibility", meta:"الفصل الرابع · مكتمل",
       items:[
-        { n:4, ar:"الأخلاقيات والمسؤولية الاجتماعية", en:"Ethics and Social Responsibility", s:"src" },
-        { n:5, ar:"إدارة التنوّع", en:"Managing Diverse Employees", s:"src" },
+        { n:1, ar:"طبيعة الأخلاق وأصحاب المصلحة", en:"The Nature of Ethics and Stakeholders", o:"LO4-1 · LO4-2",
+          s:"done", href:"lessons/MGT102-CH4-S1.html", enhref:"lessons/MGT102-CH4-S1-EN.html" },
+        { n:2, ar:"قواعد القرار الأخلاقي وليش نكون أخلاقيين", en:"Ethical Decision Rules and Why Behave Ethically", o:"LO4-3 · LO4-4",
+          s:"done", href:"lessons/MGT102-CH4-S2.html", enhref:"lessons/MGT102-CH4-S2-EN.html", star:"القواعد الأخلاقية الأربع" },
+        { n:3, ar:"مصادر أخلاق المدير", en:"Sources of Managerial Ethics", o:"LO4-5",
+          s:"done", href:"lessons/MGT102-CH4-S3.html", enhref:"lessons/MGT102-CH4-S3-EN.html" },
+        { n:4, ar:"مواقف المسؤولية الاجتماعية", en:"Approaches to Social Responsibility", o:"LO4-6",
+          s:"done", href:"lessons/MGT102-CH4-S4.html", enhref:"lessons/MGT102-CH4-S4-EN.html" }
+      ]},
+    { name:"Chapter 5 — Managing Diverse Employees in a Multicultural Environment", meta:"الفصل الخامس · مكتمل",
+      items:[
+        { n:1, ar:"التنوّع المتزايد في القوى العاملة", en:"The Increasing Diversity of the Workforce", o:"LO5-1",
+          s:"done", href:"lessons/MGT102-CH5-S1.html", enhref:"lessons/MGT102-CH5-S1-EN.html" },
+        { n:2, ar:"دور المدير في إدارة التنوّع", en:"Managers and the Effective Management of Diversity", o:"LO5-2 · LO5-3",
+          s:"done", href:"lessons/MGT102-CH5-S2.html", enhref:"lessons/MGT102-CH5-S2-EN.html" },
+        { n:3, ar:"الإدراك والمعاملة غير العادلة", en:"Perception and Unfair Treatment", o:"LO5-4",
+          s:"done", href:"lessons/MGT102-CH5-S3.html", enhref:"lessons/MGT102-CH5-S3-EN.html" },
+        { n:4, ar:"كيف تدير التنوّع والتحرّش الجنسي", en:"Managing Diversity Effectively and Sexual Harassment", o:"LO5-5 · LO5-6",
+          s:"done", href:"lessons/MGT102-CH5-S4.html", enhref:"lessons/MGT102-CH5-S4-EN.html" }
+      ]},
+    { name:"Chapters 6–19", meta:"الكتاب كامل على الدرايف — ملخص لكل فصل",
+      items:[
         { n:6, ar:"إدارة البيئة العالمية", en:"Managing in the Global Environment", s:"src" },
         { ar:"والفصول ٧–١٩ — كلها مقسّمة ومُلخّصة على الدرايف", s:"src",
           note:"كل فصل في مجلده: الفصل PDF، نص الفصل، صور الأشكال والجداول، وملخص كامل" }
@@ -240,7 +260,17 @@ const MAP = [
         { t:"Values and Attitudes", o:"LO3-2", s:"done", href:"lessons/MGT102-CH3-S2.html", enhref:"lessons/MGT102-CH3-S2-EN.html" },
         { t:"Moods, Emotions, and Emotional Intelligence", o:"LO3-3 · LO3-4", s:"done", href:"lessons/MGT102-CH3-S3.html", enhref:"lessons/MGT102-CH3-S3-EN.html" },
         { t:"Organizational Culture", o:"LO3-5", s:"done", href:"lessons/MGT102-CH3-S4.html", enhref:"lessons/MGT102-CH3-S4-EN.html" } ]},
-      { name:"Chapters 4–19", items:[
+      { name:"Chapter 4 — Ethics and Social Responsibility", items:[
+        { t:"The Nature of Ethics and Stakeholders", o:"LO4-1 · LO4-2", s:"done", href:"lessons/MGT102-CH4-S1.html", enhref:"lessons/MGT102-CH4-S1-EN.html" },
+        { t:"Ethical Decision Rules and Why Behave Ethically", o:"LO4-3 · LO4-4", s:"done", href:"lessons/MGT102-CH4-S2.html", enhref:"lessons/MGT102-CH4-S2-EN.html" },
+        { t:"Sources of Managerial Ethics", o:"LO4-5", s:"done", href:"lessons/MGT102-CH4-S3.html", enhref:"lessons/MGT102-CH4-S3-EN.html" },
+        { t:"Approaches to Social Responsibility", o:"LO4-6", s:"done", href:"lessons/MGT102-CH4-S4.html", enhref:"lessons/MGT102-CH4-S4-EN.html" } ]},
+      { name:"Chapter 5 — Managing Diverse Employees in a Multicultural Environment", items:[
+        { t:"The Increasing Diversity of the Workforce", o:"LO5-1", s:"done", href:"lessons/MGT102-CH5-S1.html", enhref:"lessons/MGT102-CH5-S1-EN.html" },
+        { t:"Managers and the Effective Management of Diversity", o:"LO5-2 · LO5-3", s:"done", href:"lessons/MGT102-CH5-S2.html", enhref:"lessons/MGT102-CH5-S2-EN.html" },
+        { t:"Perception and Unfair Treatment", o:"LO5-4", s:"done", href:"lessons/MGT102-CH5-S3.html", enhref:"lessons/MGT102-CH5-S3-EN.html" },
+        { t:"Managing Diversity Effectively and Sexual Harassment", o:"LO5-5 · LO5-6", s:"done", href:"lessons/MGT102-CH5-S4.html", enhref:"lessons/MGT102-CH5-S4-EN.html" } ]},
+      { name:"Chapters 6–19", items:[
         { t:"الكتاب كامل مقسّم فصلاً فصلاً على الدرايف", s:"ready",
           note:"لكل فصل: ملف PDF لحاله، نص الفصل، صور كل الأشكال والجداول، وملخص كامل بالعربي مع التعريفات بالإنجليزي" } ]},
       { name:"دليل المقرر", items:[
