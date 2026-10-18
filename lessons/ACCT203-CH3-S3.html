@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ٣: تسويات المستحقات وميزان المراجعة المعدّل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/theme.css?v=7">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH3-S3-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH3-S3">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
+</div>
+<header class="lh">
+  <h1>الفصل الثالث — تسويات المستحقات وميزان المراجعة المعدّل</h1>
+  <p class="sub"><code>ACCT 203</code> · مبادئ المحاسبة المالية · <bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi> · القسم ٣ من ٤:
+  <bdi>Accrued Expenses, Accrued Revenues, and the Adjusted Trial Balance</bdi><br>
+  الهدف <code>P3</code>: <bdi>Prepare adjusting entries for accrued expenses.</bdi><br>
+  الهدف <code>P4</code>: <bdi>Prepare adjusting entries for accrued revenues.</bdi><br>
+  الهدف <code>P5</code>: <bdi>Prepare financial statements from an adjusted trial balance.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>هذا القسم «الشغل صار، والفلوس لسا ما تحركت» — وبعدها تطلّع القوائم المالية</h2>
+  <p>في الدرس اللي قبل أخذت <b>المؤجّلات</b> (<bdi>deferrals</bdi>): النقد يتحرك <b>قبل</b> ما ينعرف المصروف أو الإيراد. هذا الدرس العكس بالضبط —
+  <b>المستحقات</b> (<bdi>accruals</bdi>): المصروف أو الإيراد <b>صار فعلاً</b> في الفترة، بس النقد يتحرك <b>بعدين</b>، وما أحد كتب أي قيد في الدفاتر.
+  نوعين: <bdi>accrued expenses</bdi> (مصروفات مستحقة — الهدف <code>P3</code>) و<bdi>accrued revenues</bdi> (إيرادات مستحقة — الهدف <code>P4</code>).
+  وبهذا تكمل <b>التسويات الأربع</b>، فتجمعها في <bdi>adjusted trial balance</bdi> (ميزان المراجعة المعدّل) وتبني منه القوائم المالية بترتيب ثابت (الهدف <code>P5</code>).</p>
+  <p>ركّز من الحين على ثلاث أشياء يحبها الاختبار: (١) قيد تسوية المستحقات <b>ما يلمس <bdi>Cash</bdi> أبداً</b> — المصروف المستحق يقابله التزام
+  (<bdi>payable</bdi>)، والإيراد المستحق يقابله أصل (<bdi>receivable</bdi>). (٢) يوم الدفع أو القبض في الفترة الجاية، القيد <b>يقسم المبلغ</b>: جزء يقفل
+  الالتزام أو الأصل القديم، وجزء مصروف أو إيراد للفترة الجديدة. (٣) ترتيب القوائم: <b>الدخل ← الأرباح المحتجزة ← الميزانية</b>. وكل الأرقام من
+  شركة <bdi>FastForward</bdi> نفسها، وتتجمع آخر الدرس في <bdi>Exhibit 3.13</bdi> و<bdi>Exhibit 3.14</bdi>.</p>
+</div>
+
+<!-- 1 · Accrued expenses: definition, framework, accrued salaries -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">⏰</div>
+    <div class="term">Accrued Expenses</div>
+    <div class="ar">المصروفات المستحقة</div>
+    <div class="say">الموظف اشتغل، والراتب لسا ما انصرف ولا انسجّل</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Accrued expenses</bdi></b> = تكاليف <b>صارت</b> في الفترة، و<b>ما انصرفت</b> و<b>ما انسجّلت</b>. التسوية:
+      <b>مدين المصروف، دائن الالتزام</b> — والاثنين يزيدون.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>عامل اشتغل عندك آخر ثلاث أيام في السنة، وراتبه يجيه الأسبوع الجاي. الشغل صار في ديسمبر، فالمصروف لديسمبر — والدين عليك من الحين.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — التعريف والإطار</span>
+      <p>الكتاب يعرّفها: تكاليف <mark class="k">صارت (<bdi>incurred</bdi>) في فترة، وهي <b>ما انصرفت</b> و<b>ما انسجّلت</b> مع بعض</mark>.
+      ولها اسم ثاني: <b><bdi>accrued liabilities</bdi></b> (التزامات مستحقة) — لأن وراها دين على الشركة. وتنعرض في قائمة الدخل
+      (<bdi>income statement</bdi>) <b>للفترة اللي صارت فيها</b>، مو الفترة اللي تندفع فيها.</p>
+      <p><b>الإطار (<bdi>Framework</bdi>):</b> قيد التسوية (<bdi>adjusting entry</bdi>) للمصروفات المستحقة <b>يزيد حساب مصروف</b> (قائمة الدخل)
+      و<b>يزيد حساب التزام</b> (الميزانية — <bdi>balance sheet</bdi>) — زي ما يوضّح <bdi>Exhibit 3.9</bdi>. يعني يعترف بمصروف صار في الفترة وما انصرف للحين.</p>
+      <p>الأمثلة الشائعة <b>أربعة</b>: <bdi>salaries</bdi> (رواتب)، <bdi>interest</bdi> (فوائد)، <bdi>rent</bdi> (إيجار)، <bdi>taxes</bdi> (ضرايب).
+      والكتاب يشرح بمثالين بس: <b>الرواتب</b> (هنا) و<b>الفوائد</b> (المفهوم الجاي).</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.9 — Adjusting for Accrued Expenses (increase liability and increase expense)</div>
+        <img src="../img/acct203/exhibit-3-9.png" alt="Exhibit 3.9 shows two T-accounts, Expense on the left and Liability on the right, each labeled Increase; a yellow box reading Dr. Expense and Cr. Liability has one arrow going up into the debit side of Expense and another arrow going up into the credit side of Liability." loading="lazy">
+        <p class="excap">حسابين T: <b><bdi>Expense</bdi></b> يسار و<b><bdi>Liability</bdi></b> يمين، وفوق كل واحد كلمة <b><bdi>Increase</bdi></b>.
+        تحت مربّع أصفر فيه القيد: <bdi>Dr. Expense… #</bdi> و<bdi>Cr. Liability… #</bdi>. سهم المدين يطلع لـ<b>الجهة المدينة</b> (يسار) من
+        <bdi>Expense</bdi>، وسهم الدائن يطلع لـ<b>الجهة الدائنة</b> (يمين) من <bdi>Liability</bdi>. <b>كيف تقرأه:</b> المصروف يزيد بالمدين، والالتزام
+        يزيد بالدائن — الاثنين <b>زيادة</b>، ما فيه حساب ينقص.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — رواتب مستحقة (<bdi>Accrued Salaries Expense</bdi>)</span>
+      <p>موظف <bdi>FastForward</bdi> ياخذ <b>$70</b> باليوم، يعني <b>$350</b> لأسبوع شغل خمس أيام يبدأ الاثنين ويخلص الجمعة. ونمشي بالخطوات الثلاث:</p>
+      <table>
+        <tr><th>الخطوة</th><th>وش تسوي</th><th>في مثال الرواتب</th></tr>
+        <tr><td><b>Step 1</b></td><td>وش الرصيد الحين؟</td>
+            <td>الموظف ينصرف له <b>كل أسبوعين يوم جمعة</b>. في <b>12</b> و<b>26</b> ديسمبر انصرفت الرواتب، وانسجّلت في اليومية، وترحّلت للأستاذ.
+                يعني رواتب الأيام اللي بعد 26 ديسمبر ما لها أي قيد: <bdi>Salaries Payable</bdi> (رواتب مستحقة الدفع — التزام) = <b>$0</b>.</td></tr>
+        <tr><td><b>Step 2</b></td><td>وش المفروض يكون؟</td>
+            <td>التقويم في <bdi>Exhibit 3.10</bdi> يبيّن <b>ثلاث أيام شغل</b> بعد يوم الدفع 26 ديسمبر: <b>29 و30 و31</b>. الموظف كسب راتب ثلاث أيام بنهاية دوام
+                الأربعاء 31 ديسمبر، وهذا الراتب <b>ما انصرف ولا انسجّل</b>. فلازم الشركة تعرض المصروف والالتزام الزايدين:
+                <span class="mono" dir="ltr">3 × $70 = $210</span>.</td></tr>
+        <tr><td><b>Step 3</b></td><td>قيد التسوية</td><td>تحت ↓</td></tr>
+      </table>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.10 — Salary Accrual and Paydays</div>
+        <img src="../img/acct203/exhibit-3-10.png" alt="Exhibit 3.10 shows December and January calendar pages; in December, Mondays the 1st, 15th and 29th are circled as the start of each pay period, Fridays the 12th and 26th are shaded as paydays, and the 29th, 30th and 31st are highlighted as salary expense incurred; in January, Fridays the 9th and 23rd are shaded as paydays." loading="lazy">
+        <p class="excap">صفحتين تقويم: <b>ديسمبر</b> و<b>يناير</b>. في ديسمبر: الاثنين <b>1</b> و<b>15</b> و<b>29</b> عليها دواير = <bdi>Pay period begins</bdi> (بداية فترة الراتب،
+        كل فترة أسبوعين). الجمعة <b>12</b> و<b>26</b> مظللة = <bdi>Payday</bdi> (يوم الدفع). و<b>29 و30 و31</b> ملوّنة بالأصفر = <bdi>Salary expense incurred</bdi>
+        (مصروف رواتب صار وما انصرف). في يناير: يوم الدفع الجمعة <b>9</b> و<b>23</b>. <b>كيف تقرأه:</b> آخر فترة راتب في ديسمبر بدأت 29 وتخلص
+        وتندفع 9 يناير — فثلاث أيام منها في ديسمبر وسبع أيام في يناير. <b>وش يجي منه بالاختبار:</b> تعدّ أيام الشغل بين آخر يوم دفع ونهاية الفترة.</p>
+      </div>
+
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td><b>Adjustment (e)</b> — Salaries Expense</td><td class="mono" style="text-align:right">210</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Salaries Payable</td><td></td><td class="mono" style="text-align:right">210</td></tr>
+        <tr><td></td><td><i>Record three days’ accrued salary (3 × $70).</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Salaries Expense</bdi> زاد ← المصروف يزيد بالمدين؛ و<bdi>Salaries Payable</bdi> (التزام) زاد ← الالتزام يزيد بالدائن.
+      أثرها على المعادلة: <span class="mono" dir="ltr">Assets 0 = Liabilities <span class="pos">+210</span> + Equity <span class="neg">−210</span></span>
+      (المصروف ينقص حقوق الملكية). ولاحظ: <b>ما فيه نقد</b> في القيد.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Adjustment (e) — journal entry and T-account postings</div>
+        <img src="../img/acct203/exhibit-3-10-a.png" alt="Adjustment (e) dated December 31 debits Salaries Expense 210 and credits Salaries Payable 210 to record three days' accrued salary of 3 times 70 dollars; the Salaries Expense T-account, number 622, shows debits of 700 on December 12, 700 on December 26 and 210 on December 31 for a balance of 1,610, and the Salaries Payable T-account, number 209, shows a December 31 credit of 210." loading="lazy">
+        <p class="excap">فوق القيد <b>Adjustment (e)</b>، وتحته الترحيل لحسابين. الأرقام الحمرا = اللي جاي من قيد التسوية. الجدولين تحت نفس الحسابين.</p>
+        <table dir="ltr">
+          <tr><th colspan="2" style="text-align:center">Salaries Expense · 622</th></tr>
+          <tr><th>Debit</th><th>Credit</th></tr>
+          <tr><td class="mono">Dec. 12 &nbsp; 700</td><td></td></tr>
+          <tr><td class="mono">Dec. 26 &nbsp; 700</td><td></td></tr>
+          <tr><td class="mono">Dec. 31 &nbsp; 210</td><td></td></tr>
+          <tr><td class="mono"><b>Balance &nbsp; 1,610</b></td><td></td></tr>
+        </table>
+        <br>
+        <table dir="ltr">
+          <tr><th colspan="2" style="text-align:center">Salaries Payable · 209</th></tr>
+          <tr><th>Debit</th><th>Credit</th></tr>
+          <tr><td></td><td class="mono">Dec. 31 &nbsp; 210</td></tr>
+          <tr><td></td><td class="mono"><b>Balance &nbsp; 210</b></td></tr>
+        </table>
+        <p class="excap"><b>تشييك:</b> <span class="mono" dir="ltr">700 + 700 + 210 = 1,610</span> ✓. الـ700 مرتين = راتب أسبوعين انصرف يوم 12 ويوم 26
+        (<span class="mono" dir="ltr">10 × $70</span>)، والـ210 = التسوية.</p>
+      </div>
+
+      <p><b>بعد التسوية:</b> <bdi>Salaries expense</bdi> بقيمة <b>$1,610</b> ينعرض في قائمة دخل ديسمبر، و<b>$210</b> <bdi>salaries payable</bdi>
+      (التزام) ينعرض في الميزانية. ملخّص الكتاب:</p>
+      <table>
+        <tr><th>قبل التسوية</th><th>التسوية</th><th>بعد التسوية</th></tr>
+        <tr><td><bdi>Salaries Payable</bdi> = <b>$0</b></td>
+            <td>زد 210 على <bdi>Salaries Payable</bdi> وزد 210 على <bdi>Salaries Expense</bdi></td>
+            <td><bdi>Salaries Payable</bdi> = <b>$210</b></td></tr>
+        <tr><td>يعرض $0 من رواتب صارت وما انصرفت نقداً.</td>
+            <td>سجّل رواتب 3 أيام مستحقة وما انصرفت، بـ$70 لليوم.</td>
+            <td>يعرض $210 رواتب مستحقة للموظف وما انصرفت.</td></tr>
+      </table>
+      <p style="background:var(--ok-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      <b>لو ما سوّيت التسوية</b> (<bdi>Exhibit 3.12</bdi>): المصروف <b>ناقص</b> (<bdi>expense understated</bdi>) والالتزام <b>ناقص</b>
+      (<bdi>liability understated</bdi>) — بـ210 في مثالنا. والنتيجة: صافي الدخل يطلع <b>أعلى</b> من الصح، وحقوق الملكية بعد.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Accrued expenses</b>, or accrued liabilities, are costs that are incurred in a period that are both unpaid and unrecorded. Accrued
+      expenses are reported on the income statement for the period when incurred.</p>
+      <p>Adjusting entries for recording accrued expenses increase the expense (income statement) account and increase a liability (balance
+      sheet) account, as shown in Exhibit 3.9. This adjustment recognizes expenses incurred in a period but not yet paid. Common examples of
+      accrued expenses are salaries, interest, rent, and taxes.</p>
+      <p>Salaries expense of $1,610 is reported on the December income statement, and $210 of salaries payable (liability) is reported in
+      the balance sheet.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>الدائن التزام، مو نقد:</b> قيد التسوية = مدين <bdi>Salaries Expense</bdi>، دائن <bdi>Salaries Payable</bdi>. اختيار فيه
+            «<bdi>credit Cash</bdi>» = غلط، لأن الفلوس ما طلعت للحين.</li>
+        <li><b>لا تخلطه مع المؤجّل:</b> مصروفات مدفوعة مقدّماً (<bdi>prepaid expense</bdi> — دفعت قبل) = مدين المصروف، دائن <b>أصل</b>. <bdi>accrued expense</bdi> (بتدفع بعدين)
+            = مدين المصروف، دائن <b>التزام</b>. الجهة المدينة نفسها، والفرق كله في الدائن.</li>
+        <li>المصروف ينعرض في الفترة اللي <b>صار</b> فيها (ديسمبر)، مو اللي ينصرف فيها (يناير). اختيار يقول «يتسجّل لما ينصرف» = الأساس النقدي (<bdi>cash basis</bdi>)، مو أساس الاستحقاق (<bdi>accrual basis</bdi>).</li>
+        <li>الأيام: 29 و30 و31 ديسمبر = <b>3</b> أيام شغل (الاثنين لين الأربعاء) — مو 5 ومو 10. والحساب <span class="mono" dir="ltr">3 × $70 = $210</span>.</li>
+        <li>رصيد <bdi>Salaries Expense</bdi> بعد التسوية <b>$1,610</b> (<span class="mono" dir="ltr">1,400 + 210</span>) — اختيار يعطيك <b>$210</b> بس للمصروف
+            نسى الرواتب اللي انصرفت قبل. والـ$210 هو رصيد <bdi>Salaries Payable</bdi>.</li>
+        <li>اسم ثاني: <bdi>accrued expenses</bdi> = <bdi>accrued liabilities</bdi>. نفس الشي.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · Accrued interest expense + future cash payment -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🏦</div>
+    <div class="term">Accrued Interest and Paying Accrued Expenses</div>
+    <div class="ar">الفوائد المستحقة ودفع المصروف المستحق</div>
+    <div class="say">الفايدة تمشي مع الوقت، ويوم الدفع تقسم المبلغ بين السنتين</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      الفايدة تتراكم <b>مع مرور الوقت</b>، فآخر الفترة تسجّل اللي تراكم من <b>آخر دفعة</b>: <b>أصل الدين × النسبة السنوية × جزء السنة</b>.
+      ويوم الدفع في الفترة الجاية: <b>مدين الالتزام القديم + مدين مصروف الفترة الجديدة، دائن النقد</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>عدّاد تاكسي يشتغل من آخر مرة دفعت. آخر السنة تصوّر العدّاد وتسجّل الرقم، حتى لو الدفع بعدين.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الفوائد المستحقة (<bdi>Accrued Interest Expense</bdi>)</span>
+      <p>الشركات تسجّل فوائد مستحقة على <bdi>notes payable</bdi> (القروض) والالتزامات طويلة الأجل الثانية <b>آخر كل فترة</b>. ليش؟ لأن
+      <mark class="k">مصروف الفوائد <b>يصير مع مرور الوقت</b> (<bdi>incurred as time passes</bdi>)</mark>. فلو الفايدة ما اندفعت <b>آخر يوم</b> في الفترة بالضبط،
+      لازم تسوية للفايدة اللي صارت وما اندفعت — من <b>آخر تاريخ دفع</b> لين <b>نهاية الفترة</b>. والمعادلة:</p>
+      <div class="eq">
+        <div class="l1">Principal amount owed <span class="plus">×</span> Annual interest rate <span class="plus">×</span> Fraction of year since last payment</div>
+        <div class="l2">أصل الدين × النسبة السنوية × جزء السنة من آخر دفعة</div>
+      </div>
+      <p><b>مثال الكتاب:</b> شركة عليها قرض <b>$6,000</b> من بنك بفايدة <b>5%</b> سنوياً. الفايدة المستحقة لـ<b>30 يوم</b>:</p>
+      <p class="mono" dir="ltr" style="text-align:center">$6,000 × 0.05 × 30 ∕ 360 = $25</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>—</td><td>Interest Expense</td><td class="mono" style="text-align:right">25</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Interest Payable</td><td></td><td class="mono" style="text-align:right">25</td></tr>
+      </table>
+      <p>يعني: <bdi>Interest Expense</bdi> زاد ← مصروف يزيد بالمدين؛ <bdi>Interest Payable</bdi> (التزام) زاد ← يزيد بالدائن. (الكتاب ما يعطي تاريخ لهذا المثال.)</p>
+      <p><b>ملاحظة الكتاب (<bdi>Point</bdi>):</b> حسابات الفوائد تستخدم <mark class="k">سنة <b>360</b> يوم</mark>، واسمها <b><bdi>bankers’ rule</bdi></b> (قاعدة البنوك)
+      — عشان كذا الكسر <span class="mono" dir="ltr">30/360</span> مو <span class="mono" dir="ltr">30/365</span>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — يوم الدفع (<bdi>Future Cash Payment of Accrued Expenses</bdi>)</span>
+      <p>المصروفات المستحقة آخر فترة يجي بعدها <b>دفع نقدي في فترة جاية</b>. تذكّر: <bdi>FastForward</bdi> سجّلت رواتب مستحقة <b>$210</b>.
+      في <b>9 يناير</b> — أول يوم دفع في الفترة الجديدة — القيد التالي يقفل الالتزام (<bdi>salaries payable</bdi>) ويسجّل مصروف رواتب
+      <b>سبع أيام</b> شغل في يناير:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Jan. 9</td><td>Salaries Payable (3 days at $70 per day)</td><td class="mono" style="text-align:right">210</td><td></td></tr>
+        <tr><td></td><td>Salaries Expense (7 days at $70 per day)</td><td class="mono" style="text-align:right">490</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Cash</td><td></td><td class="mono" style="text-align:right">700</td></tr>
+        <tr><td></td><td><i>Paid two weeks’ salary including three days accrued.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: الالتزام نقص ← <bdi>Salaries Payable</bdi> بالمدين؛ مصروف يناير زاد ← <bdi>Salaries Expense</bdi> بالمدين؛ والنقد (أصل) نقص ← بالدائن.
+      <b>تشييك:</b> <span class="mono" dir="ltr">210 + 490 = 700</span> ✓.
+      أثرها: <span class="mono" dir="ltr">Assets <span class="neg">−700</span> = Liabilities <span class="neg">−210</span> + Equity <span class="neg">−490</span></span>.</p>
+      <ul>
+        <li><b>$210 مدين</b> = دفع الالتزام عن الثلاث أيام اللي استحقت في 31 ديسمبر.</li>
+        <li><b>$490 مدين</b> = راتب أول <b>سبع أيام شغل</b> في يناير (<b>ومعها عطلة رأس السنة</b> — <bdi>New Year's Day holiday</bdi>)، كمصروف للفترة الجديدة.</li>
+        <li><b>$700 دائن</b> = كل النقد اللي انصرف للموظف (أسبوعين = <span class="mono" dir="ltr">10 × $70</span>).</li>
+      </ul>
+      <p>وهذا <b>مو</b> قيد تسوية — هذا قيد دفع عادي، عشان كذا فيه <bdi>Cash</bdi>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">تطبيق الكتاب — <bdi>Need-To-Know 3-3</bdi></span>
+      <p>كل حالة لحالها، والتسوية في 31 ديسمبر، وما فيه تسويات ثانية خلال السنة:</p>
+      <p><b>1. <bdi>Salaries Payable</bdi>:</b> آخر السنة فيه مصروف رواتب <b>$5,000</b> صار وما انصرف للموظفين.
+      <bdi>Step 1</bdi>: <bdi>Salaries Payable</bdi> = <b>$0</b> · <bdi>Step 2</bdi>: المفروض = <b>$5,000</b> (ما انسجّل) · <bdi>Step 3</bdi>:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Salaries Expense</td><td class="mono" style="text-align:right">5,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Salaries Payable</td><td></td><td class="mono" style="text-align:right">5,000</td></tr>
+        <tr><td></td><td><i>Record accrued salaries expense.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: مصروف زاد بالمدين، والتزام زاد بالدائن.</p>
+      <p><b>2. <bdi>Interest Payable</bdi>:</b> الشركة عليها <bdi>mortgage payable</bdi> (قرض رهن عقاري) صار عليه <b>$1,000</b> فوائد سنوية ما انسجّلت ولا اندفعت،
+      وبتدفعها 3 يناير السنة الجاية. <bdi>Step 1</bdi>: <bdi>Interest Payable</bdi> = <b>$0</b> · <bdi>Step 2</bdi>: المفروض = <b>$1,000</b> · <bdi>Step 3</bdi>:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Interest Expense</td><td class="mono" style="text-align:right">1,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Interest Payable</td><td></td><td class="mono" style="text-align:right">1,000</td></tr>
+        <tr><td></td><td><i>Record interest incurred but not yet paid.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: الفايدة صارت في هذي السنة، فمصروفها هذي السنة (مدين) والدين عليها التزام (دائن) — حتى لو الدفع بعد ثلاث أيام بس.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Companies accrue interest expense on notes payable (loans) and other long-term liabilities at the end of a period. Interest expense is
+      incurred as time passes. Unless interest is paid on the last day of an accounting period, we need to adjust for interest expense incurred
+      but not yet paid. This means we must accrue interest cost from the most recent payment date up to the end of the period. The formula for
+      computing accrued interest is</p>
+      <p style="text-align:center;font-weight:700">Principal amount owed × Annual interest rate × Fraction of year since last payment</p>
+      <p>Interest computations use a 360-day year, called the bankers’ rule.</p>
+      <p>Accrued expenses at the end of one accounting period result in cash payment in a future period(s).</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>لا تنسى الكسر:</b> الفايدة السنوية كاملة (في المثال <span class="mono" dir="ltr">6,000 × 0.05 = 300</span>) مو هي المستحقة. المستحق = جزء السنة
+            من آخر دفعة بس (<b>$25</b> لـ30 يوم).</li>
+        <li><b>360 مو 365:</b> <bdi>bankers’ rule</bdi>. اختيار رقمه بكسور غريبة (محسوب على 365) = فخ.</li>
+        <li>البداية = <b>آخر تاريخ دفع</b> للفايدة، مو تاريخ أخذ القرض دايماً.</li>
+        <li><b>يوم الدفع (<bdi>Jan. 9</bdi>):</b> لا تسجّل الـ700 كلها مصروف — 210 منها انسجّلت مصروف في ديسمبر، ولو سجلتها مرة ثانية يصير المصروف
+            <b>مكرر</b>. القيد <b>مركّب</b>: <bdi>Salaries Payable</bdi> 210 + <bdi>Salaries Expense</bdi> 490، دائن <bdi>Cash</bdi> 700.</li>
+        <li>وغلط ثاني: «مدين <bdi>Salaries Payable</bdi> 700» — الالتزام كان 210 بس.</li>
+        <li>الـ7 أيام في يناير تشمل عطلة رأس السنة — الكتاب يحسبها ضمن أيام الشغل المدفوعة.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · Accrued revenues -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">📥</div>
+    <div class="term">Accrued Revenues</div>
+    <div class="ar">الإيرادات المستحقة</div>
+    <div class="say">خلّصت جزء من الشغل، والعميل لسا ما دفع ولا جاته فاتورة</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Accrued revenues</bdi></b> = إيرادات <b>انكسبت</b> في الفترة، و<b>ما انسجّلت</b> و<b>ما انقبضت</b>. التسوية:
+      <b>مدين الأصل (<bdi>receivable</bdi>)، دائن الإيراد</b> — والاثنين يزيدون.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>فنّي يركّب سقف ويقول: «ادفع لي لما أخلّص». خلّص ثلثه آخر السنة؟ ثلث الفاتورة إيراد هذي السنة، حتى لو ما كتب فاتورة.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — التعريف والإطار</span>
+      <p>الكتاب يعرّفها: إيرادات <mark class="k"><b>انكسبت</b> في فترة، وهي <b>ما انسجّلت</b> و<b>ما انقبضت نقداً</b> (أو بأصول ثانية)</mark>.
+      <b>مثال الكتاب:</b> فنّي يرسل الفاتورة للعميل <b>بعد</b> ما يخلّص الشغل. لو خلّص <b>ثلث</b> الشغل بنهاية الفترة، لازم يسجّل <b>ثلث</b> الفاتورة المتوقعة
+      كإيراد في هذي الفترة — مع إن ما فيه لا فاتورة ولا تحصيل. واسمها الثاني <b><bdi>accrued assets</bdi></b> (أصول مستحقة).</p>
+      <p><b>الإطار:</b> قيد التسوية <b>يزيد حساب إيراد</b> (قائمة الدخل) و<b>يزيد حساب أصل</b> (الميزانية) — <bdi>Exhibit 3.11</bdi>.
+      والإيرادات المستحقة تجي عادةً من <b>أربعة</b> مصادر: <bdi>services</bdi> (خدمات)، <bdi>products</bdi> (منتجات)، <bdi>interest</bdi> (فوائد)، <bdi>rent</bdi> (إيجار).
+      والكتاب يشرح بمثالين: <b>الخدمات</b> و<b>الفوائد</b>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.11 — Adjusting for Accrued Revenues (increase asset and increase revenue)</div>
+        <img src="../img/acct203/exhibit-3-11.png" alt="Exhibit 3.11 shows two T-accounts, Asset on the left and Revenue on the right, each labeled Increase; a yellow box reading Dr. Asset and Cr. Revenue has one arrow going up into the debit side of Asset and another arrow going up into the credit side of Revenue." loading="lazy">
+        <p class="excap">نفس شكل <bdi>Exhibit 3.9</bdi> بالضبط، بس الحسابين تغيّروا: <b><bdi>Asset</bdi></b> يسار و<b><bdi>Revenue</bdi></b> يمين، وفوق كل واحد
+        <b><bdi>Increase</bdi></b>. القيد: <bdi>Dr. Asset… #</bdi> و<bdi>Cr. Revenue… #</bdi>. <b>كيف تقرأه:</b> الأصل يزيد بالمدين والإيراد يزيد بالدائن.
+        <b>قارن:</b> في 3.9 المصروف هو المدين والالتزام الدائن؛ هنا الأصل المدين والإيراد الدائن.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — إيراد خدمات مستحق (<bdi>Accrued Services Revenue</bdi>)</span>
+      <p>الإيرادات المستحقة تنسجّل لما تنعمل قيود التسوية <b>آخر الفترة</b>. وهي مكسوبة بس ما انسجّلت لسببين — <b>يا</b> المشتري ما دفع،
+      <b>يا</b> البايع ما أرسل له فاتورة (<bdi>billed</bdi>).</p>
+      <table>
+        <tr><th>الخطوة</th><th>في مثال <bdi>FastForward</bdi></th></tr>
+        <tr><td><b>Step 1</b></td>
+            <td>في الأسبوع الثاني من ديسمبر، اتفقت <bdi>FastForward</bdi> تقدّم <b>30 يوم</b> خدمات استشارية لنادي رياضي (<bdi>fitness club</bdi>)
+                بمبلغ ثابت <b>$2,700</b> (يعني <b>$90</b> لليوم)، من <b>12 ديسمبر</b> لين <b>10 يناير</b>. والنادي يدفع الـ$2,700 كلها في <b>10 يناير</b>
+                لما تخلص الخدمة. يعني الرصيد الحين: <bdi>Accounts Receivable</bdi> (الذمم المدينة) = <b>$0</b>.</td></tr>
+        <tr><td><b>Step 2</b></td>
+            <td>في 31 ديسمبر، <b>20 يوم</b> خدمة انقدمت. الخدمة ما خلصت كلها، فالشركة لا أرسلت فاتورة ولا سجّلت شي. بس كسبت <b>ثلثين</b> المبلغ:
+                <span class="mono" dir="ltr">$2,700 × 20 ∕ 30 = $1,800</span>. ومبدأ الاعتراف بالإيراد (<bdi>revenue recognition principle</bdi>) يلزمك تعرض الـ$1,800 في قائمة دخل
+                ديسمبر، والميزانية تعرض إن النادي مديون لـ<bdi>FastForward</bdi> بـ<b>$1,800</b>.</td></tr>
+        <tr><td><b>Step 3</b></td><td>قيد التسوية ↓</td></tr>
+      </table>
+
+      <div class="exhibit">
+        <div class="exlbl">Accrued Revenues — Dec. 31 and Jan. 10</div>
+        <img class="tall" src="../img/acct203/ch03-wil28773_un0311.png" alt="An illustration titled Accrued Revenues: on December 31, record revenue and receivable for services provided but unbilled; a picture of two workers fixing a roof, one saying Pay me when I'm done; on January 10, receive cash and reduce receivable." loading="lazy">
+        <p class="excap">رسمة عنوانها <bdi>Accrued Revenues</bdi>: فوق <b><bdi>Dec. 31</bdi></b> = سجّل الإيراد والذمة المدينة عن خدمات انقدمت وما لها فاتورة. في النص عمّال
+        يركّبون سقف وواحد يقول <bdi>Pay me when I'm done</bdi> (ادفع لي لما أخلّص). تحت <b><bdi>Jan. 10</bdi></b> = استلم النقد وخفّض الذمة. <b>كيف تقرأه:</b> خطوتين بالترتيب —
+        تسوية في ديسمبر، وتحصيل في يناير.</p>
+      </div>
+
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td><b>Adjustment (f)</b> — Accounts Receivable</td><td class="mono" style="text-align:right">1,800</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Consulting Revenue</td><td></td><td class="mono" style="text-align:right">1,800</td></tr>
+        <tr><td></td><td><i>Record 20 days’ accrued revenue.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Accounts Receivable</bdi> (الذمم المدينة، أصل) زاد ← بالمدين؛ و<bdi>Consulting Revenue</bdi> زاد ← الإيراد يزيد بالدائن.
+      أثرها: <span class="mono" dir="ltr">Assets <span class="pos">+1,800</span> = Liabilities + Equity <span class="pos">+1,800</span></span>. وبرضو <b>ما فيه نقد</b>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Adjustment (f) — journal entry and T-account postings</div>
+        <img src="../img/acct203/ch03-wil28773_un0312.png" alt="Adjustment (f) dated December 31 debits Accounts Receivable 1,800 and credits Consulting Revenue 1,800 to record 20 days' accrued revenue; the Accounts Receivable T-account, number 106, shows a December 12 debit of 1,900, a December 22 credit of 1,900 and a December 31 debit of 1,800 for a balance of 1,800, and the Consulting Revenue T-account, number 403, shows credits of 4,200 on December 5, 1,600 on December 12, 250 on December 31 and 1,800 on December 31 for a balance of 7,850." loading="lazy">
+        <p class="excap">فوق القيد <b>Adjustment (f)</b>، وتحته الحسابين بعد الترحيل (الأحمر = التسوية):</p>
+        <table dir="ltr">
+          <tr><th colspan="2" style="text-align:center">Accounts Receivable · 106</th></tr>
+          <tr><th>Debit</th><th>Credit</th></tr>
+          <tr><td class="mono">Dec. 12 &nbsp; 1,900</td><td class="mono">Dec. 22 &nbsp; 1,900</td></tr>
+          <tr><td class="mono">Dec. 31 &nbsp; 1,800</td><td></td></tr>
+          <tr><td class="mono"><b>Balance &nbsp; 1,800</b></td><td></td></tr>
+        </table>
+        <br>
+        <table dir="ltr">
+          <tr><th colspan="2" style="text-align:center">Consulting Revenue · 403</th></tr>
+          <tr><th>Debit</th><th>Credit</th></tr>
+          <tr><td></td><td class="mono">Dec. 5 &nbsp; 4,200</td></tr>
+          <tr><td></td><td class="mono">Dec. 12 &nbsp; 1,600</td></tr>
+          <tr><td></td><td class="mono">Dec. 31 &nbsp; 250</td></tr>
+          <tr><td></td><td class="mono">Dec. 31 &nbsp; 1,800</td></tr>
+          <tr><td></td><td class="mono"><b>Balance &nbsp; 7,850</b></td></tr>
+        </table>
+        <p class="excap"><b>تشييك:</b> <span class="mono" dir="ltr">1,900 − 1,900 + 1,800 = 1,800</span> ✓ و<span class="mono" dir="ltr">4,200 + 1,600 + 250 + 1,800 = 7,850</span> ✓.
+        الـ250 = تسوية (d) من الدرس اللي قبل (الإيراد غير المكتسب)، يعني الحساب هذا عليه <b>تسويتين</b>.</p>
+      </div>
+
+      <p><b>بعد التسوية:</b> <bdi>Accounts receivable</bdi> تنعرض في الميزانية بـ<b>$1,800</b>، و<b>$7,850</b> مجموع <bdi>consulting revenue</bdi> ينعرض في قائمة الدخل:</p>
+      <table>
+        <tr><th>قبل التسوية</th><th>التسوية</th><th>بعد التسوية</th></tr>
+        <tr><td><bdi>Accounts Receivable</bdi> = <b>$0</b></td>
+            <td>زد 1,800 على <bdi>Accounts Receivable</bdi> وزد 1,800 على <bdi>Consulting Revenue</bdi></td>
+            <td><bdi>Accounts Receivable</bdi> = <b>$1,800</b></td></tr>
+        <tr><td>يعرض $0 من إيراد انكسب وما انقبض نقداً.</td>
+            <td>سجّل إيراد 20 يوم مكسوب، يعني 20/30 من العقد كامل.</td>
+            <td>يعرض $1,800 ذمم مدينة عن خدمات انقدمت.</td></tr>
+      </table>
+      <p style="background:var(--ok-soft);padding:12px 16px;border-radius:8px;font-weight:600">
+      <b>لو ما سوّيت التسوية</b> (<bdi>Exhibit 3.12</bdi>): الأصل <b>ناقص</b> (<bdi>asset understated</bdi>) والإيراد <b>ناقص</b>
+      (<bdi>revenue understated</bdi>) — بـ1,800 في مثالنا. والنتيجة: صافي الدخل يطلع <b>أقل</b> من الصح.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — فوائد مكسوبة (<bdi>Accrued Interest Revenue</bdi>) ويوم القبض</span>
+      <p><b>الفوائد:</b> لو الشركة ماسكة <bdi>notes receivable</bdi> (أوراق قبض) تعطيها فوائد، لازم تسوّي الحسابات وتسجّل الفايدة اللي <b>انكسبت وما انقبضت</b>.
+      القيد يشبه قيد الخدمات المستحقة: <mark class="k">مدين <bdi>Interest Receivable</bdi> (أصل)، دائن <bdi>Interest Revenue</bdi></mark>.</p>
+      <p><b>يوم القبض (<bdi>Future Cash Receipt of Accrued Revenues</bdi>):</b> الإيرادات المستحقة آخر فترة يجي بعدها <b>قبض نقدي في فترة جاية</b>.
+      لما <bdi>FastForward</bdi> تستلم <b>$2,700</b> في 10 يناير عن العقد كامل، تسجّل قيد يشيل الأصل المستحق (<bdi>accounts receivable</bdi>) ويسجّل إيراد يناير:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Jan. 10</td><td>Cash</td><td class="mono" style="text-align:right">2,700</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Accounts Receivable (20 days at $90 per day)</td><td></td><td class="mono" style="text-align:right">1,800</td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Consulting Revenue (10 days at $90 per day)</td><td></td><td class="mono" style="text-align:right">900</td></tr>
+        <tr><td></td><td><i>Received cash for accrued asset and recorded earned consulting revenue for January.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: النقد زاد ← مدين <b>$2,700</b>؛ الذمة المدينة انقفلت ← دائن <b>$1,800</b> (الأصل ينقص بالدائن)؛ وإيراد يناير ← دائن <b>$900</b>.
+      <b>تشييك:</b> <span class="mono" dir="ltr">1,800 + 900 = 2,700</span> ✓.
+      أثرها: <span class="mono" dir="ltr">Assets <span class="pos">+2,700</span> <span class="neg">−1,800</span> = Liabilities + Equity <span class="pos">+900</span></span>.</p>
+      <p><b>صندوق جانبي (<bdi>Analytics Insight</bdi>):</b> شركات زي <bdi>Microsoft</bdi> و<bdi>Subway</bdi> و<bdi>Expedia</bdi> تقبل <bdi>Bitcoin</bdi> (عملة رقمية) للدفع،
+      وقيمة البتكوين الوحدة كانت بين $500 و$20,000 في السنوات الأخيرة — فالشركة لازم نظامها المحاسبي يتعامل مع تغيّر القيمة السريع وهي تحدد سعر البيع.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">تطبيق الكتاب — <bdi>Need-To-Know 3-4</bdi></span>
+      <p>كل حالة لحالها، والتسوية في 31 ديسمبر:</p>
+      <p><b>1. <bdi>Accounts Receivable</bdi>:</b> آخر السنة الشركة خلّصت خدمات بـ<b>$1,000</b> لعميل، وما أرسلت له فاتورة.
+      <bdi>Step 1</bdi>: <bdi>Accounts Receivable</bdi> = <b>$0</b> · <bdi>Step 2</bdi>: المفروض = <b>$1,000</b> · <bdi>Step 3</bdi>:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Accounts Receivable</td><td class="mono" style="text-align:right">1,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Services Revenue</td><td></td><td class="mono" style="text-align:right">1,000</td></tr>
+        <tr><td></td><td><i>Record accrued revenue.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: أصل زاد بالمدين، وإيراد زاد بالدائن.</p>
+      <p><b>2. <bdi>Interest Receivable</bdi>:</b> آخر السنة الشركة كسبت <b>$500</b> فوائد من استثماراتها في سندات حكومية (<bdi>government bonds</bdi>) وما سجّلتها.
+      <bdi>Step 1</bdi>: <bdi>Interest Receivable</bdi> = <b>$0</b> · <bdi>Step 2</bdi>: المفروض = <b>$500</b> · <bdi>Step 3</bdi>:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Interest Receivable</td><td class="mono" style="text-align:right">500</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Interest Revenue</td><td></td><td class="mono" style="text-align:right">500</td></tr>
+        <tr><td></td><td><i>Record accrued interest.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Interest Receivable</bdi> أصل زاد بالمدين، و<bdi>Interest Revenue</bdi> إيراد زاد بالدائن.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Accrued revenues</b> are revenues earned in a period that are both unrecorded and not yet received in cash (or other assets). Accrued
+      revenues are also called accrued assets.</p>
+      <p>The adjusting entries for accrued revenues increase a revenue (income statement) account and increase an asset (balance sheet) account,
+      as shown in Exhibit 3.11. Accrued revenues usually come from services, products, interest, and rent.</p>
+      <p>These accrued revenues are earned but unrecorded because either the buyer has not yet paid or the seller has not yet billed the buyer.</p>
+      <p>If a company is holding notes receivable that produce interest revenue, we must adjust the accounts to record any earned and yet
+      uncollected interest revenue. Specifically, debit Interest Receivable (asset) and credit Interest Revenue.</p>
+      <p>Accrued revenues at the end of one accounting period result in cash receipts in a future period(s).</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>لا تخلطه مع الإيراد غير المكتسب:</b> <bdi>unearned revenue</bdi> (الفلوس جات <b>قبل</b>) = مدين <b>التزام</b>، دائن الإيراد.
+            <bdi>accrued revenue</bdi> (الفلوس تجي <b>بعد</b>) = مدين <b>أصل</b>، دائن الإيراد. الدائن نفسه، والفرق في المدين.</li>
+        <li>الإيراد ينسجّل <b>حتى لو ما فيه فاتورة ولا تحصيل</b> — الشرط إنه <b>انكسب</b>. اختيار يقول «ما يتسجّل لين ترسل الفاتورة» = غلط.</li>
+        <li><b>الكسر:</b> الأيام اللي انقدمت ÷ أيام العقد = <span class="mono" dir="ltr">20/30</span> → $1,800. الـ<span class="mono" dir="ltr">10/30</span> ($900) هي حصة <b>يناير</b>.</li>
+        <li><b>يوم القبض (<bdi>Jan. 10</bdi>):</b> الـ$2,700 مو كلها إيراد يناير — $1,800 انسجّلت إيراد في ديسمبر، فتنقفل من <bdi>Accounts Receivable</bdi>.
+            إيراد يناير <b>$900</b> بس. لو سجّلت 2,700 إيراد = الإيراد مكرر.</li>
+        <li>الأسماء الثانية تفضح الحساب الثاني في القيد: <bdi>accrued revenues</bdi> = <bdi>accrued <b>assets</b></bdi>؛ <bdi>accrued expenses</bdi> = <bdi>accrued <b>liabilities</b></bdi>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 · Links to financial statements: Exhibit 3.12 -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🗺️</div>
+    <div class="term">Summary of Adjustments — Links to Financial Statements</div>
+    <div class="ar">ملخّص التسويات الأربع وربطها بالقوائم</div>
+    <div class="say">خريطة وحدة: النقد قبل ولا بعد، وش القيد، ووش يخرب لو نسيت</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      كل قيد تسوية = حساب <b>قائمة دخل</b> (إيراد أو مصروف) + حساب <b>ميزانية</b> (أصل أو التزام)، و<b>ما يلمس <bdi>Cash</bdi> أبداً</b>.
+      المؤجّلات: النقد <b>قبل</b> الاعتراف؛ المستحقات: النقد <b>بعد</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>مؤجّل = تدفع اشتراك النادي قبل ما تروح. مستحق = تركب التاكسي وتدفع آخر المشوار.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — <bdi>Exhibit 3.12</bdi></span>
+      <p><bdi>Exhibit 3.12</bdi> يلخّص التسويات الأربع. وقاعدة الكتاب: <mark class="k">كل قيد تسوية يلمس حساب أو أكثر من قائمة الدخل (إيراد أو مصروف)
+      وحساب أو أكثر من الميزانية (أصل أو التزام)، <b>بس أبداً ما يلمس حساب <bdi>Cash</bdi></b></mark>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.12 — Summary of Adjustments</div>
+        <img src="../img/acct203/exhibit-3-12.png" alt="Exhibit 3.12 summarizes the four adjustments: Deferrals mean cash is paid or received before the expense or revenue is recognized, and Accruals mean cash is paid or received after; for deferral of expense the entry is Dr. Expense increase, Cr. Asset decrease, and before adjusting the expense is understated and the asset overstated; for deferral of revenue it is Dr. Liability decrease, Cr. Revenue increase, with the liability overstated and revenue understated; for accrued expense it is Dr. Expense increase, Cr. Liability increase, with the expense understated and liability understated; for accrued revenue it is Dr. Asset increase, Cr. Revenue increase, with the asset understated and revenue understated." loading="lazy">
+        <p class="excap">يسار مربعين: <b><bdi>Deferrals</bdi></b> ← <bdi>Paid (or received) cash <u>before</u> expense (or revenue) recognized</bdi>، و<b><bdi>Accruals</bdi></b> ←
+        نفس الجملة بس <bdi><u>after</u></bdi>. وبعدها ثلاث أعمدة: <bdi>Adjustments</bdi> (اسم التسوية) · <bdi>Adjusting Entry</bdi> (القيد) ·
+        <bdi>BEFORE Adjusting</bdi> (وش الغلط في القوائم <b>قبل</b> التسوية). جنب <bdi>Cr. Asset*</bdi> نجمة (*) = في الإهلاك الدائن يروح لـ
+        <bdi>Accumulated Depreciation</bdi> (حساب مقابل للأصل). وعند المؤجّلين علامة (†) = الجدول يفترض إن المصروف المؤجّل انسجّل <b>أصل</b> من البداية،
+        والإيراد المؤجّل انسجّل <b>التزام</b> من البداية. <b>وش يجي منه بالاختبار:</b> عمود <bdi>BEFORE Adjusting</bdi> — «لو الشركة نسيت التسوية الفلانية، وش اللي
+        <bdi>overstated</bdi> ووش اللي <bdi>understated</bdi>؟»</p>
+      </div>
+
+      <p><b>الجدول الكامل للتسويات الأربع</b> (من <bdi>Exhibit 3.12</bdi> + أمثلة <bdi>FastForward</bdi> في الدرسين):</p>
+      <div style="overflow-x:auto"><table style="min-width:600px">
+        <tr><th>التسوية</th><th>الوضع قبل التسوية</th><th>قيد التسوية</th><th>لو ما سوّيتها (<bdi>BEFORE Adjusting</bdi>)</th><th>مثال الكتاب</th></tr>
+        <tr><td><b><bdi>Deferral of expense</bdi></b><br>مصروفات مدفوعة مقدّماً (<bdi>prepaid</bdi>)</td>
+            <td>دفعت النقد <b>قبل</b> المصروف، وسجّلته أصل</td>
+            <td>Dr. Expense ↑<br>Cr. Asset* ↓</td>
+            <td>Expense <b>understated</b><br>Asset <b>overstated</b></td>
+            <td>(a) تأمين 100 · (b) مستلزمات 1,050 · (c) إهلاك 300</td></tr>
+        <tr><td><b><bdi>Deferral of revenue</bdi></b><br>إيراد مؤجّل (<bdi>unearned</bdi>)</td>
+            <td>قبضت النقد <b>قبل</b> الإيراد، وسجّلته التزام</td>
+            <td>Dr. Liability ↓<br>Cr. Revenue ↑</td>
+            <td>Liability <b>overstated</b><br>Revenue <b>understated</b></td>
+            <td>(d) إيراد استشارات غير مكتسب 250</td></tr>
+        <tr><td><b><bdi>Accrued expense</bdi></b><br>مصروف مستحق</td>
+            <td>المصروف صار والنقد يندفع <b>بعدين</b>؛ ما فيه أي قيد</td>
+            <td>Dr. Expense ↑<br>Cr. Liability ↑</td>
+            <td>Expense <b>understated</b><br>Liability <b>understated</b></td>
+            <td>(e) رواتب 210</td></tr>
+        <tr><td><b><bdi>Accrued revenue</bdi></b><br>إيراد مستحق</td>
+            <td>الإيراد انكسب والنقد ينقبض <b>بعدين</b>؛ ما فيه أي قيد</td>
+            <td>Dr. Asset ↑<br>Cr. Revenue ↑</td>
+            <td>Asset <b>understated</b><br>Revenue <b>understated</b></td>
+            <td>(f) إيراد استشارات 1,800</td></tr>
+      </table></div>
+      <p><b>نمط يحفظ لك العمود الأخير:</b> قبل التسوية، الإيراد أو المصروف <b>دايماً <bdi>understated</bdi></b> في الأربع. وحساب الميزانية: في <b>المؤجّلات <bdi>overstated</bdi></b>
+      (لسا فيه أصل أو التزام انتهى جزء منه)، وفي <b>المستحقات <bdi>understated</bdi></b> (الأصل أو الالتزام ما انسجّل أصلاً).</p>
+    </div>
+
+    <div class="blk"><span class="lbl">أخلاقيات القرار (<bdi>Decision Ethics</bdi>) — المدير المالي</span>
+      <p><b>الموقف:</b> آخر السنة، رئيس الشركة يطلب منك — وأنت المدير المالي (<bdi>financial officer</bdi>) — <b>ما تسجّل المصروفات المستحقة</b> لين السنة الجاية لأنها
+      بتندفع وقتها. ويطلب منك بعد تسجّل في مبيعات <b>هذي السنة</b> طلب شراء جديد من عميل، والبضاعة تنسلّم بعد نهاية السنة بأسبوعين. لو سويت اللي يقوله، الشركة
+      تعرض <b>صافي ربح بدل صافي خسارة</b>. وش تسوي؟</p>
+      <p><b>جواب الكتاب:</b> حذف المصروفات المستحقة وتسجيل الإيراد بدري <b>يخلّي</b> مستخدمي القوائم المالية <b>يفهمون غلط</b>. أول خطوة: تشرح للرئيس وش المطلوب محاسبياً.
+      ولو أصرّ، ممكن تكلّم المحامين وأي مراجعين (<bdi>auditors</bdi>) لهم علاقة.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Exhibit 3.12 summarizes the four adjustments. Each adjusting entry affects one or more income statement (revenue or expense) accounts
+      and one or more balance sheet (asset or liability) accounts, but never the Cash account.</p>
+      <p>Omitting accrued expenses and recognizing revenue early mislead financial statement users.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>«<bdi>never the Cash account</bdi>»:</b> أي اختيار لقيد تسوية فيه <bdi>Cash</bdi> = غلط مباشرة. النقد يظهر في قيد الدفع أو القبض بس (زي <bdi>Jan. 9</bdi> و<bdi>Jan. 10</bdi>).</li>
+        <li><bdi>Deferrals</bdi> = النقد <b><bdi>before</bdi></b>؛ <bdi>Accruals</bdi> = النقد <b><bdi>after</bdi></b>. الاختبار يقلب الكلمتين.</li>
+        <li>اقرأ السؤال: «<bdi>failed to record accrued salaries</bdi>» → <bdi>expenses understated, liabilities understated</bdi> (وصافي الدخل
+            <bdi>overstated</bdi>). «<bdi>failed to record accrued revenue</bdi>» → <bdi>assets understated, revenues understated</bdi>.</li>
+        <li>في الإهلاك (*) الدائن <bdi>Accumulated Depreciation</bdi>، مو <bdi>Equipment</bdi> نفسه.</li>
+        <li>علامة (†): لو المؤجّل انسجّل من البداية <b>مصروف أو إيراد</b> بدل أصل أو التزام، قيد التسوية يتغيّر — هذا موضوع <bdi>Appendix 3A</bdi>.</li>
+        <li><bdi>Decision Ethics</bdi>: الحل مو «أنفّذ عشان الرئيس» ولا «أستقيل فوراً» — الكتاب: اشرح المطلوب، ولو أصرّ كلّم المحامين والمراجعين.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 · Adjusted trial balance + preparing statements -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">📊</div>
+    <div class="term">Adjusted Trial Balance and Preparing Financial Statements</div>
+    <div class="ar">ميزان المراجعة المعدّل وإعداد القوائم المالية</div>
+    <div class="say">تجمع كل التسويات في جدول واحد، وكل رقم فيه يروح لقائمة وحدة</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Unadjusted trial balance</bdi></b> = الحسابات وأرصدتها <b>قبل</b> التسويات؛ <b><bdi>adjusted trial balance</bdi></b> = <b>بعد</b> ما تسجّل
+      التسويات وترحّلها. ومن المعدّل تطلّع القوائم بالترتيب: <b>الدخل ← الأرباح المحتجزة ← الميزانية</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>مطبخ: الميزان المعدّل هو المكونات جاهزة. تطبخ الدخل أول، صافيه يروح للأرباح المحتجزة، ورصيدها الأخير يروح للميزانية.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — ميزان المراجعة قبل وبعد التسوية (<bdi>Exhibit 3.13</bdi>)</span>
+      <p>تعريفين الكتاب:</p>
+      <ul>
+        <li><b><bdi>Unadjusted trial balance</bdi></b> (ميزان المراجعة قبل التسوية) = قائمة بالحسابات وأرصدتها <b>قبل</b> ما تنسجّل التسويات.</li>
+        <li><b><bdi>Adjusted trial balance</bdi></b> (ميزان المراجعة المعدّل) = قائمة بالحسابات وأرصدتها <mark class="k"><b>بعد</b> ما قيود التسوية تنسجّل
+            <b>وتترحّل</b> للأستاذ</mark>.</li>
+      </ul>
+      <p><bdi>Exhibit 3.13</bdi> يعرض الاثنين لـ<bdi>FastForward</bdi> في 31 ديسمبر 2021، وبينهم عمودين للتسويات. ترتيب الحسابات عادةً نفس ترتيب
+      دليل الحسابات (<bdi>chart of accounts</bdi>)، و<b>حسابات جديدة</b> تطلع عادةً من التسويات — في الجدول تشوفها برصيد 0 قبل التسوية
+      (زي <bdi>Salaries payable</bdi> و<bdi>Insurance expense</bdi>).</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.13 — Unadjusted and Adjusted Trial Balances</div>
+        <img src="../img/acct203/exhibit-3-13.png" alt="Exhibit 3.13 shows FastForward's trial balances at December 31, 2021, with account numbers and titles followed by three pairs of debit and credit columns: Unadjusted Trial Balance totaling 45,300 on each side, Adjustments lettered a through f totaling 3,710 on each side, and Adjusted Trial Balance totaling 47,610 on each side." loading="lazy">
+        <p class="excap">ثلاث أزواج أعمدة (مدين ودائن): <bdi>Unadjusted Trial Balance</bdi> · <bdi>Adjustments</bdi> · <bdi>Adjusted Trial Balance</bdi>. كل تسوية في النص
+        عليها <b>حرف</b> (a) لين (f) يربطها بقيدها. نفس الأرقام منقولة في الجدول تحت.</p>
+      </div>
+
+      <div class="exhibit"><table dir="ltr" style="min-width:640px">
+        <tr><th rowspan="2">Acct.</th><th rowspan="2">Account Title</th><th colspan="2">Unadjusted</th><th colspan="2">Adjustments</th><th colspan="2">Adjusted</th></tr>
+        <tr><th>Dr.</th><th>Cr.</th><th>Dr.</th><th>Cr.</th><th>Dr.</th><th>Cr.</th></tr>
+        <tr><td>101</td><td style="text-align:left">Cash</td><td class="mono" style="text-align:right;white-space:nowrap">4,275</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">4,275</td><td></td></tr>
+        <tr><td>106</td><td style="text-align:left">Accounts receivable</td><td class="mono" style="text-align:right;white-space:nowrap">0</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(f) 1,800</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">1,800</td><td></td></tr>
+        <tr><td>126</td><td style="text-align:left">Supplies</td><td class="mono" style="text-align:right;white-space:nowrap">9,720</td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(b) 1,050</td><td class="mono" style="text-align:right;white-space:nowrap">8,670</td><td></td></tr>
+        <tr><td>128</td><td style="text-align:left">Prepaid insurance</td><td class="mono" style="text-align:right;white-space:nowrap">2,400</td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(a) 100</td><td class="mono" style="text-align:right;white-space:nowrap">2,300</td><td></td></tr>
+        <tr><td>167</td><td style="text-align:left">Equipment</td><td class="mono" style="text-align:right;white-space:nowrap">26,000</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">26,000</td><td></td></tr>
+        <tr><td>168</td><td style="text-align:left">Accumulated depreciation—Equip.</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">0</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(c) 300</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">300</td></tr>
+        <tr><td>201</td><td style="text-align:left">Accounts payable</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">6,200</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">6,200</td></tr>
+        <tr><td>209</td><td style="text-align:left">Salaries payable</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">0</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(e) 210</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">210</td></tr>
+        <tr><td>236</td><td style="text-align:left">Unearned consulting revenue</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">3,000</td><td class="mono" style="text-align:right;white-space:nowrap">(d) 250</td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">2,750</td></tr>
+        <tr><td>307</td><td style="text-align:left">Common stock</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">30,000</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">30,000</td></tr>
+        <tr><td>318</td><td style="text-align:left">Retained earnings</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">0</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">0</td></tr>
+        <tr><td>319</td><td style="text-align:left">Dividends</td><td class="mono" style="text-align:right;white-space:nowrap">200</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">200</td><td></td></tr>
+        <tr><td>403</td><td style="text-align:left">Consulting revenue</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">5,800</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(d) 250<br>(f) 1,800</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">7,850</td></tr>
+        <tr><td>406</td><td style="text-align:left">Rental revenue</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">300</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">300</td></tr>
+        <tr><td>612</td><td style="text-align:left">Depreciation expense—Equip.</td><td class="mono" style="text-align:right;white-space:nowrap">0</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(c) 300</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">300</td><td></td></tr>
+        <tr><td>622</td><td style="text-align:left">Salaries expense</td><td class="mono" style="text-align:right;white-space:nowrap">1,400</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(e) 210</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">1,610</td><td></td></tr>
+        <tr><td>637</td><td style="text-align:left">Insurance expense</td><td class="mono" style="text-align:right;white-space:nowrap">0</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(a) 100</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">100</td><td></td></tr>
+        <tr><td>640</td><td style="text-align:left">Rent expense</td><td class="mono" style="text-align:right;white-space:nowrap">1,000</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">1,000</td><td></td></tr>
+        <tr><td>652</td><td style="text-align:left">Supplies expense</td><td class="mono" style="text-align:right;white-space:nowrap">0</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">(b) 1,050</td><td></td><td class="mono" style="text-align:right;white-space:nowrap">1,050</td><td></td></tr>
+        <tr><td>690</td><td style="text-align:left">Utilities expense</td><td class="mono" style="text-align:right;white-space:nowrap">305</td><td></td><td></td><td></td><td class="mono" style="text-align:right;white-space:nowrap">305</td><td></td></tr>
+        <tr><td></td><td style="text-align:left"><b>Totals</b></td><td class="mono" style="text-align:right;white-space:nowrap"><b>$45,300</b></td><td class="mono" style="text-align:right;white-space:nowrap"><b>$45,300</b></td><td class="mono" style="text-align:right;white-space:nowrap"><b>$3,710</b></td><td class="mono" style="text-align:right;white-space:nowrap"><b>$3,710</b></td><td class="mono" style="text-align:right;white-space:nowrap"><b>$47,610</b></td><td class="mono" style="text-align:right;white-space:nowrap"><b>$47,610</b></td></tr>
+      </table></div>
+
+      <p><b>الحروف الست = التسويات الست</b> (أربعة أنواع):</p>
+      <table>
+        <tr><th>الحرف</th><th>القيد</th><th>المبلغ</th><th>النوع</th></tr>
+        <tr><td>(a)</td><td><bdi>Insurance expense</bdi> / <bdi>Prepaid insurance</bdi></td><td class="mono">100</td><td>مصروف مؤجّل (القسم 2)</td></tr>
+        <tr><td>(b)</td><td><bdi>Supplies expense</bdi> / <bdi>Supplies</bdi></td><td class="mono">1,050</td><td>مصروف مؤجّل (القسم 2)</td></tr>
+        <tr><td>(c)</td><td><bdi>Depreciation expense—Equip.</bdi> / <bdi>Accumulated depreciation—Equip.</bdi></td><td class="mono">300</td><td>مصروف مؤجّل — إهلاك (القسم 2)</td></tr>
+        <tr><td>(d)</td><td><bdi>Unearned consulting revenue</bdi> / <bdi>Consulting revenue</bdi></td><td class="mono">250</td><td>إيراد مؤجّل (القسم 2)</td></tr>
+        <tr><td>(e)</td><td><bdi>Salaries expense</bdi> / <bdi>Salaries payable</bdi></td><td class="mono">210</td><td>مصروف مستحق (هذا الدرس)</td></tr>
+        <tr><td>(f)</td><td><bdi>Accounts receivable</bdi> / <bdi>Consulting revenue</bdi></td><td class="mono">1,800</td><td>إيراد مستحق (هذا الدرس)</td></tr>
+        <tr><td colspan="2"><b>المجموع</b> (مدين = دائن)</td><td class="mono"><b>3,710</b></td><td><span class="mono" dir="ltr">100 + 1,050 + 300 + 250 + 210 + 1,800</span></td></tr>
+      </table>
+      <p><b>كيف ينحسب كل رقم في العمودين الأخيرين؟</b> تاخذ رصيد الحساب من <bdi>Unadjusted</bdi> و<mark class="k"><b>تزيد أو تنقص</b> التسويات</mark>.
+      مثال الكتاب: <bdi>Supplies</bdi> رصيده <b>$9,720 مدين</b> قبل، تطرح منه <b>$1,050 دائن</b> في التسويات = <b>$8,670 مدين</b> بعد.
+      والحساب ممكن عليه <b>أكثر من تسوية</b> — زي <bdi>Consulting Revenue</bdi>: <span class="mono" dir="ltr">5,800 + 250 + 1,800 = 7,850</span>.
+      وبعض الحسابات <b>ما تحتاج تسوية</b> أصلاً هذي الفترة — زي الذمم الدائنة (<bdi>Accounts Payable</bdi>): 6,200 قبل وبعد.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — إعداد القوائم من الميزان المعدّل (<bdi>Exhibit 3.14</bdi>)</span>
+      <p>نقدر نطلّع القوائم المالية <b>مباشرة</b> من معلومات <bdi>adjusted trial balance</bdi>. <bdi>Exhibit 3.14</bdi> يوضّح الانتقال بخطوط ملوّنة:</p>
+      <ul>
+        <li><b>الخطوط الحمرا:</b> أرصدة الإيرادات والمصروفات ← <bdi>income statement</bdi> (قائمة الدخل).</li>
+        <li><b>الخطوط الخضرا:</b> صافي الدخل والتوزيعات (<bdi>dividends</bdi>) ← <bdi>statement of retained earnings</bdi> (قائمة الأرباح المحتجزة).</li>
+        <li><b>الخطوط الزرقا:</b> أرصدة الأصول والالتزامات ← <bdi>balance sheet</bdi> (الميزانية).</li>
+        <li><b>الخط الوردي</b> (في الصورة يطلع أحمر غامق، من $3,585 لـ<bdi>Retained earnings</bdi> في الميزانية): الأرباح المحتجزة آخر الفترة (تنحسب في قائمة الأرباح المحتجزة) ← الميزانية.</li>
+      </ul>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.14 — Preparing Financial Statements</div>
+        <img class="tall" src="../img/acct203/exhibit-3-14.png" alt="Exhibit 3.14 shows FastForward's adjusted trial balance at December 31, 2021, totaling 47,610, with colored lines carrying revenues and expenses to the income statement, which shows total revenues of 8,150, total expenses of 4,365 and net income of 3,785; net income and dividends of 200 go to the statement of retained earnings, which ends at 3,585; assets, liabilities and common stock go to the balance sheet, which shows total assets of 42,745, total liabilities of 9,160, total equity of 33,585 and total liabilities and equity of 42,745; four boxes list the steps: income statement, statement of retained earnings, balance sheet, and statement of cash flows illustrated later in the book." loading="lazy">
+        <p class="excap">يمين فوق: <bdi>Adjusted Trial Balance</bdi> نفسه (مجموعه <b>$47,610</b>). يسار فوق: <b>أربع خطوات</b> —
+        <b><bdi>Step 1</bdi></b> قائمة الدخل من حسابات الإيرادات والمصروفات · <b><bdi>Step 2</bdi></b> قائمة الأرباح المحتجزة من <bdi>retained earnings</bdi> و<bdi>dividends</bdi> في الميزان،
+        مع صافي الدخل من الخطوة 1 · <b><bdi>Step 3</bdi></b> الميزانية من الأصول والالتزامات والأسهم العادية (<bdi>common stock</bdi>)، مع الأرباح المحتجزة المحدّثة من الخطوة 2 ·
+        <b><bdi>Step 4</bdi></b> قائمة التدفقات النقدية من تغيّرات النقد (<bdi>illustrated later in the book</bdi> — بعدين في الكتاب). وتحت القوائم الثلاث بأرقامها (منقولة تحت).</p>
+      </div>
+
+      <div class="stmt">
+        <div class="hd">FASTFORWARD<br>Income Statement<br>For Month Ended December 31, 2021</div>
+        <table>
+          <tr><td colspan="3"><b>Revenues</b></td></tr>
+          <tr><td class="ind">Consulting revenue</td><td class="n">$7,850</td><td></td></tr>
+          <tr class="sub"><td class="ind">Rental revenue</td><td class="n">300</td><td></td></tr>
+          <tr><td class="ind">Total revenues</td><td></td><td class="n">$8,150</td></tr>
+          <tr><td colspan="3"><b>Expenses</b></td></tr>
+          <tr><td class="ind">Depreciation expense—Equipment</td><td class="n">300</td><td></td></tr>
+          <tr><td class="ind">Salaries expense</td><td class="n">1,610</td><td></td></tr>
+          <tr><td class="ind">Insurance expense</td><td class="n">100</td><td></td></tr>
+          <tr><td class="ind">Rent expense</td><td class="n">1,000</td><td></td></tr>
+          <tr><td class="ind">Supplies expense</td><td class="n">1,050</td><td></td></tr>
+          <tr class="sub"><td class="ind">Utilities expense</td><td class="n">305</td><td></td></tr>
+          <tr><td class="ind">Total expenses</td><td></td><td class="n">4,365</td></tr>
+          <tr class="tot"><td><b>Net income</b></td><td></td><td class="n">$3,785</td></tr>
+        </table>
+      </div>
+      <p><b>تشييك:</b> <span class="mono" dir="ltr">7,850 + 300 = 8,150</span> ✓ ·
+      <span class="mono" dir="ltr">300 + 1,610 + 100 + 1,000 + 1,050 + 305 = 4,365</span> ✓ ·
+      <span class="mono" dir="ltr">8,150 − 4,365 = 3,785</span> ✓.</p>
+
+      <div class="stmt">
+        <div class="hd">FASTFORWARD<br>Statement of Retained Earnings<br>For Month Ended December 31, 2021</div>
+        <table>
+          <tr><td>Retained earnings, December 1</td><td class="n">$&nbsp;&nbsp;&nbsp;&nbsp;0</td></tr>
+          <tr class="sub"><td>Add: Net income</td><td class="n">3,785</td></tr>
+          <tr><td></td><td class="n">3,785</td></tr>
+          <tr class="sub"><td>Less: Dividends</td><td class="n">200</td></tr>
+          <tr class="tot"><td><b>Retained earnings, December 31</b></td><td class="n">$3,585</td></tr>
+        </table>
+      </div>
+      <p><b>تشييك:</b> <span class="mono" dir="ltr">0 + 3,785 − 200 = 3,585</span> ✓. الـ0 هو رصيد <bdi>Retained earnings</bdi> في الميزان المعدّل (بداية الشهر).</p>
+
+      <div class="stmt">
+        <div class="hd">FASTFORWARD<br>Balance Sheet<br>December 31, 2021</div>
+        <table>
+          <tr><td colspan="3"><b>Assets</b></td></tr>
+          <tr><td class="ind">Cash</td><td></td><td class="n">$4,275</td></tr>
+          <tr><td class="ind">Accounts receivable</td><td></td><td class="n">1,800</td></tr>
+          <tr><td class="ind">Supplies</td><td></td><td class="n">8,670</td></tr>
+          <tr><td class="ind">Prepaid insurance</td><td></td><td class="n">2,300</td></tr>
+          <tr><td class="ind">Equipment</td><td class="n">$26,000</td><td></td></tr>
+          <tr class="sub"><td class="ind">Less accumulated depreciation</td><td class="n">300</td><td class="n">25,700</td></tr>
+          <tr class="tot"><td><b>Total assets</b></td><td></td><td class="n">$42,745</td></tr>
+          <tr><td colspan="3"><b>Liabilities</b></td></tr>
+          <tr><td class="ind">Accounts payable</td><td></td><td class="n">$6,200</td></tr>
+          <tr><td class="ind">Salaries payable</td><td></td><td class="n">210</td></tr>
+          <tr class="sub"><td class="ind">Unearned consulting revenue</td><td></td><td class="n">2,750</td></tr>
+          <tr><td class="ind">Total liabilities</td><td></td><td class="n">9,160</td></tr>
+          <tr><td colspan="3"><b>Equity</b></td></tr>
+          <tr><td class="ind">Common stock</td><td></td><td class="n">30,000</td></tr>
+          <tr class="sub"><td class="ind">Retained earnings</td><td></td><td class="n">3,585</td></tr>
+          <tr><td class="ind">Total equity</td><td></td><td class="n">33,585</td></tr>
+          <tr class="tot"><td><b>Total liabilities and equity</b></td><td></td><td class="n">$42,745</td></tr>
+        </table>
+      </div>
+      <p><b>تشييك:</b> الأصول <span class="mono" dir="ltr">4,275 + 1,800 + 8,670 + 2,300 + 25,700 = 42,745</span> ✓ ·
+      الالتزامات <span class="mono" dir="ltr">6,200 + 210 + 2,750 = 9,160</span> ✓ · حقوق الملكية <span class="mono" dir="ltr">30,000 + 3,585 = 33,585</span> ✓ ·
+      <span class="mono" dir="ltr">9,160 + 33,585 = 42,745</span> = الأصول ✓. شف كيف أرقام التسويات كلها ظهرت: 1,800 ذمم، 210 رواتب مستحقة، 2,750 غير مكتسب، 25,700 صافي المعدات.</p>
+
+      <p><b>الترتيب:</b> نطلّع القوائم كذا: <mark class="k">(1) <bdi>income statement</bdi>، (2) <bdi>statement of retained earnings</bdi>، (3) <bdi>balance sheet</bdi></mark>.
+      الترتيب منطقي لأن الميزانية تاخذ من قائمة الأرباح المحتجزة، وقائمة الأرباح المحتجزة تاخذ من قائمة الدخل. و<bdi>statement of cash flows</bdi> (قائمة
+      التدفقات النقدية) عادةً <b>آخر وحدة</b> تنعمل.</p>
+      <p><b>ملاحظة الكتاب (<bdi>Point</bdi>):</b> كل رقم في ميزان المراجعة <b>ينستخدم في قائمة وحدة بس</b>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">تطبيق الكتاب — <bdi>Need-To-Know 3-5</bdi> (<bdi>Magic Company</bdi>)</span>
+      <p>المطلوب: من الميزان المعدّل لـ<bdi>Magic Company</bdi> في 31 ديسمبر، طلّع (1) قائمة الدخل، (2) قائمة الأرباح المحتجزة، (3) ميزانية غير مصنّفة
+      (<bdi>unclassified</bdi>). رصيد <bdi>Retained Earnings</bdi> كان <b>$45,000</b> في 31 ديسمبر السنة اللي قبل.</p>
+      <div class="exhibit">
+        <div class="exlbl">Need-To-Know 3-5 — Preparing Financial Statements from a Trial Balance</div>
+        <img class="tall" src="../img/acct203/ch03-wil28773_need-to-kno030501.png" alt="Need-To-Know 3-5 shows Magic Company's adjusted trial balance at December 31, totaling 199,000 on each side, with arrows to the solution: an income statement with services revenue of 79,000, total expenses of 64,000 and net income of 15,000; a statement of retained earnings going from 45,000 plus 15,000 less dividends of 20,000 to 40,000; and a balance sheet with total assets of 115,000, total liabilities of 45,000, total equity of 70,000 and total liabilities and equity of 115,000." loading="lazy">
+        <p class="excap">فوق الميزان المعدّل: مدين <b>$199,000</b> = دائن <b>$199,000</b>. وتحته الحل بثلاث خطوات والأسهم الملوّنة توريك وين يروح كل حساب.</p>
+      </div>
+      <table>
+        <tr><th>الخطوة</th><th>الحساب</th><th>النتيجة</th></tr>
+        <tr><td><b>1</b> قائمة الدخل</td>
+            <td><bdi>Services revenue</bdi> 79,000 − (<bdi>Salaries expense</bdi> 56,000 + <bdi>Supplies expense</bdi> 8,000 = 64,000)</td>
+            <td><bdi>Net income</bdi> = <b>$15,000</b></td></tr>
+        <tr><td><b>2</b> الأرباح المحتجزة</td>
+            <td><span class="mono" dir="ltr">45,000 + 15,000 = 60,000</span> وبعدين <span class="mono" dir="ltr">60,000 − 20,000</span> (<bdi>Dividends</bdi>)</td>
+            <td>آخر السنة = <b>$40,000</b></td></tr>
+        <tr><td><b>3</b> الميزانية</td>
+            <td>أصول: <span class="mono" dir="ltr">13,000 + 17,000 + 85,000</span> (<bdi>Cash</bdi>، <bdi>Accounts receivable</bdi>، <bdi>Land</bdi>) ·
+                التزامات: <span class="mono" dir="ltr">12,000 + 33,000</span> (<bdi>Accounts payable</bdi>، <bdi>Long-term notes payable</bdi>) ·
+                حقوق ملكية: <span class="mono" dir="ltr">30,000 + 40,000</span></td>
+            <td>أصول <b>$115,000</b> = التزامات 45,000 + حقوق ملكية 70,000 = <b>$115,000</b> ✓</td></tr>
+      </table>
+      <p>يعني: الـ<b>$45,000</b> اللي في الميزان المعدّل هي الأرباح المحتجزة <b>أول السنة</b> — تروح لقائمة الأرباح المحتجزة، مو للميزانية. والميزانية تاخذ
+      <b>$40,000</b> (الرصيد الجديد).</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>An <b>unadjusted trial balance</b> is a list of accounts and balances before adjustments are recorded. An <b>adjusted trial balance</b> is a
+      list of accounts and balances after adjusting entries have been recorded and posted to the ledger.</p>
+      <p>Each amount in the Adjusted Trial Balance columns is computed by taking that account's amount from the Unadjusted Trial Balance columns and
+      adding or subtracting any adjustment(s).</p>
+      <p>We can prepare financial statements directly from information in the adjusted trial balance.</p>
+      <p>We prepare financial statements in the following order: (1) income statement, (2) statement of retained earnings, and (3) balance sheet. This
+      order makes sense because the balance sheet uses information from the statement of retained earnings, which in turn uses information from the
+      income statement. The statement of cash flows is usually the final statement prepared.</p>
+      <p>Each trial balance amount is used in only one financial statement.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b><bdi>Adjusted</bdi> = بعد التسجيل والترحيل.</b> اختيار يقول «<bdi>before adjustments are recorded</bdi>» يوصف <bdi>unadjusted</bdi>.</li>
+        <li><b>الترتيب:</b> دخل ← أرباح محتجزة ← ميزانية، والتدفقات النقدية آخر شي. اختيار يبدأ بالميزانية = غلط.</li>
+        <li><b>كل رقم في قائمة وحدة:</b> <bdi>Dividends</bdi> تروح لقائمة الأرباح المحتجزة — <b>مو</b> لقائمة الدخل (التوزيعات مو مصروف).
+            و<bdi>Accumulated depreciation</bdi> تروح للميزانية تنطرح من <bdi>Equipment</bdi>.</li>
+        <li><b>رصيد <bdi>Retained earnings</bdi> في الميزان = رصيد البداية</b> (0 عند <bdi>FastForward</bdi>، 45,000 عند <bdi>Magic</bdi>). الميزانية تعرض
+            الرصيد <b>الجديد</b> من قائمة الأرباح المحتجزة (3,585 و40,000).</li>
+        <li>مجموع الميزان المعدّل (47,610) <b>مو</b> مجموع الأصول (42,745) — الميزان فيه بعد إيرادات ومصروفات وتوزيعات، ومجمّع الإهلاك بجهة الدائن.</li>
+        <li><b>تسمية الكلاس:</b> بعض الملخصات تستخدم منشأة فردية (<bdi>sole proprietorship</bdi>): <bdi>Owner's Capital</bdi> بدل <bdi>Common Stock</bdi> والأرباح
+            المحتجزة، و<bdi>Owner's Withdrawals / Drawing</bdi> بدل <bdi>Dividends</bdi> — فتشوف «قائمة حقوق المالك» بدل قائمة الأرباح المحتجزة. نفس الفكرة ونفس
+            الترتيب ونفس قواعد المدين والدائن: <bdi>capital</bdi> بجهة <bdi>common stock</bdi>، و<bdi>withdrawals</bdi> بجهة <bdi>dividends</bdi>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">الأسئلة بالإنجليزي لأن الاختبار بالإنجليزي. جاوب قبل ما تفتح الحل. لو غلطت في ١ ارجع لمعادلة الفايدة، ولو غلطت في ٤ ارجع لجدول <bdi>Exhibit 3.12</bdi>.</p>
+
+<div class="q">
+  <div class="stem">1. A company has a $9,000 note payable at 8% annual interest. Interest was last paid on December 1, and no entry has been made since. Using a 360-day year, what accrued interest expense should the company record on December 31 (30 days later)?</div>
+  <ol type="A"><li>$720</li><li>$59.18</li><li>$60</li><li>$0, because the interest has not been paid yet</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. <span class="mono" dir="ltr">9,000 × 0.08 × 30/360 = 60</span>. الفخ في <b>A</b>: هذي الفايدة <b>السنوية</b> كاملة — نسى «جزء السنة من آخر دفعة».
+  و<b>B</b> محسوب على <b>365</b> يوم (<span class="mono" dir="ltr">720 × 30/365</span>) — والكتاب يستخدم سنة 360 (<bdi>bankers’ rule</bdi>). و<b>D</b> تفكير
+  الأساس النقدي: الفايدة <b>صارت</b> مع مرور الوقت، فتنسجّل حتى لو ما اندفعت.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. An employee earns $100 per day and is paid $1,000 every two weeks (10 working days). On December 31, the company correctly accrued 4 days of unpaid salary. On the next payday, January 8, it pays the employee $1,000. Which entry records the payment?</div>
+  <ol type="A">
+    <li>Debit Salaries Payable $400 and Salaries Expense $600; credit Cash $1,000</li>
+    <li>Debit Salaries Expense $1,000; credit Cash $1,000</li>
+    <li>Debit Salaries Payable $1,000; credit Cash $1,000</li>
+    <li>Debit Salaries Expense $400 and Salaries Payable $600; credit Cash $1,000</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>A</b>. الالتزام اللي انسجّل في 31 ديسمبر = <span class="mono" dir="ltr">4 × $100 = $400</span>، فيوم الدفع يقفله بالمدين، والباقي
+  <span class="mono" dir="ltr">1,000 − 400 = 600</span> مصروف الفترة الجديدة — نفس قيد الكتاب في 9 يناير (210 + 490 = 700). الفخ في <b>B</b>: يحسب الـ400 مصروف
+  <b>مرتين</b> (مرة في ديسمبر ومرة الحين). و<b>C</b> يقفل التزام 1,000 وهو كان 400 بس. و<b>D</b> قالب المبلغين.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. In December, a company agreed to provide 40 days of services for a fixed fee of $6,000, to be paid when the job is finished in January. By December 31, it has provided 10 days of services but has not billed the customer or recorded anything. The December 31 adjusting entry is:</div>
+  <ol type="A">
+    <li>Debit Unearned Services Revenue $1,500; credit Services Revenue $1,500</li>
+    <li>Debit Cash $1,500; credit Services Revenue $1,500</li>
+    <li>Debit Accounts Receivable $6,000; credit Services Revenue $6,000</li>
+    <li>Debit Accounts Receivable $1,500; credit Services Revenue $1,500</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>D</b>. إيراد مستحق: <span class="mono" dir="ltr">6,000 × 10/40 = 1,500</span> — مدين أصل (<bdi>Accounts Receivable</bdi>)، دائن إيراد. الفخ في <b>A</b>:
+  هذا قيد <b>الإيراد غير المكتسب</b> — والعميل ما دفع شي مقدّم، فما فيه التزام أصلاً. و<b>B</b> فيه <bdi>Cash</bdi>، وقيد التسوية <b>ما يلمس النقد أبداً</b>.
+  و<b>C</b> يسجّل العقد كامل وهو ما انكسب منه غير ربعه.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. According to Exhibit 3.12, if a company forgets to record $700 of interest earned on a note receivable that has not been collected yet, then before the error is corrected:</div>
+  <ol type="A">
+    <li>Assets are overstated and revenues are understated</li>
+    <li>Assets are understated and revenues are understated</li>
+    <li>Liabilities are understated and expenses are understated</li>
+    <li>There is no effect, because no cash has been received</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. هذا <bdi>accrued revenue</bdi>، وصفّه في عمود <bdi>BEFORE Adjusting</bdi> يقول: <bdi>Asset understated</bdi> و<bdi>Revenue understated</bdi>
+  (الـ<bdi>Interest Receivable</bdi> والـ<bdi>Interest Revenue</bdi> ما انسجّلوا). الفخ في <b>A</b>: <bdi>overstated</bdi> للأصل يجي في <b>المؤجّلات</b> (<bdi>deferral of expense</bdi>).
+  و<b>C</b> صف <b>المصروف المستحق</b>. و<b>D</b> تفكير نقدي — الإيراد انكسب، فلازم ينسجّل.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. Look at Exhibit 3.14. FastForward's adjusted trial balance shows Common stock of $30,000, Retained earnings of $0, and Dividends of $200, and its income statement shows net income of $3,785. What is total equity on the December 31, 2021, balance sheet?</div>
+  <ol type="A"><li>$30,000</li><li>$33,785</li><li>$42,745</li><li>$33,585</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>D</b>. الأرباح المحتجزة الجديدة <span class="mono" dir="ltr">0 + 3,785 − 200 = 3,585</span>، وحقوق الملكية
+  <span class="mono" dir="ltr">30,000 + 3,585 = 33,585</span> — نفس رقم <bdi>Total equity</bdi> في الشكل. الفخ في <b>A</b>: أخذ <bdi>Common stock</bdi> بس وكأن
+  الأرباح المحتجزة 0 زي الميزان. و<b>B</b> نسى يطرح <bdi>dividends</bdi>. و<b>C</b> هو <bdi>Total assets</bdi> (أو <bdi>Total liabilities and equity</bdi>)، مو حقوق الملكية.</p></details>
+</div>
+
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH3-S3">ابدأ</button> <button class="pill" data-deck="ACCT203-CH3-S3" data-mode="ar">عربي ← إنجليزي</button></div></div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Accrued expenses</bdi> / <bdi>accrued liabilities</bdi></td><td>مصروفات مستحقة / التزامات مستحقة</td><td>صارت + ما انصرفت + ما انسجّلت؛ مدين مصروف، دائن <b>التزام</b>؛ ما فيه نقد</td></tr>
+  <tr><td><bdi>Salaries Payable</bdi></td><td>رواتب مستحقة الدفع</td><td>التزام؛ <bdi>FastForward</bdi>: 3 أيام × $70 = $210</td></tr>
+  <tr><td><bdi>Accrued interest formula</bdi></td><td>معادلة الفايدة المستحقة</td><td><bdi>Principal × Annual rate × Fraction of year since last payment</bdi> — لا تنسى الكسر</td></tr>
+  <tr><td><bdi>Bankers’ rule</bdi></td><td>قاعدة البنوك</td><td>سنة <b>360</b> يوم، مو 365</td></tr>
+  <tr><td><bdi>Interest Expense</bdi> / <bdi>Interest Payable</bdi></td><td>مصروف فوائد / فوائد مستحقة الدفع</td><td>مدين المصروف، دائن الالتزام ($6,000 × 5% × 30/360 = $25)</td></tr>
+  <tr><td><bdi>Accrued revenues</bdi> / <bdi>accrued assets</bdi></td><td>إيرادات مستحقة / أصول مستحقة</td><td>انكسبت + ما انسجّلت + ما انقبضت؛ مدين <b>أصل</b>، دائن إيراد</td></tr>
+  <tr><td><bdi>Interest Receivable</bdi> / <bdi>Interest Revenue</bdi></td><td>فوائد مستحقة القبض / إيراد فوائد</td><td>من <bdi>notes receivable</bdi>؛ مدين الأصل، دائن الإيراد</td></tr>
+  <tr><td><bdi>Deferrals</bdi> / <bdi>Accruals</bdi></td><td>المؤجّلات / المستحقات</td><td>النقد <b>قبل</b> الاعتراف / النقد <b>بعد</b> الاعتراف</td></tr>
+  <tr><td><bdi>Never the Cash account</bdi></td><td>قيد التسوية ما يلمس النقد</td><td>النقد في قيد الدفع أو القبض بس (<bdi>Jan. 9</bdi> · <bdi>Jan. 10</bdi>)</td></tr>
+  <tr><td><bdi>Unadjusted trial balance</bdi></td><td>ميزان المراجعة قبل التسوية</td><td><b>قبل</b> تسجيل التسويات — FastForward: $45,300</td></tr>
+  <tr><td><bdi>Adjusted trial balance</bdi></td><td>ميزان المراجعة المعدّل</td><td><b>بعد</b> التسجيل <b>والترحيل</b> — FastForward: $47,610؛ منه تطلع القوائم</td></tr>
+  <tr><td><bdi>Order of financial statements</bdi></td><td>ترتيب القوائم المالية</td><td>دخل ← أرباح محتجزة ← ميزانية؛ التدفقات النقدية آخر شي</td></tr>
+  <tr><td><bdi>Exhibit 3.9 — Adjusting for Accrued Expenses</bdi></td><td>الشكل 3.9 — تسوية المصروفات المستحقة</td><td>مصروف يزيد + التزام يزيد</td></tr>
+  <tr><td><bdi>Exhibit 3.10 — Salary Accrual and Paydays</bdi></td><td>الشكل 3.10 — الرواتب المستحقة وأيام الدفع</td><td>أيام 29 و30 و31 ديسمبر؛ الدفع 9 يناير</td></tr>
+  <tr><td><bdi>Exhibit 3.11 — Adjusting for Accrued Revenues</bdi></td><td>الشكل 3.11 — تسوية الإيرادات المستحقة</td><td>أصل يزيد + إيراد يزيد</td></tr>
+  <tr><td><bdi>Exhibit 3.12 — Summary of Adjustments</bdi></td><td>الشكل 3.12 — ملخّص التسويات</td><td>قبل التسوية: الإيراد أو المصروف دايماً <bdi>understated</bdi></td></tr>
+  <tr><td><bdi>Exhibit 3.13 — Unadjusted and Adjusted Trial Balances</bdi></td><td>الشكل 3.13 — ميزان المراجعة قبل وبعد التسوية</td><td>تسويات (a)–(f) مجموعها 3,710</td></tr>
+  <tr><td><bdi>Exhibit 3.14 — Preparing Financial Statements</bdi></td><td>الشكل 3.14 — إعداد القوائم المالية</td><td>أحمر دخل · أخضر أرباح محتجزة · أزرق ميزانية · وردي الرصيد الأخير (في الصورة يطلع أحمر غامق)</td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب <bdi>Financial Accounting Fundamentals</bdi>، الطبعة الثامنة (<bdi>John J. Wild</bdi>، <bdi>McGraw Hill</bdi>) —
+<bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi>، أجزاء <bdi>Accrued Expense</bdi> و<bdi>Accrued Revenue</bdi> (ومعه <bdi>Links to Financial Statements</bdi>)
+و<bdi>Trial Balance and Financial Statements</bdi>، الأهداف <code>P3</code> و<code>P4</code> و<code>P5</code> (صفحات 92–99)، مع <bdi>Need-To-Know 3-3</bdi> و<bdi>3-4</bdi> و<bdi>3-5</bdi>
+وملخّص <bdi>Summary: Cheat Sheet</bdi>.
+<br><b>ملخّص بس:</b> صندوق <bdi>Analytics Insight</bdi> (البتكوين) انذكر بسطر؛ وصورة العملات والنباتات جنب معادلة الفوائد وصورة البتكوين زينة وما انحطّت.
+مسائل <bdi>Need-To-Know 3-8</bdi> و<bdi>3-9</bdi> الشاملة (تسويات وقوائم) مو هنا. أرقام الأسئلة الخمسة من عندي.
+<br><b>ملحق:</b> <bdi>Appendix 3B: Work Sheet as a Tool</bdi> (<code>P8</code>: ورقة عمل تجمع الميزان قبل التسوية والتسويات والميزان المعدّل والقوائم في جدول واحد) — ملحق، اسأل الدكتور إذا داخل.
+<br><b>ملحق:</b> <bdi>Appendix 3C: Reversing Entries</bdi> (<code>P9</code>: قيود عكسية أول يوم في الفترة الجديدة لتسويات المستحقات، زي رواتب الـ$210) — ملحق، اسأل الدكتور إذا داخل.
+</p>
+
+
+<div class="footnav">
+  <div class="side"><a class="pill" href="ACCT203-CH3-S2.html">→ ٢. تسويات المؤجّلات: المصروفات المدفوعة مقدّماً والإيرادات غير المكتسبة</a></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><a class="pill" href="ACCT203-CH3-S4.html">٤. الإقفال ودورة المحاسبة والميزانية المصنّفة ←</a></div>
+</div>
+</div>
+<script src="../data/cards-ACCT203-CH3-S3.js?v=7"></script>
+<script src="../assets/flashcards.js?v=7"></script>
+<script src="../assets/lesson.js?v=7"></script>
+</body>
+</html>

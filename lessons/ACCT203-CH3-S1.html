@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ٣: التوقيت والتقارير: أساس الاستحقاق</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/theme.css?v=7">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH3-S1-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH3-S1">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
+</div>
+<header class="lh">
+  <h1>الفصل الثالث — التوقيت والتقارير: أساس الاستحقاق</h1>
+  <p class="sub"><code>ACCT 203</code> · مبادئ المحاسبة المالية · <bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi> · القسم ١ من ٤:
+  <bdi>Timing and Reporting</bdi><br>
+  الهدف <code>C1</code>: <bdi>Explain the importance of periodic reporting and the role of accrual accounting.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>هذا القسم يجاوب على سؤالين: «ليش نقطّع حياة الشركة لفترات؟» و«ليش المحاسبة تسجّل الشي وقت ما يصير، مو وقت ما يتحرك الكاش؟»</h2>
+  <p>في الفصل الثاني سجّلت عمليات <bdi>FastForward</bdi> الخارجية في دفتر اليومية (<bdi>journal</bdi>) ورحّلتها وطلّعت ميزان المراجعة
+  (<bdi>trial balance</bdi>). بس آخر الشهر فيه حسابات أرصدتها <b>مو جاهزة</b> للقوائم المالية: تأمين خلص منه شهر، مستلزمات انصرف منها
+  جزء، رواتب استحقت وما اندفعت… أشياء صارت <b>داخل</b> الشركة وما أحد سجّلها. الفصل الثالث كله عن <b>تسوية الحسابات</b>
+  (<bdi>adjusting accounts</bdi>) قبل ما تطلع القوائم، وهذا القسم (<code>C1</code>) هو الأساس اللي يشرح <b>ليش</b> نسوي التسويات أصلاً.</p>
+  <p><b>خريطة الفصل</b> (من <bdi>Chapter Preview</bdi> و<bdi>Learning Objectives</bdi> في أول الفصل). الكتاب يرمز للأهداف بثلاث حروف:
+  <code>C</code> = مفاهيمي (<bdi>Conceptual</bdi>)، <code>A</code> = تحليلي (<bdi>Analytical</bdi>)، <code>P</code> = إجرائي (<bdi>Procedural</bdi>).</p>
+  <table>
+    <tr><th>القسم</th><th>وش فيه</th><th>الأهداف</th></tr>
+    <tr><td>1 (هذا)</td><td>الفترة المحاسبية · الاستحقاق مقابل النقدي · مبدأي الاعتراف · إطار التسويات والخطوات الثلاث</td><td><code>C1</code></td></tr>
+    <tr><td>2</td><td>تسويات المؤجّلات: المصروفات المدفوعة مقدّماً (<bdi>prepaid expenses</bdi>) والإيرادات غير المكتسبة (<bdi>unearned revenue</bdi>)</td><td><code>P1</code> <code>P2</code></td></tr>
+    <tr><td>3</td><td>المصروفات المستحقة (<bdi>accrued expenses</bdi>) والإيرادات المستحقة (<bdi>accrued revenues</bdi>) وميزان المراجعة المعدّل (<bdi>adjusted trial balance</bdi>)</td><td><code>P3</code> <code>P4</code> <code>P5</code></td></tr>
+    <tr><td>4</td><td>قيود الإقفال (<bdi>closing entries</bdi>) والدورة المحاسبية (<bdi>accounting cycle</bdi>) والميزانية المصنّفة (<bdi>classified balance sheet</bdi>) وهامش الربح (<bdi>profit margin</bdi>) ونسبة التداول (<bdi>current ratio</bdi>)</td><td><code>P6</code> <code>C2</code> <code>A1</code></td></tr>
+    <tr><td>الملاحق</td><td><bdi>Appendix 3A</bdi> (طرق بديلة للمدفوعات المقدّمة) · <bdi>3B</bdi> (ورقة العمل — <bdi>work sheet</bdi>) · <bdi>3C</bdi> (القيود العكسية — <bdi>reversing entries</bdi>) — ملاحق، اسأل الدكتور إذا داخلة</td><td><code>P7</code> <code>P8</code> <code>P9</code></td></tr>
+  </table>
+  <p>ركّز من الحين على أربع أشياء تنسأل كثير من هالقسم: الفرق بين أساس الاستحقاق (<bdi>accrual basis</bdi>) والأساس النقدي (<bdi>cash basis</bdi>) · أرقام مثال التأمين
+  (<span class="mono" dir="ltr">100 · 1,200 · 1,100</span> مقابل <span class="mono" dir="ltr">2,400 · 0 · 0</span>) · إن سنة النشاط الطبيعية (<bdi>natural business year</bdi>) تخلص لما
+  المبيعات تكون في <b>أقل</b> مستوى · وإن قيد التسوية (<bdi>adjusting entry</bdi>) <b>ما يلمس الـ<bdi>Cash</bdi> أبداً</b>. والتعاريف خذها
+  <b>حرفية</b> من صناديق <bdi>EXAM BOX</bdi>.</p>
+</div>
+
+<!-- 1 · The accounting period (Exhibit 3.1) + fiscal year -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🗓️</div>
+    <div class="term">The Accounting Period</div>
+    <div class="ar">الفترة المحاسبية والسنة المالية</div>
+    <div class="say">نقسّم حياة الشركة لشهور وأرباع وسنين عشان المعلومة توصل بوقتها</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      المعلومة قيمتها في <b>توقيتها</b>. عشان كذا نفترض إن نشاط الشركة <b>ينقسم لفترات</b> (<bdi>time period assumption</bdi>) ونطلّع تقرير
+      كل فترة: سنوي (<bdi>annual</bdi>) ومرحلي (<bdi>interim</bdi>). والسنة المالية (<bdi>fiscal year</bdi>) = أي <b>12 شهر ورا بعض</b> أو <b>52 أسبوع</b> —
+      مو شرط تخلص 31 ديسمبر.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>زي درجاتك بالجامعة: ما تنتظر التخرج — فيه نتيجة آخر كل سنة دراسية (سنوي)، ونتائج ترم واختبارات قصيرة بالنص (مرحلي).</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — ليش نقسّم لفترات؟</span>
+      <p>الكتاب يبدأ بجملة وحدة: <mark class="k">قيمة المعلومة مربوطة بتوقيتها</mark> (<bdi>timeliness</bdi>). المعلومة المفيدة لازم توصل لأصحاب
+      القرار (<bdi>decision makers</bdi>) <b>بشكل متكرر</b>، فالنظام المحاسبي يطلّع تقارير على <b>فترات منتظمة</b> (<bdi>regular intervals</bdi>).</p>
+      <p><b><bdi>Time period assumption</bdi></b> (فرض الفترة الزمنية) = نفترض إن أنشطة المنظمة <b>تنقسم لفترات زمنية محددة</b>. والكتاب
+      يعطيك <b>أربع</b> أمثلة:</p>
+      <ol>
+        <li><b>شهر</b> (<bdi>a month</bdi>)</li>
+        <li><b>ربع سنة = 3 شهور</b> (<bdi>a three-month quarter</bdi>)</li>
+        <li><b>نص سنة = 6 شهور</b> (<bdi>a six-month interval</bdi>)</li>
+        <li><b>سنة</b> (<bdi>a year</bdi>)</li>
+      </ol>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.1 — Accounting Periods</div>
+        <img src="../img/acct203/exhibit-3-1.png" alt="Exhibit 3.1 — Accounting periods: a green timeline arrow labeled Time runs from January to December, with four brackets dividing the same year quarterly into 4 periods, monthly into 12 periods, semiannually into 2 periods, and annually into 1 period." loading="lazy">
+        <p class="excap">هذا <b><bdi>Exhibit 3.1</bdi></b> في الكتاب. في النص سهم أخضر اسمه <bdi>Time</bdi> عليه الشهور من <bdi>Jan.</bdi> لين <bdi>Dec.</bdi>،
+        وحوله <b>أربع</b> أقواس تقسّم نفس السنة: <b><bdi>Quarterly</bdi></b> فوق (4 أجزاء)، <b><bdi>Monthly</bdi></b> تحته (12 جزء)،
+        <b><bdi>Semiannually</bdi></b> تحت السهم (جزئين، كل جزء 6 شهور)، و<b><bdi>Annually</bdi></b> آخر شي (جزء واحد).
+        <b>كيف تقرأه:</b> كلها نفس السنة بس مقطّعة بأحجام مختلفة — هذي هي الفترات المحاسبية أو فترات التقرير
+        (<bdi>accounting, or reporting, periods</bdi>). <b>وش يجي منه بالاختبار:</b> كم فترة في السنة لكل نوع
+        (ربعي = 4، شهري = 12، نص سنوي = 2، سنوي = 1).</p>
+      </div>
+
+      <p><mark class="k">أغلب المنظمات تستخدم <b>السنة</b> كفترة محاسبية رئيسية</mark> (<bdi>primary accounting period</bdi>). ومن هنا عندك نوعين تقارير:</p>
+      <table>
+        <tr><th>التقرير</th><th>يغطي</th><th>بالعربي</th></tr>
+        <tr><td><b><bdi>Annual financial statements</bdi></b></td><td>سنة وحدة</td><td>القوائم المالية السنوية</td></tr>
+        <tr><td><b><bdi>Interim financial statements</bdi></b></td><td>شهر، أو 3 شهور، أو 6 شهور من النشاط</td>
+            <td>القوائم المالية المرحلية — منظمات كثير تطلّعها <b>زيادة</b> على السنوية</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — السنة المالية مو لازم تكون يناير لين ديسمبر</span>
+      <p>فترة التقرير السنوية <b>مو دايماً</b> سنة ميلادية (<bdi>calendar year</bdi>) تخلص 31 ديسمبر. المنظمة تقدر تستخدم
+      <b><bdi>fiscal year</bdi></b> (سنة مالية) = <mark class="k">أي <b>12 شهر متتالية</b> أو <b>52 أسبوع</b></mark>. مثال الكتاب: السنة المالية
+      لـ<bdi>Gap</bdi> تخلص دايماً في <b>آخر أسبوع من يناير أو أول أسبوع من فبراير</b> كل سنة.</p>
+      <p>طيب كيف الشركة تختار متى تخلص سنتها؟ الكتاب يربطها بـ<b>موسمية المبيعات</b> (<bdi>seasonal variation in sales</bdi>):</p>
+      <table>
+        <tr><th>الشركة</th><th>وش تختار</th><th>مثال الكتاب</th></tr>
+        <tr><td>مبيعاتها <b>ما تتغير كثير</b> مع المواسم (<bdi>little seasonal variation</bdi>)</td>
+            <td>غالباً <b>السنة الميلادية</b> (<bdi>calendar year</bdi>) كسنة مالية — تخلص 31 ديسمبر</td>
+            <td><bdi>Netflix</bdi></td></tr>
+        <tr><td>مبيعاتها <b>موسمية</b> (<bdi>seasonal variations</bdi>)</td>
+            <td>غالباً <b><bdi>natural business year</bdi></b> (سنة النشاط الطبيعية) — تخلص <mark class="k">لما المبيعات تكون في <b>أقل</b> مستوى في السنة</mark></td>
+            <td><bdi>Target</bdi> و<bdi>Nordstrom</bdi> (محلات تجزئة): تقريباً <b>31 يناير</b>، بعد موسم الأعياد (<bdi>after the holidays</bdi>)</td></tr>
+      </table>
+      <p>ليش «أقل» مستوى؟ فكّر فيها: بعد موسم الأعياد المحل هادي، المخزون قليل، والموظفين فاضين يقفلون الدفاتر ويجردون — أسهل وقت تسكّر فيه السنة.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The value of information is linked to its timeliness. Useful information must reach decision makers frequently. To provide
+      timely information, accounting systems prepare reports at regular intervals. The <b>time period assumption</b> presumes that an
+      organization's activities can be divided into specific time periods such as a month, a three-month quarter, a six-month interval,
+      or a year. Most organizations use a year as their primary accounting period. Reports covering a one-year period are known as
+      <b>annual financial statements</b>. Many organizations also prepare <b>interim financial statements</b> covering one, three, or six
+      months of activity.</p>
+      <p>The annual reporting period is not always a calendar year ending on December 31. An organization can use a <b>fiscal year</b>
+      consisting of any 12 consecutive months or 52 weeks.</p>
+      <p>Companies with little seasonal variation in sales often use the calendar year as their fiscal year. Companies that have seasonal
+      variations in sales often use a <b>natural business year</b> end, which is when sales are at their lowest level for the year. The
+      natural business year for retailers such as Target and Nordstrom ends around January 31, after the holidays.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Time period assumption</bdi> = <b>فرض</b> (<bdi>assumption</bdi>) إن النشاط ينقسم لفترات — مو مبدأ اعتراف، ومو قاعدة عن متى
+            يدخل الكاش.</li>
+        <li><bdi>Interim</bdi> = <b>1 أو 3 أو 6 شهور</b> — يعني أقل من سنة. الاختيار اللي يقول «<bdi>interim</bdi> = سنة» غلط؛ السنة اسمها
+            <bdi>annual</bdi>.</li>
+        <li><bdi>Fiscal year</bdi> = <b>أي</b> 12 شهر متتالية <b>أو</b> 52 أسبوع. اختيار «لازم تبدأ 1 يناير» أو «لازم تخلص 31 ديسمبر» = غلط
+            (تذكّر <bdi>Gap</bdi>).</li>
+        <li><bdi>Natural business year</bdi> تخلص لما المبيعات في <b>أقل</b> مستوى — مو أعلى. والشركات <b>الموسمية</b> هي اللي تستخدمها؛
+            قليلة الموسمية تستخدم السنة الميلادية (<bdi>Netflix</bdi>).</li>
+        <li>لا تخلط الأمثلة: <bdi>Gap</bdi> = سنة مالية تخلص آخر يناير/أول فبراير · <bdi>Netflix</bdi> = سنة ميلادية ·
+            <bdi>Target</bdi> و<bdi>Nordstrom</bdi> = سنة نشاط طبيعية حوالي 31 يناير.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · Accrual basis vs cash basis (+ chapter opener) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">⚖️</div>
+    <div class="term">Accrual Basis versus Cash Basis</div>
+    <div class="ar">أساس الاستحقاق مقابل الأساس النقدي</div>
+    <div class="say">متى تسجّل الإيراد والمصروف: وقت ما يصير الشي، ولا وقت ما يتحرك الكاش؟</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Accrual basis</bdi></b> (أساس الاستحقاق) يسجّل الإيراد لما الخدمة أو المنتج <b>يتسلّم</b> للعميل، والمصروف لما <b>يصير</b> عليك
+      (ويتقابل مع الإيراد). <b><bdi>Cash basis</bdi></b> (الأساس النقدي) ما يشوف إلا الكاش: الإيراد لما <b>يدخل</b> الكاش، والمصروف لما <b>يطلع</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>راتبك ينزل يوم 27 بس أنت اشتغلت الشهر كله. النقدي يسجّل يوم نزل الراتب، والاستحقاق يسجّل الأيام اللي اشتغلتها.</div></div>
+
+    <div class="blk"><span class="lbl">من فاتحة الفصل — <bdi>Leading the Way: Sword &amp; Plough</bdi></span>
+      <p><bdi>Emily Núñez Cavness</bdi> شاركت في تأسيس <bdi>Sword &amp; Plough</bdi> وهي منتشرة مع الجيش في أفغانستان — حتى إن اجتماع سكايب عندها
+      انقطع بقصف هاون. هي وأختها <bdi>Betsy</bdi> يعيدون تدوير مواد الجيش الفائضة (<bdi>military surplus materials</bdi>) ويسوّون منها شنط
+      قماش وحقائب يد وشنط ظهر وإكسسوارات، ولين الحين أعادوا تدوير <b>30,000 رطل</b> من المواد.</p>
+      <p>والشاهد المحاسبي: الأختين يقولون إن جزء من نجاحهم سببه <b>النظام المحاسبي</b> — <mark class="k">انتقالهم من نظام <b>نقدي</b> لنظام
+      <b>استحقاق</b> عطاهم معلومات <b>في وقتها أكثر</b></mark> (<bdi>more timely information</bdi>). و<b>التسويات المحاسبية</b>
+      (<bdi>accounting adjustments</bdi>) رفعت قيمة بيانات الإيرادات والمصروفات، واستخدموها عشان <b>يسعّرون أحسن ويديرون التكاليف</b>.
+      يعني فكرة هالقسم كلها في قصة وحدة: استحقاق + تسويات = معلومة أدق وأسرع.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — ليش الحسابات تحتاج تسوية؟</span>
+      <p>بعد ما تسجّل العمليات والأحداث <b>الخارجية</b> (<bdi>external transactions and events</bdi>)، فيه حسابات كثير <b>تحتاج تسويات</b>
+      (<bdi>adjustments</bdi>) قبل ما أرصدتها تطلع في القوائم المالية. ليش؟ لأن <mark class="k">العمليات والأحداث <b>الداخلية</b>
+      (<bdi>internal transactions and events</bdi>) لسّا ما انسجلت</mark>. تذكّر من الفصل الأول: العملية الداخلية = تبادل داخل الكيان نفسه،
+      زي استهلاك المستلزمات.</p>
+      <p>والسؤال الكبير: <b>متى</b> نسجّل الإيراد والمصروف؟ فيه نظامين:</p>
+      <table>
+        <tr><th></th><th><bdi>Accrual basis accounting</bdi><br>أساس الاستحقاق</th><th><bdi>Cash basis accounting</bdi><br>الأساس النقدي</th></tr>
+        <tr><td><b>الإيراد يتسجّل</b></td><td>لما الخدمات والمنتجات <b>تتسلّم</b> للعميل (<bdi>delivered</bdi>)</td><td>لما <b>يدخل الكاش</b> (<bdi>cash is received</bdi>)</td></tr>
+        <tr><td><b>المصروف يتسجّل</b></td><td>لما <b>يصير</b> (<bdi>incurred</bdi>) — ويتقابل مع الإيراد (<bdi>matched with revenues</bdi>)</td><td>لما <b>يطلع الكاش</b> (<bdi>cash is paid</bdi>)</td></tr>
+        <tr><td><b>الدخل</b></td><td>الإيرادات ناقص المصروفات (زي ما عرفت في الفصل الأول)</td>
+            <td><mark class="k"><bdi>Cash receipts − cash payments</bdi></mark> = المقبوضات النقدية ناقص المدفوعات النقدية</td></tr>
+        <tr><td><b>رأي الكتاب</b></td><td>أغلب الناس متفقين إنه <b>يعكس أداء الشركة أحسن</b>، و<b>يزيد قابلية المقارنة</b> (<bdi>comparability</bdi>)
+            للقوائم المالية من فترة لفترة</td><td>أضعف في عكس الأداء (مثال التأمين الجاي يوضّح ليش)</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">طبّق — تمرين <bdi>QS 3-2</bdi> من الكتاب (الكتاب يعطي السؤال بس، والحل تحت خطوة بخطوة)</span>
+      <p>شركة <bdi>Roma</bdi> في أول سنة: كسبت إيرادات <b>$45,000</b> (انقبض منها كاش <b>$37,000</b>)، وصار عليها مصروفات <b>$25,500</b>
+      (دفعت منها كاش <b>$20,250</b>)، ودفعت مقدّم <b>$6,750</b> كاش لتكاليف ما تصير مصروف إلا السنة الجاية. كم صافي الدخل على الأساسين؟</p>
+      <table>
+        <tr><th>الأساس</th><th>الحساب</th><th>صافي الدخل</th></tr>
+        <tr><td><bdi>Cash basis</bdi></td><td><span class="mono" dir="ltr">37,000 − (20,250 + 6,750) = 37,000 − 27,000</span><br>كل كاش طلع ينحسب، حتى المدفوع مقدّم</td><td><span class="mono" dir="ltr">$10,000</span></td></tr>
+        <tr><td><bdi>Accrual basis</bdi></td><td><span class="mono" dir="ltr">45,000 − 25,500</span><br>الإيراد المكتسب ناقص المصروف اللي صار؛ الـ6,750 أصل، مو مصروف هالسنة</td><td><span class="mono" dir="ltr">$19,500</span></td></tr>
+      </table>
+      <p>الفرق <span class="mono" dir="ltr">19,500 − 10,000 = 9,500</span> كله <b>توقيت</b>: <span class="mono" dir="ltr">8,000</span> إيراد انكسب وما انقبض
+      (<span class="mono" dir="ltr">45,000 − 37,000</span>) + <span class="mono" dir="ltr">6,750</span> دفعة مقدّمة − <span class="mono" dir="ltr">5,250</span> مصروف صار وما اندفع
+      (<span class="mono" dir="ltr">25,500 − 20,250</span>) = <span class="mono" dir="ltr">9,500</span>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>After external transactions and events are recorded, several accounts require adjustments before their balances appear in
+      financial statements. This is needed because internal transactions and events are not yet recorded.</p>
+      <p><b>Accrual basis accounting</b> records revenues when services and products are delivered and records expenses when incurred
+      (matched with revenues). <b>Cash basis accounting</b> records revenues when cash is received and records expenses when cash is paid.
+      Cash basis income is cash receipts minus cash payments.</p>
+      <p>Most agree that accrual accounting better reflects business performance than cash basis accounting. Accrual accounting also
+      increases the comparability of financial statements from period to period.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>لا تعكسها: <bdi>accrual</bdi> = وقت <b>ما يصير</b> الشي (تسليم / استهلاك)، <bdi>cash</bdi> = وقت <b>ما يتحرك الكاش</b>. اختيار
+            «الاستحقاق يسجّل الإيراد لما ينقبض الكاش» = تعريف النقدي.</li>
+        <li>في الأساس النقدي <b>أي</b> كاش يطلع ينحسب، حتى لو دفعته مقدّم لتكاليف السنة الجاية (زي الـ6,750 عند <bdi>Roma</bdi>). وفي
+            الاستحقاق هذا المبلغ <b>مو مصروف</b> هالسنة.</li>
+        <li>مزايا الاستحقاق في الكتاب <b>ثنتين</b>: يعكس الأداء أحسن + يزيد المقارنة بين الفترات. لو اختيار نسب وحدة منهم للنقدي = غلط.</li>
+        <li>ليش نحتاج تسويات؟ لأن <b>العمليات الداخلية</b> لسّا ما انسجلت — مو لأن العمليات الخارجية فيها أخطاء.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · FastForward's prepaid insurance: Exhibits 3.2 and 3.3 -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🛡️</div>
+    <div class="term">FastForward's Prepaid Insurance</div>
+    <div class="ar">مثال التأمين: الاستحقاق مقابل النقدي بالأرقام</div>
+    <div class="say">نفس الـ$2,400 — الاستحقاق يوزّعها على 24 شهر، والنقدي يحطها كلها في ديسمبر</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <bdi>FastForward</bdi> دفعت <b>$2,400</b> لتأمين <b>24 شهر</b> يبدأ <b>1 ديسمبر 2021</b>. أساس الاستحقاق: <b>$100</b> مصروف كل شهر ←
+      <b>100</b> في 2021، <b>1,200</b> في 2022، <b>1,100</b> في 2023. الأساس النقدي: <b>2,400</b> كلها في ديسمبر 2021، وصفر في 2022 و2023.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>اشتراك نادي سنتين دفعته مرة وحدة: النقدي يقول «صرفت كل شي هالشهر»، والاستحقاق يقول «كل شهر أتمرّن فيه، أستهلك شهر من الاشتراك».</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — وش انسجل وقت الدفع؟</span>
+      <p>هذي العملية رقم <b>(13)</b> من الفصل الثاني: <bdi>FastForward</bdi> دفعت <b>$2,400</b> كاش (قسط التأمين — <bdi>insurance premium</bdi>)
+      لبوليصة تأمين مدتها <b>24 شهر</b>، والتغطية تبدأ <b>1 ديسمبر</b>. القيد كان:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>(13)</td><td>Prepaid Insurance</td><td class="mono" dir="ltr" style="text-align:right">2,400</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Cash</td><td></td><td class="mono" dir="ltr" style="text-align:right">2,400</td></tr>
+      </table>
+      <p>يعني: <bdi>Prepaid Insurance</bdi> (تأمين مدفوع مقدّماً — <b>أصل</b>) زاد ← <b>مدين</b>، لأن الأصول تزيد بالمدين. و<bdi>Cash</bdi>
+      (أصل) نقص ← <b>دائن</b>. المعادلة: <span class="mono" dir="ltr">Assets (−2,400 + 2,400) = Liabilities 0 + Equity 0</span> — العملية
+      <b>غيّرت شكل الأصول</b> بس، من كاش لتأمين مدفوع مقدّماً، والمصروف ينسجل بعدين <b>مع انتهاء التغطية</b>. وهذا قيد دفع عادي، <b>مو</b> قيد تسوية.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — أساس الاستحقاق (<bdi>Exhibit 3.2</bdi>)</span>
+      <p>الاستحقاق يطلب إن <mark class="k"><b>$100</b> مصروف تأمين ينعرض <b>كل شهر</b></mark>، من <b>ديسمبر 2021</b> لين <b>نوفمبر 2023</b>.
+      من وين جت الـ100؟ <span class="mono" dir="ltr">2,400 ÷ 24 = 100</span> (والكتاب في الجزء الجاي يكتبها <span class="mono" dir="ltr">1/24 of $2,400</span>).</p>
+      <table>
+        <tr><th>السنة</th><th>الشهور المغطّاة</th><th>الحساب</th><th>مصروف التأمين</th></tr>
+        <tr><td>2021</td><td>ديسمبر بس (1)</td><td><span class="mono" dir="ltr">1 × 100</span></td><td><span class="mono" dir="ltr">$100</span></td></tr>
+        <tr><td>2022</td><td>يناير – ديسمبر (12)</td><td><span class="mono" dir="ltr">12 × 100</span></td><td><span class="mono" dir="ltr">$1,200</span></td></tr>
+        <tr><td>2023</td><td>يناير – نوفمبر (11)</td><td><span class="mono" dir="ltr">11 × 100</span></td><td><span class="mono" dir="ltr">$1,100</span></td></tr>
+        <tr><td><b>المجموع</b></td><td><b>24 شهر</b></td><td></td><td><span class="mono" dir="ltr"><b>$2,400</b></span></td></tr>
+      </table>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.2 — Accrual Accounting</div>
+        <img src="../img/acct203/exhibit-3-2.png" alt="Exhibit 3.2 — Accrual accounting: a tablet reads Transaction: Paid $2,400 for 24 months' insurance beginning Dec. 1, 2021, with an arrow to three desk calendars of insurance expense; the 2021 calendar shows $0 for January to November and $100 for December, the 2022 calendar shows $100 in every month, and the 2023 calendar shows $100 for January to November and $0 for December." loading="lazy">
+        <p class="excap">هذا <b><bdi>Exhibit 3.2</bdi></b>. على اليسار تابلت مكتوب فيه العملية: <bdi>Paid $2,400 for 24 months' insurance beginning Dec. 1, 2021</bdi>،
+        وسهم يوديك لـ<b>ثلاث رزنامات</b> مكتوب فوق كل وحدة <bdi>Insurance Expense</bdi> والسنة: <b>2021</b> (زرقاء) كل الشهور <bdi>$0</bdi>
+        إلا <b>ديسمبر $100</b> · <b>2022</b> (حمراء) <b>كل الـ12 شهر $100</b> · <b>2023</b> (بنفسجية) من يناير لين نوفمبر $100 و<b>ديسمبر $0</b>.
+        <b>كيف تقرأه:</b> الأرقام المظلّلة بالأصفر هي الشهور اللي فيها مصروف — عدّها: <span class="mono" dir="ltr">1 + 12 + 11 = 24</span> شهر. <b>وش يجي منه بالاختبار:</b>
+        مصروف سنة معيّنة (خصوصاً 2021 = 100 و2023 = 1,100).</p>
+      </div>
+
+      <p>وأي قسط <b>لسّا ما انتهى</b> (<bdi>unexpired premium</bdi>) ينعرض <b>أصل</b> اسمه <bdi>Prepaid Insurance</bdi> في ميزانية الاستحقاق
+      (<bdi>accrual basis balance sheet</bdi>). مثلاً آخر ديسمبر 2021 انتهى شهر واحد بس، فالباقي <b>$2,300</b> يغطي الـ23 شهر الباقية —
+      وهذا بالضبط الرقم اللي يطلع بقيد التسوية في القسم ٢.</p>
+      <p>وكمّل نفس الحسبة لآخر كل سنة (حسبة على أرقام الكتاب — نفس فكرة <bdi>Exercise 3-1</bdi>): الرصيد = 2,400 ناقص كل المصروف اللي
+      انعرض لين ذاك التاريخ.</p>
+      <table>
+        <tr><th>رصيد <bdi>Prepaid Insurance</bdi> في الميزانية</th><th><bdi>Accrual basis</bdi></th><th><bdi>Cash basis</bdi></th></tr>
+        <tr><td>31 ديسمبر 2021</td><td><span class="mono" dir="ltr">2,400 − 100 = $2,300</span></td><td><span class="mono" dir="ltr">$0</span></td></tr>
+        <tr><td>31 ديسمبر 2022</td><td><span class="mono" dir="ltr">2,300 − 1,200 = $1,100</span></td><td><span class="mono" dir="ltr">$0</span></td></tr>
+        <tr><td>31 ديسمبر 2023</td><td><span class="mono" dir="ltr">1,100 − 1,100 = $0</span></td><td><span class="mono" dir="ltr">$0</span></td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — الأساس النقدي (<bdi>Exhibit 3.3</bdi>)</span>
+      <p>قائمة الدخل (<bdi>income statement</bdi>) على الأساس النقدي لـ<b>ديسمبر 2021</b> تعرض مصروف تأمين <b>$2,400</b> كامل. وقوائم الدخل النقدية لـ2022 و2023
+      <b>ما فيها أي مصروف تأمين</b>. و<mark class="k">الميزانية النقدية <b>ما تعرض أبداً</b> أصل تأمين مدفوع مقدّماً</mark> — لأنه انصرف كله على
+      طول (<bdi>immediately expensed</bdi>).</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.3 — Cash Accounting</div>
+        <img src="../img/acct203/exhibit-3-3.png" alt="Exhibit 3.3 — Cash accounting: the same tablet reads Transaction: Paid $2,400 for 24 months' insurance beginning Dec. 1, 2021, with an arrow to three desk calendars of insurance expense; the 2021 calendar shows $0 for January to November and $2,400 for December, and the 2022 and 2023 calendars show $0 in every month." loading="lazy">
+        <p class="excap">هذا <b><bdi>Exhibit 3.3</bdi></b> — نفس التابلت ونفس الرزنامات الثلاث، بس الأرقام تغيّرت: <b>2021</b> كل الشهور <bdi>$0</bdi> إلا
+        <b>ديسمبر $2,400</b> (المظلّل الوحيد في الشكل كله) · <b>2022</b> و<b>2023</b> كل الشهور <bdi>$0</bdi>. <b>كيف تقرأه:</b> حطّه جنب
+        <bdi>Exhibit 3.2</bdi> — نفس العملية، بس النقدي يرمي المبلغ كله في الشهر اللي طلع فيه الكاش. <b>وش يجي منه بالاختبار:</b>
+        مصروف 2022 أو 2023 على الأساس النقدي = <b>صفر</b>.</p>
+      </div>
+
+      <p>والمشكلة: الدخل النقدي لـ2021–2023 <b>ما يقابل</b> (<bdi>does not match</bdi>) تكلفة التأمين مع منافع التأمين اللي الشركة استفادتها
+      في هالسنين. الشركة محميّة 24 شهر، بس النقدي يحمّل التكلفة كلها على شهر واحد.</p>
+      <table>
+        <tr><th>السنة</th><th><bdi>Accrual basis</bdi> (<bdi>Exhibit 3.2</bdi>)</th><th><bdi>Cash basis</bdi> (<bdi>Exhibit 3.3</bdi>)</th></tr>
+        <tr><td>2021</td><td><span class="mono" dir="ltr">$100</span></td><td><span class="mono" dir="ltr">$2,400</span></td></tr>
+        <tr><td>2022</td><td><span class="mono" dir="ltr">$1,200</span></td><td><span class="mono" dir="ltr">$0</span></td></tr>
+        <tr><td>2023</td><td><span class="mono" dir="ltr">$1,100</span></td><td><span class="mono" dir="ltr">$0</span></td></tr>
+        <tr><td><b>المجموع</b></td><td><span class="mono" dir="ltr"><b>$2,400</b></span></td><td><span class="mono" dir="ltr"><b>$2,400</b></span></td></tr>
+      </table>
+      <p>لاحظ: <b>المجموع واحد</b> ($2,400) في النظامين — الفرق كله في <b>التوقيت</b>: أي سنة تشيل المصروف.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>FastForward paid $2,400 for 24 months of insurance coverage that began on December 1, 2021. Accrual accounting requires that
+      $100 of insurance expense be reported each month, from December 2021 through November 2023. (This means expenses are $100 in 2021,
+      $1,200 in 2022, and $1,100 in 2023.) Any unexpired premium is reported as a Prepaid Insurance asset on the accrual basis balance sheet.</p>
+      <p>A cash basis income statement for December 2021 reports insurance expense of $2,400, as shown in Exhibit 3.3. The cash basis income
+      statements for years 2022 and 2023 report no insurance expense. The cash basis balance sheet never reports a prepaid insurance asset
+      because it is immediately expensed. Also, cash basis income for 2021–2023 does not match the cost of insurance with the insurance
+      benefits received for those years.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>2021 في الاستحقاق = <b>$100</b> بس (شهر ديسمبر وحده) — مو 1,200 ولا 2,400.</li>
+        <li>2023 = <b>$1,100</b> (11 شهر: يناير–نوفمبر) — التغطية تخلص <b>نوفمبر 2023</b>، فديسمبر 2023 = $0. اختيار 1,200 = حسب 12 شهر.</li>
+        <li>النقدي: 2,400 في <b>2021</b> وصفر بعدها. والميزانية النقدية <b>ما فيها <bdi>Prepaid Insurance</bdi></b> أبداً.</li>
+        <li>سؤال «أي نظام يعطي مصروف تأمين أكثر على الثلاث سنين؟» ← <b>متساويين</b> ($2,400). الفرق توقيت بس.</li>
+        <li>رصيد <bdi>Prepaid Insurance</bdi> (ميزانية) غير مصروف السنة (قائمة دخل): آخر 2022 الرصيد <b>$1,100</b> والمصروف <b>$1,200</b>. لا تخلط
+            سؤال «<bdi>balance sheet</bdi>» بسؤال «<bdi>income statement</bdi>».</li>
+        <li>وقت الدفع الأصلي (العملية 13) <b>ما فيه مصروف</b> في الاستحقاق: المدين <bdi>Prepaid Insurance</bdi> (أصل)، مو <bdi>Insurance Expense</bdi>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 · Revenue and expense recognition -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🎯</div>
+    <div class="term">Recognizing Revenues and Expenses</div>
+    <div class="ar">الاعتراف بالإيرادات والمصروفات</div>
+    <div class="say">المبدأين اللي تمشي عليهم كل التسويات</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      نقسّم نشاط الشركة لفترات، بس <b>مو كل الأنشطة تكون خالصة</b> وقت ما نجهّز القوائم ← نحتاج تسويات عشان الأرصدة تصير صح. والتسويات
+      تمشي على <b>مبدأين</b>: <bdi>revenue recognition</bdi> (الإيراد في الفترة اللي تتقدّم فيها الخدمة) و<bdi>expense recognition</bdi> أو
+      <bdi>matching</bdi> (المصروف في نفس فترة الإيراد اللي جابه).</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>الإيراد يتسجّل يوم تسلّم الشغل للعميل، مو يوم يحوّل لك. والمصروف يلحق الإيراد اللي ساعد يجيبه — نفس الشهر.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — المبدأين</span>
+      <table>
+        <tr><th>المبدأ</th><th>التعريف بالإنجليزي (احفظه حرفي)</th><th>بالعربي</th></tr>
+        <tr><td><b><bdi>Revenue recognition principle</bdi></b><br><span style="color:var(--muted);font-size:.85rem">مبدأ الاعتراف بالإيراد</span></td>
+            <td><bdi>Requires that revenue be recorded when goods or services are provided to customers and at an amount expected to be received from customers.</bdi></td>
+            <td>الإيراد ينسجل <b>لما</b> السلع أو الخدمات تتقدّم للعملاء، و<b>بالمبلغ</b> المتوقع تستلمه منهم — يعني شرطين:
+                <mark class="k"><b>متى</b> و<b>كم</b></mark>.</td></tr>
+        <tr><td><b><bdi>Expense recognition (or matching) principle</bdi></b><br><span style="color:var(--muted);font-size:.85rem">مبدأ الاعتراف بالمصروف (المقابلة)</span></td>
+            <td><bdi>Requires that expenses be recorded in the same accounting period as the revenues that are recognized as a result of those expenses.</bdi></td>
+            <td>المصروف ينسجل في <b>نفس الفترة المحاسبية</b> للإيراد اللي انعترف فيه <b>بسبب</b> هالمصروف.</td></tr>
+      </table>
+      <p>ودور التسويات هنا: <mark class="k">تضمن إن الإيراد ينعرض في <b>الفترة اللي انقدّمت فيها</b> الخدمات والمنتجات</mark>. ونفس الشي
+      للمصروف: تأمين <bdi>FastForward</bdi> يحمي الشركة وهي تشتغل وتجيب إيراد كل شهر، فمصروفه ($100) ينحط في كل شهر — وهذا هو الـ<bdi>matching</bdi>
+      اللي الأساس النقدي ما يسويه.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">طبّق — تمارين <bdi>Exercises 3-2</bdi> و<bdi>3-3</bdi> من الكتاب (الكتاب يعطي الأسئلة بس، والحل تحت)</span>
+      <p>الكتاب يعطي مواقف منفصلة ويسأل: كم إيراد أو مصروف ينعترف فيه في <b>ديسمبر</b> على أساس الاستحقاق؟ الحل تحت مبني على المبدأين فوق.</p>
+      <table>
+        <tr><th>الموقف</th><th>ديسمبر</th><th>ليش</th></tr>
+        <tr><td colspan="3"><b>إيرادات (<bdi>Exercise 3-2</bdi>)</b></td></tr>
+        <tr><td><bdi>Oklahoma City Thunder</bdi> باعت تذكرة مباراة بـ$90 في 7 ديسمبر، والمباراة في مارس</td><td><span class="mono" dir="ltr">$0</span></td>
+            <td>الخدمة (المباراة) ما انقدّمت لسّا — الكاش اللي انقبض = <bdi>unearned revenue</bdi> (القسم 2)</td></tr>
+        <tr><td><bdi>Tesla</bdi> باعت وسلّمت سيارة بـ$58,000 في 25 ديسمبر، والعميل ما بيدفع إلا في فبراير</td><td><span class="mono" dir="ltr">$58,000</span></td>
+            <td>المنتج <b>تسلّم</b> في ديسمبر؛ متى يدفع ما يغيّر شي</td></tr>
+        <tr><td><bdi>Deloitte</bdi> وقّعت عقد في 1 ديسمبر لـ40 يوم استشارات، و$10,000 تنقبض آخر العقد؛ في 31 ديسمبر خلّصت 75% من الخدمة</td>
+            <td><span class="mono" dir="ltr">$7,500</span></td><td><span class="mono" dir="ltr">75% × 10,000</span> — الجزء اللي انقدّم من الخدمة</td></tr>
+        <tr><td colspan="3"><b>مصروفات (<bdi>Exercise 3-3</bdi>)</b></td></tr>
+        <tr><td><bdi>Chipotle</bdi> عندها رواتب شهرية $3,200 صارت (<bdi>incurred</bdi>) وما اندفعت لين 31 ديسمبر</td><td><span class="mono" dir="ltr">$3,200</span></td>
+            <td>المصروف صار في ديسمبر؛ الدفع بعدين ما يغيّر شي</td></tr>
+        <tr><td><bdi>United Airlines</bdi> اشترت بوليصة تأمين 24 شهر بـ$48,000 في 1 ديسمبر والتغطية فورية</td><td><span class="mono" dir="ltr">$2,000</span></td>
+            <td><span class="mono" dir="ltr">48,000 ÷ 24 = 2,000</span> لشهر واحد — نفس منطق <bdi>FastForward</bdi></td></tr>
+        <tr><td><bdi>Pfizer</bdi> دفعت مقدّم $20,000 في 15 ديسمبر لغرف فندق لاجتماع مبيعات في يناير</td><td><span class="mono" dir="ltr">$0</span></td>
+            <td>الفايدة في يناير ← المصروف في يناير؛ في ديسمبر هو أصل مدفوع مقدّماً</td></tr>
+      </table>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>We divide a company's activities into time periods, but not all activities are complete when financial statements are prepared.
+      Thus, adjustments are required to get proper account balances.</p>
+      <p>We use two principles in the adjusting process: revenue recognition and expense recognition.</p>
+      <p><b>Revenue recognition principle</b> requires that revenue be recorded when goods or services are provided to customers and at an
+      amount expected to be received from customers. Adjustments ensure revenue is recognized (reported) in the time period when those
+      services and products are provided.</p>
+      <p><b>Expense recognition (or matching) principle</b> requires that expenses be recorded in the same accounting period as the revenues
+      that are recognized as a result of those expenses.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>الإيراد ينسجل لما <b>تتقدّم</b> السلع أو الخدمات — مو لما ينقبض الكاش، ولا لما ينوقّع العقد، ولا لما تندفع الفاتورة.</li>
+        <li>المبدأ فيه <b>شرطين</b>: متى (لما تتقدّم) + كم (المبلغ <b>المتوقع</b> استلامه من العميل).</li>
+        <li><bdi>Expense recognition</bdi> اسمه الثاني <b><bdi>matching principle</bdi></b> — نفس المبدأ. المصروف يتبع <b>الإيراد</b>، مو الكاش.</li>
+        <li>الكتاب يقول المبادئ في عملية التسوية <b>ثنتين</b>: <bdi>revenue recognition</bdi> و<bdi>expense recognition</bdi>. الـ<bdi>time period
+            assumption</bdi> <b>فرض</b>، مو واحد منهم.</li>
+        <li>كاش انقبض قبل الخدمة (تذكرة <bdi>Thunder</bdi>) = <b>مو إيراد</b> الحين؛ وخدمة انقدّمت قبل الكاش (<bdi>Tesla</bdi>، <bdi>Deloitte</bdi>)
+            = <b>إيراد</b> الحين.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 · Framework for adjustments: four types + 3-step process (Exhibit 3.4) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🔧</div>
+    <div class="term">Framework for Adjustments</div>
+    <div class="ar">إطار التسويات: الأنواع الأربعة والخطوات الثلاث</div>
+    <div class="say">كل تسوية في الفصل تمشي على نفس الطريقة</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      فيه <b>أربع أنواع</b> تسويات للعمليات والأحداث اللي <b>تمتد لأكثر من فترة</b>، وكلها تمشي على <b>3 خطوات</b>: كم الرصيد الحين؟ ← كم
+      المفروض يكون؟ ← سجّل قيد تسوية يوديك من الأولى للثانية. وقيد التسوية يمس حساب قائمة دخل وحساب ميزانية — <b>وما يلمس الـ<bdi>Cash</bdi>
+      أبداً</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>آخر الشهر تمسك كل حساب وتسأل: كم رصيده الحين؟ كم المفروض يكون؟ والفرق بينهم = قيد التسوية.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الأنواع الأربعة</span>
+      <div class="exhibit">
+        <div class="exlbl">Framework for Adjustments — Four Types</div>
+        <img src="../img/acct203/ch03-wil28773_fra0301.png" alt="Four types of adjustments shown as four boxes in a row from left to right: deferral of expense, deferral of revenue, accrued expense, and accrued revenue." loading="lazy">
+        <p class="excap">الكتاب يحط <b>أربع</b> خانات (شكلها سداسي) جنب بعض من اليسار لليمين: <bdi>Deferral of expense</bdi> · <bdi>Deferral of revenue</bdi> ·
+        <bdi>Accrued expense</bdi> · <bdi>Accrued revenue</bdi>. <b>كيف تقرأه:</b> أول ثنتين <b>تأجيل</b> (<bdi>deferral</bdi>) وآخر ثنتين
+        <b>استحقاق</b> (<bdi>accrual</bdi>) — وكل زوج فيه مصروف وإيراد. <b>وش يجي منه بالاختبار:</b> أي نوع ينطبق على موقف، أو أي وحدة
+        <b>مو</b> من الأربع.</p>
+      </div>
+      <p>معاينة سريعة — كل نوع له شرح كامل في القسم اللي جنبه، وشكل القيد مأخوذ من ملخّص الكتاب للتسويات الأربع
+      (<bdi>Exhibit 3.12 — Summary of Adjustments</bdi>، تشوفه كامل في القسم ٣):</p>
+      <table>
+        <tr><th>النوع</th><th>باختصار</th><th>شكل قيد التسوية</th><th>تفاصيله</th></tr>
+        <tr><td><b><bdi>Deferral of expense</bdi></b><br><span style="color:var(--muted);font-size:.85rem">تأجيل المصروف</span></td>
+            <td>دفعت <b>قبل</b> ما تستفيد؛ الدفعة <b>أصل</b> (<bdi>prepaid expenses</bdi>) وتتحول مصروف لما تستخدمها — زي تأمين <bdi>FastForward</bdi></td>
+            <td><bdi>Dr. Expense (increase)</bdi><br><bdi>Cr. Asset* (decrease)</bdi></td>
+            <td>القسم 2 (<code>P1</code>)</td></tr>
+        <tr><td><b><bdi>Deferral of revenue</bdi></b><br><span style="color:var(--muted);font-size:.85rem">تأجيل الإيراد</span></td>
+            <td>قبضت كاش <b>قبل</b> ما تقدّم الخدمة؛ <b>التزام</b> (<bdi>unearned revenue</bdi>) يتحول إيراد لما تقدّمها — زي تذكرة <bdi>Thunder</bdi></td>
+            <td><bdi>Dr. Liability (decrease)</bdi><br><bdi>Cr. Revenue (increase)</bdi></td>
+            <td>القسم 2 (<code>P2</code>)</td></tr>
+        <tr><td><b><bdi>Accrued expense</bdi></b><br><span style="color:var(--muted);font-size:.85rem">مصروف مستحق</span></td>
+            <td>مصروف <b>صار</b> وما اندفع ولا انسجل — زي رواتب <bdi>Chipotle</bdi></td>
+            <td><bdi>Dr. Expense (increase)</bdi><br><bdi>Cr. Liability (increase)</bdi></td>
+            <td>القسم 3 (<code>P3</code>)</td></tr>
+        <tr><td><b><bdi>Accrued revenue</bdi></b><br><span style="color:var(--muted);font-size:.85rem">إيراد مستحق</span></td>
+            <td>إيراد <b>انكسب</b> وما انسجل ولا انقبض — زي الـ75% من عقد <bdi>Deloitte</bdi></td>
+            <td><bdi>Dr. Asset (increase)</bdi><br><bdi>Cr. Revenue (increase)</bdi></td>
+            <td>القسم 3 (<code>P4</code>)</td></tr>
+      </table>
+      <p style="font-size:.85rem;color:var(--muted)">* حاشية الكتاب: في الإهلاك (<bdi>depreciation</bdi>) الدائن يكون مجمّع الإهلاك (<bdi>Accumulated Depreciation</bdi>) —
+      حساب مقابل (<bdi>contra account</bdi>) للأصل، يجيك في القسم ٢. وحاشية ثانية: الجدول يفترض إن المصروف المؤجّل انسجل أول مرة <b>أصل</b> والإيراد
+      المؤجّل انسجل أول مرة <b>التزام</b> — الطريقة الثانية في <bdi>Appendix 3A</bdi>.</p>
+      <p>نفس <bdi>Exhibit 3.12</bdi> يعطيك مفتاح الحفظ: <mark class="k">في <b>التأجيل</b> (<bdi>deferrals</bdi>) الكاش ينقبض أو ينصرف <b>قبل</b>
+      الاعتراف بالمصروف أو الإيراد؛ في <b>الاستحقاق</b> (<bdi>accruals</bdi>) الكاش يجي <b>بعد</b> الاعتراف</mark>. ولاحظ العمود الثالث: كل
+      قيد فيه حساب قائمة دخل (<bdi>Expense</bdi> أو <bdi>Revenue</bdi>) + حساب ميزانية (<bdi>Asset</bdi> أو <bdi>Liability</bdi>)، وولا واحد فيه
+      <bdi>Cash</bdi>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — الخطوات الثلاث (<bdi>Exhibit 3.4</bdi>) وقيد التسوية</span>
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.4 — Three-Step Process for Adjusting Entries</div>
+        <table dir="ltr">
+          <tr><td style="text-align:left;white-space:nowrap"><b>Step 1:</b></td><td style="text-align:left">Determine what the current account balance equals.</td></tr>
+          <tr><td style="text-align:left;white-space:nowrap"><b>Step 2:</b></td><td style="text-align:left">Determine what the current account balance should equal.</td></tr>
+          <tr><td style="text-align:left;white-space:nowrap"><b>Step 3:</b></td><td style="text-align:left">Record an adjusting entry to get from step 1 to step 2.</td></tr>
+        </table>
+        <p class="excap">بالعربي: <b>١)</b> وش رصيد الحساب <b>الحين</b>؟ <b>٢)</b> وش رصيده <b>المفروض</b> يكون؟ <b>٣)</b> سجّل <b>قيد تسوية</b> يوديك من
+        الأولى للثانية. هذي الطريقة تستخدمها في <b>كل</b> تسوية في القسمين ٢ و٣.</p>
+      </div>
+      <p><b>قيد التسوية</b> (<bdi>adjusting entry</bdi>) = قيد ينعمل <b>آخر الفترة المحاسبية</b> ويعكس عملية أو حدث <b>لسّا ما انسجل</b>. وقاعدته
+      الذهبية: <mark class="k">يمس <b>حساب أو أكثر من قائمة الدخل</b> (إيراد أو مصروف) و<b>حساب أو أكثر من الميزانية</b> (أصل أو التزام) —
+      <b>وأبداً ما يمس الـ<bdi>Cash</bdi></b></mark>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">معاينة — الخطوات الثلاث على تأمين <bdi>FastForward</bdi> (تفاصيلها في القسم ٢)</span>
+      <ol>
+        <li><b>الخطوة 1:</b> رصيد <bdi>Prepaid Insurance</bdi> الحين = <b>$2,400</b> (الدفعة لـ24 شهر تبدأ 1 ديسمبر 2021).</li>
+        <li><b>الخطوة 2:</b> لين 31 ديسمبر 2021 انتهى <b>شهر</b> تغطية = <span class="mono" dir="ltr">1/24 × 2,400 = 100</span> مصروف، فالرصيد المفروض =
+            <span class="mono" dir="ltr">2,400 − 100 = 2,300</span>.</li>
+        <li><b>الخطوة 3:</b> سجّل قيد يوديك من 2,400 لـ2,300:</li>
+      </ol>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td></td><td><b>Adjustment (a)</b></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Insurance Expense</td><td class="mono" dir="ltr" style="text-align:right">100</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Prepaid Insurance</td><td></td><td class="mono" dir="ltr" style="text-align:right">100</td></tr>
+        <tr><td></td><td><i>Record first month's expired insurance.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Insurance Expense</bdi> (مصروف — قائمة الدخل) زاد ← <b>مدين</b>، لأن المصروفات تزيد بالمدين. و<bdi>Prepaid Insurance</bdi>
+      (أصل — الميزانية) نقص ← <b>دائن</b>. المعادلة: <span class="mono" dir="ltr">Assets <span class="neg">−100</span> = Liabilities + Equity <span class="neg">−100</span></span>.
+      ولاحظ القاعدة: حساب دخل + حساب ميزانية، و<b>ما فيه <bdi>Cash</bdi></b> — الكاش طلع من زمان في العملية (13).</p>
+      <table dir="ltr">
+        <tr><th colspan="2" style="text-align:center">Prepaid Insurance (128)</th></tr>
+        <tr><th>Debit</th><th>Credit</th></tr>
+        <tr><td class="mono" dir="ltr">Dec. 1 &nbsp; 2,400</td><td class="mono" dir="ltr">Dec. 31 &nbsp; 100</td></tr>
+        <tr><td class="mono" dir="ltr"><b>Balance &nbsp; 2,300</b></td><td></td></tr>
+      </table>
+      <p>يعني: الحساب بدأ مدين بـ2,400، والتسوية حطت 100 في الدائن، فالرصيد صار <span class="mono" dir="ltr">2,400 − 100 = 2,300</span> — بالضبط الرقم
+      المفروض في الخطوة 2.</p>
+      <table dir="ltr">
+        <tr><th colspan="2" style="text-align:center">Insurance Expense (637)</th></tr>
+        <tr><th>Debit</th><th>Credit</th></tr>
+        <tr><td class="mono" dir="ltr">Dec. 31 &nbsp; 100</td><td></td></tr>
+        <tr><td class="mono" dir="ltr"><b>Balance &nbsp; 100</b></td><td></td></tr>
+      </table>
+      <p>يعني: المصروف بدأ صفر، والتسوية حطت فيه 100 مدين — وهذا الـ<b>$100</b> اللي ينعرض في قائمة دخل ديسمبر 2021، نفس رقم رزنامة 2021 في
+      <bdi>Exhibit 3.2</bdi>. الكتاب يقول بعد التسوية والترحيل، رصيد <bdi>Insurance Expense</bdi> ($100) ورصيد <bdi>Prepaid Insurance</bdi> ($2,300)
+      <b>جاهزين للقوائم المالية</b>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Four types of adjustments exist for transactions and events that extend over more than one period.</p>
+      <p>Adjustments are made using a 3-step process, as shown in Exhibit 3.4.<br>
+      Step 1: Determine what the current account balance equals.<br>
+      Step 2: Determine what the current account balance should equal.<br>
+      Step 3: Record an adjusting entry to get from step 1 to step 2.</p>
+      <p>Each <b>adjusting entry</b> made at the end of an accounting period reflects a transaction or event that is not yet recorded. An
+      adjusting entry affects one or more income statement accounts and one or more balance sheet accounts (but never the Cash account).</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>الأنواع <b>أربع</b>: <b>ثنتين تأجيل</b> (<bdi>deferral of expense</bdi>، <bdi>deferral of revenue</bdi>) + <b>ثنتين استحقاق</b>
+            (<bdi>accrued expense</bdi>، <bdi>accrued revenue</bdi>). أي اختيار فيه نوع للكاش أو للمعدات = مو منها.</li>
+        <li>قيد التسوية <b>أبداً</b> ما فيه <bdi>Cash</bdi>. أي اختيار فيه مدين أو دائن <bdi>Cash</bdi> = مو قيد تسوية.</li>
+        <li>كل قيد تسوية = حساب <b>قائمة دخل</b> + حساب <b>ميزانية</b>. اختيار «حسابين ميزانية» أو «حسابين قائمة دخل» = غلط.</li>
+        <li>ترتيب الخطوات: <b>وش الرصيد الحين</b> ← <b>وش المفروض يكون</b> ← <b>سجّل القيد</b>. لا تبدأ بالقيد.</li>
+        <li>قيود التسوية تنعمل <b>آخر</b> الفترة المحاسبية، وتسجّل شي <b>لسّا ما انسجل</b> — مو تصحيح أخطاء.</li>
+        <li>لا تقلب التأجيل والاستحقاق: <b>تأجيل</b> = الكاش <b>قبل</b> الاعتراف (مدفوع مقدّماً / غير مكتسب)، <b>استحقاق</b> = الكاش <b>بعد</b>
+            الاعتراف (مستحق ما اندفع / ما انقبض).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">الأسئلة بالإنجليزي لأن الاختبار بالإنجليزي. جاوب قبل ما تفتح الحل. لو غلطت في ٢ ارجع لجدول السنين في المفهوم الثالث، ولو غلطت في ٣ ارجع لتمرين <bdi>Roma</bdi> في المفهوم الثاني.</p>
+
+<div class="q">
+  <div class="stem">1. Retailers such as Target and Nordstrom end their natural business year around January 31. A company with seasonal variations in sales usually ends its natural business year when:</div>
+  <ol type="A">
+    <li>the busy holiday shopping season begins</li>
+    <li>sales are at their lowest level for the year</li>
+    <li>sales are at their highest level for the year</li>
+    <li>the calendar year ends on December 31</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. الكتاب: الشركات اللي مبيعاتها موسمية تختار <bdi>natural business year</bdi> تخلص لما المبيعات تكون في <b>أقل</b> مستوى في السنة —
+  وللتجزئة هذا تقريباً 31 يناير، بعد موسم الأعياد. الفخ في <b>C</b>: عكس الكتاب (أعلى بدل أقل). و<b>A</b> فخ: بداية موسم الأعياد هي بداية الزحمة،
+  والكتاب يقول السنة تخلص <b>بعد</b> الأعياد (<bdi>after the holidays</bdi>). و<b>D</b> فخ: 31 ديسمبر هي السنة الميلادية اللي تستخدمها الشركات
+  <b>قليلة</b> الموسمية زي <bdi>Netflix</bdi>.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. Exhibits 3.2 and 3.3 show that FastForward paid $2,400 for 24 months of insurance coverage beginning December 1, 2021. How much insurance expense is reported for the year 2023?</div>
+  <ol type="A">
+    <li>Accrual basis $1,200; cash basis $0</li>
+    <li>Accrual basis $1,100; cash basis $0</li>
+    <li>Accrual basis $1,100; cash basis $2,400</li>
+    <li>Accrual basis $0; cash basis $1,100</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. في 2023 التغطية من يناير لين نوفمبر = <span class="mono" dir="ltr">11 × 100 = 1,100</span> — رزنامة 2023 في <bdi>Exhibit 3.2</bdi> ديسمبر فيها
+  <bdi>$0</bdi>. والأساس النقدي حط الـ2,400 كلها في ديسمبر 2021، فـ2023 = <b>صفر</b> (<bdi>Exhibit 3.3</bdi>). الفخ في <b>A</b>: يحسب 12 شهر
+  وينسى إن التغطية تخلص نوفمبر 2023. و<b>C</b> يحط الـ2,400 في السنة الغلط. و<b>D</b> يعكس الأساسين.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. In its first year, a company earned revenues of $60,000 ($52,000 received in cash). It incurred expenses of $35,000 ($30,000 paid in cash). It also prepaid $4,000 cash for costs that will not be expensed until next year. What is its first-year net income under the cash basis and under the accrual basis?</div>
+  <ol type="A">
+    <li>Cash basis $18,000; accrual basis $25,000</li>
+    <li>Cash basis $22,000; accrual basis $25,000</li>
+    <li>Cash basis $25,000; accrual basis $18,000</li>
+    <li>Cash basis $18,000; accrual basis $21,000</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>A</b>. النقدي = المقبوضات ناقص <b>كل</b> المدفوعات: <span class="mono" dir="ltr">52,000 − (30,000 + 4,000) = 18,000</span>. الاستحقاق = الإيراد المكتسب
+  ناقص المصروف اللي صار: <span class="mono" dir="ltr">60,000 − 35,000 = 25,000</span>. الفخ في <b>B</b>: نسي الـ4,000 المدفوعة مقدّم في النقدي
+  (<span class="mono" dir="ltr">52,000 − 30,000 = 22,000</span>). و<b>C</b> يعكس الأساسين. و<b>D</b> خصم الـ4,000 في الاستحقاق — بس هي أصل مدفوع مقدّماً، مو
+  مصروف هالسنة. نفس فكرة <bdi>Roma</bdi> في المفهوم الثاني بالضبط.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. On December 20, a company completes and delivers $8,000 of services to a customer, who will pay in February. Under accrual basis accounting, how much revenue does the company recognize in December?</div>
+  <ol type="A">
+    <li>$0, because revenue is recorded in February when the cash is received</li>
+    <li>$8,000, because revenue is recorded when the services are provided</li>
+    <li>$4,000, because the revenue is split between December and February</li>
+    <li>$0, because the $8,000 is recorded as unearned revenue in December</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <bdi>Revenue recognition principle</bdi>: الإيراد ينسجل <b>لما الخدمة تتقدّم</b> وبالمبلغ المتوقع استلامه — زي سيارة <bdi>Tesla</bdi>
+  في <bdi>Exercise 3-2</bdi>. الفخ في <b>A</b>: هذا تفكير الأساس النقدي. و<b>D</b> فخ: <bdi>unearned revenue</bdi> لما الكاش ينقبض <b>قبل</b>
+  الخدمة — هنا العكس، الخدمة قبل الكاش (والعميل صار عليه فلوس للشركة — فيتسجّل يومها، 20 ديسمبر: مدين <bdi>Accounts Receivable</bdi>
+  (الذمم المدينة)، دائن الإيراد؛ ويصير <bdi>accrued revenue</bdi> بس لو ما انسجل لين آخر الفترة، القسم ٣). و<b>C</b> ما له أي أساس في المبدأ — الخدمة كلها انقدّمت في ديسمبر.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. Which statement about adjusting entries is correct?</div>
+  <ol type="A">
+    <li>They are recorded whenever cash is received or paid during the period</li>
+    <li>Each one affects one or more income statement accounts and one or more balance sheet accounts, but never the Cash account</li>
+    <li>Each one affects two balance sheet accounts, such as Cash and Prepaid Insurance</li>
+    <li>They are needed because external transactions were recorded with errors</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. هذي جملة الكتاب حرفياً: حساب قائمة دخل + حساب ميزانية، <b>وأبداً ما فيه <bdi>Cash</bdi></b> — زي قيد التأمين: <bdi>Insurance Expense</bdi>
+  و<bdi>Prepaid Insurance</bdi>. الفخ في <b>A</b>: قيود التسوية تنعمل <b>آخر الفترة</b> وما لها دخل بحركة الكاش. و<b>C</b> فيه <bdi>Cash</bdi> وفيه
+  حسابين ميزانية — غلطتين. و<b>D</b> فخ: نحتاجها لأن <b>العمليات الداخلية</b> لسّا ما انسجلت، مو لأن فيه أخطاء.</p></details>
+</div>
+
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH3-S1">ابدأ</button> <button class="pill" data-deck="ACCT203-CH3-S1" data-mode="ar">عربي ← إنجليزي</button></div></div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Timeliness</bdi></td><td>التوقيت المناسب للمعلومة</td><td>قيمة المعلومة مربوطة فيه ← تقارير على فترات منتظمة</td></tr>
+  <tr><td><bdi>Time period assumption</bdi></td><td>فرض الفترة الزمنية</td><td><b>فرض</b> إن النشاط ينقسم لفترات: شهر · ربع (3 شهور) · نص سنة · سنة</td></tr>
+  <tr><td><bdi>Accounting (reporting) period</bdi></td><td>الفترة المحاسبية</td><td>أغلب المنظمات فترتها الرئيسية = <b>سنة</b> (<bdi>Exhibit 3.1</bdi>)</td></tr>
+  <tr><td><bdi>Annual financial statements</bdi></td><td>القوائم المالية السنوية</td><td>تغطي سنة وحدة</td></tr>
+  <tr><td><bdi>Interim financial statements</bdi></td><td>القوائم المالية المرحلية</td><td>1 أو 3 أو 6 شهور — أقل من سنة</td></tr>
+  <tr><td><bdi>Fiscal year</bdi></td><td>السنة المالية</td><td>أي 12 شهر متتالية <b>أو</b> 52 أسبوع — مو شرط تخلص 31 ديسمبر (<bdi>Gap</bdi>)</td></tr>
+  <tr><td><bdi>Calendar year</bdi></td><td>السنة الميلادية</td><td>تخلص 31 ديسمبر؛ للشركات قليلة الموسمية (<bdi>Netflix</bdi>)</td></tr>
+  <tr><td><bdi>Natural business year</bdi></td><td>سنة النشاط الطبيعية</td><td>تخلص لما المبيعات في <b>أقل</b> مستوى — <bdi>Target</bdi> و<bdi>Nordstrom</bdi> حوالي 31 يناير</td></tr>
+  <tr><td><bdi>Accrual basis accounting</bdi></td><td>أساس الاستحقاق</td><td>الإيراد لما يتسلّم المنتج أو الخدمة، والمصروف لما يصير (ويتقابل مع الإيراد)</td></tr>
+  <tr><td><bdi>Cash basis accounting</bdi></td><td>الأساس النقدي</td><td>الإيراد لما يدخل الكاش، والمصروف لما يطلع؛ الدخل = مقبوضات − مدفوعات</td></tr>
+  <tr><td><bdi>Comparability</bdi></td><td>قابلية المقارنة</td><td>الاستحقاق <b>يزيدها</b> من فترة لفترة — مو النقدي</td></tr>
+  <tr><td><bdi>Unexpired premium</bdi> (<bdi>Prepaid Insurance</bdi>)</td><td>قسط التأمين اللي ما انتهى (تأمين مدفوع مقدّماً)</td><td>أصل في ميزانية الاستحقاق؛ الميزانية النقدية ما تعرضه أبداً</td></tr>
+  <tr><td><bdi>Revenue recognition principle</bdi></td><td>مبدأ الاعتراف بالإيراد</td><td>لما السلع أو الخدمات <b>تتقدّم</b> + بالمبلغ المتوقع استلامه</td></tr>
+  <tr><td><bdi>Expense recognition (matching) principle</bdi></td><td>مبدأ الاعتراف بالمصروف (المقابلة)</td><td>نفس فترة <b>الإيراد</b> اللي ساعد يجيبه — مو وقت الدفع</td></tr>
+  <tr><td><bdi>Four types of adjustments</bdi></td><td>أنواع التسويات الأربعة</td><td><bdi>deferral of expense · deferral of revenue · accrued expense · accrued revenue</bdi></td></tr>
+  <tr><td><bdi>Deferrals</bdi> / <bdi>Accruals</bdi></td><td>التأجيل / الاستحقاق</td><td>التأجيل: الكاش <b>قبل</b> الاعتراف · الاستحقاق: الكاش <b>بعد</b> الاعتراف (<bdi>Exhibit 3.12</bdi>)</td></tr>
+  <tr><td><bdi>Three-step process</bdi> (<bdi>Exhibit 3.4</bdi>)</td><td>الخطوات الثلاث للتسوية</td><td>الرصيد الحين ← الرصيد المفروض ← قيد التسوية</td></tr>
+  <tr><td><bdi>Adjusting entry</bdi></td><td>قيد تسوية</td><td>آخر الفترة؛ حساب قائمة دخل + حساب ميزانية؛ <b>أبداً</b> ما يمس <bdi>Cash</bdi></td></tr>
+  <tr><td><bdi>Exhibits 3.2 / 3.3</bdi></td><td>الاستحقاق مقابل النقدي (مثال التأمين)</td><td><span class="mono" dir="ltr">100 · 1,200 · 1,100</span> مقابل <span class="mono" dir="ltr">2,400 · 0 · 0</span> — المجموع واحد</td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب <bdi>Financial Accounting Fundamentals</bdi> (<bdi>John J. Wild</bdi>، <bdi>McGraw Hill</bdi>، الطبعة ٨) —
+<bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi>: فاتحة الفصل (<bdi>Chapter Preview</bdi> · <bdi>Learning Objectives</bdi> ·
+<bdi>Leading the Way</bdi>) والجزء <bdi>Timing and Reporting</bdi> (فروعه: <bdi>The Accounting Period</bdi> · <bdi>Accrual Basis versus Cash Basis</bdi> ·
+<bdi>Recognizing Revenues and Expenses</bdi> · <bdi>Framework for Adjustments</bdi>)، الهدف <code>C1</code> (صفحات ٨٤–٨٧)، مع
+<bdi>Exhibits 3.1</bdi> لين <bdi>3.4</bdi>.
+<br><b>ملخّص بس:</b> قصة <bdi>Sword &amp; Plough</bdi> في <bdi>Leading the Way</bdi> مأخوذ منها الشاهد المحاسبي بس. قيد العملية (13) من الفصل
+الثاني، ومعاينة قيد التأمين $100 وحسابات <bdi>T</bdi> من جزء <bdi>Deferral of Expense</bdi> (شرحه الكامل في القسم ٢)، وعمود «شكل قيد التسوية»
+من <bdi>Exhibit 3.12</bdi> في جزء <bdi>Accrued Revenue</bdi> (القسم ٣). حلول <bdi>QS 3-2</bdi> و<bdi>Exercises 3-2</bdi> و<bdi>3-3</bdi> محسوبة هنا من
+أرقام الكتاب — الكتاب يعطي الأسئلة بدون حل — وجدول رصيد التأمين آخر كل سنة حسبته من أرقام المثال (فكرة <bdi>Exercise 3-1</bdi>). تمرين
+<bdi>QS 3-1</bdi> (إكمال فراغات بالمصطلحات) ما انحل هنا — مصطلحاته كلها في جدول المصطلحات فوق. أرقام الأسئلة ٣ و٤ من عندي.
+<br><b>ملاحق الفصل:</b> <bdi>3A</bdi> و<bdi>3B</bdi> و<bdi>3C</bdi> (<code>P7</code>–<code>P9</code>) مذكورة في ملاحظات الأقسام ٢ و٣ و٤ — ملاحق، اسأل الدكتور إذا داخلة.
+</p>
+
+
+<div class="footnav">
+  <div class="side"></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><a class="pill" href="ACCT203-CH3-S2.html">٢. تسويات المؤجّلات ←</a></div>
+</div>
+</div>
+<script src="../data/cards-ACCT203-CH3-S1.js?v=7"></script>
+<script src="../assets/flashcards.js?v=7"></script>
+<script src="../assets/lesson.js?v=7"></script>
+</body>
+</html>

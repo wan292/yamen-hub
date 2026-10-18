@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ٢: ميزان المراجعة والقوائم المالية ونسبة المديونية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/theme.css?v=7">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH2-S4-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH2-S4">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
+</div>
+<header class="lh">
+  <h1>الفصل الثاني — ميزان المراجعة والقوائم المالية ونسبة المديونية</h1>
+  <p class="sub"><code>ACCT 203</code> · مبادئ المحاسبة المالية · <bdi>Chapter 2: Accounting for Business Transactions</bdi> · القسم ٤ من ٤:
+  <bdi>Trial Balance, Financial Statements, and the Debt Ratio</bdi><br>
+  الهدف <code>P1</code>: <bdi>Prepare financial statements from a trial balance.</bdi><br>
+  الهدف <code>A2</code>: <bdi>Compute the debt ratio and describe its use in analyzing financial condition.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>آخر درس في الفصل: من دفتر الأستاذ للقوائم المالية — وكم الشركة معتمدة على الدين</h2>
+  <p>في الدرس اللي قبل سجّلت عمليات <bdi>FastForward</bdi> الـ16 في دفتر اليومية (<bdi>journal</bdi>) ورحّلتها لدفتر الأستاذ
+  (<bdi>ledger</bdi>). الحين يا يامن بنسوي ثلاث أشياء: نجمع كل الأرصدة في ورقة وحدة اسمها <bdi>trial balance</bdi> (ميزان المراجعة)
+  ونتأكد إن المدين = الدائن، بعدين نطلع منها القوائم المالية الثلاث بالترتيب (<code>P1</code>)، وفي الآخر نقيس خطر الديون بنسبة وحدة
+  اسمها <bdi>debt ratio</bdi> (نسبة المديونية، <code>A2</code>).</p>
+  <p>ركّز من الحين على أربع نقاط يحبها الاختبار: (١) الميزان المتوازن <b>مو دليل</b> إن ما فيه أخطاء، (٢) لو الفرق بين المجموعين
+  = <b>ضعف</b> رصيد حساب، يعني هالرصيد انكتب في العمود الغلط، (٣) ترتيب القوائم: الدخل ← الأرباح المحتجزة ← الميزانية،
+  (٤) <span class="mono" dir="ltr">Debt ratio = Total liabilities ÷ Total assets</span>.</p>
+</div>
+
+<!-- 1 · Trial balance (Exhibit 2.14) + three steps + Need-To-Know 2-4 -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🧾</div>
+    <div class="term">Trial Balance</div>
+    <div class="ar">ميزان المراجعة</div>
+    <div class="say">ورقة وحدة فيها كل الحسابات وأرصدتها — عشان تتأكد إن المدين = الدائن</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Trial balance</bdi></b> = قائمة بكل حسابات الأستاذ وأرصدتها <b>في لحظة زمنية</b>. هو <b>مو قائمة مالية</b> —
+      أداة تفحص فيها إن مجموع أرصدة المدين = مجموع أرصدة الدائن.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>زي الكاشير آخر الدوام: يجمع اللي في الدرج لحاله، ويجمع اللي في شريط الجهاز لحاله، ولازم الرقمين يتطابقون قبل ما يسلّم.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — وش هو ميزان المراجعة؟</span>
+      <p><b><bdi>Trial balance</bdi></b> (ميزان المراجعة) = <mark class="k">قائمة بكل حسابات الأستاذ (<bdi>ledger accounts</bdi>) وأرصدتها
+      في لحظة زمنية معيّنة</mark>. والكتاب يشدد: هو <b>مو قائمة مالية</b> (<bdi>not a financial statement</bdi>)، هو <b>أداة</b>
+      تتأكد فيها إن المدين (<bdi>debit</bdi>) والدائن (<bdi>credit</bdi>) في دفتر الأستاذ متساويين.</p>
+      <p><bdi>Exhibit 2.14</bdi> يوريك ميزان <bdi>FastForward</bdi> بعد ما انرحّلت قيودها الـ16 للأستاذ. وهذا ميزان
+      <b>قبل التسويات</b> (<bdi>unadjusted trial balance</bdi>) — التسويات يشرحها الفصل الثالث.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.14 — Trial Balance (Unadjusted)</div>
+        <table dir="ltr">
+          <tr><th colspan="3">FASTFORWARD<br>Trial Balance<br>December 31, 2021</th></tr>
+          <tr><th></th><th>Debit</th><th>Credit</th></tr>
+          <tr><td style="text-align:left">Cash</td><td class="mono" style="text-align:right">$ 4,275</td><td></td></tr>
+          <tr><td style="text-align:left">Accounts receivable</td><td class="mono" style="text-align:right">0</td><td></td></tr>
+          <tr><td style="text-align:left">Supplies</td><td class="mono" style="text-align:right">9,720</td><td></td></tr>
+          <tr><td style="text-align:left">Prepaid insurance</td><td class="mono" style="text-align:right">2,400</td><td></td></tr>
+          <tr><td style="text-align:left">Equipment</td><td class="mono" style="text-align:right">26,000</td><td></td></tr>
+          <tr><td style="text-align:left">Accounts payable</td><td></td><td class="mono" style="text-align:right">$ 6,200</td></tr>
+          <tr><td style="text-align:left">Unearned consulting revenue</td><td></td><td class="mono" style="text-align:right">3,000</td></tr>
+          <tr><td style="text-align:left">Common Stock</td><td></td><td class="mono" style="text-align:right">30,000</td></tr>
+          <tr><td style="text-align:left">Dividends</td><td class="mono" style="text-align:right">200</td><td></td></tr>
+          <tr><td style="text-align:left">Consulting revenue</td><td></td><td class="mono" style="text-align:right">5,800</td></tr>
+          <tr><td style="text-align:left">Rental revenue</td><td></td><td class="mono" style="text-align:right">300</td></tr>
+          <tr><td style="text-align:left">Salaries expense</td><td class="mono" style="text-align:right">1,400</td><td></td></tr>
+          <tr><td style="text-align:left">Rent expense</td><td class="mono" style="text-align:right">1,000</td><td></td></tr>
+          <tr><td style="text-align:left">Utilities expense</td><td class="mono" style="text-align:right">305</td><td></td></tr>
+          <tr><td style="text-align:left"><b>Totals</b></td><td class="mono" style="text-align:right"><b>$45,300</b></td><td class="mono" style="text-align:right"><b>$45,300</b></td></tr>
+        </table>
+        <p class="excap">هذا هو <b><bdi>Exhibit 2.14</bdi></b> في الكتاب (جدول مو صورة). <b>كيف تقرأه:</b> العنوان ثلاث أسطر — اسم الشركة، اسم
+        الكشف، و<b>تاريخ لحظة وحدة</b> (<bdi>December 31, 2021</bdi>). أول خمس أسطر أصول في عمود <b><bdi>Debit</bdi></b> — حتى
+        <bdi>Accounts receivable</bdi> (الذمم المدينة) انكتب ورصيده 0. بعدها <bdi>Accounts payable</bdi> (الذمم الدائنة)
+        و<bdi>Unearned consulting revenue</bdi> (إيرادات استشارية غير مكتسبة) و<bdi>Common Stock</bdi> (الأسهم العادية) في
+        <b><bdi>Credit</bdi></b>، و<bdi>Dividends</bdi> (التوزيعات) في <b><bdi>Debit</bdi></b>، والإيرادات في <b><bdi>Credit</bdi></b>،
+        والمصروفات الثلاث في <b><bdi>Debit</bdi></b>. <b>اجمع بنفسك:</b> المدين
+        <span class="mono" dir="ltr">4,275 + 0 + 9,720 + 2,400 + 26,000 + 200 + 1,400 + 1,000 + 305 = 45,300</span>، والدائن
+        <span class="mono" dir="ltr">6,200 + 3,000 + 30,000 + 5,800 + 300 = 45,300</span> ✓.</p>
+      </div>
+
+      <p><b>إعداد ميزان المراجعة — ثلاث خطوات</b> (<bdi>three steps</bdi>):</p>
+      <ol>
+        <li><b>اكتب</b> اسم كل حساب ومبلغه (من الأستاذ) في الميزان.</li>
+        <li><b>اجمع</b> أرصدة المدين لحالها، وأرصدة الدائن لحالها.</li>
+        <li><b>تأكد (أثبت)</b> إن مجموع أرصدة المدين = مجموع أرصدة الدائن.</li>
+      </ol>
+      <p>وكيف تعرف كل رصيد في أي عمود؟ من <b>الرصيد الطبيعي</b> (<bdi>normal balance</bdi>) اللي أخذته في درس ٢:</p>
+      <table>
+        <tr><th>عمود <bdi>Debit</bdi> (مدين)</th><th>عمود <bdi>Credit</bdi> (دائن)</th></tr>
+        <tr><td>الأصول (<bdi>Assets</bdi>)</td><td>الالتزامات (<bdi>Liabilities</bdi>)</td></tr>
+        <tr><td><b class="g-dv"><bdi>Dividends</bdi></b> (التوزيعات)</td><td><b class="g-cs"><bdi>Common Stock</bdi></b> (الأسهم العادية) و<bdi>Retained earnings</bdi> (الأرباح المحتجزة)</td></tr>
+        <tr><td><b class="g-ex"><bdi>Expenses</bdi></b> (المصروفات)</td><td><b class="g-rv"><bdi>Revenues</bdi></b> (الإيرادات)</td></tr>
+      </table>
+      <p><b>علامة الدولار</b> (<bdi>Presentation Issues</bdi>): ما تنكتب في اليومية ولا في الأستاذ، بس <b>تنكتب</b> في القوائم المالية
+      والتقارير الثانية زي ميزان المراجعة — وعادةً <mark class="k">جنب <b>أول رقم وآخر رقم بس</b> في العمود</mark>. شوفها في الجدول فوق:
+      <span class="mono">$ 4,275</span> أول عمود المدين، <span class="mono">$ 6,200</span> أول عمود الدائن، و<span class="mono">$45,300</span> المجموع.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — <bdi>Need-To-Know 2-4</bdi>: ميزان مراجعة <bdi>Accel</bdi></span>
+      <p>المطلوب: سوّ ميزان مراجعة لشركة <bdi>Accel</bdi> من هالمعلومات لسنتها الحالية المنتهية في 31 ديسمبر. لاحظ إن الكتاب يعطيك
+      الحسابات <b>مخربطة</b> — شغلك ترتّبها وتحط كل رصيد في عموده.</p>
+      <table dir="ltr">
+        <tr><th>Account</th><th>Balance</th><th>Account</th><th>Balance</th></tr>
+        <tr><td>Accounts payable</td><td class="mono" style="text-align:right">$ 7,500</td><td>Land</td><td class="mono" style="text-align:right">$30,000</td></tr>
+        <tr><td>Wages payable</td><td class="mono" style="text-align:right">13,000</td><td>Equipment</td><td class="mono" style="text-align:right">27,000</td></tr>
+        <tr><td>Rent expense</td><td class="mono" style="text-align:right">7,000</td><td>Wages expense</td><td class="mono" style="text-align:right">21,000</td></tr>
+        <tr><td>Cash</td><td class="mono" style="text-align:right">17,000</td><td>Accounts receivable</td><td class="mono" style="text-align:right">5,000</td></tr>
+        <tr><td>Services revenue</td><td class="mono" style="text-align:right">41,000</td><td>Retained earnings, Dec. 31, prior year</td><td class="mono" style="text-align:right">26,000</td></tr>
+        <tr><td>Dividends</td><td class="mono" style="text-align:right">12,500</td><td>Common stock</td><td class="mono" style="text-align:right">32,000</td></tr>
+      </table>
+      <p><b>الحل:</b></p>
+      <div class="stmt">
+        <div class="hd">ACCEL<br>Trial Balance<br>December 31</div>
+        <table>
+          <tr><td></td><td class="n"><b>Debit</b></td><td class="n"><b>Credit</b></td></tr>
+          <tr><td>Cash</td><td class="n">$ 17,000</td><td></td></tr>
+          <tr><td>Accounts receivable</td><td class="n">5,000</td><td></td></tr>
+          <tr><td>Equipment</td><td class="n">27,000</td><td></td></tr>
+          <tr><td>Land</td><td class="n">30,000</td><td></td></tr>
+          <tr><td>Accounts payable</td><td></td><td class="n">$ 7,500</td></tr>
+          <tr><td>Wages payable</td><td></td><td class="n">13,000</td></tr>
+          <tr><td>Common stock</td><td></td><td class="n">32,000</td></tr>
+          <tr><td>Retained earnings, Dec. 31, prior year</td><td></td><td class="n">26,000</td></tr>
+          <tr><td>Dividends</td><td class="n">12,500</td><td></td></tr>
+          <tr><td>Services revenue</td><td></td><td class="n">41,000</td></tr>
+          <tr><td>Rent expense</td><td class="n">7,000</td><td></td></tr>
+          <tr><td>Wages expense</td><td class="n">21,000</td><td></td></tr>
+          <tr class="tot"><td>Totals</td><td class="n">$119,500</td><td class="n">$119,500</td></tr>
+        </table>
+      </div>
+      <ul>
+        <li><b>المدين:</b> <span class="mono" dir="ltr">17,000 + 5,000 + 27,000 + 30,000 + 12,500 + 7,000 + 21,000 = 119,500</span></li>
+        <li><b>الدائن:</b> <span class="mono" dir="ltr">7,500 + 13,000 + 32,000 + 26,000 + 41,000 = 119,500</span> ✓</li>
+        <li><b>ترتيب الحل:</b> الأصول، بعدها الالتزامات، بعدها <bdi>Common stock</bdi> و<bdi>Retained earnings</bdi> و<bdi>Dividends</bdi>،
+            بعدها الإيرادات، وآخر شي المصروفات — نفس ترتيب ميزان <bdi>FastForward</bdi>.</li>
+        <li><bdi>Retained earnings, Dec. 31, prior year</bdi> = رصيد الأرباح المحتجزة من <b>السنة اللي قبل</b>، ومكانه <b>الدائن</b>.
+            <bdi>FastForward</bdi> ما عندها هالسطر لأن ديسمبر 2021 أول شهر تشتغل فيه.</li>
+      </ul>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>A <b>trial balance</b> is a list of all ledger accounts and their balances at a point in time. It is not a financial
+      statement but a tool for checking equality of debits and credits in the ledger.</p>
+      <p>Preparing a trial balance has three steps.</p>
+      <ol>
+        <li>List each account title and its amount (from the ledger) in the trial balance.</li>
+        <li>Compute the total of debit balances and the total of credit balances.</li>
+        <li>Verify (prove) total debit balances equal total credit balances.</li>
+      </ol>
+      <p>Dollar signs are not used in journals and ledgers. They do appear in financial statements and other reports such as
+      trial balances. We usually put dollar signs beside only the first and last numbers in a column.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Trial balance</bdi> <b>مو</b> قائمة مالية. أي اختيار يقول <bdi>it is a financial statement</bdi> أو يحطه مع القوائم = غلط.
+            هو أداة فحص بس.</li>
+        <li>عنوانه <b>تاريخ لحظة</b> (<bdi>December 31, 2021</bdi>) زي الميزانية — مو <bdi>For Month Ended</bdi>.</li>
+        <li><bdi>Dividends</bdi> في عمود <b>المدين</b> — مو الدائن. و<bdi>Unearned consulting revenue</bdi> في <b>الدائن</b> لأنه
+            <b>التزام</b>، مو إيراد مع إن اسمه فيه <bdi>revenue</bdi>.</li>
+        <li><bdi>Retained earnings</bdi> القديم (من السنة اللي قبل) يدخل الميزان في <b>الدائن</b> — زي <bdi>Accel</bdi>.</li>
+        <li>علامة الدولار: <b>لا</b> في اليومية والأستاذ، <b>نعم</b> في ميزان المراجعة والقوائم — وجنب أول وآخر رقم في العمود بس.</li>
+        <li><b>ورق الدكتور ممكن يستخدم منشأة فردية:</b> <bdi>Owner's Capital</bdi> بدل <bdi>Common Stock</bdi>، و<bdi>Owner's Withdrawals</bdi>
+            (أو <bdi>Drawing</bdi>) بدل <bdi>Dividends</bdi>. نفس الفكرة بشكل منشأة ثاني، ونفس القواعد: الـ<bdi>capital</bdi> في
+            <b>الدائن</b> مكان <bdi>common stock</bdi>، والـ<bdi>withdrawals</bdi> في <b>المدين</b> مكان <bdi>dividends</bdi>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · What a balanced trial balance does not prove + searching for errors -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🔍</div>
+    <div class="term">Trial Balance Errors and Searching for Them</div>
+    <div class="ar">أخطاء ميزان المراجعة وكيف تدوّر عليها</div>
+    <div class="say">الميزان المتوازن مو شهادة براءة — والغير متوازن تدوّر غلطه بالعكس</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      لو الميزان <b>ما توازن</b> = أكيد فيه غلط، ودوّر عليه <b>بالترتيب العكسي</b>: من الميزان رجوع لليومية. ولو <b>توازن</b>؟
+      مو شرط إن ما فيه غلط — فيه أخطاء ما تبان أبد، والكتاب يعطيك عليها مثالين.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>ميزان البقالة: تحط كيلو طماطم وتسجّله بصل — الميزان مضبوط والكيلو صح، بس الفاتورة غلط.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الميزان المتوازن وش ما يثبت</span>
+      <p>المجموعين متساويين في <bdi>Exhibit 2.14</bdi>. بس الكتاب ينبّه: <mark class="k">تساوي المجموعين <b>ما يضمن</b> إن ما صار أي غلط</mark>
+      (<bdi>does not guarantee that no errors were made</bdi>). الكتاب يعطي <b>مثالين</b> لأخطاء الميزان ما يكشفها (أمثلة، مو القائمة كلها):</p>
+      <table>
+        <tr><th>#</th><th>الخطأ</th><th>ليش الميزان يبقى متوازن؟</th></tr>
+        <tr><td>1</td><td>مدين أو دائن <b>بمبلغ صحيح</b> انسجّل في <b>حساب غلط</b><br>
+            <bdi>a debit or credit of a correct amount is made to a wrong account</bdi></td>
+            <td>المبلغ دخل العمود الصح وبالرقم الصح، بس في سطر حساب ثاني — مجموع العمود ما تغيّر.</td></tr>
+        <tr><td>2</td><td>مدين ودائن <b>متساويين</b> بس <b>بمبلغ غلط</b><br>
+            <bdi>equal debits and credits of an incorrect amount are entered</bdi></td>
+            <td>الغلط نفسه دخل الطرفين، فالطرفين زادوا أو نقصوا بنفس القدر.</td></tr>
+      </table>
+      <p><b>إضافة مني (مو من نص الكتاب هنا، بس نفس منطق رقم ٢):</b> قيد <b>ما انسجّل أبد</b>، أو قيد كامل <b>ما انرحّل</b>، أو قيد
+      <b>انرحّل مرتين</b> — المدين والدائن تأثروا بنفس المبلغ، فالميزان يطلع متوازن والغلط موجود. وهذي الفكرة يستخدمها الكتاب كاختيار
+      غلط في تمارينه (آخر اختيار في <bdi>QS 2-12</bdi>: قيد ما انرحّل أبد ← ما يخرّب التوازن).</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — البحث عن الأخطاء: ست خطوات بالعكس</span>
+      <p>لو الميزان <b>ما توازن</b> (عموديه مو متساويين)، لازم تلقى الغلط وتصلّحه. والطريقة الفعّالة: تراجع التسجيل في اليومية
+      (<bdi>journalizing</bdi>) والترحيل (<bdi>posting</bdi>) وإعداد الميزان <mark class="k"><b>بالترتيب العكسي</b> (<bdi>in reverse order</bdi>)</mark>
+      — تبدأ من آخر شي سوّيته وترجع لورا:</p>
+      <table>
+        <tr><th>الخطوة</th><th>وش تسوي</th></tr>
+        <tr><td>1</td><td>تأكد إن أعمدة الميزان <b>مجموعة صح</b>.</td></tr>
+        <tr><td>2</td><td>تأكد إن أرصدة الحسابات <b>منقولة صح</b> من الأستاذ للميزان.</td></tr>
+        <tr><td>3</td><td>شوف إذا رصيد <b>مدين</b> انكتب بالغلط في عمود <b>الدائن</b> (أو العكس).<br>
+            🔑 <b>العلامة:</b> الفرق بين مجموع المدين ومجموع الدائن = <b>ضعف</b> رصيد الحساب الغلط.</td></tr>
+        <tr><td>4</td><td>أعد حساب <b>رصيد كل حساب</b> في الأستاذ.</td></tr>
+        <tr><td>5</td><td>تأكد إن كل قيد في اليومية <b>انرحّل صح</b>.</td></tr>
+        <tr><td>6</td><td>تأكد إن القيد الأصلي في اليومية <b>مدينه = دائنه</b>.</td></tr>
+      </table>
+      <p>وعند هالنقطة المفروض الأخطاء تنكشف.</p>
+      <p><b>ليش «ضعف» في الخطوة ٣؟</b> لأن الرصيد <b>انشال</b> من عموده الصح (والعمود الأول نقص بمبلغه) و<b>انحط</b> في العمود الثاني
+      (والثاني زاد بمبلغه) — فالفرق صار المبلغ <b>مرتين</b>. يعني: <b>اقسم الفرق على 2</b> ودوّر على حساب رصيده بهالمبلغ.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — دائن <bdi>Unearned Revenue</bdi> انرحّل لـ<bdi>Revenue</bdi></span>
+      <p>السؤال: لو دائن المفروض يروح لحساب <bdi>Unearned Revenue</bdi> (إيرادات غير مكتسبة — التزام) انرحّل بالغلط لحساب
+      <bdi>Revenue</bdi> في الأستاذ، الأستاذ يبقى متوازن ولا لا؟</p>
+      <table>
+        <tr><th>الحساب</th><th>المفروض</th><th>اللي صار</th><th>الأثر</th></tr>
+        <tr><td><bdi>Unearned Revenue</bdi> (التزام)</td><td>يزيد بالدائن</td><td>ما زاد</td>
+            <td>الالتزامات <b>أقل من الحقيقة</b> (<bdi>understated</bdi>)</td></tr>
+        <tr><td><bdi>Revenue</bdi> (إيراد)</td><td>ما يتأثر</td><td>زاد بالدائن</td>
+            <td>الدخل <b>أعلى من الحقيقة</b> (<bdi>overstated</bdi>) ← وحقوق الملكية <b>أعلى</b> (<bdi>overstated</bdi>)</td></tr>
+      </table>
+      <p><b>الجواب:</b> الأستاذ <b>يبقى متوازن</b> — الدائن انسجّل بمبلغه الصح بس في حساب غلط (خطأ رقم ١ فوق). بس
+      <mark class="k">الالتزامات <bdi>understated</bdi>، وحقوق الملكية <bdi>overstated</bdi>، والدخل <bdi>overstated</bdi></mark>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Equality of these two totals does not guarantee that no errors were made. For example, the column totals will be equal
+      when a debit or credit of a correct amount is made to a wrong account. Another error not identified with a trial balance
+      is when equal debits and credits of an incorrect amount are entered.</p>
+      <p>An efficient way to search for an error is to check the journalizing, posting, and trial balance preparation in
+      reverse order. Step 3 is to see whether a debit (or credit) balance is mistakenly listed in the trial balance as a credit
+      (or debit). A clue to this error is when the difference between total debits and total credits equals twice the amount
+      of the incorrect account balance.</p>
+      <p>Example: If a credit to Unearned Revenue was incorrectly posted to the Revenue ledger account, would the ledger still
+      balance? Answer: The ledger would balance, but liabilities would be understated, equity would be overstated, and income
+      would be overstated.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>«الميزان متوازن = ما فيه أخطاء» = <b>غلط</b>. مثالين الكتاب على أخطاء ما تنكشف: <b>مبلغ صح في حساب غلط</b>، و<b>مدين ودائن
+            متساويين بمبلغ غلط</b> (ومنه القيد اللي ما انسجّل أو انرحّل مرتين).</li>
+        <li>اللي <b>يخرّب</b> التوازن: شي يضرب <b>طرف واحد بس</b> — جمع غلط، رصيد انتقل غلط من الأستاذ، رصيد في العمود الغلط، مدين
+            انرحّل بدون دائنه، أو قيد أصلي مدينه مو = دائنه.</li>
+        <li>الترتيب <b>عكسي</b>: الخطوة <b>الأولى</b> = جمع أعمدة الميزان، و<b>الأخيرة</b> = القيد الأصلي في اليومية. اختيار يبدأ
+            من اليومية = عكس الكتاب.</li>
+        <li>الفرق = <b>ضعف</b> المبلغ لما الرصيد في العمود الغلط — مو نفس المبلغ. لا تدوّر على حساب رصيده = الفرق كله.</li>
+        <li>مثال <bdi>Unearned Revenue</bdi>: الأستاذ <b>متوازن</b>، الالتزامات <b><bdi>understated</bdi></b>، حقوق الملكية والدخل
+            <b><bdi>overstated</bdi></b>. الاختبار يقلب الاتجاهات — احفظها زي ما هي.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · Financial statements across time (Exhibit 2.15) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">⏳</div>
+    <div class="term">Financial Statements across Time</div>
+    <div class="ar">القوائم المالية عبر الزمن</div>
+    <div class="say">صورتين للميزانية، وبينهم فيديو يشرح وش صار</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      الميزانية = <b>لحظة</b> (صورة). قائمة الدخل وقائمة الأرباح المحتجزة وقائمة التدفقات النقدية = <b>فترة</b> (فيديو) — وهي اللي
+      تشرح كيف الشركة انتقلت من الميزانية الأولى للأخيرة.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>صورتك أول يوم في النادي وصورتك بعد شهر — وبينهم فيديو التمارين اللي يشرح وش تغيّر.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — لحظة مقابل فترة</span>
+      <p><bdi>Exhibit 2.15</bdi> يوضّح لك كيف القوائم المالية مرتبطة ببعض عبر الزمن:</p>
+      <ul>
+        <li><b><bdi>Balance sheet</bdi></b> (الميزانية) = المركز المالي للمنظمة <mark class="k"><b>في لحظة زمنية</b> (<bdi>at a point in time</bdi>)</mark>
+            <span class="point">لحظة</span></li>
+        <li><b><bdi>Income statement</bdi></b> (قائمة الدخل) و<b><bdi>statement of retained earnings</bdi></b> (قائمة الأرباح المحتجزة)
+            و<b><bdi>statement of cash flows</bdi></b> (قائمة التدفقات النقدية) = الأداء المالي <b>على مدى فترة</b>
+            (<bdi>over a period of time</bdi>) <span class="period">فترة</span></li>
+        <li>القوائم الثلاث اللي في <b>العمود الأوسط</b> من الشكل تشرح كيف المركز المالي <b>تغيّر</b> من <b>بداية</b> فترة التقرير
+            لـ<b>نهايتها</b>.</li>
+      </ul>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.15 — Links between Financial Statements across Time</div>
+        <img src="../img/acct203/exhibit-2-15.png" alt="Exhibit 2.15 — Links between financial statements across time: a beginning balance sheet on the left with cash of $30,000, other assets of 0 and total assets of $30,000 against liabilities of $0 and equity of $30,000, marked point in time; in the middle the income statement with revenues of $6,100, expenses of $2,705 and net income of $3,395, stacked in front of the statement of retained earnings and the statement of cash flows, marked period of time; and an ending balance sheet on the right with cash of $4,275, other assets of $38,120 and total assets of $42,395 against liabilities of $9,200 and equity of $33,195, marked point in time." loading="lazy">
+        <p class="excap">هذا هو <b><bdi>Exhibit 2.15</bdi></b> في الكتاب. <b>يسار:</b> <bdi>Beginning Balance Sheet</bdi> — <bdi>Cash</bdi> 30,000،
+        <bdi>Other assets</bdi> 0، <bdi>Total assets</bdi> 30,000؛ <bdi>Liabilities</bdi> 0 و<bdi>Equity</bdi> 30,000 — وتحته سهم
+        <bdi>Point in time</bdi>. <b>النص:</b> ثلاث أوراق فوق بعض — قدّام <bdi>Income Statement</bdi>
+        (<span class="mono" dir="ltr">Revenues 6,100 − Expenses 2,705 = Net income 3,395</span>)، ووراها
+        <bdi>Statement of Retained Earnings</bdi> و<bdi>Statement of Cash Flows</bdi> — وتحتها <bdi>Period of time</bdi> بخط برتقالي
+        ممدود بين الميزانيتين. <b>يمين:</b> <bdi>Ending Balance Sheet</bdi> — <bdi>Cash</bdi> 4,275، <bdi>Other assets</bdi> 38,120،
+        <bdi>Total assets</bdi> 42,395؛ <bdi>Liabilities</bdi> 9,200 و<bdi>Equity</bdi> 33,195 — وتحته <bdi>Point in time</bdi>.
+        <b>كيف تقرأه:</b> الميزانيتين صورتين على طرفي الشهر، والأوراق اللي بالنص تشرح الفرق بينهم. مثلاً حقوق الملكية زادت من 30,000
+        لـ33,195، يعني بـ3,195 — وهذا بالضبط صافي الدخل 3,395 ناقص التوزيعات 200. و<bdi>Other assets</bdi>
+        <span class="mono" dir="ltr">38,120 = 9,720 + 2,400 + 26,000</span> (المستلزمات + التأمين المدفوع مقدماً + المعدات).
+        <b>وش يجي منه بالاختبار:</b> أي قائمة لحظة وأي وحدة فترة، ووش القوائم اللي تشرح التغيّر.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — فترة التقرير والسنة المالية</span>
+      <p>فترة التقرير اللي طولها <b>سنة</b> (<bdi>annual</bdi>) شائعة، وبعد الفترات <b>نص السنوية</b> (<bdi>semiannual</bdi>) و<b>ربع
+      السنوية</b> (<bdi>quarterly</bdi>) و<b>الشهرية</b> (<bdi>monthly</bdi>) شائعة — يعني <b>أربع</b> أطوال شائعة.</p>
+      <ul>
+        <li>فترة التقرير اللي طولها سنة وحدة اسمها <mark class="k"><b><bdi>accounting year</bdi></b> أو <b><bdi>fiscal year</bdi></b></mark>
+            (السنة المحاسبية أو السنة المالية).</li>
+        <li>والشركات اللي سنتها المحاسبية تبدأ <b>1 يناير</b> وتخلص <b>31 ديسمبر</b> اسمها <b><bdi>calendar-year companies</bdi></b>
+            (شركات السنة الميلادية).</li>
+      </ul>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>A balance sheet reports an organization’s financial position at a point in time. The income statement, statement of
+      retained earnings, and statement of cash flows report financial performance over a period of time. The three statements
+      in the middle column of Exhibit 2.15 explain how financial position changes from the beginning to the end of a reporting
+      period.</p>
+      <p>A one-year (annual) reporting period is common, as are semiannual, quarterly, and monthly periods. The one-year
+      reporting period is called the accounting, or fiscal, year. Businesses whose accounting year begins on January 1 and ends
+      on December 31 are called calendar-year companies.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>وحدة بس لحظة:</b> الميزانية. الثلاث الباقية (الدخل، الأرباح المحتجزة، التدفقات النقدية) <b>فترة</b>. أي اختيار يقول
+            الميزانية «<bdi>over a period of time</bdi>» = غلط.</li>
+        <li>القوائم اللي <b>تشرح التغيّر</b> هي الثلاث اللي <b>بالنص</b> — مو الميزانية الأولى ولا الأخيرة.</li>
+        <li><bdi>Fiscal year</bdi> = <bdi>accounting year</bdi> = فترة تقرير طولها سنة. و<bdi>calendar-year company</bdi> = سنتها من
+            1 يناير لـ31 ديسمبر بالضبط. شركة سنتها مثلاً من يوليو ليونيو عندها <bdi>fiscal year</bdi>، بس مو
+            <bdi>calendar-year company</bdi>.</li>
+        <li>الفترات الشائعة أربع: سنوية، نص سنوية، ربع سنوية، شهرية.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 · Preparing the statements from the trial balance (Exhibit 2.16) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🔗</div>
+    <div class="term">Financial Statements Prepared from Trial Balance</div>
+    <div class="ar">إعداد القوائم المالية من ميزان المراجعة</div>
+    <div class="say">ثلاث قوائم بالترتيب، وكل وحدة تسلّم رقم للي بعدها</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      من ميزان المراجعة تطلع القوائم <b>بالترتيب</b>: ١ <bdi>income statement</bdi> ← ٢ <bdi>statement of retained earnings</bdi>
+      ← ٣ <bdi>balance sheet</bdi>. صافي الدخل يروح للثانية، ورصيد الأرباح المحتجزة الختامي يروح للثالثة.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>ثلاث محطات قطار: الأولى تسلّم 3,395 للثانية، والثانية تسلّم 3,195 للأخيرة — ما فيه قطار يقفز محطة.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الصورة الكاملة</span>
+      <p>الكتاب يقول القوائم هذي <b>قبل التسويات</b> (<bdi>unadjusted statements</bdi>) — التسويات في الفصل الثالث. ونعدّها
+      <mark class="k"><b>بهالترتيب</b>: قائمة الدخل، بعدها قائمة الأرباح المحتجزة، بعدها الميزانية</mark>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.16 — Financial Statements Prepared from Trial Balance</div>
+        <img src="../img/acct203/exhibit-2-16.png" alt="Exhibit 2.16 — FastForward's trial balance at December 31, 2021 on the left with debit and credit totals of $45,300, linked by colored arrow lines to three statements on the right: 1 the income statement for the month ended December 31, 2021 with total revenues of $6,100, total expenses of $2,705 and net income of $3,395; 2 the statement of retained earnings with a December 1 balance of $0, plus net income of $3,395, less dividends of $200, equal to $3,195 on December 31; and 3 the balance sheet at December 31, 2021 with total assets of $42,395, total liabilities of $9,200, total equity of $33,195 and total liabilities and equity of $42,395." loading="lazy">
+        <p class="excap">هذا هو <b><bdi>Exhibit 2.16</bdi></b> في الكتاب. <b>يسار:</b> نفس ميزان <bdi>FastForward</bdi> (المجموع 45,300 = 45,300).
+        <b>يمين:</b> ثلاث قوائم مرقّمة <b>1</b> و<b>2</b> و<b>3</b> من فوق لتحت. <b>الخطوط الملوّنة</b> (الكتاب يقول: الأسهم تبيّن لك كيف
+        القوائم مرتبطة): <b>قوس بنفسجي</b> على الإيرادات والمصروفات ← قائمة الدخل (1)؛ <b>خط عنّابي</b> من <bdi>Dividends 200</bdi> ←
+        سطر <bdi>Less: Dividends</bdi> في القائمة 2؛ <b>خط أزرق</b> من <bdi>Net income $3,395</bdi> ← سطر <bdi>Add: Net income</bdi> في
+        القائمة 2؛ <b>خط أخضر</b> من <bdi>$3,195</bdi> ← سطر <bdi>Retained earnings</bdi> في الميزانية (3)؛ و<b>قوس أحمر</b> على الأسطر
+        من <bdi>Cash</bdi> لين <bdi>Common Stock</bdi> ← الميزانية. وتحت الميزان مربع أصفر يقول: كل حساب في الميزان يا أصل (← الميزانية)،
+        يا التزام (← الميزانية)، يا حقوق ملكية (← قائمة الدخل أو قائمة الأرباح المحتجزة). <b>وش يجي منه بالاختبار:</b> وين يروح كل رقم،
+        وأي رقم ينتقل بين القوائم.</p>
+      </div>
+      <p>عنوان كل قائمة فيه <b>الـ<bdi>3 W's</bdi></b>: <bdi>Who</bdi> (اسم المنظمة) · <bdi>What</bdi> (اسم القائمة) · <bdi>When</bdi> (لحظة زمنية
+      أو فترة). و<b>«<bdi>foot</bdi>» العمود</b> = تجمع أرقامه.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">١ — قائمة الدخل (<bdi>Income Statement</bdi>)</span>
+      <p><bdi>Income statement</bdi> تطلّع لك <b>الإيرادات المكتسبة ناقص المصروفات المتكبَّدة</b> على مدى فترة. قائمة دخل ديسمبر هي القائمة <b>1</b> فوق يمين
+      <bdi>Exhibit 2.16</bdi>، ومعلومات الإيرادات والمصروفات تنسحب من الميزان اللي على يسار الشكل. و<mark class="k">صافي الدخل <span class="mono">$3,395</span> هو السطر الأخير</mark> (<bdi>the bottom line</bdi>).
+      وانتبه: <b>استثمارات المُلّاك والتوزيعات مو جزء من الدخل</b>.</p>
+      <div class="stmt">
+        <div class="hd">FASTFORWARD<br>Income Statement<br>For Month Ended December 31, 2021</div>
+        <table>
+          <tr><td colspan="3"><b>Revenues</b></td></tr>
+          <tr><td class="ind">Consulting revenue ($4,200 + $1,600)</td><td class="n">$5,800</td><td></td></tr>
+          <tr><td class="ind">Rental revenue</td><td class="n">300</td><td></td></tr>
+          <tr><td class="ind">Total revenues</td><td></td><td class="n">$ 6,100</td></tr>
+          <tr><td colspan="3"><b>Expenses</b></td></tr>
+          <tr><td class="ind">Salaries expense</td><td class="n">1,400</td><td></td></tr>
+          <tr><td class="ind">Rent expense</td><td class="n">1,000</td><td></td></tr>
+          <tr><td class="ind">Utilities expense</td><td class="n">305</td><td></td></tr>
+          <tr><td class="ind">Total expenses</td><td></td><td class="n">2,705</td></tr>
+          <tr class="tot"><td><b>Net income</b></td><td></td><td class="n">$ 3,395</td></tr>
+        </table>
+      </div>
+      <p>الإيرادات <span class="mono" dir="ltr">5,800 + 300 = 6,100</span> · المصروفات <span class="mono" dir="ltr">1,400 + 1,000 + 305 = 2,705</span>
+      · صافي الدخل <span class="mono" dir="ltr">6,100 − 2,705 = 3,395</span>. لاحظ إن <bdi>Dividends 200</bdi> و<bdi>Common Stock 30,000</bdi>
+      ما لهم مكان هنا.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">٢ — قائمة الأرباح المحتجزة (<bdi>Statement of Retained Earnings</bdi>)</span>
+      <p>تطلّع لك <b>كيف تغيّرت الأرباح المحتجزة</b> (<bdi>retained earnings</bdi>) في فترة التقرير. فيها صافي الدخل 3,395، والتوزيعات 200،
+      والرصيد الختامي 3,195.</p>
+      <div class="stmt">
+        <div class="hd">FASTFORWARD<br>Statement of Retained Earnings<br>For Month Ended December 31, 2021</div>
+        <table>
+          <tr><td>Retained earnings, December 1, 2021</td><td class="n">$&nbsp;&nbsp;&nbsp;&nbsp;0</td></tr>
+          <tr><td>Add: Net income</td><td class="n">3,395</td></tr>
+          <tr class="sub"><td></td><td class="n">3,395</td></tr>
+          <tr><td>Less: Dividends</td><td class="n">200</td></tr>
+          <tr class="tot"><td><b>Retained earnings, December 31, 2021</b></td><td class="n">$3,195</td></tr>
+        </table>
+      </div>
+      <p><span class="mono" dir="ltr">0 + 3,395 − 200 = 3,195</span>. والرصيد الافتتاحي <mark class="k"><b>قليل ما يكون صفر</b> — إلا في أول فترة
+      تشغيل</mark> زي هنا. ورصيد <b>بداية يناير 2022</b> = <b>3,195</b>، لأنه رصيد <b>نهاية ديسمبر 2021</b>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">٣ — الميزانية (<bdi>Balance Sheet</bdi>)</span>
+      <p>الميزانية توريك <b>المركز المالي</b> للشركة <b>في لحظة زمنية</b> — هنا عند إقفال الدوام يوم 31 ديسمبر.</p>
+      <div class="stmt">
+        <div class="hd">FASTFORWARD<br>Balance Sheet<br>December 31, 2021</div>
+        <table>
+          <tr><td colspan="2" style="text-align:center"><b>Assets</b></td><td colspan="2" style="text-align:center"><b>Liabilities</b></td></tr>
+          <tr><td>Cash</td><td class="n">$ 4,275</td><td>Accounts payable</td><td class="n">$ 6,200</td></tr>
+          <tr><td>Supplies</td><td class="n">9,720</td><td>Unearned consulting revenue</td><td class="n">3,000</td></tr>
+          <tr><td>Prepaid insurance</td><td class="n">2,400</td><td>Total liabilities</td><td class="n">9,200</td></tr>
+          <tr><td>Equipment</td><td class="n">26,000</td><td colspan="2" style="text-align:center"><b>Equity</b></td></tr>
+          <tr><td></td><td></td><td>Common stock</td><td class="n">30,000</td></tr>
+          <tr><td></td><td></td><td>Retained earnings</td><td class="n">3,195</td></tr>
+          <tr><td></td><td></td><td>Total equity</td><td class="n">33,195</td></tr>
+          <tr class="tot"><td><b>Total assets</b></td><td class="n">$42,395</td><td><b>Total liabilities and equity</b></td><td class="n">$42,395</td></tr>
+        </table>
+      </div>
+      <ul>
+        <li><b>الأصول (يسار):</b> <span class="mono" dir="ltr">4,275 + 9,720 + 2,400 + 26,000 = 42,395</span>.</li>
+        <li><b>الالتزامات:</b> الشركة مديونة <b>6,200</b> للدائنين، و<b>3,000</b> خدمات لعملاء دفعوا مقدماً —
+            <span class="mono" dir="ltr">6,200 + 3,000 = 9,200</span>.</li>
+        <li><b>حقوق الملكية:</b> <span class="mono" dir="ltr">30,000 + 3,195 = 33,195</span> — والـ3,195 هي نفسها الرصيد الختامي من القائمة ٢.</li>
+        <li><b>المعادلة:</b> <span class="mono" dir="ltr">42,395 = 9,200 + 33,195</span> ✓</li>
+      </ul>
+      <p><b>شكلين للميزانية — الاثنين مقبولين</b> (<bdi>either presentation is acceptable</bdi>):</p>
+      <table>
+        <tr><th>الشكل</th><th>الترتيب</th></tr>
+        <tr><td><b><bdi>Account form</bdi></b> (الشكل الحسابي)</td><td>الأصول <b>يسار</b>، والالتزامات وحقوق الملكية <b>يمين</b> — هذا شكل الكتاب هنا</td></tr>
+        <tr><td><b><bdi>Report form</bdi></b> (شكل التقرير)</td><td>الأصول <b>فوق</b>، بعدها الالتزامات، بعدها حقوق الملكية</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">أسماء ثانية + إطار الأخلاقيات</span>
+      <ul>
+        <li><bdi>Income statement</bdi> لها أسماء ثانية: <bdi>earnings statement</bdi> أو <bdi>statement of operations</bdi> أو
+            <bdi>P&amp;L (profit and loss) statement</bdi>.</li>
+        <li><bdi>Balance sheet</bdi> اسمها الثاني: <b><bdi>statement of financial position</bdi></b> (قائمة المركز المالي).</li>
+        <li><b>إطار <bdi>Ethical Risk</bdi> — <bdi>Accounting Quality</bdi>:</b> تسجيل عمليات <b>صحيحة ودقيقة</b> يرفع جودة القوائم المالية.
+            وتقريباً <b>30%</b> من موظفي تقنية المعلومات (<bdi>IT</bdi>) يقولون إنهم شافوا سوء سلوك زي <b>تزوير بيانات محاسبية</b>، وإن هالحالات
+            زادت السنين الأخيرة (المصدر: <bdi>KPMG</bdi>).</li>
+      </ul>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>An income statement reports revenues earned minus expenses incurred over a period of time. Owner investments and
+      dividends are not part of income.</p>
+      <p>The statement of retained earnings reports how retained earnings changes over the reporting period. The beginning
+      balance in the statement of retained earnings is rarely zero, except in the first period of operations.</p>
+      <p>The balance sheet reports the financial position of a company at a point in time. This presentation of the balance
+      sheet is called the account form: assets on the left and liabilities and equity on the right. Another presentation is the
+      report form: assets on top, followed by liabilities and then equity. Either presentation is acceptable.</p>
+      <p>An income statement is also called an earnings statement, a statement of operations, or a P&amp;L (profit and loss)
+      statement. A balance sheet is also called a statement of financial position.</p>
+      <p>A statement’s heading lists the 3 W’s: Who—name of organization, What—name of statement, When—point in time or period
+      of time.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>الترتيب إجباري:</b> الدخل ← الأرباح المحتجزة ← الميزانية. ما تقدر تسوي الثانية قبل ما تعرف صافي الدخل، ولا الثالثة قبل ما
+            تعرف الأرباح المحتجزة الختامية.</li>
+        <li><bdi>Dividends</bdi> تنطرح في <b>قائمة الأرباح المحتجزة</b> — مو في قائمة الدخل. ولو طرحتها من الدخل بيطلع لك 3,195 بدل 3,395 —
+            وهذا رقم فخ جاهز في الاختيارات. واستثمار المُلّاك (30,000) <b>مو دخل</b> بعد.</li>
+        <li>الرقم اللي ينتقل للميزانية هو <b>الرصيد الختامي للأرباح المحتجزة 3,195</b> — مو صافي الدخل 3,395.</li>
+        <li><bdi>Unearned consulting revenue</bdi> (3,000) تروح <b>الميزانية كالتزام</b> — مو قائمة الدخل.</li>
+        <li><bdi>Accounts receivable</bdi> رصيده 0 في الميزان، فما ظهر في أصول الميزانية. لا تدوّره.</li>
+        <li><bdi>account form</bdi> = يسار ويمين، <bdi>report form</bdi> = فوق وتحت، و<b>الاثنين مقبولين</b>. اختيار يقول «بس واحد مسموح» = غلط.</li>
+        <li><bdi>P&amp;L</bdi> / <bdi>earnings statement</bdi> / <bdi>statement of operations</bdi> = قائمة الدخل.
+            <bdi>Statement of financial position</bdi> = الميزانية. لا تخلط بينهم.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 · Debt ratio (Exhibits 2.17, 2.18) + Decision Maker -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🏦</div>
+    <div class="term">Debt Ratio</div>
+    <div class="ar">نسبة المديونية</div>
+    <div class="say">كم من أصول الشركة ممولة بالدين؟</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <span class="mono" dir="ltr">Debt ratio = Total liabilities ÷ Total assets</span>. كل ما كبرت = الشركة ممولة بالدين أكثر =
+      <b><bdi>financial leverage</bdi></b> (رافعة مالية) أعلى = <b>خطر أعلى</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>بيتك لو أغلب قيمته قرض من البنك: أي شهر تعجز فيه عن القسط مشكلة — وكل ما زاد نصيب البنك، زاد خطرك.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — التمويل والرافعة المالية</span>
+      <p>مهم تقيّم <b>خطر</b> إن الشركة تعجز تسدد ديونها. والشركات تموّل أصولها بطريقتين بس: <b>التزامات</b> (<bdi>liabilities</bdi>)
+      أو <b>حقوق ملكية</b> (<bdi>equity</bdi>).</p>
+      <ul>
+        <li>الشركة اللي تموّل جزء <b>كبير نسبياً</b> من أصولها بالالتزامات يقولون عنها عندها
+            <mark class="k"><b><bdi>higher financial leverage</bdi></b> (رافعة مالية أعلى)</mark>.</li>
+        <li>وليش الرافعة الأعلى = <b>خطر أعلى</b>؟ لأن الالتزامات <b>لازم تنسدّ</b>، وغالباً تحتاج <b>دفعات فوايد منتظمة</b>
+            (<bdi>regular interest payments</bdi>) — والتمويل بحقوق الملكية ما يحتاج هذا.</li>
+        <li>ومن مقاييس الخطر المرتبط بالالتزامات: <b><bdi>debt ratio</bdi></b> (نسبة المديونية) — <bdi>Exhibit 2.17</bdi>.</li>
+      </ul>
+      <div class="eq">
+        <div class="l1">Debt ratio <span class="plus">=</span> Total liabilities <span class="plus">÷</span> Total assets</div>
+        <div class="l2">Exhibit 2.17 — Debt Ratio</div>
+      </div>
+      <p>يعني النسبة تقول لك: <b>وش نسبة الأصول اللي جاية من الدين</b>. البسط الالتزامات <b>كلها</b>، والمقام الأصول <b>كلها</b>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — <bdi>Costco</bdi> و<bdi>Walmart</bdi></span>
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.18 — Computation and Analysis of Debt Ratio</div>
+        <table dir="ltr">
+          <tr><th colspan="2">Company ($ millions)</th><th>Current Year</th><th>1 Year Ago</th><th>2 Years Ago</th></tr>
+          <tr><td rowspan="3"><b>Costco</b></td><td style="text-align:left">Total liabilities</td><td class="mono" style="text-align:right">$29,816</td><td class="mono" style="text-align:right">$27,727</td><td class="mono" style="text-align:right">$25,268</td></tr>
+          <tr><td style="text-align:left">Total assets</td><td class="mono" style="text-align:right">$45,400</td><td class="mono" style="text-align:right">$40,830</td><td class="mono" style="text-align:right">$36,347</td></tr>
+          <tr><td style="text-align:left"><b>Debt ratio</b></td><td class="mono" style="text-align:right"><b>0.66</b></td><td class="mono" style="text-align:right"><b>0.68</b></td><td class="mono" style="text-align:right"><b>0.70</b></td></tr>
+          <tr><td><b>Walmart</b></td><td style="text-align:left"><b>Debt ratio</b></td><td class="mono" style="text-align:right"><b>0.64</b></td><td class="mono" style="text-align:right"><b>0.60</b></td><td class="mono" style="text-align:right"><b>0.59</b></td></tr>
+        </table>
+        <p class="excap">هذا هو <b><bdi>Exhibit 2.18</bdi></b> في الكتاب (جدول مو صورة). <b>كيف تقرأه:</b> أول عمود أرقام (يسار) هو <bdi>Current Year</bdi>
+        (السنة الحالية)، بعده <bdi>1 Year Ago</bdi>، بعده <bdi>2 Years Ago</bdi> — يعني الزمن يرجع لورا كل ما رحت يمين. والمبالغ <b>بملايين الدولارات</b>. <b>تأكد بنفسك:</b>
+        <span class="mono" dir="ltr">29,816 ÷ 45,400 = 0.66</span> ·
+        <span class="mono" dir="ltr">27,727 ÷ 40,830 = 0.68</span> ·
+        <span class="mono" dir="ltr">25,268 ÷ 36,347 = 0.70</span>. نسبة <bdi>Costco</bdi> بين <b>0.66</b> (أقل شي) و<b>0.70</b> (أعلى شي)،
+        وهي <b>أعلى من <bdi>Walmart</bdi> في السنوات الثلاث كلها</b>. <b>وش يجي منه بالاختبار:</b> احسب النسبة من رقمين، أو قارن الشركتين.</p>
+      </div>
+      <p><b>تحليل الكتاب:</b> بما إن نسبة <bdi>Costco</bdi> أعلى من <bdi>Walmart</bdi> كل سنة، هذا يعني خطر من الرافعة المالية
+      <b>أعلى من المتوسط بشوي</b> (<bdi>slightly higher-than-average risk</bdi>).</p>
+      <p><b>طيب الرافعة المالية زينة ولا شينة؟</b> جواب الكتاب: <mark class="k">لو <bdi>Costco</bdi> تكسب من الدين <b>أكثر</b> من اللي تدفعه
+      للمقرضين، فهي تستلف فلوس عشان تكسب فلوس أكثر — وهذا نجاح</mark>. بس استخدام الدين ممكن <b>يقلب خسارة بسرعة</b> لو العائد من
+      هالفلوس نزل <b>تحت</b> السعر اللي تدفعه للمقرضين.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">صانع القرار (<bdi>Decision Maker</bdi>) — المستثمر و<bdi>Converse</bdi></span>
+      <p><b>الموقف:</b> انت تفكر تشتري أسهم في <bdi>Converse</bdi>. حسبت نسبة المديونية لسنوات 2019 و2020 و2021: <b>0.35</b> و<b>0.74</b>
+      و<b>0.94</b> بالترتيب. ومتوسط الصناعة <b>0.40</b>. <bdi>Converse</bdi> استثمار قليل الخطر ولا لا؟ والخطر تغيّر ولا لا؟</p>
+      <p><b>جواب الكتاب:</b></p>
+      <ul>
+        <li>النسبة تقول لك إن سهم <bdi>Converse</bdi> <b>أخطر من الطبيعي</b>، وإن هالخطر <b>يزيد</b> (0.35 ← 0.74 ← 0.94).</li>
+        <li>متوسط الصناعة 0.40 يدعم هالاستنتاج، والكتاب يقول إن نسبة 2021 (0.94) <b>ضعف</b> المعدّل الطبيعي للصناعة.</li>
+        <li>ونسبة مديونية <mark class="k">تقرب من <b>1.0</b> تعني حقوق ملكية <b>قليلة أو معدومة</b></mark> (<bdi>little to no equity</bdi>).</li>
+      </ul>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>It is important to assess a company’s risk of failing to pay its debts. Companies finance their assets with either
+      liabilities or equity. A company that finances a relatively large portion of its assets with liabilities is said to have
+      higher financial leverage. Higher financial leverage means greater risk because liabilities must be repaid and often
+      require regular interest payments (equity financing does not). One measure of the risk associated with liabilities is the
+      debt ratio, as defined in Exhibit 2.17.</p>
+      <p style="text-align:center;font-weight:700">Debt ratio = Total liabilities / Total assets</p>
+      <p>If Costco is making more money with this debt than it is paying the lenders, then it is successfully borrowing money
+      to make more money. A company’s use of debt can turn unprofitable quickly if its return from that money drops below the
+      rate it is paying lenders.</p>
+      <p>Also, a debt ratio approaching 1.0 indicates little to no equity.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>البسط <b><bdi>Total liabilities</bdi></b> والمقام <b><bdi>Total assets</bdi></b>. الاختيارات تحط لك
+            <bdi>liabilities ÷ equity</bdi> أو <bdi>equity ÷ assets</bdi> أو النسبة مقلوبة <bdi>assets ÷ liabilities</bdi> — كلها غلط.</li>
+        <li>نسبة <b>أعلى</b> = رافعة مالية <b>أعلى</b> = خطر <b>أعلى</b>. مو «أحسن» ولا «أأمن».</li>
+        <li>الرافعة <b>مو شر مطلق</b>: لو العائد من الدين <b>أكبر</b> من اللي تدفعه للمقرضين = تستلف عشان تكسب أكثر. ولو العائد نزل
+            <b>تحت</b> سعر المقرضين ← الدين يقلب خسارة بسرعة.</li>
+        <li>النسبة لحالها ما تكفي — <b>قارنها</b> بالمنافس أو بمتوسط الصناعة (<bdi>Costco</bdi> مقابل <bdi>Walmart</bdi>، و<bdi>Converse</bdi>
+            مقابل 0.40).</li>
+        <li>قراءة <bdi>Exhibit 2.18</bdi>: نسبة <bdi>Costco</bdi> <b>نزلت</b> من 0.70 (قبل سنتين) لـ0.66 (السنة الحالية)، ونسبة
+            <bdi>Walmart</bdi> <b>طلعت</b> من 0.59 لـ0.64. أول عمود = السنة الحالية — لا تقرأه بالعكس.</li>
+        <li>قريبة من <b>1.0</b> = تقريباً كل الأصول ممولة بالدين = حقوق ملكية قليلة أو معدومة.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">الأسئلة بالإنجليزي لأن الاختبار بالإنجليزي. جاوب قبل ما تفتح الحل. لو غلطت في ١ ارجع لجدول
+«ست خطوات بالعكس»، ولو غلطت في ٤ ارجع لمثال <bdi>Unearned Revenue</bdi> — الاثنين في المفهوم الثاني. ولو غلطت في ٢ ارجع لفخ
+البسط والمقام في المفهوم الأخير.</p>
+
+<div class="q">
+  <div class="stem">1. A trial balance shows total debits of $48,600 and total credits of $49,400. Which error could explain this difference?</div>
+  <ol type="A">
+    <li>An $800 cash purchase of supplies was never journalized.</li>
+    <li>A $400 payment of rent was debited to Salaries Expense instead of Rent Expense.</li>
+    <li>A $400 debit balance in Prepaid Insurance was listed in the Credit column of the trial balance.</li>
+    <li>An $800 collection from a customer was credited to Revenue instead of Accounts Receivable.</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. الفرق <span class="mono" dir="ltr">49,400 − 48,600 = 800</span> = <b>ضعف</b> 400 — وهذي علامة الخطوة ٣: رصيد مدين انكتب في
+  عمود الدائن. لما الـ400 انشالت من المدين وانحطت في الدائن، المدين نقص 400 والدائن زاد 400 ← الفرق 800. الفخ في <b>A</b>: قيد ما انسجّل
+  أبد = المدين والدائن ناقصين بنفس المبلغ، فالميزان يبقى متوازن. و<b>B</b> و<b>D</b> = <b>مبلغ صح في حساب غلط</b> — الخطأ اللي الميزان
+  ما يكشفه أصلاً، والاختيار يغريك لأن فيه 800 أو 400.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. Using FastForward's December 31, 2021 balance sheet in Exhibit 2.16 (total liabilities $9,200; total equity $33,195; total assets $42,395), the debt ratio is closest to:</div>
+  <ol type="A"><li>0.22</li><li>0.28</li><li>0.78</li><li>4.61</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>A</b>. <span class="mono" dir="ltr">9,200 ÷ 42,395 = 0.217 ≈ 0.22</span>. الفخ في <b>B</b>: قسمت الالتزامات على <b>حقوق الملكية</b>
+  (<span class="mono" dir="ltr">9,200 ÷ 33,195 = 0.28</span>) بدل الأصول. و<b>C</b> = حقوق الملكية ÷ الأصول (0.78) — هذا نصيب المُلّاك مو
+  الدين. و<b>D</b> = النسبة مقلوبة (<span class="mono" dir="ltr">42,395 ÷ 9,200 = 4.61</span>). القاعدة: الالتزامات <b>كلها</b> فوق، والأصول
+  <b>كلها</b> تحت.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Accel's trial balance (Need-To-Know 2-4) shows Retained earnings, Dec. 31, prior year $26,000; Services revenue $41,000; Rent expense $7,000; Wages expense $21,000; and Dividends $12,500. Accel's retained earnings at December 31 of the current year is:</div>
+  <ol type="A"><li>$39,000</li><li>$13,000</li><li>$500</li><li>$26,500</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>D</b>. أول شي صافي الدخل: <span class="mono" dir="ltr">41,000 − 7,000 − 21,000 = 13,000</span>. بعدين قائمة الأرباح المحتجزة:
+  <span class="mono" dir="ltr">26,000 + 13,000 − 12,500 = 26,500</span>. الفخ في <b>A</b>: نسيت تطرح التوزيعات (39,000). و<b>B</b> = صافي
+  الدخل بس — نسيت الرصيد الافتتاحي والتوزيعات. و<b>C</b> = صافي الدخل ناقص التوزيعات بدون الرصيد الافتتاحي 26,000 (500).</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. A credit to Unearned Revenue was incorrectly posted to the Revenue ledger account. Which statement is correct?</div>
+  <ol type="A">
+    <li>The trial balance will not balance.</li>
+    <li>The ledger still balances, but liabilities are understated and equity and income are overstated.</li>
+    <li>The ledger still balances, but liabilities are overstated and income is understated.</li>
+    <li>The ledger still balances, and the financial statements are not affected.</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. هذا مثال الكتاب بالحرف: الدائن انسجّل بمبلغه الصح بس في حساب غلط، فالأستاذ <b>متوازن</b>. <bdi>Unearned Revenue</bdi>
+  (التزام) ما زاد ← الالتزامات <bdi>understated</bdi>. و<bdi>Revenue</bdi> زاد بدون حق ← الدخل وحقوق الملكية <bdi>overstated</bdi>.
+  الفخ في <b>A</b>: تظن إن أي غلط يخرّب التوازن. و<b>C</b> قلبت الاتجاهات. و<b>D</b> فخ: التوازن ما يعني إن القوائم سليمة.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. Which of the following statements is correct?</div>
+  <ol type="A">
+    <li>A trial balance is a financial statement prepared for a period of time.</li>
+    <li>Dividends are reported as an expense on the income statement.</li>
+    <li>A balance sheet reports financial position at a point in time, while the income statement reports performance over a period of time.</li>
+    <li>Only the account form of the balance sheet is acceptable.</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. الميزانية <bdi>at a point in time</bdi>، وقائمة الدخل <bdi>over a period of time</bdi>. الفخ في <b>A</b>: ميزان المراجعة
+  <b>مو قائمة مالية</b> — أداة لفحص تساوي المدين والدائن، وفي لحظة زمنية. و<b>B</b>: التوزيعات مو جزء من الدخل، تنطرح في قائمة الأرباح
+  المحتجزة. و<b>D</b>: <bdi>account form</bdi> و<bdi>report form</bdi> <b>الاثنين مقبولين</b>.</p></details>
+</div>
+
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH2-S4">ابدأ</button> <button class="pill" data-deck="ACCT203-CH2-S4" data-mode="ar">عربي ← إنجليزي</button></div></div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Trial balance</bdi></td><td>ميزان المراجعة</td><td><b>مو قائمة مالية</b> — أداة لفحص تساوي المدين والدائن، في لحظة زمنية</td></tr>
+  <tr><td><bdi>Unadjusted trial balance</bdi> / <bdi>unadjusted statements</bdi></td><td>ميزان المراجعة والقوائم قبل التسويات</td><td>ميزان <bdi>Exhibit 2.14</bdi> وقوائم <bdi>Exhibit 2.16</bdi>؛ التسويات في الفصل 3</td></tr>
+  <tr><td><bdi>Preparing a trial balance</bdi></td><td>إعداد ميزان المراجعة</td><td><b>ثلاث</b> خطوات: اكتب الأرصدة · اجمع كل عمود · تأكد إنهم متساويين</td></tr>
+  <tr><td><bdi>Errors not identified with a trial balance</bdi></td><td>أخطاء ما يكشفها الميزان</td><td><b>مثالين</b> من الكتاب: مبلغ صح في حساب غلط · مدين ودائن متساويين بمبلغ غلط</td></tr>
+  <tr><td><bdi>Searching for errors (in reverse order)</bdi></td><td>البحث عن الأخطاء (بالترتيب العكسي)</td><td><b>ست</b> خطوات؛ الأولى جمع أعمدة الميزان، والأخيرة القيد الأصلي</td></tr>
+  <tr><td><bdi>Twice the amount (clue)</bdi></td><td>علامة «ضعف المبلغ»</td><td>الفرق = ضعف رصيد ← الرصيد في العمود الغلط (الخطوة 3)</td></tr>
+  <tr><td><bdi>Point in time / period of time</bdi></td><td>لحظة زمنية / فترة زمنية</td><td>الميزانية <b>بس</b> لحظة؛ الثلاث الباقية فترة</td></tr>
+  <tr><td><bdi>Reporting period</bdi> (<bdi>annual · semiannual · quarterly · monthly</bdi>)</td><td>فترة التقرير (سنوية · نص سنوية · ربع سنوية · شهرية)</td><td>الأربع كلها شائعة؛ اللي طولها سنة اسمها <bdi>accounting year</bdi> / <bdi>fiscal year</bdi></td></tr>
+  <tr><td><bdi>Accounting year</bdi> / <bdi>fiscal year</bdi></td><td>السنة المحاسبية / السنة المالية</td><td>فترة التقرير اللي طولها سنة — الاسمين لنفس الشي</td></tr>
+  <tr><td><bdi>Calendar-year companies</bdi></td><td>شركات السنة الميلادية</td><td>سنتها من <b>1 يناير</b> لـ<b>31 ديسمبر</b> بالضبط</td></tr>
+  <tr><td><bdi>Income statement</bdi> (<bdi>earnings statement · statement of operations · P&amp;L</bdi>)</td><td>قائمة الدخل</td><td>فترة؛ استثمارات المُلّاك والتوزيعات <b>مو</b> دخل</td></tr>
+  <tr><td><bdi>Statement of retained earnings</bdi></td><td>قائمة الأرباح المحتجزة</td><td>افتتاحي + صافي الدخل − التوزيعات؛ الافتتاحي قليل ما يكون صفر إلا أول فترة</td></tr>
+  <tr><td><bdi>Balance sheet</bdi> (<bdi>statement of financial position</bdi>)</td><td>الميزانية / قائمة المركز المالي</td><td>لحظة؛ تاخذ الأرباح المحتجزة <b>الختامية</b></td></tr>
+  <tr><td><bdi>Statement of cash flows</bdi></td><td>قائمة التدفقات النقدية</td><td><b>فترة</b> — وحدة من القوائم الثلاث اللي بالنص في <bdi>Exhibit 2.15</bdi>، بس مو من الثلاث اللي ينعدّون من الميزان هنا</td></tr>
+  <tr><td><bdi>Account form</bdi></td><td>الشكل الحسابي للميزانية</td><td>أصول <b>يسار</b> · التزامات وحقوق ملكية <b>يمين</b></td></tr>
+  <tr><td><bdi>Report form</bdi></td><td>شكل التقرير للميزانية</td><td>أصول <b>فوق</b> ثم التزامات ثم حقوق ملكية — الشكلين مقبولين</td></tr>
+  <tr><td><bdi>3 W's</bdi> (<bdi>Who · What · When</bdi>)</td><td>عناصر عنوان القائمة</td><td>اسم المنظمة · اسم القائمة · لحظة أو فترة</td></tr>
+  <tr><td><bdi>Foot (a column)</bdi></td><td>تجمع العمود</td><td>«<bdi>to foot</bdi>» = تجمع أرقام العمود</td></tr>
+  <tr><td><bdi>Dollar signs</bdi></td><td>علامة الدولار</td><td><b>لا</b> في اليومية والأستاذ · <b>نعم</b> في الميزان والقوائم، جنب أول وآخر رقم</td></tr>
+  <tr><td><bdi>Financial leverage</bdi></td><td>الرافعة المالية</td><td>تمويل جزء كبير من الأصول بالالتزامات ← خطر أعلى</td></tr>
+  <tr><td><bdi>Debt ratio</bdi></td><td>نسبة المديونية</td><td><bdi>Total liabilities ÷ Total assets</bdi> — مو ÷ <bdi>equity</bdi>؛ قريبة من 1.0 = حقوق ملكية قليلة أو معدومة</td></tr>
+  <tr><td><bdi>Owner's Capital</bdi> / <bdi>Owner's Withdrawals</bdi></td><td>رأس مال المالك / مسحوبات المالك</td><td>منشأة فردية: مكان <bdi>Common Stock</bdi> (دائن) و<bdi>Dividends</bdi> (مدين)</td></tr>
+</table>
+
+<p class="note">
+مبني من كتاب <bdi>Financial Accounting Fundamentals</bdi>، الطبعة الثامنة (<bdi>John J. Wild</bdi>، <bdi>McGraw Hill</bdi>) —
+<bdi>Chapter 2: Accounting for Business Transactions</bdi>، جزء <bdi>Trial Balance and Financial Statements</bdi> (الهدف <code>P1</code>،
+مع <bdi>Need-To-Know 2-4</bdi>) وجزء <bdi>Decision Analysis</bdi> (الهدف <code>A2</code>)، صفحات 58–62.
+<br><b>ملخّص بس:</b> <bdi>Exhibit 2.14</bdi> و<bdi>Exhibit 2.18</bdi> جداول مكتوبة من نص الكتاب (مو صور)؛ إطار <bdi>Ethical Risk</bdi>
+ملخّص في سطر (صورته زخرفية وما انعرضت)؛ والمسألة الشاملة <bdi>Need-To-Know 2-5</bdi> (<bdi>Expressions</bdi>: قيود + ترحيل + ميزان + قوائم +
+نسبة مديونية) ما انشرحت هنا — حلّها من الكتاب كمراجعة للفصل كله.
+</p>
+
+
+<div class="footnav">
+  <div class="side"><a class="pill" href="ACCT203-CH2-S3.html">→ ٣. تحليل العمليات وتسجيلها</a></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><span class="pill off">نهاية الفصل</span></div>
+</div>
+</div>
+<script src="../data/cards-ACCT203-CH2-S4.js?v=7"></script>
+<script src="../assets/flashcards.js?v=7"></script>
+<script src="../assets/lesson.js?v=7"></script>
+</body>
+</html>

@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ٢: أساس القوائم المالية: المستندات والحسابات</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/theme.css?v=7">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH2-S1-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH2-S1">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
+</div>
+<header class="lh">
+  <h1>الفصل الثاني — أساس القوائم المالية: المستندات والحسابات</h1>
+  <p class="sub"><code>ACCT 203</code> · مبادئ المحاسبة المالية · <bdi>Chapter 2: Accounting for Business Transactions</bdi> · القسم ١ من ٤:
+  <bdi>Basis of Financial Statements</bdi><br>
+  الهدف <code>C1</code>: <bdi>Describe an account and its use in recording transactions.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>هذا القسم «من وين تجي الأرقام، ووين تنحفظ»</h2>
+  <p>في الفصل الأول حلّلت عمليات <bdi>FastForward</bdi> بالمعادلة المحاسبية على طول. الحين الكتاب يوريك النظام الحقيقي اللي
+  تمشي فيه الأرقام داخل الشركة: كل عملية تبدأ بـ<b>مستند يثبتها</b> (<bdi>source document</bdi> — مستند المصدر)، وتنسجّل في
+  <b>حساب</b> (<bdi>account</bdi>)، والحسابات كلها تنجمع في <b>دفتر الأستاذ</b> (<bdi>ledger</bdi>)، ولكل حساب <b>رقم</b>
+  في <b>دليل الحسابات</b> (<bdi>chart of accounts</bdi>).</p>
+  <p>ركّز من الحين: أكثر سؤال يجيك من هذا القسم هو <b>التصنيف</b> — يعطيك اسم حساب ويسألك: أصل؟ التزام؟ حقوق ملكية؟
+  وعندك مفاتيح تريحك: أي حساب فيه <bdi>payable</bdi> (الدائنة) أو <bdi>unearned</bdi> (غير المكتسبة) = <b>التزام</b>، وأي حساب
+  فيه <bdi>prepaid</bdi> (المدفوعة مقدماً) أو <bdi>receivable</bdi> (المدينة) = <b>أصل</b>، و<bdi>Common Stock</bdi> (الأسهم العادية)
+  و<bdi>Dividends</bdi> (التوزيعات) و<bdi>Revenues</bdi> (الإيرادات) و<bdi>Expenses</bdi> (المصروفات) = <b>حقوق ملكية</b>
+  (إلا لو السؤال يعطيك <bdi>Revenue</bdi> و<bdi>Expense</bdi> كخيارات — شوف فخ المفهوم الرابع). والثاني: أرقام دليل الحسابات — أول رقم يقولك نوع الحساب.</p>
+</div>
+
+<!-- 1 · From transactions to statements + source documents -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🧾</div>
+    <div class="term">Source Documents and the Steps to Financial Statements</div>
+    <div class="ar">مستندات المصدر وخطوات الوصول للقوائم المالية</div>
+    <div class="say">كل رقم في القوائم بدأ بمستند، ومشى خمس خطوات لين وصل</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      العمليات والأحداث هي <b>نقطة البداية</b> للقوائم المالية. تثبتها بـ<b>مستند</b>، تحللها بالمعادلة، تسجلها في
+      <b>اليومية</b>، ترحّلها لـ<b>الأستاذ</b>، وبعدين تطلع <b>ميزان المراجعة والقوائم</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>رحلة ريال: يطلع من جيب العميل مع إيصال ← تحلله بالمعادلة ← تكتبه في اليومية ← ينتقل للأستاذ ← يطلع في القوائم.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الخطوات الخمس</span>
+      <p>الكتاب يقول: العمليات والأحداث (<bdi>business transactions and events</bdi>) هي
+      <mark class="k">نقطة البداية للقوائم المالية</mark>، والطريق منها للقوائم <b>خمس خطوات</b> بالترتيب:</p>
+      <table>
+        <tr><th>#</th><th>الخطوة بالإنجليزي (احفظها حرفي)</th><th>وش تعني</th></tr>
+        <tr><td>1</td><td><bdi>Identify each transaction and event from source documents.</bdi></td>
+            <td><b>تعرّف</b> على العملية من المستند (إيصال، فاتورة، شيك…)</td></tr>
+        <tr><td>2</td><td><bdi>Analyze each transaction and event using the accounting equation.</bdi></td>
+            <td><b>تحلّل</b> العملية بالمعادلة: <bdi>Assets = Liabilities + Equity</bdi> — نفس شغل الفصل الأول</td></tr>
+        <tr><td>3</td><td><bdi>Record relevant transactions and events in a journal.</bdi></td>
+            <td><b>تسجّل</b> العملية في دفتر اليومية (<bdi>journal</bdi>) — تجيك في القسم 3</td></tr>
+        <tr><td>4</td><td><bdi>Post journal information to ledger accounts.</bdi></td>
+            <td><b>ترحّل</b> (<bdi>post</bdi> — الترحيل) من اليومية لحسابات دفتر الأستاذ</td></tr>
+        <tr><td>5</td><td><bdi>Prepare and analyze the trial balance and financial statements.</bdi></td>
+            <td><b>تجهّز وتحلّل</b> ميزان المراجعة (<bdi>trial balance</bdi>) والقوائم المالية — القسم 4</td></tr>
+      </table>
+
+      <div class="exhibit">
+        <div class="exlbl">Illustration — Progression of Transaction Data</div>
+        <img src="../img/acct203/ch02-wil28773_bass_of_fin0201.png" alt="Four panels joined by green arrows: a customer paying cash at Z-Mart Stores labeled Transaction occurs with source documents; a hand holding a note that says Owner invest cash in company, Assets = Liabilities + Equity, 2,000 = Ø + 2,000, labeled Transactions analyzed with accounting equation; a clerk at a screen showing a general journal and general ledger, labeled Transactions recorded and posted; a woman at a screen showing financial statements, labeled Transactions reported in financial statements" loading="lazy">
+        <p class="excap">هذي الصورة في بداية الجزء في الكتاب (ما لها رقم <bdi>Exhibit</bdi>). <b>أربع لوحات</b> بينها أسهم خضرا:
+        <b>١</b> يد عميل تدفع كاش مقابل قلادة في محل <bdi>Z-Mart Stores</bdi> ومعها إيصال — <bdi>Transaction occurs with source documents</bdi>.
+        <b>٢</b> يد ماسكة ورقة مكتوب فيها <bdi>Owner invest cash in company</bdi> وتحتها
+        <span class="mono">Assets = Liabilities + Equity</span> و<span class="mono">2,000 = Ø + 2,000</span> —
+        <bdi>Transactions analyzed with accounting equation</bdi> (المالك حط 2,000 كاش: الأصول زادت 2,000 وحقوق الملكية زادت 2,000، والالتزامات صفر).
+        <b>٣</b> موظفة قدام شاشة فيها <bdi>General Journal</bdi> فوق و<bdi>General Ledger</bdi> تحت وأسهم مرقّمة بينهم —
+        <bdi>Transactions recorded and posted</bdi>. <b>٤</b> موظفة قدام شاشة فيها القوائم المالية —
+        <bdi>Transactions reported in financial statements</bdi>.
+        <b>كيف تقرأه:</b> الصورة <b>أربع لوحات</b> والقائمة <b>خمس خطوات</b> — لأن اللوحة الثالثة جمعت التسجيل والترحيل
+        (<bdi>recorded and posted</bdi>) في لوحة وحدة. <b>وش يجي منه بالاختبار:</b> ترتيب الخطوات.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — مستندات المصدر <bdi>Source Documents</bdi></span>
+      <p><b><bdi>Source documents</bdi></b> (مستندات المصدر) =
+      <mark class="k">المستندات (ورق أو إلكترونية) اللي <b>تحدد وتوصف</b> العمليات والأحداث وهي داخلة النظام المحاسبي</mark>.</p>
+      <ul>
+        <li><b>شكلها:</b> ممكن تكون <b>ورق</b> (<bdi>hard copy</bdi>) أو <b>إلكترونية</b> (<bdi>electronic form</bdi>) — الاثنين ينحسبون.</li>
+        <li><b>أمثلة الكتاب (ست):</b> <bdi>sales receipts</bdi> (إيصالات البيع) · <bdi>checks</bdi> (الشيكات) ·
+            <bdi>purchase orders</bdi> (أوامر الشراء) · <bdi>bills from suppliers</bdi> (فواتير الموردين) ·
+            <bdi>payroll records</bdi> (سجلات الرواتب) · <bdi>bank statements</bdi> (كشوف الحساب البنكي).</li>
+        <li><b>مثال الكتاب:</b> الكاشير (<bdi>cash register</bdi>) يسجّل كل بيعة على شريط أو ملف إلكتروني — وهذا السجل
+            <b>هو</b> مستند المصدر اللي تنسجّل منه المبيعات في النظام.</li>
+        <li><b>ليش مهمة؟</b> لأنها <mark class="k"><b>دليل موضوعي وموثوق</b> (<bdi>objective and reliable evidence</bdi>)</mark>
+            على العمليات والأحداث <b>ومبالغها</b>.</li>
+      </ul>
+      <p><b>معلومة جانبية من الكتاب (<bdi>Point</bdi>):</b> السجلات المحاسبية (<bdi>accounting records</bdi>) يسمّونها بعد
+      <bdi>accounting books</bdi> أو بس <bdi>the books</bdi> — الدفاتر.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Business transactions and events are the starting points of financial statements. The process to go from
+      transactions and events to financial statements includes the following. Identify each transaction and event from
+      source documents. Analyze each transaction and event using the accounting equation. Record relevant transactions
+      and events in a journal. Post journal information to ledger accounts. Prepare and analyze the trial balance and
+      financial statements.</p>
+      <p><b>Source documents</b> identify and describe transactions and events entering the accounting system. They can
+      be in hard copy or electronic form. Examples are sales receipts, checks, purchase orders, bills from suppliers,
+      payroll records, and bank statements. Source documents are objective and reliable evidence about transactions and
+      events and their amounts.</p>
+      <p>Accounting records are also called accounting books or the books.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>الترتيب: <b>مستند ← تحليل ← يومية ← أستاذ ← ميزان مراجعة وقوائم</b>. اليومية (<bdi>journal</bdi>) <b>قبل</b>
+            الأستاذ (<bdi>ledger</bdi>) دايماً. أي اختيار يبدأ بالترحيل أو بميزان المراجعة = غلط.</li>
+        <li>الخطوات <b>خمس</b> في النص، بس الصورة <b>أربع لوحات</b> (التسجيل والترحيل في لوحة وحدة). لا تلخبط بينهم.</li>
+        <li><bdi>Trial balance</bdi> و<bdi>balance sheet</bdi> و<bdi>income statement</bdi> و«حساب الإيرادات» <b>مو</b> مستندات مصدر —
+            هذي <b>نتايج</b> النظام، مو مداخله. المستند = إيصال، فاتورة مورد، كشف بنك، فاتورة تلفون… (تمرين <bdi>QS 2-1</bdi>).</li>
+        <li>المستند ممكن يكون <b>إلكتروني</b> — اختيار يقول «لازم ورق» = غلط.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · Account, ledger, asset accounts -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">📒</div>
+    <div class="term">The Account, the Ledger, and Asset Accounts</div>
+    <div class="ar">الحساب ودفتر الأستاذ وحسابات الأصول</div>
+    <div class="say">الحساب = ملف لكل بند، والأستاذ = الدولاب اللي فيه كل الملفات</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Account</bdi></b> = سجل للزيادات والنقص في بند واحد معيّن. <b><bdi>Ledger</bdi></b> = كل الحسابات مع أرصدتها.
+      والأصول عندها <b>ثمانية</b> حسابات أساسية في النص.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>دولاب ملفات: كل ملف أزرق = حساب واحد (النقدية، المستلزمات…)، والدولاب كله = دفتر الأستاذ.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الحساب ودفتر الأستاذ</span>
+      <p><b><bdi>Account</bdi></b> (حساب) = <mark class="k">سجل <b>للزيادات والنقص</b> في أصل أو التزام أو حقوق ملكية أو إيراد أو
+      مصروف <b>معيّن</b></mark>. يعني كل بند له حساب لحاله: حساب للنقدية، حساب للمستلزمات، حساب للذمم الدائنة…</p>
+      <p><b><bdi>General ledger</bdi></b> أو بس <b><bdi>ledger</bdi></b> (دفتر الأستاذ العام) = سجل <b>لكل الحسابات وأرصدتها</b>.
+      وغالباً يكون <b>إلكتروني</b>. ومع إن أغلب الشركات حساباتها متشابهة، الشركة كثير تستخدم <b>حساب أو أكثر خاص فيها</b> يناسب
+      نوع شغلها.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.1 — Accounts Organized by Accounting Equation</div>
+        <img src="../img/acct203/exhibit-2-1.png" alt="Exhibit 2.1 — Accounts organized by the accounting equation: a box of nine asset account folders (Cash, Accounts Receivable, Notes Receivable, Inventory, Prepaid Accounts, Supplies, Equipment, Buildings, Land), an equals sign, a box of four liability account folders (Accounts Payable, Notes Payable, Accrued Liabilities, Unearned Revenue), a plus sign, and a box of four equity account folders (Common Stock, Dividends, Revenues, Expenses)" loading="lazy">
+        <p class="excap">هذا <b><bdi>Exhibit 2.1</bdi></b>. ثلاث مربعات مرتبة <b>زي المعادلة المحاسبية</b>: <bdi>Asset Accounts</bdi>
+        <span class="mono">=</span> <bdi>Liability Accounts</bdi> <span class="mono">+</span> <bdi>Equity Accounts</bdi>، وكل حساب
+        مرسوم <b>ملف أزرق</b>. <b>الأصول تسعة ملفات:</b> <bdi>Cash · Accounts Receivable · Notes Receivable · Inventory · Prepaid
+        Accounts · Supplies · Equipment · Buildings · Land</bdi>. <b>الالتزامات أربعة:</b> <bdi>Accounts Payable · Notes Payable ·
+        Accrued Liabilities · Unearned Revenue</bdi>. <b>حقوق الملكية أربعة:</b> <bdi>Common Stock · Dividends · Revenues ·
+        Expenses</bdi>. المجموع 17 ملف. <b>انتبه:</b> <bdi>Inventory</bdi> (المخزون) موجود في الشكل بس النص ما يشرحه في هذا الجزء.
+        <b>وش يجي منه بالاختبار:</b> «هذا الحساب تحت أي مربع؟».</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — حسابات الأصول <bdi>Asset Accounts</bdi></span>
+      <p><b><bdi>Assets</bdi></b> (الأصول) = موارد <b>تملكها أو تسيطر عليها</b> الشركة (<bdi>owned or controlled</bdi>)، ولها
+      <b>منافع مستقبلية متوقعة</b>. وأغلب الأنظمة المحاسبية فيها (كحد أدنى) حساب منفصل لكل واحد من هذي <b>الثمانية</b>:</p>
+      <table>
+        <tr><th>الحساب</th><th>وش يسجّل</th><th>التفاصيل اللي يحبها الاختبار</th></tr>
+        <tr><td><b><bdi>Cash</bdi></b><br><span style="color:var(--muted);font-size:.85rem">النقدية</span></td>
+            <td>رصيد النقد في الشركة — <b>كل</b> زيادة ونقص في النقد ينسجّل فيه.</td>
+            <td>يشمل الفلوس وأي أموال <b>يقبلها البنك كإيداع</b>: عملات معدنية، شيكات، حوالات بريدية (<bdi>money orders</bdi>)،
+                وأرصدة الحساب الجاري (<bdi>checking account balances</bdi>).</td></tr>
+        <tr><td><b><bdi>Accounts Receivable</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الذمم المدينة</span></td>
+            <td><mark class="k">يمسكها <b>البائع</b>: وعود بالدفع من العملاء للبائعين</mark>.</td>
+            <td><b>تزيد</b> بالبيع الآجل (<bdi>credit sales</bdi> = <bdi>on credit</bdi> = <bdi>on account</bdi>)، و<b>تنقص</b>
+                لما العميل يدفع. ولو العملاء كثير، كل عميل له سجل لحاله باسم
+                <bdi>Accounts Receivable—‘Customer Name’</bdi>.</td></tr>
+        <tr><td><b><bdi>Notes Receivable</bdi></b><br><span style="color:var(--muted);font-size:.85rem">أوراق القبض</span></td>
+            <td><bdi>Note receivable</bdi> أو <bdi>promissory note</bdi> (سند إذني) = <b>وعد مكتوب</b> من جهة ثانية إنها تدفع
+                <b>مبلغ محدد</b> في <b>تاريخ مستقبلي محدد</b> لحامل السند. وحامل السند يسجّله <b>أصل</b> في حساب
+                <bdi>Notes Receivable</bdi>.</td>
+            <td>الفرق عن <bdi>accounts receivable</bdi>: جاي من <b>عقد رسمي</b> اسمه <bdi>promissory note</bdi>، و
+                <mark class="k">غالباً <b>فيه فايدة</b> (<bdi>interest</bdi>)، والذمم المدينة ما فيها</mark>.</td></tr>
+        <tr><td><b><bdi>Prepaid Accounts</bdi></b><br><span style="color:var(--muted);font-size:.85rem">مصروفات مدفوعة مقدماً</span></td>
+            <td>وتسمّى <bdi>prepaid expenses</bdi>: <b>أصول</b> من دفعات مقدّمة لمصروفات <b>مستقبلية</b> (مصروفات متوقعة في فترات
+                محاسبية جاية — <bdi>future accounting periods</bdi>).</td>
+            <td>لما المصروف يصير فعلاً، المبلغ <b>ينتقل</b> لحساب مصروف. أمثلة: <bdi>prepaid insurance</bdi> ·
+                <bdi>prepaid rent</bdi> · <bdi>prepaid services</bdi>. تنتهي <b>بمرور الوقت</b> (زي الإيجار) أو
+                <b>بالاستخدام</b> (زي بطاقات الهدايا المدفوعة مقدماً). التفاصيل في الفصل 3.</td></tr>
+        <tr><td><b><bdi>Supplies</bdi></b><br><span style="color:var(--muted);font-size:.85rem">المستلزمات</span></td>
+            <td>المستلزمات <b>أصول لين تنستخدم</b>. لما تخلص، تكلفتها تنعرض <b>كمصروف</b>.</td>
+            <td>اللي ما انستخدم ينسجّل في حساب الأصل <bdi>Supplies</bdi>. وغالباً تنقسم حسب الغرض: <bdi>office supplies</bdi>
+                و<bdi>store supplies</bdi>.</td></tr>
+        <tr><td><b><bdi>Equipment</bdi></b><br><span style="color:var(--muted);font-size:.85rem">المعدات</span></td>
+            <td>أصل، وتكلفته <b>تتوزع على الوقت كمصروف</b> اسمه <bdi>depreciation</bdi> (الإهلاك).</td>
+            <td>تنقسم حسب الغرض: <bdi>office equipment</bdi> و<bdi>store equipment</bdi>.</td></tr>
+        <tr><td><b><bdi>Buildings</bdi></b><br><span style="color:var(--muted);font-size:.85rem">المباني</span></td>
+            <td>محلات، مكاتب، مستودعات، مصانع = أصول. تكلفتها بعد <b>تتوزع على الوقت</b> كـ<bdi>depreciation</bdi>.</td>
+            <td>لو الشركة تملك أكثر من مبنى، أحياناً كل مبنى له حساب لحاله.</td></tr>
+        <tr><td><b><bdi>Land</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الأراضي</span></td>
+            <td>تكلفة الأرض تنسجّل في حساب <bdi>Land</bdi>.</td>
+            <td><mark class="k">المبنى اللي على الأرض ينسجّل <b>منفصل</b></mark> في حساب المباني — الأرض حساب، والمبنى حساب ثاني.</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">إطار جانبي — <bdi>Decision Insight: Women Entrepreneurs</bdi></span>
+      <p>بعد حسابات الأصول الكتاب يحط إطار عن <bdi>Jasmine Crowe</bdi>، مؤسسة شركة <bdi>Goodr</bdi> ومديرتها التنفيذية
+      (<bdi>Founder and CEO</bdi>)، اللي تشتغل على <b>تقليل هدر الأكل</b> ومحاربة الجوع. ويجيب أرقام من
+      <bdi>The Center for Women’s Business Research</bdi> عن الشركات اللي تملكها نساء — <b>ثلاث نقاط</b>:</p>
+      <ol>
+        <li>عددها <b>أكثر من 11 مليون</b> شركة، وتوظّف <b>قرابة 20 مليون</b> عامل.</li>
+        <li>مبيعاتها السنوية <b>2.5 تريليون دولار</b>، وتميل تتبنّى التقنية (<bdi>embrace technology</bdi>).</li>
+        <li>خيرية (<bdi>philanthropic</bdi>): <b>70%</b> من المالكات يتطوّعون <b>مرة بالشهر على الأقل</b>.</li>
+      </ol>
+      <p>هذا إطار ثقافة عامة — ما فيه مفهوم محاسبي جديد، لا تضيّع وقتك تحفظ أرقامه.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>An <b>account</b> is a record of increases and decreases in a specific asset, liability, equity, revenue, or
+      expense. The <b>general ledger</b>, or simply <b>ledger</b>, is a record of all accounts and their balances.</p>
+      <p>Assets are resources owned or controlled by a company. Resources have expected future benefits.</p>
+      <p>Accounts receivable are held by a seller and are promises of payment from customers to sellers. Accounts
+      receivable are increased by credit sales or sales on credit (or on account). They are decreased by customer
+      payments.</p>
+      <p>A note receivable, or promissory note, is a written promise of another entity to pay a specific sum of money on a
+      specified future date to the holder of the note. Notes receivable usually require interest, whereas accounts
+      receivable do not.</p>
+      <p>Prepaid accounts (or prepaid expenses) are assets from prepayments of future expenses (expenses expected to be
+      incurred in future accounting periods). When the expenses are later incurred, the amounts in prepaid accounts are
+      transferred to expense accounts.</p>
+      <p>Supplies are assets until they are used. When they are used up, their costs are reported as expenses.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Prepaid</bdi> = <b>أصل</b> مو مصروف — مع إن اسمه الثاني <bdi>prepaid <b>expenses</b></bdi>. يصير مصروف <b>بعدين</b>
+            لما ينستخدم أو يمر وقته.</li>
+        <li><bdi>Supplies</bdi> أصل <b>لين تنستخدم</b>؛ اللي انستخدم = مصروف، واللي باقي = أصل.</li>
+        <li><bdi>Notes receivable</bdi> غالباً <b>فيها فايدة</b> وجاية من <b>عقد رسمي</b>؛ <bdi>accounts receivable</bdi> ما فيها فايدة.
+            الاختيار اللي يعكس = غلط.</li>
+        <li><bdi>Accounts receivable</bdi> يمسكها <b>البائع</b> (له فلوس عند العميل). تزيد بالبيع الآجل وتنقص بدفع العميل.</li>
+        <li>الأرض والمبنى اللي عليها = <b>حسابين منفصلين</b>. والمعدات والمباني يتوزّع عليها <bdi>depreciation</bdi>؛ الأرض النص
+            ما ذكر لها إهلاك.</li>
+        <li><bdi>Account</bdi> = حساب <b>واحد</b>. <bdi>Ledger</bdi> = <b>كل</b> الحسابات <b>مع أرصدتها</b>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · Liability accounts -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">💳</div>
+    <div class="term">Liability Accounts</div>
+    <div class="ar">حسابات الالتزامات</div>
+    <div class="say">أي حساب فيه <bdi>payable</bdi> أو <bdi>unearned</bdi> = التزام</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Liabilities</bdi></b> = التزامات تنقل فيها أصول أو تقدّم منتجات أو خدمات للغير — يعني <b>مطالبات الدائنين</b> على الأصول.
+      وعندها <b>أربعة</b> حسابات شائعة.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>مشترك جوال دفع اشتراك سنة مقدّم: الشركة استلمت الفلوس بس لسّا «عليها» خدمة ١٢ شهر = <bdi>unearned</bdi>.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — التعريف والدائن والمدين</span>
+      <p><b><bdi>Liabilities</bdi></b> (الالتزامات، وتلقاها بعد باسم <b>الخصوم</b>) = <mark class="k">التزامات على الشركة إنها <b>تنقل أصول</b> أو <b>تقدّم منتجات أو
+      خدمات</b> للغير</mark>. وهي <b>مطالبات الدائنين</b> (<bdi>claims by creditors</bdi>) على الأصول.</p>
+      <table>
+        <tr><th>المصطلح</th><th>التعريف</th><th>تذكّرها كذا</th></tr>
+        <tr><td><b><bdi>Creditors</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الدائنين</span></td>
+            <td>أفراد ومنظمات <b>لهم حق يستلمون دفعات</b> من الشركة.</td><td>اللي <b>يطلبك</b> فلوس</td></tr>
+        <tr><td><b><bdi>Debtors</bdi></b><br><span style="color:var(--muted);font-size:.85rem">المدينين</span></td>
+            <td>اللي <b>عليهم فلوس</b> (<bdi>those who owe money</bdi>).</td><td>اللي <b>عليه</b> فلوس</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — الحسابات الأربعة</span>
+      <table>
+        <tr><th>الحساب</th><th>وش هو</th><th>التفاصيل</th></tr>
+        <tr><td><b><bdi>Accounts Payable</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الذمم الدائنة</span></td>
+            <td><b>وعود بالدفع بعدين</b> (<bdi>promises to pay later</bdi>).</td>
+            <td>تجي من الشراء الآجل (<bdi>on credit</bdi> أو <bdi>on account</bdi>) لـ: بضاعة للبيع، مستلزمات، معدات، وخدمات.
+                ولو الموردين كثير، كل مورد له سجل باسم <bdi>Accounts Payable—‘Supplier Name’</bdi>.</td></tr>
+        <tr><td><b><bdi>Notes Payable</bdi></b><br><span style="color:var(--muted);font-size:.85rem">أوراق الدفع</span></td>
+            <td><b>سند إذني مكتوب</b> تدفع فيه مبلغ مستقبلي (<bdi>a written promissory note to pay a future amount</bdi>).</td>
+            <td>الفرق عن <bdi>accounts payable</bdi>: جاي من <b>عقد رسمي</b> (<bdi>promissory note</bdi>) و<b>غالباً فيه فايدة</b>.</td></tr>
+        <tr><td><b><bdi>Unearned Revenue</bdi></b><br><span style="color:var(--muted);font-size:.85rem">إيرادات غير مكتسبة</span></td>
+            <td><mark class="k"><b>التزام</b> ينسجّل لما العملاء <b>يدفعون مقدّم</b> لمنتجات أو خدمات</mark>.</td>
+            <td>أمثلة الكتاب (ثلاثة): اشتراكات مجلات يحصّلها الناشر مقدّم · إيجار يحصّله المؤجر مقدّم · تذاكر موسم تبيعها الفرق
+                الرياضية. البائع يسجّلها في حسابات زي <bdi>Unearned Subscriptions</bdi> و<bdi>Unearned Rent</bdi>. ولما يسلّم
+                المنتج أو الخدمة بعدين، <b>تنتقل للإيراد</b>.</td></tr>
+        <tr><td><b><bdi>Accrued Liabilities</bdi></b><br><span style="color:var(--muted);font-size:.85rem">التزامات مستحقة</span></td>
+            <td>مبالغ <b>علينا وما انتدفعت لسّا</b> (<bdi>amounts owed that are not yet paid</bdi>).</td>
+            <td>أمثلة: <bdi>wages payable</bdi> (رواتب مستحقة) · <bdi>taxes payable</bdi> (ضرايب مستحقة) ·
+                <bdi>interest payable</bdi> (فوايد مستحقة). وغالباً كل وحدة لها حساب منفصل بنفس الاسم.</td></tr>
+      </table>
+      <p><b>قاعدة ذهبية من الكتاب (<bdi>Point</bdi>):</b> كلمتين <b>تقريباً دايماً</b> يدلّون على حساب التزام:</p>
+      <ul>
+        <li><b><bdi>“payable”</bdi></b> = التزامات <b>لازم تندفع</b> (<bdi>must be paid</bdi>).</li>
+        <li><b><bdi>“unearned”</bdi></b> = التزامات <b>لازم تنفَّذ</b> (<bdi>must be fulfilled</bdi>) — يعني تسلّم المنتج أو الخدمة.</li>
+      </ul>
+      <p><b>مثال الكتاب (<bdi>Decision Insight</bdi>):</b> فرق رياضية محترفة كثير عندها <b>أكثر من 100 مليون دولار</b> من تذاكر
+      مبيوعة مقدّم في حساب <bdi>Unearned Revenue</bdi>. لما الفريق يلعب مبارياته على أرضه، <b>يسدّد هذا الالتزام</b> لحاملي
+      التذاكر، وينقل المبلغ المكتسب لحساب <bdi>Ticket Revenue</bdi>. والكتاب يذكر فرق من دوري كرة السلة للسيدات (<bdi>WNBA</bdi>):
+      <bdi>Seattle Storm</bdi> و<bdi>Minnesota Lynx</bdi> و<bdi>L.A. Sparks</bdi>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — مين ماسك الورقة؟ (من ملخّص الفصل <bdi>Summary: Cheat Sheet</bdi>)</span>
+      <p>ملخّص الكتاب آخر الفصل يقول لكل حساب من هذي الأربعة <b>عند مين ينسجّل</b> (<bdi>held by</bdi>). احفظها
+      <b>زوجين</b>: البائع والمشتري في الـ<bdi>accounts</bdi>، والمُقرض والمقترض في الـ<bdi>notes</bdi>:</p>
+      <table>
+        <tr><th>الحساب</th><th>النوع</th><th>عند مين؟ (<bdi>held by</bdi>)</th><th>وش هو حسب الملخّص</th></tr>
+        <tr><td><b><bdi>Accounts receivable</bdi></b></td><td>أصل</td><td><b>البائع</b> (<bdi>a seller</bdi>)</td>
+            <td>وعود بالدفع من العملاء للبائعين؛ تزيد بالبيع الآجل</td></tr>
+        <tr><td><b><bdi>Accounts payable</bdi></b></td><td>التزام</td><td><b>المشتري</b> (<bdi>a buyer</bdi>)</td>
+            <td>وعد من المشتري إنه يدفع للبائع بعدين مقابل بضاعة أو خدمات استلمها</td></tr>
+        <tr><td><b><bdi>Notes receivable</bdi></b></td><td>أصل</td><td><b>المُقرض</b> (<bdi>a lender</bdi>)</td>
+            <td>وعد مكتوب من المقترض إنه يدفع للمُقرض مبلغ محدد في تاريخ مستقبلي محدد</td></tr>
+        <tr><td><b><bdi>Notes payable</bdi></b></td><td>التزام</td><td><b>المقترض</b> (<bdi>a borrower</bdi>)</td>
+            <td>سند إذني مكتوب يدفع فيه مبلغ مستقبلي في تاريخ مستقبلي</td></tr>
+      </table>
+      <p><b>يعني:</b> الوعد الواحد له وجهين — عند البائع <bdi>receivable</bdi> (أصل)، وعند المشتري <bdi>payable</bdi> (التزام).
+      ونفس الشي في السند: عند المُقرض <bdi>note receivable</bdi>، وعند المقترض <bdi>note payable</bdi>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Liabilities are obligations to transfer assets or provide products or services to others. They are claims by
+      creditors against assets. <b>Creditors</b> are individuals and organizations that have rights to receive payments from
+      a company. <b>Debtors</b> are those who owe money.</p>
+      <p>Accounts payable are promises to pay later. A note payable is a written promissory note to pay a future amount.
+      Notes payable are different from accounts payable because they come from a formal contract called a promissory note
+      and usually require interest.</p>
+      <p><b>Unearned revenue</b> is a liability that is recorded when customers pay in advance for products or services.
+      When products and services are later delivered, unearned revenue is transferred to revenue.</p>
+      <p>Accrued liabilities are amounts owed that are not yet paid. Examples are wages payable, taxes payable, and
+      interest payable.</p>
+      <p>Two words that almost always identify liability accounts: “payable,” meaning liabilities that must be paid, and
+      “unearned,” meaning liabilities that must be fulfilled.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Unearned Revenue</bdi> = <b>التزام</b>، مو إيراد ومو أصل. الفلوس دخلت صح، بس الشركة لسّا «عليها» الخدمة.
+            يصير إيراد <b>بعد</b> ما تسلّم.</li>
+        <li><bdi>Creditors</bdi> = لهم فلوس عندك. <bdi>Debtors</bdi> = عليهم فلوس لك. الاختبار يقلبهم.</li>
+        <li><bdi>Notes payable</bdi> مقابل <bdi>accounts payable</bdi>: الفرق <b>عقد رسمي + فايدة غالباً</b> — نفس فرق
+            <bdi>notes</bdi> و<bdi>accounts receivable</bdi> بس من جهة اللي عليه الفلوس: المشتري في الذمم، والمقترض في أوراق الدفع (سؤال المناقشة في آخر الفصل).</li>
+        <li><bdi>Wages / Taxes / Interest Payable</bdi> = <bdi>accrued liabilities</bdi> — كلها التزام، مو مصروف.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 · Equity accounts -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🧩</div>
+    <div class="term">Equity Accounts</div>
+    <div class="ar">حسابات حقوق الملكية</div>
+    <div class="say">أربع حسابات: اثنين يزيدونها واثنين ينقصونها</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Equity</bdi></b> = حق المالك <b>الباقي</b> في الأصول بعد ما تطرح الالتزامات. وتتأثر بـ<b>أربع</b> أنواع حسابات:
+      <bdi>Common Stock</bdi> (+) و<bdi>Dividends</bdi> (−) و<bdi>Revenues</bdi> (+) و<bdi>Expenses</bdi> (−).</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>حصّالة المالك: حطّ فلوس (أسهم) +، سحب (توزيعات) −، بعت للزباين (إيراد) +، صرف عشان يبيع (مصروف) −.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — حقوق الملكية وأسماؤها</span>
+      <p>حق المالك على أصول الشركة اسمه <b><bdi>equity</bdi></b> أو <b><bdi>stockholders’ equity</bdi></b> أو
+      <b><bdi>shareholders’ equity</bdi></b> — ثلاث أسماء لشي واحد. وهو <mark class="k">حق المالك <b>الباقي</b>
+      (<bdi>residual interest</bdi>) في أصول الشركة <b>بعد طرح الالتزامات</b></mark>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.2 — Equity Accounts</div>
+        <img src="../img/acct203/exhibit-2-2.png" alt="Exhibit 2.2 — Equity accounts: a label Equity followed by an equals sign and four blue account folders, Common Stock minus Dividends plus Revenues minus Expenses" loading="lazy">
+        <p class="excap">هذا <b><bdi>Exhibit 2.2</bdi></b>. كلمة <bdi>Equity</bdi> على اليسار، وبعدها <span class="mono">=</span> وأربع ملفات زرقا
+        بينها إشارات: <bdi>Common Stock</bdi> <span class="mono">−</span> <bdi>Dividends</bdi> <span class="mono">+</span>
+        <bdi>Revenues</bdi> <span class="mono">−</span> <bdi>Expenses</bdi>. <b>كيف تقرأه:</b> الإشارة قبل كل ملف تقول لك: يزيد حقوق
+        الملكية ولا ينقصها؟ <b>وش يجي منه بالاختبار:</b> يعطيك أرقام الأربعة ويطلب حقوق الملكية، أو يسألك أي حساب ينقصها.</p>
+      </div>
+      <div class="eq">
+        <div class="l1">Equity <span class="plus">=</span> <span class="g-cs">Common Stock</span> <span class="plus">−</span>
+          <span class="g-dv">Dividends</span> <span class="plus">+</span> <span class="g-rv">Revenues</span>
+          <span class="plus">−</span> <span class="g-ex">Expenses</span></div>
+      </div>
+
+      <table>
+        <tr><th>النوع</th><th>الحساب</th><th>الأثر</th><th>وش يقول الكتاب</th></tr>
+        <tr><td>استثمارات المالك<br><bdi>Owner Investments</bdi></td><td><b class="g-cs"><bdi>Common Stock</bdi></b><br>
+              <span style="color:var(--muted);font-size:.85rem">الأسهم العادية</span></td><td class="pos">+</td>
+            <td>لما المالك يستثمر في الشركة، <b>الأصول وحقوق الملكية يزيدون</b> الاثنين، والزيادة في حقوق الملكية تنسجّل في
+                <bdi>Common Stock</bdi>. و<mark class="k">استثمارات المالك <b>مو إيرادات</b></mark>.</td></tr>
+        <tr><td>توزيعات على المالك<br><bdi>Owner Distributions</bdi></td><td><b class="g-dv"><bdi>Dividends</bdi></b><br>
+              <span style="color:var(--muted);font-size:.85rem">التوزيعات</span></td><td class="neg">−</td>
+            <td>لما الشركة (<bdi>corporation</bdi>) توزّع أصول على مُلّاكها، <b>الأصول وحقوق الملكية ينقصون</b> الاثنين،
+                والنقص ينسجّل في <bdi>Dividends</bdi>. و<b>التوزيعات مو مصروفات</b> — هي بس <b>عكس</b> استثمارات المالك.</td></tr>
+        <tr><td>حسابات الإيرادات<br><bdi>Revenue Accounts</bdi></td><td><b class="g-rv"><bdi>Revenues</bdi></b><br>
+              <span style="color:var(--muted);font-size:.85rem">الإيرادات</span></td><td class="pos">+</td>
+            <td>مبيعات المنتجات والخدمات للعملاء. أمثلة (خمسة): <bdi>Sales · Commissions Revenue · Professional Fees Revenue ·
+                Rent Revenue · Interest Revenue</bdi>. والإيرادات <b>دايماً</b> تزيد حقوق الملكية.</td></tr>
+        <tr><td>حسابات المصروفات<br><bdi>Expense Accounts</bdi></td><td><b class="g-ex"><bdi>Expenses</bdi></b><br>
+              <span style="color:var(--muted);font-size:.85rem">المصروفات</span></td><td class="neg">−</td>
+            <td>تكاليف تقديم المنتجات والخدمات. أمثلة (خمسة): <bdi>Advertising Expense · Salaries Expense · Rent Expense ·
+                Utilities Expense · Insurance Expense</bdi>. والمصروفات <b>دايماً</b> تنقص حقوق الملكية.</td></tr>
+      </table>
+      <p><b>أسماء الإيراد تختلف من شركة لشركة:</b> مبيعات المنتجات اسمها <bdi>net sales</bdi> عند <bdi>Apple</bdi>، و
+      <bdi>revenues</bdi> عند <bdi>Google</bdi>، و<bdi>revenue</bdi> عند <bdi>Samsung</bdi>. والقاعدة: <bdi>revenues</bdi> أو
+      <bdi>fees</bdi> تنستخدم مع شركات <b>الخدمات</b>، و<bdi>net sales</bdi> أو <bdi>sales</bdi> مع شركات <b>المنتجات</b>.
+      وفيه قائمة إيرادات ومصروفات كثيرة في دليل الحسابات آخر الكتاب.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — <bdi>Need-To-Know 2-1: Classifying Accounts</bdi></span>
+      <p>الكتاب يطلب تصنّف 12 حساب: أصل (<bdi>A</bdi>)، التزام (<bdi>L</bdi>)، أو حقوق ملكية (<bdi>EQ</bdi>). هذا الحل حقه، مع
+      المفتاح اللي يخليك تعرف بسرعة:</p>
+      <table>
+        <tr><th>#</th><th>Account</th><th>الحل</th><th>المفتاح</th></tr>
+        <tr><td>1</td><td><bdi>Prepaid Rent</bdi></td><td><b>A</b></td><td><bdi>prepaid</bdi> = أصل</td></tr>
+        <tr><td>2</td><td><bdi>Common Stock</bdi></td><td><b>EQ</b></td><td>استثمار المالك</td></tr>
+        <tr><td>3</td><td><bdi>Note Receivable</bdi></td><td><b>A</b></td><td><bdi>receivable</bdi> = أصل</td></tr>
+        <tr><td>4</td><td><bdi>Accounts Payable</bdi></td><td><b>L</b></td><td><bdi>payable</bdi> = التزام</td></tr>
+        <tr><td>5</td><td><bdi>Accounts Receivable</bdi></td><td><b>A</b></td><td><bdi>receivable</bdi> = أصل</td></tr>
+        <tr><td>6</td><td><bdi>Equipment</bdi></td><td><b>A</b></td><td>مورد له منافع مستقبلية</td></tr>
+        <tr><td>7</td><td><bdi>Interest Payable</bdi></td><td><b>L</b></td><td><bdi>payable</bdi> (<bdi>accrued liability</bdi>)</td></tr>
+        <tr><td>8</td><td><bdi>Unearned Revenue</bdi></td><td><b>L</b></td><td><bdi>unearned</bdi> = التزام</td></tr>
+        <tr><td>9</td><td><bdi>Land</bdi></td><td><b>A</b></td><td>مورد له منافع مستقبلية</td></tr>
+        <tr><td>10</td><td><bdi>Prepaid Insurance</bdi></td><td><b>A</b></td><td><bdi>prepaid</bdi> = أصل</td></tr>
+        <tr><td>11</td><td><bdi>Wages Payable</bdi></td><td><b>L</b></td><td><bdi>payable</bdi> (<bdi>accrued liability</bdi>)</td></tr>
+        <tr><td>12</td><td><bdi>Rent Payable</bdi></td><td><b>L</b></td><td><bdi>payable</bdi> = التزام</td></tr>
+      </table>
+      <p>العدّ: <b>6 أصول</b> (1، 3، 5، 6، 9، 10) + <b>5 التزامات</b> (4، 7، 8، 11، 12) + <b>1 حقوق ملكية</b> (2) = <b>12</b>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The owner’s claim on a company’s assets is called equity, stockholders’ equity, or shareholders’ equity. Equity is
+      the owner’s residual interest in the assets of a business after subtracting liabilities. Equity is impacted by four
+      types of accounts.</p>
+      <p>When an owner invests in a company, it increases both assets and equity. The increase to equity is recorded in the
+      account titled Common Stock. Owner investments are not revenues of the business.</p>
+      <p>When a corporation distributes assets to its owners, it decreases both company assets and total equity. The
+      decrease to equity is recorded in an account titled Dividends. Dividends are not expenses of the business; they are
+      simply the opposite of owner investments.</p>
+      <p>Revenues always increase equity. Expenses always decrease equity.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>استثمار المالك مو إيراد</b>، و<b>التوزيعات مو مصروف</b>. الاثنين يغيّرون حقوق الملكية بس <b>ما يدخلون</b> في
+            الإيرادات والمصروفات. هذا أشهر فخ في الفصل.</li>
+        <li><bdi>Revenues</bdi> و<bdi>Expenses</bdi> تحت مربع <bdi>Equity Accounts</bdi> في <bdi>Exhibit 2.1</bdi> لأنها
+            <b>تغيّر حقوق الملكية</b> (الإيرادات ترفعها والمصروفات تنزّلها). بس في دليل الحسابات (<bdi>Exhibit 2.3</bdi>) كل وحدة
+            لها <b>نوع لحالها</b>: <span class="mono">4xx</span> = إيراد، <span class="mono">5xx–6xx</span> = مصروف. لو السؤال
+            يعطيك <bdi>Revenue</bdi> أو <bdi>Expense</bdi> كخيار (زي <bdi>QS 2-3</bdi>)، اختاره. ولو الخيارات بس
+            <bdi>A / L / EQ</bdi> (زي <bdi>NTK 2-1</bdi>)، حطها تحت <bdi>EQ</bdi>.</li>
+        <li><b>فخ المصطلحات:</b> الكتاب يستخدم <b>شركة مساهمة</b> (<bdi>corporation</bdi>): <bdi>Common Stock</bdi> و
+            <bdi>Dividends</bdi> و<bdi>Retained Earnings</bdi> (الأرباح المحتجزة). بعض أوراق المادة (زي ملف <bdi>Chapter 2 Practice Questions</bdi>) تستخدم
+            <b>منشأة فردية</b> (<bdi>sole proprietorship</bdi>): <bdi>Owner’s Capital</bdi> و<bdi>Owner’s Withdrawals</bdi> /
+            <bdi>Drawing</bdi>. <b>نفس الفكرة</b> بشكل منشأة مختلف: <bdi>capital</bdi> = جهة <bdi>Common Stock</bdi> (تزيد حقوق
+            الملكية)، و<bdi>withdrawals/drawing</bdi> = جهة <bdi>Dividends</bdi> (تنقصها)، ونفس قواعد المدين (<bdi>debit</bdi>) والدائن (<bdi>credit</bdi>) اللي تجيك في
+            القسم ٢.</li>
+        <li>ثلاث أسماء لحقوق الملكية: <bdi>equity</bdi> = <bdi>stockholders’ equity</bdi> = <bdi>shareholders’ equity</bdi>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 · Ledger and chart of accounts -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🔢</div>
+    <div class="term">Ledger and Chart of Accounts</div>
+    <div class="ar">دفتر الأستاذ ودليل الحسابات</div>
+    <div class="say">الأستاذ فيه الأرصدة، والدليل قائمة أسماء بأرقام</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Ledger</bdi></b> = كل الحسابات <b>وأرصدتها</b>. <b><bdi>Chart of accounts</bdi></b> = قائمة بكل حسابات الأستاذ،
+      لكل حساب <b>رقم تعريفي</b> — وأول رقم يقولك النوع: 1 أصل، 2 التزام، 3 حقوق ملكية، 4 إيراد، 5–6 مصروف.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>زي مفتاح الاتصال الدولي: أول رقم يقولك الدولة. هنا أول رقم يقولك نوع الحساب: 1 أصل، 2 التزام، 3 ملكية…</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — كم حساب تحتاج الشركة؟</span>
+      <p>مجموعة كل الحسابات وأرصدتها = <b><bdi>ledger</bdi></b> (أو <bdi>general ledger</bdi>). و<mark class="k"><b>حجم الشركة
+      وتنوّع عملياتها</b> يحددون عدد الحسابات</mark> اللي تحتاجها:</p>
+      <ul>
+        <li>شركة <b>صغيرة</b> ممكن يكفيها <b>20 حساب</b> بس.</li>
+        <li>شركة <b>كبيرة</b> ممكن تحتاج <b>آلاف</b> الحسابات.</li>
+      </ul>
+      <p><b><bdi>Chart of accounts</bdi></b> (دليل الحسابات) = <mark class="k">قائمة بـ<b>كل حسابات الأستاذ</b>، ولكل حساب
+      <b>رقم تعريفي</b> (<bdi>identification number</bdi>)</mark>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.3 — Typical Chart of Accounts</div>
+        <img src="../img/acct203/exhibit-2-3.png" alt="Exhibit 2.3 — Typical chart of accounts shown on a screen beside a woman holding a phone: 101–199 asset accounts, 201–299 liability accounts, 301–399 equity accounts, 401–499 revenue accounts, 501–699 expense accounts" loading="lazy">
+        <p class="excap">هذا <b><bdi>Exhibit 2.3</bdi></b> — نظام ترقيم شائع لحسابات <b>شركة صغيرة</b>. شاشة عنوانها <bdi>Chart of Accounts</bdi> طالعة من جوال بيد موظفة، وفيها خمس سطور:
+        <span class="mono">101–199</span> <bdi>Asset accounts</bdi> · <span class="mono">201–299</span> <bdi>Liability accounts</bdi> ·
+        <span class="mono">301–399</span> <bdi>Equity accounts</bdi> · <span class="mono">401–499</span> <bdi>Revenue accounts</bdi> ·
+        <span class="mono">501–699</span> <bdi>Expense accounts</bdi>. <b>كيف تقرأه:</b> كل نوع له مية رقم، إلا
+        <b>المصروفات لها مِيتين</b> (5xx و6xx). <b>وش يجي منه بالاختبار:</b> يعطيك رقم حساب ويسألك نوعه.</p>
+      </div>
+
+      <p>هذي الأرقام <b>كود من ثلاث خانات</b> يفيد في مسك الدفاتر (<bdi>recordkeeping</bdi>):</p>
+      <ul>
+        <li><b>الخانة الأولى</b> = نوع الحساب: الأصول تبدأ بـ<b>1</b>، الالتزامات بـ<b>2</b>، وهكذا.</li>
+        <li><b>الخانة الثانية والثالثة</b> = <b>الفئات الفرعية</b> للحساب (<bdi>subcategories</bdi>).</li>
+      </ul>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 2.4 — Partial Chart of Accounts for FastForward</div>
+        <table dir="ltr">
+          <tr><th>Group</th><th>No.</th><th>Account</th></tr>
+          <tr><td rowspan="5"><b>Assets</b></td><td class="mono">101</td><td>Cash</td></tr>
+          <tr><td class="mono">106</td><td>Accounts receivable</td></tr>
+          <tr><td class="mono">126</td><td>Supplies</td></tr>
+          <tr><td class="mono">128</td><td>Prepaid insurance</td></tr>
+          <tr><td class="mono">167</td><td>Equipment</td></tr>
+          <tr><td rowspan="2"><b>Liabilities</b></td><td class="mono">201</td><td>Accounts payable</td></tr>
+          <tr><td class="mono">236</td><td>Unearned consulting revenue</td></tr>
+          <tr><td rowspan="3"><b>Equity</b></td><td class="mono">307</td><td>Common stock</td></tr>
+          <tr><td class="mono">318</td><td>Retained earnings</td></tr>
+          <tr><td class="mono">319</td><td>Dividends</td></tr>
+          <tr><td rowspan="2"><b>Revenues</b></td><td class="mono">403</td><td>Consulting revenue</td></tr>
+          <tr><td class="mono">406</td><td>Rental revenue</td></tr>
+          <tr><td rowspan="5"><b>Expenses</b></td><td class="mono">622</td><td>Salaries expense</td></tr>
+          <tr><td class="mono">637</td><td>Insurance expense</td></tr>
+          <tr><td class="mono">640</td><td>Rent expense</td></tr>
+          <tr><td class="mono">652</td><td>Supplies expense</td></tr>
+          <tr><td class="mono">690</td><td>Utilities expense</td></tr>
+        </table>
+        <p class="excap">هذا <b><bdi>Exhibit 2.4</bdi></b> — جزء من دليل حسابات <bdi>FastForward</bdi> (الشركة اللي تمشي معك في الفصل كله).
+        <b>17 حساب:</b> 5 أصول + 2 التزامات + 3 حقوق ملكية + 2 إيرادات + 5 مصروفات = 17. <b>لاحظ:</b>
+        <span class="mono">236</span> <bdi>Unearned consulting revenue</bdi> يبدأ بـ<b>2</b> = <b>التزام</b> مع إن اسمه فيه
+        <bdi>revenue</bdi>؛ و<span class="mono">318</span> <bdi>Retained earnings</bdi> (الأرباح المحتجزة) حساب حقوق ملكية؛ وكل مصروفات
+        <bdi>FastForward</bdi> تبدأ بـ<b>6</b> (داخل مدى 501–699). هذي الأرقام بتشوفها في عمود <bdi>PR</bdi> لما نرحّل في القسم ٣.</p>
+      </div>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The collection of all accounts and their balances is called a ledger (or general ledger). A company’s size and
+      diversity of operations affect the number of accounts needed. A small company can have as few as 20 accounts; a large
+      company can require thousands. The <b>chart of accounts</b> is a list of all ledger accounts with an identification
+      number assigned to each account.</p>
+      <p>These account numbers have a three-digit code that is useful in recordkeeping. In this example, the first digit of
+      asset accounts is a 1, the first digit of liability accounts is a 2, and so on. The second and third digits relate to
+      the accounts' subcategories.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Chart of accounts</bdi> = <b>أسماء وأرقام بس</b>، <b>بدون أرصدة</b>. <bdi>General ledger</bdi> = كل الحسابات
+            <b>مع الأرصدة</b>. (تمرين <bdi>Exercise 2-4</bdi> يختبر هالفرق بالضبط.)</li>
+        <li>عدد الحسابات يعتمد على <b>الحجم وتنوّع العمليات</b> — صغيرة 20، كبيرة آلاف. مو رقم ثابت لكل الشركات.</li>
+        <li>المصروفات <b>501–699</b> (مو 501–599). والإيرادات <b>401–499</b>.</li>
+        <li>لا تنخدع بكلمة <bdi>revenue</bdi>: <span class="mono">236</span> <bdi>Unearned consulting revenue</bdi>
+            <b>التزام</b> — أول رقم <b>2</b>، وكلمة <bdi>unearned</bdi> تدل على التزام.</li>
+        <li>الخانة <b>الأولى</b> = النوع؛ الخانة <b>الثانية والثالثة</b> = الفئة الفرعية. الاختيار اللي يعكس = غلط.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">الأسئلة بالإنجليزي لأن الاختبار بالإنجليزي. جاوب قبل ما تفتح الحل. لو غلطت في ١ ارجع لجدول
+<bdi>NTK 2-1</bdi> في المفهوم الرابع، ولو غلطت في ٤ ارجع لـ<bdi>Exhibit 2.3</bdi>، ولو غلطت في ٥ ارجع لـ<bdi>Notes Receivable</bdi>
+(المفهوم الثاني) و<bdi>Unearned Revenue</bdi> (الثالث) و<bdi>Equity Accounts</bdi> (الرابع).</p>
+
+<div class="q">
+  <div class="stem">1. The ledger of Rafa Company shows these balances: Cash $8,000; Accounts Receivable $3,500; Prepaid Rent $1,200; Supplies $600; Accounts Payable $2,700; Unearned Revenue $1,500. What are Rafa's total assets?</div>
+  <ol type="A"><li>$13,300</li><li>$14,800</li><li>$12,100</li><li>$17,500</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>A</b>. الأصول هي <bdi>Cash</bdi> و<bdi>Accounts Receivable</bdi> و<bdi>Prepaid Rent</bdi> و<bdi>Supplies</bdi>:
+  <span class="mono">8,000 + 3,500 + 1,200 + 600 = 13,300</span>. الفخ في <b>B</b> (14,800): يحسب <bdi>Unearned Revenue</bdi>
+  أصل لأن الفلوس دخلت — بس <bdi>unearned</bdi> = <b>التزام</b>. و<b>C</b> (12,100) يشيل <bdi>Prepaid Rent</bdi> لأنه يحسبه مصروف
+  — بس <bdi>prepaid</bdi> = <b>أصل</b>. و<b>D</b> (17,500) يجمع كل شي حتى الالتزامات.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. A corporation's equity accounts show: Common Stock $20,000; Dividends $1,500; Revenues $9,000; Expenses $4,000. Using the relationship in Exhibit 2.2, total equity is:</div>
+  <ol type="A"><li>$26,500</li><li>$23,500</li><li>$25,000</li><li>$34,500</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <span class="mono">Equity = 20,000 − 1,500 + 9,000 − 4,000 = 23,500</span>. الفخ في <b>A</b> (26,500): يجمع
+  <bdi>Dividends</bdi> بدل ما يطرحها. و<b>C</b> (25,000): يتجاهل <bdi>Dividends</bdi> لأنها «مو مصروف» — صح إنها مو مصروف، بس
+  <b>تنقص</b> حقوق الملكية. و<b>D</b> (34,500): يجمع الأربعة كلها بدون إشارات.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Which of the following is NOT likely to serve as a source document?</div>
+  <ol type="A"><li>A sales receipt</li><li>A bank statement</li><li>A trial balance</li><li>An invoice from a supplier</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. مستند المصدر يحدد ويوصف العملية <b>وهي داخلة</b> النظام. <bdi>Trial balance</bdi> يطلع في <b>آخر</b> الخطوات
+  (الخطوة ٥) — نتيجة، مو مدخل. الفخ: <b>A</b> و<b>B</b> من الست أمثلة اللي يعدّها الكتاب بالاسم، و<b>D</b> هي
+  <bdi>bills from suppliers</bdi>. والسؤال بـ<bdi>NOT</bdi>، لا تختار أول مستند تعرفه.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. Using the numbering system in Exhibit 2.3, FastForward's account No. 236, Unearned Consulting Revenue, is classified as a(n):</div>
+  <ol type="A"><li>Revenue account</li><li>Liability account</li><li>Asset account</li><li>Equity account</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. أول خانة <b>2</b> = <span class="mono">201–299</span> <bdi>Liability accounts</bdi> في <bdi>Exhibit 2.3</bdi>، و
+  <bdi>unearned</bdi> = التزام لازم يتنفّذ. الفخ في <b>A</b>: كلمة <bdi>revenue</bdi> في الاسم — بس حسابات الإيراد تبدأ بـ<b>4</b>
+  (زي <span class="mono">403</span> <bdi>Consulting revenue</bdi>). و<b>C</b> فخ «الفلوس دخلت يعني أصل» — النقد هو الأصل، مو هذا
+  الحساب. و<b>D</b> حقوق الملكية تبدأ بـ<b>3</b>.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. Which of the following statements is correct according to the chapter?</div>
+  <ol type="A"><li>Owner investments are recorded as revenues of the business</li><li>Dividends are expenses of the business</li>
+  <li>Unearned revenue is an asset because the company has already received cash</li>
+  <li>Notes receivable usually require interest, whereas accounts receivable do not</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>D</b>. جملة الكتاب حرفياً: <bdi>Notes receivable usually require interest, whereas accounts receivable do not.</bdi>
+  الفخ في <b>A</b>: استثمارات المالك تنسجّل في <bdi>Common Stock</bdi> و<b>مو إيرادات</b>. و<b>B</b>: التوزيعات <b>مو مصروفات</b>،
+  هي عكس استثمارات المالك. و<b>C</b>: <bdi>unearned revenue</bdi> <b>التزام</b> لأن الشركة لسّا ما سلّمت الخدمة.</p></details>
+</div>
+
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH2-S1">ابدأ</button> <button class="pill" data-deck="ACCT203-CH2-S1" data-mode="ar">عربي ← إنجليزي</button></div></div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Source documents</bdi></td><td>مستندات المصدر</td><td>ورق <b>أو</b> إلكتروني؛ دليل موضوعي وموثوق؛ <bdi>trial balance</bdi> مو منها</td></tr>
+  <tr><td><bdi>Accounting books</bdi> / <bdi>the books</bdi></td><td>الدفاتر</td><td>اسم ثاني للسجلات المحاسبية</td></tr>
+  <tr><td><bdi>Account</bdi></td><td>حساب</td><td>سجل زيادات ونقص لبند <b>واحد</b> معيّن</td></tr>
+  <tr><td><bdi>General ledger</bdi> / <bdi>ledger</bdi></td><td>دفتر الأستاذ (العام)</td><td>كل الحسابات <b>مع أرصدتها</b>؛ غالباً إلكتروني</td></tr>
+  <tr><td><bdi>Assets</bdi></td><td>الأصول</td><td><bdi>owned or controlled</bdi> + منافع مستقبلية متوقعة</td></tr>
+  <tr><td><bdi>Cash</bdi></td><td>النقدية</td><td>يشمل كل شي يقبله البنك كإيداع: عملات، شيكات، حوالات، رصيد جاري</td></tr>
+  <tr><td><bdi>Accounts receivable</bdi></td><td>الذمم المدينة</td><td>يمسكها <b>البائع</b>؛ تزيد بالبيع الآجل وتنقص بدفع العميل</td></tr>
+  <tr><td><bdi>On credit</bdi> / <bdi>on account</bdi></td><td>بالآجل</td><td>نفس المعنى: الدفع بعدين</td></tr>
+  <tr><td><bdi>Notes receivable</bdi> / <bdi>promissory note</bdi></td><td>أوراق القبض / سند إذني</td><td>عقد رسمي + <b>فايدة غالباً</b>؛ الذمم المدينة بدون فايدة</td></tr>
+  <tr><td><bdi>Prepaid accounts</bdi> / <bdi>prepaid expenses</bdi></td><td>مصروفات مدفوعة مقدماً</td><td><b>أصل</b>؛ ينتقل لمصروف لما يصير المصروف فعلاً</td></tr>
+  <tr><td><bdi>Supplies</bdi></td><td>المستلزمات</td><td>أصل <b>لين تنستخدم</b>، بعدها مصروف</td></tr>
+  <tr><td><bdi>Equipment</bdi></td><td>المعدات</td><td>تكلفتها تتوزع كمصروف = <bdi>depreciation</bdi></td></tr>
+  <tr><td><bdi>Buildings</bdi></td><td>المباني</td><td>إهلاك؛ وكل مبنى ممكن له حساب لحاله</td></tr>
+  <tr><td><bdi>Land</bdi></td><td>الأراضي</td><td>منفصلة عن المبنى اللي عليها</td></tr>
+  <tr><td><bdi>Depreciation</bdi></td><td>الإهلاك</td><td>توزيع تكلفة المعدات والمباني على الوقت كمصروف (تفاصيله الفصل 3)</td></tr>
+  <tr><td><bdi>Liabilities</bdi></td><td>الالتزامات (الخصوم)</td><td>نقل أصول أو تقديم منتجات وخدمات للغير؛ مطالبات الدائنين</td></tr>
+  <tr><td><bdi>Creditors</bdi></td><td>الدائنين</td><td>لهم حق يستلمون دفعات من الشركة</td></tr>
+  <tr><td><bdi>Debtors</bdi></td><td>المدينين</td><td>اللي <b>عليهم</b> فلوس — لا تقلبها</td></tr>
+  <tr><td><bdi>Accounts payable</bdi></td><td>الذمم الدائنة</td><td>وعود بالدفع بعدين؛ من الشراء الآجل</td></tr>
+  <tr><td><bdi>Notes payable</bdi></td><td>أوراق الدفع</td><td>سند إذني مكتوب؛ عقد رسمي + فايدة غالباً</td></tr>
+  <tr><td><bdi>Unearned revenue</bdi></td><td>إيرادات غير مكتسبة</td><td><b>التزام</b>؛ العميل دفع مقدّم، وتنتقل للإيراد بعد التسليم</td></tr>
+  <tr><td><bdi>Accrued liabilities</bdi></td><td>التزامات مستحقة</td><td>عليك وما دفعتها: <bdi>wages · taxes · interest payable</bdi></td></tr>
+  <tr><td><bdi>Equity</bdi> / <bdi>stockholders’ equity</bdi> / <bdi>shareholders’ equity</bdi></td><td>حقوق الملكية</td><td>حق المالك <b>الباقي</b> بعد طرح الالتزامات</td></tr>
+  <tr><td><bdi>Common Stock</bdi> (<bdi>owner investments</bdi>)</td><td>الأسهم العادية (استثمارات المالك)</td><td>+ · استثمارات المالك <b>مو إيرادات</b></td></tr>
+  <tr><td><bdi>Dividends</bdi> (<bdi>owner distributions</bdi>)</td><td>التوزيعات (توزيعات على المالك)</td><td>− · <b>مو مصروفات</b>؛ عكس استثمارات المالك</td></tr>
+  <tr><td><bdi>Revenues</bdi></td><td>الإيرادات</td><td>+ · دايماً تزيد حقوق الملكية</td></tr>
+  <tr><td><bdi>Expenses</bdi></td><td>المصروفات</td><td>− · دايماً تنقص حقوق الملكية</td></tr>
+  <tr><td><bdi>Chart of accounts</bdi></td><td>دليل الحسابات</td><td>كل حسابات الأستاذ مع رقم لكل حساب — <b>بدون أرصدة</b>؛ أول رقم: 1 أصول · 2 التزامات · 3 ملكية · 4 إيرادات · <b>5–6</b> مصروفات</td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب <bdi>Financial Accounting Fundamentals</bdi> 8e (<bdi>Wild</bdi>، <bdi>McGraw Hill</bdi>) —
+<bdi>Chapter 2: Accounting for Business Transactions</bdi>، جزء <bdi>Basis of Financial Statements</bdi>، الهدف <code>C1</code>
+(صفحات ٤٥–٤٨)، مع <bdi>Exhibits 2.1–2.4</bdi> و<bdi>Need-To-Know 2-1</bdi>. أسئلة التدريب مبنية على أنماط
+<bdi>Multiple Choice Quiz</bdi> و<bdi>QS 2-1</bdi> إلى <bdi>QS 2-3</bdi> و<bdi>Exercises 2-1</bdi> إلى <bdi>2-4</bdi> في الكتاب، وملف
+<bdi>Chapter 2 Practice Questions</bdi> اللي عندك.
+وجدول «مين ماسك الورقة؟» مأخوذ من ملخّص الفصل <bdi>Summary: Cheat Sheet</bdi>.
+<br><b>ملخّص بس:</b> إطار <bdi>Decision Insight</bdi> الأول عن رائدات الأعمال (<bdi>Jasmine Crowe</bdi> مؤسسة <bdi>Goodr</bdi>) انحط
+بنقاطه الثلاث بس، بدون تفصيل لأنه ما فيه مفهوم محاسبي. وصور الأشخاص في الإطارين ما انحطت لأنها للزينة. الإهلاك والمصروفات المدفوعة
+مقدماً بالتفصيل في الفصل ٣.
+</p>
+
+
+<div class="footnav">
+  <div class="side"></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><a class="pill" href="ACCT203-CH2-S2.html">٢. القيد المزدوج: المدين والدائن ←</a></div>
+</div>
+</div>
+<script src="../data/cards-ACCT203-CH2-S1.js?v=7"></script>
+<script src="../assets/flashcards.js?v=7"></script>
+<script src="../assets/lesson.js?v=7"></script>
+</body>
+</html>

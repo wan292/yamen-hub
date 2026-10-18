@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — Chapter 3: Timing and Reporting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/theme.css?v=7">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH3-S1.html">🇸🇦 عربي</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH3-S1">🃏 Practice</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
+</div>
+<header class="lh">
+  <h1>Chapter 3 &mdash; Timing and Reporting</h1>
+  <p class="sub"><code>ACCT 203</code> &middot; Principles of Financial Accounting &middot; Chapter 3: Adjusting Accounts for Financial Statements &middot; Section 1 of 4:
+  Timing and Reporting<br>
+  <span class="g2" data-ar="الهدف">Objective</span> <code>C1</code>: <span class="g2" data-ar="اشرح">Explain</span> the <span class="g2" data-ar="أهمية">importance</span> of <span class="g2" data-ar="على فترات منتظمة">periodic</span> reporting and the <span class="g2" data-ar="دور">role</span> of accrual accounting.</p>
+</header>
+
+<div class="big">
+  <h2>This <span class="g2" data-ar="القسم">section</span> answers two questions: &ldquo;why do we cut a company's life into periods?&rdquo; and
+  &ldquo;why does accounting record a thing when it <span class="g2" data-ar="يصير">happens</span>, not when the cash moves?&rdquo;</h2>
+  <p>In Chapter 2 you recorded FastForward's <span class="g2" data-ar="الخارجية">external</span> transactions in the journal, posted them, and
+  prepared the trial balance. But at the end of the month some accounts have balances that are <b>not ready</b> for the financial statements:
+  insurance that has used up one month, <span class="g2" data-ar="مستلزمات">supplies</span> that were <span class="g2" data-ar="جزئياً">partly</span> used, <span class="g2" data-ar="رواتب">salaries</span> that are
+  <span class="g2" data-ar="مستحقة عليك">owed</span> but not paid&hellip; things that happened <b>inside</b> the company that nobody recorded.
+  All of Chapter 3 is about <b>adjusting accounts</b> before the statements come out, and this section (<code>C1</code>) is the
+  <span class="g2" data-ar="الأساس">base</span> that explains <b>why</b> we make adjustments
+  <span class="g2" data-ar="من الأساس">at all</span>.</p>
+  <p><b>Map of the chapter</b> (from the <i>Chapter Preview</i> and the <i>Learning Objectives</i> at the start of the chapter). The book
+  <span class="g2" data-ar="يرمز / يعلّم">labels</span> the objectives with three letters: <code>C</code> =
+  <span class="g2" data-ar="مفاهيمي">Conceptual</span>, <code>A</code> = <span class="g2" data-ar="تحليلي">Analytical</span>,
+  <code>P</code> = <span class="g2" data-ar="إجرائي">Procedural</span>.</p>
+  <table>
+    <tr><th>Section</th><th>What is in it</th><th>Objectives</th></tr>
+    <tr><td>1 (this one)</td><td>The accounting period &middot; accrual vs. cash &middot; the two recognition
+        <span class="g2" data-ar="مبادئ">principles</span> &middot; the framework for adjustments and the three steps</td><td><code>C1</code></td></tr>
+    <tr><td>2</td><td><span class="g2" data-ar="تسويات التأجيل">Deferral adjustments</span>: prepaid expenses and unearned revenue</td><td><code>P1</code> <code>P2</code></td></tr>
+    <tr><td>3</td><td>Accrued expenses, accrued revenues, and the adjusted trial balance</td><td><code>P3</code> <code>P4</code> <code>P5</code></td></tr>
+    <tr><td>4</td><td>Closing entries, the accounting cycle, the classified balance sheet, profit
+        <span class="g2" data-ar="هامش">margin</span>, and current <span class="g2" data-ar="نسبة">ratio</span></td><td><code>P6</code> <code>C2</code> <code>A1</code></td></tr>
+    <tr><td><span class="g2" data-ar="الملاحق">Appendices</span></td><td>Appendix 3A (other ways to record prepaids) &middot; 3B (the work
+        sheet) &middot; 3C (<span class="g2" data-ar="القيود العكسية">reversing entries</span>) — appendices, ask the doctor if they are
+        <span class="g2" data-ar="داخلة (في المنهج)">included</span></td><td><code>P7</code> <code>P8</code> <code>P9</code></td></tr>
+  </table>
+  <p><span class="g2" data-ar="ركّز من الحين">Focus from now</span> on four things that are asked a lot from this section: the
+  <span class="g2" data-ar="الفرق">difference</span> between the <b>accrual basis</b> and the <b>cash basis</b> &middot; the numbers of the insurance
+  example (<span class="mono">100 · 1,200 · 1,100</span> against <span class="mono">2,400 · 0 · 0</span>) &middot; that the <b>natural business
+  year</b> ends when sales are at their <b>lowest</b> level &middot; and that an adjusting entry <b>never touches Cash</b>. And take the
+  <span class="g2" data-ar="التعاريف">definitions</span> <b>word for word</b> from the EXAM BOXes.</p>
+  <div class="tiphint"><b>How to use this page:</b> tap or hover any underlined word to see the Arabic. Words with a <span style="border-bottom:2.5px solid var(--gold);font-weight:700">solid line</span> are vocabulary to learn — they show a translation plus a short explanation, and they are collected in the table at the end. Words with a <span style="border-bottom:1.5px dotted var(--muted)">dotted line</span> just give you a quick translation if you get stuck. The green EXAM BOX text has no help on purpose — read it the way it will appear on the exam.</div>
+</div>
+
+<!-- 1 · The accounting period (Exhibit 3.1) + fiscal year -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🗓️</div>
+    <div class="term">The Accounting Period</div>
+    <div class="say">We split a company's life into months, quarters, and years so the information
+    <span class="g2" data-ar="توصل">arrives</span> on time</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
+      Information is <span class="g2" data-ar="قيّمة">valuable</span> because of its <b>timing</b>. So we
+      <span class="g2" data-ar="نفترض">assume</span> that a company's activity <b>can be divided into periods</b> (the <b>time period
+      assumption</b>) and prepare a report for each period: <b>annual</b> and <b>interim</b>. And the <b>fiscal year</b> = any <b>12 months
+      in a row</b> or <b>52 weeks</b> — it does not have to end on December 31.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Like university grades: you don't wait for <span class="g2" data-ar="التخرج">graduation</span>; each <span class="g2" data-ar="سنة دراسية">academic year</span> ends with a result (annual), with term results and <span class="g2" data-ar="اختبارات قصيرة">quizzes</span> between (interim).</div></div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — WHY DO WE SPLIT TIME INTO PERIODS?</span>
+      <p>The book starts with one sentence: <mark class="k">the value of information is <span class="g2" data-ar="مربوطة">linked</span>
+      to its <span class="g" data-ar="التوقيت المناسب" data-x="يعني المعلومة توصل في وقتها، مو متأخرة">timeliness</span></mark>. Useful
+      information must reach <span class="g2" data-ar="أصحاب القرار">decision makers</span>
+      <span class="g" data-ar="بشكل متكرر" data-x="يعني كثير، مرة ورا مرة">frequently</span>, so the accounting system prepares reports at
+      <b>regular <span class="g" data-ar="فترة / فاصل زمني" data-x="يعني المدة بين مرة والمرة اللي بعدها">intervals</span></b>.</p>
+      <p><b>Time period assumption</b> = we assume that the organization's activities <b>can be divided into
+      <span class="g2" data-ar="محددة">specific</span> time periods</b> — in the book's words, it
+      <span class="g" data-ar="يفترض" data-x="يعني تعتبر الشي صحيح من البداية بدون ما تثبته">presumes</span> this. The book gives you
+      <b>four</b> examples:</p>
+      <ol>
+        <li><b>a month</b></li>
+        <li><b>a three-month <span class="g2" data-ar="ربع سنة">quarter</span></b> (3 months)</li>
+        <li><b>a six-month interval</b> (6 months)</li>
+        <li><b>a year</b></li>
+      </ol>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.1 — Accounting Periods</div>
+        <img src="../img/acct203/exhibit-3-1.png" alt="Exhibit 3.1 — Accounting periods: a green timeline arrow labeled Time runs from January to December, with four brackets dividing the same year quarterly into 4 periods, monthly into 12 periods, semiannually into 2 periods, and annually into 1 period." loading="lazy">
+        <p class="excap">This is <b>Exhibit 3.1</b> in the book. In the middle there is a green <span class="g2" data-ar="سهم">arrow</span>
+        called <i>Time</i> with the months from <i>Jan.</i> to <i>Dec.</i>, and around it <b>four</b>
+        <span class="g2" data-ar="أقواس">brackets</span> divide the same year: <b><span class="g2" data-ar="ربعي">Quarterly</span></b> on top (4 parts),
+        <b><span class="g2" data-ar="شهري">Monthly</span></b> under it
+        (12 parts), <b><span class="g2" data-ar="نص سنوي">Semiannually</span></b> under the arrow (2 parts, 6 months each), and
+        <b><span class="g2" data-ar="سنوي">Annually</span></b> at the bottom (1 part). <b>How to read it:</b> it is all the same year, just cut into different
+        <span class="g2" data-ar="أحجام">sizes</span> — these are the accounting, or reporting, periods. <b>What they ask:</b> how many
+        periods there are in a year for each type (quarterly = 4, monthly = 12, semiannually = 2, annually = 1).</p>
+      </div>
+
+      <p><mark class="k">Most organizations use a <b>year</b> as their
+      <span class="g" data-ar="رئيسي / أساسي" data-x="يعني الأول والأهم">primary</span> accounting period</mark>. From here you have two
+      kinds of reports:</p>
+      <table>
+        <tr><th>The report</th><th>It <span class="g2" data-ar="يغطي">covers</span></th><th>In Arabic</th></tr>
+        <tr><td><b>Annual financial statements</b></td><td>one year</td><td>القوائم المالية السنوية</td></tr>
+        <tr><td><b>Interim financial statements</b></td><td>one, three, or six months of activity — many organizations prepare them
+            <b><span class="g2" data-ar="زيادة على">in addition to</span></b> the annual ones</td><td>القوائم المالية المرحلية</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — THE FISCAL YEAR DOES NOT HAVE TO BE JANUARY TO DECEMBER</span>
+      <p>The annual reporting period is <b>not always</b> a <b>calendar year</b> ending on December 31. An organization can use a
+      <b>fiscal year</b> = <mark class="k">any <b>12 <span class="g" data-ar="متتالي" data-x="يعني ورا بعض على طول بدون ما ينقطع">consecutive</span>
+      months</b> or <b>52 weeks</b></mark>. The book's example: Gap's fiscal year
+      <span class="g" data-ar="باستمرار / بثبات" data-x="يعني كل مرة نفس الشي بدون ما يتغير">consistently</span> ends in the <b>last week
+      of January or the first week of February</b> every year.</p>
+      <p>So how does a company <span class="g2" data-ar="تختار">choose</span> when its year ends? The book
+      <span class="g2" data-ar="يربطها">links</span> it to the
+      <span class="g" data-ar="موسمي" data-x="يعني يزيد وينقص حسب مواسم السنة، زي رمضان والأعياد">seasonal</span>
+      <span class="g" data-ar="تغيّر / تفاوت" data-x="يعني الشي مو ثابت، يزيد وينقص">variation</span> in sales:</p>
+      <table>
+        <tr><th>The company</th><th>What it chooses</th><th>The book's example</th></tr>
+        <tr><td>its sales do <b>not change much</b> with the <span class="g2" data-ar="المواسم">seasons</span> (little seasonal variation)</td>
+            <td><span class="g2" data-ar="غالباً">usually</span> the <b>calendar year</b> as its fiscal year — it ends on December 31</td>
+            <td>Netflix</td></tr>
+        <tr><td>its sales are <b>seasonal</b> (seasonal variations)</td>
+            <td>usually a <b>natural business year</b> — it ends <mark class="k">when sales are at their <b>lowest</b> level for the year</mark></td>
+            <td>Target and Nordstrom (<span class="g" data-ar="تاجر تجزئة" data-x="يعني محل يبيع للناس مباشرة بالحبة، مو بالجملة">retailers</span>):
+            <span class="g2" data-ar="تقريباً">around</span> <b>January 31</b>, after the
+            <span class="g2" data-ar="موسم الأعياد">holidays</span></td></tr>
+      </table>
+      <p>Why the <b>lowest</b> level? Think about it: after the holiday season the store is
+      <span class="g2" data-ar="هادي">quiet</span>, the <span class="g2" data-ar="المخزون">stock</span> is low, and the employees are
+      <span class="g2" data-ar="فاضين">free</span> to close the books and <span class="g2" data-ar="يجردون">count the stock</span> — the
+      easiest time to close the year.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The value of information is linked to its timeliness. Useful information must reach decision makers frequently. To provide
+      timely information, accounting systems prepare reports at regular intervals. The <b>time period assumption</b> presumes that an
+      organization's activities can be divided into specific time periods such as a month, a three-month quarter, a six-month interval,
+      or a year. Most organizations use a year as their primary accounting period. Reports covering a one-year period are known as
+      <b>annual financial statements</b>. Many organizations also prepare <b>interim financial statements</b> covering one, three, or six
+      months of activity.</p>
+      <p>The annual reporting period is not always a calendar year ending on December 31. An organization can use a <b>fiscal year</b>
+      consisting of any 12 consecutive months or 52 weeks.</p>
+      <p>Companies with little seasonal variation in sales often use the calendar year as their fiscal year. Companies that have seasonal
+      variations in sales often use a <b>natural business year</b> end, which is when sales are at their lowest level for the year. The
+      natural business year for retailers such as Target and Nordstrom ends around January 31, after the holidays.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li>The time period assumption is an <b><span class="g2" data-ar="فرض">assumption</span></b> that activity is divided into
+            periods — not a recognition principle, and not a <span class="g2" data-ar="قاعدة">rule</span> about when cash comes in.</li>
+        <li>Interim = <b>1, 3, or 6 months</b> — less than a year. A choice that says &ldquo;interim = one year&rdquo; is
+            <span class="g2" data-ar="غلط">wrong</span>; a year is called <i>annual</i>.</li>
+        <li>Fiscal year = <b>any</b> 12 consecutive months <b>or</b> 52 weeks. A choice that says &ldquo;it must start on January 1&rdquo;
+            or &ldquo;it must end on December 31&rdquo; is wrong (remember Gap).</li>
+        <li>The natural business year ends when sales are at their <b>lowest</b> level — not the highest. And it is the
+            <b>seasonal</b> companies that use it; companies with little seasonal variation use the calendar year (Netflix).</li>
+        <li>Do not <span class="g2" data-ar="تخلط">mix up</span> the examples: Gap = a fiscal year ending late January / early February
+            &middot; Netflix = calendar year &middot; Target and Nordstrom = natural business year around January 31.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · Accrual basis vs cash basis (+ chapter opener) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">⚖️</div>
+    <div class="term">Accrual Basis versus Cash Basis</div>
+    <div class="say">When do you record revenue and expense: when the thing happens, or when the cash
+    <span class="g2" data-ar="يتحرك">moves</span>?</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
+      The <b>accrual basis</b> records revenue when the service or product is <b><span class="g2" data-ar="ينسلّم للعميل / يوصله">delivered</span></b>
+      to the customer, and an expense when it is <b><span class="g2" data-ar="صار عليك (مصروف)">incurred</span></b> (and
+      <span class="g2" data-ar="يتقابل مع">matched with</span> the revenue). The <b>cash basis</b> only sees cash: revenue when cash
+      <b>comes in</b>, and an expense when cash <b>goes out</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Your salary arrives on the 27th, but you worked the whole month. Cash basis records the day it arrived; accrual records the days you worked.</div></div>
+
+    <div class="blk"><span class="lbl">FROM THE CHAPTER OPENER — <i>Leading the Way: Sword &amp; Plough</i></span>
+      <p>Emily Núñez Cavness <span class="g2" data-ar="شاركت في تأسيس">co-founded</span> Sword &amp; Plough while she was
+      <span class="g" data-ar="يُرسَل في مهمة (عسكرية)" data-x="يعني الجيش يرسلك لمكان بعيد عشان مهمة">deployed</span> with the
+      <span class="g2" data-ar="الجيش">army</span> in Afghanistan. A Skype meeting of hers was even
+      <span class="g" data-ar="يقاطع / يوقف فجأة" data-x="يعني شي يدخل بالنص ويوقف الشي اللي شغّال">interrupted</span> by
+      <span class="g2" data-ar="قصف هاون">mortar fire</span>. She and her sister Betsy
+      <span class="g" data-ar="يعيد التدوير" data-x="يعني تاخذ أشياء قديمة وتسوي منها شي جديد بدل ما ترميها">recycle</span>
+      <span class="g2" data-ar="عسكري">military</span>
+      <span class="g" data-ar="فائض" data-x="يعني زيادة عن الحاجة وما أحد يستخدمه">surplus</span> materials and make them into
+      <span class="g2" data-ar="شنط قماش">totes</span>, <span class="g2" data-ar="حقائب يد">handbags</span>,
+      <span class="g2" data-ar="شنط ظهر">backpacks</span>, and <span class="g2" data-ar="إكسسوارات">accessories</span>. They have
+      already recycled <b>30,000 <span class="g2" data-ar="رطل">pounds</span></b> of materials.</p>
+      <p>The accounting point: the sisters say part of their <span class="g2" data-ar="نجاح">success</span> is <span class="g2" data-ar="بسبب">due to</span>
+      the <b>accounting system</b> — <mark class="k">moving from a <b>cash</b> system to an <b>accrual</b> system gave them <b>more
+      <span class="g2" data-ar="في وقتها">timely</span> information</b></mark>. And <b>accounting adjustments</b> raised the value of their
+      revenue and expense data, and they used them to <b>set prices better and manage costs</b>. So the whole idea of this section is in one
+      story: accrual + adjustments = more <span class="g2" data-ar="دقيقة">accurate</span> and faster information.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — WHY DO ACCOUNTS NEED ADJUSTING?</span>
+      <p>After you record the <b>external</b> transactions and events, many accounts <b>need adjustments</b> before their balances
+      <span class="g2" data-ar="تظهر">appear</span> in the financial statements. Why? Because <mark class="k">the <b>internal</b>
+      transactions and events are <b>not yet recorded</b></mark>. Remember from Chapter 1: an internal transaction = an
+      <span class="g2" data-ar="تبادل">exchange</span> inside the <span class="g2" data-ar="الكيان">entity</span> itself, like using up
+      supplies.</p>
+      <p>The big question: <b>when</b> do we record revenue and expense? There are two systems:</p>
+      <table>
+        <tr><th></th><th>Accrual basis accounting<br>أساس الاستحقاق</th><th>Cash basis accounting<br>الأساس النقدي</th></tr>
+        <tr><td><b>Revenue is recorded</b></td><td>when services and products are <b>delivered</b> to the customer</td><td>when <b>cash is
+            <span class="g2" data-ar="ينقبض">received</span></b></td></tr>
+        <tr><td><b>Expense is recorded</b></td><td>when it is <b>incurred</b> — and matched with revenues</td><td>when <b>cash is paid</b></td></tr>
+        <tr><td><b>Income</b></td><td>revenues minus expenses (as you learned in Chapter 1)</td>
+            <td><mark class="k">cash <span class="g2" data-ar="المقبوضات">receipts</span> − cash payments</mark></td></tr>
+        <tr><td><b>The book's <span class="g2" data-ar="رأي">view</span></b></td><td>most <span class="g2" data-ar="يتفقون">agree</span>
+            that it <b>better <span class="g" data-ar="يعكس" data-x="يعني يوضّح الصورة الحقيقية للشي">reflects</span> business
+            <span class="g2" data-ar="الأداء">performance</span></b>, and it <b>increases the
+            <span class="g2" data-ar="قابلية المقارنة">comparability</span></b> of financial statements from period to period</td>
+            <td><span class="g2" data-ar="أضعف">weaker</span> at reflecting performance (the insurance example next shows why)</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">APPLY IT — QS 3-2 FROM THE BOOK (THE BOOK GIVES ONLY THE QUESTION; THE SOLUTION IS BELOW, STEP BY STEP)</span>
+      <p>Roma Company, in its first year: <span class="g2" data-ar="كسبت">earned</span> revenues of <b>$45,000</b> (<b>$37,000</b> of it
+      received in cash), incurred expenses of <b>$25,500</b> (<b>$20,250</b> of it paid in cash), and
+      <span class="g2" data-ar="دفعت مقدّم">prepaid</span> <b>$6,750</b> cash for costs that will not be expensed until next year. What is
+      net income under each <span class="g2" data-ar="أساس">basis</span>?</p>
+      <table>
+        <tr><th>Basis</th><th>The <span class="g2" data-ar="الحساب">calculation</span></th><th>Net income</th></tr>
+        <tr><td>Cash basis</td><td><span class="mono">37,000 − (20,250 + 6,750) = 37,000 − 27,000</span><br>every dollar of cash paid
+            <span class="g2" data-ar="ينحسب">counts</span>, even the prepaid one</td><td class="mono">$10,000</td></tr>
+        <tr><td>Accrual basis</td><td><span class="mono">45,000 − 25,500</span><br>revenue earned minus expense incurred; the 6,750 is an
+            <span class="g2" data-ar="أصل">asset</span>, not this year's expense</td><td class="mono">$19,500</td></tr>
+      </table>
+      <p>The difference <span class="mono">19,500 − 10,000 = 9,500</span> is all <b>timing</b>: <span class="mono">8,000</span> of revenue
+      earned but not received (<span class="mono">45,000 − 37,000</span>) + <span class="mono">6,750</span> prepaid −
+      <span class="mono">5,250</span> of expense incurred but not paid (<span class="mono">25,500 − 20,250</span>) =
+      <span class="mono">9,500</span>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>After external transactions and events are recorded, several accounts require adjustments before their balances appear in
+      financial statements. This is needed because internal transactions and events are not yet recorded.</p>
+      <p><b>Accrual basis accounting</b> records revenues when services and products are delivered and records expenses when incurred
+      (matched with revenues). <b>Cash basis accounting</b> records revenues when cash is received and records expenses when cash is paid.
+      Cash basis income is cash receipts minus cash payments.</p>
+      <p>Most agree that accrual accounting better reflects business performance than cash basis accounting. Accrual accounting also
+      increases the comparability of financial statements from period to period.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li>Do not <span class="g2" data-ar="تعكسها">reverse</span> them: accrual = when the thing <b>happens</b> (delivery / using up),
+            cash = when the <b>cash moves</b>. A choice that says &ldquo;accrual records revenue when cash is received&rdquo; is the
+            definition of the cash basis.</li>
+        <li>On the cash basis <b>any</b> cash paid counts, even if you prepaid it for next year's costs (like Roma's 6,750). On the accrual
+            basis this amount is <b>not</b> an expense this year.</li>
+        <li>The book gives <b>two</b> <span class="g2" data-ar="مزايا">advantages</span> of accrual: it reflects performance better + it
+            increases comparability between periods. A choice that gives one of them to the cash basis is wrong.</li>
+        <li>Why do we need adjustments? Because the <b>internal transactions</b> are not yet recorded — not because the external
+            transactions have <span class="g2" data-ar="أخطاء">errors</span>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · FastForward's prepaid insurance: Exhibits 3.2 and 3.3 -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🛡️</div>
+    <div class="term">FastForward's Prepaid Insurance</div>
+    <div class="say">The same $2,400 — accrual <span class="g2" data-ar="يوزّعها">spreads</span> it over 24 months, cash puts it all in December</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
+      FastForward paid <b>$2,400</b> for <b>24 months</b> of insurance starting <b>December 1, 2021</b>. Accrual basis: <b>$100</b> of expense
+      each month &rarr; <b>100</b> in 2021, <b>1,200</b> in 2022, <b>1,100</b> in 2023. Cash basis: all <b>2,400</b> in December 2021, and
+      <span class="g2" data-ar="صفر">zero</span> in 2022 and 2023.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>A two-year gym <span class="g2" data-ar="اشتراك">membership</span> paid at once: cash basis says &ldquo;all spent this month&rdquo;; accrual says &ldquo;each month I train uses up one month.&rdquo;</div></div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — WHAT WAS RECORDED AT THE TIME OF PAYMENT?</span>
+      <p>This is transaction <b>(13)</b> from Chapter 2: FastForward paid <b>$2,400</b> cash (the insurance
+      <span class="g" data-ar="قسط (التأمين)" data-x="يعني المبلغ اللي تدفعه لشركة التأمين عشان تغطيك">premium</span>) for an insurance
+      <span class="g2" data-ar="بوليصة">policy</span> that lasts <b>24 months</b>, with
+      <span class="g" data-ar="تغطية" data-x="يعني الفترة أو الأشياء اللي التأمين يحميك فيها">coverage</span> starting on <b>December 1</b>.
+      The entry was:</p>
+      <table>
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>(13)</td><td>Prepaid Insurance</td><td class="mono" style="text-align:right">2,400</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Cash</td><td></td><td class="mono" style="text-align:right">2,400</td></tr>
+      </table>
+      <p>In other words: Prepaid Insurance (an <b>asset</b>) went up &rarr; <b>debit</b>, because assets
+      <span class="g2" data-ar="تزيد">increase</span> with a debit. Cash (an asset) went down &rarr; <b>credit</b>. The
+      <span class="g2" data-ar="المعادلة">equation</span>: <span class="mono">Assets (−2,400 + 2,400) = Liabilities 0 + Equity 0</span>. The
+      transaction only <b>changed the <span class="g2" data-ar="شكل">form</span> of the assets</b>, from cash to prepaid insurance, and the
+      expense is recorded later, as the insurance coverage
+      <span class="g" data-ar="ينتهي (مفعوله)" data-x="يعني مدته تخلص وما عاد يشتغل، زي البطاقة أو التأمين">expires</span>. And this
+      is a normal payment entry, <b>not</b> an adjusting entry.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — THE ACCRUAL BASIS (EXHIBIT 3.2)</span>
+      <p>Accrual <span class="g2" data-ar="يتطلب">requires</span> that <mark class="k"><b>$100</b> of insurance expense be reported <b>each
+      month</b></mark>, from <b>December 2021</b> through <b>November 2023</b>. Where does the 100 come from?
+      <span class="mono">2,400 ÷ 24 = 100</span> (and in the next part the book writes it as <span class="mono">1/24 of $2,400</span>). The
+      book says Exhibit 3.2 shows this
+      <span class="g" data-ar="توزيع / تخصيص" data-x="يعني تقسّم المبلغ على كذا فترة، كل فترة تاخذ نصيبها">allocation</span> of insurance
+      cost across the three years.</p>
+      <table>
+        <tr><th>Year</th><th>Months <span class="g2" data-ar="المغطّاة">covered</span></th><th>Calculation</th><th>Insurance expense</th></tr>
+        <tr><td>2021</td><td>December only (1)</td><td class="mono">1 × 100</td><td class="mono">$100</td></tr>
+        <tr><td>2022</td><td>January – December (12)</td><td class="mono">12 × 100</td><td class="mono">$1,200</td></tr>
+        <tr><td>2023</td><td>January – November (11)</td><td class="mono">11 × 100</td><td class="mono">$1,100</td></tr>
+        <tr><td><b>Total</b></td><td><b>24 months</b></td><td></td><td class="mono"><b>$2,400</b></td></tr>
+      </table>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.2 — Accrual Accounting</div>
+        <img src="../img/acct203/exhibit-3-2.png" alt="Exhibit 3.2 — Accrual accounting: a tablet reads Transaction: Paid $2,400 for 24 months' insurance beginning Dec. 1, 2021, with an arrow to three desk calendars of insurance expense; the 2021 calendar shows $0 for January to November and $100 for December, the 2022 calendar shows $100 in every month, and the 2023 calendar shows $100 for January to November and $0 for December." loading="lazy">
+        <p class="excap">This is <b>Exhibit 3.2</b>. On the left a <span class="g2" data-ar="تابلت">tablet</span> shows the transaction:
+        <i>Paid $2,400 for 24 months' insurance beginning Dec. 1, 2021</i>, and an arrow takes you to <b>three desk
+        <span class="g2" data-ar="رزنامات">calendars</span></b>, each one titled <i>Insurance Expense</i> and the year: <b>2021</b> (blue)
+        every month <i>$0</i> <span class="g2" data-ar="إلا">except</span> <b>December $100</b> &middot; <b>2022</b> (red) <b>all 12 months
+        $100</b> &middot; <b>2023</b> (<span class="g2" data-ar="بنفسجي">purple</span>) January to November $100 and <b>December $0</b>.
+        <b>How to read it:</b> the numbers <span class="g2" data-ar="مظلّلة">highlighted</span> in yellow are the months with an expense —
+        <span class="g2" data-ar="عدّها">count them</span>: <span class="mono">1 + 12 + 11 = 24</span> months. <b>What they ask:</b> the
+        expense of a given year (<span class="g2" data-ar="خصوصاً">especially</span> 2021 = 100 and 2023 = 1,100).</p>
+      </div>
+
+      <p>And any premium that has <b>not expired yet</b> (the <i><span class="g2" data-ar="اللي ما انتهى">unexpired</span> premium</i>) is reported as an <b>asset</b> called Prepaid
+      Insurance on the accrual basis balance sheet. For example, at the end of December 2021 only one month has expired, so the
+      <span class="g2" data-ar="الباقي">remaining</span> <b>$2,300</b> covers the other 23 months — and this is
+      <span class="g2" data-ar="بالضبط">exactly</span> the number the adjusting entry gives you in Section 2.</p>
+      <p><span class="g2" data-ar="كمّل">Continue</span> the same calculation for the end of each year (a calculation on the book's
+      numbers — the same idea as <i>Exercise 3-1</i>): balance = 2,400 minus all the expense reported up to that date.</p>
+      <table>
+        <tr><th>Prepaid Insurance balance on the balance sheet</th><th>Accrual basis</th><th>Cash basis</th></tr>
+        <tr><td>December 31, 2021</td><td class="mono">2,400 − 100 = $2,300</td><td class="mono">$0</td></tr>
+        <tr><td>December 31, 2022</td><td class="mono">2,300 − 1,200 = $1,100</td><td class="mono">$0</td></tr>
+        <tr><td>December 31, 2023</td><td class="mono">1,100 − 1,100 = $0</td><td class="mono">$0</td></tr>
+      </table>
+    </div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — THE CASH BASIS (EXHIBIT 3.3)</span>
+      <p>The cash basis income statement for <b>December 2021</b> reports insurance expense of the <span class="g2" data-ar="كامل">full</span>
+      <b>$2,400</b>. The cash basis income statements for 2022 and 2023 <b>report no insurance expense</b>. And <mark class="k">the cash basis
+      balance sheet <b>never</b> reports a prepaid insurance asset</mark> — because it is expensed
+      <span class="g2" data-ar="على طول / فوراً">immediately</span>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.3 — Cash Accounting</div>
+        <img src="../img/acct203/exhibit-3-3.png" alt="Exhibit 3.3 — Cash accounting: the same tablet reads Transaction: Paid $2,400 for 24 months' insurance beginning Dec. 1, 2021, with an arrow to three desk calendars of insurance expense; the 2021 calendar shows $0 for January to November and $2,400 for December, and the 2022 and 2023 calendars show $0 in every month." loading="lazy">
+        <p class="excap">This is <b>Exhibit 3.3</b> — the same tablet and the same three calendars, but the numbers changed: <b>2021</b>
+        every month <i>$0</i> except <b>December $2,400</b> (the only highlighted number in the whole figure) &middot; <b>2022</b> and
+        <b>2023</b> every month <i>$0</i>. <b>How to read it:</b> put it next to Exhibit 3.2 — the same transaction, but the cash basis
+        <span class="g2" data-ar="يرمي">throws</span> the whole amount into the month the cash went out. <b>What they ask:</b> the 2022 or
+        2023 expense on the cash basis = <b>zero</b>.</p>
+      </div>
+
+      <p>The problem: cash basis income for 2021–2023 <b>does not match</b> the cost of insurance with the insurance
+      <span class="g2" data-ar="منافع">benefits</span> the company received in those years. The company is
+      <span class="g2" data-ar="محميّة">protected</span> for 24 months, but the cash basis puts the whole cost on one month.</p>
+      <table>
+        <tr><th>Year</th><th>Accrual basis (Exhibit 3.2)</th><th>Cash basis (Exhibit 3.3)</th></tr>
+        <tr><td>2021</td><td class="mono">$100</td><td class="mono">$2,400</td></tr>
+        <tr><td>2022</td><td class="mono">$1,200</td><td class="mono">$0</td></tr>
+        <tr><td>2023</td><td class="mono">$1,100</td><td class="mono">$0</td></tr>
+        <tr><td><b>Total</b></td><td class="mono"><b>$2,400</b></td><td class="mono"><b>$2,400</b></td></tr>
+      </table>
+      <p><span class="g2" data-ar="لاحظ">Notice</span>: the <b>total is the same</b> ($2,400) in both systems — the whole difference is
+      <b>timing</b>: which year <span class="g2" data-ar="يشيل">carries</span> the expense.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>FastForward paid $2,400 for 24 months of insurance coverage that began on December 1, 2021. Accrual accounting requires that
+      $100 of insurance expense be reported each month, from December 2021 through November 2023. (This means expenses are $100 in 2021,
+      $1,200 in 2022, and $1,100 in 2023.) Any unexpired premium is reported as a Prepaid Insurance asset on the accrual basis balance sheet.</p>
+      <p>A cash basis income statement for December 2021 reports insurance expense of $2,400, as shown in Exhibit 3.3. The cash basis income
+      statements for years 2022 and 2023 report no insurance expense. The cash basis balance sheet never reports a prepaid insurance asset
+      because it is immediately expensed. Also, cash basis income for 2021–2023 does not match the cost of insurance with the insurance
+      benefits received for those years.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li>2021 on the accrual basis = <b>$100</b> only (December alone) — not 1,200 and not 2,400.</li>
+        <li>2023 = <b>$1,100</b> (11 months: January–November) — the coverage ends in <b>November 2023</b>, so December 2023 = $0. A choice
+            of 1,200 <span class="g2" data-ar="عدّ">counted</span> 12 months.</li>
+        <li>Cash basis: 2,400 in <b>2021</b> and zero after it. And the cash basis balance sheet <b>never has Prepaid Insurance</b>.</li>
+        <li>&ldquo;Which system gives more insurance expense over the three years?&rdquo; &rarr; they are
+            <b><span class="g2" data-ar="متساويين">equal</span></b> ($2,400). The difference is timing only.</li>
+        <li>The Prepaid Insurance balance (balance sheet) is not the year's expense (income statement): at the end of 2022 the balance is
+            <b>$1,100</b> and the expense is <b>$1,200</b>. Do not mix a &ldquo;balance sheet&rdquo; question with an &ldquo;income
+            statement&rdquo; question.</li>
+        <li>At the time of the <span class="g2" data-ar="الأصلية">original</span> payment (transaction 13) there is <b>no expense</b> on the
+            accrual basis: the debit is Prepaid Insurance (an asset), not Insurance Expense.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 · Revenue and expense recognition -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🎯</div>
+    <div class="term">Recognizing Revenues and Expenses</div>
+    <div class="say">The two principles that every adjustment <span class="g2" data-ar="يمشي عليها">follows</span></div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
+      We divide a company's activity into periods, but <b>not all activities are <span class="g2" data-ar="خالصة / مكتملة">complete</span></b>
+      when we prepare the statements &rarr; we need adjustments to get
+      <span class="g" data-ar="صحيح / مناسب" data-x="يعني مضبوط وزي ما المفروض يكون">proper</span> balances. And the adjustments follow
+      <b>two principles</b>: <b>revenue recognition</b> (revenue in the period the service is provided) and <b>expense recognition</b>, or
+      <b>matching</b> (expense in the same period as the revenue it helped bring).</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>Revenue counts the day you <span class="g2" data-ar="تعطي / تسلّم للعميل">hand over</span> the work, not the day the customer pays. The expense follows the revenue it helped bring.</div></div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — THE TWO PRINCIPLES</span>
+      <table>
+        <tr><th>The principle</th><th>The English definition (memorize it word for word)</th><th>What it means</th></tr>
+        <tr><td><b>Revenue recognition principle</b><br><span style="color:var(--muted);font-size:.85rem">مبدأ الاعتراف بالإيراد</span></td>
+            <td>Requires that revenue be recorded when goods or services are provided to customers and at an amount expected to be received from customers.</td>
+            <td>revenue is recorded <b>when</b> goods or services are provided to customers, and <b>at the amount</b> expected to be
+                received from them — so two <span class="g2" data-ar="شروط">conditions</span>:
+                <mark class="k"><b>when</b> and <b>how much</b></mark>.</td></tr>
+        <tr><td><b>Expense recognition (or matching) principle</b><br><span style="color:var(--muted);font-size:.85rem">مبدأ الاعتراف بالمصروف (المقابلة)</span></td>
+            <td>Requires that expenses be recorded in the same accounting period as the revenues that are recognized as a result of those expenses.</td>
+            <td>the expense is recorded in the <b>same accounting period</b> as the revenue that was recognized <b>because of</b> that
+                expense.</td></tr>
+      </table>
+      <p>The role of adjustments here: <mark class="k">they
+      <span class="g" data-ar="يضمن / يتأكد إن" data-x="يعني تسوي اللي يخلي الشي يصير أكيد">ensure</span> revenue is
+      <span class="g2" data-ar="يعترف بـ (يسجّل)">recognized</span>
+      (reported) in the <b>time period when the services and products are provided</b></mark>. The same goes for expenses: FastForward's
+      insurance <span class="g2" data-ar="يحمي">protects</span> the company while it works and earns revenue every month, so its expense
+      ($100) is put in each month — this is the <b>matching</b> that the cash basis does not do.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">APPLY IT — EXERCISES 3-2 AND 3-3 FROM THE BOOK (THE BOOK GIVES ONLY THE QUESTIONS; THE SOLUTIONS ARE BELOW)</span>
+      <p>The book gives <span class="g2" data-ar="منفصلة">separate</span> <span class="g2" data-ar="مواقف">situations</span> and asks: how
+      much revenue or expense is recognized in <b>December</b> on the accrual basis? The solutions below are
+      <span class="g2" data-ar="مبنية على">built on</span> the two principles above.</p>
+      <table>
+        <tr><th>The situation</th><th>December</th><th>Why</th></tr>
+        <tr><td colspan="3"><b>Revenues (Exercise 3-2)</b></td></tr>
+        <tr><td>Oklahoma City Thunder sold a $90 game <span class="g2" data-ar="تذكرة">ticket</span> on December 7, and the game is in March</td>
+            <td class="mono">$0</td>
+            <td>the service (the game) has not been provided yet — the cash received = unearned revenue (Section 2)</td></tr>
+        <tr><td>Tesla sold and delivered a $58,000 car on December 25, and the customer will not pay until February</td><td class="mono">$58,000</td>
+            <td>the product was <b>delivered</b> in December; when he pays changes nothing</td></tr>
+        <tr><td>Deloitte signed a <span class="g2" data-ar="عقد">contract</span> on December 1 for 40 days of
+            <span class="g2" data-ar="استشارية">advisory</span> services, with $10,000 received at the end of the contract; on December 31,
+            75% of the services are done</td>
+            <td class="mono">$7,500</td><td><span class="mono">75% × 10,000</span> — the part of the service that was provided</td></tr>
+        <tr><td colspan="3"><b>Expenses (Exercise 3-3)</b></td></tr>
+        <tr><td>Chipotle has monthly <span class="g2" data-ar="رواتب / أجور">wages</span> of $3,200 that were incurred and not paid as of
+            December 31</td><td class="mono">$3,200</td>
+            <td>the expense happened in December; paying later changes nothing</td></tr>
+        <tr><td>United Airlines bought a 24-month insurance policy for $48,000 on December 1 with
+            <span class="g2" data-ar="فورية">immediate</span> coverage</td><td class="mono">$2,000</td>
+            <td><span class="mono">48,000 ÷ 24 = 2,000</span> for one month — the same <span class="g2" data-ar="منطق">logic</span> as
+            FastForward</td></tr>
+        <tr><td>Pfizer prepaid $20,000 on December 15 for hotel rooms for a sales
+            <span class="g2" data-ar="اجتماع">meeting</span> in January</td><td class="mono">$0</td>
+            <td>the benefit is in January &rarr; the expense is in January; in December it is a prepaid asset</td></tr>
+      </table>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>We divide a company's activities into time periods, but not all activities are complete when financial statements are prepared.
+      Thus, adjustments are required to get proper account balances.</p>
+      <p>We use two principles in the adjusting process: revenue recognition and expense recognition.</p>
+      <p><b>Revenue recognition principle</b> requires that revenue be recorded when goods or services are provided to customers and at an
+      amount expected to be received from customers. Adjustments ensure revenue is recognized (reported) in the time period when those
+      services and products are provided.</p>
+      <p><b>Expense recognition (or matching) principle</b> requires that expenses be recorded in the same accounting period as the revenues
+      that are recognized as a result of those expenses.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li>Revenue is recorded when goods or services are <b>provided</b> — not when the cash is received, not when the contract is
+            <span class="g2" data-ar="ينوقّع">signed</span>, and not when the <span class="g2" data-ar="الفاتورة">invoice</span> is paid.</li>
+        <li>The principle has <b>two conditions</b>: when (when provided) + how much (the amount <b><span class="g2" data-ar="المتوقع">expected</span></b>
+            to be received from the customer).</li>
+        <li>Expense recognition has a second name: the <b>matching principle</b> — the same principle. The expense follows the
+            <b>revenue</b>, not the cash.</li>
+        <li>The book says there are <b>two</b> principles in the adjusting process: revenue recognition and expense recognition. The time
+            period assumption is an <b>assumption</b>, not one of them.</li>
+        <li>Cash received <span class="g2" data-ar="قبل">before</span> the service (the Thunder ticket) = <b>not revenue</b> yet; a service
+            provided before the cash (Tesla, Deloitte) = <b>revenue</b> now.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 · Framework for adjustments: four types + 3-step process (Exhibit 3.4) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🔧</div>
+    <div class="term">Framework for Adjustments</div>
+    <div class="say">Every adjustment in the chapter follows the same <span class="g2" data-ar="طريقة">method</span></div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">THE IDEA IN ONE LINE</span><br>
+      There are <b>four types</b> of adjustments for transactions and events that
+      <b><span class="g" data-ar="يمتد" data-x="يعني يطوّل ويوصل لأكثر من مكان أو وقت">extend</span> over more than one period</b>, and
+      all of them follow <b>3 steps</b>: what is the balance now? &rarr; what should it be? &rarr; record an adjusting entry that takes you
+      from the first to the second. And the adjusting entry <span class="g2" data-ar="يمس">touches</span> an income statement account and a
+      balance sheet account — <b>and never touches Cash</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>At month-end you take each account and ask: what is its balance now? What should it be? The difference between them = the adjusting entry.</div></div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — THE FOUR TYPES</span>
+      <div class="exhibit">
+        <div class="exlbl">Framework for Adjustments — Four Types</div>
+        <img src="../img/acct203/ch03-wil28773_fra0301.png" alt="Four types of adjustments shown as four boxes in a row from left to right: deferral of expense, deferral of revenue, accrued expense, and accrued revenue." loading="lazy">
+        <p class="excap">This picture opens the part the book calls the
+        <b><span class="g" data-ar="إطار (عمل)" data-x="يعني الهيكل أو الطريقة الثابتة اللي تمشي عليها">Framework</span> for
+        Adjustments</b>. The book puts <b>four</b> boxes (shaped like <span class="g2" data-ar="أشكال سداسية">hexagons</span>) next to
+        each other, from left to right: <i>Deferral of expense</i> &middot; <i>Deferral of revenue</i> &middot; <i>Accrued expense</i>
+        &middot; <i>Accrued revenue</i>. <b>How to read it:</b> the first two are <b><span class="g2" data-ar="تأجيلات">deferrals</span></b>
+        and the last two are <b><span class="g2" data-ar="استحقاقات">accruals</span></b> — and each
+        <span class="g2" data-ar="زوج">pair</span> has an expense and a revenue. <b>What they ask:</b> which type
+        <span class="g2" data-ar="ينطبق على">fits</span> a situation, or which one is <b>not</b> one of the four.</p>
+      </div>
+      <p>A quick <span class="g2" data-ar="معاينة">preview</span> — each type has a full explanation in the section next to it. The
+      adjusting-entry <span class="g" data-ar="نمط / شكل ثابت" data-x="يعني الشكل اللي يتكرر كل مرة بنفس الطريقة">pattern</span> comes
+      from the book's <span class="g2" data-ar="ملخّص">summary</span> of the four adjustments. It is <i>Exhibit 3.12 — Summary of
+      Adjustments</i>, and you see it in full in Section 3:</p>
+      <table>
+        <tr><th>The type</th><th>In short</th><th>Adjusting-entry pattern</th><th>The <span class="g2" data-ar="التفاصيل">details</span></th></tr>
+        <tr><td><b>Deferral of expense</b><br><span style="color:var(--muted);font-size:.85rem">تأجيل المصروف</span></td>
+            <td>you paid <b>before</b> you <span class="g2" data-ar="تستفيد">benefit</span>; the payment is an <b>asset</b> (prepaid
+            expenses) and becomes an expense when you use it — like FastForward's insurance</td>
+            <td>Dr. Expense (increase)<br>Cr. Asset* (decrease)</td>
+            <td>Section 2 (<code>P1</code>)</td></tr>
+        <tr><td><b>Deferral of revenue</b><br><span style="color:var(--muted);font-size:.85rem">تأجيل الإيراد</span></td>
+            <td>you received cash <b>before</b> you provide the service; a <b><span class="g2" data-ar="التزام">liability</span></b>
+            (unearned revenue) that becomes revenue when you provide it — like the Thunder ticket</td>
+            <td>Dr. Liability (decrease)<br>Cr. Revenue (increase)</td>
+            <td>Section 2 (<code>P2</code>)</td></tr>
+        <tr><td><b>Accrued expense</b><br><span style="color:var(--muted);font-size:.85rem">مصروف مستحق</span></td>
+            <td>an expense that has <b>happened</b> but is not paid and not recorded — like Chipotle's wages</td>
+            <td>Dr. Expense (increase)<br>Cr. Liability (increase)</td>
+            <td>Section 3 (<code>P3</code>)</td></tr>
+        <tr><td><b>Accrued revenue</b><br><span style="color:var(--muted);font-size:.85rem">إيراد مستحق</span></td>
+            <td>revenue that has been <b>earned</b> but is not recorded and not received — like the 75% of the Deloitte contract</td>
+            <td>Dr. Asset (increase)<br>Cr. Revenue (increase)</td>
+            <td>Section 3 (<code>P4</code>)</td></tr>
+      </table>
+      <p style="font-size:.85rem;color:var(--muted)">* The book adds two
+      <span class="g" data-ar="حاشية (ملاحظة تحت الجدول)" data-x="يعني سطر صغير تحت الجدول أو الصفحة يوضّح شي فوق، وعليه علامة زي *">footnotes</span>
+      under this summary. First: for <span class="g2" data-ar="الإهلاك">depreciation</span>, the credit is to <span class="g2" data-ar="مجمّع الإهلاك">Accumulated Depreciation</span> —
+      a <span class="g2" data-ar="حساب مقابل">contra account</span> for the asset, which comes in Section 2. Second: the table
+      <span class="g2" data-ar="يفترض">assumes</span> that a deferred expense was first recorded as an <b>asset</b> and a deferred revenue
+      was first recorded as a <b>liability</b> — the other method is in Appendix 3A.</p>
+      <p>The same Exhibit 3.12 gives you the key to <span class="g2" data-ar="تحفظ">memorize</span> it: <mark class="k">in <b>deferrals</b>
+      the cash is paid or received <b>before</b> the expense or revenue is recognized; in <b>accruals</b> the cash comes <b>after</b> the
+      recognition</mark>. And look at the third column: every entry has an income statement account (Expense or Revenue) + a balance sheet
+      account (Asset or Liability), and <b>not one</b> of them has Cash.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">EXPLANATION — THE THREE STEPS (EXHIBIT 3.4) AND THE ADJUSTING ENTRY</span>
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.4 — Three-Step Process for Adjusting Entries</div>
+        <table>
+          <tr><td style="text-align:left;white-space:nowrap"><b>Step 1:</b></td><td style="text-align:left">Determine what the current account balance equals.</td></tr>
+          <tr><td style="text-align:left;white-space:nowrap"><b>Step 2:</b></td><td style="text-align:left">Determine what the current account balance should equal.</td></tr>
+          <tr><td style="text-align:left;white-space:nowrap"><b>Step 3:</b></td><td style="text-align:left">Record an adjusting entry to get from step 1 to step 2.</td></tr>
+        </table>
+        <p class="excap">In simple words: <b>1)</b> <span class="g" data-ar="يحدد" data-x="يعني توصل لجواب أكيد بعد ما تحسب أو تدوّر">determine</span>
+        what the account balance is <b>now</b>; <b>2)</b> what <b>should</b> its balance be? <b>3)</b> record an <b>adjusting entry</b> that
+        takes you from the first to the second. You use this method in <b>every</b> adjustment in Sections 2 and 3.</p>
+      </div>
+      <p>An <b>adjusting entry</b> = an entry made <b>at the end of the accounting period</b> that reflects a transaction or event that is
+      <b>not yet recorded</b>. Its <span class="g2" data-ar="الذهبية">golden</span> rule: <mark class="k">it affects <b>one or more income
+      statement accounts</b> (revenue or expense) and <b>one or more balance sheet accounts</b> (asset or liability) — <b>and never the
+      Cash account</b></mark>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">PREVIEW — THE THREE STEPS ON FASTFORWARD'S INSURANCE (DETAILS IN SECTION 2)</span>
+      <ol>
+        <li><b>Step 1:</b> the Prepaid Insurance balance now = <b>$2,400</b> (the payment for 24 months starting December 1, 2021).</li>
+        <li><b>Step 2:</b> by December 31, 2021, <b>one month</b> of coverage has expired = <span class="mono">1/24 × 2,400 = 100</span> of
+            expense, so the balance should be <span class="mono">2,400 − 100 = 2,300</span>.</li>
+        <li><b>Step 3:</b> record an entry that takes you from 2,400 to 2,300:</li>
+      </ol>
+      <table>
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td></td><td><b>Adjustment (a)</b></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Insurance Expense</td><td class="mono" style="text-align:right">100</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Prepaid Insurance</td><td></td><td class="mono" style="text-align:right">100</td></tr>
+        <tr><td></td><td><i>Record first month's expired insurance.</i></td><td></td><td></td></tr>
+      </table>
+      <p>In other words: Insurance Expense (an expense — income statement) went up &rarr; <b>debit</b>, because expenses increase with a
+      debit. Prepaid Insurance (an asset — balance sheet) went down &rarr; <b>credit</b>. The equation:
+      <span class="mono">Assets <span class="neg">−100</span> = Liabilities + Equity <span class="neg">−100</span></span>. And notice the
+      rule: an income statement account + a balance sheet account, and <b>no Cash</b> — the cash
+      <span class="g2" data-ar="طلع">left</span> long ago, in transaction (13).</p>
+      <table>
+        <tr><th colspan="2" style="text-align:center">Prepaid Insurance (128)</th></tr>
+        <tr><th>Debit</th><th>Credit</th></tr>
+        <tr><td class="mono">Dec. 1 &nbsp; 2,400</td><td class="mono">Dec. 31 &nbsp; 100</td></tr>
+        <tr><td class="mono"><b>Balance &nbsp; 2,300</b></td><td></td></tr>
+      </table>
+      <p>In other words: the account started with a debit of 2,400, the adjustment put 100 on the credit side, so the balance became
+      <span class="mono">2,400 − 100 = 2,300</span> — exactly the &ldquo;should be&rdquo; number in step 2.</p>
+      <table>
+        <tr><th colspan="2" style="text-align:center">Insurance Expense (637)</th></tr>
+        <tr><th>Debit</th><th>Credit</th></tr>
+        <tr><td class="mono">Dec. 31 &nbsp; 100</td><td></td></tr>
+        <tr><td class="mono"><b>Balance &nbsp; 100</b></td><td></td></tr>
+      </table>
+      <p>In other words: the expense started at zero, and the adjustment put a debit of 100 in it — this is the <b>$100</b> reported in the
+      December 2021 income statement, the same number as the 2021 calendar in Exhibit 3.2. The book says that after adjusting and
+      <span class="g2" data-ar="الترحيل">posting</span>, the Insurance Expense balance ($100) and the Prepaid Insurance balance ($2,300)
+      are <b>ready for the financial statements</b>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>Four types of adjustments exist for transactions and events that extend over more than one period.</p>
+      <p>Adjustments are made using a 3-step process, as shown in Exhibit 3.4.<br>
+      Step 1: Determine what the current account balance equals.<br>
+      Step 2: Determine what the current account balance should equal.<br>
+      Step 3: Record an adjusting entry to get from step 1 to step 2.</p>
+      <p>Each <b>adjusting entry</b> made at the end of an accounting period reflects a transaction or event that is not yet recorded. An
+      adjusting entry affects one or more income statement accounts and one or more balance sheet accounts (but never the Cash account).</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">TRAP</span>
+      <ul>
+        <li>There are <b>four</b> types: <b>two deferrals</b> (deferral of expense, deferral of revenue) + <b>two accruals</b> (accrued
+            expense, accrued revenue). Any choice with a type for cash or for <span class="g2" data-ar="المعدات">equipment</span> is not
+            one of them.</li>
+        <li>An adjusting entry <b>never</b> has Cash. Any choice with a debit or credit to Cash = not an adjusting entry.</li>
+        <li>Every adjusting entry = an <b>income statement</b> account + a <b>balance sheet</b> account. A choice with &ldquo;two balance
+            sheet accounts&rdquo; or &ldquo;two income statement accounts&rdquo; is wrong.</li>
+        <li>The <span class="g2" data-ar="ترتيب">order</span> of the steps: <b>what the balance is now</b> &rarr; <b>what it should be</b>
+            &rarr; <b>record the entry</b>. Do not start with the entry.</li>
+        <li>Adjusting entries are made at the <b>end</b> of the accounting period, and they record something <b>not yet recorded</b> — they
+            are not <span class="g2" data-ar="تصحيحات">corrections</span> of errors.</li>
+        <li>Do not <span class="g2" data-ar="تقلب">flip</span> deferral and accrual: <b>deferral</b> = cash <b>before</b> recognition
+            (prepaid / unearned), <b>accrual</b> = cash <b>after</b> recognition (incurred but not paid / earned but not received).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px"><span class="g2" data-ar="اختبر نفسك">Test yourself</span></h2>
+<p class="sub" style="margin-bottom:16px">The questions are in English because the exam is in English. Answer first, then open the
+<span class="g2" data-ar="الحل">solution</span>. If you <span class="g2" data-ar="تخطئ في">miss</span> question 2,
+<span class="g2" data-ar="ارجع">go back</span> to the table of the years in the third concept; if you miss question 3, go back to the
+Roma exercise in the second concept.</p>
+
+<div class="q">
+  <div class="stem">1. Retailers such as Target and Nordstrom end their natural business year around January 31. A company with seasonal variations in sales usually ends its natural business year when:</div>
+  <ol type="A">
+    <li>the busy holiday shopping season begins</li>
+    <li>sales are at their lowest level for the year</li>
+    <li>sales are at their highest level for the year</li>
+    <li>the calendar year ends on December 31</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. The book: companies with seasonal sales choose a natural business year that ends when sales are at their <b>lowest</b>
+  level for the year — for retailers this is around January 31, after the holidays. The trap in <b>C</b>: it is the
+  <span class="g2" data-ar="عكس">opposite</span> of the book (highest instead of lowest). <b>A</b> is a trap: the start of the holiday
+  season is the start of the <span class="g2" data-ar="الزحمة">busy time</span>, and the book says the year ends <b>after</b> the holidays.
+  And <b>D</b> is a trap: December 31 is the calendar year that companies with <b>little</b> seasonal variation use, like Netflix.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. Exhibits 3.2 and 3.3 show that FastForward paid $2,400 for 24 months of insurance coverage beginning December 1, 2021. How much insurance expense is reported for the year 2023?</div>
+  <ol type="A">
+    <li>Accrual basis $1,200; cash basis $0</li>
+    <li>Accrual basis $1,100; cash basis $0</li>
+    <li>Accrual basis $1,100; cash basis $2,400</li>
+    <li>Accrual basis $0; cash basis $1,100</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. In 2023 the coverage runs from January to November = <span class="mono">11 × 100 = 1,100</span> — in the 2023 calendar in
+  Exhibit 3.2, December shows $0. And the cash basis put the whole 2,400 in December 2021, so 2023 = <b>zero</b> (Exhibit 3.3). The trap in
+  <b>A</b>: it counts 12 months and <span class="g2" data-ar="ينسى">forgets</span> that the coverage ends in November 2023. <b>C</b> puts the
+  2,400 in the wrong year. And <b>D</b> <span class="g2" data-ar="يعكس">reverses</span> the two bases.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. In its first year, a company earned revenues of $60,000 ($52,000 received in cash). It incurred expenses of $35,000 ($30,000 paid in cash). It also prepaid $4,000 cash for costs that will not be expensed until next year. What is its first-year net income under the cash basis and under the accrual basis?</div>
+  <ol type="A">
+    <li>Cash basis $18,000; accrual basis $25,000</li>
+    <li>Cash basis $22,000; accrual basis $25,000</li>
+    <li>Cash basis $25,000; accrual basis $18,000</li>
+    <li>Cash basis $18,000; accrual basis $21,000</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>A</b>. Cash basis = receipts minus <b>all</b> payments: <span class="mono">52,000 − (30,000 + 4,000) = 18,000</span>. Accrual basis =
+  revenue earned minus expense incurred: <span class="mono">60,000 − 35,000 = 25,000</span>. The trap in <b>B</b>: it forgot the 4,000
+  prepaid on the cash basis (<span class="mono">52,000 − 30,000 = 22,000</span>). <b>C</b> reverses the two bases. And <b>D</b>
+  <span class="g2" data-ar="خصم / طرح">subtracted</span> the 4,000 on the accrual basis — but it is a prepaid asset, not this year's
+  expense. It is exactly the same idea as Roma in the second concept.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. On December 20, a company completes and delivers $8,000 of services to a customer, who will pay in February. Under accrual basis accounting, how much revenue does the company recognize in December?</div>
+  <ol type="A">
+    <li>$0, because revenue is recorded in February when the cash is received</li>
+    <li>$8,000, because revenue is recorded when the services are provided</li>
+    <li>$4,000, because the revenue is split between December and February</li>
+    <li>$0, because the $8,000 is recorded as unearned revenue in December</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. The revenue recognition principle: revenue is recorded <b>when the service is provided</b> and at the amount expected to be
+  received — like the Tesla car in Exercise 3-2. The trap in <b>A</b>: this is cash basis
+  <span class="g2" data-ar="تفكير">thinking</span>. <b>D</b> is a trap: unearned revenue is when cash is received <b>before</b> the service —
+  here it is the opposite, the service comes before the cash (the customer now
+  <span class="g2" data-ar="عليه فلوس لـ">owes</span> the company: on December 20 it is recorded as Dr. Accounts Receivable, Cr. Revenue;
+  it would be accrued revenue only if it were still <span class="g2" data-ar="ما انسجل">unrecorded</span> at the end of the period,
+  Section 3). And <b>C</b> has no
+  <span class="g2" data-ar="أساس">basis</span> in the principle at all — the whole service was provided in December.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. Which statement about adjusting entries is correct?</div>
+  <ol type="A">
+    <li>They are recorded whenever cash is received or paid during the period</li>
+    <li>Each one affects one or more income statement accounts and one or more balance sheet accounts, but never the Cash account</li>
+    <li>Each one affects two balance sheet accounts, such as Cash and Prepaid Insurance</li>
+    <li>They are needed because external transactions were recorded with errors</li>
+  </ol>
+  <details><summary>Answer</summary>
+  <p><b>B</b>. This is the book's sentence word for word: an income statement account + a balance sheet account, <b>and never Cash</b> —
+  like the insurance entry: Insurance Expense and Prepaid Insurance. The trap in <b>A</b>: adjusting entries are made at the <b>end of the
+  period</b> and have nothing to do with cash <span class="g2" data-ar="حركة">movement</span>. <b>C</b> has Cash and two balance sheet
+  accounts — two <span class="g2" data-ar="غلطات">mistakes</span>. And <b>D</b> is a trap: we need them because the <b>internal
+  transactions</b> are not yet recorded, not because there are errors.</p></details>
+</div>
+
+<h2 style="margin:40px 0 10px"><span class="g2" data-ar="المصطلحات الأساسية">Key terms</span> from this section</h2>
+<table>
+  <tr><th><span class="g2" data-ar="المصطلح">Term</span></th><th>What it <span class="g2" data-ar="يعني">means</span></th><th><span class="g2" data-ar="انتبه لـ">Watch out for</span></th></tr>
+  <tr><td><b>Timeliness</b></td><td>Information reaching people at the right time</td><td>the value of information is linked to it &rarr; reports at regular intervals</td></tr>
+  <tr><td><b>Time period assumption</b></td><td>An organization's activities can be divided into specific time periods</td><td>an <b>assumption</b>: month &middot; quarter (3 months) &middot; six months &middot; year</td></tr>
+  <tr><td><b>Accounting (reporting) period</b></td><td>The period of time a report covers</td><td>the primary period of most organizations = a <b>year</b> (Exhibit 3.1)</td></tr>
+  <tr><td><b>Annual financial statements</b></td><td>Reports covering a one-year period</td><td>one year</td></tr>
+  <tr><td><b>Interim financial statements</b></td><td>Reports covering one, three, or six months of activity</td><td>less than a year</td></tr>
+  <tr><td><b>Fiscal year</b></td><td>Any 12 consecutive months or 52 weeks</td><td>it does not have to end on December 31 (Gap)</td></tr>
+  <tr><td><b>Calendar year</b></td><td>A year that ends on December 31</td><td>for companies with little seasonal variation (Netflix)</td></tr>
+  <tr><td><b>Natural business year</b></td><td>A year that ends when sales are at their lowest level</td><td><b>lowest</b>, not highest — Target and Nordstrom around January 31</td></tr>
+  <tr><td><b>Accrual basis accounting</b></td><td>Revenue when products and services are delivered, expense when incurred</td><td>expenses are matched with revenues</td></tr>
+  <tr><td><b>Cash basis accounting</b></td><td>Revenue when cash is received, expense when cash is paid</td><td>income = cash receipts − cash payments</td></tr>
+  <tr><td><b>Comparability</b></td><td>How easy it is to compare statements from period to period</td><td>accrual <b>increases</b> it — not the cash basis</td></tr>
+  <tr><td><b>Unexpired premium</b> (Prepaid Insurance)</td><td>The part of the insurance that is not used up yet</td><td>an asset on the accrual balance sheet; the cash basis balance sheet never shows it</td></tr>
+  <tr><td><b>Revenue recognition principle</b></td><td>Revenue is recorded when goods or services are provided, at the amount expected</td><td>two conditions: <b>when</b> + <b>how much</b></td></tr>
+  <tr><td><b>Expense recognition (matching) principle</b></td><td>Expenses go in the same period as the revenues they helped bring</td><td>it follows the <b>revenue</b>, not the payment</td></tr>
+  <tr><td><b>Four types of adjustments</b></td><td>The adjustments for events that extend over more than one period</td><td>deferral of expense &middot; deferral of revenue &middot; accrued expense &middot; accrued revenue</td></tr>
+  <tr><td><b>Deferrals / Accruals</b></td><td>The two families of adjustments</td><td>deferrals: cash <b>before</b> recognition &middot; accruals: cash <b>after</b> recognition (Exhibit 3.12)</td></tr>
+  <tr><td><b>Three-step process</b> (Exhibit 3.4)</td><td>The method for every adjusting entry</td><td>balance now &rarr; balance it should be &rarr; adjusting entry</td></tr>
+  <tr><td><b>Adjusting entry</b></td><td>An end-of-period entry for a transaction or event not yet recorded</td><td>an income statement account + a balance sheet account; <b>never</b> Cash</td></tr>
+  <tr><td><b>Exhibits 3.2 / 3.3</b></td><td>Accrual vs. cash in the insurance example</td><td><span class="mono">100 · 1,200 · 1,100</span> against <span class="mono">2,400 · 0 · 0</span> — the same total</td></tr>
+</table>
+
+<div class="cta"><div><div class="t">🃏 Practice this lesson's words</div><div class="s">Flashcards with sound. A few minutes now beats an hour before the exam.</div></div><div><button class="pill gold" data-deck="ACCT203-CH3-S1">Start</button> <button class="pill" data-deck="ACCT203-CH3-S1" data-mode="ar">Arabic → English</button></div></div>
+<h2 style="margin:40px 0 10px">Vocabulary from this lesson</h2>
+<p class="sub" style="margin-bottom:8px">These are the <span class="g2" data-ar="العامة">general</span> English words on this page, not the
+accounting terms. Learn them and the textbook gets much <span class="g2" data-ar="أسهل">easier</span> to read.</p>
+<table class="vocab">
+  <tr><th>Word</th><th>Part of speech</th><th>العربية</th><th>Example sentence from this lesson</th></tr>
+
+  <tr><td class="w">allocation</td><td class="pos">noun</td><td class="ar">توزيع / تخصيص<small>يعني تقسّم المبلغ على كذا فترة، كل فترة تاخذ نصيبها</small></td>
+      <td class="ex">The book says Exhibit 3.2 shows this <b>allocation</b> of insurance cost across the three years.</td></tr>
+
+  <tr><td class="w">consecutive</td><td class="pos">adjective</td><td class="ar">متتالي<small>يعني ورا بعض على طول بدون ما ينقطع</small></td>
+      <td class="ex">An organization can use a fiscal year consisting of any 12 <b>consecutive</b> months or 52 weeks.</td></tr>
+
+  <tr><td class="w">consistently</td><td class="pos">adverb</td><td class="ar">باستمرار / بثبات<small>يعني كل مرة نفس الشي بدون ما يتغير</small></td>
+      <td class="ex">Gap's fiscal year <b>consistently</b> ends in the last week of January or the first week of February every year.</td></tr>
+
+  <tr><td class="w">coverage</td><td class="pos">noun</td><td class="ar">تغطية<small>يعني الفترة أو الأشياء اللي التأمين يحميك فيها</small></td>
+      <td class="ex">FastForward paid $2,400 for 24 months of insurance <b>coverage</b> that began on December 1, 2021.</td></tr>
+
+  <tr><td class="w">deploy</td><td class="pos">verb</td><td class="ar">يُرسَل في مهمة (عسكرية)<small>يعني الجيش يرسلك لمكان بعيد عشان مهمة</small></td>
+      <td class="ex">Emily Núñez Cavness co-founded Sword &amp; Plough while she was <b>deployed</b> with the army in Afghanistan.</td></tr>
+
+  <tr><td class="w">determine</td><td class="pos">verb</td><td class="ar">يحدد<small>يعني توصل لجواب أكيد بعد ما تحسب أو تدوّر</small></td>
+      <td class="ex">Step 1: <b>Determine</b> what the current account balance equals.</td></tr>
+
+  <tr><td class="w">ensure</td><td class="pos">verb</td><td class="ar">يضمن / يتأكد إن<small>يعني تسوي اللي يخلي الشي يصير أكيد</small></td>
+      <td class="ex">Adjustments <b>ensure</b> revenue is recognized (reported) in the time period when those services and products are provided.</td></tr>
+
+  <tr><td class="w">expire</td><td class="pos">verb</td><td class="ar">ينتهي (مفعوله)<small>يعني مدته تخلص وما عاد يشتغل، زي البطاقة أو التأمين</small></td>
+      <td class="ex">The transaction only changed the form of the assets, from cash to prepaid insurance, and the expense is recorded later, as the insurance coverage <b>expires</b>.</td></tr>
+
+  <tr><td class="w">extend</td><td class="pos">verb</td><td class="ar">يمتد<small>يعني يطوّل ويوصل لأكثر من مكان أو وقت</small></td>
+      <td class="ex">Four types of adjustments exist for transactions and events that <b>extend</b> over more than one period.</td></tr>
+
+  <tr><td class="w">footnote</td><td class="pos">noun</td><td class="ar">حاشية (ملاحظة تحت الجدول)<small>يعني سطر صغير تحت الجدول أو الصفحة يوضّح شي فوق، وعليه علامة زي *</small></td>
+      <td class="ex">The book adds two <b>footnotes</b> under this summary.</td></tr>
+
+  <tr><td class="w">framework</td><td class="pos">noun</td><td class="ar">إطار (عمل)<small>يعني الهيكل أو الطريقة الثابتة اللي تمشي عليها</small></td>
+      <td class="ex">This picture opens the part the book calls the <b>Framework</b> for Adjustments.</td></tr>
+
+  <tr><td class="w">frequently</td><td class="pos">adverb</td><td class="ar">بشكل متكرر<small>يعني كثير، مرة ورا مرة</small></td>
+      <td class="ex">Useful information must reach decision makers <b>frequently</b>.</td></tr>
+
+  <tr><td class="w">interrupt</td><td class="pos">verb</td><td class="ar">يقاطع / يوقف فجأة<small>يعني شي يدخل بالنص ويوقف الشي اللي شغّال</small></td>
+      <td class="ex">A Skype meeting of hers was even <b>interrupted</b> by mortar fire.</td></tr>
+
+  <tr><td class="w">interval</td><td class="pos">noun</td><td class="ar">فترة / فاصل زمني<small>يعني المدة بين مرة والمرة اللي بعدها</small></td>
+      <td class="ex">To provide timely information, accounting systems prepare reports at regular <b>intervals</b>.</td></tr>
+
+  <tr><td class="w">pattern</td><td class="pos">noun</td><td class="ar">نمط / شكل ثابت<small>يعني الشكل اللي يتكرر كل مرة بنفس الطريقة</small></td>
+      <td class="ex">The adjusting-entry <b>pattern</b> comes from the book's summary of the four adjustments.</td></tr>
+
+  <tr><td class="w">premium</td><td class="pos">noun</td><td class="ar">قسط (التأمين)<small>يعني المبلغ اللي تدفعه لشركة التأمين عشان تغطيك</small></td>
+      <td class="ex">Any unexpired <b>premium</b> is reported as a Prepaid Insurance asset on the accrual basis balance sheet.</td></tr>
+
+  <tr><td class="w">presume</td><td class="pos">verb</td><td class="ar">يفترض<small>يعني تعتبر الشي صحيح من البداية بدون ما تثبته</small></td>
+      <td class="ex">The time period assumption <b>presumes</b> that an organization's activities can be divided into specific time periods such as a month, a three-month quarter, a six-month interval, or a year.</td></tr>
+
+  <tr><td class="w">primary</td><td class="pos">adjective</td><td class="ar">رئيسي / أساسي<small>يعني الأول والأهم</small></td>
+      <td class="ex">Most organizations use a year as their <b>primary</b> accounting period.</td></tr>
+
+  <tr><td class="w">proper</td><td class="pos">adjective</td><td class="ar">صحيح / مناسب<small>يعني مضبوط وزي ما المفروض يكون</small></td>
+      <td class="ex">Thus, adjustments are required to get <b>proper</b> account balances.</td></tr>
+
+  <tr><td class="w">recycle</td><td class="pos">verb</td><td class="ar">يعيد التدوير<small>يعني تاخذ أشياء قديمة وتسوي منها شي جديد بدل ما ترميها</small></td>
+      <td class="ex">She and her sister Betsy <b>recycle</b> military surplus materials and make them into totes, handbags, backpacks, and accessories.</td></tr>
+
+  <tr><td class="w">reflect</td><td class="pos">verb</td><td class="ar">يعكس<small>يعني يوضّح الصورة الحقيقية للشي</small></td>
+      <td class="ex">Most agree that accrual accounting better <b>reflects</b> business performance than cash basis accounting.</td></tr>
+
+  <tr><td class="w">retailer</td><td class="pos">noun</td><td class="ar">تاجر تجزئة<small>يعني محل يبيع للناس مباشرة بالحبة، مو بالجملة</small></td>
+      <td class="ex">The natural business year for <b>retailers</b> such as Target and Nordstrom ends around January 31, after the holidays.</td></tr>
+
+  <tr><td class="w">seasonal</td><td class="pos">adjective</td><td class="ar">موسمي<small>يعني يزيد وينقص حسب مواسم السنة، زي رمضان والأعياد</small></td>
+      <td class="ex">Companies that have <b>seasonal</b> variations in sales often use a natural business year end, which is when sales are at their lowest level for the year.</td></tr>
+
+  <tr><td class="w">surplus</td><td class="pos">noun</td><td class="ar">فائض<small>يعني زيادة عن الحاجة وما أحد يستخدمه</small></td>
+      <td class="ex">She and her sister Betsy recycle military <b>surplus</b> materials and make them into totes, handbags, backpacks, and accessories.</td></tr>
+
+  <tr><td class="w">timeliness</td><td class="pos">noun</td><td class="ar">التوقيت المناسب<small>يعني المعلومة توصل في وقتها، مو متأخرة</small></td>
+      <td class="ex">The value of information is linked to its <b>timeliness</b>.</td></tr>
+
+  <tr><td class="w">variation</td><td class="pos">noun</td><td class="ar">تغيّر / تفاوت<small>يعني الشي مو ثابت، يزيد وينقص</small></td>
+      <td class="ex">Companies with little seasonal <b>variation</b> in sales often use the calendar year as their fiscal year.</td></tr>
+</table>
+
+<p class="note">
+<span class="g2" data-ar="مبنيّ على">Built from</span> the text of the textbook <i>Financial Accounting Fundamentals</i>, 8th edition (John J. Wild, McGraw Hill) —
+<i>Chapter 3: Adjusting Accounts for Financial Statements</i>: the chapter <span class="g2" data-ar="فاتحة">opener</span> (<i>Chapter Preview</i> &middot;
+<i>Learning Objectives</i> &middot; <i>Leading the Way</i>) and the part <i>Timing and Reporting</i> (its sub-parts: <i>The Accounting Period</i>
+&middot; <i>Accrual Basis versus Cash Basis</i> &middot; <i>Recognizing Revenues and Expenses</i> &middot; <i>Framework for Adjustments</i>),
+objective <code>C1</code> (pages 84–87), with Exhibits 3.1 to 3.4.
+<br><b><span class="g2" data-ar="ملخّص بس">Summarized only</span>:</b> from the Sword &amp; Plough story in <i>Leading the Way</i> only the
+accounting point is taken. The entry for transaction (13) comes from Chapter 2, the preview of the $100 insurance entry and its
+T-accounts comes from the part <i>Deferral of Expense</i> (fully explained in Section 2), and the &ldquo;adjusting-entry pattern&rdquo; column
+comes from Exhibit 3.12 in the part <i>Accrued Revenue</i> (Section 3). The solutions to QS 3-2 and Exercises 3-2 and 3-3 are worked out
+here from the book's numbers — the book gives the questions without solutions — and the table of the insurance balance at the end of each
+year is calculated from the example's numbers (the idea of Exercise 3-1). QS 3-1 (fill in the
+<span class="g2" data-ar="الفراغات">blanks</span> with the terms) is not solved here — all its terms are in the key terms table above. The
+numbers in questions 3 and 4 are mine.
+<br><b>The chapter's <span class="g2" data-ar="ملاحق">appendices</span>:</b> 3A, 3B, and 3C (<code>P7</code>–<code>P9</code>) are mentioned
+in the notes of Sections 2, 3, and 4 — appendix — ask the doctor if it is included.
+</p>
+
+
+<div class="footnav">
+  <div class="side"></div>
+  <a class="pill home" href="../index.html">&#8962; Home</a>
+  <div class="side"><a class="pill" href="ACCT203-CH3-S2-EN.html">2. Deferral of Expense and Revenue &#8594;</a></div>
+</div>
+</div>
+<script src="../data/cards-ACCT203-CH3-S1.js?v=7"></script>
+<script src="../assets/flashcards.js?v=7"></script>
+<script src="../assets/lesson.js?v=7"></script>
+</body>
+</html>

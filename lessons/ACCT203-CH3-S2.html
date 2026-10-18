@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ٣: تسويات المؤجّلات: المصروفات المدفوعة مقدّماً والإيرادات غير المكتسبة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/theme.css?v=7">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH3-S2-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH3-S2">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
+</div>
+<header class="lh">
+  <h1>الفصل الثالث — تسويات المؤجّلات: المصروفات المدفوعة مقدّماً والإيرادات غير المكتسبة</h1>
+  <p class="sub"><code>ACCT 203</code> · مبادئ المحاسبة المالية · <bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi> · القسم ٢ من ٤:
+  <bdi>Deferral of Expense and Revenue</bdi><br>
+  الهدف <code>P1</code>: <bdi>Prepare adjusting entries for deferral of expenses.</bdi><br>
+  الهدف <code>P2</code>: <bdi>Prepare adjusting entries for deferral of revenues.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>هذا القسم «فلوس تحرّكت بدري، والتسوية ترجّعها لشهرها الصح»</h2>
+  <p>في الدرس اللي قبل عرفت إن فيه <b>أربع أنواع</b> من التسويات، وإن كل تسوية تمشي على <b>ثلاث خطوات</b> (<bdi>Exhibit 3.4</bdi>):
+  ١) وش الرصيد الحين؟ ٢) وش المفروض يكون؟ ٣) قيد تسوية (<bdi>adjusting entry</bdi>) يوصّلك من الأول للثاني.
+  هنا ناخذ أول نوعين — <b>المؤجّلات</b> (<bdi>deferrals</bdi>)، يعني الفلوس تحرّكت <b>قبل</b> ما تجي الفايدة أو الخدمة:</p>
+  <ul>
+    <li><b>تأجيل المصروف</b> (<bdi>Deferral of Expense</bdi>، الهدف <code>P1</code>): دفعت قبل ما تستفيد ← عندك <b>أصل</b>، ومع الاستخدام يتحوّل <b>مصروف</b>.
+        أمثلة الكتاب: التأمين، المستلزمات، الإهلاك.</li>
+    <li><b>تأجيل الإيراد</b> (<bdi>Deferral of Revenue</bdi>، الهدف <code>P2</code>): قبضت قبل ما تقدّم الخدمة ← عليك <b>التزام</b>، ومع التقديم يتحوّل <b>إيراد</b>.</li>
+  </ul>
+  <p>الكتاب يكمّل على شركة <bdi>FastForward</bdi> ويعطي كل تسوية حرف: <b>(a)</b> التأمين، <b>(b)</b> المستلزمات، <b>(c)</b> الإهلاك،
+  <b>(d)</b> الإيراد غير المكتسب. احفظ الحروف — بترجع لك في ميزان المراجعة المعدّل (<bdi>adjusted trial balance</bdi>) في الدرس الجاي.
+  والقاعدة اللي تمسك كل شي: قيد التسوية يمس حساب <b>قائمة دخل</b> أو أكثر وحساب <b>ميزانية</b> أو أكثر، و<b>ما يمس <bdi>Cash</bdi> (النقد) أبداً</b>.
+  الأسئلة هنا كلها أرقام: كم المصروف؟ وش القيد؟ كم الرصيد بعد التسوية؟ فركّز على الجداول والقيود.</p>
+</div>
+
+<!-- 1 · Prepaid expenses framework + prepaid insurance (adjustment a) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🛡️</div>
+    <div class="term">Prepaid Expenses · Prepaid Insurance</div>
+    <div class="ar">المصروفات المدفوعة مقدّماً · التأمين المدفوع مقدّماً</div>
+    <div class="say">دفعت اليوم عن شهور جاية — والتسوية تقصّ نصيب كل شهر</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Prepaid expenses</bdi></b> = <b>أصل</b> دفعت فلوسه <b>قبل</b> ما تاخذ فايدته. وكل ما استخدمته، جزء منه يصير مصروف.
+      قيد التسوية: <b>مدين المصروف، دائن الأصل</b> — بس في الإهلاك الدائن <bdi>Accumulated Depreciation</bdi> (مجمّع الإهلاك).</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>إيجار شقتك اللي تدفعه سنة مقدّم: يوم الدفع هو حق لك (أصل)، وكل شهر تسكنه يطلع منه شهر ويصير مصروف.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — وش هي المصروفات المدفوعة مقدّماً؟</span>
+      <p><b><bdi>Prepaid expenses</bdi></b> (مصروفات مدفوعة مقدّماً)، واسمها الثاني <b><bdi>deferred expenses</bdi></b> (مصروفات مؤجّلة)، هي
+      <mark class="k"><b>أصول</b> دفعت قيمتها قبل ما تستلم منافعها</mark>. ولما تستخدم هالأصول، الدفعات المقدّمة هذي <b>تتحوّل مصروفات</b>.</p>
+      <p><b>الإطار (<bdi>Framework</bdi>):</b> قيود التسوية للمصروفات المدفوعة مقدّماً <b>تزيد المصروفات</b> و<b>تنقص الأصول</b> —
+      يعني التسوية تبيّن <b>استهلاك</b> المدفوع مقدّماً (<bdi>the using up of prepaid expenses</bdi>). الكتاب يشرحها بـ<b>ثلاث أمثلة</b>:</p>
+      <ol>
+        <li><bdi>Prepaid insurance</bdi> — التأمين المدفوع مقدّماً (هذا المفهوم)</li>
+        <li><bdi>Supplies</bdi> — المستلزمات (المفهوم الثاني)</li>
+        <li><bdi>Depreciation</bdi> — الإهلاك (المفهوم الثالث)</li>
+      </ol>
+      <p>وفي الثلاث نفس الحركة: <mark class="k">ننقص حساب <b>أصل</b> (من الميزانية — <bdi>balance sheet</bdi>) ونزيد حساب <b>مصروف</b> (من قائمة الدخل — <bdi>income statement</bdi>)</mark>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.5 — Adjusting for Prepaid Expenses (decrease asset and increase expense)</div>
+        <img src="../img/acct203/exhibit-3-5.png" alt="Exhibit 3.5 shows two T-accounts: an Asset T-account labeled Decrease, with the note Unadjusted balance overstated on its debit side, and an Expense T-account labeled Increase, with the entry Dr. Expense and Cr. Asset below them and arrows from the debit to the expense and from the credit to the asset's credit side." loading="lazy">
+        <p class="excap">هذا هو <b>Exhibit 3.5</b>. فيه حسابين على شكل T (<bdi>T-accounts</bdi>): <b>يسار</b> <bdi>Asset</bdi> ومكتوب فوقه
+        <bdi>Decrease</bdi>، وفي جهته المدينة مكتوب <bdi>Unadjusted balance overstated</bdi> (الرصيد قبل التسوية <b>أكبر من الصح</b>).
+        <b>يمين</b> <bdi>Expense</bdi> ومكتوب فوقه <bdi>Increase</bdi>. وتحتهم القيد <bdi>Dr. Expense… #</bdi> / <bdi>Cr. Asset… #</bdi>:
+        سهم أخضر من المدين يطلع لجهة المدين في المصروف، وسهم أحمر من الدائن يطلع لجهة الدائن في الأصل.
+        <b>كيف تقرأه:</b> نفس المبلغ ينقص الأصل ويزيد المصروف. <b>وش يجي منه بالاختبار:</b> اتجاه القيد، وإن الأصل قبل التسوية
+        <bdi>overstated</bdi>.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — مثال (a): تأمين <bdi>FastForward</bdi></span>
+      <p>التأمين المدفوع مقدّماً <mark class="k"><b>ينتهي مع الوقت</b> (<bdi>expires with time</bdi>)</mark>. في 1 ديسمبر دفعت
+      <bdi>FastForward</bdi> <b>$2,400</b> عن بوليصة <b>24 شهر</b> وسجّلتها أصل:</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Prepaid Insurance — the FastForward timeline</div>
+        <img class="tall" src="../img/acct203/exhibit-3-5-a.png" alt="Insurance timeline: on December 1 FastForward pays the insurance premium and records an asset with Prepaid Insurance 2,400 debited and Cash 2,400 credited; a note says Two-Year Insurance Policy, total cost is $2,400, monthly cost is $100; on December 31 coverage expires and expense is recorded." loading="lazy">
+        <p class="excap">الشكل يمشي بالتاريخ: <b>Dec. 1</b> <bdi>Pay insurance premium and record asset</bdi> — القيد <bdi>Prepaid Insurance 2,400</bdi> /
+        <bdi>Cash 2,400</bdi>. وفي الورقة الصفرا: <bdi>Two-Year Insurance Policy</bdi>، التكلفة الكلية <b>$2,400</b> والشهرية <b>$100</b>.
+        وآخر الشكل <b>Dec. 31</b> <bdi>Coverage expires and record expense</bdi> — هذا مكان قيد التسوية.</p>
+      </div>
+
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 1</td><td>Prepaid Insurance</td><td class="mono" style="text-align:right">2,400</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Cash</td><td></td><td class="mono" style="text-align:right">2,400</td></tr>
+        <tr><td></td><td><i>Pay insurance premium and record asset.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: هذا <b>مو</b> قيد تسوية — هذا قيد الدفع نفسه. أصل (<bdi>Prepaid Insurance</bdi>) زاد بالمدين، وأصل ثاني (<bdi>Cash</bdi>) نقص بالدائن.</p>
+
+      <table>
+        <tr><th>الخطوة</th><th>وش تسوي</th><th>في مثال التأمين</th></tr>
+        <tr><td><b>Step 1</b></td><td>وش الرصيد الحين؟</td>
+            <td><bdi>Prepaid Insurance</bdi> = <b>$2,400</b> — الدفعة كاملة عن 24 شهر بدأت 1 ديسمبر 2021.</td></tr>
+        <tr><td><b>Step 2</b></td><td>وش المفروض يكون؟</td>
+            <td>منافع التأمين تنتهي مع الوقت، وجزء من الأصل يصير مصروف. بنهاية 31 ديسمبر انتهى <b>شهر واحد</b>:
+                <span class="mono" dir="ltr">1/24 × $2,400 = $100</span>، فالباقي <b>$2,300</b>.</td></tr>
+        <tr><td><b>Step 3</b></td><td>قيد التسوية</td><td>تحت ↓</td></tr>
+      </table>
+
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td></td><td><b>Adjustment (a)</b></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Insurance Expense</td><td class="mono" style="text-align:right">100</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Prepaid Insurance</td><td></td><td class="mono" style="text-align:right">100</td></tr>
+        <tr><td></td><td><i>Record first month’s expired insurance.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Insurance Expense</bdi> (مصروف التأمين) زاد ← المصروف يزيد بالمدين؛ و<bdi>Prepaid Insurance</bdi> نقص ← الأصل ينقص بالدائن.
+      أثرها على المعادلة: <span class="mono" dir="ltr">Assets <span class="neg">−100</span> = Liabilities + Equity <span class="neg">−100</span></span>
+      (المصروف ينقص حقوق الملكية).</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Adjustment (a) — journal entry and T-account postings</div>
+        <img src="../img/acct203/ch03-wil28773_un0301.png" alt="Adjustment (a) dated December 31 debits Insurance Expense 100 and credits Prepaid Insurance 100 to record the first month's expired insurance; the Prepaid Insurance T-account, number 128, shows a December 1 debit of 2,400, a December 31 credit of 100 and a balance of 2,300, and the Insurance Expense T-account, number 637, shows a December 31 debit of 100." loading="lazy">
+        <p class="excap">فوق القيد <b>Adjustment (a)</b>، وتحته الترحيل لحسابين T: <bdi>Prepaid Insurance</bdi> (رقم 128): مدين Dec. 1 <b>2,400</b>،
+        دائن Dec. 31 <b>100</b> بالأحمر، والرصيد <b>2,300</b>. و<bdi>Insurance Expense</bdi> (رقم 637): مدين Dec. 31 <b>100</b>.
+        <b>تشييك:</b> <span class="mono" dir="ltr">2,400 − 100 = 2,300</span> ✓. الأرقام الحمرا = اللي جاي من قيد التسوية.</p>
+      </div>
+
+      <p>بعد التسوية والترحيل، رصيد <bdi>Insurance Expense</bdi> = <b>$100</b> ورصيد <bdi>Prepaid Insurance</bdi> = <b>$2,300</b> —
+      جاهزين للقوائم المالية:</p>
+      <table>
+        <tr><th>قبل التسوية</th><th>التسوية</th><th>بعد التسوية</th></tr>
+        <tr><td><bdi>Prepaid Insurance</bdi> = <b>$2,400</b></td>
+            <td>اطرح 100 من <bdi>Prepaid Insurance</bdi> وزد 100 على <bdi>Insurance Expense</bdi></td>
+            <td><bdi>Prepaid Insurance</bdi> = <b>$2,300</b></td></tr>
+        <tr><td>يعرض بوليصة 2,400 تغطي 24 شهر</td>
+            <td>يسجّل مصروف تأمين الشهر الحالي 100، ونقص 100 في المدفوع مقدّماً</td>
+            <td>يعرض 2,300 تغطية للـ 23 شهر الباقية</td></tr>
+      </table>
+      <p><b>لو ما سوّيت التسوية:</b> <bdi>Insurance Expense</bdi> ناقص 100 (<bdi>understated</bdi>) ← صافي الدخل أكبر من الصح بـ 100
+      (<bdi>overstated</bdi>) ← حقوق الملكية أكبر بـ 100؛ و<bdi>Prepaid Insurance</bdi> أكبر من الصح بـ 100 ← الأصول <bdi>overstated</bdi>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال محلول من الكتاب — <bdi>Need-To-Know 3-1</bdi> (التأمين)</span>
+      <p>رصيد <bdi>Prepaid Insurance</bdi> أول السنة <b>$5,000</b> مدين، وما فيه أي دفعات تأمين خلال السنة. مراجعة البوالص تبيّن إن
+      الباقي غير المنتهي في 31 ديسمبر = <b>$1,000</b>.</p>
+      <ul>
+        <li><b>Step 1:</b> <bdi>Prepaid Insurance</bdi> = $5,000 (قبل التسوية)</li>
+        <li><b>Step 2:</b> المفروض = $1,000 (الجزء اللي ما انتهى)</li>
+        <li><b>Step 3:</b> القيد يغطّي الفرق</li>
+      </ul>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Insurance Expense</td><td class="mono" style="text-align:right">4,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Prepaid Insurance</td><td></td><td class="mono" style="text-align:right">4,000</td></tr>
+        <tr><td></td><td><i>Record expired insurance coverage ($5,000 − $1,000).</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: المصروف = المنتهي (4,000)، مو الباقي (1,000). مصروف زاد بالمدين، أصل نقص بالدائن.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Prepaid expenses</b>, or deferred expenses, are assets paid for in advance of receiving their benefits. When these assets
+      are used, those advance payments become expenses.</p>
+      <p>Adjusting entries for prepaid expenses increase expenses and decrease assets, as shown in the T-accounts of Exhibit 3.5. This
+      adjustment shows the using up of prepaid expenses. To demonstrate accounting for prepaid expenses, we look at prepaid insurance,
+      supplies, and depreciation. In each case we decrease an asset (balance sheet) account and increase an expense (income statement)
+      account.</p>
+      <p>Prepaid insurance expires with time. After adjusting and posting, the $100 balance in Insurance Expense and the $2,300 balance
+      in Prepaid Insurance are ready for reporting in financial statements.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><b>الاتجاه:</b> مدين <b>المصروف</b>، دائن <b>الأصل</b>. اختيار فيه «<bdi>Debit Prepaid Insurance; credit Insurance Expense</bdi>» = مقلوب.</li>
+        <li><bdi>Prepaid Insurance</bdi> <b>أصل</b> — مو مصروف ومو التزام. يصير مصروف بس لما ينتهي.</li>
+        <li>قيد التسوية <b>ما فيه <bdi>Cash</bdi></b>. النقد طلع يوم 1 ديسمبر وخلص؛ أي اختيار فيه <bdi>Cash</bdi> مدين أو دائن في التسوية = غلط.</li>
+        <li>المصروف = الجزء <b>المنتهي</b> (<bdi>expired</bdi>)، مو الباقي. في <bdi>NTK 3-1</bdi> الباقي 1,000 والمصروف <b>4,000</b>.</li>
+        <li>قسّم على <b>عدد شهور البوليصة</b> (24)، مو 12: <span class="mono" dir="ltr">2,400 ÷ 24 = 100</span>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · Supplies (adjustment b) + other prepaid expenses -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">📦</div>
+    <div class="term">Supplies · Other Prepaid Expenses</div>
+    <div class="ar">المستلزمات · مصروفات مدفوعة مقدّماً ثانية</div>
+    <div class="say">تجرد آخر الفترة: اللي ناقص عن المسجّل هو مصروفك</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      المستلزمات ما تنتهي بالوقت — <b>تنعدّ</b>. المصروف = <b>الرصيد قبل التسوية − الباقي بالعدّ</b>.
+      والقيد: <b>مدين <bdi>Supplies Expense</bdi> (مصروف المستلزمات)، دائن <bdi>Supplies</bdi> (المستلزمات)</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>بقالة الحارة آخر الشهر تجرد الرفوف: المسجّل 9,720 والموجود 8,670 — الفرق 1,050 هو اللي انصرف، وهذا مصروف الشهر.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — مثال (b): مستلزمات <bdi>FastForward</bdi></span>
+      <p><mark class="k">نعدّ المستلزمات <b>آخر الفترة</b> عشان نعرف المستخدم</mark>، وبعدين نسوي قيد التسوية.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Supplies — the FastForward timeline</div>
+        <img class="tall" src="../img/acct203/ch03-wil28773_un0302.png" alt="Supplies timeline: on December 2, 6 and 26 FastForward purchases supplies and records an asset; on December 31 it makes a physical count and on December 31 it records the expense." loading="lazy">
+        <p class="excap">الشكل: <b>Dec. 2, 6, 26</b> <bdi>Purchase supplies and record asset</bdi> — ثلاث مشتريات كل وحدة انسجّلت أصل.
+        وبعدها <b>Dec. 31</b> <bdi>Physical count</bdi> (جرد فعلي)، و<b>Dec. 31</b> <bdi>Record expense</bdi>. يعني: <b>العدّ أول، والقيد بعده</b>.</p>
+      </div>
+
+      <table>
+        <tr><th>الخطوة</th><th>في مثال المستلزمات</th></tr>
+        <tr><td><b>Step 1</b></td><td>اشترت <bdi>FastForward</bdi> مستلزمات بـ <b>$9,720</b> في ديسمبر، واستخدمت جزء منها في نفس الشهر. ولما تجهّز القوائم في
+            31 ديسمبر، تكلفة المستخدم في ديسمبر تنسجّل مصروف.</td></tr>
+        <tr><td><b>Step 2</b></td><td>جردت (<bdi>physically counts</bdi>) الباقي في 31 ديسمبر ولقت <b>$8,670</b> من أصل $9,720.
+            الفرق <span class="mono" dir="ltr">9,720 − 8,670 = 1,050</span> = <b>مصروف المستلزمات لشهر ديسمبر</b>.</td></tr>
+        <tr><td><b>Step 3</b></td><td>قيد التسوية تحت ↓</td></tr>
+      </table>
+
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td></td><td><b>Adjustment (b)</b></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Supplies Expense</td><td class="mono" style="text-align:right">1,050</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Supplies</td><td></td><td class="mono" style="text-align:right">1,050</td></tr>
+        <tr><td></td><td><i>Record supplies used.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Supplies Expense</bdi> زاد ← مصروف يزيد بالمدين؛ و<bdi>Supplies</bdi> نقص ← أصل ينقص بالدائن.
+      أثرها على المعادلة: <span class="mono" dir="ltr">Assets <span class="neg">−1,050</span> = Liabilities + Equity <span class="neg">−1,050</span></span>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Adjustment (b) — journal entry and T-account postings</div>
+        <img src="../img/acct203/ch03-wil28773_un0303.png" alt="Adjustment (b) dated December 31 debits Supplies Expense 1,050 and credits Supplies 1,050 to record supplies used; the Supplies T-account, number 126, shows debits of 2,500 on December 2, 7,100 on December 6 and 120 on December 26, a December 31 credit of 1,050 and a balance of 8,670, and the Supplies Expense T-account, number 652, shows a December 31 debit of 1,050." loading="lazy">
+        <p class="excap">حساب <bdi>Supplies</bdi> (رقم 126): المدين فيه المشتريات الثلاث — Dec. 2 <b>2,500</b>، Dec. 6 <b>7,100</b>، Dec. 26 <b>120</b>،
+        والدائن Dec. 31 <b>1,050</b>، والرصيد <b>8,670</b>. و<bdi>Supplies Expense</bdi> (رقم 652): مدين Dec. 31 <b>1,050</b>.
+        <b>تشييك:</b> <span class="mono" dir="ltr">2,500 + 7,100 + 120 = 9,720</span> و<span class="mono" dir="ltr">9,720 − 1,050 = 8,670</span> ✓.</p>
+      </div>
+
+      <p>رصيد <bdi>Supplies</bdi> بعد الترحيل = <b>$8,670</b> — <mark class="k">يساوي تكلفة المستلزمات <b>الباقية</b></mark>.</p>
+      <table>
+        <tr><th>قبل التسوية</th><th>التسوية</th><th>بعد التسوية</th></tr>
+        <tr><td><bdi>Supplies</bdi> = <b>$9,720</b></td>
+            <td>اطرح 1,050 من <bdi>Supplies</bdi> وزد 1,050 على <bdi>Supplies Expense</bdi></td>
+            <td><bdi>Supplies</bdi> = <b>$8,670</b></td></tr>
+        <tr><td>يعرض 9,720 مستلزمات</td>
+            <td>يسجّل 1,050 مستلزمات مستخدمة و1,050 مصروف مستلزمات</td>
+            <td>يعرض 8,670 مستلزمات</td></tr>
+      </table>
+      <p><b>لو ما سوّيت التسوية:</b> الأصل <bdi>Supplies</bdi> أكبر من الصح بـ 1,050 (<bdi>overstated</bdi>)، و<bdi>Supplies Expense</bdi> ناقص 1,050
+      (<bdi>understated</bdi>) ← صافي الدخل وحقوق الملكية <bdi>overstated</bdi> بـ 1,050.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال محلول من الكتاب — <bdi>Need-To-Know 3-1</bdi> (المستلزمات)</span>
+      <p>رصيد <bdi>Supplies</bdi> أول السنة <b>$1,000</b> مدين. اشترت خلال السنة مستلزمات بـ <b>$2,000</b> وسجّلتها مدين في <bdi>Supplies</bdi>.
+      الجرد في 31 ديسمبر: الباقي <b>$500</b>.</p>
+      <ul>
+        <li><b>Step 1:</b> <bdi>Supplies</bdi> = $3,000 (من <span class="mono" dir="ltr">1,000 + 2,000</span>؛ قبل التسوية)</li>
+        <li><b>Step 2:</b> المفروض = $500 (الباقي)</li>
+        <li><b>Step 3:</b> المستخدم <span class="mono" dir="ltr">1,000 + 2,000 − 500 = 2,500</span></li>
+      </ul>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Supplies Expense</td><td class="mono" style="text-align:right">2,500</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Supplies</td><td></td><td class="mono" style="text-align:right">2,500</td></tr>
+        <tr><td></td><td><i>Record supplies used.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: لا تنسى رصيد أول السنة — المستخدم 2,500 مو 1,500. مصروف زاد بالمدين، أصل نقص بالدائن.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — مصروفات مدفوعة مقدّماً ثانية (<bdi>Other Prepaid Expenses</bdi>)</span>
+      <ul>
+        <li>مصروفات زي <b><bdi>Prepaid Rent</bdi></b> (إيجار مدفوع مقدّماً) و<b><bdi>Prepaid Advertising</bdi></b> (إعلان مدفوع مقدّماً)
+            <mark class="k">تتعالج <b>بالضبط</b> زي التأمين والمستلزمات</mark>.</li>
+        <li><b>الاستثناء:</b> بعض المصروفات المدفوعة مقدّماً <b>تندفع وتنستهلك كلها في نفس الفترة</b>. مثال الكتاب: شركة تدفع الإيجار
+            الشهري <b>أول يوم من كل شهر</b>. هنا نسجّل النقد المدفوع <b>مدين <bdi>Rent Expense</bdi></b> (مصروف الإيجار) على طول، <b>بدل</b> حساب أصل — وما تحتاج تسوية.</li>
+      </ul>
+      <p><b><bdi>Need-To-Know 3-1</bdi> (الإيجار):</b> في 1 أكتوبر دفعت الشركة <b>$12,000</b> إيجار سنة مقدّم لمرافق تشغلها من ذاك اليوم،
+      وسجّلت مدين <bdi>Prepaid Rent</bdi> ودائن <bdi>Cash</bdi> بـ 12,000. القوائم في 31 ديسمبر.</p>
+      <ul>
+        <li><b>Step 1:</b> <bdi>Prepaid Rent</bdi> = $12,000 (قبل التسوية)</li>
+        <li><b>Step 2:</b> المفروض = $9,000 (الجزء غير المنتهي): <span class="mono" dir="ltr">12,000 − 3,000 = 9,000</span>، و3,000 جاية من
+            <span class="mono" dir="ltr">(12,000 ÷ 12 months) × 3 months</span> — أكتوبر ونوفمبر وديسمبر</li>
+      </ul>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Rent Expense</td><td class="mono" style="text-align:right">3,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Prepaid Rent</td><td></td><td class="mono" style="text-align:right">3,000</td></tr>
+        <tr><td></td><td><i>Record expired prepaid rent.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Rent Expense</bdi> زاد بالمدين (مصروف)، و<bdi>Prepaid Rent</bdi> نقص بالدائن (أصل) — نفس شكل التأمين بالضبط.</p>
+      <p><b>من صندوق <bdi>Decision Maker</bdi> (مستثمر):</b> ناشر وقّع مع رياضي أولمبي يكتب كتاب، ودفع له <b>$500,000</b> توقيع + حقوق
+      (<bdi>royalties</bdi>) مستقبلية، وكتب في الإيضاحات إن المدفوع مقدّماً فيه 500,000 رسوم توقيع «تنقابل مع مبيعات مستقبلية متوقّعة».
+      جواب الكتاب: المدفوع مقدّماً أصل ينصرف مع الاستخدام؛ وكمستثمر يقلقك <b>خطر مبيعات الكتاب</b> — كل ما كانت المبيعات أخطر،
+      كل ما مال تحليلك يعامل الـ 500,000 (أو جزء منها) <b>مصروف، مو أصل</b>.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>We count supplies at period-end to find the amount used and then make an adjusting entry. The balance of the Supplies account is
+      $8,670 after posting—equaling the cost of the remaining supplies.</p>
+      <p>Other prepaid expenses, such as Prepaid Rent and Prepaid Advertising, are accounted for exactly as insurance and supplies are.</p>
+      <p>Some prepaid expenses are both paid for and fully used up within a single period. One example is when a company pays monthly rent
+      on the first day of each month. In this case, we record the cash paid with a debit to Rent Expense instead of an asset account.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>مصروف المستلزمات = <b>المستخدم</b> (الفرق)، مو الباقي بالعدّ. الاختيار اللي يحط 8,670 أو 500 كمصروف = غلط.</li>
+        <li><b>رصيد أول الفترة + المشتريات − الباقي</b>. في <bdi>NTK 3-1</bdi>: <span class="mono" dir="ltr">1,000 + 2,000 − 500 = 2,500</span>،
+            والفخ <span class="mono" dir="ltr">2,000 − 500 = 1,500</span> (نسي الرصيد الافتتاحي).</li>
+        <li>الإيجار من 1 أكتوبر: المنتهي <b>3 شهور</b> بس (أكتوبر–ديسمبر) = 3,000، والباقي في <bdi>Prepaid Rent</bdi> = 9,000.</li>
+        <li>إيجار ينصرف وينستهلك في <b>نفس الشهر</b> ← مدين <bdi>Rent Expense</bdi> من البداية، ما فيه أصل ولا قيد تسوية.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · Plant assets and depreciation (adjustment c) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🏭</div>
+    <div class="term">Plant Assets · Depreciation</div>
+    <div class="ar">الأصول الثابتة · الإهلاك</div>
+    <div class="say">تكلفة المعدّة تنوزّع على عمرها — مو تنحسب كلها يوم الشراء</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Depreciation</bdi></b> = <b>توزيع تكلفة</b> الأصل الثابت على عمره الإنتاجي — مو قياس نزول سعره في السوق.
+      القيد: <b>مدين <bdi>Depreciation Expense</bdi> (مصروف الإهلاك)، دائن <bdi>Accumulated Depreciation</bdi> (مجمّع الإهلاك)</b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>سيارة توصيل بتشتغل معك خمس سنين: ما تحمّل كل قيمتها على شهر الشراء — توزّعها على الشهور اللي تشتغل فيها.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الأصول الثابتة والإهلاك</span>
+      <p>فيه <b>فئة خاصة</b> من المصروفات المدفوعة مقدّماً هي <b><bdi>plant assets</bdi></b> (الأصول الثابتة)، واسمها الثاني
+      <b><bdi>Property, Plant, &amp; Equipment (PP&amp;E)</bdi></b>:</p>
+      <ul>
+        <li><mark class="k">أصول <b>ملموسة طويلة الأجل</b> (<bdi>long-term tangible assets</bdi>) تنستخدم في <b>إنتاج وبيع</b> المنتجات والخدمات</mark>.</li>
+        <li>أمثلة الكتاب (<b>أربعة</b>): <bdi>buildings</bdi> (مباني)، <bdi>machines</bdi> (مكاين)، <bdi>vehicles</bdi> (مركبات)، <bdi>equipment</bdi> (معدّات).</li>
+        <li>تعطي منافع <b>لأكثر من فترة</b> وحدة.</li>
+        <li>كلها — <b>ما عدا الأرض</b> (<bdi>excluding land</bdi>) — تتآكل أو تقل فايدتها مع الوقت.</li>
+      </ul>
+      <p>تكاليف هالأصول تنعرض <b>شوي شوي</b> كمصروفات في قائمة الدخل على مدى <b>العمر الإنتاجي</b> (<bdi>useful life</bdi>، أو
+      <bdi>benefit period</bdi> = فترة المنفعة). و<b><bdi>Depreciation</bdi></b> (الإهلاك) =
+      <mark class="k"><b>توزيع تكاليف</b> هالأصول على عمرها الإنتاجي المتوقّع</mark> — بس <b>مو بالضرورة يقيس</b> نزول قيمتها السوقية.
+      ومصروف الإهلاك ينسجّل بقيد تسوية <b>شبيه</b> بقيود المصروفات المدفوعة مقدّماً الثانية.</p>
+      <p><b>ملاحظة الكتاب (<bdi>Point</bdi>):</b> القيمة المتوقّعة للأصل في <b>آخر</b> عمره الإنتاجي اسمها <b><bdi>salvage value</bdi></b>
+      (القيمة المتبقية / قيمة الخردة).</p>
+      <p><b><bdi>Straight-line depreciation</bdi></b> (طريقة القسط الثابت) = توزّع <b>مبالغ متساوية</b> من <b>صافي تكلفة</b> الأصل
+      (<bdi>net cost</bdi>) على الإهلاك خلال عمره الإنتاجي.</p>
+      <div class="eq">
+        <div class="l1">(Cost <span class="plus">−</span> Salvage value) <span class="plus">÷</span> Useful life</div>
+        <div class="l2">($26,000 <span class="plus">−</span> $8,000) <span class="plus">÷</span> 60 months <span class="plus">=</span> $18,000 / 60 <span class="plus">=</span> $300 per month</div>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — مثال (c): معدّات <bdi>FastForward</bdi></span>
+      <div class="exhibit">
+        <div class="exlbl">Depreciation — the FastForward timeline</div>
+        <img class="tall" src="../img/acct203/ch03-wil28773_un0304.png" alt="Depreciation timeline: on December 3 FastForward purchases equipment and records an asset with Equipment 26,000 debited and Cash 26,000 credited; on December 31 it allocates the asset cost and records depreciation." loading="lazy">
+        <p class="excap">الشكل: <b>Dec. 3</b> <bdi>Purchase equipment and record asset</bdi> — القيد <bdi>Equipment 26,000</bdi> / <bdi>Cash 26,000</bdi>.
+        وآخر الشكل <b>Dec. 31</b> <bdi>Allocate asset cost and record depreciation</bdi> = قيد التسوية.</p>
+      </div>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 3</td><td>Equipment</td><td class="mono" style="text-align:right">26,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Cash</td><td></td><td class="mono" style="text-align:right">26,000</td></tr>
+        <tr><td></td><td><i>Purchase equipment and record asset.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: قيد الشراء نفسه (مو تسوية) — أصل المعدّات (<bdi>Equipment</bdi>) زاد بالمدين، و<bdi>Cash</bdi> نقص بالدائن.</p>
+
+      <table>
+        <tr><th>الخطوة</th><th>في مثال الإهلاك</th></tr>
+        <tr><td><b>Step 1</b></td><td>اشترت <bdi>FastForward</bdi> معدّات بـ <b>$26,000</b> أول ديسمبر عشان تكسب منها إيراد. تكلفتها لازم تنهلك.</td></tr>
+        <tr><td><b>Step 2</b></td><td>العمر الإنتاجي المتوقّع <b>5 سنين</b>، وقيمتها في آخره تقريباً <b>$8,000</b>. يعني صافي التكلفة على عمرها
+            <span class="mono" dir="ltr">26,000 − 8,000 = 18,000</span>. وبطريقة القسط الثابت: <span class="mono" dir="ltr">18,000 ÷ 60 months = 300</span> بالشهر.</td></tr>
+        <tr><td><b>Step 3</b></td><td>قيد الإهلاك الشهري تحت ↓</td></tr>
+      </table>
+
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td></td><td><b>Adjustment (c)</b></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Depreciation Expense</td><td class="mono" style="text-align:right">300</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Accumulated Depreciation—Equipment</td><td></td><td class="mono" style="text-align:right">300</td></tr>
+        <tr><td></td><td><i>Record monthly equipment depreciation.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Depreciation Expense</bdi> زاد ← مصروف يزيد بالمدين؛ و<bdi>Accumulated Depreciation—Equipment</bdi> زاد بالدائن ←
+      وهذا حساب مقابل (<bdi>contra account</bdi>) رصيده دائن، فزيادته <b>تنقص</b> صافي الأصل. لاحظ: <bdi>Equipment</bdi> نفسه ما انلمس.
+      أثرها على المعادلة: <span class="mono" dir="ltr">Assets <span class="neg">−300</span> = Liabilities + Equity <span class="neg">−300</span></span>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Adjustment (c) — journal entry and T-account postings</div>
+        <img src="../img/acct203/ch03-wil28773_un0305.png" alt="Adjustment (c) dated December 31 debits Depreciation Expense 300 and credits Accumulated Depreciation—Equipment 300 to record monthly equipment depreciation, with the equation effect Assets minus 300 equals Liabilities plus Equity minus 300; the Equipment T-account, number 167, shows a December 3 debit of 26,000, the Accumulated Depreciation—Equipment T-account, number 168, shows a December 31 credit of 300, and the Depreciation Expense—Equipment T-account, number 612, shows a December 31 debit of 300." loading="lazy">
+        <p class="excap">ثلاث حسابات على شكل T:<bdi>Equipment</bdi> (167) مدين Dec. 3 <b>26,000</b> — <b>ما تغيّر</b>. و<bdi>Accumulated Depreciation—Equipment</bdi> (168)
+        دائن Dec. 31 <b>300</b>. و<bdi>Depreciation Expense—Equipment</bdi> (612) مدين Dec. 31 <b>300</b>. وعلى اليمين:
+        <bdi>Assets = Liabilities + Equity</bdi> بـ <b>−300</b> و<b>−300</b>.</p>
+      </div>
+
+      <p>بعد الترحيل: <span class="mono" dir="ltr">Equipment 26,000 − Accumulated Depreciation 300 = 25,700</span> صافي التكلفة. ورصيد
+      <bdi>Depreciation Expense</bdi> (300) ينعرض في قائمة دخل ديسمبر.</p>
+      <table>
+        <tr><th>قبل التسوية</th><th>التسوية</th><th>بعد التسوية</th></tr>
+        <tr><td><bdi>Equipment, net</bdi> = <b>$26,000</b></td>
+            <td>اطرح 300 من <bdi>Equipment, net</bdi> وزد 300 على <bdi>Depreciation Expense</bdi></td>
+            <td><bdi>Equipment, net</bdi> = <b>$25,700</b></td></tr>
+        <tr><td>يعرض 26,000 معدّات</td>
+            <td>يسجّل 300 إهلاك و300 مجمّع إهلاك</td>
+            <td>يعرض 25,700 معدّات بالصافي بعد مجمّع الإهلاك</td></tr>
+      </table>
+      <p><b>لو ما سوّيت التسوية:</b> <bdi>Depreciation Expense</bdi> ناقص 300 (<bdi>understated</bdi>) ← صافي الدخل وحقوق الملكية
+      <bdi>overstated</bdi> بـ 300؛ و<bdi>Accumulated Depreciation</bdi> ناقص 300 ← صافي الأصول <bdi>overstated</bdi> بـ 300.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال محلول من الكتاب — <bdi>Need-To-Know 3-1</bdi> (الإهلاك)</span>
+      <p>عند الشركة أصل ثابت واحد (معدّات) اشترته <b>أول السنة</b>: التكلفة <b>$38,000</b>، العمر <b>10 سنين</b>، والقيمة المتوقّعة آخر العمر <b>$8,000</b>.</p>
+      <ul>
+        <li><b>Step 1:</b> <bdi>Accumulated Depreciation</bdi> = $0 (قبل التسوية)</li>
+        <li><b>Step 2:</b> المفروض = $3,000 بعد إهلاك الفترة: <span class="mono" dir="ltr">(38,000 − 8,000) ÷ 10 years = 3,000</span></li>
+        <li><b>Step 3:</b> القيد تحت</li>
+      </ul>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Depreciation Expense—Equipment</td><td class="mono" style="text-align:right">3,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Accumulated Depreciation—Equipment</td><td></td><td class="mono" style="text-align:right">3,000</td></tr>
+        <tr><td></td><td><i>Record depreciation for period.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: مصروف الإهلاك زاد بالمدين، ومجمّع الإهلاك (حساب مقابل رصيده دائن) زاد بالدائن. وهنا الفترة <b>سنة كاملة</b> فتقسم على
+      السنين (10)؛ في مثال <bdi>FastForward</bdi> الفترة <b>شهر</b> فتقسم على الشهور (60).</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>A special category of prepaid expenses is <b>plant assets</b>, also called Property, Plant, &amp; Equipment (PP&amp;E). Plant assets
+      are long-term tangible assets used to produce and sell products and services. Examples include buildings, machines, vehicles, and
+      equipment. Plant assets provide benefits for more than one period. All plant assets (excluding land) eventually wear out or become
+      less useful.</p>
+      <p><b>Depreciation</b> is the allocation of the costs of these assets over their expected useful lives, but it does not necessarily
+      measure decline in market value. Depreciation expense is recorded with an adjusting entry similar to that for other prepaid expenses.</p>
+      <p>An asset’s expected value at the end of its useful life is called salvage value.</p>
+      <p>FastForward depreciates it using <b>straight-line depreciation</b>, which allocates equal amounts of the asset's net cost to
+      depreciation during its useful life.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>الإهلاك = <b>توزيع تكلفة</b>. اختيار يقول «يقيس نزول القيمة السوقية» = غلط — الكتاب: <bdi>does not necessarily measure decline in market value</bdi>.</li>
+        <li><b>الأرض ما تنهلك</b> (<bdi>excluding land</bdi>). أي اختيار يحسب إهلاك لـ <bdi>land</bdi> = غلط.</li>
+        <li>اطرح الـ <bdi>salvage value</bdi> <b>قبل</b> القسمة: <span class="mono" dir="ltr">(26,000 − 8,000) ÷ 60 = 300</span>، مو
+            <span class="mono" dir="ltr">26,000 ÷ 60</span>.</li>
+        <li>5 سنين = <b>60 شهر</b>. لو السؤال يبي الإهلاك الشهري، قسّم على الشهور مو السنين.</li>
+        <li>الدائن <bdi>Accumulated Depreciation—Equipment</bdi> — <b>مو</b> <bdi>Equipment</bdi> مباشرة ولا <bdi>Cash</bdi>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 · Accumulated depreciation, contra account, book value -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">📉</div>
+    <div class="term">Accumulated Depreciation · Contra Account · Book Value</div>
+    <div class="ar">مجمّع الإهلاك · الحساب المقابل · القيمة الدفترية</div>
+    <div class="say">التكلفة تبقى مكتوبة، والإهلاك يتجمّع جنبها وينطرح منها</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Accumulated Depreciation</bdi></b> = <b>حساب مقابل</b> رصيده الطبيعي <b>دائن</b>، يتجمّع فيه الإهلاك شهر ورا شهر وينطرح من
+      <bdi>Equipment</bdi>. والناتج = <b><bdi>book value</bdi></b> (القيمة الدفترية).</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>سيارتك: سعر شرائها مكتوب في الدفتر وما يتغيّر، وجنبه مجموع الإهلاك لين الحين، وهذا المجموع يكبر كل سنة. السعر ناقص المجموع = القيمة الدفترية.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — الحساب المقابل (<bdi>contra account</bdi>)</span>
+      <p><bdi>Accumulated Depreciation</bdi> (مجمّع الإهلاك) حساب <b>مقابل مستقل</b> (<bdi>a separate contra account</bdi>) و
+      <mark class="k">رصيده الطبيعي (<bdi>normal balance</bdi>) <b>دائن</b></mark>.</p>
+      <p>و<b><bdi>Contra account</bdi></b> (حساب مقابل) فيه <b>ثلاث صفات</b>:</p>
+      <ol>
+        <li><b>مرتبط</b> بحساب ثاني.</li>
+        <li>رصيده الطبيعي <b>عكس</b> رصيد ذاك الحساب.</li>
+        <li>ينعرض <b>كطرح</b> من رصيد ذاك الحساب.</li>
+      </ol>
+      <p>في <bdi>FastForward</bdi>: <bdi>Accumulated Depreciation—Equipment</bdi> ينطرح من <bdi>Equipment</bdi> في الميزانية.</p>
+      <p>والمجمّع فيه <mark class="k"><b>مجموع مصروف الإهلاك لكل الفترات اللي فاتت</b></mark> اللي انستخدم فيها الأصل. مثال الكتاب:
+      في <b>28 فبراير 2022</b>، بعد <b>ثلاث شهور</b> من قيود التسوية، الحسابين صاروا كذا:</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.6 — Accounts after 3 Months of Depreciation</div>
+        <table dir="ltr">
+          <tr><th colspan="2" style="text-align:center">Equipment · 167</th></tr>
+          <tr><th>Debit</th><th>Credit</th></tr>
+          <tr><td class="mono">Dec. 3 &nbsp; 26,000</td><td></td></tr>
+          <tr><td class="mono"><b>Balance &nbsp; 26,000</b></td><td></td></tr>
+        </table>
+        <br>
+        <table dir="ltr">
+          <tr><th colspan="2" style="text-align:center">Accumulated Depreciation—Equipment · 168</th></tr>
+          <tr><th>Debit</th><th>Credit</th></tr>
+          <tr><td></td><td class="mono">Dec. 31 &nbsp; 300</td></tr>
+          <tr><td></td><td class="mono">Jan. 31 &nbsp; 300</td></tr>
+          <tr><td></td><td class="mono">Feb. 28 &nbsp; 300</td></tr>
+          <tr><td></td><td class="mono"><b>Balance &nbsp; 900</b></td></tr>
+        </table>
+        <p class="excap"><bdi>Equipment</bdi> فيه قيد مدين واحد (Dec. 3 <b>26,000</b>)، و<bdi>Accumulated Depreciation—Equipment</bdi> فيه <b>ثلاث</b>
+        قيود دائنة 300 (Dec. 31، Jan. 31، Feb. 28) ورصيد <b>900</b>. <b>تشييك:</b> <span class="mono" dir="ltr">300 + 300 + 300 = 900</span> ✓.
+        لاحظ إن المجمّع في جهة <b>الدائن</b> — عكس الأصل اللي في المدين.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — القيمة الدفترية (<bdi>book value</bdi>)</span>
+      <p>رصيد المجمّع (<b>$900</b>) ينطرح من تكلفة الأصل المرتبط فيه (<b>$26,000</b>). والفرق (<b>$25,100</b>) اسمه
+      <b><bdi>book value</bdi></b> (القيمة الدفترية)، أو <b><bdi>net amount</bdi></b> (الصافي) =
+      <mark class="k">تكلفة الأصل <b>ناقص</b> مجمّع إهلاكه</mark>.</p>
+      <div class="eq">
+        <div class="l1">Book value <span class="plus">=</span> Cost <span class="plus">−</span> Accumulated Depreciation</div>
+        <div class="l2">$26,000 <span class="plus">−</span> $900 <span class="plus">=</span> $25,100</div>
+      </div>
+      <p>هالأرصدة تنعرض في قسم <b>الأصول</b> في ميزانية 28 فبراير. والكتاب يعرض <b>طريقتين</b> لعرض الأصول الثابتة:</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.7 — Reporting Equipment and Accumulated Depreciation</div>
+        <img src="../img/acct203/exhibit-3-7.png" alt="Exhibit 3.7 shows two ways to report equipment: on the left, Equipment $26,000 less accumulated depreciation 900 gives 25,100; on the right, a single line Equipment, net $25,100; a box labeled Book Value with the word OR sits between them." loading="lazy">
+        <p class="excap"><b>يسار:</b> <bdi>Equipment $26,000</bdi>، وتحته <bdi>Less accumulated depreciation 900</bdi>، والناتج <b>25,100</b>.
+        <b>يمين:</b> سطر واحد <bdi>Equipment, net $25,100</bdi>. وبين الاثنين كلمة <bdi>OR</bdi> ومربّع <bdi>Book Value</bdi> بأسهم للجهتين.
+        <b>كيف تقرأه:</b> الطريقتين نفس الرقم (25,100) — الأولى تفصّل، والثانية تعرض الصافي بس.
+        <b>وش يجي منه بالاختبار:</b> احسب الـ <bdi>book value</bdi>، أو وش معنى <bdi>Equipment, net</bdi>.</p>
+      </div>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Accumulated Depreciation</b> is a separate contra account and has a normal credit balance. A <b>contra account</b> is an account
+      linked with another account, it has an opposite normal balance, and it is reported as a subtraction from that other account's balance.</p>
+      <p>The Accumulated Depreciation contra account includes total depreciation expense for all prior periods for which the asset was used.</p>
+      <p>The $900 balance in the Accumulated Depreciation account is subtracted from its related $26,000 asset cost. The difference ($25,100)
+      between these two balances is called <b>book value</b>, or net amount, which is the asset's costs minus its accumulated depreciation.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Accumulated Depreciation</bdi> <b>مو التزام</b> ولا مصروف — هو <b><bdi>contra asset</bdi></b> (أصل مقابل) رصيده دائن، ينطرح من الأصل في الميزانية.</li>
+        <li><bdi>Depreciation Expense</bdi> = إهلاك <b>هالفترة بس</b> (300 لديسمبر) ويروح <b>قائمة الدخل</b>. <bdi>Accumulated Depreciation</bdi> =
+            <b>المجموع</b> من أول يوم (900 بعد 3 شهور) ويروح <b>الميزانية</b>.</li>
+        <li><bdi>Book value</bdi> = التكلفة − <b>مجمّع الإهلاك</b>. مو التكلفة − <bdi>salvage value</bdi>، ومو القيمة السوقية.</li>
+        <li>حساب <bdi>Equipment</bdi> نفسه يبقى بالتكلفة <b>26,000</b> — الإهلاك ما يدخله أبداً.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 · Unearned revenue (adjustment d) -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🎟️</div>
+    <div class="term">Unearned Revenue</div>
+    <div class="ar">الإيرادات غير المكتسبة</div>
+    <div class="say">قبضت قبل ما تشتغل — فأنت مديون بالخدمة لين تقدّمها</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Unearned revenue</bdi></b> = نقد قبضته <b>قبل</b> ما تقدّم الخدمة ← <b>التزام</b> عليك. ومع ما تقدّمها يتحوّل إيراد:
+      <b>مدين <bdi>Unearned Revenue</bdi>، دائن <bdi>Revenue</bdi></b>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>اشتراك النادي السنوي: النادي قبض فلوسك أول يوم، بس صار مديون لك بسنة تمرين — كل شهر تحضر فيه يصير له إيراد.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — التعريف والإطار</span>
+      <p><b><bdi>Unearned revenue</bdi></b> (إيرادات غير مكتسبة) = <mark class="k"><b>نقد انقبض قبل</b> تقديم المنتجات والخدمات</mark>.
+      واسمها الثاني <b><bdi>deferred revenues</bdi></b> (إيرادات مؤجّلة)، وهي <b>التزامات</b> (<bdi>liabilities</bdi>).
+      لما تقبل النقد، أنت قبلت <b>التزام</b> إنك تقدّم المنتج أو الخدمة. فنأجّل (<bdi>defer, or postpone</bdi>) تسجيل المبالغ
+      المقبوضة كإيرادات <b>لين</b> تتقدّم الخدمة.</p>
+      <p><b>الإطار (<bdi>Framework</bdi>):</b> مع ما تتقدّم المنتجات أو الخدمات، <b>الالتزام ينقص</b> والإيرادات غير المكتسبة
+      <b>تصير إيرادات</b>. فقيود التسوية <b>تنقص</b> حساب الإيراد غير المكتسب (<bdi>balance sheet</bdi>) و<b>تزيد</b> حساب الإيراد
+      (<bdi>income statement</bdi>).</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.8 — Adjusting for Unearned Revenues (decrease liability and increase revenue)</div>
+        <img src="../img/acct203/exhibit-3-8.png" alt="Exhibit 3.8 shows a Liability T-account labeled Decrease and a Revenue T-account labeled Increase, with the entry Dr. Liability and Cr. Revenue below them and arrows from the debit to the liability's debit side and from the credit to the revenue's credit side." loading="lazy">
+        <p class="excap">هذا <b>Exhibit 3.8</b> — نفس شكل 3.5 بس الحسابين تغيّروا: <b>يسار</b> <bdi>Liability</bdi> ومكتوب فوقه <bdi>Decrease</bdi>،
+        و<b>يمين</b> <bdi>Revenue</bdi> ومكتوب فوقه <bdi>Increase</bdi>. القيد <bdi>Dr. Liability… #</bdi> / <bdi>Cr. Revenue… #</bdi>:
+        سهم أحمر لجهة المدين في الالتزام، وسهم أخضر لجهة الدائن في الإيراد.
+        <b>وش يجي منه بالاختبار:</b> المدين <b>التزام</b> والدائن <b>إيراد</b> — والاختيار المقلوب أشهر فخ.</p>
+      </div>
+      <p><b>مثال الكتاب من الرياضة:</b> لما <bdi>Boston Celtics</bdi> يقبضون نقد من بيع تذاكر مقدّماً، يسجّلونه في حساب إيراد غير مكتسب
+      اسمه <bdi>Deferred Game Revenues</bdi>، ويسجّلون الإيراد <b>مع ما تنلعب المباريات</b>. والإيرادات غير المكتسبة منتشرة في
+      الفعاليات الرياضية والحفلات.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — مثال (d): إيراد استشارات <bdi>FastForward</bdi> غير المكتسب</span>
+      <p>في <b>26 ديسمبر</b> اتفقت <bdi>FastForward</bdi> تقدّم خدمات استشارية لعميل لمدة <b>60 يوم</b> برسوم ثابتة <b>$3,000</b>.</p>
+      <p><b>Step 1:</b> في 26 ديسمبر العميل دفع رسوم الـ 60 يوم مقدّم، وتغطّي الفترة من <b>27 ديسمبر</b> لين <b>24 فبراير</b>. قيد قبض النقد المقدّم:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 26</td><td>Cash</td><td class="mono" style="text-align:right">3,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Unearned Consulting Revenue</td><td></td><td class="mono" style="text-align:right">3,000</td></tr>
+        <tr><td></td><td><i>Received advance payment for services over the next 60 days.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: هذا <b>مو</b> قيد تسوية — <bdi>Cash</bdi> (أصل) زاد بالمدين، و<bdi>Unearned Consulting Revenue</bdi> (إيراد استشارات غير مكتسب — التزام) زاد بالدائن.
+      أثرها: <span class="mono" dir="ltr">Assets <span class="pos">+3,000</span> = Liabilities <span class="pos">+3,000</span> + Equity</span>.
+      الدفعة زادت النقد وخلقت التزام تشتغل استشارات <b>60 يوم</b>: <b>5 أيام هالسنة</b> و<b>55 يوم السنة الجاية</b>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Unearned Revenues — the FastForward timeline</div>
+        <img class="tall" src="../img/acct203/ch03-wil28773_un0307.png" alt="Unearned revenues timeline: on December 26 cash is received in advance and a liability is recorded, as a client hands cash to a consultant who says Thanks for cash in advance, I'll work now through Feb. 24; on December 31 five days of services have been provided and revenue is recorded." loading="lazy">
+        <p class="excap">الشكل: <b>Dec. 26</b> <bdi>Cash received in advance and record liability</bdi> — العميلة تسلّم النقد والمستشار يقول
+        <bdi>Thanks for cash in advance. I'll work now through Feb. 24</bdi>. وآخر الشكل <b>Dec. 31</b>
+        <bdi>Provided 5 days of services and record revenue</bdi> = قيد التسوية.</p>
+      </div>
+
+      <p><b>Step 2:</b> مع مرور الوقت <bdi>FastForward</bdi> تكسب الدفعة بالاستشارات. بنهاية 31 ديسمبر قدّمت <b>5 أيام</b> خدمة، فكسبت
+      <span class="mono" dir="ltr">5/60</span> من الـ 3,000: <span class="mono" dir="ltr">$3,000 × 5/60 = $250</span>. و<bdi>revenue recognition principle</bdi>
+      (مبدأ الاعتراف بالإيراد) يطلب إن الـ <b>$250</b> تنعرض <b>إيراد</b> في قائمة دخل ديسمبر.</p>
+      <p><b>Step 3:</b> قيد التسوية اللي ينقص الالتزام ويعترف بالإيراد:</p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td></td><td><b>Adjustment (d)</b></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Unearned Consulting Revenue</td><td class="mono" style="text-align:right">250</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Consulting Revenue</td><td></td><td class="mono" style="text-align:right">250</td></tr>
+        <tr><td></td><td><i>Record earned revenue that was received in advance ($3,000 × 5/60).</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: <bdi>Unearned Consulting Revenue</bdi> نقص ← الالتزام ينقص بالمدين؛ و<bdi>Consulting Revenue</bdi> (إيراد الاستشارات) زاد ← الإيراد يزيد بالدائن.
+      أثرها: <span class="mono" dir="ltr">Assets = Liabilities <span class="neg">−250</span> + Equity <span class="pos">+250</span></span> — الأصول ما تحرّكت.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Adjustment (d) — journal entry and T-account postings</div>
+        <img src="../img/acct203/ch03-wil28773_un0308.png" alt="Adjustment (d) dated December 31 debits Unearned Consulting Revenue 250 and credits Consulting Revenue 250 to record earned revenue that was received in advance, 3,000 times 5 over 60; the Unearned Consulting Revenue T-account, number 236, shows a December 31 debit of 250, a December 26 credit of 3,000 and a balance of 2,750, and the Consulting Revenue T-account, number 403, shows credits of 4,200 on December 5, 1,600 on December 12 and 250 on December 31 with a balance of 6,050." loading="lazy">
+        <p class="excap"><bdi>Unearned Consulting Revenue</bdi> (236): مدين Dec. 31 <b>250</b>، دائن Dec. 26 <b>3,000</b>، والرصيد <b>2,750</b> دائن.
+        و<bdi>Consulting Revenue</bdi> (403): دائن Dec. 5 <b>4,200</b>، Dec. 12 <b>1,600</b>، Dec. 31 <b>250</b>، والرصيد <b>6,050</b>.
+        <b>تشييك:</b> <span class="mono" dir="ltr">3,000 − 250 = 2,750</span> و<span class="mono" dir="ltr">4,200 + 1,600 + 250 = 6,050</span> ✓.</p>
+      </div>
+
+      <p>قيد التسوية <mark class="k">ينقل <b>$250</b> من الإيراد غير المكتسب (حساب التزام) لحساب إيراد</mark>:</p>
+      <table>
+        <tr><th>قبل التسوية</th><th>التسوية</th><th>بعد التسوية</th></tr>
+        <tr><td><bdi>Unearned Consulting Revenue</bdi> = <b>$3,000</b></td>
+            <td>اطرح 250 من <bdi>Unearned Consulting Revenue</bdi> وزد 250 على <bdi>Consulting Revenue</bdi></td>
+            <td><bdi>Unearned Consulting Revenue</bdi> = <b>$2,750</b></td></tr>
+        <tr><td>يعرض 3,000 إيراد غير مكتسب عن استشارات موعودة 60 يوم (<b>$50</b> باليوم)</td>
+            <td>يسجّل 5 أيام إيراد استشارات مكتسب = <span class="mono" dir="ltr">5/60</span> من المبلغ غير المكتسب</td>
+            <td>يعرض 2,750 إيراد غير مكتسب عن خدمات باقية 55 يوم (<span class="mono" dir="ltr">55 days × $50 = $2,750</span>)</td></tr>
+      </table>
+      <p><b>لو ما سوّيت التسوية:</b> الـ 250 تبقى في <bdi>Unearned Consulting Revenue</bdi> ← الالتزامات <bdi>overstated</bdi> بـ 250،
+      و<bdi>Consulting Revenue</bdi> ناقص 250 ← صافي الدخل وحقوق الملكية <bdi>understated</bdi> بـ 250. <b>عكس</b> اتجاه المصروف المدفوع مقدّماً.</p>
+      <p><b>من صندوق <bdi>Ethical Risk</bdi>:</b> هيئة <bdi>SEC</bdi> اتّهمت مدراء سابقين في <bdi>Saba Software</bdi> بتزوير الإيرادات
+      عشان يرفعون الدخل، والمبالغة في الدخل خلّت الرئيس التنفيذي والمدير المالي السابقين يرجّعون للشركة ملايين الدولارات
+      (<bdi>clawbacks</bdi>). يعني تسجيل الإيراد في وقته الصح مو تفصيل — هو أمانة.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">أمثلة محلولة من الكتاب — <bdi>Need-To-Know 3-2</bdi></span>
+      <p><b>١) <bdi>Unearned Rent Revenue</bdi>:</b> الشركة قبضت <b>$24,000</b> إيجار مقدّم في <b>1 سبتمبر</b> (مدين <bdi>Cash</bdi>، دائن
+      <bdi>Unearned Rent Revenue</bdi>). المستأجر دفع إيجار <b>12 شهر</b> مقدّم وسكن من 1 سبتمبر.</p>
+      <ul>
+        <li><b>Step 1:</b> <bdi>Unearned Rent Revenue</bdi> = $24,000 (قبل التسوية)</li>
+        <li><b>Step 2:</b> المفروض = $16,000؛ والمكتسب هالفترة <span class="mono" dir="ltr">(24,000 ÷ 12 months) × 4 months = 8,000</span> (سبتمبر–ديسمبر)</li>
+      </ul>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Unearned Rent Revenue</td><td class="mono" style="text-align:right">8,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Rent Revenue</td><td></td><td class="mono" style="text-align:right">8,000</td></tr>
+        <tr><td></td><td><i>Record earned portion of rent received in advance.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: الالتزام نقص بالمدين 8,000 والإيراد زاد بالدائن 8,000؛ الباقي <span class="mono" dir="ltr">24,000 − 8,000 = 16,000</span> يبقى التزام.</p>
+      <p><b>٢) <bdi>Unearned Services Revenue</bdi>:</b> الشركة تاخذ <b>$100</b> بالشهر عشان ترش بيت ضد الحشرات. عميل دفع <b>$600</b> في
+      <b>1 نوفمبر</b> مقدّم عن <b>6 رشّات</b> (مدين <bdi>Cash</bdi>، دائن <bdi>Unearned Services Revenue</bdi>). آخر السنة سوّت له <b>رشّتين</b>.</p>
+      <ul>
+        <li><b>Step 1:</b> <bdi>Unearned Services Revenue</bdi> = $600 (قبل التسوية)</li>
+        <li><b>Step 2:</b> المفروض = $400؛ والمكتسب <span class="mono" dir="ltr">$100 × 2 treatments = $200</span></li>
+      </ul>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Unearned Services Revenue</td><td class="mono" style="text-align:right">200</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Services Revenue</td><td></td><td class="mono" style="text-align:right">200</td></tr>
+        <tr><td></td><td><i>Record earned portion of revenue received in advance.</i></td><td></td><td></td></tr>
+      </table>
+      <p>يعني: المكتسب يتحدّد بـ <b>الخدمة المقدّمة</b> (رشّتين)، مو بالوقت. الالتزام نقص بالمدين والإيراد زاد بالدائن.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الخلاصة — نوعين المؤجّلات جنب بعض</span>
+      <table>
+        <tr><th></th><th><bdi>Deferral of Expense</bdi><br>مصروف مدفوع مقدّماً</th><th><bdi>Deferral of Revenue</bdi><br>إيراد غير مكتسب</th></tr>
+        <tr><td><b>وش صار أول</b></td><td>دفعت نقد قبل الاستفادة</td><td>قبضت نقد قبل تقديم الخدمة</td></tr>
+        <tr><td><b>قبل التسوية</b></td><td>أصل <bdi>overstated</bdi>، مصروف <bdi>understated</bdi></td><td>التزام <bdi>overstated</bdi>، إيراد <bdi>understated</bdi></td></tr>
+        <tr><td><b>قيد التسوية</b></td><td><bdi>Dr. Expense / Cr. Asset</bdi><br>(الإهلاك: <bdi>Cr. Accumulated Depreciation</bdi>)</td><td><bdi>Dr. Unearned Revenue / Cr. Revenue</bdi></td></tr>
+        <tr><td><b>لو ما سوّيتها</b></td><td>الأصول وصافي الدخل وحقوق الملكية <bdi>overstated</bdi>، والمصروفات <bdi>understated</bdi></td>
+            <td>الالتزامات <bdi>overstated</bdi>، والإيرادات وصافي الدخل وحقوق الملكية <bdi>understated</bdi></td></tr>
+        <tr><td><b>أمثلة الكتاب</b></td><td>(a) تأمين 100 · (b) مستلزمات 1,050 · (c) إهلاك 300</td><td>(d) استشارات 250</td></tr>
+      </table>
+      <p>النوعين الباقيين (المستحقات — مصروفات مستحقة <bdi>accrued expenses</bdi> وإيرادات مستحقة <bdi>accrued revenues</bdi>) والجدول الكامل للأربعة
+      (<bdi>Exhibit 3.12</bdi>) في الدرس الجاي.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Unearned revenue</b> is cash received in advance of providing products and services. Unearned revenues, or deferred revenues,
+      are liabilities. When cash is accepted, an obligation to provide products or services is accepted. We defer, or postpone, reporting
+      amounts received as revenues until the product or service is provided.</p>
+      <p>As products or services are provided, the liability decreases and the unearned revenues become revenues. Adjusting entries for
+      unearned revenue decrease the unearned revenue (balance sheet) account and increase the revenue (income statement) account, as shown
+      in Exhibit 3.8.</p>
+      <p>The adjusting entry transfers $250 from unearned revenue (a liability account) to a revenue account.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Unearned revenue</bdi> = <b>التزام</b> — مو إيراد ومو أصل. كلمة <bdi>revenue</bdi> في الاسم تخدعك.</li>
+        <li>اتجاه التسوية: مدين <bdi>Unearned Revenue</bdi> (الالتزام ينقص) / دائن <bdi>Revenue</bdi>. القيد المقلوب = غلط.</li>
+        <li>قيد 26 ديسمبر (مدين <bdi>Cash</bdi>) <b>مو</b> قيد تسوية — هو تسجيل القبض. تسوية 31 ديسمبر ما فيها <bdi>Cash</bdi>.</li>
+        <li>الإيراد = الجزء <b>المكتسب</b> بس (5 أيام = 250)، والباقي 2,750 يبقى التزام. الاختيار اللي يحط 2,750 كإيراد = عكس.</li>
+        <li>لو نسيت التسوية: الالتزامات <b>أكبر</b> وصافي الدخل <b>أقل</b> — عكس المصروف المدفوع مقدّماً. لا تنقل الاتجاه من نوع للثاني.</li>
+        <li><bdi>Unearned</bdi> (قبضت <b>قبل</b> ما تشتغل) ≠ إيراد مستحق (<bdi>accrued revenue</bdi>: اشتغلت وما قبضت) — الثاني في الدرس الجاي.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">الأسئلة بالإنجليزي عشان الاختبار بالإنجليزي. جاوب على ورقة قبل ما تفتح الحل. لو غلطت في ١ ارجع لـ <bdi>NTK 3-1</bdi> (المستلزمات)،
+ولو غلطت في ٣ ارجع لمعادلة الـ <bdi>book value</bdi>، ولو غلطت في ٥ ارجع لجدول الخلاصة في المفهوم الخامس.</p>
+
+<div class="q">
+  <div class="stem">1. The Supplies account had an $800 debit balance at the start of the year. Supplies of $2,600 were purchased during the year and debited to Supplies. A December 31 physical count shows $650 of supplies remaining. The adjusting entry is:</div>
+  <ol type="A">
+    <li>Debit Supplies Expense $650; credit Supplies $650</li>
+    <li>Debit Supplies Expense $1,950; credit Supplies $1,950</li>
+    <li>Debit Supplies Expense $2,750; credit Supplies $2,750</li>
+    <li>Debit Supplies $2,750; credit Supplies Expense $2,750</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. المستخدم = الرصيد قبل التسوية − الباقي بالعدّ: <span class="mono" dir="ltr">800 + 2,600 − 650 = 2,750</span>. والقيد مدين
+  <bdi>Supplies Expense</bdi> (مصروف زاد) ودائن <bdi>Supplies</bdi> (أصل نقص). الفخ في <b>A</b>: حط الباقي (650) بدل المستخدم.
+  و<b>B</b> نسي رصيد أول السنة (<span class="mono" dir="ltr">2,600 − 650 = 1,950</span>) — نفس فخ <bdi>NTK 3-1</bdi>. و<b>D</b> المبلغ صح بس القيد مقلوب.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. On October 1, a company paid $6,000 for a 24-month insurance policy and debited Prepaid Insurance. What amount of insurance expense is reported for the year ended December 31?</div>
+  <ol type="A"><li>$750</li><li>$1,500</li><li>$5,250</li><li>$6,000</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>A</b>. <span class="mono" dir="ltr">6,000 ÷ 24 = 250</span> بالشهر، والمنتهي 3 شهور (أكتوبر ونوفمبر وديسمبر): <span class="mono" dir="ltr">250 × 3 = 750</span>.
+  الفخ في <b>B</b>: قسم على 12 بدل 24. و<b>C</b> (5,250) هو الرصيد الباقي في <bdi>Prepaid Insurance</bdi> بعد التسوية، مو المصروف.
+  و<b>D</b> (6,000) = الأساس النقدي (<bdi>cash basis</bdi>) — كل المبلغ مصروف يوم الدفع، وهذا اللي يرفضه أساس الاستحقاق.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. Equipment costing $50,000 has an expected salvage value of $5,000 and a useful life of 5 years. Using straight-line depreciation, what is the equipment's book value after 2 years?</div>
+  <ol type="A"><li>$27,000</li><li>$32,000</li><li>$30,000</li><li>$41,000</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <span class="mono" dir="ltr">(50,000 − 5,000) ÷ 5 = 9,000</span> بالسنة؛ بعد سنتين <bdi>Accumulated Depreciation</bdi> = 18,000؛ و
+  <span class="mono" dir="ltr">Book value = 50,000 − 18,000 = 32,000</span>. الفخ في <b>A</b>: طرح المجمّع من 45,000 — الـ <bdi>salvage value</bdi>
+  يدخل في حساب الإهلاك بس، والقيمة الدفترية = <b>التكلفة</b> − مجمّع الإهلاك. و<b>C</b> نسي يطرح الـ <bdi>salvage value</bdi>
+  (<span class="mono" dir="ltr">50,000 ÷ 5 = 10,000</span> بالسنة). و<b>D</b> حسب سنة وحدة بس.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. On November 1, a company received $4,800 in advance for services to be provided evenly over 6 months (November 1 to April 30) and credited Unearned Revenue. The December 31 adjusting entry is:</div>
+  <ol type="A">
+    <li>Debit Service Revenue $1,600; credit Unearned Revenue $1,600</li>
+    <li>Debit Unearned Revenue $3,200; credit Service Revenue $3,200</li>
+    <li>Debit Cash $1,600; credit Service Revenue $1,600</li>
+    <li>Debit Unearned Revenue $1,600; credit Service Revenue $1,600</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>D</b>. <span class="mono" dir="ltr">4,800 ÷ 6 = 800</span> بالشهر، والمكتسب شهرين (نوفمبر وديسمبر) = <span class="mono" dir="ltr">1,600</span>. الالتزام ينقص بالمدين
+  والإيراد يزيد بالدائن. الفخ في <b>A</b>: القيد مقلوب. و<b>B</b> (3,200) هو الباقي غير المكتسب (4 شهور). و<b>C</b>: قيد التسوية
+  <b>ما يمس <bdi>Cash</bdi></b> — النقد انقبض في 1 نوفمبر وانسجّل وقتها.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. At year-end, a company forgets to record the adjusting entry for $900 of unearned revenue that has now been earned. What is the effect on the financial statements?</div>
+  <ol type="A">
+    <li>Assets are overstated by $900 and net income is overstated by $900</li>
+    <li>No effect, because the cash was already received and recorded</li>
+    <li>Liabilities are overstated by $900 and net income is understated by $900</li>
+    <li>Liabilities are understated by $900 and net income is overstated by $900</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. بدون التسوية الـ 900 تبقى في <bdi>Unearned Revenue</bdi> (التزام) ← الالتزامات <bdi>overstated</bdi> بـ 900، والإيراد ناقص 900
+  ← صافي الدخل <bdi>understated</bdi> بـ 900. الفخ في <b>A</b>: هذا أثر نسيان تسوية <b>مصروف مدفوع مقدّماً</b> (أصل ودخل مبالغ فيهم) —
+  نوع ثاني. و<b>D</b> قلب الاتجاه. و<b>B</b>: صح إن النقد انسجّل، بس الإيراد ما انسجّل في فترته — وهذي كل فكرة أساس الاستحقاق.</p></details>
+</div>
+
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH3-S2">ابدأ</button> <button class="pill" data-deck="ACCT203-CH3-S2" data-mode="ar">عربي ← إنجليزي</button></div></div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Deferral of expense / deferral of revenue</bdi></td><td>تأجيل المصروف / تأجيل الإيراد</td><td>النقد تحرّك <b>قبل</b> الفايدة أو الخدمة؛ نوعين من أربع أنواع تسويات</td></tr>
+  <tr><td><bdi>Prepaid expenses</bdi> / <bdi>deferred expenses</bdi></td><td>مصروفات مدفوعة مقدّماً / مؤجّلة</td><td><b>أصول</b> — تصير مصروف لما تنستخدم؛ التسوية: مدين مصروف، دائن أصل</td></tr>
+  <tr><td><bdi>Prepaid Insurance</bdi></td><td>تأمين مدفوع مقدّماً</td><td>ينتهي مع الوقت: <span class="mono" dir="ltr">2,400 ÷ 24 = 100</span> بالشهر؛ المصروف = المنتهي</td></tr>
+  <tr><td><bdi>Supplies</bdi> / <bdi>Supplies Expense</bdi></td><td>المستلزمات / مصروف المستلزمات</td><td>بالعدّ: المصروف = الرصيد قبل التسوية − الباقي (<span class="mono" dir="ltr">9,720 − 8,670 = 1,050</span>)</td></tr>
+  <tr><td><bdi>Prepaid Rent</bdi> · <bdi>Prepaid Advertising</bdi></td><td>إيجار / إعلان مدفوع مقدّماً</td><td>نفس معالجة التأمين؛ إيجار الشهر اللي ينصرف وينستهلك فيه = <bdi>Rent Expense</bdi> على طول</td></tr>
+  <tr><td><bdi>Plant assets</bdi> / <bdi>Property, Plant, &amp; Equipment (PP&amp;E)</bdi></td><td>الأصول الثابتة</td><td>ملموسة طويلة الأجل؛ كلها تنهلك <b>ما عدا الأرض</b></td></tr>
+  <tr><td><bdi>Depreciation</bdi></td><td>الإهلاك</td><td><b>توزيع تكلفة</b> — مو قياس نزول القيمة السوقية</td></tr>
+  <tr><td><bdi>Useful life</bdi> / <bdi>benefit period</bdi></td><td>العمر الإنتاجي / فترة المنفعة</td><td>5 سنين = <b>60 شهر</b></td></tr>
+  <tr><td><bdi>Salvage value</bdi></td><td>القيمة المتبقية (الخردة)</td><td>تنطرح من التكلفة <b>قبل</b> القسمة؛ ما تدخل في الـ <bdi>book value</bdi></td></tr>
+  <tr><td><bdi>Straight-line depreciation</bdi></td><td>القسط الثابت</td><td>مبالغ <b>متساوية</b>: <span class="mono" dir="ltr">(26,000 − 8,000) ÷ 60 = 300</span></td></tr>
+  <tr><td><bdi>Depreciation Expense</bdi></td><td>مصروف الإهلاك</td><td>إهلاك <b>هالفترة</b> بس — قائمة الدخل</td></tr>
+  <tr><td><bdi>Accumulated Depreciation</bdi></td><td>مجمّع الإهلاك</td><td><bdi>contra asset</bdi> رصيده <b>دائن</b>؛ مجموع كل الفترات (900 بعد 3 شهور) — مو التزام</td></tr>
+  <tr><td><bdi>Contra account</bdi></td><td>حساب مقابل</td><td>ثلاث صفات: مرتبط بحساب، رصيده عكسه، ينطرح منه</td></tr>
+  <tr><td><bdi>Book value</bdi> / <bdi>net amount</bdi> · <bdi>Equipment, net</bdi></td><td>القيمة الدفترية / الصافي</td><td>التكلفة − مجمّع الإهلاك: <span class="mono" dir="ltr">26,000 − 900 = 25,100</span></td></tr>
+  <tr><td><bdi>Unearned revenue</bdi> / <bdi>deferred revenues</bdi></td><td>إيرادات غير مكتسبة / مؤجّلة</td><td><b>التزام</b>؛ التسوية: مدين <bdi>Unearned Revenue</bdi>، دائن <bdi>Revenue</bdi></td></tr>
+  <tr><td><bdi>Deferred Game Revenues</bdi></td><td>إيرادات مباريات مؤجّلة</td><td>اسم حساب الإيراد غير المكتسب عند <bdi>Boston Celtics</bdi> — يصير إيراد مع ما تنلعب المباريات</td></tr>
+  <tr><td><bdi>Exhibit 3.5 / Exhibit 3.8</bdi></td><td>إطار تسوية المدفوع مقدّماً / غير المكتسب</td><td>3.5: <bdi>Dr. Expense / Cr. Asset</bdi> · 3.8: <bdi>Dr. Liability / Cr. Revenue</bdi></td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب <bdi>Financial Accounting Fundamentals</bdi>، الطبعة الثامنة (<bdi>John J. Wild</bdi>، <bdi>McGraw Hill</bdi>) —
+<bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi>، جزئي <bdi>Deferral of Expense</bdi> و<bdi>Deferral of Revenue</bdi>،
+الهدفين <code>P1</code> و<code>P2</code> (صفحات ٨٧–٩٢)، مع <bdi>Need-To-Know 3-1</bdi> و<bdi>3-2</bdi> وملخّص <bdi>Summary: Cheat Sheet</bdi>.
+<br><b>ملخّص بس:</b> صندوق <bdi>Decision Maker</bdi> (الناشر والرياضي الأولمبي) وصندوق <bdi>Ethical Risk</bdi> (<bdi>Saba Software</bdi>)
+— انعرضوا باختصار؛ وصورهم الفوتوغرافية زينة وما انحطّت.
+<br><b>ملحق:</b> <bdi>Appendix 3A: Alternative Accounting for Prepayments</bdi> (<code>P7</code>: تسجيل الدفعة المقدّمة في حساب مصروف أو إيراد من البداية بدل أصل أو
+التزام، وقيد التسوية يتغيّر) — ملحق، اسأل الدكتور لو داخل في المقرر.
+</p>
+
+
+<div class="footnav">
+  <div class="side"><a class="pill" href="ACCT203-CH3-S1.html">→ ١. التوقيت والتقارير: أساس الاستحقاق</a></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><a class="pill" href="ACCT203-CH3-S3.html">٣. تسويات المستحقات وميزان المراجعة المعدّل ←</a></div>
+</div>
+</div>
+<script src="../data/cards-ACCT203-CH3-S2.js?v=7"></script>
+<script src="../assets/flashcards.js?v=7"></script>
+<script src="../assets/lesson.js?v=7"></script>
+</body>
+</html>

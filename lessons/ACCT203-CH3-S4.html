@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACCT 203 — الفصل ٣: الإقفال ودورة المحاسبة والميزانية المصنّفة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/theme.css?v=7">
+<script>(function(){var t="dark";try{t=localStorage.getItem("yh-theme")||"dark"}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar">
+  <a class="pill" href="../index.html">⌂ Yamen's Hub</a>
+  <a class="pill" href="ACCT203-CH3-S4-EN.html">🇬🇧 English</a>
+  <span class="grow"></span>
+  <button class="pill gold" data-deck="ACCT203-CH3-S4">🃏 تدرّب</button>
+  <button class="tbtn theme" aria-label="theme">🌙</button>
+</div>
+<header class="lh">
+  <h1>الفصل الثالث — الإقفال ودورة المحاسبة والميزانية المصنّفة</h1>
+  <p class="sub"><code>ACCT 203</code> · مبادئ المحاسبة المالية · <bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi> · القسم ٤ من ٤:
+  <bdi>Closing, the Accounting Cycle, and the Classified Balance Sheet</bdi><br>
+  الهدف <code>P6</code>: <bdi>Prepare closing entries and a post-closing trial balance.</bdi><br>
+  الهدف <code>C2</code>: <bdi>Explain and prepare a classified balance sheet.</bdi><br>
+  الهدف <code>A1</code>: <bdi>Compute and analyze profit margin and current ratio.</bdi></p>
+</header>
+
+<div class="big">
+  <h2>آخر محطة في الفصل: نقفل الدفاتر، نلفّ الدورة، ونرتّب الميزانية</h2>
+  <p>في الدروس اللي قبل سوّينا قيود التسوية (<bdi>adjusting entries</bdi>) وطلّعنا ميزان المراجعة المعدّل
+  (<bdi>adjusted trial balance</bdi>) والقوائم المالية (<bdi>financial statements</bdi>) لشركة <bdi>FastForward</bdi>. طيب وش يصير بعد ما تخلص القوائم؟
+  الإيرادات (<bdi>revenues</bdi>) والمصروفات (<bdi>expenses</bdi>) والتوزيعات (<bdi>dividends</bdi>) لازم ترجع <b>صفر</b> عشان الفترة الجاية تبدأ نظيفة — وهذا اسمه <b>الإقفال</b>
+  (<bdi>closing</bdi>، الهدف <code>P6</code>).</p>
+  <p>بعدها الكتاب يجمع كل اللي درسته في الفصلين ٢ و٣ في <b>١٠ خطوات</b> اسمها الدورة المحاسبية (<bdi>accounting cycle</bdi>)،
+  ويعلّمك ترتّب الميزانية في أدراج: متداول وغير متداول (<bdi>classified balance sheet</bdi>، الهدف <code>C2</code>)، وآخر شي
+  نسبتين تحلّل فيهم الشركة: هامش الربح (<bdi>profit margin</bdi>) ونسبة التداول (<bdi>current ratio</bdi>، الهدف <code>A1</code>).</p>
+  <p>ركّز على ثلاث أشياء تجي في الاختبار كل مرة: <b>أي الحسابات تنقفل وأيها لا</b>، <b>ترتيب قيود الإقفال الأربعة</b>،
+  و<b>وين ينحط كل حساب في الميزانية المصنّفة</b>. والأرقام كلها من الكتاب — اجمعها بنفسك وأنت تقرا، لا تصدّقني على طول.</p>
+</div>
+
+<!-- 1 · Closing process + temporary and permanent accounts -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🔒</div>
+    <div class="term">The Closing Process: Temporary and Permanent Accounts</div>
+    <div class="ar">عملية الإقفال: الحسابات المؤقتة والدائمة</div>
+    <div class="say">وش يتصفّر آخر الفترة، ووش يكمّل معك للفترة الجاية</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      الإقفال = تصفير حسابات الفترة (الإيرادات، المصروفات، التوزيعات) ونقل أثرها لـ<bdi>Retained Earnings</bdi> (الأرباح المحتجزة).
+      الحسابات <b>المؤقتة</b> تنقفل، و<b>الدائمة</b> — يعني كل حسابات الميزانية — تكمّل برصيدها.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>عدّاد الخطوات في جوالك يتصفّر كل ليلة (مؤقت)، بس وزنك ما يتصفّر — يكمّل من أمس (دائم).</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — متى ووش خطواتها وليش</span>
+      <p><b>عملية الإقفال</b> (<bdi>closing process</bdi>) تصير <mark class="k"><b>آخر الفترة المحاسبية، بعد ما تخلص القوائم المالية</b></mark> (الفترة المحاسبية = <bdi>accounting period</bdi>).
+      فيها <b>ثلاث خطوات</b>:</p>
+      <ol>
+        <li>تحدّد الحسابات اللي بتنقفل (<bdi>identify accounts for closing</bdi>).</li>
+        <li>تسجّل وترحّل قيود الإقفال (<bdi>record and post the closing entries</bdi>).</li>
+        <li>تجهّز ميزان المراجعة بعد الإقفال (<bdi>prepare a post-closing trial balance</bdi>).</li>
+      </ol>
+      <p>ولها <b>غرضين</b> (<bdi>two purposes</bdi>):</p>
+      <ol>
+        <li><b>تصفّر</b> أرصدة الإيرادات والمصروفات والتوزيعات آخر كل فترة — عشان هالحسابات تقيس دخل وتوزيعات <b>الفترة الجاية</b> صح.</li>
+        <li><b>تحدّث رصيد</b> <bdi>Retained Earnings</bdi>، عشان يطابق الرقم اللي في الميزانية وفي قائمة الأرباح المحتجزة
+            (<bdi>statement of retained earnings</bdi>).</li>
+      </ol>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — مؤقت ولا دائم؟</span>
+      <table>
+        <tr><th></th><th><bdi>Temporary accounts</bdi> — الحسابات المؤقتة</th><th><bdi>Permanent accounts</bdi> — الحسابات الدائمة</th></tr>
+        <tr><td><b>تعريف الكتاب</b></td>
+            <td>مرتبطة بفترة محاسبية <b>وحدة</b></td>
+            <td>تعرض أنشطة مرتبطة بفترة مستقبلية <b>وحدة أو أكثر</b></td></tr>
+        <tr><td><b>وش تشمل</b></td>
+            <td><mark class="k">كل حسابات قائمة الدخل</mark> (<bdi>income statement</bdi>: <bdi>revenues</bdi> الإيرادات و<bdi>expenses</bdi> المصروفات) + حساب <bdi>Dividends</bdi> (التوزيعات) + حساب <bdi>Income Summary</bdi> (ملخص الدخل)</td>
+            <td>الأصول (<bdi>assets</bdi>) والخصوم (<bdi>liabilities</bdi>) وحقوق الملكية (<bdi>equity</bdi>) = <b>كل حسابات الميزانية</b> (<bdi>balance sheet</bdi>؛ ومنها <bdi>Common Stock</bdi> الأسهم العادية و<bdi>Retained Earnings</bdi>)</td></tr>
+        <tr><td><b>آخر الفترة</b></td>
+            <td><b>تنقفل</b> — تستخدمها لفترة وحدة وبعدين تقفلها، ورصيدها يرجع صفر</td>
+            <td><b>ما تنقفل</b> — رصيدها الختامي يكمّل للفترات الجاية</td></tr>
+      </table>
+      <p>والقاعدة اللي تختصر الموضوع: <b>عملية الإقفال تنطبق على الحسابات المؤقتة بس</b>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Temporary vs. Permanent Accounts</div>
+        <img src="../img/acct203/ch03-wil28773_un0314.png" alt="A signpost with two arrows, Temporary and Permanent, above two boards: Temporary Accounts, closed at period-end, listing Revenues, Expenses, Dividends and Income Summary; and Permanent Accounts, not closed at period-end, listing Assets, Liabilities, Common Stock and Retained Earnings." loading="lazy">
+        <p class="excap">لوحة إرشاد فيها سهمين: <bdi>TEMPORARY</bdi> و<bdi>PERMANENT</bdi>، وتحتها لوحتين.
+        <b>اليسار:</b> <bdi>Temporary Accounts (closed at period-end)</bdi> = <bdi>Revenues · Expenses · Dividends · Income Summary</bdi>.
+        <b>اليمين:</b> <bdi>Permanent Accounts (not closed at period-end)</bdi> = <bdi>Assets · Liabilities · Common Stock · Retained Earnings</bdi>.
+        <b>وش يجي منه بالاختبار:</b> «أي حساب <b>ما</b> ينقفل؟» — احفظ القائمتين، كل وحدة <b>أربعة</b> بنود.</p>
+      </div>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>The <b>closing process</b> occurs at the end of an accounting period after financial statements are completed. In the
+      closing process we (1) identify accounts for closing, (2) record and post the closing entries, and (3) prepare a
+      post-closing trial balance. The closing process has two purposes. First, it resets revenue, expense, and dividends
+      account balances to zero at the end of each period. This is done so that these accounts can properly measure income and
+      dividends for the next period. Second, it updates the balance of the Retained Earnings account, which matches that
+      reported in the balance sheet and the statement of retained earnings.</p>
+      <p><b>Temporary accounts</b> relate to one accounting period. They include all income statement accounts, the dividends
+      account, and the Income Summary account. They are temporary because such accounts are used for a period and then closed
+      at period-end. The closing process applies only to temporary accounts.</p>
+      <p><b>Permanent accounts</b> report on activities related to one or more future accounting periods. They include asset,
+      liability, and equity accounts (all balance sheet accounts). Permanent accounts are not closed each period and carry their
+      ending balance into future periods.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li><bdi>Dividends</bdi> <b>مو</b> حساب في قائمة الدخل، بس هو <b>مؤقت</b> وينقفل. واللي يحسب إن كل شي له علاقة بحقوق
+            الملكية دائم = غلط: <bdi>Common Stock</bdi> و<bdi>Retained Earnings</bdi> دائمين، و<bdi>Dividends</bdi> مؤقت.</li>
+        <li><bdi>Income Summary</bdi> <b>مؤقت</b> بعد — ينفتح وينقفل داخل عملية الإقفال نفسها.</li>
+        <li>الإقفال يصير <b>بعد</b> إعداد القوائم المالية، مو قبلها. لو قفلت قبل، قائمة الدخل بتطلع كلها أصفار.</li>
+        <li>لا تمشي ورا الاسم: <bdi>Unearned Consulting Revenue</bdi> (إيرادات غير مكتسبة) فيها كلمة <bdi>revenue</bdi> بس هي <b>التزام</b> ← دائمة.
+            و<bdi>Accumulated Depreciation</bdi> (مجمّع الإهلاك — حساب مقابل <bdi>contra account</bdi> للأصل) <b>دائم</b>، عكس <bdi>Depreciation Expense</bdi> (مصروف الإهلاك) المؤقت.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 2 · The four closing entries -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🧹</div>
+    <div class="term">Recording Closing Entries: The Four Steps</div>
+    <div class="ar">تسجيل قيود الإقفال: الخطوات الأربع</div>
+    <div class="say">كل شي يصبّ في <bdi>Income Summary</bdi>، وبعدين في <bdi>Retained Earnings</bdi></div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Closing entries</bdi></b> (قيود الإقفال) تنقل أرصدة الإيرادات والمصروفات والتوزيعات آخر الفترة للحساب الدائم
+      <bdi>Retained Earnings</bdi>، على <b>أربع خطوات</b>، ومحطة النص اسمها <bdi>Income Summary</bdi>.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>الإيرادات والمصروفات تنصبّ في سطل اسمه <bdi>Income Summary</bdi>، واللي يبقى فيه (صافي الدخل) ينكبّ في خزان <bdi>Retained Earnings</bdi>، والتوزيعات تنسحب من الخزان على طول.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — ليش نحتاج قيود إقفال؟</span>
+      <p>الكتاب يعطي <b>سببين</b>:</p>
+      <ol>
+        <li>حسابات الإيرادات والمصروفات والتوزيعات لازم <b>تبدأ كل فترة برصيد صفر</b>.</li>
+        <li><bdi>Retained Earnings</bdi> لازم <b>يعكس</b> إيرادات ومصروفات وتوزيعات الفترات اللي فاتت.</li>
+      </ol>
+      <p>قائمة الدخل تعرض الإيرادات والمصروفات <b>لفترة وحدة</b>، والتوزيعات بعد تنعرض لفترة. وبما إن هالحسابات تسجّل معلومات كل
+      فترة لحالها، لازم تبدأ كل فترة من الصفر. <b>مثال الكتاب:</b> لو <bdi>Apple</bdi> ما سوّت قيود إقفال، إيرادات الآيفون حق
+      السنة اللي فاتت بتنحسب مع إيرادات السنة الحالية.</p>
+      <p><b><bdi>Income Summary</bdi> (ملخص الدخل)</b> = <mark class="k">حساب <b>مؤقت</b> تستخدمه <b>بس</b> في عملية الإقفال</mark>:
+      فيه <b>دائن</b> (<bdi>credit</bdi>) بمجموع الإيرادات (والمكاسب <bdi>gains</bdi>) و<b>مدين</b> (<bdi>debit</bdi>) بمجموع المصروفات (والخسائر <bdi>losses</bdi>).
+      يعني رصيده بعد أول خطوتين = <b>صافي الدخل</b> (<bdi>net income</bdi>) أو <b>صافي الخسارة</b> (<bdi>net loss</bdi>).</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — الخطوات الأربع</span>
+      <table>
+        <tr><th>الخطوة</th><th>وش تسوّي</th><th>شكل القيد</th><th>ليش مدين / دائن</th></tr>
+        <tr><td><b>1</b></td><td>تقفل الأرصدة <b>الدائنة</b> (حسابات الإيرادات) في <bdi>Income Summary</bdi></td>
+            <td>مدين كل إيراد · دائن <bdi>Income Summary</bdi> بالمجموع</td>
+            <td>الإيراد رصيده الطبيعي (<bdi>normal balance</bdi>) دائن، فتصفّره بـ<b>مدين</b></td></tr>
+        <tr><td><b>2</b></td><td>تقفل الأرصدة <b>المدينة</b> (حسابات المصروفات) في <bdi>Income Summary</bdi></td>
+            <td>مدين <bdi>Income Summary</bdi> بالمجموع · دائن كل مصروف</td>
+            <td>المصروف رصيده مدين، فتصفّره بـ<b>دائن</b></td></tr>
+        <tr><td><b>3</b></td><td>تقفل <bdi>Income Summary</bdi> في <bdi>Retained Earnings</bdi></td>
+            <td>(لو ربح) مدين <bdi>Income Summary</bdi> · دائن <bdi>Retained Earnings</bdi></td>
+            <td>ينقل صافي الدخل لحقوق الملكية</td></tr>
+        <tr><td><b>4</b></td><td>تقفل <bdi>Dividends</bdi> في <bdi>Retained Earnings</bdi></td>
+            <td>مدين <bdi>Retained Earnings</bdi> · دائن <bdi>Dividends</bdi></td>
+            <td>التوزيعات رصيدها مدين فتصفّرها بدائن، وهي <b>تنقص</b> الأرباح المحتجزة</td></tr>
+      </table>
+      <p>بعد ما تترحّل قيود الإقفال، حسابات الإيرادات والمصروفات والتوزيعات و<bdi>Income Summary</bdi> كلها رصيدها <b>صفر</b>،
+      ويقولون عنها إنها <mark class="k"><b>مقفلة أو مصفّاة</b> (<bdi>closed or cleared</bdi>)</mark>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.15 — Four-Step Closing Process</div>
+        <img src="../img/acct203/exhibit-3-15.png" alt="Exhibit 3.15, the four-step closing process for FastForward drawn with T-accounts: six expense accounts on the left (300, 1,610, 100, 1,000, 1,050 and 305) feed step 2 into the debit side of Income Summary as 4,365; two revenue accounts on the right (7,850 and 300) feed step 1 into its credit side as 8,150; step 3 moves the 3,785 Income Summary balance to the credit side of Retained Earnings; and step 4 moves the 200 Dividends balance to its debit side, leaving Retained Earnings with a 3,585 balance." loading="lazy">
+        <p class="excap">هذا <bdi><b>Exhibit 3.15</b></bdi>: كل الحسابات مرسومة <bdi>T-accounts</bdi> (حسابات على شكل T) بأرصدة <bdi>FastForward</bdi> المعدّلة.
+        <b>يسار:</b> صندوق <bdi>Expense Accounts</bdi> فيه ست مصروفات (<bdi>Depreciation Expense—Equip.</bdi> 300 · <bdi>Salaries</bdi> 1,610 ·
+        <bdi>Insurance</bdi> 100 · <bdi>Rent</bdi> 1,000 · <bdi>Supplies</bdi> 1,050 · <bdi>Utilities</bdi> 305)، وكل رصيد مكتوب
+        بالأصفر في <b>الجهة الدائنة</b> (هذا قيد الإقفال) وخطوطها تتجمّع في الدائرة <b>2</b> وتدخل <b>مدين</b> 4,365 في
+        <bdi>Income Summary</bdi> اللي في النص. <b>يمين:</b> صندوق <bdi>Revenue Accounts</bdi> (<bdi>Consulting Revenue</bdi> 7,850 ·
+        <bdi>Rental Revenue</bdi> 300) يتقفل بـ<b>مدين</b> ويدخل الدائرة <b>1</b> <b>دائن</b> 8,150. <bdi>Income Summary</bdi> يطلع
+        رصيده 3,785 ويروح بالدائرة <b>3</b> دائن لـ<bdi>Retained Earnings</bdi> (تحت يمين). و<bdi>Dividends</bdi> 200 (تحت النص) يروح
+        بالدائرة <b>4</b> مدين لـ<bdi>Retained Earnings</bdi>، فيصير رصيده <b>3,585</b>. فوق يمين المفتاح:
+        1 <bdi>Close income statement credit balances</bdi> · 2 <bdi>Close income statement debit balances</bdi> ·
+        3 <bdi>Close Income Summary account</bdi> · 4 <bdi>Close dividends account</bdi>.</p>
+      </div>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.16 — Preparing Closing Entries</div>
+        <img src="../img/acct203/exhibit-3-16.png" alt="Exhibit 3.16, FastForward's adjusted trial balance at December 31, 2021 with totals of 47,610 on each side, and the four closing entries in the general journal (colored arrows link the revenues to step 1, the expenses to step 2 and Dividends to step 4): step 1 debits Consulting Revenue 7,850 and Rental Revenue 300 and credits Income Summary 8,150; step 2 debits Income Summary 4,365 and credits the six expense accounts; step 3 debits Income Summary and credits Retained Earnings 3,785; and step 4 debits Retained Earnings and credits Dividends 200." loading="lazy">
+        <p class="excap">هذا <bdi><b>Exhibit 3.16</b></bdi>. <b>يسار (أخضر):</b> <bdi>FASTFORWARD Adjusted Trial Balance December 31, 2021</bdi> ومجموعه
+        <b>$47,610 = $47,610</b> — ولاحظ <bdi>Retained earnings</bdi> رصيده <b>0</b> لأن الشركة بدأت في ديسمبر. <b>يمين:</b>
+        <bdi>General Journal</bdi> (دفتر اليومية العامة) فيه من <bdi>Step 1</bdi> لين <bdi>Step 4</bdi> كلها بتاريخ <bdi>Dec. 31</bdi>. الأسهم تربط الجهتين:
+        <b>أزرق</b> من الإيرادات للخطوة ١، <b>أحمر</b> من المصروفات للخطوة ٢، و<b>أسود</b> من <bdi>Dividends</bdi> للخطوة ٤.
+        القيود نفسها مكتوبة تحت، كل خطوة في جدول لحالها.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — قيود إقفال FastForward</span>
+      <p><b>Step 1: Close Credit Balances in Revenue Accounts to Income Summary</b></p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Consulting Revenue</td><td class="mono" style="text-align:right">7,850</td><td></td></tr>
+        <tr><td></td><td>Rental Revenue</td><td class="mono" style="text-align:right">300</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Income Summary</td><td></td><td class="mono" style="text-align:right">8,150</td></tr>
+        <tr><td></td><td><i>Close revenue accounts.</i></td><td></td><td></td></tr>
+      </table>
+      <p>الإيرادات رصيدها الطبيعي <b>دائن</b>، فعشان ترجع صفر نخلّيها <b>مدين</b> بنفس رصيدها (7,850 و300). ومجموعهم
+      <b>8,150</b> ينزل <b>دائن</b> في <bdi>Income Summary</bdi> = مجموع إيرادات الفترة.</p>
+
+      <p><b>Step 2: Close Debit Balances in Expense Accounts to Income Summary</b></p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Income Summary</td><td class="mono" style="text-align:right">4,365</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Depreciation Expense—Equipment</td><td></td><td class="mono" style="text-align:right">300</td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Salaries Expense</td><td></td><td class="mono" style="text-align:right">1,610</td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Insurance Expense</td><td></td><td class="mono" style="text-align:right">100</td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Rent Expense</td><td></td><td class="mono" style="text-align:right">1,000</td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Supplies Expense</td><td></td><td class="mono" style="text-align:right">1,050</td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Utilities Expense</td><td></td><td class="mono" style="text-align:right">305</td></tr>
+        <tr><td></td><td><i>Close expense accounts.</i></td><td></td><td></td></tr>
+      </table>
+      <p>المصروفات رصيدها <b>مدين</b>، فنصفّر كل واحد بـ<b>دائن</b> برصيده. ومجموعها
+      <span class="mono" dir="ltr">300 + 1,610 + 100 + 1,000 + 1,050 + 305 = 4,365</span> ينزل <b>مدين</b> في <bdi>Income Summary</bdi>.</p>
+
+      <p><b>Step 3: Close Income Summary to Retained Earnings</b></p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Income Summary</td><td class="mono" style="text-align:right">3,785</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Retained Earnings</td><td></td><td class="mono" style="text-align:right">3,785</td></tr>
+        <tr><td></td><td><i>Close Income Summary account.</i></td><td></td><td></td></tr>
+      </table>
+      <p>بعد الخطوتين، <bdi>Income Summary</bdi> فيه دائن 8,150 ومدين 4,365 ← رصيده <b>دائن 3,785</b> = صافي دخل ديسمبر.
+      نصفّره بـ<b>مدين</b> 3,785، ونحطه <b>دائن</b> في <bdi>Retained Earnings</bdi> لأن الربح <b>يزيد</b> الأرباح المحتجزة
+      (رصيدها الطبيعي دائن).</p>
+
+      <p><b>Step 4: Close Dividends Account to Retained Earnings</b></p>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Retained Earnings</td><td class="mono" style="text-align:right">200</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Dividends</td><td></td><td class="mono" style="text-align:right">200</td></tr>
+        <tr><td></td><td><i>Close Dividends account.</i></td><td></td><td></td></tr>
+      </table>
+      <p><bdi>Dividends</bdi> رصيده <b>مدين</b> 200، نصفّره بـ<b>دائن</b>. والطرف المدين <bdi>Retained Earnings</bdi> لأن التوزيعات
+      <b>تنقص</b> الأرباح المحتجزة — ولاحظ إنها ما مرّت على <bdi>Income Summary</bdi> أبداً.</p>
+
+      <p><b>النتيجة في دفتر الأستاذ</b> (<bdi>ledger</bdi>) — الحسابين اللي يهمّونك بعد الإقفال:</p>
+      <table dir="ltr">
+        <tr><th colspan="2" style="text-align:center">Income Summary</th></tr>
+        <tr><th>Debit</th><th>Credit</th></tr>
+        <tr><td class="mono">Clos.(2)&nbsp;&nbsp;4,365</td><td class="mono">Clos.(1)&nbsp;&nbsp;8,150</td></tr>
+        <tr><td class="mono">Clos.(3)&nbsp;&nbsp;3,785</td><td></td></tr>
+        <tr><td></td><td class="mono"><b>Balance&nbsp;&nbsp;0</b></td></tr>
+      </table>
+      <table dir="ltr">
+        <tr><th colspan="2" style="text-align:center">Retained Earnings</th></tr>
+        <tr><th>Debit</th><th>Credit</th></tr>
+        <tr><td></td><td class="mono">Balance&nbsp;&nbsp;0</td></tr>
+        <tr><td class="mono">Clos.(4)&nbsp;&nbsp;200</td><td class="mono">Clos.(3)&nbsp;&nbsp;3,785</td></tr>
+        <tr><td></td><td class="mono"><b>Balance&nbsp;&nbsp;3,585</b></td></tr>
+      </table>
+      <p>شيّك بنفسك: <span class="mono" dir="ltr">0 + 3,785 − 200 = 3,585</span>. و<bdi>Income Summary</bdi>:
+      <span class="mono" dir="ltr">8,150 − 4,365 − 3,785 = 0</span>. والكتاب ينبّه: <bdi>Retained Earnings</bdi> هو الحساب <b>الدائم الوحيد</b> في
+      <bdi>Exhibit 3.15</bdi> — يعني هو ما ينقفل، بس <bdi>Income Summary</bdi> ينقفل <b>فيه</b>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.17 — General Ledger after the Closing Process for FastForward</div>
+        <img class="tall" src="../img/acct203/exhibit-3-17.png" alt="Exhibit 3.17, FastForward's full general ledger at December 31 after adjusting and closing entries, in three bands: asset accounts, liability and equity accounts, and revenue and expense accounts including Income Summary; adjusting entries are marked Adj. in blue and closing entries Clos. in red, and every revenue, expense, Dividends and Income Summary account ends with a zero balance while Retained Earnings ends at 3,585." loading="lazy">
+        <p class="excap">هذا <bdi><b>Exhibit 3.17</b></bdi>: دفتر الأستاذ كامل لـ<bdi>FastForward</bdi> بعد التسويات والإقفال، كل حساب بأعمدة
+        <bdi>Date · Explan. · PR · Debit · Credit · Balance</bdi> ورقم حساب (والـ<bdi>PR</bdi> = <bdi>posting reference</bdi> مرجع الترحيل). فيه <b>ثلاث أشرطة خضراء</b>: <bdi>Asset Accounts</bdi>،
+        <bdi>Liability and Equity Accounts</bdi>، و<bdi>Revenue and Expense Accounts (Including Income Summary)</bdi>.
+        <b>كيف تقرأه:</b> اللي بالـ<b>أزرق</b> قيود التسوية من <bdi>Adj.(a)</bdi> لين <bdi>Adj.(f)</bdi>، واللي بالـ<b>أحمر</b> قيود الإقفال من
+        <bdi>Clos.(1)</bdi> لين <bdi>Clos.(4)</bdi>. كل الإيرادات والمصروفات و<bdi>Dividends</bdi> و<bdi>Income Summary</bdi>
+        (<bdi>Acct. No. 901</bdi>: 8,150 ← 3,785 ← 0) آخر رصيد فيها <b>0</b>، و<bdi>Retained Earnings</bdi> (<bdi>Acct. No. 318</bdi>) ينتهي
+        <b>3,585</b>. والأرصدة الباقية (<bdi>Cash</bdi> 4,275، <bdi>Supplies</bdi> 8,670 …) هي نفسها اللي بتشوفها في ميزان المراجعة بعد
+        الإقفال في المفهوم الجاي.</p>
+      </div>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال ثاني — Need-To-Know 3-6: Magic Company</span>
+      <p>الكتاب يعطيك ميزان المراجعة المعدّل لشركة <bdi>Magic Company</bdi> ويطلب قيود الإقفال.</p>
+      <div class="exhibit">
+        <div class="exlbl">Need-To-Know 3-6 — Magic Company Adjusted Trial Balance</div>
+        <img src="../img/acct203/ch03-wil28773_need-to-know0301.png" alt="Magic Company's adjusted trial balance: debits of Cash 13,000, Accounts receivable 17,000, Land 85,000, Dividends 20,000, Salaries expense 56,000 and Supplies expense 8,000; credits of Accounts payable 12,000, Long-term notes payable 33,000, Common stock 30,000, Retained earnings 45,000 and Services revenue 79,000; totals of 199,000 on each side." loading="lazy">
+        <p class="excap">جدول بثلاث أعمدة <bdi>Account Title · Debit · Credit</bdi>. المجموع <b>$199,000 = $199,000</b>.
+        الحسابات المؤقتة اللي بتنقفل هنا <b>أربعة</b> بس: <bdi>Services revenue</bdi> 79,000 (دائن)، <bdi>Salaries expense</bdi> 56,000
+        و<bdi>Supplies expense</bdi> 8,000 (مدين)، و<bdi>Dividends</bdi> 20,000 (مدين). الباقي دائم ويبقى زي ما هو.</p>
+      </div>
+      <table dir="ltr">
+        <tr><th>Date</th><th>Account titles and explanation</th><th style="text-align:right">Debit</th><th style="text-align:right">Credit</th></tr>
+        <tr><td>Dec. 31</td><td>Services Revenue</td><td class="mono" style="text-align:right">79,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Income Summary</td><td></td><td class="mono" style="text-align:right">79,000</td></tr>
+        <tr><td></td><td><i>Close revenue account.</i></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Income Summary</td><td class="mono" style="text-align:right">64,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Salaries Expense</td><td></td><td class="mono" style="text-align:right">56,000</td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Supplies Expense</td><td></td><td class="mono" style="text-align:right">8,000</td></tr>
+        <tr><td></td><td><i>Close expense accounts.</i></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Income Summary</td><td class="mono" style="text-align:right">15,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Retained Earnings</td><td></td><td class="mono" style="text-align:right">15,000</td></tr>
+        <tr><td></td><td><i>Close Income Summary.</i></td><td></td><td></td></tr>
+        <tr><td>Dec. 31</td><td>Retained Earnings</td><td class="mono" style="text-align:right">20,000</td><td></td></tr>
+        <tr><td></td><td>&nbsp;&nbsp;&nbsp;&nbsp;Dividends</td><td></td><td class="mono" style="text-align:right">20,000</td></tr>
+        <tr><td></td><td><i>Close Dividends account.</i></td><td></td><td></td></tr>
+      </table>
+      <ol>
+        <li>الإيراد (دائن 79,000) يتصفّر بـ<b>مدين</b>، ويروح <b>دائن</b> لـ<bdi>Income Summary</bdi>.</li>
+        <li>المصروفين (مدين) يتصفّرون بـ<b>دائن</b>: <span class="mono" dir="ltr">56,000 + 8,000 = 64,000</span> مدين في <bdi>Income Summary</bdi>.</li>
+        <li><bdi>Income Summary</bdi> صار دائن <span class="mono" dir="ltr">79,000 − 64,000 = 15,000</span> = صافي دخل ← مدين <bdi>Income Summary</bdi> / دائن
+            <bdi>Retained Earnings</bdi>.</li>
+        <li><bdi>Dividends</bdi> (مدين 20,000) يتصفّر بـ<b>دائن</b>، والمدين على <bdi>Retained Earnings</bdi> لأنه ينقصه.</li>
+      </ol>
+      <p>والرصيد الجديد لـ<bdi>Retained Earnings</bdi>: <span class="mono" dir="ltr">45,000 + 15,000 − 20,000 = 40,000</span> — وهو نفس الرقم اللي
+      بتلقاه في ميزانية <bdi>Magic</bdi> المصنّفة في المفهوم الرابع.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p><b>Closing entries</b> transfer the end-of-period balances in revenue, expense, and dividends accounts to the permanent
+      Retained Earnings account. Closing entries are necessary at the end of each period after financial statements are prepared
+      because</p>
+      <ul>
+        <li>Revenue, expense, and dividends accounts must begin each period with zero balances.</li>
+        <li>Retained Earnings must reflect prior periods’ revenues, expenses, and dividends.</li>
+      </ul>
+      <p>To close revenue and expense accounts, we transfer their balances to Income Summary. <b>Income Summary</b> is a temporary
+      account only used for the closing process that contains a credit for total revenues (and gains) and a debit for total
+      expenses (and losses). The Income Summary balance, which equals net income or net loss, is transferred to the Retained
+      Earnings account. The Dividends account balance is transferred to the Retained Earnings account. After closing entries are
+      posted, the revenue, expense, dividends, and Income Summary accounts have zero balances and are said to be closed or
+      cleared.</p>
+      <p>Step 1: Close Credit Balances in Revenue Accounts to Income Summary<br>
+      Step 2: Close Debit Balances in Expense Accounts to Income Summary<br>
+      Step 3: Close Income Summary to Retained Earnings<br>
+      Step 4: Close Dividends Account to Retained Earnings</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>الترتيب: <b>إيرادات ← مصروفات ← <bdi>Income Summary</bdi> ← <bdi>Dividends</bdi></b>. التوزيعات <b>ما تمرّ</b> على
+            <bdi>Income Summary</bdi> أبداً — تنقفل <b>مباشرة</b> في <bdi>Retained Earnings</bdi>، لأنها مو مصروف.</li>
+        <li>عشان تصفّر حساب، سوّ <b>عكس رصيده الطبيعي</b>: الإيراد (دائن) ← مدين · المصروف (مدين) ← دائن · التوزيعات (مدين) ← دائن.
+            الاختيار اللي يقول «مدين <bdi>Dividends</bdi> / دائن <bdi>Retained Earnings</bdi>» مقلوب.</li>
+        <li>لو فيه <b>صافي خسارة</b>، <bdi>Income Summary</bdi> رصيده <b>مدين</b>، فالخطوة ٣ تنعكس: مدين <bdi>Retained Earnings</bdi> /
+            دائن <bdi>Income Summary</bdi>.</li>
+        <li>رصيد <bdi>Income Summary</bdi> بعد الخطوة ٢ = <b>صافي الدخل</b>، مو مجموع الإيرادات. في <bdi>FastForward</bdi> = 3,785 مو 8,150.</li>
+        <li><b>فخ المصطلحات:</b> الكتاب يستخدم شركة مساهمة (<bdi>corporation</bdi>): <bdi>Common Stock</bdi> و<bdi>Dividends</bdi> و<bdi>Retained Earnings</bdi>.
+            بعض ملخصات الكلاس تستخدم منشأة فردية (<bdi>sole proprietorship</bdi>): <bdi>Owner's Capital</bdi> و<bdi>Owner's Withdrawals</bdi> (أو
+            <bdi>Drawing</bdi>). نفس الفكرة بشكل منشأة ثاني، ونفس قواعد المدين والدائن: الـ<bdi>capital</bdi> بجهة <bdi>common stock</bdi>،
+            والمسحوبات بجهة <bdi>dividends</bdi>. فلو شفت «مدين <bdi>Income Summary</bdi> / دائن <bdi>Owner's Capital</bdi>» أو
+            «مدين <bdi>Owner's Capital</bdi> / دائن <bdi>Withdrawals</bdi>» = نفس الخطوة ٣ و٤ بالضبط.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · Post-closing trial balance + accounting cycle -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🔄</div>
+    <div class="term">Post-Closing Trial Balance and the Accounting Cycle</div>
+    <div class="ar">ميزان المراجعة بعد الإقفال والدورة المحاسبية</div>
+    <div class="say">آخر تشييك، وبعدين الخطوات العشر من أول وجديد</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Post-closing trial balance</bdi></b> (ميزان المراجعة بعد الإقفال) = قائمة بالحسابات <b>الدائمة</b> وأرصدتها بعد كل قيود
+      الإقفال. و<b><bdi>accounting cycle</bdi></b> (الدورة المحاسبية) = خطوات إعداد القوائم المالية — <b>١٠ خطوات</b> تتكرر كل فترة.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>زي الغسالة: تحط الملابس (عمليات)، تغسل وتشطف (تسويات)، تطلّعها نظيفة (قوائم)، تفضّي الحوض (إقفال) — وكل أسبوع نفس الدورة.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — ميزان المراجعة بعد الإقفال</span>
+      <p>فيه <mark class="k"><b>حسابات الميزانية بس</b> (الدائمة)</mark>. ويتحقق من <b>شيئين</b>:</p>
+      <ol>
+        <li>مجموع المدين = مجموع الدائن للحسابات الدائمة.</li>
+        <li>كل الحسابات المؤقتة رصيدها <b>صفر</b>.</li>
+      </ol>
+      <p>وغالباً هو <b>آخر خطوة</b> في العملية المحاسبية. هذا ميزان <bdi>FastForward</bdi> (<bdi>Exhibit 3.18</bdi>):</p>
+
+      <div class="stmt">
+        <div class="hd">FASTFORWARD<br>Post-Closing Trial Balance<br>December 31, 2021</div>
+        <table>
+          <tr><td></td><td class="n"><b>Debit</b></td><td class="n"><b>Credit</b></td></tr>
+          <tr><td>Cash</td><td class="n">$ 4,275</td><td></td></tr>
+          <tr><td>Accounts receivable</td><td class="n">1,800</td><td></td></tr>
+          <tr><td>Supplies</td><td class="n">8,670</td><td></td></tr>
+          <tr><td>Prepaid insurance</td><td class="n">2,300</td><td></td></tr>
+          <tr><td>Equipment</td><td class="n">26,000</td><td></td></tr>
+          <tr><td>Accumulated depreciation—Equipment</td><td></td><td class="n">$ 300</td></tr>
+          <tr><td>Accounts payable</td><td></td><td class="n">6,200</td></tr>
+          <tr><td>Salaries payable</td><td></td><td class="n">210</td></tr>
+          <tr><td>Unearned consulting revenue</td><td></td><td class="n">2,750</td></tr>
+          <tr><td>Common stock</td><td></td><td class="n">30,000</td></tr>
+          <tr><td>Retained earnings</td><td></td><td class="n">3,585</td></tr>
+          <tr class="tot"><td>Totals</td><td class="n">$43,045</td><td class="n">$43,045</td></tr>
+        </table>
+      </div>
+      <p>اجمعها: المدين <span class="mono" dir="ltr">4,275 + 1,800 + 8,670 + 2,300 + 26,000 = 43,045</span>، والدائن
+      <span class="mono" dir="ltr">300 + 6,200 + 210 + 2,750 + 30,000 + 3,585 = 43,045</span>. لاحظ: ما فيه ولا إيراد ولا مصروف ولا
+      <bdi>Dividends</bdi>، و<bdi>Retained earnings</bdi> صار <b>3,585</b> بعد ما كان 0 في الميزان المعدّل (اللي مجموعه 47,610).</p>
+      <p>وشيّك المعادلة المحاسبية (<bdi>accounting equation</bdi>) بعد: الأصول <span class="mono" dir="ltr">4,275 + 1,800 + 8,670 + 2,300 + 26,000 − 300 = 42,745</span>
+      (مجمّع الإهلاك <bdi>accumulated depreciation</bdi> حساب مقابل <b>ينطرح</b> من الأصول)، والخصوم <span class="mono" dir="ltr">6,200 + 210 + 2,750 = 9,160</span>،
+      وحقوق الملكية <span class="mono" dir="ltr">30,000 + 3,585 = 33,585</span> ← <span class="mono" dir="ltr">9,160 + 33,585 = 42,745</span> ✔.</p>
+      <p><b>موقف من الكتاب (<bdi>Decision Maker — Staff Accountant</bdi>):</b> صاحبتك توريك ميزان مراجعة بعد الإقفال وفيه سطر
+      <bdi>rent expense</bdi>. كيف تعرف إن فيه غلط؟ لأن <bdi>Rent Expense</bdi> حساب <b>مؤقت</b>، وميزان ما بعد الإقفال فيه
+      <b>حسابات دائمة بس</b>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — الدورة المحاسبية: ١٠ خطوات</span>
+      <p><b><bdi>Accounting cycle</bdi></b> = الخطوات في إعداد القوائم المالية. اسمها <b>دورة</b> لأن
+      <mark class="k">الخطوات <b>تتكرر كل فترة تقرير</b></mark>. وتوقيتها:</p>
+      <ul>
+        <li>الخطوات <b>من 1 لين 3</b> تصير <b>بشكل مستمر</b> كل ما الشركة دخلت في عمليات.</li>
+        <li>الخطوات <b>من 4 لين 9</b> تنسوّى <b>آخر الفترة</b>.</li>
+        <li>الخطوة <b>10</b> (القيود العكسية <bdi>reversing entries</bdi>) <b>اختيارية</b>، ومشروحة في <bdi>Appendix 3C</bdi>.</li>
+      </ul>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.19 — Steps in the Accounting Cycle</div>
+        <img src="../img/acct203/exhibit-3-19.png" alt="Exhibit 3.19, the accounting cycle drawn as two curved arrows around the words Accounting Cycle, surrounded clockwise by the ten steps, steps 1-9 each shown with a FastForward example: 1 analyze transactions, 2 journalize, 3 post, 4 prepare unadjusted trial balance, 5 adjust and post accounts, 6 prepare adjusted trial balance, 7 prepare financial statements, 8 close accounts, 9 prepare post-closing trial balance, and 10 reverse and post (optional), shown as a heading only." loading="lazy">
+        <p class="excap">هذا <bdi><b>Exhibit 3.19</b></bdi>: في النص سهمين دائريين مكتوب بينهم <bdi>Accounting Cycle</bdi>، وحولهم الخطوات العشر
+        <b>مع الساعة</b>، ومن 1 لين 9 كل خطوة بمثال من <bdi>FastForward</bdi> (العاشرة عنوان بس). <b>فوق:</b> 1 <bdi>Analyze transactions</bdi> (جدول المعادلة لعملية
+        شراء <bdi>supplies</bdi> 7,100 بالآجل) ← 2 <bdi>Journalize</bdi> (قيد: مدين <bdi>Supplies</bdi> 7,100، دائن الذمم الدائنة (<bdi>Accounts Payable</bdi>) 7,100)
+        ← 3 <bdi>Post</bdi> (حسابي <bdi>Supplies</bdi> و<bdi>Accounts Payable</bdi> في <bdi>General Ledger</bdi> — دفتر الأستاذ العام). <b>يمين:</b>
+        4 <bdi>Prepare unadjusted trial balance</bdi> ← 5 <bdi>Adjust and post accounts</bdi> (<bdi>Supplies Expense</bdi> 1,050 /
+        <bdi>Supplies</bdi> 1,050). <b>تحت:</b> 6 <bdi>Prepare adjusted trial balance</bdi> ← 7 <bdi>Prepare financial statements</bdi>.
+        <b>يسار:</b> 8 <bdi>Close accounts</bdi> (قيود الخطوة ١ و٢) ← 9 <bdi>Prepare post-closing trial balance</bdi> ← وفوقها
+        10 <bdi>Reverse and post (optional)</bdi>.
+        <b>وش يجي منه بالاختبار:</b> ترتيب الخطوات — يعطيك خطوة ويسألك وش اللي بعدها.</p>
+      </div>
+
+      <table dir="ltr">
+        <tr><th>#</th><th>Step</th><th>Explanation (book)</th><th style="text-align:right">بالعربي</th></tr>
+        <tr><td>1.</td><td><b>Analyze transactions</b></td><td>Analyze transactions to prepare for journalizing.</td>
+            <td style="text-align:right;direction:rtl">تحلّل العمليات عشان تجهّز لتسجيلها في اليومية</td></tr>
+        <tr><td>2.</td><td><b>Journalize</b></td><td>Record accounts, including debits and credits, in a journal.</td>
+            <td style="text-align:right;direction:rtl">تسجّل الحسابات بمدينها ودائنها في دفتر اليومية</td></tr>
+        <tr><td>3.</td><td><b>Post</b></td><td>Transfer debits and credits from the journal to the ledger.</td>
+            <td style="text-align:right;direction:rtl">الترحيل: تنقل المدين والدائن من اليومية لدفتر الأستاذ</td></tr>
+        <tr><td>4.</td><td><b>Prepare unadjusted trial balance</b></td><td>Summarize unadjusted ledger accounts and amounts.</td>
+            <td style="text-align:right;direction:rtl">تلخّص حسابات الأستاذ ومبالغها قبل التسوية</td></tr>
+        <tr><td>5.</td><td><b>Adjust and post</b></td><td>Record adjustments to bring account balances up to date; then journalize and post.</td>
+            <td style="text-align:right;direction:rtl">تسجّل التسويات عشان الأرصدة تصير محدّثة، وبعدين تقيّدها وترحّلها</td></tr>
+        <tr><td>6.</td><td><b>Prepare adjusted trial balance</b></td><td>Summarize adjusted ledger accounts and amounts.</td>
+            <td style="text-align:right;direction:rtl">تلخّص الحسابات ومبالغها بعد التسوية</td></tr>
+        <tr><td>7.</td><td><b>Prepare financial statements</b></td><td>Use adjusted trial balance to prepare financial statements.</td>
+            <td style="text-align:right;direction:rtl">تطلّع القوائم المالية من الميزان المعدّل</td></tr>
+        <tr><td>8.</td><td><b>Close accounts</b></td><td>Journalize and post entries to close temporary accounts.</td>
+            <td style="text-align:right;direction:rtl">تقيّد وترحّل قيود إقفال الحسابات المؤقتة</td></tr>
+        <tr><td>9.</td><td><b>Prepare post-closing trial balance</b></td><td>Test clerical accuracy of the closing procedures.</td>
+            <td style="text-align:right;direction:rtl">تختبر الدقة الكتابية لإجراءات الإقفال</td></tr>
+        <tr><td>10.</td><td><b>Optional: Reverse and post</b></td><td>Reverse certain adjustments in the next period—optional step; see Appendix 3C.</td>
+            <td style="text-align:right;direction:rtl">تعكس بعض التسويات في الفترة الجاية — خطوة اختيارية</td></tr>
+      </table>
+      <p><b>حاشية الجدول في الكتاب:</b> الخطوات <b>4 و6 و9</b> ممكن تنسوّى على ورقة عمل (<bdi>work sheet</bdi> — <bdi>Appendix 3B</bdi>).
+      ورقة العمل تفيد في <b>تخطيط</b> التسويات، بس التسويات (الخطوة 5) <mark class="k"><b>لازم دايماً تتقيّد وتترحّل</b></mark>.
+      والخطوات <b>3 و4 و6 و9</b> تصير <b>تلقائياً</b> في النظام المحوسب.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>A <b>post-closing trial balance</b> is a list of permanent accounts and their balances after all closing entries. Only
+      balance sheet (permanent) accounts are on a post-closing trial balance. A post-closing trial balance verifies that
+      (1) total debits equal total credits for permanent accounts and (2) all temporary accounts have zero balances.</p>
+      <p>The <b>accounting cycle</b> is the steps in preparing financial statements. It is called a cycle because the steps are
+      repeated each reporting period. Exhibit 3.19 shows the 10 steps in the cycle. Steps 1 through 3 occur regularly as a
+      company enters into transactions. Steps 4 through 9 are done at the end of a period. Reversing entries in step 10 are
+      optional and are explained in Appendix 3C.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>أي إيراد أو مصروف أو <bdi>Dividends</bdi> أو <bdi>Income Summary</bdi> في ميزان ما بعد الإقفال = <b>غلط</b>
+            (مثال الكتاب: <bdi>rent expense</bdi>).</li>
+        <li><bdi>Retained earnings</bdi> في ميزان ما بعد الإقفال = الرصيد <b>الختامي</b> (3,585)، مو الافتتاحي (0) اللي في الميزان المعدّل.</li>
+        <li>الترتيب: ميزان <b>غير معدّل</b> (4) ← تسويات (5) ← ميزان <b>معدّل</b> (6) ← قوائم (7) ← إقفال (8) ← ميزان <b>بعد الإقفال</b> (9).
+            القوائم <b>قبل</b> الإقفال دايماً.</li>
+        <li>العدد <b>10</b> خطوات، و<b>العاشرة بس</b> اختيارية. اختيار يقول «الإقفال اختياري» أو «9 خطوات» = غلط.</li>
+        <li>ورقة العمل (<bdi>work sheet</bdi>) أداة مساعدة — ما تغني عن تقييد التسويات في اليومية وترحيلها.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 4 · Classified balance sheet -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">🗄️</div>
+    <div class="term">Classified Balance Sheet</div>
+    <div class="ar">الميزانية المصنّفة</div>
+    <div class="say">نفس الأرقام، بس مرتّبة في أدراج: متداول وغير متداول</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      الميزانية <b>غير المصنّفة</b> (<bdi>unclassified balance sheet</bdi>) تقسم الحسابات بشكل عام لثلاث: أصول، خصوم، حقوق ملكية.
+      الميزانية <b>المصنّفة</b> (<bdi>classified balance sheet</bdi>) ترتّب الأصول والخصوم في <b>مجموعات فرعية</b> — وأهم تقسيم:
+      <b>متداول</b> (قصير الأجل) و<b>غير متداول</b> (طويل الأجل).</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>دولاب ملابسك: الرف القريب لملابس هالأسبوع (متداول)، والشنطة فوق الدولاب لملابس السنة الجاية (غير متداول).</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — هيكل التصنيف</span>
+      <p>مثال الميزانية غير المصنّفة: ميزانية <bdi>FastForward</bdi> في <bdi>Exhibit 3.14</bdi> (الدرس اللي قبل). بس المصنّفة
+      غالباً فيها التصنيفات اللي في <bdi>Exhibit 3.20</bdi> — و<b>ما فيه شكل إلزامي</b> (<bdi>there is no required layout</bdi>).</p>
+      <p><b>الحد بين المتداول وغير المتداول:</b> البنود المتداولة متوقّع <b>تستحق</b> (تنحصّل أو تندفع) خلال
+      <mark class="k"><b>سنة أو الدورة التشغيلية، اللي أطول فيهم</b></mark> (<bdi>whichever is longer</bdi>).</p>
+      <p><b><bdi>Operating cycle</bdi> (الدورة التشغيلية)</b> = المدة من لما <b>تصرف النقد</b> عشان تشتري سلع وخدمات، لين
+      <b>يرجع لك النقد</b> من بيع السلع والخدمات. أغلب الدورات التشغيلية <b>أقل من سنة</b>، فأغلب الشركات تصنّف على <b>سنة</b>.
+      والكتاب يقول: افترض إن الدورة التشغيلية سنة، إلا لو قلنا غير كذا.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.20 — Typical Categories in a Classified Balance Sheet</div>
+        <table>
+          <tr><th>Assets</th><th>Liabilities and Equity</th></tr>
+          <tr><td>Current assets</td><td>Current liabilities</td></tr>
+          <tr><td>Noncurrent assets</td><td>Noncurrent liabilities</td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Long-term investments</td><td>Equity</td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Plant assets</td><td></td></tr>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Intangible assets</td><td></td></tr>
+        </table>
+        <p class="excap">الأصول غير المتداولة تحتها <b>ثلاث</b> فئات: <bdi>long-term investments</bdi> و<bdi>plant assets</bdi> و<bdi>intangible assets</bdi>.</p>
+      </div>
+      <p><b>قاعدة الترتيب:</b> الأصول المتداولة <b>قبل</b> غير المتداولة، والخصوم المتداولة <b>قبل</b> غير المتداولة. وداخل المتداول،
+      البنود مرتّبة حسب <b>سرعة تحوّلها لنقد أو دفعها نقداً</b>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — التصنيفات السبعة</span>
+      <table>
+        <tr><th>التصنيف</th><th>التعريف</th><th>أمثلة الكتاب</th></tr>
+        <tr><td><b><bdi>Current assets</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الأصول المتداولة</span></td>
+            <td>نقد وموارد ثانية متوقّع <b>تنباع أو تنحصّل أو تنستخدم</b> خلال سنة أو الدورة التشغيلية، اللي أطول فيهم</td>
+            <td><bdi>cash · short-term investments · accounts receivable · short-term notes receivable · merchandise inventory (goods for sale) · prepaid expenses</bdi></td></tr>
+        <tr><td><b><bdi>Long-term investments</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الاستثمارات طويلة الأجل</span></td>
+            <td><bdi>notes receivable</bdi> واستثمارات في أسهم وسندات لما يكون متوقّع تنمسك <b>أكثر من</b> سنة أو الدورة التشغيلية (الأطول)</td>
+            <td><bdi>notes receivable · investments in stocks and bonds</bdi></td></tr>
+        <tr><td><b><bdi>Plant assets</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الأصول الثابتة</span></td>
+            <td>أصول <b>ملموسة</b> (<bdi>tangible</bdi>)، <b>طويلة العمر</b>، والشركة <b>تستخدمها</b> لإنتاج أو بيع المنتجات والخدمات. أسماء ثانية:
+                <bdi>property, plant, and equipment (PP&amp;E)</bdi> أو <bdi>fixed assets</bdi></td>
+            <td><bdi>equipment · machinery · buildings · land</bdi> (المستخدمة في التشغيل)</td></tr>
+        <tr><td><b><bdi>Intangible assets</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الأصول غير الملموسة</span></td>
+            <td>أصول طويلة الأجل تفيد التشغيل بس <b>ما لها شكل مادي</b>. قيمتها من الامتيازات أو الحقوق اللي يملكها المالك أو تنعطى له</td>
+            <td><bdi>patents · trademarks · copyrights · franchises · goodwill</bdi></td></tr>
+        <tr><td><b><bdi>Current liabilities</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الخصوم المتداولة</span></td>
+            <td>التزامات لازم <b>تندفع أو تتسوّى</b> خلال سنة أو الدورة التشغيلية (الأطول)، وغالباً تتسوّى بدفع نقد. ويدخل فيها
+                <mark class="k">أي جزء من دين طويل الأجل مستحق خلال سنة</mark></td>
+            <td><bdi>accounts payable · wages payable · taxes payable · interest payable · unearned revenues</bdi></td></tr>
+        <tr><td><b><bdi>Long-term liabilities</bdi></b><br><span style="color:var(--muted);font-size:.85rem">الخصوم طويلة الأجل</span></td>
+            <td>التزامات <b>مو مستحقة</b> خلال سنة أو الدورة التشغيلية (الأطول)</td>
+            <td><bdi>notes payable · mortgages payable · bonds payable · lease obligations</bdi></td></tr>
+        <tr><td><b><bdi>Equity</bdi></b><br><span style="color:var(--muted);font-size:.85rem">حقوق الملكية</span></td>
+            <td>مطالبة المالك على الأصول. في الشركة المساهمة = <bdi>common stock</bdi> + <bdi>retained earnings</bdi>. و<b>ما تنقسم</b>
+                متداول وغير متداول</td>
+            <td><bdi>common stock · retained earnings</bdi></td></tr>
+      </table>
+      <p>ومو كل الشركات تستخدم نفس التصنيفات: <bdi>Jarden</bdi> (تصنع ألواح تزلّج) عرضت <b>خمس</b> فئات أصول:
+      <bdi>current assets; property, plant, and equipment; goodwill; intangibles; and other assets</bdi>.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال الكتاب — Exhibit 3.21: Snowboarding Components</span>
+      <div class="stmt">
+        <div class="hd">SNOWBOARDING COMPONENTS<br>Balance Sheet<br>December 31, 2021</div>
+        <table>
+          <tr><td colspan="3"><b>Assets</b></td></tr>
+          <tr><td><b>Current assets</b></td><td></td><td></td></tr>
+          <tr><td class="ind">Cash</td><td class="n">$ 6,500</td><td></td></tr>
+          <tr><td class="ind">Accounts receivable</td><td class="n">6,500</td><td></td></tr>
+          <tr><td class="ind">Merchandise inventory</td><td class="n">27,500</td><td></td></tr>
+          <tr><td class="ind">Prepaid insurance</td><td class="n">2,400</td><td></td></tr>
+          <tr class="sub"><td class="ind">Total current assets</td><td></td><td class="n">$ 42,900</td></tr>
+          <tr><td><b>Long-term investments</b></td><td></td><td></td></tr>
+          <tr><td class="ind">Notes receivable (due in three years)</td><td class="n">1,500</td><td></td></tr>
+          <tr><td class="ind">Investments in stocks and bonds</td><td class="n">66,000</td><td></td></tr>
+          <tr class="sub"><td class="ind">Total long-term investments</td><td></td><td class="n">67,500</td></tr>
+          <tr><td><b>Plant assets</b></td><td></td><td></td></tr>
+          <tr><td class="ind">Equipment</td><td class="n">203,200</td><td></td></tr>
+          <tr><td class="ind">Less accumulated depreciation</td><td class="n">53,000</td><td class="n">150,200</td></tr>
+          <tr><td class="ind">Land</td><td></td><td class="n">73,200</td></tr>
+          <tr class="sub"><td class="ind">Total plant assets</td><td></td><td class="n">223,400</td></tr>
+          <tr><td><b>Intangible assets</b></td><td></td><td class="n">10,000</td></tr>
+          <tr class="tot"><td><b>Total assets</b></td><td></td><td class="n">$343,800</td></tr>
+          <tr><td colspan="3"><b>Liabilities</b></td></tr>
+          <tr><td><b>Current liabilities</b></td><td></td><td></td></tr>
+          <tr><td class="ind">Accounts payable</td><td class="n">$ 15,300</td><td></td></tr>
+          <tr><td class="ind">Wages payable</td><td class="n">3,200</td><td></td></tr>
+          <tr><td class="ind">Unearned revenue</td><td class="n">10,500</td><td></td></tr>
+          <tr class="sub"><td class="ind">Total current liabilities</td><td></td><td class="n">$ 29,000</td></tr>
+          <tr><td><b>Long-term liabilities</b></td><td></td><td></td></tr>
+          <tr><td class="ind">Notes payable (due in ten years)</td><td class="n">150,000</td><td></td></tr>
+          <tr class="sub"><td class="ind">Total long-term liabilities</td><td></td><td class="n">150,000</td></tr>
+          <tr><td><b>Total liabilities</b></td><td></td><td class="n">179,000</td></tr>
+          <tr><td colspan="3"><b>Equity</b></td></tr>
+          <tr><td class="ind">Common stock</td><td></td><td class="n">50,000</td></tr>
+          <tr><td class="ind">Retained earnings</td><td></td><td class="n">114,800</td></tr>
+          <tr class="sub"><td class="ind">Total equity</td><td></td><td class="n">164,800</td></tr>
+          <tr class="tot"><td><b>Total liabilities and equity</b></td><td></td><td class="n">$343,800</td></tr>
+        </table>
+      </div>
+      <p>اجمعها معي: المتداول <span class="mono" dir="ltr">6,500 + 6,500 + 27,500 + 2,400 = 42,900</span> · الاستثمارات
+      <span class="mono" dir="ltr">1,500 + 66,000 = 67,500</span> · الثابتة <span class="mono" dir="ltr">(203,200 − 53,000) + 73,200 = 150,200 + 73,200 = 223,400</span> ·
+      المجموع <span class="mono" dir="ltr">42,900 + 67,500 + 223,400 + 10,000 = 343,800</span>. والجهة الثانية: <span class="mono" dir="ltr">15,300 + 3,200 + 10,500 = 29,000</span>
+      · <span class="mono" dir="ltr">29,000 + 150,000 = 179,000</span> · <span class="mono" dir="ltr">50,000 + 114,800 = 164,800</span> ·
+      <span class="mono" dir="ltr">179,000 + 164,800 = 343,800</span> ✔.</p>
+      <p>لاحظ وين راحت البنود اللي تلخبط: <bdi>Notes receivable (due in three years)</bdi> تحت <b>الاستثمارات طويلة الأجل</b> مو المتداول،
+      و<bdi>Unearned revenue</bdi> تحت <b>الخصوم المتداولة</b>، و<bdi>accumulated depreciation</bdi> <b>ينطرح</b> من <bdi>Equipment</bdi>
+      داخل الأصول الثابتة.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">مثال ثاني — Need-To-Know 3-7: Magic Company</span>
+      <p>من ميزان <bdi>Magic Company</bdi> بعد الإقفال (<bdi>post-closing trial balance</bdi>)، المطلوب ميزانية مصنّفة في 31 ديسمبر. الأرصدة:</p>
+      <table dir="ltr">
+        <tr><th>Account</th><th style="text-align:right">Balance</th><th>Account</th><th style="text-align:right">Balance</th></tr>
+        <tr><td>Cash</td><td class="mono" style="text-align:right">$13,000</td><td>Long-term notes payable</td><td class="mono" style="text-align:right">$33,000</td></tr>
+        <tr><td>Accounts receivable</td><td class="mono" style="text-align:right">17,000</td><td>Common stock</td><td class="mono" style="text-align:right">30,000</td></tr>
+        <tr><td>Land</td><td class="mono" style="text-align:right">85,000</td><td>Retained earnings</td><td class="mono" style="text-align:right">40,000</td></tr>
+        <tr><td>Accounts payable</td><td class="mono" style="text-align:right">12,000</td><td></td><td></td></tr>
+      </table>
+      <div class="stmt">
+        <div class="hd">MAGIC COMPANY<br>Balance Sheet<br>December 31</div>
+        <table>
+          <tr><td colspan="2"><b>Assets</b></td></tr>
+          <tr><td><b>Current assets</b></td><td></td></tr>
+          <tr><td class="ind">Cash</td><td class="n">$ 13,000</td></tr>
+          <tr><td class="ind">Accounts receivable</td><td class="n">17,000</td></tr>
+          <tr class="sub"><td class="ind">Total current assets</td><td class="n">30,000</td></tr>
+          <tr><td><b>Plant assets</b></td><td></td></tr>
+          <tr><td class="ind">Land</td><td class="n">85,000</td></tr>
+          <tr class="sub"><td class="ind">Total plant assets</td><td class="n">85,000</td></tr>
+          <tr class="tot"><td><b>Total assets</b></td><td class="n">$115,000</td></tr>
+          <tr><td colspan="2"><b>Liabilities</b></td></tr>
+          <tr><td><b>Current liabilities</b></td><td></td></tr>
+          <tr><td class="ind">Accounts payable</td><td class="n">$ 12,000</td></tr>
+          <tr class="sub"><td class="ind">Total current liabilities</td><td class="n">12,000</td></tr>
+          <tr><td class="ind">Long-term notes payable</td><td class="n">33,000</td></tr>
+          <tr class="sub"><td><b>Total liabilities</b></td><td class="n">45,000</td></tr>
+          <tr><td colspan="2"><b>Equity</b></td></tr>
+          <tr><td class="ind">Common stock</td><td class="n">30,000</td></tr>
+          <tr><td class="ind">Retained earnings</td><td class="n">40,000</td></tr>
+          <tr class="sub"><td class="ind">Total equity</td><td class="n">70,000</td></tr>
+          <tr class="tot"><td><b>Total liabilities and equity</b></td><td class="n">$115,000</td></tr>
+        </table>
+      </div>
+      <p><span class="mono" dir="ltr">13,000 + 17,000 = 30,000</span> · <span class="mono" dir="ltr">30,000 + 85,000 = 115,000</span> ·
+      <span class="mono" dir="ltr">12,000 + 33,000 = 45,000</span> · <span class="mono" dir="ltr">30,000 + 40,000 = 70,000</span> ·
+      <span class="mono" dir="ltr">45,000 + 70,000 = 115,000</span> ✔. والـ<bdi>Retained earnings</bdi> 40,000 هو نفسه اللي طلع من قيود إقفال
+      <bdi>Magic</bdi> في المفهوم الثاني (45,000 + 15,000 − 20,000).</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>An unclassified balance sheet broadly groups accounts into assets, liabilities, and equity. A <b>classified balance
+      sheet</b> organizes assets and liabilities into subgroups.</p>
+      <p>An important classification is the separation between current (short-term) and noncurrent (long-term) for both assets
+      and liabilities. Current items are expected to come due (either collected or owed) within one year or the company’s
+      operating cycle, whichever is longer. The <b>operating cycle</b> is the time span from when cash is used to acquire goods
+      and services until cash is received from the sale of goods and services.</p>
+      <p>A balance sheet lists current assets before noncurrent assets and current liabilities before noncurrent liabilities.
+      Current assets and current liabilities are listed in order of how quickly they will be converted to, or paid in, cash.</p>
+      <p><b>Current assets</b> are cash and other resources that are expected to be sold, collected, or used within one year or
+      the company’s operating cycle, whichever is longer. Long-term (or noncurrent) investments include notes receivable and
+      investments in stocks and bonds when they are expected to be held for more than the longer of one year or the operating
+      cycle. <b>Plant assets</b> are tangible assets that are both long-lived and used to produce or sell products and services.
+      <b>Intangible assets</b> are long-term assets that benefit business operations but lack physical form.</p>
+      <p><b>Current liabilities</b> are liabilities due to be paid or settled within one year or the operating cycle, whichever is
+      longer. <b>Long-term liabilities</b> are liabilities not due within one year or the operating cycle, whichever is longer.
+      Equity is not separated into current and noncurrent categories.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>«اللي <b>أطول</b> فيهم» (<bdi>whichever is longer</bdi>) — مو أقصر. والاختيار اللي يقول «سنة بالضبط دايماً» ناقص.</li>
+        <li>الإيرادات غير المكتسبة (<bdi>Unearned revenue</bdi>) = <b>خصم متداول</b> — مو إيراد ولا أصل.</li>
+        <li>ورقة قبض مستحقة بعد <b>ثلاث سنوات</b> = <b>استثمار طويل الأجل</b>، مو أصل متداول. اللي يحسم هو <b>تاريخ الاستحقاق</b> مو اسم الحساب.</li>
+        <li>الجزء من دين طويل الأجل اللي يستحق خلال سنة = <b>خصم متداول</b>.</li>
+        <li><bdi>Land</bdi> المستخدمة في التشغيل = <bdi>plant asset</bdi>، و<bdi>accumulated depreciation</bdi> <b>ينطرح</b> من الأصل — مو خصم.</li>
+        <li><bdi>Plant assets</bdi> = <bdi>PP&amp;E</bdi> = <bdi>fixed assets</bdi> — ثلاث أسماء لشي واحد. و<bdi>goodwill</bdi> أصل <b>غير ملموس</b>.</li>
+        <li>حقوق الملكية <b>ما تنقسم</b> متداول وغير متداول. والميزانية المصنّفة <b>ما لها شكل إلزامي</b>.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 5 · Profit margin + current ratio -->
+<div class="concept">
+  <div class="chead">
+    <div class="ico">📈</div>
+    <div class="term">Profit Margin and Current Ratio</div>
+    <div class="ar">هامش الربح ونسبة التداول</div>
+    <div class="say"><bdi>Decision Analysis</bdi> — نسبتين تحكم فيهم على الربحية والقدرة على السداد</div>
+  </div>
+  <div class="cbody">
+    <div class="blk hook"><span class="lbl">الفكرة بسطر</span><br>
+      <b><bdi>Profit margin</bdi></b> (هامش الربح) = كم <b>ربح</b> يطلع لك من كل دولار مبيعات.
+      <b><bdi>Current ratio</bdi></b> (نسبة التداول) = هل الأصول المتداولة <b>تغطي</b> الخصوم المتداولة.</div>
+    <div class="hook-mem"><span class="e">🧠</span><div>بقالة: من كل 100 ريال مبيعات كم يبقى لك ربح؟ هذا هامش الربح. واللي في درجك اليوم يكفي فواتير الشهر؟ هذي نسبة التداول.</div></div>
+
+    <div class="blk"><span class="lbl">الشرح — هامش الربح</span>
+      <p>مقياس مفيد لنتايج تشغيل الشركة: نسبة <b>صافي الدخل</b> (<bdi>net income</bdi>) على <b>صافي المبيعات</b> (<bdi>net sales</bdi>). اسمها <b><bdi>profit margin</bdi></b> أو
+      <b><bdi>return on sales</bdi></b> (العائد على المبيعات)، وتبيّن <mark class="k"><b>نسبة الربح في كل دولار مبيعات</b></mark>.</p>
+      <div class="eq">
+        <div class="l1">Profit margin <span class="plus">=</span> Net income <span class="plus">÷</span> Net sales</div>
+        <div class="l2">Exhibit 3.22</div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.23 — Computation and Analysis Using Profit Margin</div>
+        <table>
+          <tr><th>Company</th><th>$ millions</th><th>Current Year</th><th>1 Year Ago</th><th>2 Years Ago</th></tr>
+          <tr><td>Visa</td><td>Net income</td><td>$12,080</td><td>$10,301</td><td>$ 6,699</td></tr>
+          <tr><td></td><td>Net sales</td><td>$22,977</td><td>$20,609</td><td>$18,358</td></tr>
+          <tr><td></td><td><b>Profit margin</b></td><td><b>53%</b></td><td><b>50%</b></td><td><b>36%</b></td></tr>
+          <tr><td>Mastercard</td><td><b>Profit margin</b></td><td><b>48%</b></td><td><b>39%</b></td><td><b>31%</b></td></tr>
+        </table>
+        <p class="excap">حسبة السنة الحالية لـ<bdi>Visa</bdi>: <span class="mono" dir="ltr">12,080 ÷ 22,977 ≈ 53%</span>، والسنة اللي قبلها
+        <span class="mono" dir="ltr">10,301 ÷ 20,609 ≈ 50%</span>، واللي قبلها <span class="mono" dir="ltr">6,699 ÷ 18,358 ≈ 36%</span>.</p>
+      </div>
+      <p>هامش <bdi>Visa</bdi> <b>أحسن</b> من <bdi>Mastercard</bdi> في الثلاث سنوات كلها. وعشان <bdi>Mastercard</bdi> تحسّن هامشها، لازم يا
+      <b>تقلّل المصروفات</b>، يا <b>تزيد الإيرادات</b> بنسبة <b>أكبر نسبياً</b> من المصروفات.</p>
+      <p><b>موقف من الكتاب (<bdi>Decision Maker — CFO</bdi>):</b> شركتك (معدّات رعاية صحية) هامشها ثابت 9% زي المنافسين، وأمين الخزينة
+      يقول نقدر نوصله 20% لو قطعنا مصاريف التسويق. تقطعها؟ جواب الكتاب: يرفع الهامش <b>على المدى القصير</b>، بس <b>على المدى الطويل</b>
+      ممكن يضر المبيعات الحالية والمستقبلية. قصّ «الشحم» (<bdi>fat</bdi> — مصروفات ما تجيب مبيعات)، وانتبه لا تقصّ اللي تجيب مبيعات.</p>
+    </div>
+
+    <div class="blk"><span class="lbl">الشرح — نسبة التداول</span>
+      <p>القوائم المالية تساعد تقيّم <b>قدرة الشركة تسدّد ديونها</b>. وهالتحليل يأثّر على قرارات <b>الموردين</b> لما يسمحون للشركة تشتري
+      بالآجل، وعلى قرارات <b>الدائنين</b> لما يقرضونها — حتى شروط القرض زي <b>سعر الفائدة</b> و<b>تاريخ الاستحقاق</b>.
+      و<bdi>current ratio</bdi> مقياس من مقاييس قدرة الشركة تسدّد <b>التزاماتها قصيرة الأجل</b>:</p>
+      <div class="eq">
+        <div class="l1">Current ratio <span class="plus">=</span> Current assets <span class="plus">÷</span> Current liabilities</div>
+        <div class="l2">Exhibit 3.24</div>
+      </div>
+      <p>نسبة <mark class="k"><b>فوق 1.0</b> = الخصوم المتداولة تنغطى بالأصول المتداولة</mark>.</p>
+
+      <div class="exhibit">
+        <div class="exlbl">Exhibit 3.25 — Computation and Analysis Using Current Ratio</div>
+        <table>
+          <tr><th>Company</th><th>$ millions</th><th>Current Year</th><th>1 Year Ago</th><th>2 Years Ago</th></tr>
+          <tr><td>Costco</td><td>Current assets</td><td>$23,485</td><td>$20,289</td><td>$17,317</td></tr>
+          <tr><td></td><td>Current liabilities</td><td>$23,237</td><td>$19,926</td><td>$17,495</td></tr>
+          <tr><td></td><td><b>Current ratio</b></td><td><b>1.01</b></td><td><b>1.02</b></td><td><b>0.99</b></td></tr>
+          <tr><td>Walmart</td><td><b>Current ratio</b></td><td><b>0.80</b></td><td><b>0.76</b></td><td><b>0.86</b></td></tr>
+        </table>
+        <p class="excap">حسبة <bdi>Costco</bdi>: <span class="mono" dir="ltr">23,485 ÷ 23,237 ≈ 1.01</span> · <span class="mono" dir="ltr">20,289 ÷ 19,926 ≈ 1.02</span> ·
+        <span class="mono" dir="ltr">17,317 ÷ 17,495 ≈ 0.99</span>.</p>
+      </div>
+      <p>نسبة <bdi>Costco</bdi> في آخر ثلاث سنوات <b>فوق أو تحت 1.0 بشوي</b> — يعني تقدر تغطي خصومها المتداولة بس <b>بدون هامش أمان</b>
+      (<bdi>no extra buffer</bdi>). وهي <b>أحسن</b> من <bdi>Walmart</bdi> في الثلاث سنوات.</p>
+      <p><b>موقف من الكتاب (<bdi>Decision Maker — Analyst</bdi>):</b> تحلّل شركة دراجات ترابية: نسبة التداول <b>1.2</b>. بعدين تكتشف إن جزء كبير
+      من الذمم المدينة (<bdi>accounts receivable</bdi>) على عميل واحد ما دفع ولا شي من 12 شهر. لما تشيل هالذمة من الأصول المتداولة، النسبة تنزل لـ<b>0.7</b>. الاستنتاج:
+      1.2 توحي إن الأصول المتداولة تكفي، بس بعد ما شلت الذمة المتأخرة صارت 0.7 ← الشركة <b>بتواجه صعوبة</b> في سداد أقساط القرض.</p>
+    </div>
+
+    <div class="blk exam"><span class="lbl">EXAM BOX</span>
+      <p>A useful measure of a company's operating results is the ratio of its net income to net sales. This ratio is called
+      <b>profit margin</b>, or return on sales, and is computed as in Exhibit 3.22. This ratio shows the percent of profit in each
+      dollar of sales.</p>
+      <p style="text-align:center;font-weight:700">Profit margin = Net income / Net sales</p>
+      <p>The <b>current ratio</b> is one measure of a company's ability to pay its short-term obligations. It is defined in
+      Exhibit 3.24.</p>
+      <p style="text-align:center;font-weight:700">Current ratio = Current assets / Current liabilities</p>
+      <p>A current ratio of over 1.0 means that current obligations can be covered with current assets.</p>
+    </div>
+
+    <div class="blk trap"><span class="lbl">الفخ</span>
+      <ul>
+        <li>البسط والمقام: <b><bdi>Net income ÷ Net sales</bdi></b>. لو قلبتها (المبيعات ÷ الدخل) بيطلع رقم أكبر من 1 وهو غلط.</li>
+        <li>نسبة التداول تستخدم <b>المتداول بس</b> من الجهتين. اللي يقسم على <b>كل</b> الخصوم (مع طويلة الأجل) = غلط.</li>
+        <li>الحد هو <b>1.0</b>: فوقه = تغطي، تحته = ما تغطي. و<bdi>Costco</bdi> قريبة من 1.0 = تغطي <b>بدون</b> هامش أمان.</li>
+        <li>ذمم مدينة متأخرة وممكن ما تنحصّل <b>تنفخ</b> نسبة التداول — شيلها وشوف الرقم الحقيقي (مثال 1.2 ← 0.7).</li>
+        <li>رفع هامش الربح بقصّ مصاريف <b>تجيب مبيعات</b> (زي التسويق) يضرّ على المدى الطويل — الكتاب يقول قصّ «الشحم» بس.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 style="margin:40px 0 6px">اختبر نفسك</h2>
+<p class="sub" style="margin-bottom:16px">الأسئلة بالإنجليزي لأن الاختبار بالإنجليزي. جاوب قبل ما تفتح الحل. لو غلطت في ١ ارجع لجدول الخطوات الأربع،
+ولو غلطت في ٤ ارجع لجدول التصنيفات السبعة.</p>
+
+<div class="q">
+  <div class="stem">1. At year-end, before closing, a company's accounts show: Services Revenue $40,000; Salaries Expense $22,000; Rent Expense $6,000; Dividends $5,000; Retained Earnings $30,000. After revenues and expenses are closed, which entry closes Income Summary?</div>
+  <ol type="A">
+    <li>Debit Retained Earnings $12,000; credit Income Summary $12,000</li>
+    <li>Debit Income Summary $12,000; credit Retained Earnings $12,000</li>
+    <li>Debit Income Summary $7,000; credit Retained Earnings $7,000</li>
+    <li>Debit Income Summary $40,000; credit Retained Earnings $40,000</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>B</b>. <bdi>Income Summary</bdi> صار فيه دائن 40,000 (الخطوة ١) ومدين <span class="mono" dir="ltr">22,000 + 6,000 = 28,000</span> (الخطوة ٢)
+  ← رصيد <b>دائن</b> <span class="mono" dir="ltr">40,000 − 28,000 = 12,000</span> = صافي الدخل، فنصفّره بمدين ونحطّه دائن في <bdi>Retained Earnings</bdi>.
+  الفخ في <b>A</b>: هذا القيد المقلوب (يصير بس لو فيه صافي خسارة). و<b>C</b> فخ: طرح التوزيعات (12,000 − 5,000) — بس التوزيعات
+  <b>ما تمرّ</b> على <bdi>Income Summary</bdi>، لها قيد رابع لحالها. و<b>D</b> نسى المصروفات. وبعد الخطوة ٤، <bdi>Retained Earnings</bdi> =
+  <span class="mono" dir="ltr">30,000 + 12,000 − 5,000 = 37,000</span>.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">2. Which of the following accounts would appear on a post-closing trial balance?</div>
+  <ol type="A"><li>Rent Expense</li><li>Income Summary</li><li>Dividends</li><li>Unearned Consulting Revenue</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>D</b>. ميزان ما بعد الإقفال فيه <b>الحسابات الدائمة بس</b> (حسابات الميزانية)، و<bdi>Unearned Consulting Revenue</bdi>
+  <b>التزام</b> — دائم، وفي ميزان <bdi>FastForward</bdi> رصيده 2,750. لا تخلّي كلمة <bdi>revenue</bdi> تبعدك عن <b>D</b> — هو خصم، مو إيراد.
+  <b>A</b> مصروف = مؤقت (نفس موقف <bdi>Staff Accountant</bdi> في الكتاب). <b>B</b> مؤقت وتستخدمه بس داخل الإقفال. و<b>C</b> فخ: التوزيعات
+  تنقص حقوق الملكية بس الحساب نفسه <b>مؤقت</b> وينقفل في <bdi>Retained Earnings</bdi>.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">3. In the accounting cycle shown in Exhibit 3.19, which step comes immediately after "Prepare financial statements"?</div>
+  <ol type="A"><li>Prepare adjusted trial balance</li><li>Prepare post-closing trial balance</li><li>Close accounts</li><li>Reverse and post (optional)</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. في <bdi>Exhibit 3.19</bdi> الخطوة 7 <bdi>Prepare financial statements</bdi> وبعدها على طول 8 <bdi>Close accounts</bdi>، وبعدها 9
+  <bdi>Prepare post-closing trial balance</bdi>. الفخ في <b>A</b>: الميزان المعدّل هو الخطوة 6 — <b>قبل</b> القوائم مو بعدها. و<b>B</b> تقفز
+  خطوة (ما تقدر تسوي ميزان بعد الإقفال قبل ما تقفل). و<b>D</b> هي الخطوة 10 الاختيارية في الفترة الجاية.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">4. A company reports: Cash $8,000; Accounts receivable $12,000; Prepaid insurance $4,000; Land $50,000; Accounts payable $10,000; Unearned revenue $6,000; Notes payable (due in five years) $30,000. Its current ratio is:</div>
+  <ol type="A"><li>0.52</li><li>1.25</li><li>1.50</li><li>2.40</li></ol>
+  <details><summary>الجواب</summary>
+  <p><b>C</b>. الأصول المتداولة <span class="mono" dir="ltr">8,000 + 12,000 + 4,000 = 24,000</span> (<bdi>Land</bdi> أصل ثابت، برّا).
+  الخصوم المتداولة <span class="mono" dir="ltr">10,000 + 6,000 = 16,000</span> (ورقة الدفع بعد خمس سنوات طويلة الأجل، برّا).
+  <span class="mono" dir="ltr">24,000 ÷ 16,000 = 1.50</span>. الفخ في <b>A</b>: قسم على <b>كل</b> الخصوم <span class="mono" dir="ltr">(24,000 ÷ 46,000)</span>.
+  و<b>B</b> نسى إن التأمين المدفوع مقدّماً (<bdi>prepaid insurance</bdi>) أصل متداول <span class="mono" dir="ltr">(20,000 ÷ 16,000)</span>. و<b>D</b> نسى إن
+  <bdi>unearned revenue</bdi> خصم متداول <span class="mono" dir="ltr">(24,000 ÷ 10,000)</span>.</p></details>
+</div>
+
+<div class="q">
+  <div class="stem">5. Company X reports net income of $45,000 and net sales of $300,000. Its competitor, Company Y, has a profit margin of 12%. Which statement is correct?</div>
+  <ol type="A">
+    <li>X's profit margin is 15%, so X generates more profit on each dollar of sales</li>
+    <li>X's profit margin is 15%, so Y generates more profit on each dollar of sales</li>
+    <li>X's profit margin is 6.67, so X generates more profit on each dollar of sales</li>
+    <li>X's profit margin is 85%, so X generates more profit on each dollar of sales</li>
+  </ol>
+  <details><summary>الجواب</summary>
+  <p><b>A</b>. <span class="mono" dir="ltr">Profit margin = Net income ÷ Net sales = 45,000 ÷ 300,000 = 15%</span>، و15% أكبر من 12% ← <bdi>X</bdi> يطلّع ربح
+  أكثر من كل دولار مبيعات. الفخ في <b>B</b>: الحسبة صح بس المقارنة مقلوبة. و<b>C</b> قلب الكسر <span class="mono" dir="ltr">(300,000 ÷ 45,000)</span>.
+  و<b>D</b> طرح النسبة من 100% — هذي نسبة اللي <b>راح</b> مصروفات، مو الربح.</p></details>
+</div>
+
+<div class="cta"><div><div class="t">🃏 تدرّب على كلمات هذا الدرس</div><div class="s">بطاقات بالصوت. خمس دقائق الحين أحسن من ساعة قبل الاختبار.</div></div><div><button class="pill gold" data-deck="ACCT203-CH3-S4">ابدأ</button> <button class="pill" data-deck="ACCT203-CH3-S4" data-mode="ar">عربي ← إنجليزي</button></div></div>
+
+<h2 style="margin:40px 0 10px">المصطلحات</h2>
+<table>
+  <tr><th>English</th><th>بالعربي</th><th>الفخ</th></tr>
+  <tr><td><bdi>Closing process</bdi></td><td>عملية الإقفال</td><td>آخر الفترة <b>بعد</b> القوائم؛ ٣ خطوات وغرضين</td></tr>
+  <tr><td><bdi>Closing entries</bdi></td><td>قيود الإقفال</td><td>تنقل الإيرادات والمصروفات والتوزيعات لـ<bdi>Retained Earnings</bdi>؛ أربع خطوات بالترتيب</td></tr>
+  <tr><td><bdi>Temporary accounts</bdi></td><td>الحسابات المؤقتة</td><td><bdi>revenues · expenses · dividends · Income Summary</bdi> — تنقفل</td></tr>
+  <tr><td><bdi>Permanent accounts</bdi></td><td>الحسابات الدائمة</td><td>كل حسابات الميزانية (مع <bdi>Common Stock</bdi> و<bdi>Retained Earnings</bdi>) — ما تنقفل</td></tr>
+  <tr><td><bdi>Income Summary</bdi></td><td>ملخص الدخل</td><td>مؤقت، للإقفال بس؛ رصيده = صافي الدخل أو الخسارة؛ التوزيعات ما تمرّ عليه</td></tr>
+  <tr><td><bdi>Closed / cleared</bdi></td><td>مقفل / مصفّى</td><td>حساب مؤقت رصيده صار صفر بعد ترحيل الإقفال</td></tr>
+  <tr><td><bdi>Post-closing trial balance</bdi></td><td>ميزان المراجعة بعد الإقفال</td><td>حسابات دائمة بس؛ لو فيه مصروف = غلط</td></tr>
+  <tr><td><bdi>Accounting cycle</bdi></td><td>الدورة المحاسبية</td><td><b>10</b> خطوات تتكرر كل فترة؛ 1–3 مستمرة، 4–9 آخر الفترة، 10 اختيارية</td></tr>
+  <tr><td><bdi>Unclassified balance sheet</bdi></td><td>ميزانية غير مصنّفة</td><td>أصول، خصوم، حقوق ملكية — بدون مجموعات فرعية</td></tr>
+  <tr><td><bdi>Classified balance sheet</bdi></td><td>الميزانية المصنّفة</td><td>مجموعات فرعية للأصول والخصوم؛ ما لها شكل إلزامي</td></tr>
+  <tr><td><bdi>Operating cycle</bdi></td><td>الدورة التشغيلية</td><td>من صرف النقد لين يرجع النقد من البيع؛ غالباً أقل من سنة</td></tr>
+  <tr><td><bdi>Current assets</bdi></td><td>الأصول المتداولة</td><td>خلال سنة أو الدورة التشغيلية، <b>اللي أطول فيهم</b></td></tr>
+  <tr><td><bdi>Long-term investments</bdi></td><td>الاستثمارات طويلة الأجل</td><td><bdi>notes receivable</bdi> + أسهم وسندات تنمسك أكثر من سنة</td></tr>
+  <tr><td><bdi>Plant assets</bdi> (<bdi>PP&amp;E</bdi>, <bdi>fixed assets</bdi>)</td><td>الأصول الثابتة</td><td>ملموسة، طويلة العمر، مستخدمة في التشغيل — <bdi>land</bdi> منها</td></tr>
+  <tr><td><bdi>Intangible assets</bdi></td><td>الأصول غير الملموسة</td><td>بدون شكل مادي: <bdi>patents · trademarks · copyrights · franchises · goodwill</bdi></td></tr>
+  <tr><td><bdi>Current liabilities</bdi></td><td>الخصوم المتداولة</td><td>فيها <bdi>unearned revenues</bdi> والجزء المستحق خلال سنة من دين طويل</td></tr>
+  <tr><td><bdi>Long-term liabilities</bdi></td><td>الخصوم طويلة الأجل</td><td><bdi>notes · mortgages · bonds payable · lease obligations</bdi></td></tr>
+  <tr><td><bdi>Equity</bdi></td><td>حقوق الملكية</td><td>مطالبة المالك؛ <b>ما تنقسم</b> متداول وغير متداول</td></tr>
+  <tr><td><bdi>Profit margin</bdi> (<bdi>return on sales</bdi>)</td><td>هامش الربح</td><td><bdi>Net income ÷ Net sales</bdi> — لا تقلب الكسر</td></tr>
+  <tr><td><bdi>Current ratio</bdi></td><td>نسبة التداول</td><td><bdi>Current assets ÷ Current liabilities</bdi>؛ فوق 1.0 = تغطي</td></tr>
+  <tr><td><bdi>Work sheet</bdi></td><td>ورقة العمل</td><td>للخطوات 4 و6 و9؛ ما تغني عن قيد التسويات — <bdi>Appendix 3B</bdi></td></tr>
+  <tr><td><bdi>Reversing entries</bdi></td><td>القيود العكسية</td><td>الخطوة 10، <b>اختيارية</b> — <bdi>Appendix 3C</bdi></td></tr>
+</table>
+
+<p class="note">
+مبني من نص الكتاب <bdi>Financial Accounting Fundamentals</bdi>، الطبعة الثامنة (<bdi>Wild</bdi>، <bdi>McGraw Hill</bdi>) —
+<bdi>Chapter 3: Adjusting Accounts for Financial Statements</bdi>، أجزاء <bdi>Closing Process</bdi> و<bdi>Accounting Cycle</bdi> و
+<bdi>Classified Balance Sheet</bdi> و<bdi>Profit Margin and Current Ratio</bdi> (<bdi>Decision Analysis</bdi>)، الأهداف <code>P6</code> و<code>C2</code>
+و<code>A1</code> (صفحات 100–107)، مع <bdi>Need-To-Know 3-6</bdi> و<bdi>3-7</bdi>.
+<br><b>ملخّص بس:</b> <bdi>Exhibit 3.17</bdi> (دفتر الأستاذ كامل) موصوف تحت الصورة مو منقول حساب حساب؛ صورتين مواقف <bdi>Decision Maker</bdi>
+(<bdi>Staff Accountant</bdi> و<bdi>Analyst</bdi>) وصورة التزلّج جنب الميزانية المصنّفة زينة وما انحطّت، بس المواقف نفسها مشروحة؛ ومسائل <bdi>Need-To-Know 3-8</bdi> و<bdi>3-9</bdi> الشاملة (تسويات وقوائم) تابعة لدروس ٢ و٣.
+<br><b>ملحق:</b> <bdi>Appendix 3B: Work Sheet as a Tool</bdi> (<code>P8</code>) — ملحق، اسأل الدكتور إذا داخل.
+<br><b>ملحق:</b> <bdi>Appendix 3C: Reversing Entries</bdi> (<code>P9</code>) — ملحق، اسأل الدكتور إذا داخل.
+</p>
+
+
+<div class="footnav">
+  <div class="side"><a class="pill" href="ACCT203-CH3-S3.html">→ ٣. تسويات المستحقات وميزان المراجعة المعدّل</a></div>
+  <a class="pill home" href="../index.html">⌂ الرئيسية</a>
+  <div class="side"><span class="pill off">نهاية الفصل</span></div>
+</div>
+</div>
+<script src="../data/cards-ACCT203-CH3-S4.js?v=7"></script>
+<script src="../assets/flashcards.js?v=7"></script>
+<script src="../assets/lesson.js?v=7"></script>
+</body>
+</html>

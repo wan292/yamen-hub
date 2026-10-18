@@ -211,6 +211,28 @@ const LESSONS = [
         { n:6, ar:"إدارة البيئة العالمية", en:"Managing in the Global Environment", s:"src" },
         { ar:"والفصول ٧–١٩ — كلها مقسّمة ومُلخّصة على الدرايف", s:"src",
           note:"كل فصل في مجلده: الفصل PDF، نص الفصل، صور الأشكال والجداول، وملخص كامل" }
+      ]},
+    { name:"Chapter 2 — Accounting for Business Transactions", meta:"الفصل الثاني · مكتمل",
+      items:[
+        { n:1, ar:"أساس القوائم المالية: المستندات والحسابات", en:"Basis of Financial Statements", o:"C1",
+          s:"done", href:"lessons/ACCT203-CH2-S1.html", enhref:"lessons/ACCT203-CH2-S1-EN.html" },
+        { n:2, ar:"القيد المزدوج: المدين والدائن", en:"Double-Entry Accounting", o:"C2",
+          s:"done", href:"lessons/ACCT203-CH2-S2.html", enhref:"lessons/ACCT203-CH2-S2-EN.html", star:"قواعد المدين والدائن" },
+        { n:3, ar:"تحليل العمليات وتسجيلها", en:"Analyzing and Processing Transactions", o:"A1",
+          s:"done", href:"lessons/ACCT203-CH2-S3.html", enhref:"lessons/ACCT203-CH2-S3-EN.html", star:"أهم درس في الفصل" },
+        { n:4, ar:"ميزان المراجعة والقوائم المالية ونسبة المديونية", en:"Trial Balance, Financial Statements, and the Debt Ratio", o:"P1 · A2",
+          s:"done", href:"lessons/ACCT203-CH2-S4.html", enhref:"lessons/ACCT203-CH2-S4-EN.html" }
+      ]},
+    { name:"Chapter 3 — Adjusting Accounts for Financial Statements", meta:"الفصل الثالث · مكتمل",
+      items:[
+        { n:1, ar:"التوقيت والتقارير: أساس الاستحقاق", en:"Timing and Reporting", o:"C1",
+          s:"done", href:"lessons/ACCT203-CH3-S1.html", enhref:"lessons/ACCT203-CH3-S1-EN.html" },
+        { n:2, ar:"تسويات المؤجّلات", en:"Deferral of Expense and Revenue", o:"P1 · P2",
+          s:"done", href:"lessons/ACCT203-CH3-S2.html", enhref:"lessons/ACCT203-CH3-S2-EN.html", star:"قيود التسوية" },
+        { n:3, ar:"تسويات المستحقات وميزان المراجعة المعدّل", en:"Accrued Expenses, Accrued Revenues, and the Adjusted Trial Balance", o:"P3 · P4 · P5",
+          s:"done", href:"lessons/ACCT203-CH3-S3.html", enhref:"lessons/ACCT203-CH3-S3-EN.html" },
+        { n:4, ar:"الإقفال ودورة المحاسبة والميزانية المصنّفة", en:"Closing, the Accounting Cycle, and the Classified Balance Sheet", o:"P6 · C2 · A1",
+          s:"done", href:"lessons/ACCT203-CH3-S4.html", enhref:"lessons/ACCT203-CH3-S4-EN.html" }
       ]}
   ]},
 
@@ -234,7 +256,7 @@ const ABSENCE = { "MGT 102":0, "ACCT 203":0, "LAW 333":0, "MKT 231":0, "GS 151":
    ============================================================ */
 const MAP = [
   { code:"ACCT 203", ar:"مبادئ المحاسبة المالية", lang:"إنجليزي",
-    book:"McGraw Hill — Wild · SmartBook / Connect",
+    book:"McGraw Hill — Wild, Financial Accounting Fundamentals 8e",
     units:[
       { name:"Chapter 1 — Accounting in Business", items:[
         { t:"Importance of Accounting", o:"C1", s:"done", href:"lessons/ACCT203-CH1-S1.html", enhref:"lessons/ACCT203-CH1-S1-EN.html" },
@@ -246,8 +268,18 @@ const MAP = [
         { t:"Principles and assumptions + forms of organization", o:"C2", s:"todo",
           note:"ذيل القسم الثاني" }
       ]},
-      { name:"Chapter 2 وما بعده", items:[
-        { t:"لم يبدأ بعد", s:"wait", note:"ينتظر أن يفتحه الدكتور" } ]}
+      { name:"Chapter 2 — Accounting for Business Transactions", items:[
+        { t:"Basis of Financial Statements", o:"C1", s:"done", href:"lessons/ACCT203-CH2-S1.html", enhref:"lessons/ACCT203-CH2-S1-EN.html" },
+        { t:"Double-Entry Accounting", o:"C2", s:"done", href:"lessons/ACCT203-CH2-S2.html", enhref:"lessons/ACCT203-CH2-S2-EN.html" },
+        { t:"Analyzing and Processing Transactions", o:"A1", s:"done", href:"lessons/ACCT203-CH2-S3.html", enhref:"lessons/ACCT203-CH2-S3-EN.html" },
+        { t:"Trial Balance, Financial Statements, and the Debt Ratio", o:"P1 · A2", s:"done", href:"lessons/ACCT203-CH2-S4.html", enhref:"lessons/ACCT203-CH2-S4-EN.html" } ]},
+      { name:"Chapter 3 — Adjusting Accounts for Financial Statements", items:[
+        { t:"Timing and Reporting", o:"C1", s:"done", href:"lessons/ACCT203-CH3-S1.html", enhref:"lessons/ACCT203-CH3-S1-EN.html" },
+        { t:"Deferral of Expense and Revenue", o:"P1 · P2", s:"done", href:"lessons/ACCT203-CH3-S2.html", enhref:"lessons/ACCT203-CH3-S2-EN.html" },
+        { t:"Accrued Expenses, Accrued Revenues, and the Adjusted Trial Balance", o:"P3 · P4 · P5", s:"done", href:"lessons/ACCT203-CH3-S3.html", enhref:"lessons/ACCT203-CH3-S3-EN.html" },
+        { t:"Closing, the Accounting Cycle, and the Classified Balance Sheet", o:"P6 · C2 · A1", s:"done", href:"lessons/ACCT203-CH3-S4.html", enhref:"lessons/ACCT203-CH3-S4-EN.html" } ]},
+      { name:"Chapter 4 وما بعده", items:[
+        { t:"الكتاب كامل على الدرايف — الفصول ١–٣ مقسّمة بنصها وصورها", s:"ready" } ]}
     ]},
   { code:"MGT 102", ar:"مبادئ الإدارة", lang:"إنجليزي", priority:true,
     book:"McGraw Hill — Jones & George, Contemporary Management · الكتاب الإلكتروني",
