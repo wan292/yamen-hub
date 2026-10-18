@@ -9,7 +9,7 @@
   var LIVE = 'yh-exam-live', HIST = 'yh-exam-hist', SEEN = 'yh-exam-seen';
   var LETTERS = 'ABCD';
   var TYPE_AR = { term: 'التعريفات', concept: 'فهم المفاهيم', scenario: 'تطبيق على مواقف', figure: 'قراءة الأشكال',
-    list: 'القوائم والأعداد', people: 'مين قال وش', tf: 'صح وخطأ', vocab: 'الكلمات الإنجليزية', case: 'دراسة الحالة' };
+    list: 'القوائم والأعداد', people: 'مين قال وش', tf: 'صح وخطأ', vocab: 'الكلمات الإنجليزية', case: 'دراسة الحالة', calc: 'الحسابات والقيود' };
   var view, timerEl;
 
   /* ---------------- helpers ---------------- */
@@ -407,8 +407,8 @@
     });
   }
   function diagnose(R) {
-    var d = [], vocab = tp(R, ['vocab']), rest = tp(R, ['term', 'concept', 'scenario', 'figure', 'list', 'people', 'tf', 'case']);
-    var term = tp(R, ['term']), apply = tp(R, ['scenario', 'case']), fig = tp(R, ['figure']), rec = tp(R, ['list', 'people']), tf = tp(R, ['tf']);
+    var d = [], vocab = tp(R, ['vocab']), rest = tp(R, ['term', 'concept', 'scenario', 'figure', 'list', 'people', 'tf', 'case', 'calc']);
+    var term = tp(R, ['term']), apply = tp(R, ['scenario', 'case']), fig = tp(R, ['figure']), rec = tp(R, ['list', 'people']), tf = tp(R, ['tf']), calc = tp(R, ['calc']);
     if (vocab.t >= 3 && vocab.p < 60) d.push({ k: 'lang', sev: vocab.p < 50 ? 'high' : 'med', score: 100 - vocab.p + 10,
       h: 'الكلمات الإنجليزية هي أكبر عائق عندك',
       p: rest.p - vocab.p >= 15
@@ -436,6 +436,11 @@
       p: 'جبت ' + rec.p + '% في أسئلة القوائم ومين قال وش. هذي أسهل درجات لو ثبّتها.',
       a: 'اكتب ورقة وحدة فيها كل الأعداد والقوائم والأسماء في الفصل، وراجعها قبل النوم.',
       coach: 'اسأله أسئلة سريعة بدون خيارات: كم وظيفة للإدارة؟ مين صاحب Theory X؟ وش أنواع المهارات الثلاث؟' });
+    if (calc.t >= 3 && calc.p < 60) d.push({ k: 'calc', sev: calc.p < 45 ? 'high' : 'med', score: 100 - calc.p,
+      h: 'الحسابات والقيود تحتاج تدريب',
+      p: 'جبت ' + calc.p + '% في أسئلة الحساب والقيود. في المحاسبة هذي نص الدرجة، والفهم لحاله ما يكفي بدون يد متمرّنة.',
+      a: 'حل أمثلة الكتاب المحلولة بنفسك على ورقة قبل ما تشوف الحل: اكتب القيد (مدين / دائن)، وتأكد إن المجموعين متساويين.',
+      coach: 'اعطه عملية من الدرس (مثلاً: دفع إيجار مقدم ٦٠٠٠) وخلّه يكتب القيد ويقول ليش هذا مدين وهذا دائن.' });
     if (tf.t >= 3 && tf.p < 60) d.push({ k: 'tf', sev: 'med', score: 100 - tf.p - 20,
       h: 'فخاخ صح وخطأ',
       p: 'جبت ' + tf.p + '% في صح وخطأ. غالباً الجملة فيها كلمة مطلقة (always, only, never) أو مصطلح مبدّل.',

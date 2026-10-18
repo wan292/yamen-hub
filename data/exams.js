@@ -18,7 +18,13 @@ window.YH_EXAM_TESTS = [
     banks: ["MGT102-CH1"], count: "all", secPerQ: 72 },
   { id: "mgt-ch2-full", course: "MGT 102", title: "الفصل الثاني كامل — كل الأسئلة",
     sub: "كل أسئلة البنك. أطول اختبار، وأدق تشخيص.",
-    banks: ["MGT102-CH2"], count: "all", secPerQ: 72 }
+    banks: ["MGT102-CH2"], count: "all", secPerQ: 72 },
+  { id: "mkt-mid", course: "MKT 231", title: "سلوك المستهلك — تجربة النصفي",
+    sub: "٣٠ سؤال من الفصول ١، ٢، ٤، ٥ (الفصل ٦ لسا ما وصلت شرائحه). دقيقة لكل سؤال.",
+    banks: ["MKT231-CH"], count: 30, secPerQ: 60 },
+  { id: "law-mid", course: "LAW 333", title: "القانون — تجربة النصفي",
+    sub: "٣٠ سؤال من شرائح الدكتور (والمحل التجاري معها). دقيقة لكل سؤال.",
+    banks: ["LAW333-LEC"], count: 30, secPerQ: 60 }
 ];
 
 /* Misconceptions every chapter can use. Chapter-specific ones live in each bank's catalog. */

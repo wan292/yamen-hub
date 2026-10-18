@@ -6,7 +6,7 @@
   var BANKS = window.YH_EXAM_BANKS || {}, GEN = window.YH_EXAM_GENERIC || {};
   var KEY = 'yh-bank', LIVE = 'yh-exam-live', LETTERS = 'ABCD';
   var TYPE_AR = { term: 'تعريف', concept: 'فهم', scenario: 'حالة تطبيقية', figure: 'شكل', list: 'أعداد وقوائم',
-    people: 'مين قال وش', tf: 'صح وخطأ', vocab: 'كلمات', case: 'دراسة حالة' };
+    people: 'مين قال وش', tf: 'صح وخطأ', vocab: 'كلمات', case: 'دراسة حالة', calc: 'حساب وقيود' };
   var view, S = null;
 
   function lsGet(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
