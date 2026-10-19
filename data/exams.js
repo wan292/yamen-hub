@@ -24,7 +24,13 @@ window.YH_EXAM_TESTS = [
     banks: ["MKT231-CH"], count: 30, secPerQ: 60 },
   { id: "law-mid", course: "LAW 333", title: "القانون — تجربة النصفي",
     sub: "٣٠ سؤال من شرائح الدكتور (والمحل التجاري معها). دقيقة لكل سؤال.",
-    banks: ["LAW333-LEC"], count: 30, secPerQ: 60 }
+    banks: ["LAW333-LEC"], count: 30, secPerQ: 60 },
+  { id: "gs-practice", course: "GS 151", title: "مهارات الحياة — الاختبار التجريبي كامل",
+    sub: "كل أسئلة الاختبار التجريبي حق الدكتور على الوحدات ١–٣، بإجاباتها الصحيحة من الكتاب. ٤٥ ثانية للسؤال.",
+    banks: ["GS151-U"], secs: ["GS151-PRAC"], count: "all", secPerQ: 45 },
+  { id: "gs-mix", course: "GS 151", title: "مهارات الحياة — تجربة الاختبار",
+    sub: "٤٠ سؤال من الوحدات ١–٣: أسئلة الدكتور وأسئلة جديدة من الكتاب. ٤٥ ثانية للسؤال.",
+    banks: ["GS151-U"], count: 40, secPerQ: 45 }
 ];
 
 /* Misconceptions every chapter can use. Chapter-specific ones live in each bank's catalog. */

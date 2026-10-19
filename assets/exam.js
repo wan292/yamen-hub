@@ -501,7 +501,7 @@
     }).join('') + '</div>';
   }
   function lessonLink(sec, label, extra) {
-    if (!sec || sec === 'CASE') return '';
+    if (!sec || sec === 'CASE' || /-PRAC$/.test(sec)) return '';
     return '<a class="pill" href="lessons/' + sec + '.html' + (extra || '') + '">' + label + '</a>';
   }
   function teacherNote(R) {
@@ -675,7 +675,7 @@
       });
       s += '<div class="why"><b>ليش؟</b> ' + ar(q.why) + '</div>';
       if (r.w) s += '<div class="trap"><b>السبب:</b> ' + ar(m.ar) + (r.w.note ? ' — ' + ar(r.w.note) : '') + '</div>';
-      s += (q.sec && q.sec !== 'CASE' ? '<div class="xacts" style="margin-top:8px">' + lessonLink(q.sec, 'راجع الدرس') + '</div>' : '') + '</div>';
+      s += (q.sec && q.sec !== 'CASE' ? '<div class="xacts" style="margin-top:8px">' + lessonLink(/-PRAC$/.test(q.sec) ? q.sec.replace(/PRAC$/, q.lo) : q.sec, 'راجع الدرس') + '</div>' : '') + '</div>';
       return s;
     }).join('');
   }

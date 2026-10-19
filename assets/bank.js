@@ -175,7 +175,7 @@
       if (o === q.answer) b.classList.add('right'); else if (o === oi) b.classList.add('wrong');
     });
     var w = !ok ? (q.wrong || []).filter(function (x) { return x.i === oi; })[0] : null, m = w ? misOf(it.b, w.mis) : null;
-    var href = lessonHref(q.sec);
+    var href = lessonHref(/-PRAC$/.test(q.sec) ? q.sec.replace(/PRAC$/, q.lo) : q.sec);   /* practice-test questions link to their unit's lesson */
     document.getElementById('bkfb').innerHTML =
       '<div class="bkfb ' + (ok ? 'ok' : 'bad') + '"><b>' + (ok ? '✓ صح' : '✗ غلط') + '</b><div>' + ar(q.why) + '</div>' +
       (w ? '<div class="trap"><b>السبب:</b> ' + ar(m.ar || '') + (w.note ? ' — ' + ar(w.note) : '') + '</div>' : '') + '</div>' +
