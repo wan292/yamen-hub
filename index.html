@@ -245,8 +245,8 @@ a.lesson .s{font-size:.8rem;color:var(--muted)}
 <script src="data/cards-MGT102-CH5-S2.js?v=7"></script>
 <script src="data/cards-MGT102-CH5-S3.js?v=7"></script>
 <script src="data/cards-MGT102-CH5-S4.js?v=7"></script>
-<script src="data/exams.js?v=8"></script>
-<script src="data/lectures.js?v=8"></script>
+<script src="data/exams.js?v=9"></script>
+<script src="data/lectures.js?v=9"></script>
 <script src="assets/flashcards.js?v=7"></script>
 <script src="assets/lesson.js?v=7"></script>
 <script>
@@ -546,7 +546,7 @@ function renderLectures(){
       (c.note?'<p style="font-size:.9rem;color:var(--amber);margin:0 0 10px">⚠ '+c.note+'</p>':'')+'<div class="grid">';
     c.items.forEach(function(it){
       var done=0,right=0; Object.keys(p).forEach(function(n){ if(Math.floor(+n/100)===it.n){ done++; if(p[n][0]) right++; } });
-      s+='<div class="deck"><div class="dn">'+it.n+'. '+it.title+'<small>'+(it.pages?it.pages+' صفحة':it.slides+' شريحة')+' · '+it.q+' سؤال'+
+      s+='<div class="deck"><div class="dn">'+it.n+'. '+it.title+'<small>'+(it.pages?it.pages+' صفحة · ':it.slides?it.slides+' شريحة · ':'')+it.q+' سؤال'+
         (done?' · حليت '+done+' (صح '+right+')':'')+'</small></div>'+
         '<a class="pill" href="'+it.href+'">اقرأ</a><a class="pill gold" href="bank.html#s='+it.sec+'">🎯 أسئلة</a></div>';
     });
