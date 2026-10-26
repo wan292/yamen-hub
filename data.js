@@ -147,7 +147,7 @@ const LESSONS = [
         { n:2, ar:"اتخاذ القرار الشرائي",        s:"done", href:"lessons/MKT231-CH2.html" },
         { n:4, ar:"تصميم الموقع التنافسي للمنتج", s:"done", href:"lessons/MKT231-CH4.html" },
         { n:5, ar:"تأثير ثقافة المجتمع",          s:"done", href:"lessons/MKT231-CH5.html" },
-        { n:6, ar:"الطبقات الاجتماعية",           s:"wait", note:"⚠ شرائح الفصل مو عندنا — جيبها من الدكتور" },
+        { n:6, ar:"الطبقات الاجتماعية",           s:"done", href:"lessons/MKT231-CH6.html" },
         { n:3, ar:"تجزئة السوق",                  s:"src", note:"مو داخل في النصفي، وشرائحه مو عندنا" }
       ]}
   ]},
@@ -333,7 +333,7 @@ const MAP = [
       { t:"الفصل ٢ — اتخاذ القرار الشرائي", s:"done", href:"lessons/MKT231-CH2.html" },
       { t:"الفصل ٤ — تصميم الموقع التنافسي للمنتج", s:"done", href:"lessons/MKT231-CH4.html" },
       { t:"الفصل ٥ — تأثير ثقافة المجتمع", s:"done", href:"lessons/MKT231-CH5.html" },
-      { t:"الفصل ٦ — الطبقات الاجتماعية", s:"wait", note:"الشرائح ناقصة — داخل في النصفي" } ]} ]},
+      { t:"الفصل ٦ — الطبقات الاجتماعية", s:"done", href:"lessons/MKT231-CH6.html" } ]} ]},
   { code:"LAW 333", ar:"البيئة القانونية للأعمال", lang:"—",
     book:"أنظمة سعودية — laws.boe.gov.sa",
     units:[ { name:"المادة", items:[
