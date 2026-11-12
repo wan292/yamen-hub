@@ -4,6 +4,15 @@
    casesPerBank: how many case studies (each ~3 questions) a drawn test takes from every bank.
    secPerQ: seconds allowed per question — the whole test gets count × secPerQ. */
 window.YH_EXAM_TESTS = [
+  { id: "mgt-mid", course: "MGT 102", title: "⭐ تجربة الميد — الفصول ١، ٢، ٣، ٥",
+    sub: "٥٠ سؤال من الفصول اللي عليك في الميد (الملزمة لين ص ٤٨). كل محاولة تجيك أسئلة جديدة. ٧٢ ثانية للسؤال.",
+    banks: ["MGT102-CH1", "MGT102-CH2", "MGT102-CH3", "MGT102-CH5"], count: 50, casesPerBank: 0, secPerQ: 72 },
+  { id: "mgt-ch3", course: "MGT 102", title: "الفصل الثالث — Values, Attitudes, Emotions, and Culture",
+    sub: "٤٠ سؤال من كل الأنواع. كل محاولة تجيك أسئلة جديدة لين تخلص البنك.",
+    banks: ["MGT102-CH3"], count: 40, casesPerBank: 1, secPerQ: 72 },
+  { id: "mgt-ch5", course: "MGT 102", title: "الفصل الخامس — Managing Diverse Employees",
+    sub: "٤٠ سؤال من كل الأنواع. كل محاولة تجيك أسئلة جديدة لين تخلص البنك.",
+    banks: ["MGT102-CH5"], count: 40, casesPerBank: 1, secPerQ: 72 },
   { id: "mgt-ch1", course: "MGT 102", title: "الفصل الأول — Managers and Managing",
     sub: "٤٠ سؤال من كل الأنواع. كل محاولة تجيك أسئلة جديدة لين تخلص البنك.",
     banks: ["MGT102-CH1"], count: 40, casesPerBank: 1, secPerQ: 72 },
