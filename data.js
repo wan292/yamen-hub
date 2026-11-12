@@ -64,7 +64,7 @@ const DEADLINES = [
   { date:"2026-10-29", code:"LAW 333",  title:"الاختبار النصفي", kind:"exam",
     note:"الخميس. الكتاب لين صفحة ١٢٣ (درس التزامات التاجر) + شرائح «المحل التجاري» بس" },
   { date:"2026-11-15", code:"MGT 102",  title:"الاختبار النصفي", kind:"exam",
-    note:"الأحد. التحديد ما وصل" , unconfirmed:true },
+    note:"الأحد. الملزمة لين صفحة ٤٨: الفصول ١، ٢، ٣، ٥ (الفصلين ٦ و٧ بعدها)" },
   { date:"2026-11-16", code:"ACCT 203", title:"الاختبار النصفي", kind:"exam",
     note:"الاثنين. التحديد ما تأكد", unconfirmed:true },
   { date:"2026-12-06", code:"MKT 231",  title:"مناقشة البحث الجماعي والعرض الشفوي", kind:"task", weight:10,
@@ -208,10 +208,31 @@ const LESSONS = [
         { n:4, ar:"كيف تدير التنوّع والتحرّش الجنسي", en:"Managing Diversity Effectively and Sexual Harassment", o:"LO5-5 · LO5-6",
           s:"done", href:"lessons/MGT102-CH5-S4.html", enhref:"lessons/MGT102-CH5-S4-EN.html" }
       ]},
-    { name:"Chapters 6–19", meta:"الكتاب كامل على الدرايف — ملخص لكل فصل",
+    { name:"Chapter 6 — Managing in the Global Environment", meta:"الفصل السادس · مكتمل",
       items:[
-        { n:6, ar:"إدارة البيئة العالمية", en:"Managing in the Global Environment", s:"src" },
-        { ar:"والفصول ٧–١٩ — كلها مقسّمة ومُلخّصة على الدرايف", s:"src",
+        { n:1, ar:"البيئة العالمية وبيئة المهمة", en:"The Global Environment and the Task Environment", o:"LO6-1 · LO6-2 · LO6-3",
+          s:"done", href:"lessons/MGT102-CH6-S1.html", enhref:"lessons/MGT102-CH6-S1-EN.html" },
+        { n:2, ar:"البيئة العامة", en:"The General Environment", o:"LO6-2 · LO6-3",
+          s:"done", href:"lessons/MGT102-CH6-S2.html", enhref:"lessons/MGT102-CH6-S2-EN.html" },
+        { n:3, ar:"البيئة العالمية المتغيّرة والعولمة", en:"The Changing Global Environment", o:"LO6-4 · LO6-5",
+          s:"done", href:"lessons/MGT102-CH6-S3.html", enhref:"lessons/MGT102-CH6-S3-EN.html" },
+        { n:4, ar:"دور الثقافة الوطنية", en:"The Role of National Culture", o:"LO6-5",
+          s:"done", href:"lessons/MGT102-CH6-S4.html", enhref:"lessons/MGT102-CH6-S4-EN.html" }
+      ]},
+    { name:"Chapter 7 — Decision Making, Learning, Creativity, and Entrepreneurship", meta:"الفصل السابع · مكتمل",
+      items:[
+        { n:1, ar:"طبيعة اتخاذ القرار الإداري", en:"The Nature of Managerial Decision Making", o:"LO7-1",
+          s:"done", href:"lessons/MGT102-CH7-S1.html", enhref:"lessons/MGT102-CH7-S1-EN.html" },
+        { n:2, ar:"خطوات اتخاذ القرار والتحيّزات الذهنية", en:"Steps in Decision Making and Cognitive Biases", o:"LO7-2",
+          s:"done", href:"lessons/MGT102-CH7-S2.html", enhref:"lessons/MGT102-CH7-S2-EN.html" },
+        { n:3, ar:"اتخاذ القرار الجماعي", en:"Group Decision Making", o:"LO7-3",
+          s:"done", href:"lessons/MGT102-CH7-S3.html", enhref:"lessons/MGT102-CH7-S3-EN.html" },
+        { n:4, ar:"التعلّم التنظيمي والإبداع وريادة الأعمال", en:"Organizational Learning, Creativity, and Entrepreneurship", o:"LO7-4 · LO7-5",
+          s:"done", href:"lessons/MGT102-CH7-S4.html", enhref:"lessons/MGT102-CH7-S4-EN.html" }
+      ]},
+    { name:"Chapters 8–19", meta:"الكتاب كامل على الدرايف — ملخص لكل فصل",
+      items:[
+        { ar:"والفصول ٨–١٩ — كلها مقسّمة ومُلخّصة على الدرايف", s:"src",
           note:"كل فصل في مجلده: الفصل PDF، نص الفصل، صور الأشكال والجداول، وملخص كامل" }
       ]},
     { name:"Chapter 2 — Accounting for Business Transactions", meta:"الفصل الثاني · مكتمل",
@@ -318,7 +339,17 @@ const MAP = [
         { t:"Managers and the Effective Management of Diversity", o:"LO5-2 · LO5-3", s:"done", href:"lessons/MGT102-CH5-S2.html", enhref:"lessons/MGT102-CH5-S2-EN.html" },
         { t:"Perception and Unfair Treatment", o:"LO5-4", s:"done", href:"lessons/MGT102-CH5-S3.html", enhref:"lessons/MGT102-CH5-S3-EN.html" },
         { t:"Managing Diversity Effectively and Sexual Harassment", o:"LO5-5 · LO5-6", s:"done", href:"lessons/MGT102-CH5-S4.html", enhref:"lessons/MGT102-CH5-S4-EN.html" } ]},
-      { name:"Chapters 6–19", items:[
+      { name:"Chapter 6 — Managing in the Global Environment", items:[
+        { t:"The Global Environment and the Task Environment", o:"LO6-1 · LO6-2 · LO6-3", s:"done", href:"lessons/MGT102-CH6-S1.html", enhref:"lessons/MGT102-CH6-S1-EN.html" },
+        { t:"The General Environment", o:"LO6-2 · LO6-3", s:"done", href:"lessons/MGT102-CH6-S2.html", enhref:"lessons/MGT102-CH6-S2-EN.html" },
+        { t:"The Changing Global Environment", o:"LO6-4 · LO6-5", s:"done", href:"lessons/MGT102-CH6-S3.html", enhref:"lessons/MGT102-CH6-S3-EN.html" },
+        { t:"The Role of National Culture", o:"LO6-5", s:"done", href:"lessons/MGT102-CH6-S4.html", enhref:"lessons/MGT102-CH6-S4-EN.html" } ]},
+      { name:"Chapter 7 — Decision Making, Learning, Creativity, and Entrepreneurship", items:[
+        { t:"The Nature of Managerial Decision Making", o:"LO7-1", s:"done", href:"lessons/MGT102-CH7-S1.html", enhref:"lessons/MGT102-CH7-S1-EN.html" },
+        { t:"Steps in Decision Making and Cognitive Biases", o:"LO7-2", s:"done", href:"lessons/MGT102-CH7-S2.html", enhref:"lessons/MGT102-CH7-S2-EN.html" },
+        { t:"Group Decision Making", o:"LO7-3", s:"done", href:"lessons/MGT102-CH7-S3.html", enhref:"lessons/MGT102-CH7-S3-EN.html" },
+        { t:"Organizational Learning, Creativity, and Entrepreneurship", o:"LO7-4 · LO7-5", s:"done", href:"lessons/MGT102-CH7-S4.html", enhref:"lessons/MGT102-CH7-S4-EN.html" } ]},
+      { name:"Chapters 8–19", items:[
         { t:"الكتاب كامل مقسّم فصلاً فصلاً على الدرايف", s:"ready",
           note:"لكل فصل: ملف PDF لحاله، نص الفصل، صور كل الأشكال والجداول، وملخص كامل بالعربي مع التعريفات بالإنجليزي" } ]},
       { name:"دليل المقرر", items:[
